@@ -16,7 +16,7 @@ The purpose of this UofR Software Engineering Capstone Project is to enhance the
     - [Presentation Video](#presentation-video)
     - [Quick Demo Video](#quick-demo-video)
 
-## Vlogs [a relative link](vlog.md)
+## [Vlogs](vlog.md)
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/y45IOaX7iNw/0.jpg)](https://www.youtube.com/watch?v=y45IOaX7iNw)
 
 ## System Design
