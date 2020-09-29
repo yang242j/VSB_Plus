@@ -5,6 +5,8 @@ Visual Schedule Builder Plus
 The purpose of this UofR Software Engineering Capstone Project is to enhance the functionality of UofR existing Vistual Schedule Builder and helping future studentes course selection easier.
 
 - [VSB_Plus](#VSB_Plus)
+  - [Vlogs](#vlog)
+    - [Intro_vlog](#intro_vlog)
   - [System Design](#system-design)
   - [Poster](#poster)
   - [Usage](#usage)
@@ -13,6 +15,9 @@ The purpose of this UofR Software Engineering Capstone Project is to enhance the
   - [Links](#links)
     - [Presentation Video](#presentation-video)
     - [Quick Demo Video](#quick-demo-video)
+
+## [Vlogs](vlog.md)
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/y45IOaX7iNw/0.jpg)](https://www.youtube.com/watch?v=y45IOaX7iNw)
 
 ## System Design
 
