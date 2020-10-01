@@ -24,7 +24,7 @@ Youtube video ID: y45IOaX7iNw
 
 ## [Problem defination](Document/Problem_definition.md)
 
-## [Project charter](Document/Project_charter .pdf)
+## [Project charter](Document/Project_charter.pdf)
 
 # Presentation
 
