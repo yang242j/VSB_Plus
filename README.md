@@ -13,19 +13,19 @@ The purpose of this UofR Software Engineering Capstone Project is to enhance the
 ## Latest vlog
 [id]: y45IOaX7iNw
 
-Youtube video ID: {%id%}
+Youtube video ID: {{id}}
 
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/[id]/0.jpg)](https://www.youtube.com/watch?/v=[id])
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/{{id}}/0.jpg)](https://www.youtube.com/watch?/v={{id}})
 
 # Documents
 
-## [Business Case](Document/Business Case.pdf)
+## [Business Case](Document/Business%20Case.pdf)
 
-## [Milestone-based schedule](Document/Milestone-Based Schedule.pdf)
+## [Milestone-based schedule](Document/Milestone-Based%20Schedule.pdf)
 
-## [Problem defination](Document/Problem definition.md)
+## [Problem defination](Document/Problem%20definition.md)
 
-## [Project charter](Document/Project Charter .pdf)
+## [Project charter](Document/Project%20Charter .pdf)
 
 # Presentation
 
