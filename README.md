@@ -13,7 +13,7 @@ The purpose of this UofR Software Engineering Capstone Project is to enhance the
 ## Latest vlog
 [id]: y45IOaX7iNw
 
-Youtube video ID: {%id&}
+Youtube video ID: {%id%}
 
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/[id]/0.jpg)](https://www.youtube.com/watch?/v=[id])
 
