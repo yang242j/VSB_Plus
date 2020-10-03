@@ -24,6 +24,8 @@ The purpose of this UofR Software Engineering Capstone Project is to enhance the
 
 - [Project charter](Document/Project_charter.pdf)
 
+- [Low Fidelity](Document/LoFi_1.pdf)
+
 # Presentation
 
 # Final Demo
