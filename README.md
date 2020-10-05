@@ -16,15 +16,15 @@ The purpose of this UofR Software Engineering Capstone Project is to enhance the
 
 # Documents
 
-- [Business Case](Document/Scrum#1/Business_case.pdf)
+- [Business Case](Document/Scrum%231/Business_case.pdf)
 
 - [Milestone-based schedule](Document/Milestone_based_schedule.pdf)
 
 - [Problem defination](Document/Problem_definition.md)
 
-- [Project charter](Document/Scrum#1/Project_charter.pdf)
+- [Project charter](Document/Scrum%231/Project_charter.pdf)
 
-- [Low Fidelity](Document/Scrum#1/LoFi_1.pdf)
+- [Low Fidelity](Document/Scrum%231/LoFi_1.pdf)
 
 # Presentation
 
