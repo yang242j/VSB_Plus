@@ -26,6 +26,8 @@ The purpose of this UofR Software Engineering Capstone Project is to enhance the
 
 - [Low Fidelity](Document/Scrums/Scrum%231/LoFi_1.pdf)
 
+- [High Fidelity](Document/Scrums/Scrum%232/HiFi-1.pdf)
+
 # Presentation
 
 # Final Demo
