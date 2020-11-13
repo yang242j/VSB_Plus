@@ -1,6 +1,7 @@
 <!doctype html>
 
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
 
@@ -31,12 +32,38 @@
     </nav>
 
     <div class="container">
-
+        <form method="POST">
+            <table class="filterTable">
+                <tr>
+                    <td class="filter">Academic Programs:
+                        <select class="filter" size="1" name="program_filter">
+                            <option value="all_pro">None</option>
+                            <option value="ENSE">Software System Engineering</option>
+                            <option value="ENEL">Electronic System Engineering</option>
+                            <option value="ENEV">Environmental System Engineering</option>
+                            <option value="ENPE">Petroleum System Engineering</option>
+                            <option value="ENIN">Industrial System Engineering</option>
+                        </select>
+                    </td>
+                    <td class="filter">Facultys:
+                        <select class="filter" size="1" name="faculty_filter">
+                            <option value="all_fac">None</option>
+                            <option value="Engineering">Engineering And Applied Science</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+            <input type="submit" value="Submit"/>
+        </form>
+        
     </div>
 
     <footer>
         <script src="js/main.js"></script>
-        <p class="copyright">Copyright &copy; Sep. 2020 to <script>document.write(new Date().getFullYear())</script> UofR VSB_Plus Capstone Group All Rights Reserved</p>
+        <p class="copyright">Copyright &copy; Sep. 2020 to
+            <script>document.write(new Date().getFullYear())</script> UofR VSB_Plus Capstone Group All Rights Reserved
+        </p>
     </footer>
 </body>
+
 </html>
