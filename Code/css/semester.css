@@ -1,0 +1,43 @@
+body .container .left-section {
+    width: 25%;
+    height: 100%;
+    float: left;
+    background-color: rosybrown;
+}
+
+body .container .middle-section {
+    width: 50%;
+    height: 100%;
+    float: left;
+    background-color: royalblue;
+}
+
+body .container .right-section {
+    width: 25%;
+    height: 100%;
+    position: relative;
+    float: right;
+    background-color: yellow;
+}
+
+body .container .stick-bottom {
+   position: fixed;
+   bottom: 0;
+   width: 95%;
+}
+
+body .container .bottom-left {
+    position: relative;
+    float: left;
+    width: 50%;
+    background-color: purple;
+    border-collapse: collapse;
+}
+
+body .container .bottom-right {
+    position: relative;
+    float: right;
+    width: 50%;
+    background-color: gray;
+    border-collapse: collapse;
+}
