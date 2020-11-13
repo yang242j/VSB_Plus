@@ -32,8 +32,16 @@
     </nav>
 
     <div class="container">
-        <div class="left-section">
-            left-section
+        <div class="top-section">
+            <label for="term">Choose a term:</label>
+            <select id="term" onChange="termSelector()"> <!-- onChange="this.form.submit()" -->
+                <option value="fall 2020">Fall 2020</option>
+                <option value="winter 2021">Winter 2021</option>
+            </select>
+            <p id="termDemo"></p>
+        </div>
+        <div class="left-section" ondrop="drop(event)" ondragover="allowDrop(event)">
+            Drop Here<br>
         </div>
         <div class="middle-section">
             middle-section
@@ -42,17 +50,20 @@
             right-section
         </div>
         <div class="stick-bottom">
-            <div class="bottom-left">
-                bottom-left
+            <div class="bottom-left" ondrop="drop(event)" ondragover="allowDrop(event)">
+                Courses Completed: <br>
+                <img class="courseIMG" id="ense400" src="img/ENSE400.png" draggable="true" ondragstart="drag(event)">
             </div>
-            <div class="bottom-right">
-                bottom-right
+            <div class="bottom-right" ondrop="drop(event)" ondragover="allowDrop(event)">
+                Courses To Take: <br>
+                <img class="courseIMG" id="ense496ac" src="img/ENSE496AC.png" draggable="true" ondragstart="drag(event)">
             </div>
         </div>
     </div>
 
     <footer>
         <script src="js/main.js"></script>
+        <script src="js/semester.js"></script>
         <p class="copyright">Copyright &copy; Sep. 2020 to <script>document.write(new Date().getFullYear())</script> UofR VSB_Plus Capstone Group All Rights Reserved</p>
     </footer>
 </body>
