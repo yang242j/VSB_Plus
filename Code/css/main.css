@@ -54,7 +54,13 @@ nav .nav-right {
     float: right;
 }
 
+body .container{
+    overflow-x: hidden;
+    margin-top: 2%;
+    background-color: rgb(250, 1, 1);
+    padding-top: 100px;
+}
+
 footer .copyright {
     text-align: center;
 }
-
