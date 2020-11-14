@@ -3,7 +3,3 @@ function setFilter(){
     var faculty = document.getElementById("faculty").value;
     document.getElementById("filter_cond").innerHTML = "Program: " + program + "<br> Faculty: " + faculty;
 }
-
-function overCourse(){
-    
-}
