@@ -11,8 +11,32 @@ function drag(ev) {
     ev.dataTransfer.setData("text", ev.target.id);
 }
 
-function drop(ev) {
-    ev.preventDefault();
+function dragEnter(ev) {
+    ev.target.style.backgroundColor = "";
+}
+
+function dragLeave(ev) {
+    ev.target.style.backgroundColor = "";
+}
+
+function dropL(ev) {
     var data = ev.dataTransfer.getData("text");
-    ev.target.appendChild(document.getElementById(data));
+    if (ev.target.classList.contains("noDrop")) {
+        ev.preventDefault();
+    } else {
+        ev.preventDefault();
+        document.getElementsByClassName("left-section")[0].appendChild(document.getElementById(data));
+    }
+    ev.target.style.backgroundColor = "";
+}
+
+function dropBR(ev) {
+    var data = ev.dataTransfer.getData("text");
+    if (ev.target.classList.contains("noDrop")) {
+        ev.preventDefault();
+    } else {
+        ev.preventDefault();
+        document.getElementsByClassName("bottom-right")[0].appendChild(document.getElementById(data));
+    }
+    ev.target.style.backgroundColor = "";
 }

@@ -1,38 +1,74 @@
+/*Top Section*/
 body .container .top-section {
     width: 100%;
     height: 100%;
     float: left;
 }
 
+/*Left Section*/
 body .container .left-section {
-    width: 25%;
+    width: 10%;
     height: 100%;
     float: left;
     background-color: rosybrown;
+    padding-bottom: 10px;
 }
 
+body .container .left-section .courseTag {
+    margin: 10px auto 10px;
+}
+
+body .container .left-section .dropZone {
+    margin: 10px;
+}
+
+/*Middle Section*/
 body .container .middle-section {
-    width: 50%;
+    width: 45%;
     height: 100%;
     float: left;
     box-sizing: border-box;
     background-color: royalblue;
 }
 
+body .container .middle-section .courseInfo {
+    margin: 10px auto 10px;
+    width: 75%;
+    border: 3px solid black;
+    padding: 0 10px 0;
+}
+
+/*Right Section*/
 body .container .right-section {
-    width: 25%;
+    width: 45%;
     height: 100%;
     float: right;
     box-sizing: border-box;
     background-color: yellow;
 }
 
+body .container .right-section .Calendar {
+    margin: 10px auto 10px;
+    width: 75%;
+    border: 3px solid black;
+    padding: 0 10px 0;
+}
+
+body .container .right-section .Date {
+    margin: 10px auto 10px;
+    width: 75%;
+    border: 3px solid black;
+    padding: 0 10px 0;
+}
+
+/*Bottom Section*/
 body .container .stick-bottom {
    position: fixed;
    border: 2px solid black;
    bottom: 0;
    width: 95%;
    display: flex; /* equal height of the children */
+   background-color: white;
 }
 
 body .container .bottom-left {
@@ -40,6 +76,7 @@ body .container .bottom-left {
     float: left;
     box-sizing: border-box;
     border: 2px solid black;
+    min-height: 90px;
 }
 
 body .container .bottom-right {
@@ -47,14 +84,10 @@ body .container .bottom-right {
     float: right;
     box-sizing: border-box;
     border: 2px solid black;
+    min-height: 90px;
 }
 
-.courseIMG {
-    border: 1px solid #aaaaaa;
-    border-radius: 10%;
-    height: 25px;
-}
-
-.courseIMG:hover {
-    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+body .container .bottom-right .courseTag {
+    float: left;
+    margin: 5px 10px 5px;
 }
