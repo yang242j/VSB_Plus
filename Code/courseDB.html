@@ -32,31 +32,37 @@
     </nav>
 
     <div class="container">
-        <form method="POST">
+        <form onclick="return false" method="POST">
             <table class="filterTable">
                 <tr>
                     <td class="filter">Academic Programs:
-                        <select class="filter" size="1" name="program_filter">
-                            <option value="all_pro">None</option>
-                            <option value="ENSE">Software System Engineering</option>
-                            <option value="ENEL">Electronic System Engineering</option>
-                            <option value="ENEV">Environmental System Engineering</option>
-                            <option value="ENPE">Petroleum System Engineering</option>
-                            <option value="ENIN">Industrial System Engineering</option>
+                        <select class="filter" id="program" size="1" name="program_filter">
+                            <option value="None">None</option>
+                            <option value="Software System Engineering">Software System Engineering</option>
+                            <option value="Electronic System Engineering">Electronic System Engineering</option>
+                            <option value="Environmental System Engineering">Environmental System Engineering</option>
+                            <option value="Petroleum System Engineering">Petroleum System Engineering</option>
+                            <option value="Industrial System Engineering">Industrial System Engineering</option>
                         </select>
                     </td>
                     <td class="filter">Facultys:
-                        <select class="filter" size="1" name="faculty_filter">
-                            <option value="all_fac">None</option>
-                            <option value="Engineering">Engineering And Applied Science</option>
+                        <select class="filter" id="faculty" size="1" name="faculty_filter">
+                            <option value="None">None</option>
+                            <option value="Engineering and Applied Science">Engineering And Applied Science</option>
                         </select>
                     </td>
                 </tr>
+                
             </table>
-            <input type="submit" value="Submit"/>
+            <input type="submit" value="Submit" onclick="setFilter(event)"/>
+            <p id="filter_cond"></p>
         </form>
-        <div class="course">
-            <p>ENSE400</p>
+        <div id="course_area">
+            <div class="course" id="c1" style="background-color: aqua;" onclick="alert('Test')">ENSE 400</div>
+            <div class="course" id="c2" style="background-color: bisque;">ENEL 387</div>
+            <div class="course" id="c3" style="background-color: coral;">ENSE 496AC</div>
+            <div class="course" id="c4" style="background-color: cornflowerblue;">ENSE 496AD</div>
+            <div class="course" id="c5" style="background-color: darkkhaki;">ENSE 472</div>
         </div>
     </div>
 
