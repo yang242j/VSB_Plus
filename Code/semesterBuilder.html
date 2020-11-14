@@ -40,23 +40,47 @@
             </select>
             <p id="termDemo"></p>
         </div>
-        <div class="left-section" ondrop="drop(event)" ondragover="allowDrop(event)">
-            Drop Here<br>
+        <div class="left-section">
+            Course List<br>
+
+            <div class="dropZone" ondrop="dropL(event)" ondragover="allowDrop(event)" ondragenter="dragEnter(event)" ondragleave="dragLeave(event)"><img src="img/drop-here.png" style="max-height: 100%;max-width: 100%;" draggable="false"></div>
+
+            <div class="courseTag noDrop" id="ense1" draggable="true" ondragstart="drag(event)">ENSE1</div>
+            <div class="courseTag noDrop" id="ense2" draggable="true" ondragstart="drag(event)">ENSE2</div>
+            <div class="courseTag noDrop" id="ense3" draggable="true" ondragstart="drag(event)">ENSE3898</div>
+            <div class="courseTag noDrop" id="ense4" draggable="true" ondragstart="drag(event)">ENSE4</div>
         </div>
         <div class="middle-section">
-            middle-section
+            Course Detail Info
+            <div class="courseInfo">
+                <h2>ENGG 140</h2>
+                <p>Course Detail Info: **** **** *** ** * * * **</p>
+            </div>
+            <div class="courseInfo">
+                <h2>CS 110</h2>
+                <p>Course Detail Info: **** **** *** ** * * * **</p>
+            </div>
+            <div class="courseInfo">
+                <h2>ENGG 100</h2>
+                <p>Course Detail Info: **** **** *** ** * * * **</p>
+            </div>
         </div>
         <div class="right-section">
-            right-section
+            Weekly Schedule & Exam Date
+            <div class="Calendar">Weekly Schedule
+                <img src="img/calendar-sample.png" style="max-height: 100%;max-width: 100%;">
+            </div>
+            <div class="Date">ExamDate
+                <img src="img/ANTH100 due date.PNG" style="max-height: 100%;max-width: 100%;">
+            </div>
         </div>
         <div class="stick-bottom">
-            <div class="bottom-left" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <div class="bottom-left">
                 Courses Completed: <br>
-                <img class="courseIMG" id="ense400" src="img/ENSE400.png" draggable="true" ondragstart="drag(event)">
             </div>
-            <div class="bottom-right" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <div class="bottom-right" ondrop="dropBR(event)" ondragover="allowDrop(event)" ondragenter="dragEnter(event)" ondragleave="dragLeave(event)">
                 Courses To Take: <br>
-                <img class="courseIMG" id="ense496ac" src="img/ENSE496AC.png" draggable="true" ondragstart="drag(event)">
+                <div class="courseTag noDrop" id="ense" draggable="true" ondragstart="drag(event)">ENSE</div>
             </div>
         </div>
     </div>
@@ -65,6 +89,9 @@
         <script src="js/main.js"></script>
         <script src="js/semester.js"></script>
         <p class="copyright">Copyright &copy; Sep. 2020 to <script>document.write(new Date().getFullYear())</script> UofR VSB_Plus Capstone Group All Rights Reserved</p>
+        <p class="note">
+            Calendar sample: https://www.codeproject.com/Articles/732679/HTML-Event-Calendar-Scheduler<br>
+        </p>
     </footer>
 </body>
 </html>
