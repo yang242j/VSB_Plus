@@ -1,3 +1,4 @@
+
 body .course{
     text-align:center;
     line-height: 30px;
@@ -19,4 +20,60 @@ body .course{
     grid-gap: 20px;
     grid-auto-rows: 30px;
     background-color: rgb(201, 252, 235);
+  }
+  
+
+
+  html {
+    font-family: calibri;
+  }
+  .container {
+    width: 400px;
+    margin:auto;
+  }
+  .tab-header {
+      margin-top:10px;
+      position:relative;
+      padding:5px 10px;
+      /* //display:inline-block; */
+  }
+  .tab-header span {
+      height:45px;
+      width:45px;
+      border-radius:50%;
+      margin:auto;
+      color:#4c4a47;
+      background-color:transparent;
+      border:2px solid #99958E;
+      display:block;
+      position:relative;
+  }
+  .tab-header span p {
+      font-size:30px;
+      font-weight:bold;
+      text-align:center;
+      position:relative;
+      top:-4px;
+      left:.5px;
+      margin:2px;
+  }
+  .tab-header .header-bar {
+      width:130px;
+      height:3px;
+      background-color:#99958E;
+      position:relative;
+  }
+  
+  .tab-header .bar-right {
+      left:42px;
+      top:-36px;
+  }
+  
+  .tab-header .bar-left {
+      right:130px;
+      top: 19px;
+  }
+  
+  .tab-header .header-bar.bar-blank {
+      background-color:transparent;
   }

@@ -52,9 +52,9 @@
                         </select>
                     </td>
                 </tr>
-                
+
             </table>
-            <input type="submit" value="Submit" onclick="setFilter(event)"/>
+            <input type="submit" value="Submit" onclick="setFilter(event)" />
             <p id="filter_cond"></p>
         </form>
         <div id="course_area">
@@ -64,6 +64,39 @@
             <div class="course" id="c4" style="background-color: cornflowerblue;">ENSE 496AD</div>
             <div class="course" id="c5" style="background-color: darkkhaki;">ENSE 472</div>
         </div>
+        <p>Example for visualizing course prerequisites:</p>
+        <div class="course" id="c10" style="background-color: bisque;">ENSE 387</div>
+        <br><br>
+        <div>
+            <span class="course preReq" id="c11" style="background-color: rgb(245, 116, 41);">ENSE 352</span>
+            <span class="course preReq" id="c12" style="background-color: rgb(245, 116, 41);">ENEL 384</span>
+        </div>
+
+        <script src="https://cdn.bootcss.com/jsPlumb/2.6.8/js/jsplumb.min.js"></script>
+
+        <script>
+            /* global jsPlumb */
+            jsPlumb.ready(function () {
+                
+                jsPlumb.connect({
+                    source: 'c12',
+                    target: 'c10',
+                    overlays: [['Arrow', { width: 12, length: 12, location: 0.5 }]],
+                    endpoint: 'Blank',
+                    anchor: ['Bottom', 'Top'],
+                    connector: ['Straight']
+                })
+                jsPlumb.connect({
+                    source: 'c11',
+                    target: 'c10',
+                    overlays: [['Arrow', { width: 12, length: 12, location: 0.5 }]],
+                    endpoint: 'Blank',
+                    anchor: ['Bottom', 'Top'],
+                    connector: ['Straight']
+                })
+
+            })
+        </script>
     </div>
 
     <footer>
