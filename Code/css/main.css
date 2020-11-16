@@ -61,6 +61,8 @@ body .container{
     min-height: 400px;
     margin-bottom: 10px;
     clear: both;
+    border: 3px outset green;
+    background-color: #f1f1f1;
 }
 
 footer {
@@ -94,4 +96,13 @@ footer .note {
 
 .courseTag:active {
     cursor: grabbing;
+}
+
+.myDiv {
+  width: 60%;
+  margin-top: 6%;
+  min-height: 100px;
+  margin-left: 80px;
+  margin-bottom: 20px;
+  background-color: lightgreen;    
 }
