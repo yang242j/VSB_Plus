@@ -1,0 +1,35 @@
+body .container .left-section{
+    width: 75%;
+    float: left;
+    box-sizing: border-box;
+    border: 3px outset green;
+    background-color: #f1f1f1;
+}
+
+body .container .right-section{
+    width: 25%;
+    float: right;
+    box-sizing: border-box;
+}
+
+body .container .right-section .update-log{
+    margin: 10px;
+    border: 2px outset grey;
+    background-color: #ddd;
+}
+
+body .container .right-section .contact-us {
+    margin: 10px;
+    border: 2px outset grey;
+    background-color: #ddd;
+}
+
+body .container .right-section h3 {
+    color: #DF7401;
+    margin-left: 10%;
+}
+
+body .container .right-section h4 {
+    margin-top: 1%;
+    margin-left: 40%;
+}

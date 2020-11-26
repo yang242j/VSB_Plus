@@ -55,14 +55,12 @@ nav .nav-right {
 }
 
 body .container{
-    width: 75%;
+    width: 100%;
     overflow-x: hidden;
     margin-top: 2%;
     min-height: 400px;
     margin-bottom: 10px;
     clear: both;
-    border: 3px outset green;
-    background-color: #f1f1f1;
 }
 
 footer {
@@ -96,49 +94,4 @@ footer .note {
 
 .courseTag:active {
     cursor: grabbing;
-}
-
-.myDiv {
-  width: 60%;
-  margin-top: 10%;
-  min-height: 100px;
-  margin-left: 80px;
-  margin-bottom: 10px;
-  background-color: lightgreen;    
-}
-
-section {
-    margin-right: 5px;
-    border-left: 1px;
-    padding: 1em;
-}
-
-div.absolute {
-  position: absolute;
-  top: 280px;
-  right: 3%;
-  width: 20%;
-  height: 300px;
-  border: 2px outset grey;
-  background-color: #ddd;
-}
-
-h3{
-    color: #DF7401;
-	margin-left: 10%;
-}
-
-h4{
-	margin-top: 1%;
-    margin-left: 40%;
-}
-
-div.abS {
-  position: absolute;
-  top: 850px;
-  right: 3%;
-  width: 20%;
-  height: 300px;
-  border: 2px outset grey;
-  background-color: #ddd;
 }

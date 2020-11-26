@@ -1,58 +1,60 @@
-#course_area {
-    text-align:center;
-    line-height: 200px;
-    width: 800px;
-    height: 100px;
-    display: grid;
-    grid-template-columns: repeat(5, 100px);
-    grid-template-rows: repeat(6, 1ft);
-    grid-gap: 20px;
-    grid-auto-rows: 30px;
-    background-color: rgb(201, 252, 235);
-  }
-  body .course{
-    position: relative;
-    text-align:center;
-    line-height: 30px;
-    width: 100px;
-    height: 30px;
-    border-radius: 8px;
-    border-style:solid;
-    border-width: 2px;
-    margin-left:10px;
-    margin-top: 10px;
-    /* background: #f0a23d; */
+body .container .left-section {
+   width: 75%;
+   float: left;
+   box-sizing: border-box;
+   border: 3px outset green;
+   background-color: #f1f1f1;
 }
-#tag_area {
-    text-align:center;
-    line-height: 30px;
-    width: 100px;
-    height: 30px;
-    display: grid;
-    grid-template-columns: repeat(5, 100px);
-    grid-template-rows: repeat(6, 1ft);
-    grid-gap: 20px;
-    grid-auto-rows: 30px;
-    border-radius: 8px;
-    margin-left:10px;
-    background-color: rgb(201, 252, 235);
-  }
 
- #completed_course{
-    position: relative;
-    text-align: left;
-    margin-left:900px;
-    margin-top: -350px;
-    width: 900px;
-    height: 500px;
-    background-color: greenyellow
- }
- #not_completed_course{
-    position: relative;
-    text-align: left;
-    margin-left:900px;
-    margin-top: 0px;
-    width: 900px;
-    height: 500px;
-    background-color: lightseagreen
- }
+body .container .term-container{
+   box-sizing: border-box;
+   border: 3px outset red;
+   background-color: #f1f1f1;
+}
+
+body .container .term-container .course-section{
+   display: grid;
+   grid-template-columns: repeat(5, 100px);
+   grid-gap: 20px;
+   grid-auto-rows: 30px;
+   background-color: rgb(201, 252, 235);
+   padding-bottom: 10px;
+}
+
+body .container .term-container .course-section .courseTag{
+   line-height: 30px;
+   height: 30px;
+   border-radius: 8px;
+   margin-left:10px;
+   margin-top: 10px;
+}
+
+body .container .term-container .course-section .tag-section{
+   text-align:center;
+   line-height: 30px;
+   display: grid;
+   grid-template-columns: repeat(5, 100px);
+   grid-gap: 20px;
+   margin-left:10px;
+   background-color: rgb(201, 252, 235);
+}
+
+body .container .right-section{
+   width: 25%;
+   float: right;
+   box-sizing: border-box;
+   border: 3px outset green;
+   background-color: #f1f1f1;
+}
+
+body .container .right-section .course-completed{
+   background-color: greenyellow;
+   margin: 10px;
+   padding-bottom: 25px;
+}
+
+body .container .right-section .course-not-completed{
+   background-color: lightseagreen;
+   margin: 10px;
+   padding-bottom: 25px;
+}
