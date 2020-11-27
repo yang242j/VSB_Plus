@@ -10,8 +10,13 @@ body .container .left-section {
     width: 10%;
     height: 100%;
     float: left;
-    background-color: rosybrown;
+    outline: 3px solid green;
+    background-color: #f1f1f1;
     padding-bottom: 10px;
+}
+
+body .container .left-section .section-title {
+    text-align: center;
 }
 
 body .container .left-section .courseTag {
@@ -28,7 +33,14 @@ body .container .middle-section {
     height: 100%;
     float: left;
     box-sizing: border-box;
-    background-color: royalblue;
+    outline: 3px solid green;
+    background-color: #f1f1f1;
+}
+
+body .container .middle-section .section-title {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 body .container .middle-section .courseInfo {
@@ -44,7 +56,12 @@ body .container .right-section {
     height: 100%;
     float: right;
     box-sizing: border-box;
-    background-color: yellow;
+    outline: 3px solid green;
+    background-color: #f1f1f1;
+}
+
+body .container .right-section .section-title {
+    text-align: center;
 }
 
 body .container .right-section .Calendar {
