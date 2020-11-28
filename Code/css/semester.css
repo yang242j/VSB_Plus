@@ -7,7 +7,7 @@ body .container .top-section {
 
 /*Left Section*/
 body .container .left-section {
-    width: 10%;
+    width: 13%;
     height: 100%;
     float: left;
     box-sizing: border-box;
@@ -30,7 +30,7 @@ body .container .left-section .dropZone {
 
 /*Middle Section*/
 body .container .middle-section {
-    width: 45%;
+    width: 44%;
     height: 100%;
     float: left;
     box-sizing: border-box;
@@ -53,7 +53,7 @@ body .container .middle-section .courseInfo {
 
 /*Right Section*/
 body .container .right-section {
-    width: 45%;
+    width: 43%;
     height: 100%;
     float: right;
     box-sizing: border-box;
@@ -81,24 +81,36 @@ body .container .right-section .Date {
 
 /*Bottom Section*/
 body .container .stick-bottom {
-   position: fixed;
-   border: 2px solid black;
-   bottom: 0;
-   width: 95%;
-   display: flex; /* equal height of the children */
-   background-color: white;
+    position: fixed;
+    border: 2px solid black;
+    bottom: 0;
+    width: 95%;
+    display: flex;
+    /* equal height of the children */
+    background-color: white;
 }
 
 body .container .bottom-left {
-    flex: 1; /* additionally, equal width */
+    flex: 1;
+    /* additionally, equal width */
     float: left;
     box-sizing: border-box;
     border: 2px solid black;
     min-height: 90px;
 }
 
+body .container .bottom-left .courseTag {
+    float: left;
+    margin: 5px 10px 5px;
+}
+
+body .container .bottom-left .noDrag:hover {
+    cursor: not-allowed;
+}
+
 body .container .bottom-right {
-    flex: 1; /* additionally, equal width */
+    flex: 1;
+    /* additionally, equal width */
     float: right;
     box-sizing: border-box;
     border: 2px solid black;

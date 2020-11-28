@@ -45,42 +45,56 @@
 
             <div class="dropZone" ondrop="dropL(event)" ondragover="allowDrop(event)" ondragenter="dragEnter(event)" ondragleave="dragLeave(event)"><img src="img/drop-here.png" style="max-height: 100%;max-width: 100%;" draggable="false"></div>
 
-            <div class="courseTag noDrop" id="ense1" draggable="true" ondragstart="drag(event)">ENSE1</div>
-            <div class="courseTag noDrop" id="ense2" draggable="true" ondragstart="drag(event)">ENSE2</div>
-            <div class="courseTag noDrop" id="ense3" draggable="true" ondragstart="drag(event)">ENSE3898</div>
-            <div class="courseTag noDrop" id="ense4" draggable="true" ondragstart="drag(event)">ENSE4</div>
+            <div class="courseTag noDrop" id="ense400" draggable="true" ondragstart="drag(event)">ENSE400</div>
+            <div class="courseTag noDrop" id="ense496ac" draggable="true" ondragstart="drag(event)">ENSE496AC</div>
+            <div class="courseTag noDrop" id="ense496ad" draggable="true" ondragstart="drag(event)">ENSE496AD</div>
         </div>
         <div class="middle-section">
             <h3 class="section-title">Course Detail Info</h3>
             <div class="courseInfo">
-                <h2>ENGG 140</h2>
+                <h2>ENSE 400</h2>
+                <h4>ENSE Project Start-up</h4>
                 <p>Course Detail Info: **** **** *** ** * * * **</p>
             </div>
             <div class="courseInfo">
-                <h2>CS 110</h2>
+                <h2>ENSE 496AC</h2>
+                <h4>Artificial Intelligence</h4>
                 <p>Course Detail Info: **** **** *** ** * * * **</p>
             </div>
             <div class="courseInfo">
-                <h2>ENGG 100</h2>
+                <h2>ENSE 496AD</h2>
+                <h4>Machine Learning</h4>
                 <p>Course Detail Info: **** **** *** ** * * * **</p>
             </div>
         </div>
         <div class="right-section">
             <h3 class="section-title">Weekly Schedule & Exam Date</h3>
             <div class="Calendar">Weekly Schedule
-                <img src="img/calendar-sample.png" style="max-height: 100%;max-width: 100%;">
+                <embed type="text/html" src="calendar.html" style="min-height: 380px;width: 100%;"></embed>
             </div>
-            <div class="Date">ExamDate
-                <img src="img/ANTH100 due date.PNG" style="max-height: 100%;max-width: 100%;">
+            <div class="Date">
+                <p>Midterm Exam Date:</p>
+                <ul>
+                    <li>ENSE 400: /</li>
+                    <li>ENSE 496AC: Tuesday, October 20, 2020</li>
+                    <li>ENSE 496AD: Monday, October 26, 2020</li>
+                </ul>
+                <p>Final Exam Date:</p>
+                <ul>
+                    <li><mark>ENSE 400: Wednesday, December 16, 2020</mark</li>
+                    <li>ENSE 496AC: Tuesday, December 22, 2020</li>
+                    <li><mark>ENSE 496AD: Wednesday, December 16, 2020</mark></li>
+                </ul>
             </div>
         </div>
         <div class="stick-bottom">
             <div class="bottom-left">
                 Courses Completed: <br>
+                <div class="courseTag noDrag" id="ense374" draggable="false">ENSE374</div>
             </div>
             <div class="bottom-right" ondrop="dropBR(event)" ondragover="allowDrop(event)" ondragenter="dragEnter(event)" ondragleave="dragLeave(event)">
                 Courses To Take: <br>
-                <div class="courseTag noDrop" id="ense" draggable="true" ondragstart="drag(event)">ENSE</div>
+                <div class="courseTag noDrop" id="ense401" draggable="true" ondragstart="drag(event)">ENSE401</div>
             </div>
         </div>
     </section>
