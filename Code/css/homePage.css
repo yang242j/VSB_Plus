@@ -1,11 +1,55 @@
-body .container .left-section{
+/* Left Section */
+body .container .left-section {
     width: 75%;
     float: left;
     box-sizing: border-box;
+}
+
+body .container .left-section h2,
+p {
+    margin: 10px;
+}
+
+body .container .left-section .left-upper {
     border: 3px outset green;
     background-color: #f1f1f1;
 }
 
+body .container .left-section .left-upper .screenshot {
+    display: block;
+    margin: 10px auto 10px;
+    border: 2px outset black;
+}
+
+body .container .left-section .left-lower {
+    margin-top: 10px;
+    border: 3px outset green;
+    background-color: #f1f1f1;
+}
+
+body .container .left-section .left-lower .photoInfo-section {
+    margin: 10px 10% 10px;
+    display: table;
+    table-layout: fixed;
+    border-spacing: 10px;
+}
+
+body .container .left-section .left-lower .photoInfo-section .photoInfo {
+    display: table-cell;
+    width: 25%;
+    text-align: center;
+}
+
+body .container .left-section .left-lower .photoInfo-section .photoInfo .photo {
+    width: 100%;
+    height: auto;
+}
+
+body .container .left-section .left-lower .team-desc {
+    margin: 0px 10% 10px;
+}
+
+/* Right Section */
 body .container .right-section{
     width: 25%;
     float: right;
