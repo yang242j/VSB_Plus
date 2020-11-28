@@ -82,6 +82,7 @@ footer .note {
     width: max-content;
     padding: 0px 10px 0px;
     text-align: center;
+    background-color: DarkGrey;
 }
 
 .courseTag:hover {

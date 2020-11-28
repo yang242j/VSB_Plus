@@ -1,3 +1,5 @@
+const colors = ["lightblue", "lightseagreen", "pink", "yellow", "Azure", "Bisque", "Coral", "Cyan", "Cornsilk", "Lavender"];
+
 function termSelector() {
     var term = document.getElementById("term").value;
     document.getElementById("termDemo").innerHTML = "You selected: " + term;
@@ -24,7 +26,7 @@ function dragLeave(ev) {
 
 function dropL(ev) {
     var data = ev.dataTransfer.getData("text");
-    const colors = ["#B73225", "#DCE1E3", "#DDAF94"];
+    
     if (ev.target.classList.contains("noDrop")) {
         ev.preventDefault();
     } else {
@@ -39,7 +41,6 @@ function dropL(ev) {
 
 function dropBR(ev) {
     var data = ev.dataTransfer.getData("text");
-    const colors = ["#B73225", "#DCE1E3", "#DDAF94"];
     if (ev.target.classList.contains("noDrop")) {
         ev.preventDefault();
     } else {
