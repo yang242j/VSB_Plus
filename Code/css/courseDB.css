@@ -10,9 +10,9 @@ body .course{
 }
 #course_area {
     text-align:center;
-    line-height: 200px;
-    width: auto;
-    height: 100px;
+    /* line-height: 200px; */
+    width: 50%;
+    height: 400px;
     display: grid;
     grid-template-columns: repeat(5, 100px);
     grid-template-rows: repeat(6, 1ft);
@@ -20,16 +20,11 @@ body .course{
     grid-auto-rows: 30px;
     background-color: rgb(201, 252, 235);
   }
-  
-
 
   html {
     font-family: calibri;
   }
-  .container {
-    width: 400px;
-    margin:auto;
-  }
+
   .tab-header {
       margin-top:10px;
       position:relative;
@@ -76,3 +71,22 @@ body .course{
   .tab-header .header-bar.bar-blank {
       background-color:transparent;
   }
+
+  /*popView*/
+#popView{
+	/*popView sytle*/
+	height: 400px;
+	width: 45%;
+	border-radius: 10px;
+	background-color: #b0e6ec;
+    opacity:0.8; 
+    
+	/*layout*/
+	position:absolute;
+	z-index:2;
+	right: 2%;
+ 
+	/*Word seting*/
+	text-align: left;
+	color: #000000;
+}
