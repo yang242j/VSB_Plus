@@ -76,13 +76,17 @@ footer .note {
 
 /* Course Tag */
 .courseTag {
-    border: 1px solid #aaaaaa;
+    display :grid;
+    border: 0px solid #aaaaaa;
     border-radius: 15px;
-    min-width: 50px;
-    width: max-content;
-    padding: 0px 10px 0px;
+    min-width: 100px;
+    width: 70px;
+    padding: 0px 15px 0px;
     text-align: center;
     background-color: DarkGrey;
+    margin-bottom : 10px;
+    font-weight: bold;
+    font-size : 15px;
 }
 
 .courseTag:hover {

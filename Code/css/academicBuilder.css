@@ -1,24 +1,24 @@
 body .container .left-section {
-   width: 75%;
+   width: 70%;
    float: left;
    box-sizing: border-box;
    border: 3px outset green;
    background-color: #f1f1f1;
+   margin-bottom : 20px;
 }
 
 body .container .term-container{
    box-sizing: border-box;
-   border: 3px outset red;
+   border: none;
    background-color: #f1f1f1;
 }
-
 body .container .term-container .course-section{
    display: grid;
    grid-template-columns: repeat(5, 100px);
    grid-gap: 20px;
-   grid-auto-rows: 30px;
    background-color: rgb(201, 252, 235);
-   padding-bottom: 10px;
+   padding-bottom: 20px;
+   align-content: center;
 }
 
 body .container .term-container .course-section .courseTag{
@@ -29,8 +29,9 @@ body .container .term-container .course-section .courseTag{
 }
 
 body .container .term-container .course-section .tag-section{
-   text-align:center;
-   line-height: 30px;
+   font-family: "Lucida Console", Courier, monospace;
+   text-align: center;
+   line-height: 20px;
    display: grid;
    grid-template-columns: repeat(5, 100px);
    grid-gap: 20px;
@@ -39,6 +40,7 @@ body .container .term-container .course-section .tag-section{
 }
 
 body .container .right-section{
+   
    width: 25%;
    float: right;
    box-sizing: border-box;
@@ -47,9 +49,16 @@ body .container .right-section{
 }
 
 body .container .right-section .course-completed{
+   display:block;
    background-color: greenyellow;
    margin: 10px;
    padding-bottom: 25px;
+}
+
+body .container .right-section .course-completed .courseTag{
+   display: grid;
+   grid-template-columns: auto auto auto;
+   
 }
 
 body .container .right-section .course-not-completed{
@@ -57,3 +66,26 @@ body .container .right-section .course-not-completed{
    margin: 10px;
    padding-bottom: 25px;
 }
+
+
+/*#hideButton:hover{ 
+  margin-left : 5px;
+  background-color: RoyalBlue;
+  margin-top : 5px;
+  color: white;
+  padding: 12px 16px;
+  cursor: pointer;
+  height: 5px;
+  width :6px;
+} */
+#hideButton:hover{ 
+   background-color: RoyalBlue; 
+ }
+h2 {
+   margin-top: 30px;
+   display: inline-block;
+ }
+ h3 {
+   margin-top: 30px;
+   display: inline-block;
+ }

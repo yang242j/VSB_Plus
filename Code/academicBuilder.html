@@ -4,12 +4,19 @@
 <head>
     <meta charset="utf-8">
 
+    <!-- icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+     <!-- icon library -->
+
     <title>VSB_Plus : Academic</title>
     <meta name="description" content="The HTML5 Herald">
     <meta name="author" content="SitePoint">
 
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/academicBuilder.css">
+
+
 
 </head>
 
@@ -33,9 +40,11 @@
 
     <section class="container">
         <section class="left-section">
-            <h2>Default Schedule(Fall 2020):</h2>
-            <div class="term-container">
+            <h2>Default Schedule(Fall 2020): </h2> 
+            <button id = "hideButton" onclick="hideAndShow"><i class='fas fa-angle-up'></i></button>    
+           <div class="term-container">
                 <h3>Term 1:</h3>
+                <button id = "hideButton" onclick="hideAndShow"><i class='fas fa-angle-up'></i></button>  
                 <div class="course-section">
                     <div class="courseTag" id="c1" style="background-color: aqua;" onclick="alert('Test')">ENSE 400</div>
                     <div class="courseTag" id="c2" style="background-color: bisque;">ENEL 387</div>
@@ -52,6 +61,7 @@
             </div>
             <div class="term-container">
                 <h3>Term 2:</h3>
+                <button id = "hideButton" onclick="hideAndShow"><i class='fas fa-angle-up'></i></button>
                 <div class="course-section">
                     <div class="courseTag" id="c1" style="background-color: aqua;" onclick="alert('Test')">ENSE 400</div>
                     <div class="courseTag" id="c2" style="background-color: bisque;">ENEL 387</div>
@@ -71,6 +81,12 @@
         <section class="right-section">
             <div class = "course-completed">
                 <h2>Coures completed:</h2>
+                <button id = "hideButton" onclick="hideAndShow()"><i class='fas fa-angle-up'></i></button>
+                <div class="courseTag" id="c1" style="background-color: aqua;" onclick="alert('Test')">ENGG 100</div>
+                <div class="courseTag" id="c2" style="background-color: bisque;">ENGL 100</div>
+                <div class="courseTag" id="c3" style="background-color: coral;">ENEL 280</div>
+                <div class="courseTag" id="c4" style="background-color: cornflowerblue;">ENEL 281</div>
+                <div class="courseTag" id="c5" style="background-color: darkkhaki;">ENEL 282</div>
                 <div class="courseTag" id="c1" style="background-color: aqua;" onclick="alert('Test')">ENGG 100</div>
                 <div class="courseTag" id="c2" style="background-color: bisque;">ENGL 100</div>
                 <div class="courseTag" id="c3" style="background-color: coral;">ENEL 280</div>
@@ -79,6 +95,7 @@
             </div>
             <div class = "course-not-completed">
                 <h2>Coures need to take:</h2>
+                <button id = "hideButton" onclick="hideAndShow()"><i class='fas fa-angle-up'></i></button>
                 <div class="courseTag" id="c1" style="background-color: aqua;" onclick="alert('Test')">ENSE 470</div>
                 <div class="courseTag" id="c2" style="background-color: bisque;">Math 213</div>
                 <div class="courseTag" id="c3" style="background-color: coral;">ENEL 353</div>
@@ -86,6 +103,31 @@
                 <div class="courseTag" id="c5" style="background-color: darkkhaki;">ENEL 374</div>
             </div>
         </section>
+
+        <section class="left-section">
+            <h2>Recommended Schedule(Fall 2020):</h2>
+            <button id = "hideButton" onclick="hideAndShow"><i class='fas fa-angle-up'></i></button>  
+            <div class="term-container">
+                <h3>Term x (next term of latest term):</h3>
+                <button id = "hideButton" onclick="hideAndShow"><i class='fas fa-angle-up'></i></button>
+                <div class="course-section">
+                    <div class="courseTag" id="c1" style="background-color: aqua;" onclick="alert('Test')">ENSE 400</div>
+                    <div class="courseTag" id="c2" style="background-color: bisque;">ENEL 387</div>
+                    <div class="courseTag" id="c3" style="background-color: coral;">ENSE 496AC</div>
+                    <div class="courseTag" id="c4" style="background-color: cornflowerblue;">ENSE 496AD</div>
+                    <div class="courseTag" id="c5" style="background-color: darkkhaki;">ENSE 472</div>
+                    <div class ="tag-section">
+                        <div class = "tag" id = "credit_hour" style=" background-color:grey;">15 cerdit hours</div>
+                        <div class = "tag" id = "difficult" style=" background-color:grey;">hard</div>
+                        <div class = "tag" id = "quizs" style=" background-color:grey;">many quizs</div>
+                        <div class = "tag" id = "proj" style=" background-color:grey;">no proj</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+       
 
     </section>
 
