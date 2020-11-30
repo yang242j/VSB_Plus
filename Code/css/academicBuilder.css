@@ -1,5 +1,5 @@
 body .container .left-section {
-   width: 70%;
+   width: 55%;
    float: left;
    box-sizing: border-box;
   /* border: 3px outset green;*/
@@ -41,8 +41,7 @@ body .container .term-container .course-section .tag-section{
 }
 
 body .container .right-section{
-   
-   width: 25%;
+   width: 40%;
    float: right;
    box-sizing: border-box;
    /*border: 3px outset green;*/
@@ -68,21 +67,6 @@ body .container .right-section .course-not-completed{
    margin: 10px;
    padding-bottom: 25px;
 }
-
-
-/*#hideButton:hover{ 
-  margin-left : 5px;
-  background-color: RoyalBlue;
-  margin-top : 5px;
-  color: white;
-  padding: 12px 16px;
-  cursor: pointer;
-  height: 5px;
-  width :6px;
-} */
-/*#hideButton:hover{ 
-   background-color: RoyalBlue; 
- }*/
 #hideButton{ 
    border : none
  }
@@ -156,3 +140,4 @@ h2 {
  .generateDetail:hover .generateDetailTips{
    visibility: visible;
  }
+ 
