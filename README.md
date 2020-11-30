@@ -24,9 +24,23 @@ The purpose of this UofR Software Engineering Capstone Project is to enhance the
 
 - [Project charter](Document/Scrums/Scrum%231/Project_charter.pdf)
 
-- [Low Fidelity](Document/Scrums/Scrum%231/LoFi_1.pdf)
+- [AWS Launch Steps](Document/AWS%20Launch%20Steps.pdf)
 
-- [High Fidelity](Document/Scrums/Scrum%232/HiFi-1.pdf)
+- [Class Difficulty approach method](Document/Class%20Difficulty%20Generate.pdf)
+
+- [Project phase planing](Document/Project%20phase%20planing.pdf)
+
+- [Low Fidelity](Document/Prototype/LoFi-v1.pdf)
+
+- [LoFi - Kanban view](Document/Prototype/Kanban%20style%20LoFi.jpeg)
+
+- [LoFi - Calendar view](Document/Prototype/Calendar%20view%20LoFi.jpeg)
+
+- [High Fidelity](Document/Prototype/HiFi-v1.pdf)
+
+- [HiFi - Kanban view](Document/Prototype/Kanban-style%20view%20HiFi.png)
+
+- [HiFi - Calendar view](Document/Prototype/Calendar%20View%20HiFi.png)
 
 # Presentation
 
