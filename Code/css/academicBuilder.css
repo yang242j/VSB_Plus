@@ -2,7 +2,8 @@ body .container .left-section {
    width: 70%;
    float: left;
    box-sizing: border-box;
-   border: 3px outset green;
+  /* border: 3px outset green;*/
+   border : none;
    background-color: #f1f1f1;
    margin-bottom : 20px;
 }
@@ -44,13 +45,14 @@ body .container .right-section{
    width: 25%;
    float: right;
    box-sizing: border-box;
-   border: 3px outset green;
+   /*border: 3px outset green;*/
+   border : none;
    background-color: #f1f1f1;
 }
 
 body .container .right-section .course-completed{
    display:block;
-   background-color: greenyellow;
+   background-color: lightgreen;
    margin: 10px;
    padding-bottom: 25px;
 }
@@ -62,7 +64,7 @@ body .container .right-section .course-completed .courseTag{
 }
 
 body .container .right-section .course-not-completed{
-   background-color: lightseagreen;
+   background-color: lightskyblue;
    margin: 10px;
    padding-bottom: 25px;
 }
@@ -78,10 +80,10 @@ body .container .right-section .course-not-completed{
   height: 5px;
   width :6px;
 } */
-#hideButton:hover{ 
+/*#hideButton:hover{ 
    background-color: RoyalBlue; 
- }
- #hideButton{ 
+ }*/
+#hideButton{ 
    border : none
  }
 h2 {
@@ -91,4 +93,66 @@ h2 {
  h3 {
    margin-top: 30px;
    display: inline-block;
+ }
+ .hide .hideTips{
+  visibility: hidden;
+  width: 40px;
+  background-color: rgba(123, 123, 230, 0.26);
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+.hide:hover .hideTips{
+   visibility: visible;
+ }
+
+#viewButton{
+  width:50px;
+  height :40px;
+  margin-top: 10px;
+  border:none;
+  background-color: white;
+  display: inline-block;
+ }
+ .view .viewTips{
+   visibility: hidden;
+   width: 40px;
+   background-color:black;
+   color: #fff;
+   text-align: center;
+   border-radius: 6px;
+   padding: 5px 0;
+   /* Position the tooltip */
+   position: absolute;
+   z-index: 1;
+ }
+ .view:hover .viewTips{
+   visibility: visible;
+ }
+
+ .generateDetail{
+  float : right;
+  border:none;
+  margin-top: 10px;
+  margin-right: 10px;
+ }
+ .generateDetail .generateDetailTips{
+   visibility: hidden;
+   width: 60px;
+   background-color:black;
+   color: #fff;
+   text-align: center;
+   border-radius: 6px;
+   padding: 5px 0;
+   /* Position the tooltip */
+   position: absolute;
+   z-index: 1;
+
+ }
+ .generateDetail:hover .generateDetailTips{
+   visibility: visible;
  }
