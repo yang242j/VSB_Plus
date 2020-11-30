@@ -53,3 +53,26 @@ body .status .course-status .course-complete{
   #course-card:hover{
       background-color: rgb(146, 146, 236);
   }
+  #viewButton{
+    width:50px;
+    height :40px;
+    margin-top: 10px;
+    border:none;
+    background-color: white;
+    display: inline-block;
+   }
+   .view .viewTips{
+     visibility: hidden;
+     width: 40px;
+     background-color:black;
+     color: #fff;
+     text-align: center;
+     border-radius: 6px;
+     padding: 5px 0;
+     /* Position the tooltip */
+     position: absolute;
+     z-index: 1;
+   }
+   .view:hover .viewTips{
+     visibility: visible;
+   }
