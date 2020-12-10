@@ -2,8 +2,6 @@ body .container .left-section {
    width: 55%;
    float: left;
    box-sizing: border-box;
-  /* border: 3px outset green;*/
-   border : none;
    background-color: #f1f1f1;
    margin-bottom : 20px;
 }
@@ -44,8 +42,6 @@ body .container .right-section{
    width: 40%;
    float: right;
    box-sizing: border-box;
-   /*border: 3px outset green;*/
-   border : none;
    background-color: #f1f1f1;
 }
 
@@ -71,7 +67,6 @@ body .container .right-section .course-not-completed{
    border : none
  }
 h2 {
-   margin-top: 30px;
    display: inline-block;
  }
  h3 {
@@ -95,12 +90,8 @@ h2 {
  }
 
 #viewButton{
-  width:50px;
-  height :40px;
-  margin-top: 10px;
   border:none;
   background-color: white;
-  display: inline-block;
  }
  .view .viewTips{
    visibility: hidden;

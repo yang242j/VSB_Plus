@@ -32,41 +32,52 @@
         </div>
     </nav>
 
-
-    <div>
-        <h2>Views:  </h2>
-    <button class = "view" id = "viewButton" onclick ="location.href ='academicBuilderTable.html'"><i class='fas fa-grip-vertical' style='font-size:24px'></i>
-    <span class = "viewTips">table</span>
-    <button class = "view" id = "viewButton" onclick ="location.href ='academicBuilder.html'"><i class='fas fa-grip-lines-vertical' style='font-size:24px'></i></i>
-        <span class = "viewTips">layout</span>
-    </button> 
-    </div>
-
     <section class="container">
+        <div>
+            <h2>Views:</h2>
+            <button class = "view" id = "viewButton" onclick ="location.href ='academicBuilderTable.html'">
+                <i class='fas fa-grip-vertical' style='font-size:24px'></i>
+                <span class = "viewTips">table</span>
+            </button> 
+            <button class = "view" id = "viewButton" onclick ="location.href ='academicBuilder.html'">
+                <i class='fas fa-grip-lines-vertical' style='font-size:24px'></i></i>
+                <span class = "viewTips">layout</span>
+            </button> 
+        </div>
+
         <section class="left-section">
             <h2>Default Schedule(Fall 2020): </h2>  
-            <button class = "hide" id = "hideButton" onclick="hideAndShow()" ><i class='fas fa-angle-up'></i>
-            <span class = "hideTips">hide</span></button>  
+            
+            <button class = "hide" id = "hideButton" onclick="hideAndShow()" >
+                <i class='fas fa-angle-up'></i>
+                <span class = "hideTips">hide</span>
+            </button>  
 
-            <button class = "generateDetail" id = "generateDetail" onclick ="location.href ='academicBuilderTermDetail.html'" ><i class='fas fa-bars' style='font-size:24px'></i>
-            <span class = "generateDetailTips">generate detail of terms</span></button>  
-           <div class="term-container">
+            <button class = "generateDetail" id = "generateDetail" onclick ="location.href ='academicBuilderTermDetail.html'" >
+                <i class='fas fa-bars' style='font-size:24px'></i>
+                <span class = "generateDetailTips">generate detail of terms</span>
+            </button>  
+            
+            <div class="term-container">
                 <h3>Term 1:</h3>
-                <button id = "hideButton" onclick="hideAndShow()"><i class='fas fa-angle-up'></i></button>  
+                <button id = "hideButton" onclick="hideAndShow()">
+                    <i class='fas fa-angle-up'></i>
+                </button>  
                 <div class="course-section">
-                    <div class="courseTag" id="c1" style="background-color: aqua;" onclick="alert('Test')">ENSE 400</div>
-                    <div class="courseTag" id="c2" style="background-color: bisque;">ENEL 387</div>
-                    <div class="courseTag" id="c3" style="background-color: coral;">ENSE 496AC</div>
-                    <div class="courseTag" id="c4" style="background-color: cornflowerblue;">ENSE 496AD</div>
-                    <div class="courseTag" id="c5" style="background-color: darkkhaki;">ENSE 472</div>
+                    <div class="courseTag" id="c1" onclick="alert('Test')">ENSE 400</div>
+                    <div class="courseTag" id="c2">ENEL 387</div>
+                    <div class="courseTag" id="c3">ENSE 496AC</div>
+                    <div class="courseTag" id="c4">ENSE 496AD</div>
+                    <div class="courseTag" id="c5">ENSE 472</div>
                     <div class ="tag-section">
-                        <div class = "tag" id = "credit_hour" style=" background-color:grey;">15 cerdit hours</div>
-                        <div class = "tag" id = "difficult" style=" background-color:grey;">hard</div>
-                        <div class = "tag" id = "quizs" style=" background-color:grey;">many quizs</div>
-                        <div class = "tag" id = "proj" style=" background-color:grey;">no proj</div>
+                        <div class = "tag" id = "credit_hour">15 cerdit hours</div>
+                        <div class = "tag" id = "difficult">hard</div>
+                        <div class = "tag" id = "quizs">many quizs</div>
+                        <div class = "tag" id = "proj">no proj</div>
                     </div>
                 </div>
             </div>
+
             <div class="term-container">
                 <h3>Term 2:</h3>
                 <button id = "hideButton" onclick="hideAndShow()"><i class='fas fa-angle-up'></i></button>
