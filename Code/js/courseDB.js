@@ -8,28 +8,26 @@ function setFilter() {
 function reline() {
     //Make the line between class
     jsPlumb.ready(function () {
-
+        var common = {
+            endpoint: 'Blank',
+            anchor: ['Bottom', 'Top'],
+            connector: ['Flowchart']
+        }
         jsPlumb.connect({
             source: 'c12',
             target: 'c10',
-            overlays: [['Arrow', { width: 12, length: 12, location: 0.5 }]],
-            endpoint: 'Blank',
-            anchor: ['Bottom', 'Top'],
-            connector: ['Straight']
-        })
+            // overlays: [['Arrow', { width: 12, length: 12, location: 0.5 }]],
+        }, common)
         jsPlumb.connect({
             source: 'c11',
             target: 'c10',
-            overlays: [['Arrow', { width: 12, length: 12, location: 0.5 }]],
-            endpoint: 'Blank',
-            anchor: ['Bottom', 'Top'],
-            connector: ['Straight']
-        })
-
+            // overlays: [['Arrow', { width: 12, length: 12, location: 0.5 }]],
+        }, common)
+        jsPlumb.draggable('c10')
     })
 
 }
-
+// reline()
 
 $(document).ready(function () {
     var isHiden = false;	/*inital box status*/
