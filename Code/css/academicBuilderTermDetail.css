@@ -1,0 +1,69 @@
+#viewButton{
+    width:50px;
+    height :40px;
+    margin-top: 10px;
+    border:none;
+    background-color: white;
+    display: inline-block;
+   }
+   .view .viewTips{
+    visibility: hidden;
+    width: 40px;
+    background-color:black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+  }
+  .view:hover .viewTips{
+    visibility: visible;
+  }
+  table, th, td {
+    border: 1px solid black;
+    align-self: center;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #0a0a0a;
+    margin: 50px auto;
+    background: white;
+  }
+  th {
+    background: rgb(125, 159, 185);
+    height: 54px;
+    width: 25%;
+    font-weight: lighter;
+    text-shadow: 0 1px 0 #080a0c;
+    color: rgb(19, 17, 17);
+    border: 1px solid #0c151d;
+    box-shadow: inset 0px 1px 2px #0d1318;
+    transition: all 0.2s;
+    
+  }
+  tr {
+    border-bottom: 1px solid #080808;
+  }
+  tr:last-child {
+    border-bottom: 0px;
+  }
+  td {
+    border-right: 1px solid #050505;
+    padding: 10px;
+    transition: all 0.2s;
+    align-content: center;
+  }
+  td:last-child {
+    border-right: 0px;
+  }
+td.courseTag{
+    top: 50%;
+}
