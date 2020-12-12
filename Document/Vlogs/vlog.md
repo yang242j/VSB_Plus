@@ -8,3 +8,6 @@
 
 ## [vlog#2](https://www.youtube.com/watch?v=n7I8rsKug_4)
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/n7I8rsKug_4/0.jpg)](https://www.youtube.com/watch?v=n7I8rsKug_4)
+
+## [vlog#3](https://www.youtube.com/watch?v=7E3dxXwa2zc)
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/7E3dxXwa2zc/0.jpg)](https://www.youtube.com/watch?v=7E3dxXwa2zc)
