@@ -5,7 +5,7 @@
     <meta charset="utf-8">
 
     <!-- icon library -->
-    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
      <!-- icon library -->
 
     <title>VSB_Plus : Academic</title>
@@ -13,7 +13,7 @@
     <meta name="author" content="SitePoint">
 
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/academicBuilder.css">
+    <link rel="stylesheet" href="css/academicBuilderTermDetail.css">
 
 
 
@@ -41,5 +41,80 @@
     <h2>
         Course of term Detail Page
     </h2>
+    <button class = "view" id = "viewButton" onclick ="location.href ='academicBuilder.html'"><i class="fa fa-reply" style="font-size:24px"></i>
+        <span class = "viewTips">back to main page</span>
+        </button>
+<div>
+    <table  class="heavyTable" style = "width: 100%">
+            <thead>
+              <tr>
+                <th rowspan="2">None</th>
+                <th rowspan="2">Term1<br>2018 Fall<br>(Finished)</th>
+                <th rowspan="2">Term2<br>2019 Winter</th>
+                <th rowspan="2">Term3<br>2019 Fall</th>
+              </tr>
+            </thead>
+            <tbody >
+              <tr>
+                <th rowspan="5">Optional Course</th>
+                <td></td>
+                <td><div class="courseTag" id="c1" style="background-color: rgb(162, 178, 230);" onclick="alert('Test')">ENGG 100</div></td>
+                <td></td> 
+              </tr>
+              <tr>
+                <td></td>
+                <td><div class="courseTag" id="c1" style="background-color: rgb(233, 142, 218);" onclick="alert('Test')">ENGL 100</div></td>
+                <td></td> 
+              </tr>
+              <tr>
+                <td></td>
+                <td><div class="courseTag" id="c1" style="background-color: aqua;" onclick="alert('Test')">ENSE 400</div></td>
+                <td></td>
+              </tr>
+              <tr> 
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr> 
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                  <th rowspan="5">Course Schedule</th>
+                  <td><div class="courseTag" id="c1" style="background-color: rgb(144, 236, 209);" onclick="alert('Test')">CS 400</div></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td><div class="courseTag" id="c1" style="background-color: rgb(243, 225, 142);" onclick="alert('Test')">MATH 400</div></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>2</td>
+                  <td>6</td>
+                </tr>
+                <tr> 
+                  <td></td>
+                  <td>2</td>
+                  <td>6</td>
+                </tr>
+                <tr> 
+                  <td></td>
+                  <td>2</td>
+                  <td>6</td>
+                </tr>
+              </tbody>
+          </table>
+</div>
+
+     
+    
+
 </body>
 

@@ -47,7 +47,7 @@ body .container .right-section{
 
 body .container .right-section .course-completed{
    display:block;
-   background-color: lightgreen;
+   background-color: rgb(191, 241, 191);
    margin: 10px;
    padding-bottom: 25px;
 }
@@ -59,7 +59,7 @@ body .container .right-section .course-completed .courseTag{
 }
 
 body .container .right-section .course-not-completed{
-   background-color: lightskyblue;
+   background-color: rgb(158, 199, 224);
    margin: 10px;
    padding-bottom: 25px;
 }

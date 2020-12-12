@@ -79,7 +79,9 @@ footer .info-link {
     border: 0px solid #aaaaaa;
     border-radius: 15px;
     min-width: 100px;
-    width: 70px;
+    width: 50px;
+    height : 30px;
+    line-height: 30px;
     padding: 0px 15px 0px;
     text-align: center;
     background-color: DarkGrey;
