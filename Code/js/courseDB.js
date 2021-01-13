@@ -1,3 +1,32 @@
+document.getElementById("classification").addEventListener("click",function(e){
+    //Select the different faulties
+    var target = e.target;
+    var nodeId = target.id;
+    var nodeClass = target.getAttribute("class");
+
+    if (target.nodeName==="DIV" && nodeId == ""){
+        if (nodeClass.search("selected") == -1){
+            target.classList.add("selected");
+        }
+        else{
+            target.classList.remove("selected");
+        }
+    }
+});
+
+document.getElementById("display_change").addEventListener("click",function(e){
+    var target = document.getElementById("course_list");
+    var nodeClass = target.getAttribute("class");
+
+    if (nodeClass.search("tow_course_show") == -1){
+        target.classList.add("tow_course_show");
+    }
+    else{
+        target.classList.remove("tow_course_show");
+    }
+});
+
+
 function setFilter() {
     var program = document.getElementById("program").value;
     var faculty = document.getElementById("faculty").value;
