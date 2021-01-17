@@ -1,4 +1,5 @@
 const colors = ["lightblue", "lightseagreen", "pink", "yellow", "Azure", "Bisque", "Coral", "Cyan", "Cornsilk", "Lavender"];
+var dataList = [];
 
 function termSelector() {
     var term = document.getElementById("term").value;
@@ -25,30 +26,76 @@ function dragLeave(ev) {
 }
 
 function dropL(ev) {
-    var data = ev.dataTransfer.getData("text");
-    
+    var dataTitle = ev.dataTransfer.getData("text");
+
     if (ev.target.classList.contains("noDrop")) {
         ev.preventDefault();
     } else {
         ev.preventDefault();
-        document.getElementsByClassName("left-section")[0].appendChild(document.getElementById(data));
+        document.getElementsByClassName("left-section")[0].appendChild(document.getElementById(dataTitle));
         const randomColorIndex = Math.floor(Math.random() * colors.length);
-        document.getElementById(data).style.backgroundColor = colors[randomColorIndex];
-        console.log(randomColorIndex, colors[randomColorIndex], data, "bottom-right");
+        document.getElementById(dataTitle).style.backgroundColor = colors[randomColorIndex];
+        console.log(randomColorIndex, colors[randomColorIndex], dataTitle, "left");
+
+        dataList.push({
+            title: dataTitle,
+            start: '2021-01-12T10:30:00',
+            end: '2021-01-12T12:30:00'
+        });
+        console.log(dataList);
+
+        draw(dataList);
     }
     ev.target.style.backgroundColor = "";
 }
 
 function dropBR(ev) {
-    var data = ev.dataTransfer.getData("text");
+    var dataTitle = ev.dataTransfer.getData("text");
     if (ev.target.classList.contains("noDrop")) {
         ev.preventDefault();
     } else {
         ev.preventDefault();
-        document.getElementsByClassName("bottom-right")[0].appendChild(document.getElementById(data));
+        document.getElementsByClassName("bottom-right")[0].appendChild(document.getElementById(dataTitle));
         const randomColorIndex = Math.floor(Math.random() * colors.length);
-        document.getElementById(data).style.backgroundColor = colors[randomColorIndex];
-        console.log(randomColorIndex, colors[randomColorIndex], data, "bottom-right");
+        document.getElementById(dataTitle).style.backgroundColor = colors[randomColorIndex];
+        console.log(randomColorIndex, colors[randomColorIndex], dataTitle, "bottom-right");
+
+        for (var i = 0; i < dataList.length; i++) {
+            if (dataList[i].title == dataTitle) { dataList.splice(i, 1); }
+        }
+        console.log(dataList);
+
+        draw(dataList);
     }
     ev.target.style.backgroundColor = "";
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+    var calendarEl = document.getElementById('calendar');
+
+    var calendar = new FullCalendar.Calendar(calendarEl, {
+        initialView: 'dayGridMonth',
+        initialDate: '2021-01-01',
+        headerToolbar: {
+            left: 'prev,next today',
+            center: 'title',
+            right: 'dayGridMonth,timeGridWeek,timeGridDay'
+        }
+    });
+    calendar.render();
+});
+
+function draw(data) {
+    var calendarEl = document.getElementById('calendar');
+    var calendar = new FullCalendar.Calendar(calendarEl, {
+        initialView: 'dayGridMonth',
+        initialDate: '2021-01-01',
+        headerToolbar: {
+            left: 'prev,next today',
+            center: 'title',
+            right: 'dayGridMonth,timeGridWeek,timeGridDay'
+        },
+        events: data
+    });
+    calendar.render();
 }

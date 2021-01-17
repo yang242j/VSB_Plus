@@ -30,7 +30,7 @@ body .container .left-section .dropZone {
 
 /*Middle Section*/
 body .container .middle-section {
-    width: 44%;
+    width: 42%;
     height: 100%;
     float: left;
     box-sizing: border-box;
@@ -39,21 +39,21 @@ body .container .middle-section {
 }
 
 body .container .middle-section .section-title {
-    width: 75%;
+    width: 85%;
     margin-left: auto;
     margin-right: auto;
 }
 
 body .container .middle-section .courseInfo {
     margin: 10px auto 10px;
-    width: 75%;
+    width: 85%;
     border: 3px solid black;
     padding: 0 10px 0;
 }
 
 /*Right Section*/
 body .container .right-section {
-    width: 43%;
+    width: 45%;
     height: 100%;
     float: right;
     box-sizing: border-box;
@@ -67,14 +67,14 @@ body .container .right-section .section-title {
 
 body .container .right-section .Calendar {
     margin: 10px auto 10px;
-    width: 75%;
+    width: 85%;
     border: 3px solid black;
     padding: 0 10px 0;
 }
 
 body .container .right-section .Date {
     margin: 10px auto 10px;
-    width: 75%;
+    width: 85%;
     border: 3px solid black;
     padding: 0 10px 0;
 }

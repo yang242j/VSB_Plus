@@ -1,6 +1,7 @@
 <!doctype html>
 
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
 
@@ -10,6 +11,9 @@
 
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/semester.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.5.1/main.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.5.1/main.min.js"></script>
 
 </head>
 
@@ -33,7 +37,8 @@
     <section class="container">
         <div class="top-section">
             <label for="term">Choose a term:</label>
-            <select id="term" onChange="termSelector()"> <!-- onChange="this.form.submit()" -->
+            <select id="term" onChange="termSelector()">
+                <!-- onChange="this.form.submit()" -->
                 <option value="fall 2020">Fall 2020</option>
                 <option value="winter 2021">Winter 2021</option>
             </select>
@@ -42,11 +47,14 @@
         <div class="left-section">
             <h3 class="section-title">Course List</h3>
 
-            <div class="dropZone" ondrop="dropL(event)" ondragover="allowDrop(event)" ondragenter="dragEnter(event)" ondragleave="dragLeave(event)"><img src="img/drop-here.png" style="max-height: 100%;max-width: 100%;" draggable="false"></div>
-
+            <div class="dropZone" ondrop="dropL(event)" ondragover="allowDrop(event)" ondragenter="dragEnter(event)"
+                ondragleave="dragLeave(event)"><img src="img/drop-here.png" style="max-height: 100%;max-width: 100%;"
+                    draggable="false"></div>
+<!--
             <div class="courseTag noDrop" id="ense400" draggable="true" ondragstart="drag(event)">ENSE400</div>
             <div class="courseTag noDrop" id="ense496ac" draggable="true" ondragstart="drag(event)">ENSE496AC</div>
             <div class="courseTag noDrop" id="ense496ad" draggable="true" ondragstart="drag(event)">ENSE496AD</div>
+-->
         </div>
         <div class="middle-section">
             <h3 class="section-title">Course Detail Info</h3>
@@ -68,9 +76,14 @@
         </div>
         <div class="right-section">
             <h3 class="section-title">Weekly Schedule & Exam Date</h3>
+            <div class="Calendar">
+                <div id='calendar'></div>
+            </div>
+            <!-- Calendar Table HTML
             <div class="Calendar">Weekly Schedule
                 <embed type="text/html" src="calendar.html" style="min-height: 380px;width: 100%;"></embed>
             </div>
+        -->
             <div class="Date">
                 <p>Midterm Exam Date:</p>
                 <ul>
@@ -80,7 +93,7 @@
                 </ul>
                 <p>Final Exam Date:</p>
                 <ul>
-                    <li><mark>ENSE 400: Wednesday, December 16, 2020</mark</li>
+                    <li><mark>ENSE 400: Wednesday, December 16, 2020</mark< /li>
                     <li>ENSE 496AC: Tuesday, December 22, 2020</li>
                     <li><mark>ENSE 496AD: Wednesday, December 16, 2020</mark></li>
                 </ul>
@@ -91,9 +104,13 @@
                 Courses Completed: <br>
                 <div class="courseTag noDrag" id="ense374" draggable="false">ENSE374</div>
             </div>
-            <div class="bottom-right" ondrop="dropBR(event)" ondragover="allowDrop(event)" ondragenter="dragEnter(event)" ondragleave="dragLeave(event)">
+            <div class="bottom-right" ondrop="dropBR(event)" ondragover="allowDrop(event)"
+                ondragenter="dragEnter(event)" ondragleave="dragLeave(event)">
                 Courses To Take: <br>
                 <div class="courseTag noDrop" id="ense401" draggable="true" ondragstart="drag(event)">ENSE401</div>
+                <div class="courseTag noDrop" id="ense400" draggable="true" ondragstart="drag(event)">ENSE400</div>
+                <div class="courseTag noDrop" id="ense496ac" draggable="true" ondragstart="drag(event)">ENSE496AC</div>
+                <div class="courseTag noDrop" id="ense496ad" draggable="true" ondragstart="drag(event)">ENSE496AD</div>
             </div>
         </div>
     </section>
@@ -101,8 +118,11 @@
     <footer>
         <script src="js/main.js"></script>
         <script src="js/semester.js"></script>
-        <p class="copyright">Copyright &copy; Sep. 2020 to <script>document.write(new Date().getFullYear())</script> UofR VSB_Plus Capstone Group All Rights Reserved</p>
+        <p class="copyright">Copyright &copy; Sep. 2020 to
+            <script>document.write(new Date().getFullYear())</script> UofR VSB_Plus Capstone Group All Rights Reserved
+        </p>
         <p class="info-link"><a href="homePage.html">About Us</a></p>
     </footer>
 </body>
+
 </html>
