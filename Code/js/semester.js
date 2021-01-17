@@ -1,5 +1,18 @@
 const colors = ["lightblue", "lightseagreen", "pink", "yellow", "Azure", "Bisque", "Coral", "Cyan", "Cornsilk", "Lavender"];
-var dataList = [];
+
+//Calendar init
+var calendarEl = document.getElementById('calendar');
+var calendar = new FullCalendar.Calendar(calendarEl, {
+    initialView: 'dayGridMonth',
+    initialDate: '2021-01-01',
+    headerToolbar: {
+        left: 'prev,next today',
+        center: 'title',
+        right: 'dayGridMonth,timeGridWeek,timeGridDay'
+    },
+    events: []
+});
+calendar.render();
 
 function termSelector() {
     var term = document.getElementById("term").value;
@@ -37,14 +50,12 @@ function dropL(ev) {
         document.getElementById(dataTitle).style.backgroundColor = colors[randomColorIndex];
         console.log(randomColorIndex, colors[randomColorIndex], dataTitle, "left");
 
-        dataList.push({
+        calendar.addEvent({
+            id: dataTitle,
             title: dataTitle,
-            start: '2021-01-12T10:30:00',
-            end: '2021-01-12T12:30:00'
+            start: '2021-01-12',
+            end: '2021-01-13'
         });
-        console.log(dataList);
-
-        draw(dataList);
     }
     ev.target.style.backgroundColor = "";
 }
@@ -60,42 +71,7 @@ function dropBR(ev) {
         document.getElementById(dataTitle).style.backgroundColor = colors[randomColorIndex];
         console.log(randomColorIndex, colors[randomColorIndex], dataTitle, "bottom-right");
 
-        for (var i = 0; i < dataList.length; i++) {
-            if (dataList[i].title == dataTitle) { dataList.splice(i, 1); }
-        }
-        console.log(dataList);
-
-        draw(dataList);
+        calendar.getEventById(dataTitle).remove();
     }
     ev.target.style.backgroundColor = "";
-}
-
-document.addEventListener('DOMContentLoaded', function () {
-    var calendarEl = document.getElementById('calendar');
-
-    var calendar = new FullCalendar.Calendar(calendarEl, {
-        initialView: 'dayGridMonth',
-        initialDate: '2021-01-01',
-        headerToolbar: {
-            left: 'prev,next today',
-            center: 'title',
-            right: 'dayGridMonth,timeGridWeek,timeGridDay'
-        }
-    });
-    calendar.render();
-});
-
-function draw(data) {
-    var calendarEl = document.getElementById('calendar');
-    var calendar = new FullCalendar.Calendar(calendarEl, {
-        initialView: 'dayGridMonth',
-        initialDate: '2021-01-01',
-        headerToolbar: {
-            left: 'prev,next today',
-            center: 'title',
-            right: 'dayGridMonth,timeGridWeek,timeGridDay'
-        },
-        events: data
-    });
-    calendar.render();
 }
