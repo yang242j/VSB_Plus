@@ -4,7 +4,7 @@ const colors = ["lightblue", "lightseagreen", "pink", "yellow", "Azure", "Bisque
 var calendarEl = document.getElementById('calendar');
 var calendar = new FullCalendar.Calendar(calendarEl, {
     initialView: 'dayGridMonth',
-    initialDate: '2021-01-01',
+    initialDate: new Date(),
     headerToolbar: {
         left: 'prev,next today',
         center: 'title',

@@ -84,6 +84,7 @@ body .container .right-section .Date {
 /*Bottom Section*/
 body .container .stick-bottom {
     position: fixed;
+    z-index: 999;
     border: 2px solid black;
     bottom: 0;
     width: 95%;
