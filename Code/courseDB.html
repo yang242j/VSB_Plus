@@ -8,8 +8,11 @@
     <title>VSB_Plus : CourseDB</title>
     <meta name="description" content="The HTML5 Herald">
     <meta name="author" content="SitePoint">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <link rel="stylesheet" href="css/courseDB.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/logIn.css">
 
 </head>
 
@@ -25,10 +28,39 @@
         <a href="semesterBuilder.html">Semester Schedule Builder</a>
         <a class="nav-active" href="courseDB.html">Course List Database</a>
         <div class="nav-right">
-            <a href="#login">LogIn</a>
+            <a onclick="document.getElementById('login').style.display='block'" style="width:auto;">LogIn</a>
             <a href="#signup">SignUp</a>
         </div>
     </nav>
+
+    <div id="login" class="modal">
+        <form class="modal-content animate" action="/action_page.php" method="post">
+            <div class="imgcontainer">
+                <span onclick="document.getElementById('login').style.display='none'" class="close"
+                    title="Close Modal">&times;</span>
+                <img src="img/anyone.jpg" alt="Avatar" class="avatar">
+            </div>
+
+            <div class="container">
+                <label for="sid"><b>Username</b></label>
+                <input type="text" placeholder="Please Enter Student ID" name="sid" required>
+
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Please Enter Password" name="psw" required>
+
+                <button type="submit">Login</button>
+                <label>
+                    <input type="checkbox" checked="checked" name="remember"> Remember me
+                </label>
+            </div>
+
+            <div class="container" style="background-color:#f1f1f1">
+                <button type="button" onclick="document.getElementById('login').style.display='none'"
+                    class="cancelbtn">Cancel</button>
+                <span class="psw">Forgot <a href="#">password?</a></span>
+            </div>
+        </form>
+    </div>
 
     <section class="container">
         <form onclick="return false" method="POST">
@@ -56,14 +88,20 @@
                     <div class="tag round">ENPE</div>
                 </div>
                 <div class="shadow scroll course_list" id="course_list">
-                    <div class="course shadow round word_overflow" id="c1" style="background-color: #99CCCC;" onclick="butonClick()">
+                    <div class="course shadow round word_overflow" id="c1" style="background-color: #99CCCC;"
+                        onclick="butonClick()">
                         <span class="larger">ENSE 400</span>
-                        <div class="left"> 3.00 Credits</div> 
+                        <div class="left"> 3.00 Credits</div>
                         <br> <span class="bold">Systems Engineering Design Project</span>
                         <div class="description">
                             <span class="bold smaller">Description: </span>
-                            <span class="smaller">Students are given the opportunity to propose, develop and present engineering design projects which they are expected to further pursue in ENSE 477.  Issues of safety, feasibility, and engineering responsibility are discussed.  Student form design teams in this class and are expected to write a project plan document, compose a preliminary design document, and present their project to their fellow students.</span>
-                        </div>        
+                            <span class="smaller">Students are given the opportunity to propose, develop and present
+                                engineering design projects which they are expected to further pursue in ENSE 477.
+                                Issues of safety, feasibility, and engineering responsibility are discussed. Student
+                                form design teams in this class and are expected to write a project plan document,
+                                compose a preliminary design document, and present their project to their fellow
+                                students.</span>
+                        </div>
                     </div>
                     <div class="course shadow round" id="c2" style="background-color: #CCFF99;">ENEL 387</div>
                     <div class="course shadow round" id="c3" style="background-color: #99CCFF;">ENSE 496AC</div>
@@ -117,11 +155,11 @@
                             </li>
                         </ul>
                     </li>
-                  </ul>
-            </div> 
+                </ul>
+            </div>
         </div>
 
-        
+
         <!-- <p>Example for visualizing course prerequisites:</p>
         <div class="course" id="c10" style="background-color: bisque;">ENSE 387</div>
         <br><br>
@@ -139,8 +177,13 @@
     <footer>
         <script src="js/main.js"></script>
         <script src="js/courseDB.js"></script>
+        <script src="js/logIn.js"></script>
+        
         <p class="copyright">Copyright &copy; Sep. 2020 to
-            <script>document.write(new Date().getFullYear())</script> UofR VSB_Plus Capstone Group All Rights Reserved
+            <script>document.write(new Date().getFullYear())</script> UofR VSB_Plus Capstone Group All Rights Reserved<br>
+            <cite>
+                Credit: Login source code from w3schools.com "How TO - Login Form"
+            </cite>
         </p>
         <p class="info-link"><a href="homePage.html">About Us</a></p>
     </footer>

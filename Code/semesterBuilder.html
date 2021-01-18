@@ -1,15 +1,21 @@
 <!doctype html>
 
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
 
     <title>VSB_Plus : Semester</title>
     <meta name="description" content="The HTML5 Herald">
     <meta name="author" content="SitePoint">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/logIn.css">
     <link rel="stylesheet" href="css/semester.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.5.1/main.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.5.1/main.min.js"></script>
 
 </head>
 
@@ -25,15 +31,45 @@
         <a class="nav-active" href="semesterBuilder.html">Semester Schedule Builder</a>
         <a href="courseDB.html">Course List Database</a>
         <div class="nav-right">
-            <a href="#login">LogIn</a>
+            <a onclick="document.getElementById('login').style.display='block'" style="width:auto;">LogIn</a>
             <a href="#signup">SignUp</a>
         </div>
     </nav>
 
+    <div id="login" class="modal">
+        <form class="modal-content animate" action="/action_page.php" method="post">
+            <div class="imgcontainer">
+                <span onclick="document.getElementById('login').style.display='none'" class="close"
+                    title="Close Modal">&times;</span>
+                <img src="img/anyone.jpg" alt="Avatar" class="avatar">
+            </div>
+
+            <div class="container">
+                <label for="sid"><b>Username</b></label>
+                <input type="text" placeholder="Please Enter Student ID" name="sid" required>
+
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Please Enter Password" name="psw" required>
+
+                <button type="submit">Login</button>
+                <label>
+                    <input type="checkbox" checked="checked" name="remember"> Remember me
+                </label>
+            </div>
+
+            <div class="container" style="background-color:#f1f1f1">
+                <button type="button" onclick="document.getElementById('login').style.display='none'"
+                    class="cancelbtn">Cancel</button>
+                <span class="psw">Forgot <a href="#">password?</a></span>
+            </div>
+        </form>
+    </div>
+
     <section class="container">
         <div class="top-section">
             <label for="term">Choose a term:</label>
-            <select id="term" onChange="termSelector()"> <!-- onChange="this.form.submit()" -->
+            <select id="term" onChange="termSelector()">
+                <!-- onChange="this.form.submit()" -->
                 <option value="fall 2020">Fall 2020</option>
                 <option value="winter 2021">Winter 2021</option>
             </select>
@@ -42,11 +78,14 @@
         <div class="left-section">
             <h3 class="section-title">Course List</h3>
 
-            <div class="dropZone" ondrop="dropL(event)" ondragover="allowDrop(event)" ondragenter="dragEnter(event)" ondragleave="dragLeave(event)"><img src="img/drop-here.png" style="max-height: 100%;max-width: 100%;" draggable="false"></div>
-
+            <div class="dropZone" ondrop="dropL(event)" ondragover="allowDrop(event)" ondragenter="dragEnter(event)"
+                ondragleave="dragLeave(event)"><img src="img/drop-here.png" style="max-height: 100%;max-width: 100%;"
+                    draggable="false"></div>
+            <!--
             <div class="courseTag noDrop" id="ense400" draggable="true" ondragstart="drag(event)">ENSE400</div>
             <div class="courseTag noDrop" id="ense496ac" draggable="true" ondragstart="drag(event)">ENSE496AC</div>
             <div class="courseTag noDrop" id="ense496ad" draggable="true" ondragstart="drag(event)">ENSE496AD</div>
+-->
         </div>
         <div class="middle-section">
             <h3 class="section-title">Course Detail Info</h3>
@@ -68,9 +107,14 @@
         </div>
         <div class="right-section">
             <h3 class="section-title">Weekly Schedule & Exam Date</h3>
+            <div class="Calendar">
+                <div id='calendar'></div>
+            </div>
+            <!-- Calendar Table HTML
             <div class="Calendar">Weekly Schedule
                 <embed type="text/html" src="calendar.html" style="min-height: 380px;width: 100%;"></embed>
             </div>
+        -->
             <div class="Date">
                 <p>Midterm Exam Date:</p>
                 <ul>
@@ -80,7 +124,7 @@
                 </ul>
                 <p>Final Exam Date:</p>
                 <ul>
-                    <li><mark>ENSE 400: Wednesday, December 16, 2020</mark</li>
+                    <li><mark>ENSE 400: Wednesday, December 16, 2020</mark< /li>
                     <li>ENSE 496AC: Tuesday, December 22, 2020</li>
                     <li><mark>ENSE 496AD: Wednesday, December 16, 2020</mark></li>
                 </ul>
@@ -91,18 +135,33 @@
                 Courses Completed: <br>
                 <div class="courseTag noDrag" id="ense374" draggable="false">ENSE374</div>
             </div>
-            <div class="bottom-right" ondrop="dropBR(event)" ondragover="allowDrop(event)" ondragenter="dragEnter(event)" ondragleave="dragLeave(event)">
+            <div class="bottom-right" ondrop="dropBR(event)" ondragover="allowDrop(event)"
+                ondragenter="dragEnter(event)" ondragleave="dragLeave(event)">
                 Courses To Take: <br>
                 <div class="courseTag noDrop" id="ense401" draggable="true" ondragstart="drag(event)">ENSE401</div>
+                <div class="courseTag noDrop" id="ense400" draggable="true" ondragstart="drag(event)">ENSE400</div>
+                <div class="courseTag noDrop" id="ense496ac" draggable="true" ondragstart="drag(event)">ENSE496AC</div>
+                <div class="courseTag noDrop" id="ense496ad" draggable="true" ondragstart="drag(event)">ENSE496AD</div>
             </div>
         </div>
     </section>
 
     <footer>
         <script src="js/main.js"></script>
+        <script src="js/logIn.js"></script>
         <script src="js/semester.js"></script>
-        <p class="copyright">Copyright &copy; Sep. 2020 to <script>document.write(new Date().getFullYear())</script> UofR VSB_Plus Capstone Group All Rights Reserved</p>
+        <p class="copyright">Copyright &copy; Sep. 2020 to
+            <script>document.write(new Date().getFullYear())</script> UofR VSB_Plus Capstone Group All Rights
+            Reserved<br>
+            <cite>
+                Credit: Calendar source code from fullcalendar.io version 5.5.1<br>
+                Fullcalendar tutorial: Youtube video "JS To-do List #14 FullCalendar - Rendering a Calendar with
+                JavaScript"<br>
+                Credit: Login source code from w3schools.com "How TO - Login Form"
+            </cite>
+        </p>
         <p class="info-link"><a href="homePage.html">About Us</a></p>
     </footer>
 </body>
+
 </html>

@@ -1,5 +1,19 @@
 const colors = ["lightblue", "lightseagreen", "pink", "yellow", "Azure", "Bisque", "Coral", "Cyan", "Cornsilk", "Lavender"];
 
+//Calendar init
+var calendarEl = document.getElementById('calendar');
+var calendar = new FullCalendar.Calendar(calendarEl, {
+    initialView: 'dayGridMonth',
+    initialDate: new Date(),
+    headerToolbar: {
+        left: 'prev,next today',
+        center: 'title',
+        right: 'dayGridMonth,timeGridWeek,timeGridDay'
+    },
+    events: []
+});
+calendar.render();
+
 function termSelector() {
     var term = document.getElementById("term").value;
     document.getElementById("termDemo").innerHTML = "You selected: " + term;
@@ -25,30 +39,39 @@ function dragLeave(ev) {
 }
 
 function dropL(ev) {
-    var data = ev.dataTransfer.getData("text");
-    
+    var dataTitle = ev.dataTransfer.getData("text");
+
     if (ev.target.classList.contains("noDrop")) {
         ev.preventDefault();
     } else {
         ev.preventDefault();
-        document.getElementsByClassName("left-section")[0].appendChild(document.getElementById(data));
+        document.getElementsByClassName("left-section")[0].appendChild(document.getElementById(dataTitle));
         const randomColorIndex = Math.floor(Math.random() * colors.length);
-        document.getElementById(data).style.backgroundColor = colors[randomColorIndex];
-        console.log(randomColorIndex, colors[randomColorIndex], data, "bottom-right");
+        document.getElementById(dataTitle).style.backgroundColor = colors[randomColorIndex];
+        console.log(randomColorIndex, colors[randomColorIndex], dataTitle, "left");
+
+        calendar.addEvent({
+            id: dataTitle,
+            title: dataTitle,
+            start: '2021-01-12',
+            end: '2021-01-13'
+        });
     }
     ev.target.style.backgroundColor = "";
 }
 
 function dropBR(ev) {
-    var data = ev.dataTransfer.getData("text");
+    var dataTitle = ev.dataTransfer.getData("text");
     if (ev.target.classList.contains("noDrop")) {
         ev.preventDefault();
     } else {
         ev.preventDefault();
-        document.getElementsByClassName("bottom-right")[0].appendChild(document.getElementById(data));
+        document.getElementsByClassName("bottom-right")[0].appendChild(document.getElementById(dataTitle));
         const randomColorIndex = Math.floor(Math.random() * colors.length);
-        document.getElementById(data).style.backgroundColor = colors[randomColorIndex];
-        console.log(randomColorIndex, colors[randomColorIndex], data, "bottom-right");
+        document.getElementById(dataTitle).style.backgroundColor = colors[randomColorIndex];
+        console.log(randomColorIndex, colors[randomColorIndex], dataTitle, "bottom-right");
+
+        calendar.getEventById(dataTitle).remove();
     }
     ev.target.style.backgroundColor = "";
 }
