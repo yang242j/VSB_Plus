@@ -1,19 +1,22 @@
 <!doctype html>
 
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
 
     <!-- icon library -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-     <!-- icon library -->
+    <!-- icon library -->
 
     <title>VSB_Plus : Academic</title>
     <meta name="description" content="The HTML5 Herald">
     <meta name="author" content="SitePoint">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/academicBuilderCompleteCourseTable.css">
+    <link rel="stylesheet" href="css/logIn.css">
 
 
 
@@ -27,122 +30,175 @@
     </header>
 
     <nav>
-        <a href="homePage.html">Home</a>
         <a class="nav-active" href="academicBuilder.html">Academic Schedule Builder</a>
         <a href="semesterBuilder.html">Semester Schedule Builder</a>
         <a href="courseDB.html">Course List Database</a>
         <div class="nav-right">
-            <a href="#login">LogIn</a>
+            <a onclick="document.getElementById('login').style.display='block'" style="width:auto;">LogIn</a>
             <a href="#signup">SignUp</a>
         </div>
     </nav>
 
+    <div id="login" class="modal">
+        <form class="modal-content animate" action="/action_page.php" method="post">
+            <div class="imgcontainer">
+                <span onclick="document.getElementById('login').style.display='none'" class="close"
+                    title="Close Modal">&times;</span>
+                <img src="img/anyone.jpg" alt="Avatar" class="avatar">
+            </div>
 
-<h2>
-    Compeleted Course Detail Page
-</h2>
+            <div class="container">
+                <label for="sid"><b>Username</b></label>
+                <input type="text" placeholder="Please Enter Student ID" name="sid" required>
 
-<button class = "view" id = "viewButton" onclick ="location.href ='academicBuilder.html'"><i class="fa fa-reply" style="font-size:24px"></i>
-<span class = "viewTips">back to main page</span>
-</button>
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Please Enter Password" name="psw" required>
 
-<section class = "status">
-<div class ="course-status">
-    <div class = "course-complete">
-        <h2>Course Completed</h2>
-        <div class="course-card" > 
-            <h3>ENGL 100</h3>
-           <p>- System Engineering Design Project</p>
-           <p>- Term : 2019</p>  
-           <p>- Lab : None</p>  
-           <button class = "course-card" id ="course-card">Show More</button> 
-                   
-       </div>
-       <div class="course-card" > <h3>ENGL 100</h3>
-           <p>- System Engineering Design Project</p>
-           <p>- Term : 2019</p>  
-           <p>- Lab : None</p>  
-            
-           <button class = "course-card" id ="course-card">Show More</button> </div>
-       <div class="course-card"> <h3>ENGL 100</h3>
-           <p>- System Engineering Design Project</p>
-           <p>- Term : 2019</p>  
-           <p>- Lab : None</p>  
-         
-           <button class = "course-card" id ="course-card">Show More</button> </div>
-       <div class="course-card"> <h3>ENGL 100</h3>
-           <p>- System Engineering Design Project</p>
-           <p>- Term : 2019</p>  
-           <p>- Lab : None</p>  
-           <button class = "course-card" id ="course-card">Show More</button> 
-       </div>     
-                
-    </div>
-    <div class = "course-complete">
-        <h2>Course In Progess</h2>
-        <div class="course-card" > 
-            <h3>ENGL 100</h3>
-           <p>- System Engineering Design Project</p>
-           <p>- Term : 2019</p>  
-           <p>- Lab : None</p>  
-           <button class = "course-card" id ="course-card">Show More</button> 
-                   
-       </div>
-       <div class="course-card" > <h3>ENGL 100</h3>
-           <p>- System Engineering Design Project</p>
-           <p>- Term : 2019</p>  
-           <p>- Lab : None</p>
-           <p>- Time: xxxx</p>
-           <p>- Instructor: xxxx xxxx</p>  
-           <p>- Exams : xxxxxxxx</p>  
-           <p id = "distribution">- Distribution : Lorem ipsum dolor sit amet consecteturhil dignissimos con non, nisi ad corrupti eum molestias hic. Porro, suscipit! </p>
-           <button class = "course-card" id ="course-card">Show Less</button> 
-       </div>
-        
-    </div>
-    <div class="course-complete">
-        <h2>Course Left</h2>
-        <div class="course-card" > 
-            <h3>ENGL 100</h3>
-           <p>- System Engineering Design Project</p>
-           <p>- Term : 2019</p>  
-           <p>- Lab : None</p>  
-           <button class = "course-card" id ="course-card">Show More</button> 
-                   
-       </div>
-       <div class="course-card" > <h3>ENGL 100</h3>
-           <p>- System Engineering Design Project</p>
-           <p>- Term : 2019</p>  
-           <p>- Lab : None</p>  
-            
-           <button class = "course-card" id ="course-card">Show More</button> </div>
-       <div class="course-card"> <h3>ENGL 100</h3>
-           <p>- System Engineering Design Project</p>
-           <p>- Term : 2019</p>  
-           <p>- Lab : None</p>  
-         
-           <button class = "course-card" id ="course-card">Show More</button> </div>
-       <div class="course-card"> <h3>ENGL 100</h3>
-           <p>- System Engineering Design Project</p>
-           <p>- Term : 2019</p>  
-           <p>- Lab : None</p>  
-           <button class = "course-card" id ="course-card">Show More</button> 
-       </div>  
+                <button type="submit">Login</button>
+                <label>
+                    <input type="checkbox" checked="checked" name="remember"> Remember me
+                </label>
+            </div>
 
+            <div class="container" style="background-color:#f1f1f1">
+                <button type="button" onclick="document.getElementById('login').style.display='none'"
+                    class="cancelbtn">Cancel</button>
+                <span class="psw">Forgot <a href="#">password?</a></span>
+            </div>
+        </form>
     </div>
-</div>
-<div class = "programDiv">
-    <h2>Program</h2>
-    <h3>Total Credit Hours:136(46 courses)</h3>
-    <div class = "course-card">
-        <img class = "photo" src="img/basic-pie-chart.png" width="350"></img>
-    </div>
-    <div class = "course-card">
-        <img class = "photo" src="img/trend_chart_sample.svg"></img>
-    </div>
-    </div>                
-</div>
 
-</div>
-</section>
+    <h2>
+        Compeleted Course Detail Page
+    </h2>
+
+    <button class="view" id="viewButton" onclick="location.href ='academicBuilder.html'"><i class="fa fa-reply"
+            style="font-size:24px"></i>
+        <span class="viewTips">back to main page</span>
+    </button>
+
+    <section class="status">
+        <div class="course-status">
+            <div class="course-complete">
+                <h2>Course Completed</h2>
+                <div class="course-card">
+                    <h3>ENGL 100</h3>
+                    <p>- System Engineering Design Project</p>
+                    <p>- Term : 2019</p>
+                    <p>- Lab : None</p>
+                    <button class="course-card" id="course-card">Show More</button>
+
+                </div>
+                <div class="course-card">
+                    <h3>ENGL 100</h3>
+                    <p>- System Engineering Design Project</p>
+                    <p>- Term : 2019</p>
+                    <p>- Lab : None</p>
+
+                    <button class="course-card" id="course-card">Show More</button>
+                </div>
+                <div class="course-card">
+                    <h3>ENGL 100</h3>
+                    <p>- System Engineering Design Project</p>
+                    <p>- Term : 2019</p>
+                    <p>- Lab : None</p>
+
+                    <button class="course-card" id="course-card">Show More</button>
+                </div>
+                <div class="course-card">
+                    <h3>ENGL 100</h3>
+                    <p>- System Engineering Design Project</p>
+                    <p>- Term : 2019</p>
+                    <p>- Lab : None</p>
+                    <button class="course-card" id="course-card">Show More</button>
+                </div>
+
+            </div>
+            <div class="course-complete">
+                <h2>Course In Progess</h2>
+                <div class="course-card">
+                    <h3>ENGL 100</h3>
+                    <p>- System Engineering Design Project</p>
+                    <p>- Term : 2019</p>
+                    <p>- Lab : None</p>
+                    <button class="course-card" id="course-card">Show More</button>
+
+                </div>
+                <div class="course-card">
+                    <h3>ENGL 100</h3>
+                    <p>- System Engineering Design Project</p>
+                    <p>- Term : 2019</p>
+                    <p>- Lab : None</p>
+                    <p>- Time: xxxx</p>
+                    <p>- Instructor: xxxx xxxx</p>
+                    <p>- Exams : xxxxxxxx</p>
+                    <p id="distribution">- Distribution : Lorem ipsum dolor sit amet consecteturhil dignissimos con non,
+                        nisi ad corrupti eum molestias hic. Porro, suscipit! </p>
+                    <button class="course-card" id="course-card">Show Less</button>
+                </div>
+
+            </div>
+            <div class="course-complete">
+                <h2>Course Left</h2>
+                <div class="course-card">
+                    <h3>ENGL 100</h3>
+                    <p>- System Engineering Design Project</p>
+                    <p>- Term : 2019</p>
+                    <p>- Lab : None</p>
+                    <button class="course-card" id="course-card">Show More</button>
+
+                </div>
+                <div class="course-card">
+                    <h3>ENGL 100</h3>
+                    <p>- System Engineering Design Project</p>
+                    <p>- Term : 2019</p>
+                    <p>- Lab : None</p>
+
+                    <button class="course-card" id="course-card">Show More</button>
+                </div>
+                <div class="course-card">
+                    <h3>ENGL 100</h3>
+                    <p>- System Engineering Design Project</p>
+                    <p>- Term : 2019</p>
+                    <p>- Lab : None</p>
+
+                    <button class="course-card" id="course-card">Show More</button>
+                </div>
+                <div class="course-card">
+                    <h3>ENGL 100</h3>
+                    <p>- System Engineering Design Project</p>
+                    <p>- Term : 2019</p>
+                    <p>- Lab : None</p>
+                    <button class="course-card" id="course-card">Show More</button>
+                </div>
+
+            </div>
+        </div>
+        <div class="programDiv">
+            <h2>Program</h2>
+            <h3>Total Credit Hours:136(46 courses)</h3>
+            <div class="course-card">
+                <img class="photo" src="img/basic-pie-chart.png" width="350"></img>
+            </div>
+            <div class="course-card">
+                <img class="photo" src="img/trend_chart_sample.svg"></img>
+            </div>
+        </div>
+        </div>
+
+        </div>
+    </section>
+
+
+    <footer>
+        <script src="js/main.js"></script>
+        <script src="js/logIn.js"></script>
+        <p class="copyright">Copyright &copy; Sep. 2020 to
+            <script>document.write(new Date().getFullYear())</script> UofR VSB_Plus Capstone Group All Rights Reserved<br>
+            <cite>
+                Credit: Login source code from w3schools.com "How TO - Login Form"
+            </cite>
+        </p>
+        <p class="info-link"><a href="homePage.html">About Us</a></p>
+    </footer>
 </body>
