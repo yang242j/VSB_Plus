@@ -16,7 +16,6 @@
 
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/academicBuilder.css">
-    <link rel="stylesheet" href="css/logIn.css">
 
     <style>
         table,
@@ -39,40 +38,7 @@
         <a class="nav-active" href="academicBuilder.html">Academic Schedule Builder</a>
         <a href="semesterBuilder.html">Semester Schedule Builder</a>
         <a href="courseDB.html">Course List Database</a>
-        <div class="nav-right">
-            <a onclick="document.getElementById('login').style.display='block'" style="width:auto;">LogIn</a>
-            <a href="#signup">SignUp</a>
-        </div>
     </nav>
-
-    <div id="login" class="modal">
-        <form class="modal-content animate" action="/action_page.php" method="post">
-            <div class="imgcontainer">
-                <span onclick="document.getElementById('login').style.display='none'" class="close"
-                    title="Close Modal">&times;</span>
-                <img src="img/anyone.jpg" alt="Avatar" class="avatar">
-            </div>
-
-            <div class="container">
-                <label for="sid"><b>Username</b></label>
-                <input type="text" placeholder="Please Enter Student ID" name="sid" required>
-
-                <label for="psw"><b>Password</b></label>
-                <input type="password" placeholder="Please Enter Password" name="psw" required>
-
-                <button type="submit">Login</button>
-                <label>
-                    <input type="checkbox" checked="checked" name="remember"> Remember me
-                </label>
-            </div>
-
-            <div class="container" style="background-color:#f1f1f1">
-                <button type="button" onclick="document.getElementById('login').style.display='none'"
-                    class="cancelbtn">Cancel</button>
-                <span class="psw">Forgot <a href="#">password?</a></span>
-            </div>
-        </form>
-    </div>
 
     <div>
         <h2>Views: </h2>
@@ -201,11 +167,10 @@
 
     <footer>
         <script src="js/main.js"></script>
-        <script src="js/logIn.js"></script>
         <p class="copyright">Copyright &copy; Sep. 2020 to
             <script>document.write(new Date().getFullYear())</script> UofR VSB_Plus Capstone Group All Rights Reserved<br>
             <cite>
-                Credit: Login source code from w3schools.com "How TO - Login Form"
+                Credit:
             </cite>
         </p>
         <p class="info-link"><a href="homePage.html">About Us</a></p>
