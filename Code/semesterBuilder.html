@@ -1,3 +1,7 @@
+<?php
+    
+?>
+
 <!doctype html>
 
 <html lang="en">
@@ -29,9 +33,15 @@
         <a class="nav-active" href="semesterBuilder.html">Semester Schedule Builder</a>
         <a href="courseDB.html">Course List Database</a>
         <div class="nav-right">
-            <a onclick="document.getElementById('login').style.display='block'" style="width:auto;">LogIn</a>
-            <a href="#signup">SignUp</a>
-            <a onclick="toggleDisplay()">Switch</a>
+            <div class="dropbtn">
+                <a class="usertext">php_userName</a>
+                <img src="img/anyone.jpg" id="usrimg" alt="user-name">
+            </div>
+            <div class="dropdown-menu">
+                <a>Student Name</a>
+                <a>Student ID</a>
+                <a href="#">Logout</a>
+            </div>
         </div>
     </nav>
 
@@ -122,6 +132,12 @@
                 Fullcalendar tutorial: Youtube video "JS To-do List #14 FullCalendar - Rendering a Calendar with
                 JavaScript"<br>
             </cite>
+            Note: <br>
+            When excessing this page, if user is logged in, getting user info and stay this page.<br>
+            When excessing this page, if user is NOT logged in, redirect to the semesterLogin page to login.<br>
+            When leaving this page, if user is logged in, every page will have a user info section at nav-right.<br>
+            To log out, click the log off button in the user info section at nav-right.<br>
+            If user is NOT logged in, every other page will NOT have a user info section at nav-right.<br>
         </p>
         <p class="info-link"><a href="homePage.html">About Us</a></p>
     </footer>

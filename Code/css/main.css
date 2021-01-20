@@ -27,6 +27,7 @@ h1 {
 }
 
 nav {
+    overflow: hidden;
     background-color: #333;
     margin-top: 2.5%;
 }
@@ -53,9 +54,47 @@ nav a.nav-active {
 
 nav .nav-right {
     float: right;
+    overflow: hidden;
 }
 
-body .container{
+nav .nav-right .dropbtn {}
+
+nav .nav-right  #usrimg {
+    width: 15%;
+    border-radius: 50%;
+    float: right;
+    padding: 5px;
+}
+
+nav .nav-right .dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #444;
+    min-width: 130px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+nav .nav-right .dropdown-menu a {
+    float: none;
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+nav .nav-right .dropdown-menu a:hover {
+    background-color: #ddd;
+    color: black;
+    cursor: pointer;
+}
+
+nav .nav-right .dropbtn:hover .dropdown-menu {
+    display: block;
+}
+
+body .container {
     margin-top: 2%;
     /*min-height: 400px;
     margin-bottom: 10px;*/
@@ -76,19 +115,19 @@ footer .info-link {
 
 /* Course Tag */
 .courseTag {
-    display :grid;
+    display: grid;
     border: 0px solid #aaaaaa;
     border-radius: 15px;
     min-width: 100px;
     width: 50px;
-    height : 30px;
+    height: 30px;
     line-height: 30px;
     padding: 0px 15px 0px;
     text-align: center;
     background-color: DarkGrey;
-    margin-bottom : 10px;
+    margin-bottom: 10px;
     font-weight: bold;
-    font-size : 15px;
+    font-size: 15px;
 }
 
 .courseTag:hover {
