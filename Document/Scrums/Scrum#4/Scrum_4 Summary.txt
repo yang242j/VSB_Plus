@@ -1,0 +1,24 @@
+1) Redifine and connect with other database:
+	- If their database connection is provided, simply use PHP database connection.
+	- If DB is not provided, use our parsing program to fetch data from their website.
+	- API can also be an option.
+
+2) fullcalendar with repeated event:
+	- We can get lecture date from JSON file and use the repeated add-event function which is built-in the fullcalendar.
+	
+3) fullcalendar export:
+	- Future work: can be export to an easy to read format, like PDF or iCal. (RSS)
+	- We can try to export the generated calendar to iCal or ics format.
+	- And user can import it to their prefer calendar program.
+	
+4) Mobile display:
+	- Future task: try with different screen scale.(phone, pad)
+
+5) 	Responsibility: 
+	- We choose to continue on seperate on pages.
+	- So that everyone can participate in the LAMP project development. 
+
+6) Role-based accessibility:
+	- non-login user VS login user.
+	
+7) Redesign accademic pages
