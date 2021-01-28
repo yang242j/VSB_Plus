@@ -8,8 +8,8 @@ var colors = [
 ];
 
 var seleFaculty = [];
-var seleCourse;
-var num_perid = 10;
+var ALL_JSON;
+var num_perid = 100;
 
 window.onload = function init(){
     loadCourses();
@@ -23,6 +23,7 @@ function loadCourses(){
             // alert("ok");
             var jsonResponse = JSON.parse(this.responseText);
             loadCourseData(jsonResponse);
+            ALL_JSON = jsonResponse;
         }
     };
     xhttp.open("GET", "JSON/ALL.json", false);
@@ -93,12 +94,32 @@ document.getElementById("classification").addEventListener("click",function(e){
     if (target.nodeName==="DIV" && nodeId == ""){
         if (nodeClass.search("selected") == -1){
             target.classList.add("selected");
+            seleFaculty.push(target.innerHTML);
         }
         else{
             target.classList.remove("selected");
+            var deleInde = seleFaculty.indexOf(target.innerHTML);
+            seleFaculty.splice(deleInde, 1);
         }
     }
+    $("#course_list").empty();
+    var loadData = [];
+    if (seleFaculty.length == 0){
+        loadData = ALL_JSON;
+    }
+    else{
+        for(i = 0; i < ALL_JSON.length; i++){
+            if(seleFaculty.find(element => element == ALL_JSON[i].faculty) != undefined){
+                var insert = ALL_JSON[i];
+                loadData.push(insert)
+            }   
+        }
+    }
+    loadCourseData(loadData);
 });
+
+
+
 
 document.getElementById("display_change").addEventListener("click",function(e){
     var target = document.getElementById("course_list");
