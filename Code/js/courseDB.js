@@ -41,9 +41,9 @@ function addCourse(course_json, index){
     var course_card = "<div class='course shadow round word_overflow' style='background-color:" + 
     color + ";' value='"+ course_json.short_name +"' onclick=\'courseSelect(this)\'>" +  
     "<span class='larger'>" + course_json.short_name + "</span>" + 
-    "<div class='left'>" + course_json.credit + ".00 Credits</div>" + 
+    "<div class='left credit'>" + course_json.credit + ".00 Credits</div>" + 
     "<br> <span class='bold'>" + course_json.title + "</span>" + 
-    "<div>" + 
+    "<div class='description'>" + 
     "<span class='bold smaller'>Description: </span>"+
     "<span class='smaller'>" + course_json.description + "</span>" +
     "</div>"+
@@ -74,10 +74,10 @@ function courseSelect(event){
 function setCourse(jsonRsp){
     var detail = "<h2 id='title'>" + jsonRsp.short_name +"</h2>" + 
     "<ul>" +
-        "<li>Course Name: <span id='fullName'>" + jsonRsp.title + "</span> </li>" +
-        "<li>***Prerequisites: <span id='preReqClass'>" + jsonRsp.prerequisite + "</span> ***</li>" +
+        "<li><span class='bold'>Course Name</span>: <span id='fullName'>" + jsonRsp.title + "</span> </li>" +
+        "<li>***<span class='bold'>Prerequisites</span>: <span id='preReqClass'>" + jsonRsp.prerequisite + "</span> ***</li>" +
         // <li>Labels: Project Class, *****</li>
-        "<li>Course Description: " + jsonRsp.description + "</li>" 
+        "<li><span class='bold'>Course Description</span>: " + jsonRsp.description + "</li>" 
         // "<li>Professor have taught: </li>"
     "</ul>"
 
@@ -106,9 +106,13 @@ document.getElementById("display_change").addEventListener("click",function(e){
 
     if (nodeClass.search("tow_course_show") == -1){
         target.classList.add("tow_course_show");
+        $(".credit").hide();
+        $(".description").hide();
     }
     else{
         target.classList.remove("tow_course_show");
+        $(".credit").show();
+        $(".description").show();
     }
 });
 

@@ -13,15 +13,6 @@ body .course{
     /* position: relative; */
 }
 
-/* .course_2{
-    line-height: 170%;
-    width: auto;
-    height: 90px;
-    margin: 5px;
-    padding-left: 8px;
-    position: relative;
-} */
-
 .word_overflow{
     overflow: hidden;  /*溢出隐藏*/
     text-overflow: ellipsis; /*以省略号...显示*/
