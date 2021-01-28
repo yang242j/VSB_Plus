@@ -102,6 +102,24 @@ document.getElementById("classification").addEventListener("click",function(e){
             seleFaculty.splice(deleInde, 1);
         }
     }
+    reloadCourse();
+    // $("#course_list").empty();
+    // var loadData = [];
+    // if (seleFaculty.length == 0){
+    //     loadData = ALL_JSON;
+    // }
+    // else{
+    //     for(i = 0; i < ALL_JSON.length; i++){
+    //         if(seleFaculty.find(element => element == ALL_JSON[i].faculty) != undefined){
+    //             var insert = ALL_JSON[i];
+    //             loadData.push(insert)
+    //         }   
+    //     }
+    // }
+    // loadCourseData(loadData);
+});
+
+function reloadCourse(){
     $("#course_list").empty();
     var loadData = [];
     if (seleFaculty.length == 0){
@@ -116,9 +134,7 @@ document.getElementById("classification").addEventListener("click",function(e){
         }
     }
     loadCourseData(loadData);
-});
-
-
+}
 
 
 document.getElementById("display_change").addEventListener("click",function(e){
