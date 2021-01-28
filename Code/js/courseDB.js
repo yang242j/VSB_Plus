@@ -1,3 +1,89 @@
+// Setup the gobal varible.
+var colors = [
+    "#99CCCC",
+    "#CCFF99",
+    "#99CCFF",
+    "#CCFFFF",
+    "#e4e2e2bd"
+];
+
+var seleFaculty = [];
+var seleCourse;
+var num_perid = 10;
+
+window.onload = function init(){
+    loadCourses();
+}
+
+function loadCourses(){
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function(){
+        
+        if (this.readyState == 4 && this.status == 200){
+            // alert("ok");
+            var jsonResponse = JSON.parse(this.responseText);
+            loadCourseData(jsonResponse);
+        }
+    };
+    xhttp.open("GET", "JSON/ALL.json", false);
+    xhttp.send();
+}
+
+function loadCourseData(json){
+    length = Math.min(json.length, num_perid);
+    for (index = 0; index < length; index++){
+        addCourse(json[index], index);
+    }
+}
+
+function addCourse(course_json, index){
+    var color = colors[index % colors.length];
+    var course_card = "<div class='course shadow round word_overflow' style='background-color:" + 
+    color + ";' value='"+ course_json.short_name +"' onclick=\'courseSelect(this)\'>" +  
+    "<span class='larger'>" + course_json.short_name + "</span>" + 
+    "<div class='left'>" + course_json.credit + ".00 Credits</div>" + 
+    "<br> <span class='bold'>" + course_json.title + "</span>" + 
+    "<div>" + 
+    "<span class='bold smaller'>Description: </span>"+
+    "<span class='smaller'>" + course_json.description + "</span>" +
+    "</div>"+
+    "</div>"
+
+    document.getElementById("course_list").innerHTML += course_card;
+}
+
+function courseSelect(event){
+    var short_name = event.getAttribute("value");
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function(){
+        if (this.status == 404){
+            document.getElementById("message").innerHTML = short_name + " cannot be found";
+        }
+        if (this.readyState == 4 && this.status == 200){
+            var jsonRsp = JSON.parse(this.responseText);
+            setCourse(jsonRsp);
+            document.getElementById("message").innerHTML = short_name + " has been selected";
+        }
+    };
+    // xmlhttp.open("GET", "getCourse.php?short_name=" + short_name, false);
+    var json_url = "JSON/202020/" + short_name + ".json";
+    xmlhttp.open("GET", json_url, false);
+    xmlhttp.send();
+}
+
+function setCourse(jsonRsp){
+    var detail = "<h2 id='title'>" + jsonRsp.short_name +"</h2>" + 
+    "<ul>" +
+        "<li>Course Name: <span id='fullName'>" + jsonRsp.title + "</span> </li>" +
+        "<li>***Prerequisites: <span id='preReqClass'>" + jsonRsp.prerequisite + "</span> ***</li>" +
+        // <li>Labels: Project Class, *****</li>
+        "<li>Course Description: " + jsonRsp.description + "</li>" 
+        // "<li>Professor have taught: </li>"
+    "</ul>"
+
+    document.getElementById("popView").innerHTML = detail;
+}
+
 document.getElementById("classification").addEventListener("click",function(e){
     //Select the different faulties
     var target = e.target;
@@ -26,12 +112,17 @@ document.getElementById("display_change").addEventListener("click",function(e){
     }
 });
 
-
-function setFilter() {
-    var program = document.getElementById("program").value;
-    var faculty = document.getElementById("faculty").value;
-    document.getElementById("filter_cond").innerHTML = "Program: " + program + "<br> Faculty: " + faculty;
-
+function courseSearch() {
+    var element = document.getElementById("course_input");
+    var input = element.value;
+    element.setAttribute("value", input);
+    courseSelect(element);
+    // if (courseSelect(ele) == 404 ){
+    //     // alert(courseSelect(ele));
+    //     document.getElementById("message").innerHTML = input + " cannot be found";
+    // }
+    // // alert(courseSelect(ele))
+    // document.getElementById("message").innerHTML = input + " has been selected";
 }
 
 function reline() {
@@ -57,6 +148,8 @@ function reline() {
 
 }
 // reline()
+
+
 
 $(document).ready(function () {
     var isHiden = false;	/*inital box status*/

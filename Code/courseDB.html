@@ -32,9 +32,10 @@
             <table class="" id="course_search">
                 <tr>
                     <td class="">Select Course:
-                        <input type="text" id="course_input">
-                        <input type="submit" value="Select" onclick="setFilter(event)" />
+                        <input type="text" id="course_input" value="">
+                        <input type="submit" value="Select" onclick="courseSearch()" />
                     </td>
+                    <td id="message"></td>
                 </tr>
             </table>
             <!-- <input type="submit" value="Submit" onclick="setFilter(event)" />
@@ -46,19 +47,19 @@
             <div class="" id="search_area">
                 <div class=" shadow" id="classification">
                     <div class="border" id="faculty_title">Faculty</div>
-                    <div class="tag round">ALL</div>
+                    <div class="tag round selected">ALL</div>
                     <div class="tag round">ENSE</div>
                     <div class="tag round">ENSE</div>
                     <div class="tag round">ENEV</div>
                     <div class="tag round">ENPE</div>
                 </div>
                 <div class="shadow scroll course_list" id="course_list">
-                    <div class="course shadow round word_overflow" id="c1" style="background-color: #99CCCC;"
-                        onclick="butonClick()">
+                    <div class="course shadow round word_overflow"  style="background-color: #99CCCC;" value="ENSE 400"
+                        onclick="courseSelect(this)">
                         <span class="larger">ENSE 400</span>
-                        <div class="left"> 3.00 Credits</div>
+                        <div class="left"> 3.00 Credit</div>
                         <br> <span class="bold">Systems Engineering Design Project</span>
-                        <div class="description">
+                        <div>
                             <span class="bold smaller">Description: </span>
                             <span class="smaller">Students are given the opportunity to propose, develop and present
                                 engineering design projects which they are expected to further pursue in ENSE 477.
@@ -68,10 +69,10 @@
                                 students.</span>
                         </div>
                     </div>
-                    <div class="course shadow round" id="c2" style="background-color: #CCFF99;">ENEL 387</div>
+                    <!-- <div class="course shadow round" id="c2" style="background-color: #CCFF99;">ENEL 387</div>
                     <div class="course shadow round" id="c3" style="background-color: #99CCFF;">ENSE 496AC</div>
                     <div class="course shadow round" id="c4" style="background-color: #CCFFFF;">ENSE 496AD</div>
-                    <div class="course shadow round" id="c5" style="background-color: #e4e2e2bd;">ENSE 472</div>
+                    <div class="course shadow round" id="c5" style="background-color: #e4e2e2bd;">ENSE 472</div> -->
                 </div>
                 <div></div>
                 <div>

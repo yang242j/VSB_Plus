@@ -8,9 +8,9 @@ body .course{
     height: 80px;
     /* border-radius: 5px 5px;
     border-width: 1px;  */
-    margin: 10px;
-    padding-left: 8px;
-    position: relative;
+    margin: 4px;
+    padding-left: 10px;
+    /* position: relative; */
 }
 
 /* .course_2{
@@ -91,7 +91,7 @@ body .course{
     display: grid;
     grid-template-columns: 30% 70%;
     grid-template-rows: 90% 10%;
-    grid-gap:10px
+    grid-gap:10px;
 }
 
 .course_list {
@@ -99,6 +99,7 @@ body .course{
     display: grid;
     grid-template-columns: repeat(1, 100%);
     grid-template-rows: repeat(auto-fill, 85px);
+    grid-gap:10px;
   }
   
 .tow_course_show{
@@ -112,6 +113,14 @@ body .course{
 
   #main_area{
     height: 400px;
+  }
+
+  #error{
+      color: #db4a4a;
+  }
+
+  #course_search{
+      width: 50%;
   }
 
   .tab-header {
@@ -171,9 +180,9 @@ body .course{
     opacity:0.8; 
     
 	/*layout*/
-	position:absolute;
+	position: relative;;
 	z-index:2;
-    right: 2%;
+    /* right: 10%; */
     float:left;
  
 	/*Word seting*/
@@ -183,7 +192,9 @@ body .course{
     overflow: scroll;
     overflow-x:hidden;
 
-    padding-left: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 25px;
 }
 
 .inline{
