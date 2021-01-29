@@ -41,13 +41,13 @@ nav a {
     font-size: 17px;
 }
 
-nav a.nav-left:hover {
+nav a:hover {
     background-color: #ddd;
     color: black;
     cursor: pointer;
 }
 
-nav a.nav-left.nav-active {
+nav a.nav-active {
     background-color: #4CAF50;
     color: white;
 }
