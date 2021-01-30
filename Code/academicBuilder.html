@@ -16,6 +16,8 @@
 
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/academicBuilder.css">
+    
+    <script type="text/javascript" src="js/academicBuilder.js"></script>
 </head>
 
 <body>
@@ -46,7 +48,7 @@
         <section class="left-section">
             <h2>Default Schedule(Fall 2020): </h2>
 
-            <button class="hide" id="hideButton" onclick="hideAndShow()">
+            <button class="hide" id="hideButton" onclick="hideAndShow1()">
                 <i class='fas fa-angle-up'></i>
                 <span class="hideTips">hide</span>
             </button>
@@ -57,7 +59,7 @@
                 <span class="generateDetailTips">generate detail of terms</span>
             </button>
 
-            <div class="term-container">
+            <div class="term-container" id="Term">
                 <h3>Term 1:</h3>
                 <button id="hideButton" onclick="hideAndShow()">
                     <i class='fas fa-angle-up'></i>
@@ -75,7 +77,7 @@
                         <div class="tag" id="proj">no proj</div>
                     </div>
                 </div>
-            </div>
+           
 
             <div class="term-container">
                 <h3>Term 2:</h3>
@@ -100,13 +102,15 @@
         <section class="right-section">
             <div class="course-completed">
                 <h2>Coures completed:</h2>
-                <button class="hide" id="hideButton" onclick="hideAndShow()"><i class='fas fa-angle-up'></i>
+                <button class="hide" id="hideButton" onclick="hideAndShow3()"><i class='fas fa-angle-up'></i>
                     <span class="hideTips">hide</span></button>
 
                 <button class="generateDetail" id="generateDetail"
                     onclick="location.href ='academicBuilderCDetail.html'"><i class='fas fa-bars'
                         style='font-size:24px'></i>
                     <span class="generateDetailTips">generate detail of completed course</span></button>
+                
+                <div id="complete">
                 <div class="courseTag" id="c1" style="background-color: rgb(177, 236, 236);" onclick="alert('Test')">
                     ENGG 100</div>
                 <div class="courseTag" id="c2" style="background-color: rgb(238, 223, 206);">ENGL 100</div>
@@ -119,35 +123,40 @@
                 <div class="courseTag" id="c3" style="background-color: coral;">ENEL 280</div>
                 <div class="courseTag" id="c4" style="background-color: cornflowerblue;">ENEL 281</div>
                 <div class="courseTag" id="c5" style="background-color: darkkhaki;">ENEL 282</div>
+                </div>
             </div>
+            
             <div class="course-not-completed">
                 <h2>Coures need to take:</h2>
-                <button class="hide" id="hideButton" onclick="hideAndShow()"><i class='fas fa-angle-up'></i>
+                <button class="hide" id="hideButton" onclick="hideAndShow4()"><i class='fas fa-angle-up'></i>
                     <span class="hideTips">hide</span></button>
 
                 <button class="generateDetail" id="generateDetail"
                     onclick="location.href ='academicBuilderCDetail.html'"><i class='fas fa-bars'
                         style='font-size:24px'></i>
                     <span class="generateDetailTips">generate detail of not-completed course</span></button>
+                
+                <div id="not_complete">
                 <div class="courseTag" id="c1" style="background-color: rgb(112, 170, 170);" onclick="alert('Test')">
                     ENSE 470</div>
                 <div class="courseTag" id="c2" style="background-color: bisque;">Math 213</div>
                 <div class="courseTag" id="c3" style="background-color: coral;">ENEL 353</div>
                 <div class="courseTag" id="c4" style="background-color: cornflowerblue;">ENEL 380</div>
                 <div class="courseTag" id="c5" style="background-color: darkkhaki;">ENEL 374</div>
+                </div>
             </div>
         </section>
 
         <section class="left-section">
             <h2>Recommended Schedule(Fall 2020):</h2>
-            <button class="hide" id="hideButton" onclick="hideAndShow"><i class='fas fa-angle-up'></i>
+            <button class="hide" id="hideButton" onclick="hideAndShow2()"><i class='fas fa-angle-up'></i>
                 <span class="hideTips">hide</span></button>
 
             <button class="generateDetail" id="generateDetail"
                 onclick="location.href ='academicBuilderRecDetail.html'"><i class='fas fa-bars'
                     style='font-size:24px'></i>
                 <span class="generateDetailTips">generate detail of recommended course</span></button>
-            <div class="term-container">
+            <div class="term-container" id="term">
                 <h3>Term x (next term of latest term):</h3>
                 <button id="hideButton" onclick="hideAndShow()"><i class='fas fa-angle-up'></i></button>
                 <div class="course-section">
