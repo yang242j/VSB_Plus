@@ -26,6 +26,14 @@ h1 {
     font-size: 37px;
 }
 
+.hidden {
+    display: none;
+}
+
+.show {
+    display: initial;
+}
+
 nav {
     overflow: hidden;
     background-color: #333;
