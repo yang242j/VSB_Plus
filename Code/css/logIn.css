@@ -9,7 +9,7 @@ body section.container h2{
 
 body section.container button {
     display: block;
-    width: -moz-available;
+    width: 100%;
     padding: 14px 28px;
     font-size: 16px;
     border: none;
@@ -26,7 +26,9 @@ body section.container div.user-login {
 }
 
 body section.container div.user-login input {
-    width: -moz-available;
+    width: 100%;
+    padding: unset;
+    border: none;
 }
 
 body section.container div.user-login #login {
