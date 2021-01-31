@@ -13,3 +13,16 @@ window.onclick = function(event) {
     }
     //console.log(document.getElementById("addon-menu").style.display);
 }
+
+// Menu toggle function
+function menuFunc1(x) {
+    x.classList.toggle("change");
+}
+
+function menuFunc2() {
+    var element = document.getElementsByClassName("menu-list");
+    
+    for (var i = 0; i < element.length; i++) {
+        element[i].classList.toggle("hidden");
+    }
+}
