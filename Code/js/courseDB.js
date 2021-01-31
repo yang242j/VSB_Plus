@@ -9,7 +9,8 @@ var colors = [
 
 var seleFaculty = [];
 var ALL_JSON;
-var num_perid = 100;
+var num_perid = 10;
+var filter_key = "all";
 
 window.onload = function init(){
     loadCourses();
@@ -31,6 +32,10 @@ function loadCourses(){
 }
 
 function loadCourseData(json){
+    //The case there json is empty
+    if (json.length == 0){
+        $("#course_list").html("<p>No course are found!</p>");
+    }
     length = Math.min(json.length, num_perid);
     for (index = 0; index < length; index++){
         addCourse(json[index], index);
@@ -119,9 +124,43 @@ function reloadCourse(){
             }   
         }
     }
+    loadData = year_filter(loadData);
     loadCourseData(loadData);
 }
 
+function year_filter(courses){
+    if (filter_key == "all"){return courses;}
+    var couNum;
+    switch(filter_key){
+        case "all": return courses;
+        case "first": couNum = '1';
+            break;
+        case "second": couNum = '2';
+            break;
+        case "thrid": couNum = '3';
+            break;
+        case "fourth": couNum = '4';
+            break;
+        default: return courses;
+    }
+    var loadData = [];
+    for (i = 0; i < courses.length; i++){
+        var short_name = courses[i].short_name;
+        var couNumPos = short_name.indexOf(" ") + 1;
+        if (short_name[couNumPos] == couNum){
+            loadData.push(courses[i]);
+        }
+    }
+    return loadData;
+}
+
+$("#filter").on("change", function(event){
+    //acquire the menu entry number
+    var index = event.srcElement.selectedIndex
+    //assign the filter key with the selected element value
+    filter_key = event.srcElement.options[index].value;
+    reloadCourse();
+});
 
 document.getElementById("display_change").addEventListener("click",function(e){
     var target = document.getElementById("course_list");
