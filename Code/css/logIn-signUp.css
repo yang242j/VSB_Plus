@@ -11,7 +11,7 @@ body section.container button {
     display: block;
     width: 100%;
     font-size: 20px;
-    border: none;
+    border: 3px solid #5f5f5f;
     cursor: pointer;
     text-align: center;
     font-weight: 500;
@@ -31,16 +31,19 @@ body section.container div.form-div input {
 }
 
 body section.container div.form-div #submit {
-    background-color: #4CAF50;
+    background-color: #5f5f5f;
+    color: white;
     max-width: 85%;
     float: left;
+    /*transition: max-width 400ms ease-in-out 400ms;*/
 }
 
 /***reset password***/
 body section.container div.form-div #reset {
-    background-color: red;
+    background-color: white;
     max-width: 15%;
     float: right;
+    /*transition: max-width 400ms ease-in-out 400ms;*/
 }
 
 body section.container div.form-div #reset:hover {
