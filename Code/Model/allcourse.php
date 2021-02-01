@@ -1,6 +1,7 @@
 
 <?php
-    $host = "localhost";
+    // $host = "localhost";
+    $host = "15.223.123.122";
     $username = 'root';
     $pass = "vsbp";
     $database = "course";

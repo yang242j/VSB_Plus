@@ -29,6 +29,7 @@ function loadCourses(){
         }
     };
     xhttp.open("GET", "JSON/ALL.json", false);
+    // xhttp.open("GET", "Model/allCourse.php", false);
     xhttp.send();
 }
 

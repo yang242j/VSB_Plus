@@ -27,3 +27,12 @@ function menuFunc2() {
     }
 
 }
+function allParse(response){
+    var result = [];
+    var all = JSON.parse(response);
+    for (index = 0; index < all.length; index++){
+        var course = JSON.parse(response[index]);
+        result.push(course);
+    }
+    return result;
+}
