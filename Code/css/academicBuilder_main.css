@@ -1,0 +1,110 @@
+body {
+    background-image: linear-gradient(#B2D9E7, white);
+}
+
+h1 {
+    margin-left: 0;
+    text-align: left;
+}
+
+h2 {
+    font-family: Monospace;
+    font-size: 32px;
+}
+
+p {
+    font-family: Sans-serif;
+    font-size: 20px;
+    text-align: justify;
+    text-indent: 40px;
+    ;
+}
+
+body .user_summary_board {
+    width: 650px;
+    height: 400px;
+    /*border: 2px solid red;*/
+    display: grid;
+    grid-template-columns: 235px 235px;
+    column-gap: 30px;
+}
+
+body .user_summary_board .summary_card {
+    width: 235px;
+    height: 168px;
+    /*border: 2px solid blue;*/
+    margin-left: 70px;
+    margin-top: 10px;
+    background-color: #D4F19F;
+    border-radius: 25px;
+    box-shadow: -2px 4px 7px 0px #555555;
+    text-align: center;
+}
+
+body .user_summary_board .right_arrow {
+    position: absolute;
+    margin-top: 180px;
+    margin-left: 590px;
+    font-size: 36px;
+    border: none;
+    background-color: transparent;
+}
+
+body .user_summary_board .left_arrow {
+    position: absolute;
+    margin-top: 180px;
+    margin-left: 20px;
+    font-size: 36px;
+    border: none;
+    background-color: transparent;
+}
+
+body .summary_pie_graph {
+    width: auto;
+    height: 400px;
+    /*border: 2px solid red;*/
+    margin-top: -405px;
+    margin-left: 680px;
+    display: grid;
+    grid-template-columns: 450px 550px;
+    grid-template-rows: 380px;
+    column-gap: 60px;
+}
+
+body .summary_pie_graph .graph_introduction {
+    /*border: 2px solid blue;*/
+    margin-left: 30px;
+    margin-top: 0px;
+    text-align: center;
+}
+
+body .summary_pie_graph .graph {
+    /*border: 2px solid blue;*/
+    margin-top: 0px;
+    text-align: center;
+}
+
+body .summary_line_graph {
+    width: auto;
+    height: 450px;
+    /*border: 2px solid red;*/
+    margin-top: 20px;
+    margin-left: 0px;
+    display: grid;
+    grid-template-columns: 600px 1000px;
+    grid-template-rows: 380px;
+    column-gap: 60px;
+}
+
+body .summary_line_graph .graph {
+    /*border: 2px solid blue;*/
+    margin-left: 10px;
+    margin-top: 0px;
+    text-align: center;
+}
+
+body .summary_line_graph .graph_introduction {
+    /*border: 2px solid blue;*/
+    margin-top: 0px;
+    text-align: center;
+}
