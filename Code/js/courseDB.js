@@ -23,6 +23,7 @@ function loadCourses(){
         if (this.readyState == 4 && this.status == 200){
             // alert("ok");
             var jsonResponse = JSON.parse(this.responseText);
+            // var jsonResponse = allParse(this.responseText);
             loadCourseData(jsonResponse);
             ALL_JSON = jsonResponse;
         }
@@ -271,3 +272,13 @@ $(document).ready(function () {
         isHiden = !isHiden;
     });
 });
+
+function allParse(response){
+    var result = [];
+    var all = JSON.parse(response);
+    for (index = 0; index < all.length; index++){
+        var course = JSON.parse(response[index]);
+        result.push(course);
+    }
+    return result;
+}

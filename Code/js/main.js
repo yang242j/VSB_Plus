@@ -25,4 +25,5 @@ function menuFunc2() {
     for (var i = 0; i < element.length; i++) {
         element[i].classList.toggle("hidden");
     }
+
 }
