@@ -21,6 +21,8 @@
         $addCond += " AND term = '" + $term + "'";
     }
 
+    echo "aa" . $addCond . "<br>";
+
     if($short_name !== ""){
         $host = "localhost";
         $username = 'root';
