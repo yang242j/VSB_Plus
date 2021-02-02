@@ -17,22 +17,22 @@ body section.container button {
     font-weight: 500;
 }
 
-body section.container .form-div {
+body section.container div.form-div {
     width: 40%;
     float: left;
     margin-left: 10%;
 }
 
-body section.container .form-div .input_div,
-body section.container .form-div .btn_div {
+body section.container div.form-div .input_div,
+body section.container div.form-div .btn_div {
     margin: 2%;
 }
 
-body section.container .form-div .has-error {
+body section.container div.form-div .has-error {
     background-color: yellow;
 }
 
-body section.container .form-div .help-block {
+body section.container div.form-div .help-block {
     color: red;
 }
 
