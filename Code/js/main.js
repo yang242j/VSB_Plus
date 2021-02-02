@@ -5,9 +5,10 @@ function addonFunc() {
 }
 
 // Close the addon if the user clicks outside of it
-var usertext = document.getElementById("usertext");
-window.onclick = function(event) {
-    if (event.target != usertext) { 
+window.onclick = function (event) {
+    var usertext = document.getElementById("usertext");
+    var addon_open = document.getElementById("addon-menu").style.display != "none";
+    if (addon_open && event.target != usertext) { 
         document.getElementById("addon-menu").style.display = "none";
         //console.log(dropbtn);
     }
