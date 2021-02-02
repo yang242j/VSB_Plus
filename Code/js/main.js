@@ -1,18 +1,12 @@
 /* When the user clicks on the nav-right buttons, 
 toggle between hiding and showing the addOn content */
-function addonFunc() {
-    document.getElementById("addon-menu").style.display = "block";
-}
-
-// Close the addon if the user clicks outside of it
-window.onclick = function (event) {
-    var usertext = document.getElementById("usertext");
-    var addon_open = document.getElementById("addon-menu").style.display != "none";
-    if (addon_open && event.target != usertext) { 
+function addonSwitchFunc() {
+    var addon_display = document.getElementById("addon-menu").style.display;
+    if (addon_display == "none") {
+        document.getElementById("addon-menu").style.display = "block";
+    } else {
         document.getElementById("addon-menu").style.display = "none";
-        //console.log(dropbtn);
     }
-    //console.log(document.getElementById("addon-menu").style.display);
 }
 
 // Menu toggle function
