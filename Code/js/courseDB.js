@@ -28,8 +28,8 @@ function loadCourses(){
             ALL_JSON = jsonResponse;
         }
     };
-    xhttp.open("GET", "JSON/ALL.json", false);
-    // xhttp.open("GET", "Model/allCourse.php", false);
+    xhttp.open("GET", "JSON/ALL.json", false); // Get the data from the local JSON file
+    // xhttp.open("GET", "Model/allCourse.php", false); // Get the data from database by the server php file
     xhttp.send();
 }
 
@@ -73,8 +73,8 @@ function courseSelect(event){
             document.getElementById("message").innerHTML = short_name + " has been selected";
         }
     };
-    // xmlhttp.open("GET", "getCourse.php?short_name=" + short_name, false);
-    var json_url = "JSON/202020/" + short_name + ".json";
+    // xmlhttp.open("GET", "getCourse.php?short_name=" + short_name, false); // Get the data from database by the server php file
+    var json_url = "JSON/202020/" + short_name + ".json"; //Get the course information from the locat 
     xmlhttp.open("GET", json_url, false);
     xmlhttp.send();
 }

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>VSB_Plus api testing page</title>
+        <!-- <script type="text/javascript" src="../js/apiTest.js"></script> -->
+        <style>
+            div{
+                border: 1px solid black;
+                text-align: left;
+                padding: 20px;
+            }
+            div img{
+                vertical-align: middle;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>VSB_Plus php api testing page</h1>
+        <div>
+            <h3>Get a single course information</h3>
+            <form id="course_form" onclick="return false">
+                <label for="short_name">Course short name: </label>
+                <input type="text" name="short_name" id="short_name">
+                <input type="submit" value="Get Course" id="get_course"> 
+                <input type="submit" value="Get Section" id="get_sec">
+            </form>
+            <div id="course_result"></div>
+        </div>
+    </body>
+</html>
+
+
+
+<script type="text/javascript" src="//code.jquery.com/jquery-latest.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $('#get_course').bind('click', getCourse);
+        $('#get_sec').bind('click', getSec);
+    });
+    function getCourse(){
+        var short_name = $('#course_form').serializeArray();
+        $.post('../Model/course.php', short_name, function(data, status){
+            $('#course_result').html(data);
+        });
+    }
+    function getSec(){
+        var short_name = $('#course_form').serializeArray();
+        $.post('../Model/section.php', short_name, function(data, status){
+            $('#course_result').html(data);
+        });
+    }
+</script>
