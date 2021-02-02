@@ -54,13 +54,13 @@
     });
     function getCourse(){
         var short_name = $('#course_form').serializeArray();
-        $.post('Model/course.php', short_name, function(data, status){
+        $.post('../Model/course.php', short_name, function(data, status){
             $('#course_result').html(data);
         });
     }
     function getSec(){
         var short_name = $('#course_form').serializeArray();
-        $.post('Model/section.php', short_name, function(data, status){
+        $.post('../Model/section.php', short_name, function(data, status){
             $('#course_result').html(data);
         });
     }
