@@ -21,7 +21,23 @@
             <form id="course_form" onclick="return false">
                 <label for="short_name">Course short name: </label>
                 <input type="text" name="short_name" id="short_name">
-                <input type="submit" value="Get Course" id="get_course"> 
+                <input type="submit" value="Get Course" id="get_course"> <br>
+                <label for="schedule_type">Schedule Type</label>
+                <select name="schedule_type" id="schedule_type">
+                    <option value="">ALL</option>
+                    <option value="Lecture">Lecture</option>
+                    <option value="Examination">Examination</option>
+                    <option value="Lab">Lab</option>
+                </select>
+                <br>
+                <label for="term">Term</label>
+                <select name="term" id="term">
+                    <option value="">All Terms</option>
+                    <option value="2021 Winter">2021 Winter</option>
+                    <option value="2020 Fall">2020 Fall</option>
+                    <option value="2020 Spring/Summer">2020 Spring/Summer</option>
+                </select>
+                <br>
                 <input type="submit" value="Get Section" id="get_sec">
             </form>
             <div id="course_result"></div>
@@ -38,13 +54,13 @@
     });
     function getCourse(){
         var short_name = $('#course_form').serializeArray();
-        $.post('../Model/course.php', short_name, function(data, status){
+        $.post('Model/course.php', short_name, function(data, status){
             $('#course_result').html(data);
         });
     }
     function getSec(){
         var short_name = $('#course_form').serializeArray();
-        $.post('../Model/section.php', short_name, function(data, status){
+        $.post('Model/section.php', short_name, function(data, status){
             $('#course_result').html(data);
         });
     }
