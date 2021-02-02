@@ -9,7 +9,7 @@ if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
 }
 
 // Include the vsbp_db_config.php file
-require_once "config.php";
+require_once "vsbp_db_config.php";
 
 // Define variables andd initialize with empty values
 $username = $password = "";
