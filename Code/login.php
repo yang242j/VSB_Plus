@@ -134,17 +134,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div class="form-div">
             <h2>User LogIn</h1>
                 <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST">
-                    <div class="<?php echo (!empty($username_err)) ? 'has-error' : ''; ?>">
-                        <label>Student ID:</label><br>
-                        <input type="text" name="username" value="<?php echo $username; ?>"><br><br>
+                    <div class="input_div <?php echo (!empty($username_err)) ? 'has-error' : ''; ?>">
+                        <label>Student ID:</label>
+                        <input type="text" name="username" value="<?php echo $username; ?>">
                         <span class="help-block">
                             <?php echo $username_err; ?>
                         </span>
                     </div>
 
-                    <div class="<?php echo (!empty($password_err)) ? 'has-error' : ''; ?>">
-                        <label>Password:</label><br>
-                        <input type="password" name="password"><br><br>
+                    <div class="input_div <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>">
+                        <label>Password:</label>
+                        <input type="password" name="password">
                         <span class="help-block">
                             <?php echo $password_err; ?>
                         </span>
@@ -156,14 +156,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                     <button id="submit" type="submit">
                         &#10004<p class="show"> Login</p>
-                    </button><br><br>
-
-                    <p>
-                        *Login as
-                        <a id="quickLink" href="courseDB.html">GUEST</a>
-                        will not have full access to this website*
-                    </p>
+                    </button>
                 </form>
+                <p>
+                    *Login as
+                    <a id="quickLink" href="courseDB.html">GUEST</a>
+                    will not have full access to this website*
+                </p>
         </div>
     </section>
 

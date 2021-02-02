@@ -17,11 +17,22 @@ body section.container button {
     font-weight: 500;
 }
 
-/***login***/
 body section.container div.form-div {
     width: 40%;
     float: left;
     margin-left: 10%;
+}
+
+body section.container .form-div div.input_div {
+    margin-bottom: 3%;
+}
+
+body section.container .form-div div.has-error {
+    background-color: yellow;
+}
+
+body section.container .form-div .help-block {
+    color: red;
 }
 
 body section.container div.form-div input {
@@ -30,6 +41,7 @@ body section.container div.form-div input {
     border: none;
 }
 
+/***login***/
 body section.container div.form-div #submit {
     background-color: #5f5f5f;
     color: white;
@@ -63,7 +75,7 @@ body section.container div.form-div #reset:hover~#submit {
 }
 
 /***guest login***/
-body section.container div.form-div #quickLink {
+body section.container #quickLink {
     text-decoration: underline;
     font-weight: bold;
 }
