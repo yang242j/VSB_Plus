@@ -3,11 +3,13 @@
 Connect to server 
 database "vsb_plus" 
 */
-$host = "15.223.123.122";
-$username = 'root';
-$pass = "vsbp";
-$database = "course";
-$conn = mysqli_connect($host, $username, $pass, $database);
+define('DB_SERVER', 'localhost');
+define('DB_USERNAME', 'root');
+define('DB_PASSWORD', 'vsbp');
+define('DB_NAME', 'vsb_plus');
+ 
+/* Attempt to connect to MySQL database */
+$conn = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
  
 // Check connection
 if($conn === FALSE){
@@ -15,8 +17,8 @@ if($conn === FALSE){
 } else {
     $conn_message = "<script>
     console.log( 'Connection: " . $conn . "' );
-    console.log( 'DB_SERVER: " . $host . "');
-    console.log( 'DB_NAME: " . $database . "');
+    console.log( 'DB_SERVER: " . DB_SERVER . "');
+    console.log( 'DB_NAME: " . DB_NAME . "');
     </script>";
     echo $conn_message;
 }
