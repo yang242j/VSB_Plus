@@ -6,7 +6,7 @@ database "vsb_plus"
 define('DB_SERVER', '15.223.123.122');
 define('DB_USERNAME', 'root');
 define('DB_PASSWORD', 'vsbp');
-define('DB_NAME', 'vsb_plus');
+define('DB_NAME', 'course');
  
 /* Attempt to connect to MySQL database */
 $conn = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
