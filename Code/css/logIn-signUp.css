@@ -23,16 +23,16 @@ body section.container div.form-div {
     margin-left: 10%;
 }
 
-body section.container div.form-div .input_div,
-body section.container div.form-div .btn_div {
+body section.container div.form-div div.input_div,
+body section.container div.form-div div.btn_div {
     margin: 2%;
 }
 
-body section.container div.form-div .has-error {
+body section.container div.form-div div.has-error {
     background-color: yellow;
 }
 
-body section.container div.form-div .help-block {
+body section.container div.form-div div.help-block {
     color: red;
 }
 
