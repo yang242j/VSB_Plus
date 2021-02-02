@@ -19,9 +19,9 @@ $username_err = $password_err = "";
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Check if username is empty
-    if(empty(trim($_POST["username"]))) {
+    if (empty(trim($_POST["username"]))) {
         $username_err = "Please enter student_id.";
-    } elseif(!is_numeric(trim($_POST["username"]))) {
+    } elseif (!is_numeric(trim($_POST["username"]))) {
         $username_err = "Student ID must be all numbers.";
     } else {
         $username = trim($_POST["username"]);
@@ -36,7 +36,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Validate credentials (format is correct)
     if (empty($username_err) && empty($password_err)) {
-       
+
         // Prepare a select statement
         $sql = "SELECT student_id, name, password FROM students WHERE student_id = ?";
 
@@ -103,6 +103,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta name="author" content="team_vsbp">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <link rel="shortcut icon" href="#">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/logIn-signUp.css">
 </head>
