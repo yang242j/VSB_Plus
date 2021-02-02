@@ -16,7 +16,6 @@ if($conn === FALSE){
     die("ERROR! Connection FAILED: " . mysqli_connect_error());
 } else {
     $conn_message = "<script>
-    console.log( 'Connection: " . $conn . "' );
     console.log( 'DB_SERVER: " . DB_SERVER . "');
     console.log( 'DB_NAME: " . DB_NAME . "');
     </script>";
