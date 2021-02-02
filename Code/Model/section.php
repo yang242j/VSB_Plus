@@ -33,13 +33,13 @@
             die("Connection failed: " . mysqli_connect_error());
         }
 
-        $count_sql =  "SELECT COUNT(*) FROM section where short_name = '" . $short_name . "'" + $addCond;
+        $count_sql =  "SELECT COUNT(*) FROM section where short_name = '" . $short_name . "'";
         $count_res = mysqli_query($conn, $count_sql);
         $count = mysqli_fetch_array($count_res)[0];
         
         // If there is a course that is required.
         if ($count > 0){
-            $sec_sql = "SELECT * FROM section where short_name = '" . $short_name . "'" + $addCond;
+            $sec_sql = "SELECT * FROM section where short_name = '" . $short_name . "'";
             $sec_result = mysqli_query($conn, $detail_sql);
             $data = array();
             while($row = mysqli_fetch_array($sec_result)){
