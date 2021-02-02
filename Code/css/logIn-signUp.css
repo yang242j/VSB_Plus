@@ -23,11 +23,12 @@ body section.container div.form-div {
     margin-left: 10%;
 }
 
-body section.container .form-div div.input_div {
-    margin-bottom: 3%;
+body section.container .form-div .input_div,
+body section.container .form-div .btn_div {
+    margin: 2%;
 }
 
-body section.container .form-div div.has-error {
+body section.container .form-div .has-error {
     background-color: yellow;
 }
 

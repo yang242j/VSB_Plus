@@ -150,13 +150,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         </span>
                     </div>
 
-                    <button id="reset" type="button" onclick="resetPassword()">
-                        &#10006<p class="hidden"> Forget Password</p>
-                    </button>
+                    <div class="btn_div">
+                        <button id="reset" type="button" onclick="resetPassword()">
+                            &#10006<p class="hidden"> Forget Password</p>
+                        </button>
 
-                    <button id="submit" type="submit">
-                        &#10004<p class="show"> Login</p>
-                    </button>
+                        <button id="submit" type="submit">
+                            &#10004<p class="show"> Login</p>
+                        </button>
+                    </div>
                 </form>
                 <p>
                     *Login as
