@@ -125,8 +125,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <a class="menu-list hidden" href="semesterBuilder.html">Semester Schedule Builder</a>
         <a class="menu-list hidden" href="courseDB.html">Course List Database</a>
         <div class="nav-right">
-            <a class="nav-active" href="login.html">LogIn</a>
-            <a href="signup.html">SignUp</a>
+            <a class="nav-active" href="login.php">LogIn</a>
+            <a href="signup.php">SignUp</a>
         </div>
     </nav>
 
@@ -170,7 +170,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     <footer>
         <script src="js/main.js"></script>
-        <script src="js/logIn.js"></script>
         <p class="copyright">Copyright &copy; Sep. 2020 to
             <script>
                 document.write(new Date().getFullYear())
