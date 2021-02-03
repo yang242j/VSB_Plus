@@ -12,19 +12,19 @@ if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
 require_once "Model/vsbp_db_config.php";
 
 // Define variables andd initialize with empty values
-$username = $password = "";
-$username_err = $password_err = "";
+$studentid = $password = "";
+$studentid_err = $password_err = "";
 
 // Processing form data when form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    // Check if username is empty
-    if (empty(trim($_POST["username"]))) {
-        $username_err = "Please enter student_id.";
-    } elseif (!is_numeric(trim($_POST["username"]))) {
-        $username_err = "Student ID must be all numbers.";
+    // Check if student_id is empty
+    if (empty(trim($_POST["studentid"]))) {
+        $studentid_err = "Please enter student_id.";
+    } elseif (!is_numeric(trim($_POST["studentid"]))) {
+        $studentid_err = "Student ID must be all numbers.";
     } else {
-        $username = trim($_POST["username"]);
+        $studentid = trim($_POST["studentid"]);
     }
 
     // Check if password is empty
@@ -35,27 +35,27 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Validate credentials (format is correct)
-    if (empty($username_err) && empty($password_err)) {
+    if (empty($studentid_err) && empty($password_err)) {
 
         // Prepare a select statement
         $sql = "SELECT student_id, name, password FROM students WHERE student_id = ?";
 
         if ($stmt = mysqli_prepare($conn, $sql)) {
             // Bind variables to the prepared statement as parameters
-            mysqli_stmt_bind_param($stmt, "i", $param_username);
+            mysqli_stmt_bind_param($stmt, "i", $param_studentid);
 
             // Set parameters
-            $param_username = $username;
+            $param_studentid = $studentid;
 
             // Attempt to execute the prepared statement
             if (mysqli_stmt_execute($stmt)) {
                 // Store result
                 mysqli_stmt_store_result($stmt);
 
-                // Check if username exists, if yes then verify password
+                // Check if student_id exists, if yes then verify password
                 if (mysqli_stmt_num_rows($stmt) == 1) {
                     // Bind result variables
-                    mysqli_stmt_bind_result($stmt, $id, $username, $hashed_password);
+                    mysqli_stmt_bind_result($stmt, $studentid, $name, $hashed_password);
                     if (mysqli_stmt_fetch($stmt)) {
                         if (password_verify($password, $hashed_password)) {
                             // Password is correct, so start a new session
@@ -63,8 +63,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                             // Store data in session variables
                             $_SESSION["loggedin"] = true;
-                            $_SESSION["id"] = $id;
-                            $_SESSION["username"] = $username;
+                            $_SESSION["student_id"] = $studentid;
+                            $_SESSION["name"] = $name;
 
                             // Redirect user to welcome page
                             header("location: academicBuilder_main.html");
@@ -74,8 +74,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         }
                     }
                 } else {
-                    // Display an error message if username doesn't exist
-                    $username_err = "No account found with that student_id.";
+                    // Display an error message if studentid doesn't exist
+                    $studentid_err = "No account found with that student_id.";
                 }
             } else {
                 echo "Oops! Something went wrong. Please try again later.";
@@ -134,11 +134,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div class="form-div">
             <h2>User LogIn</h1>
                 <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST">
-                    <div class="input_div <?php echo (!empty($username_err)) ? 'has-error' : ''; ?>">
+                    <div class="input_div <?php echo (!empty($studentid_err)) ? 'has-error' : ''; ?>">
                         <label>Student ID:</label>
-                        <input type="text" name="username" value="<?php echo $username; ?>">
+                        <input type="text" name="studentid" value="<?php echo $studentid . ' (' . $name. ')'; ?>">
                         <span class="help-block">
-                            <?php echo $username_err; ?>
+                            <?php echo $studentid_err; ?>
                         </span>
                     </div>
 
