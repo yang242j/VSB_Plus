@@ -61,6 +61,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         echo 'name' . $name;
                         echo 'pass' . $password;
                         echo 'Hpass' . $hashed_password;
+                        echo password_verify($password, $hashed_password);
                         if (password_verify($password, $hashed_password)) {
                             // Password is correct, so start a new session
                             session_start();
