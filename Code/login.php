@@ -57,11 +57,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     // Bind result variables
                     mysqli_stmt_bind_result($stmt, $studentid, $name, $hashed_password);
                     if (mysqli_stmt_fetch($stmt)) {
-                        echo 'id' . $studentid;
-                        echo 'name' . $name;
-                        echo 'pass' . $password;
-                        echo 'Hpass' . $hashed_password;
-                        echo password_verify($password, $hashed_password);
                         if (password_verify($password, $hashed_password)) {
                             // Password is correct, so start a new session
                             session_start();
@@ -141,7 +136,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST">
                     <div class="input_div <?php echo (!empty($studentid_err)) ? 'has-error' : ''; ?>">
                         <label>Student ID:</label>
-                        <input type="text" name="studentid" value="<?php echo $studentid; ?>">
+                        <input type="text" name="studentid" value="<?php echo "$studentid ($name)"; ?>">
                         <span class="help-block">
                             <?php echo $studentid_err; ?>
                         </span>
