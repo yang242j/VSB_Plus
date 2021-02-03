@@ -136,7 +136,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST">
                     <div class="input_div <?php echo (!empty($studentid_err)) ? 'has-error' : ''; ?>">
                         <label>Student ID:</label>
-                        <input type="text" name="studentid" value="<?php echo $studentid . ' (' . $name. ')'; ?>">
+                        <input type="text" name="studentid" value="<?php echo $studentid, ' (', $name, ')'; ?>">
                         <span class="help-block">
                             <?php echo $studentid_err; ?>
                         </span>
