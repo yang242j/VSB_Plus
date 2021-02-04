@@ -4,7 +4,7 @@ session_start();
 
 // Check if the user is logged in, if not then hide nav-right div
 if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
-  echo "<script src='js/main.js'> menuFunc2('menu-list'); </script>";
+  echo "<script src='js/main.js'> window.addEventListener('load', menuFunc2('nav-right'), false); </script>";
 }
 ?>
 
@@ -33,7 +33,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
   </header>
 
   <nav>
-    <div class="menu-icon" onclick="menuFunc1(this); menuFunc2('nav-right');">
+    <div class="menu-icon" onclick="menuFunc1(this); menuFunc2('menu-list');">
       <div class="bar1"></div>
       <div class="bar2"></div>
       <div class="bar3"></div>
