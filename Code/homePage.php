@@ -5,8 +5,7 @@ session_start();
 // Check if the user is logged in, if not then hide nav-right div
 if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
   echo '1';
-  echo "<script>var elements = document.getElementsByClassName('nav-right')";
-  echo "for (var i = 0; i < elements.length; i++) { elements[i].classList.toggle('hidden'); } </script>";
+  echo "<script>var elements = document.getElementsByClassName('nav-right') for (var i = 0; i < elements.length; i++) { elements[i].classList.toggle('hidden'); } </script>";
 }
 ?>
 
@@ -35,7 +34,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
   </header>
 
   <nav>
-    <div class="menu-icon" onclick="menuFunc1(this); menuFunc2();">
+    <div class="menu-icon" onclick="menuFunc1(this); menuFunc2('menu-list');">
       <div class="bar1"></div>
       <div class="bar2"></div>
       <div class="bar3"></div>
@@ -47,7 +46,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
       <a id="usertext" onclick="addonSwitchFunc()"><?php echo htmlspecialchars($_SESSION["name"]); ?></a>
       <div id="addon-menu">
         <a><?php echo htmlspecialchars($_SESSION["sid"]); ?></a>
-        <a href="logout.php">Logout</a>
+        <a href="Model/logout.php">Logout</a>
       </div>
     </div>
   </nav>

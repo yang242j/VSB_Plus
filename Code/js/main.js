@@ -14,8 +14,8 @@ function menuFunc1(x) {
     x.classList.toggle("change");
 }
 
-function menuFunc2() {
-    var element = document.getElementsByClassName("menu-list");
+function menuFunc2(x) {
+    var element = document.getElementsByClassName(x);
     
     for (var i = 0; i < element.length; i++) {
         element[i].classList.toggle("hidden");
