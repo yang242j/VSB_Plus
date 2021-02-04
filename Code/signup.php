@@ -13,8 +13,8 @@ $sid_err = $name_err = $campus_err = $faculty_err = $program_err = $major_err = 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Validate student ID
-    if (is_null(trim($_POST["sid"]))) {
-        $sid_err = "Please enter student_id.";
+    if (empty(trim($_POST["sid"]))) {
+        $sid_err = "Please enter student_id. NOT 0";
     } elseif (!is_numeric(trim($_POST["sid"]))) {
         $sid_err = "Student ID must be all numbers.";
     } else {
@@ -89,21 +89,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $concentration = trim($_POST["concentration"]);
 
     // Validate credit_hour
-    if (is_null(trim($_POST["credit_hour"]))) {
-        $credit_hour_err = "Please enter your credit hours.";
+    if (empty(trim($_POST["credit_hour"]))) {
+        $credit_hour_err = "Please enter your credit hours. NOT 0";
     } elseif (!is_numeric(trim($_POST["credit_hour"]))) {
         $credit_hour_err = "Credit hour must be a number.";
     } elseif (trim($_POST["credit_hour"]) < 0) {
         $credit_hour_err = "Credit hour must be great than 0.";
-    } elseif (!is_int($_POST["credit_hour"])) {
+    } elseif (!is_integer($_POST["credit_hour"])) {
         $credit_hour_err = "Credit hour must be an integer.";
     } else {
         $credit_hour = trim($_POST["credit_hour"]);
     }
 
     // Validate GPA
-    if (is_null(trim($_POST["gpa"]))) {
-        $gpa_err = "Please enter your GPA.";
+    if (empty(trim($_POST["gpa"]))) {
+        $gpa_err = "Please enter your GPA. NOT 0";
     } elseif (!is_numeric(trim($_POST["gpa"]))) {
         $gpa_err = "GPA must be a number.";
     } elseif (trim($_POST["gpa"]) < 0) {
