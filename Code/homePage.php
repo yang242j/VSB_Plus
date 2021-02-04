@@ -150,7 +150,9 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
   </section>
 
   <footer>
-    <script src="js/main.js"></script>
+    <script src="js/main.js">
+      menuFunc2('nav-right');
+    </script>
     <p class="copyright">Copyright &copy; Sep. 2020 to
       <script>
         document.write(new Date().getFullYear())
