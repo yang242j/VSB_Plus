@@ -136,7 +136,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         echo 'A';
         // Prepare an insert statement
-        $sql = "INSERT INTO students (student_id, name, campus, faculty, program, major(s), minor(s), concentration(s), totalCredit, GPA, password) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        $sql = "INSERT INTO students (student_id, name, campus, faculty, program, major, minor, concentration, totalCredit, GPA, password) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
         if ($stmt = mysqli_prepare($conn, $sql)) {
             echo 'B';
@@ -172,7 +172,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             } else {
                 echo "Something went wrong. Please try again later.";
             }
-            
+
             // Close statement
             mysqli_stmt_close($stmt);
         }
