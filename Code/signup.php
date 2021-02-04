@@ -134,12 +134,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Check input errors before inserting in database
     if (empty($sid_err) && empty($name_err) && empty($campus_err) && empty($faculty_err) && empty($program_err) && empty($major_err) && empty($minor_err) && empty($concentration_err) && empty($credit_hour_err) && empty($gpa_err) && empty($password_err) && empty($confirm_password_err)) {
 
-        echo 'A';
         // Prepare an insert statement
         $sql = "INSERT INTO students (student_id, name, campus, faculty, program, major, minor, concentration, totalCredit, GPA, password) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
         if ($stmt = mysqli_prepare($conn, $sql)) {
-            echo 'B';
+
             // Bind variables to the prepared statement sql as parameters
             mysqli_stmt_bind_param($stmt, "isssssssiis", $param_sid, $param_name, $param_campus, $param_faculty, $param_program, $param_major, $param_minor, $param_concentration, $param_credit_hour, $param_gpa, $param_password);
 
@@ -159,7 +158,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             // Attempt to execute the prepared statement (add new student)
             if (mysqli_stmt_execute($stmt)) {
-                echo '1';
 
                 $sql_table = "CREATE TABLE '$sid' (courseIndex INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY, term VARCHAR(255) NOT NULL, course_ID VARCHAR(255) NOT NULL, section_num VARCHAR(255) NOT NULL, course_title VARCHAR(255) NOT NULL, final_grade VARCHAR(255) NOT NULL, credit_hour INT(11) NOT NULL DEFAULT 3, credit_earned INT(11) NOT NULL, class_size INT(11) NOT NULL, class_average INT(11) NOT NULL)";
                   
