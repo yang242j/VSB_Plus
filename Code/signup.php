@@ -153,7 +153,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $param_concentration = $concentration;
             $param_credit_hour = $credit_hour;
             $param_gpa = $gpa;
-            $param_username = $username;
             $param_password = password_hash($password, PASSWORD_DEFAULT); // Creates a password hash
 
             // Attempt to execute the prepared statement (add new student)
