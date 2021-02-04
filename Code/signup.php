@@ -134,6 +134,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Check input errors before inserting in database
     if (empty($sid_err) && empty($name_err) && empty($campus_err) && empty($faculty_err) && empty($program_err) && empty($major_err) && empty($minor_err) && empty($concentration_err) && empty($credit_hour_err) && empty($gpa_err) && empty($password_err) && empty($confirm_password_err)) {
 
+        echo 'A';
         // Prepare an insert statement
         $sql = "INSERT INTO students (student_id, name, campus, faculty, program, major(s), minor(s), concentration(s), totalCredit, GPA, password) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
@@ -151,6 +152,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             class_average INT(11) NOT NULL)";
 
         if ($stmt = mysqli_prepare($conn, $sql) && $stmt_table = mysqli_prepare($conn, $sql_table)) {
+            echo 'B';
             // Bind variables to the prepared statement sql as parameters
             mysqli_stmt_bind_param($stmt, "isssssssiis", $param_sid, $param_name, $param_campus, $param_faculty, $param_program, $param_major, $param_minor, $param_concentration, $param_credit_hour, $param_gpa, $param_password);
 
