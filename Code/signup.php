@@ -55,28 +55,28 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Validate campus
-    if (isset(trim($_POST["campus"]))) {
+    if (empty(trim($_POST["campus"]))) {
         $campus_err = "Please enter a campus name.";
     } else {
         $campus = trim($_POST["campus"]);
     }
 
     // Validate faculty
-    if (isset(trim($_POST["faculty"]))) {
+    if (empty(trim($_POST["faculty"]))) {
         $faculty_err = "Please enter a faculty name.";
     } else {
         $faculty = trim($_POST["faculty"]);
     }
 
     // Validate program
-    if (isset(trim($_POST["program"]))) {
+    if (empty(trim($_POST["program"]))) {
         $program_err = "Please enter a program name.";
     } else {
         $program = trim($_POST["program"]);
     }
 
     // Validate major
-    if (isset(trim($_POST["major"]))) {
+    if (empty(trim($_POST["major"]))) {
         $major_err = "Please enter a major name.";
     } else {
         $major = trim($_POST["major"]);
