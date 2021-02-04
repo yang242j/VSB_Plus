@@ -95,7 +95,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $credit_hour_err = "Credit hour must be a number.";
     } elseif (trim($_POST["credit_hour"]) < 0) {
         $credit_hour_err = "Credit hour must be great than 0.";
-    } elseif (is_integer($_POST["credit_hour"])) {
+    } elseif (!is_integer((int)$_POST["credit_hour"])) {
         $credit_hour_err = "Credit hour must be an integer.";
     } else {
         $credit_hour = trim($_POST["credit_hour"]);
