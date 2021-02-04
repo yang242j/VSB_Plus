@@ -173,17 +173,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             // Attempt to execute the prepared statement (add new student)
             if (mysqli_stmt_execute($stmt)) {
+                echo '1';
                 // Attempt to execute the prepared statement (create new table)
                 if (mysqli_stmt_execute($stmt_table)) {
+                    echo '2';
                     // Display the alert box  
                     $message = "Welcome $name! <br> Your grade table has been created under your student_id ($sid)";
                 } else {
+                    echo '3';
                     $message = "Table creation FAILED.";
                 }
+                echo '4';
                 echo "<script>alert('$message');</script>";
                 // Redirect to login page
                 header("location: login.php");
             } else {
+                echo '5';
                 echo "Something went wrong. Please try again later.";
             }
 
