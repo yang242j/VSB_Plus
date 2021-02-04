@@ -1,0 +1,65 @@
+body section.container {
+    background-color: #f1f1f1;
+    padding-bottom: 10px;
+}
+
+body section.container h2{
+    text-align: center;
+}
+
+body section.container div.form-div {
+    width: 40%;
+    float: left;
+    margin-left: 10%;
+}
+
+body section.container div.form-div div.form-group {
+    margin: 2%;
+    padding-left: 3%;
+}
+
+body section.container div.form-div div.has-error {
+    background-color: #cccccc;
+}
+
+body section.container div.form-div span.help-block {
+    color: red;
+}
+
+body section.container div.form-div input.form-input {
+    width: 96%;
+    padding: 2%;
+    border: none;
+}
+
+/***all input buttons***/
+body section.container div.form-div input.btn {
+    display: inline-block;
+    padding: 6px 12px;
+    font-size: 20px;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    cursor: pointer;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/***primary input button***/
+body section.container div.form-div input.btn-primary {
+    background-color: #5f5f5f;
+    color: white;
+    border-color: #2e6da4;
+}
+
+/***guest login***/
+body section.container div.form-div #quickLink {
+    text-decoration: underline;
+    font-weight: bold;
+}
