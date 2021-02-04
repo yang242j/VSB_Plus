@@ -2,7 +2,7 @@ body {
     background-repeat: no-repeat;
     background-image: linear-gradient(#B2D9E7, #B2D9E7, white)
 }
-h1 {
+body .welcometag h1 {
     margin-left: 0;
     text-align: left;
 }
