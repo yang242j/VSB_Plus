@@ -162,16 +162,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $sql_table = "CREATE TABLE $new_tablename (courseIndex INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY, term VARCHAR(255) NOT NULL, course_ID VARCHAR(255) NOT NULL, section_num VARCHAR(255) NOT NULL, course_title VARCHAR(255) NOT NULL, final_grade VARCHAR(255) NOT NULL, credit_hour INT(11) NOT NULL DEFAULT 3, credit_earned INT(11) NOT NULL, class_size INT(11) NOT NULL, class_average INT(11) NOT NULL)";
 
                 if ($conn->query($sql_table) === TRUE) {
-                    echo "<script> 
-                        if (confirm('Welcome $name!\nYour table ( $new_tablename ) has been created.' == TRUE)) {
-                            // Redirect to login page
-                            header('location: login.php');
-                        } else { 
-                            // Redirect to login page
-                            header('location: login.php');
-                        }
-                    </script>";
-                    
+                    echo "Welcome $name!\nYour table ( $new_tablename ) has been created.";
+                    // Redirect to login page
+                    header('refresh:5; url=login.php');
                 } else {
                     echo "Error creating table: " . $conn->error;
                 }
