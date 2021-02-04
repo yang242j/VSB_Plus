@@ -2,9 +2,6 @@
 // Initialize the session
 session_start();
 
-$message = "Welcome! <br> Your grade table has been created under your student_id (sid)";
-echo "<script>alert('$message');</script>";
-
 // Check if the user is already logged in, if yes then redirect him to Academic home page
 if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
     header("location: academicBuilder_main.html");
