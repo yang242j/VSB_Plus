@@ -4,7 +4,7 @@ Visual Schedule Builder Plus
 
 - [GitHub IO Page](https://yang242j.github.io/VSB_Plus)
 
-- [Project Website](http://15.223.123.122/vsbp/academicBuilder.html)
+- [Project Website](http://15.223.123.122)
 
 The purpose of this UofR Software Engineering Capstone Project is to enhance the functionality of UofR existing Vistual Schedule Builder and helping future studentes course selection easier.
 

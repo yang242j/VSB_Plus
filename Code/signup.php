@@ -153,7 +153,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $param_concentration = $concentration;
             $param_credit_hour = $credit_hour;
             $param_gpa = $gpa;
-            $param_username = $username;
             $param_password = password_hash($password, PASSWORD_DEFAULT); // Creates a password hash
 
             // Attempt to execute the prepared statement (add new student)
@@ -162,8 +161,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $sql_table = "CREATE TABLE '$sid' (courseIndex INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY, term VARCHAR(255) NOT NULL, course_ID VARCHAR(255) NOT NULL, section_num VARCHAR(255) NOT NULL, course_title VARCHAR(255) NOT NULL, final_grade VARCHAR(255) NOT NULL, credit_hour INT(11) NOT NULL DEFAULT 3, credit_earned INT(11) NOT NULL, class_size INT(11) NOT NULL, class_average INT(11) NOT NULL)";
 
                 if ($conn->query($sql_table) === TRUE) {
-                    // Redirect to login page
-                    header("location: login.php");
+                    echo "<script> 
+                        if (confirm('Thanks' == TRUE)) {
+                            // Redirect to login page
+                            header('location: login.php');
+                        } else { }
+                    </script>";
+                    
+                    
                 } else {
                     echo "Error creating table: " . $conn->error;
                 }
