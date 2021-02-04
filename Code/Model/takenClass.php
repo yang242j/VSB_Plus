@@ -1,0 +1,69 @@
+<?php
+    // get the parameters from URL
+    if (isset($_REQUEST["sid"]) and $_REQUEST["sid"] != ''){
+        $sid = $_REQUEST["sid"];
+    }
+    else{
+        echo "Please enter the Sutdent ID";
+        return;
+    }
+
+    if (isset($_REQUEST["password"]) and $_REQUEST["password"] != ''){
+        $pw = $_REQUEST["password"];
+    }
+    else{
+        echo "Please enter the password";
+        return;
+    }
+
+    $host = "localhost";
+    $username = 'root';
+    $pass = "vsbp";
+    $database = "vsb_plus";
+    $conn = mysqli_connect($host, $username, $pass, $database);
+    if (!$conn){
+        die("Connection failed: " . mysqli_connect_error());
+    }
+    
+    $count_sql =  "SELECT COUNT(*) FROM students where student_id = '" . $sid . "'"; 
+    $count_res = mysqli_query($conn, $count_sql);
+    $count = mysqli_fetch_array($count_res)[0];
+    
+    // If there is a course that is required.
+    if ($count > 0){
+        $detail_sql = "SELECT * FROM students where student_id = '" . $sid . "'"; 
+        $detail_result = mysqli_query($conn, $detail_sql);
+    
+        $row = mysqli_fetch_array($detail_result);
+        if ($row['password'] == $pw){
+            // echo $sid;
+            $takenClass_sql = "SELECT * FROM `" . $sid . "`"; 
+            $result = mysqli_query($conn, $takenClass_sql);
+            $data = array();
+            while($row = mysqli_fetch_array($result)){
+                $oneTaken = array("courseIndex"=>$row['courseIndex'],
+                "term"=>$row['term'],
+                "course_ID"=>$row['course_ID'],
+                "section_num"=>$row['section_num'],
+                "course_title"=>$row['course_title'],
+                "final_grade"=>$row['final_grade'],
+                "credit_hour"=>$row['credit_hour'],
+                "credit_earned"=>$row['credit_earned'],
+                "class_size"=>$row['class_size'],
+                "class_average"=>$row['class_average']);
+                array_push($data, $oneTaken);
+            }
+            $json_data = json_encode($data);
+            echo $json_data;
+        }
+        else{
+            echo "Wrong password!";
+        }
+    }
+    else{
+        echo "Not correct student ID!";
+    }    
+    
+    mysqli_close($conn);
+
+?>
