@@ -4,7 +4,7 @@ session_start();
 
 // Check if the user is logged in, if not then hide nav-right div
 if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
-  echo "<script src='js/main.js'> window.addEventListener('load', menuFunc2('nav-right'), false); </script>";
+  echo "<script src='js/main.js'> window.onload = menuFunc2('nav-right'); </script>";
 }
 ?>
 
