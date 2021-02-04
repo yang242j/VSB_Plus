@@ -308,7 +308,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                     <div class="form-group <?php echo (!empty($credit_hour_err)) ? 'has-error' : ''; ?>">
                         <label>Total Credit Hours:</label>
-                        <input class="form-input" type="text" name="credit_hour" placeholder="0" value="<?php echo $credit_hour; ?>">
+                        <input class="form-input" type="text" name="credit_hour" placeholder="" value="<?php echo $credit_hour; ?>">
                         <span style="margin-left:-20px;">h</span>
                         <span class="help-block">
                             <?php echo $credit_hour_err; ?>
