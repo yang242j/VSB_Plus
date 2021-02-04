@@ -42,6 +42,28 @@
             </form>
             <div id="course_result"></div>
         </div>
+
+        <div>
+            <h3>Sign in </h3>
+            <form id="Sign_in_form" onclick="return false">
+                <label for="sid">Student ID</label>
+                <input type="text" name="sid" id="sid"> <br>
+                <label for="password"> password</label>
+                <input type="text" name="password" id="password"> <br>
+                <input type="submit" value="Sign in" id="sign_in">
+                <input type="submit" value="Get course history" id="course_history">
+            </form>
+            <div id="sign_in_result"></div>
+        </div>
+
+        <div>
+            <h3>Sign up</h3>
+            <form id="sign_up_form" onclick="return false">
+                <label for=""></label>
+            </form>
+            <div id="sign_up_result"></div>
+        </div>
+
     </body>
 </html>
 
@@ -51,17 +73,44 @@
     $(document).ready(function(){
         $('#get_course').bind('click', getCourse);
         $('#get_sec').bind('click', getSec);
+        $('#sign_in').bind('click', sign_in);
+        $('#course_history').bind('click', getDetail);
+        // $('#sign_up_form').bind('click', sign_up); 
     });
+
     function getCourse(){
         var short_name = $('#course_form').serializeArray();
         $.post('../Model/course.php', short_name, function(data, status){
             $('#course_result').html(data);
         });
     }
+
     function getSec(){
         var short_name = $('#course_form').serializeArray();
         $.post('../Model/section.php', short_name, function(data, status){
             $('#course_result').html(data);
         });
     }
+
+    function sign_in(){
+        var account = $('#Sign_in_form').serializeArray();
+        $.post('../Model/sign_in.php', account, function(data, status){
+            $('#sign_in_result').html(data);
+        });
+    }
+
+    function getDetail(){
+        var account = $('#Sign_in_form').serializeArray();
+        $.post('../Model/takenClass.php', account, function(data, status){
+            $('#sign_in_result').html(data);
+        });
+    }
+
+    function sign_up(){
+        var account = $('#sign_up_form').serializeArray();
+        $.post('../Model/sign_in.php', account, function(data, status){
+            $('#sign_up_result').html(data);
+        });
+    }
+
 </script>
