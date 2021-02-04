@@ -7,24 +7,13 @@ body section.container h2{
     text-align: center;
 }
 
-body section.container button {
-    display: block;
-    width: 100%;
-    font-size: 20px;
-    border: 3px solid #5f5f5f;
-    cursor: pointer;
-    text-align: center;
-    font-weight: 500;
-}
-
 body section.container div.form-div {
     width: 40%;
     float: left;
     margin-left: 10%;
 }
 
-body section.container div.form-div div.input_div,
-body section.container div.form-div div.btn_div {
+body section.container div.form-div div.form-group {
     margin: 2%;
     padding-left: 3%;
 }
@@ -37,47 +26,40 @@ body section.container div.form-div span.help-block {
     color: red;
 }
 
-body section.container div.form-div input {
+body section.container div.form-div input.form-input {
     width: 96%;
     padding: 2%;
     border: none;
 }
 
-/***login***/
-body section.container div.form-div #submit {
+/***all input buttons***/
+body section.container div.form-div input.btn {
+    display: inline-block;
+    padding: 6px 12px;
+    font-size: 20px;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    cursor: pointer;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/***primary input button***/
+body section.container div.form-div input.btn-primary {
     background-color: #5f5f5f;
     color: white;
-    max-width: 85%;
-    float: left;
-    /*transition: max-width 400ms ease-in-out 400ms;*/
-}
-
-/***reset password***/
-body section.container div.form-div #reset {
-    background-color: white;
-    max-width: 15%;
-    float: right;
-    /*transition: max-width 400ms ease-in-out 400ms;*/
-}
-
-body section.container div.form-div #reset:hover {
-    max-width: 85%;
-}
-
-body section.container div.form-div #reset:hover p.hidden {
-    display: initial;
-}
-
-body section.container div.form-div #reset:hover~#submit p.show {
-    display: none;
-}
-
-body section.container div.form-div #reset:hover~#submit {
-    max-width: 15%;
+    border-color: #2e6da4;
 }
 
 /***guest login***/
-body section.container #quickLink {
+body section.container div.form-div #quickLink {
     text-decoration: underline;
     font-weight: bold;
 }
