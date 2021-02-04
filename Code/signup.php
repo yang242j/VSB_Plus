@@ -12,10 +12,10 @@ $sid_err = $name_err = $campus_err = $faculty_err = $program_err = $major_err = 
 // Processing form data when form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    // Validate username
+    // Validate student ID
     if (empty(trim($_POST["sid"]))) {
         $sid_err = "Please enter student_id.";
-    } elseif (!is_numeric(trim($_POST["studentid"]))) {
+    } elseif (!is_numeric(trim($_POST["sid"]))) {
         $sid_err = "Student ID must be all numbers.";
     } else {
         // Prepare a select statement
@@ -23,10 +23,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         if ($stmt = mysqli_prepare($conn, $sql)) {
             // Bind variables to the prepared statement as parameters
-            mysqli_stmt_bind_param($stmt, "i", $param_studentid);
+            mysqli_stmt_bind_param($stmt, "i", $param_sid);
 
             // Set parameters
-            $param_studentid = trim($_POST["sid"]);
+            $param_sid = trim($_POST["sid"]);
 
             // Attempt to execute the prepared statement
             if (mysqli_stmt_execute($stmt)) {
@@ -34,9 +34,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 mysqli_stmt_store_result($stmt);
 
                 if (mysqli_stmt_num_rows($stmt) == 1) {
-                    $username_err = "This student_id has already taken.";
+                    $sid_err = "This student_id has already taken.";
                 } else {
-                    $username = trim($_POST["sid"]);
+                    $sid = trim($_POST["sid"]);
                 }
             } else {
                 echo "Oops! Something went wrong. Please try again later.";
