@@ -152,7 +152,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         if ($stmt = mysqli_prepare($conn, $sql) && $stmt_table = mysqli_prepare($conn, $sql_table)) {
             // Bind variables to the prepared statement sql as parameters
-            mysqli_stmt_bind_param($stmt, "isssssssiis", $param_sid, $param_name,$param_campus, $param_faculty, $param_program, $param_major,$param_minor, $param_concentration, $param_credit_hour, $param_gpa,$param_password);
+            mysqli_stmt_bind_param($stmt, "isssssssiis", $param_sid, $param_name, $param_campus, $param_faculty, $param_program, $param_major, $param_minor, $param_concentration, $param_credit_hour, $param_gpa, $param_password);
 
             // Bind variables to the prepared statement sql_table as parameters
             mysqli_stmt_bind_param($stmt_table, "i", $param_sid);
@@ -240,7 +240,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <section class="container">
         <div class="form-div">
             <h2>User SignUp</h1>
-                <form>
+                <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
                     <div class="form-group <?php echo (!empty($sid_err)) ? 'has-error' : ''; ?>">
                         <label>Student ID:</label>
                         <input class="form-input" type="text" name="sid" placeholder="200312345" value="<?php echo $sid; ?>">
