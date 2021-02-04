@@ -158,7 +158,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Attempt to execute the prepared statement (add new student)
             if (mysqli_stmt_execute($stmt)) {
 
-                $sql_table = "CREATE TABLE '$sid' (courseIndex INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY, term VARCHAR(255) NOT NULL, course_ID VARCHAR(255) NOT NULL, section_num VARCHAR(255) NOT NULL, course_title VARCHAR(255) NOT NULL, final_grade VARCHAR(255) NOT NULL, credit_hour INT(11) NOT NULL DEFAULT 3, credit_earned INT(11) NOT NULL, class_size INT(11) NOT NULL, class_average INT(11) NOT NULL)";
+                $sql_table = "CREATE TABLE $sid (courseIndex INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY, term VARCHAR(255) NOT NULL, course_ID VARCHAR(255) NOT NULL, section_num VARCHAR(255) NOT NULL, course_title VARCHAR(255) NOT NULL, final_grade VARCHAR(255) NOT NULL, credit_hour INT(11) NOT NULL DEFAULT 3, credit_earned INT(11) NOT NULL, class_size INT(11) NOT NULL, class_average INT(11) NOT NULL)";
 
                 if ($conn->query($sql_table) === TRUE) {
                     echo "<script> 
