@@ -6,7 +6,6 @@ session_start();
 if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
   echo "<script>var elements = document.getElementsByClassName('nav-right')";
   echo "for (var i = 0; i < elements.length; i++) { elements[i].classList.toggle('hidden'); } </script>";
-  exit;
 }
 ?>
 
@@ -44,10 +43,10 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     <a class="menu-list" href="semesterBuilder.php">Semester Schedule Builder</a>
     <a class="menu-list" href="courseDB.html">Course List Database</a>
     <div class="nav-right">
-      <a id="usertext" onclick="addonSwitchFunc()">php_userName</a>
+      <a id="usertext" onclick="addonSwitchFunc()"><?php echo htmlspecialchars($_SESSION["name"]); ?></a>
       <div id="addon-menu">
-        <a>php_SID</a>
-        <a href="#Logout">Logout</a>
+        <a><?php echo htmlspecialchars($_SESSION["sid"]); ?></a>
+        <a href="logout.php">Logout</a>
       </div>
     </div>
   </nav>
