@@ -14,13 +14,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Validate username
     if (empty(trim($_POST["sid"]))) {
-        echo '1';
-        $username_err = "Please enter student_id.";
+        $sid_err = "Please enter student_id.";
     } elseif (!is_numeric(trim($_POST["studentid"]))) {
-        echo '2';
-        $studentid_err = "Student ID must be all numbers.";
+        $sid_err = "Student ID must be all numbers.";
     } else {
-        echo '3';
         // Prepare a select statement
         $sql = "SELECT student_id FROM students WHERE student_id = ?";
 
