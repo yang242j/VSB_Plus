@@ -214,7 +214,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <div class="bar3"></div>
         </div>
         <a class="menu-list hidden" href="academicBuilder.html" disabled>Academic Schedule Builder</a>
-        <a class="menu-list hidden" href="semesterBuilder.html">Semester Schedule Builder</a>
+        <a class="menu-list hidden" href="semesterBuilder.php">Semester Schedule Builder</a>
         <a class="menu-list hidden" href="courseDB.html">Course List Database</a>
         <div class="nav-right">
             <a href="login.php">LogIn</a>
@@ -345,7 +345,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 Credit:
             </cite>
         </p>
-        <p class="info-link"><a href="homePage.html">About Us</a></p>
+        <p class="info-link"><a href="homePage.php">About Us</a></p>
     </footer>
 </body>
 

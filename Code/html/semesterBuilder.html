@@ -1,14 +1,3 @@
-<?php
-// Initialize the session
-session_start();
-
-// Check if the user is logged in, if not then redirect him to login page
-if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
-    header("location: login.php");
-    exit;
-}
-?>
-
 <!doctype html>
 
 <html lang="en">
@@ -43,12 +32,12 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             <div class="bar3"></div>
         </div>
         <a class="menu-list" href="academicBuilder_main.html">Academic Schedule Builder</a>
-        <a class="menu-list nav-active" href="semesterBuilder.php">Semester Schedule Builder</a>
+        <a class="menu-list nav-active" href="semesterBuilder.html">Semester Schedule Builder</a>
         <a class="menu-list" href="courseDB.html">Course List Database</a>
         <div class="nav-right">
-            <a id="usertext" onclick="addonSwitchFunc()"><?php echo htmlspecialchars($_SESSION["name"]); ?></a>
+            <a id="usertext" onclick="addonSwitchFunc()">php_userName</a>
             <div id="addon-menu">
-                <a><?php echo htmlspecialchars($_SESSION["sid"]); ?></a>
+                <a>php_SID</a>
                 <a href="Model/logout.php">Logout</a>
             </div>
         </div>
@@ -67,7 +56,9 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         <div class="left-section">
             <h3 class="section-title">Course List</h3>
 
-            <div class="dropZone" ondrop="dropL(event)" ondragover="allowDrop(event)" ondragenter="dragEnter(event)" ondragleave="dragLeave(event)"><img src="img/drop-here.png" style="max-height: 100%;max-width: 100%;" draggable="false"></div>
+            <div class="dropZone" ondrop="dropL(event)" ondragover="allowDrop(event)" ondragenter="dragEnter(event)"
+                ondragleave="dragLeave(event)"><img src="img/drop-here.png" style="max-height: 100%;max-width: 100%;"
+                    draggable="false"></div>
             <!--
             <div class="courseTag noDrop" id="ense400" draggable="true" ondragstart="drag(event)">ENSE400</div>
             <div class="courseTag noDrop" id="ense496ac" draggable="true" ondragstart="drag(event)">ENSE496AC</div>
@@ -117,7 +108,8 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                 Courses Completed: <br>
                 <div class="courseTag noDrag" id="ense374" draggable="false">ENSE374</div>
             </div>
-            <div class="bottom-right" ondrop="dropBR(event)" ondragover="allowDrop(event)" ondragenter="dragEnter(event)" ondragleave="dragLeave(event)">
+            <div class="bottom-right" ondrop="dropBR(event)" ondragover="allowDrop(event)"
+                ondragenter="dragEnter(event)" ondragleave="dragLeave(event)">
                 Courses To Take: <br>
                 <div class="courseTag noDrop" id="ense401" draggable="true" ondragstart="drag(event)">ENSE401</div>
                 <div class="courseTag noDrop" id="ense400" draggable="true" ondragstart="drag(event)">ENSE400</div>
@@ -131,9 +123,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         <script src="js/main.js"></script>
         <script src="js/semester.js"></script>
         <p class="copyright">Copyright &copy; Sep. 2020 to
-            <script>
-                document.write(new Date().getFullYear())
-            </script> UofR VSB_Plus Capstone Group All Rights Reserved<br>
+            <script>document.write(new Date().getFullYear())</script> UofR VSB_Plus Capstone Group All Rights Reserved<br>
             <cite>
                 Credit: Calendar source code from fullcalendar.io version 5.5.1<br>
                 Fullcalendar tutorial: Youtube video "JS To-do List #14 FullCalendar - Rendering a Calendar with
@@ -146,7 +136,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             To log out, click the log off button in the user info section at nav-right.<br>
             If user is NOT logged in, every other page will NOT have a user info section at nav-right.<br>
         </p>
-        <p class="info-link"><a href="homePage.php">About Us</a></p>
+        <p class="info-link"><a href="homePage.html">About Us</a></p>
     </footer>
 </body>
 
