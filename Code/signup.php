@@ -163,6 +163,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                 if ($conn->query($sql_table) === TRUE) {
                     echo "Welcome $name!\nYour table ( $new_tablename ) has been created.";
+                    echo "Redirect to LogIn page in 5s.";
                     // Redirect to login page
                     header('refresh:5; url=login.php');
                 } else {
