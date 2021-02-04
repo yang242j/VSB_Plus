@@ -4,6 +4,7 @@ session_start();
 
 // Check if the user is logged in, if not then hide nav-right div
 if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
+  echo '1';
   echo "<script>var elements = document.getElementsByClassName('nav-right')";
   echo "for (var i = 0; i < elements.length; i++) { elements[i].classList.toggle('hidden'); } </script>";
 }
