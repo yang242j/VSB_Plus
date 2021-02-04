@@ -4,7 +4,7 @@ session_start();
 
 // Check if the user is logged in, if not then hide nav-right div
 if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
-  echo "<script> menuFunc2('nav-right'); </script>";
+  echo "<script src='js/main.js'> menuFunc2('nav-right'); </script>";
 }
 ?>
 
@@ -150,9 +150,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
   </section>
 
   <footer>
-    <script src="js/main.js">
-      menuFunc2('nav-right');
-    </script>
+    <script src="js/main.js"></script>
     <p class="copyright">Copyright &copy; Sep. 2020 to
       <script>
         document.write(new Date().getFullYear())
