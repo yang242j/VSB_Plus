@@ -138,26 +138,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Prepare an insert statement
         $sql = "INSERT INTO students (student_id, name, campus, faculty, program, major(s), minor(s), concentration(s), totalCredit, GPA, password) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
-        // Prepare a create table statement
-        $sql_table = "CREATE TABLE ? (
-            courseIndex INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
-            term VARCHAR(255) NOT NULL,
-            course_ID VARCHAR(255) NOT NULL,
-            section_num VARCHAR(255) NOT NULL,
-            course_title VARCHAR(255) NOT NULL,
-            final_grade VARCHAR(255) NOT NULL,
-            credit_hour INT(11) NOT NULL DEFAULT 3,
-            credit_earned INT(11) NOT NULL,
-            class_size INT(11) NOT NULL,
-            class_average INT(11) NOT NULL)";
-
-        if ($stmt = mysqli_prepare($conn, $sql) && $stmt_table = mysqli_prepare($conn, $sql_table)) {
+        if ($stmt = mysqli_prepare($conn, $sql)) {
             echo 'B';
             // Bind variables to the prepared statement sql as parameters
             mysqli_stmt_bind_param($stmt, "isssssssiis", $param_sid, $param_name, $param_campus, $param_faculty, $param_program, $param_major, $param_minor, $param_concentration, $param_credit_hour, $param_gpa, $param_password);
-
-            // Bind variables to the prepared statement sql_table as parameters
-            mysqli_stmt_bind_param($stmt_table, "i", $param_sid);
 
             // Set parameters
             $param_sid = $sid;
@@ -176,27 +160,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Attempt to execute the prepared statement (add new student)
             if (mysqli_stmt_execute($stmt)) {
                 echo '1';
-                // Attempt to execute the prepared statement (create new table)
-                if (mysqli_stmt_execute($stmt_table)) {
-                    echo '2';
-                    // Display the alert box  
-                    $message = "Welcome $name! <br> Your grade table has been created under your student_id ($sid)";
-                } else {
-                    echo '3';
-                    $message = "Table creation FAILED.";
-                }
-                echo '4';
+
+                $sql_table = "CREATE TABLE '$sid' (courseIndex INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY, term VARCHAR(255) NOT NULL, course_ID VARCHAR(255) NOT NULL, section_num VARCHAR(255) NOT NULL, course_title VARCHAR(255) NOT NULL, final_grade VARCHAR(255) NOT NULL, credit_hour INT(11) NOT NULL DEFAULT 3, credit_earned INT(11) NOT NULL, class_size INT(11) NOT NULL, class_average INT(11) NOT NULL)";
+                  
+                // Display the alert box  
+                $message = "Welcome $name! <br> Your grade table has been created under your student_id ($sid)";
                 echo "<script>alert('$message');</script>";
+                
                 // Redirect to login page
                 header("location: login.php");
             } else {
-                echo '5';
                 echo "Something went wrong. Please try again later.";
             }
-
+            
             // Close statement
             mysqli_stmt_close($stmt);
-            mysqli_stmt_close($stmt_table);
         }
     }
 
