@@ -95,7 +95,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $credit_hour_err = "Credit hour must be a number.";
     } elseif (trim($_POST["credit_hour"]) < 0) {
         $credit_hour_err = "Credit hour must be great than 0.";
-    } elseif (!is_integer($_POST["credit_hour"])) {
+    } elseif (is_integer($_POST["credit_hour"])) {
         $credit_hour_err = "Credit hour must be an integer.";
     } else {
         $credit_hour = trim($_POST["credit_hour"]);
@@ -115,18 +115,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Validate password
-    if (is_null(trim($_POST["password"]))) {
+    if (empty(trim($_POST["password"]))) {
         $password_err = "Please enter a password.";
     } else {
         $password = trim($_POST["password"]);
     }
 
     // Validate confirm password
-    if (is_null(trim($_POST["confirm_password"]))) {
+    if (empty(trim($_POST["confirm_password"]))) {
         $confirm_password_err = "Please confirm password.";
     } else {
         $confirm_password = trim($_POST["confirm_password"]);
-        if (is_null($password_err) && ($password != $confirm_password)) {
+        if (empty($password_err) && ($password != $confirm_password)) {
             $confirm_password_err = "Password did not match.";
         }
     }
