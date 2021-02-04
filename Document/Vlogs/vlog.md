@@ -11,3 +11,6 @@
 
 ## [vlog#3](https://www.youtube.com/watch?v=7E3dxXwa2zc)
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/7E3dxXwa2zc/0.jpg)](https://www.youtube.com/watch?v=7E3dxXwa2zc)
+
+## [vlog#4](https://www.youtu.com/watch?v=0w5wRAfXe9c)
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/0w5wRAfXe9c/0.jpg)](https://www.youtube.com/watch?v=0w5wRAfXe9c)
