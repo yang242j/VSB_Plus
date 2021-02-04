@@ -13,7 +13,7 @@ $sid_err = $name_err = $campus_err = $faculty_err = $program_err = $major_err = 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Validate student ID
-    if (empty(trim($_POST["sid"]))) {
+    if (is_null(trim($_POST["sid"]))) {
         $sid_err = "Please enter student_id.";
     } elseif (!is_numeric(trim($_POST["sid"]))) {
         $sid_err = "Student ID must be all numbers.";
@@ -55,28 +55,28 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Validate campus
-    if (empty(trim($_POST["campus"]))) {
+    if (isset(trim($_POST["campus"]))) {
         $campus_err = "Please enter a campus name.";
     } else {
         $campus = trim($_POST["campus"]);
     }
 
     // Validate faculty
-    if (empty(trim($_POST["faculty"]))) {
+    if (isset(trim($_POST["faculty"]))) {
         $faculty_err = "Please enter a faculty name.";
     } else {
         $faculty = trim($_POST["faculty"]);
     }
 
     // Validate program
-    if (empty(trim($_POST["program"]))) {
+    if (isset(trim($_POST["program"]))) {
         $program_err = "Please enter a program name.";
     } else {
         $program = trim($_POST["program"]);
     }
 
     // Validate major
-    if (empty(trim($_POST["major"]))) {
+    if (isset(trim($_POST["major"]))) {
         $major_err = "Please enter a major name.";
     } else {
         $major = trim($_POST["major"]);
@@ -89,7 +89,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $concentration = trim($_POST["concentration"]);
 
     // Validate credit_hour
-    if (empty(trim($_POST["credit_hour"]))) {
+    if (is_null(trim($_POST["credit_hour"]))) {
         $credit_hour_err = "Please enter your credit hours.";
     } elseif (!is_numeric(trim($_POST["credit_hour"]))) {
         $credit_hour_err = "Credit hour must be a number.";
@@ -102,7 +102,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Validate GPA
-    if (empty(trim($_POST["gpa"]))) {
+    if (is_null(trim($_POST["gpa"]))) {
         $gpa_err = "Please enter your GPA.";
     } elseif (!is_numeric(trim($_POST["gpa"]))) {
         $gpa_err = "GPA must be a number.";
@@ -115,18 +115,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Validate password
-    if (empty(trim($_POST["password"]))) {
+    if (is_null(trim($_POST["password"]))) {
         $password_err = "Please enter a password.";
     } else {
         $password = trim($_POST["password"]);
     }
 
     // Validate confirm password
-    if (empty(trim($_POST["confirm_password"]))) {
+    if (is_null(trim($_POST["confirm_password"]))) {
         $confirm_password_err = "Please confirm password.";
     } else {
         $confirm_password = trim($_POST["confirm_password"]);
-        if (empty($password_err) && ($password != $confirm_password)) {
+        if (is_null($password_err) && ($password != $confirm_password)) {
             $confirm_password_err = "Password did not match.";
         }
     }
