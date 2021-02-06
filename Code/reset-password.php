@@ -77,16 +77,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         if ($stmt = mysqli_prepare($conn, $sql)) {
             // Bind variables to the prepared statement as parameters
-            mysqli_stmt_bind_param($stmt, "si", $param_password, $param_studentid);
+            mysqli_stmt_bind_param($stmt, "si", $param_password, $param_sid);
 
             // Set parameters
-            $param_studentid = $studentid;
+            $param_sid = $sid;
             $param_password = password_hash($new_password, PASSWORD_DEFAULT);
 
             // Attempt to execute the prepared statement
             if(mysqli_stmt_execute($stmt)){
                 // Password updated successfully. Redirect to login page
-                echo "$name:\nYour password has been successfully changed.";
+                echo "SID -> $sid\nPassword has been successfully changed.";
                 echo "Redirect to LogIn page in 5s.";
                 header('refresh:5; url=login.php');
             } else{
@@ -136,7 +136,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <a class="menu-list hidden" href="semesterBuilder.php">Semester Schedule Builder</a>
         <a class="menu-list hidden" href="courseDB.html">Course List Database</a>
         <div class="nav-right">
-            <a class="nav-active" href="login.php">LogIn</a>
+            <a href="login.php">LogIn</a>
             <a href="signup.php">SignUp</a>
         </div>
     </nav>
