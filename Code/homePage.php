@@ -19,18 +19,25 @@ session_start(); // Initialize the session
   <link rel="stylesheet" href="css/homePage.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $(".nav-right-2").hide();
+    });
+  </script>
 </head>
 
 <body>
 
   <?php
-    // Check if the user is logged in, if not then hide nav-right div
-    if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
+  // Check if the user is logged in, if not then hide nav-right div
+  if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
   ?>
-    <script> 
-    $(document).ready( function(){ 
-      $(".nav-right").hide(); 
-    }); 
+    <script>
+      $(document).ready(function() {
+        $(".nav-right").hide();
+        $(".nav-right-2").show();
+        $(".session-required").hide();
+      });
     </script>
   <?php } ?>
 
@@ -45,15 +52,19 @@ session_start(); // Initialize the session
       <div class="bar2"></div>
       <div class="bar3"></div>
     </div>
-    <a class="menu-list" href="academicBuilder.html">Academic Schedule Builder</a>
-    <a class="menu-list" href="semesterBuilder.php">Semester Schedule Builder</a>
-    <a class="menu-list" href="courseDB.html">Course List Database</a>
+    <a class="session-required menu-list" href="academicBuilder.html">Academic Schedule Builder</a>
+    <a class="session-required menu-list" href="semesterBuilder.php">Semester Schedule Builder</a>
+    <a class="menu-list" href="courseDB.php">Course List Database</a>
     <div class="nav-right">
       <a id="usertext" onclick="addonSwitchFunc()"><?php echo htmlspecialchars($_SESSION["name"]); ?></a>
       <div id="addon-menu">
         <a><?php echo htmlspecialchars($_SESSION["sid"]); ?></a>
         <a href="Model/logout.php">Logout</a>
       </div>
+    </div>
+    <div class="nav-right-2">
+      <a href="login.php">LogIn</a>
+      <a href="signup.php">SignUp</a>
     </div>
   </nav>
 
