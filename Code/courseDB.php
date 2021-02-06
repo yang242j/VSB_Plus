@@ -50,9 +50,9 @@ session_start(); // Initialize the session
         <a class="session-required menu-list" href="semesterBuilder.php">Semester Schedule Builder</a>
         <a class="menu-list nav-active" href="courseDB.php">Course List Database</a>
         <div class="nav-right">
-            <a id="usertext" onclick="addonSwitchFunc()">php_userName</a>
+            <a id="usertext" onclick="addonSwitchFunc()"><?php echo htmlspecialchars($_SESSION["name"]); ?></a>
             <div id="addon-menu">
-                <a>php_SID</a>
+                <a><?php echo htmlspecialchars($_SESSION["sid"]); ?></a>
                 <a href="Model/logout.php">Logout</a>
             </div>
         </div>
