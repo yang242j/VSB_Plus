@@ -19,6 +19,11 @@ session_start(); // Initialize the session
     <link rel="stylesheet" href="css/main.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(".nav-right-2").hide();
+        });
+    </script>
 </head>
 
 <body>
@@ -30,6 +35,7 @@ session_start(); // Initialize the session
         <script>
             $(document).ready(function() {
                 $(".nav-right").hide();
+                $(".nav-right-2").show();
                 $(".session-required").hide();
             });
         </script>
@@ -55,6 +61,10 @@ session_start(); // Initialize the session
                 <a><?php echo htmlspecialchars($_SESSION["sid"]); ?></a>
                 <a href="Model/logout.php">Logout</a>
             </div>
+        </div>
+        <div class="nav-right-2">
+            <a href="login.php">LogIn</a>
+            <a href="signup.php">SignUp</a>
         </div>
     </nav>
 

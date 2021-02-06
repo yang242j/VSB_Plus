@@ -90,7 +90,8 @@ nav a.nav-active {
     transform: rotate(45deg) translate(-8px, -8px);
 }
 
-nav .nav-right {
+nav .nav-right,
+nav .nav-right-2 {
     float: right;
     overflow: hidden;
 }
