@@ -140,11 +140,6 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                 JavaScript"<br>
             </cite>
             Note: <br>
-            When excessing this page, if user is logged in, getting user info and stay this page.<br>
-            When excessing this page, if user is NOT logged in, redirect to the semesterLogin page to login.<br>
-            When leaving this page, if user is logged in, every page will have a user info section at nav-right.<br>
-            To log out, click the log off button in the user info section at nav-right.<br>
-            If user is NOT logged in, every other page will NOT have a user info section at nav-right.<br>
         </p>
         <p class="info-link"><a href="homePage.php">About Us</a></p>
     </footer>
