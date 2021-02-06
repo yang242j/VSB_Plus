@@ -152,10 +152,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     </span>
                 </div>
 
-                <!-- Submit & Reset -->
+                <!-- Login & Reset -->
                 <div class="form-group">
                     <input type="submit" class="btn btn-primary" value="Login">
-                    <input type="button" class="btn" value="Forget Password" href="reset-password.php">
+                    <input type="button" class="btn" value="Forget Password" onclick="window.location='reset-password.php'">
                 </div>
 
                 <!-- Guest link -->
