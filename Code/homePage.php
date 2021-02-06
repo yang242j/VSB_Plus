@@ -1,5 +1,5 @@
 <?php
-  session_start(); // Initialize the session
+session_start(); // Initialize the session
 ?>
 
 <!doctype html>
@@ -22,6 +22,7 @@
 </head>
 
 <body>
+
   <?php
     // Check if the user is logged in, if not then hide nav-right div
     if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
