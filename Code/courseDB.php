@@ -197,7 +197,7 @@ session_start(); // Initialize the session
                 Credit:
             </cite>
         </p>
-        <p class="info-link"><a href="homePage.html">About Us</a></p>
+        <p class="info-link"><a href="homePage.php">About Us</a></p>
     </footer>
 </body>
 
