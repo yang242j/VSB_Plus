@@ -1,3 +1,5 @@
+
+
 <!doctype html>
 
 <html lang="en">
@@ -11,19 +13,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="shortcut icon" href="#">
-  <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/homePage.css">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/homePage.css">
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    $(document).ready( function(){ $("img").hide(); });
+  </script>
+
 </head>
 
 <body>
-
   <header>
-    <a href="https://www.uregina.ca"><img src="img/logo.png" class="logo" alt="UofR"></a>
+    <a href="https://www.uregina.ca"><img src="../img/logo.png" class="logo" alt="UofR"></a>
     <h1>Visual Schedule Builder Plus</h1>
   </header>
-
   <nav>
-    <div class="menu-icon" onclick="menuFunc1(this); menuFunc2();">
+    <div class="menu-icon" onclick="menuFunc1(this); menuFunc2('menu-list');">
             <div class="bar1"></div>
             <div class="bar2"></div>
             <div class="bar3"></div>
@@ -63,31 +69,31 @@
           take that will benefit them in the future based on their faculty. The enhancing of the functionality for U of
           R existing Visual Schedule Builder will help the students to select the courses easier.</p>
 
-        <img class="screenshot" src="img/screenshot.PNG"></img>
+        <img class="screenshot" src="../img/screenshot.PNG"></img>
       </article>
       <article class="left-lower">
         <h2>Team Info</h2>
         <section class="photoInfo-section">
           <div class="photoInfo">
-            <img class="photo" src="img/anyone.jpg"></img>
+            <img class="photo" src="../img/anyone.jpg"></img>
             <p>Name: Xinyu Liu</p>
             <p>SID: 200362878</p>
             <p>Position: Scrum Master</p>
           </div>
           <div class="photoInfo">
-            <img class="photo" src="img/Jingkang_yang.jpeg"></img>
+            <img class="photo" src="../img/Jingkang_yang.jpeg"></img>
             <p>Name: Jingkang Yang</p>
             <p>SID: 200362586</p>
             <p>Position: Developer</p>
           </div>
           <div class="photoInfo">
-            <img class="photo" src="img/psyduck.png"></img>
+            <img class="photo" src="../img/psyduck.png"></img>
             <p>Name: Xia Hua</p>
             <p>SID: 200368746</p>
             <p>Position: Developer</p>
           </div>
           <div class="photoInfo">
-            <img class="photo" src="img/anyone.jpg"></img>
+            <img class="photo" src="../img/anyone.jpg"></img>
             <p>Name: Priscilla Chua</p>
             <p>SID: 200363504</p>
             <p>Position: Business Analysis</p>
@@ -140,7 +146,7 @@
   </section>
 
   <footer>
-    <script src="js/main.js"></script>
+    <script src="../js/main.js"></script>
     <p class="copyright">Copyright &copy; Sep. 2020 to
       <script>document.write(new Date().getFullYear())</script> UofR VSB_Plus Capstone Group All Rights Reserved<br>
       <cite>
