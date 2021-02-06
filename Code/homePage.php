@@ -1,11 +1,5 @@
 <?php
-// Initialize the session
-session_start();
-
-// Check if the user is logged in, if not then hide nav-right div
-if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
-  echo "<script src='js/main.js'> body.onload = menuFunc2('nav-right'); </script>";
-}
+  session_start(); // Initialize the session
 ?>
 
 <!doctype html>
@@ -23,9 +17,21 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
   <link rel="shortcut icon" href="#">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/homePage.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body>
+  <?php
+    // Check if the user is logged in, if not then hide nav-right div
+    if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
+  ?>
+    <script> 
+    $(document).ready( function(){ 
+      $(".nav-right").hide(); 
+    }); 
+    </script>
+  <?php } ?>
 
   <header>
     <a href="https://www.uregina.ca"><img src="img/logo.png" class="logo" alt="UofR"></a>
@@ -151,6 +157,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 
   <footer>
     <script src="js/main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <p class="copyright">Copyright &copy; Sep. 2020 to
       <script>
         document.write(new Date().getFullYear())
