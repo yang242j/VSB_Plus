@@ -132,31 +132,35 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     <section class="container">
         <div class="form-div">
-            <h2>User LogIn</h1>
-                <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST">
-                    <div class="form-group <?php echo (!empty($studentid_err)) ? 'has-error' : ''; ?>">
-                        <label>Student ID:</label>
-                        <input class="form-input" type="text" name="studentid" value="<?php echo $studentid; ?>">
-                        <span class="help-block">
-                            <?php echo $studentid_err; ?>
-                        </span>
-                    </div>
+            <h2>User LogIn</h2>
+            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST">
+                <!-- Student ID -->
+                <div class="form-group <?php echo (!empty($studentid_err)) ? 'has-error' : ''; ?>">
+                    <label>Student ID:</label>
+                    <input class="form-input" type="text" name="studentid" value="<?php echo $studentid; ?>">
+                    <span class="help-block">
+                        <?php echo $studentid_err; ?>
+                    </span>
+                </div>
 
-                    <div class="form-group <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>">
-                        <label>Password:</label>
-                        <input class="form-input" type="password" name="password">
-                        <span class="help-block">
-                            <?php echo $password_err; ?>
-                        </span>
-                    </div>
+                <!-- Password -->
+                <div class="form-group <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>">
+                    <label>Password:</label>
+                    <input class="form-input" type="password" name="password">
+                    <span class="help-block">
+                        <?php echo $password_err; ?>
+                    </span>
+                </div>
 
-                    <div class="form-group">
-                        <input type="submit" class="btn btn-primary" value="Login">
-                        <input type="button" class="btn" value="Forget Password" onclick="resetPassword()">
-                    </div>
+                <!-- Submit & Reset -->
+                <div class="form-group">
+                    <input type="submit" class="btn btn-primary" value="Login">
+                    <input type="button" class="btn" value="Forget Password" href="reset-password.php">
+                </div>
 
-                    <p>*Login as <a id="quickLink" href="courseDB.html">GUEST</a> will not have full access to this website*</p>
-                </form>
+                <!-- Guest link -->
+                <p>*Login as <a id="quickLink" href="courseDB.html">GUEST</a> will not have full access to this website*</p>
+            </form>
         </div>
     </section>
 
