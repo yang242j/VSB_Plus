@@ -37,7 +37,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     </header>
 
     <nav>
-        <div class="menu-icon" onclick="menuFunc1(this); menuFunc2();">
+        <div class="menu-icon" onclick="menuFunc1(this); menuFunc2('menu-list');">
             <div class="bar1"></div>
             <div class="bar2"></div>
             <div class="bar3"></div>
