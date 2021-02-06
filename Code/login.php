@@ -171,7 +171,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 document.write(new Date().getFullYear())
             </script> UofR VSB_Plus Capstone Group All Rights Reserved<br>
             <cite>
-                Credit:
+                Credit: PHP MySQL Login System with help from Tutorial Republic<br>
             </cite>
         </p>
         <p class="info-link"><a href="homePage.php">About Us</a></p>

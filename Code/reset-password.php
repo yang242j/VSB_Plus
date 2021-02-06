@@ -60,11 +60,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Validate confirm password
-    if(empty(trim($_POST["confirm_password"]))){
+    if (empty(trim($_POST["confirm_password"]))) {
         $confirm_password_err = "Please confirm the password.";
-    } else{
+    } else {
         $confirm_password = trim($_POST["confirm_password"]);
-        if(empty($new_password_err) && ($new_password != $confirm_password)){
+        if (empty($new_password_err) && ($new_password != $confirm_password)) {
             $confirm_password_err = "Password did not match.";
         }
     }
@@ -84,12 +84,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $param_password = password_hash($new_password, PASSWORD_DEFAULT);
 
             // Attempt to execute the prepared statement
-            if(mysqli_stmt_execute($stmt)){
+            if (mysqli_stmt_execute($stmt)) {
                 // Password updated successfully. Redirect to login page
                 echo "SID -> $sid\nPassword has been successfully changed.";
                 echo "Redirect to LogIn page in 5s.";
                 header('refresh:5; url=login.php');
-            } else{
+            } else {
                 echo "Oops! Something went wrong. Please try again later.";
             }
 
@@ -188,7 +188,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 document.write(new Date().getFullYear())
             </script> UofR VSB_Plus Capstone Group All Rights Reserved<br>
             <cite>
-                Credit:
+                Credit: PHP MySQL Login System with help from Tutorial Republic<br>
             </cite>
         </p>
         <p class="info-link"><a href="homePage.php">About Us</a></p>
