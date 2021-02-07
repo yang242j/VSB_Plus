@@ -18,7 +18,7 @@ session_start(); // Initialize the session
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/homePage.css">
 
-  <script type="text/javascript" src="//code.jquery.com/jquery-latest.min.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
   <script>
     $(document).ready(function() {
       $(".nav-right-2").hide();

@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.5.1/main.css">
 
     <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.5.1/main.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
 </head>
 
 <body>
@@ -53,6 +54,24 @@
                 <option value="202110">Winter 2021</option>
             </select>
             <p id="termDemo"></p>
+            <select id="termSelector">
+                <option value="202030">Fall 2020</option>
+                <option value="202110" selected>Winter 2021</option>
+            </select>
+            <div id="termTest">CLICK</div>
+            <script>
+                $(document).ready(function() {
+                    var term = 'A';
+                    $("#termSelector").change(function() {
+                        term = $("#termSelector option:selected").val();
+                    });
+
+                    $("#termTest").click(function() {
+                        $( "#termTest" ).text( term );
+                    });
+                    
+                });
+            </script>
         </div>
         <div class="left-section">
             <h3 class="section-title">Course List</h3>

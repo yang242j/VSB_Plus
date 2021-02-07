@@ -27,7 +27,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.5.1/main.css">
 
     <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.5.1/main.min.js"></script>
-    <script type="text/javascript" src="//code.jquery.com/jquery-latest.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
 </head>
 
 <body>
@@ -59,12 +59,21 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         <div class="top-section">
             <label for="term">Choose a term:</label>
             <select id="termSelector">
-                <option value="202030">Fall 2020</option>
+                <option value="202030" selected>Fall 2020</option>
                 <option value="202110">Winter 2021</option>
             </select>
             <script>
-                $("#termSelector").val();
-                $("#termSelector option:selected").text();
+                $(document).ready(function() {
+                    var term = '202030';
+
+                    $("#termSelector").change(function() {
+                        term = $("#termSelector option:selected").val();
+                    });
+
+                    $("#termTest").click(function() {
+                        $("#termTest").text(term);
+                    });
+                });
             </script>
         </div>
         <div class="left-section">
@@ -146,6 +155,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         </p>
         <p class="info-link"><a href="homePage.php">About Us</a></p>
         <p class="info-link"><a href="View/api_test.html">API Test</a></p>
+        <div id="termTest">CLICK</div>
     </footer>
 </body>
 
