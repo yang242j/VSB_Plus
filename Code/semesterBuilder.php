@@ -169,11 +169,14 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         </p>
         <p class="info-link"><a href="homePage.php">About Us</a></p>
         <p class="info-link"><a href="View/api_test.html">API Test</a></p>
-        <div id="termTest">CLICK</div>
+        <div id="test">CLICK</div>
         <script>
-            $("#termTest").click(function() {
-                var text = term + "" + courseList;
-                $("#termTest").text(text);
+            $("#test").click(function() {
+                var myObj = {
+                    Term: term,
+                    Course_List: courseList
+                };
+                console.log(myObj);
             });
         </script>
     </footer>
