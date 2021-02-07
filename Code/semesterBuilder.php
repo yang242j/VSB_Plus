@@ -63,11 +63,8 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                 <option value="202110">Winter 2021</option>
             </select>
             <script>
-                $(document).ready(function() {
-                    $('#termSelector').bind('click', function() {
-                        alert("#myselect option:selected");
-                    });
-                });
+                $("#termSelector").val();
+                $("#termSelector option:selected").text();
             </script>
         </div>
         <div class="left-section">
