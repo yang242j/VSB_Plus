@@ -50,28 +50,13 @@ function dropL(ev) {
         //1.Append courseTag-list
         document.getElementsByClassName("left-section")[0].appendChild(document.getElementById(dataTitle));
         document.getElementById(dataTitle).style.backgroundColor = BGC;
-        //console.log(randomColorIndex, colors[randomColorIndex], dataTitle, "left");
+        console.log(dataTitle);
 
-        //2.Append courseCard-list in class="middle-section" id="courseCard_list"
-        var course_json = "";
-        $.post('Model/course.php', dataTitle, function(data){
-            course_json = data;
-        });
-        var course_card =
-            "<div class='courseInfo' style='background-color:" + BGC + ";>" +
-            "<h2>" + course_json.short_name + "</h2>" +
-            "<h4>" + course_json.title + "</h4>" +
-            "<p>Description: " + course_json.description + "</p>" +
-            "</div>";
-        document.getElementById("courseCard_list").innerHTML += course_card;
+        //2.Append courseCard-list
+        appendCourseCard(dataTitle);
 
         //3.Append calendar
-        calendar.addEvent({
-            id: dataTitle,
-            title: dataTitle,
-            start: '2021-01-12',
-            end: '2021-01-13'
-        });
+        appendCalendar(dataTitle);
     }
     //ev.target.style.backgroundColor = "";
 }
@@ -90,4 +75,31 @@ function dropBR(ev) {
         calendar.getEventById(dataTitle).remove();
     }
     ev.target.style.backgroundColor = "";
+}
+
+function appendCourseCard(dataTitle) {
+    var course_json = "";
+    
+    $.post('Model/course.php', dataTitle, function(data) {
+        course_json = data;
+        console.log(data);
+        console.log(course_json);
+    });
+    
+    var course_card =
+        "<div class='courseInfo' style='background-color:" + BGC + ";>" +
+        "<h2>" + course_json.short_name + "</h2>" +
+        "<h4>" + course_json.title + "</h4>" +
+        "<p>Description: " + course_json.description + "</p>" +
+        "</div>";
+    document.getElementById("courseCard_list").innerHTML += course_card;
+}
+
+function appendCalendar(dataTitle) {
+    calendar.addEvent({
+        id: dataTitle,
+        title: dataTitle,
+        start: '2021-01-12',
+        end: '2021-01-13'
+    });
 }
