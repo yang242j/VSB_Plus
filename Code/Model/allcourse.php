@@ -1,13 +1,6 @@
 <?php
-    $host = "localhost";
-    // $host = "15.223.123.122";
-    $username = 'root';
-    $pass = "vsbp";
-    $database = "course";
-    $conn = mysqli_connect($host, $username, $pass, $database);
-    if (!$conn){
-        die("Connection failed: " . mysqli_connect_error());
-    }
+    // Include the course_db_config.php file
+    require_once "Model/course_db_config.php";
 
     $sql = "SELECT * FROM course";
     $result = mysqli_query($conn, $sql);

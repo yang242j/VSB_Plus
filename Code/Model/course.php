@@ -5,15 +5,8 @@
     $short_name = $_REQUEST["short_name"];
 
     if($short_name !== ""){
-        // $host = "15.233.123.122";
-        $host = "localhost";
-        $username = 'root';
-        $pass = "vsbp";
-        $database = "course";
-        $conn = mysqli_connect($host, $username, $pass, $database);
-        if (!$conn){
-            die("Connection failed: " . mysqli_connect_error());
-        }
+        // Include the vsbp_db_config.php file
+        require_once "Model/vsbp_db_config.php";
 
         $count_sql =  "SELECT COUNT(*) FROM course where short_name = '" . $short_name . "'"; 
         $count_res = mysqli_query($conn, $count_sql);

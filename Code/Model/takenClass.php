@@ -16,14 +16,8 @@
         return;
     }
 
-    $host = "localhost";
-    $username = 'root';
-    $pass = "vsbp";
-    $database = "vsb_plus";
-    $conn = mysqli_connect($host, $username, $pass, $database);
-    if (!$conn){
-        die("Connection failed: " . mysqli_connect_error());
-    }
+    // Include the vsbp_db_config.php file
+    require_once "Model/vsbp_db_config.php";
     
     $count_sql =  "SELECT COUNT(*) FROM students where student_id = '" . $sid . "'"; 
     $count_res = mysqli_query($conn, $count_sql);
@@ -35,7 +29,7 @@
         $detail_result = mysqli_query($conn, $detail_sql);
     
         $row = mysqli_fetch_array($detail_result);
-        if ($row['password'] == $pw){
+        if (password_verify($pw, $row['password'])){
             // echo $sid;
             $takenClass_sql = "SELECT * FROM `" . $sid . "`"; 
             $result = mysqli_query($conn, $takenClass_sql);
