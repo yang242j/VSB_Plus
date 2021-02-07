@@ -42,7 +42,7 @@
             "GPA"=>$row['GPA'],
             "hashed_password"=>$row['password']);
 
-            $json_data = json_encode($data);
+            $json_data = json_encode($data, JSON_PRETTY_PRINT);
             echo $json_data;
         }
         else{

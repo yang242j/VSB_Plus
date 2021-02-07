@@ -61,7 +61,7 @@
             // array_push($data, json_encode($section)); 
             array_push($data, $section); 
             }
-            $json_data = json_encode($data);
+            $json_data = json_encode($data, JSON_PRETTY_PRINT);
             echo $json_data;
             // print_r($data);
         }

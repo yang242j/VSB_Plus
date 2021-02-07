@@ -26,7 +26,7 @@
                 "description"=>$row["description"],
                 "prerequisite"=>$row["prerequisite"]);
 
-            $json_data = json_encode($data);
+            $json_data = json_encode($data, JSON_PRETTY_PRINT);
             echo $json_data;
         }
         else{
