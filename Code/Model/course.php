@@ -3,14 +3,16 @@
 // $short_name = isset($_REQUEST('short_name'));
 // $short_name = $_GET['short_name'];
 $short_name = $_REQUEST["short_name"];
-
+echo '1-(short_name):'.$short_name;
 if ($short_name !== "") {
     // Include the course_db_config.php file
     require_once "course_db_config.php";
 
     $count_sql =  "SELECT COUNT(*) FROM course where short_name = '" . $short_name . "'";
     $count_res = mysqli_query($conn, $count_sql);
+    echo '2-(count_res):' . $count_res;
     $count = mysqli_fetch_array($count_res)[0];
+    echo '3-(count):' . $count;
 
     // If there is a course that is required.
     if ($count > 0) {
