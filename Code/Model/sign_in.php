@@ -41,9 +41,9 @@
             "campus"=>$row['campus'],
             "faculty"=>$row['faculty'],
             "program"=>$row['program'],
-            "major"=>$row['major(s)'],
-            "minor"=>$row['minor(s)'],
-            "concentration"=>$row['concentration(s)'],
+            "major"=>$row['major'],
+            "minor"=>$row['minor'],
+            "concentration"=>$row['concentration'],
             "totalCredit"=>$row['totalCredit'],
             "GPA"=>$row['GPA'],
             "hashed_password"=>$row['password']);
