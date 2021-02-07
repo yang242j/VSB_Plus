@@ -1,6 +1,6 @@
 <?php
     // Include the course_db_config.php file
-    require_once "Model/course_db_config.php";
+    require_once "course_db_config.php";
 
     $sql = "SELECT * FROM course";
     $result = mysqli_query($conn, $sql);

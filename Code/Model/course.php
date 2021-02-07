@@ -6,7 +6,7 @@
 
     if($short_name !== ""){
         // Include the vsbp_db_config.php file
-        require_once "Model/vsbp_db_config.php";
+        require_once "vsbp_db_config.php";
 
         $count_sql =  "SELECT COUNT(*) FROM course where short_name = '" . $short_name . "'"; 
         $count_res = mysqli_query($conn, $count_sql);
