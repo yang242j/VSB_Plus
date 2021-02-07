@@ -54,7 +54,7 @@ function dropL(ev) {
 
         //2.Append courseCard-list in class="middle-section" id="courseCard_list"
         var course_json = "";
-        $.post('../Model/course.php', dataTitle, function(data){
+        $.post('Model/course.php', dataTitle, function(data){
             course_json = data;
         });
         var course_card =
