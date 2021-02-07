@@ -59,8 +59,9 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             <label for="term">Choose a term:</label>
             <select id="term" onChange="termSelector()">
                 <!-- onChange="this.form.submit()" -->
-                <option value="fall 2020">Fall 2020</option>
-                <option value="winter 2021">Winter 2021</option>
+                <option value=""></option>
+                <option value="202030">Fall 2020</option>
+                <option value="202110">Winter 2021</option>
             </select>
             <p id="termDemo"></p>
         </div>
