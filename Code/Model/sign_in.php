@@ -35,7 +35,7 @@
         $detail_result = mysqli_query($conn, $detail_sql);
     
         $row = mysqli_fetch_array($detail_result);
-        if ($row['password'] == $pw){
+        if (password_verify($pw, $row['password'])){
             $data = array("student_id"=>$row['student_id'],
             "name"=>$row['name'],
             "campus"=>$row['campus'],
@@ -46,7 +46,7 @@
             "concentration"=>$row['concentration(s)'],
             "totalCredit"=>$row['totalCredit'],
             "GPA"=>$row['GPA'],
-            "password"=>$row['password']);
+            "hashed_password"=>$row['password']);
 
             $json_data = json_encode($data);
             echo $json_data;
