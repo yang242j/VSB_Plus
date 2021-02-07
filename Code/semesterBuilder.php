@@ -163,7 +163,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         <div id="termTest">CLICK</div>
         <script>
             $("#termTest").click(function() {
-                var text = term + courseList;
+                var text = term + "" + courseList;
                 $("#termTest").text(text);
             });
         </script>
