@@ -39,7 +39,7 @@ function dragLeave(ev) {
 }
 
 function dropL(ev) {
-    var dataTitle = ev.dataTransfer.getData("Text");
+    var short_name = ev.dataTransfer.getData("Text");
     const randomColorIndex = Math.floor(Math.random() * colors.length);
     var BGC = colors[randomColorIndex];
 
@@ -48,39 +48,39 @@ function dropL(ev) {
     } else {
         ev.preventDefault();
         //1.Append courseTag-list
-        document.getElementsByClassName("left-section")[0].appendChild(document.getElementById(dataTitle));
-        document.getElementById(dataTitle).style.backgroundColor = BGC;
-        console.log(dataTitle);
+        document.getElementsByClassName("left-section")[0].appendChild(document.getElementById(short_name));
+        document.getElementById(short_name).style.backgroundColor = BGC;
+        console.log(short_name);
 
         //2.Append courseCard-list
-        appendCourseCard(dataTitle);
+        appendCourseCard(short_name, BGC);
 
         //3.Append calendar
-        appendCalendar(dataTitle);
+        appendCalendar(short_name);
     }
     //ev.target.style.backgroundColor = "";
 }
 
 function dropBR(ev) {
-    var dataTitle = ev.dataTransfer.getData("text");
+    var short_name = ev.dataTransfer.getData("text");
     if (ev.target.classList.contains("noDrop")) {
         ev.preventDefault();
     } else {
         ev.preventDefault();
-        document.getElementsByClassName("bottom-right")[0].appendChild(document.getElementById(dataTitle));
+        document.getElementsByClassName("bottom-right")[0].appendChild(document.getElementById(short_name));
         const randomColorIndex = Math.floor(Math.random() * colors.length);
-        document.getElementById(dataTitle).style.backgroundColor = colors[randomColorIndex];
-        //console.log(randomColorIndex, colors[randomColorIndex], dataTitle, "bottom-right");
+        document.getElementById(short_name).style.backgroundColor = colors[randomColorIndex];
+        //console.log(randomColorIndex, colors[randomColorIndex], short_name, "bottom-right");
 
-        calendar.getEventById(dataTitle).remove();
+        calendar.getEventById(short_name).remove();
     }
     ev.target.style.backgroundColor = "";
 }
 
-function appendCourseCard(dataTitle) {
+function appendCourseCard(short_name, BGC) {
     var course_json = "";
     
-    $.post('Model/course.php', dataTitle, function(data) {
+    $.post('Model/course.php', short_name, function(data) {
         course_json = data;
         console.log(data);
         console.log(course_json);
@@ -95,10 +95,10 @@ function appendCourseCard(dataTitle) {
     document.getElementById("courseCard_list").innerHTML += course_card;
 }
 
-function appendCalendar(dataTitle) {
+function appendCalendar(short_name) {
     calendar.addEvent({
-        id: dataTitle,
-        title: dataTitle,
+        id: short_name,
+        title: short_name,
         start: '2021-01-12',
         end: '2021-01-13'
     });
