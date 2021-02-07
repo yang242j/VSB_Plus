@@ -31,7 +31,7 @@
         $row = mysqli_fetch_array($detail_result);
         if (password_verify($pw, $row['password'])){
             // echo $sid;
-            $takenClass_sql = "SELECT * FROM `" . $sid . "`"; 
+            $takenClass_sql = "SELECT * FROM '" . $sid . "'"; 
             $result = mysqli_query($conn, $takenClass_sql);
             $data = array();
             while($row = mysqli_fetch_array($result)){
