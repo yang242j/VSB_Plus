@@ -43,7 +43,7 @@ if ($count > 0) {
         );
 
         $json_data = json_encode($data, JSON_PRETTY_PRINT);
-        echo "<pre>" . $json_data . "<pre>";
+        echo "<pre>" . $json_data . "</pre>";
     } else {
         echo "Wrong password!";
     }

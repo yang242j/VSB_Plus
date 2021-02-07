@@ -19,7 +19,7 @@ while ($row = mysqli_fetch_array($result)) {
 // print_r($data);
 // echo json_encode(array_values($data));
 $json_data = json_encode($data, JSON_PRETTY_PRINT);
-echo "<pre>" . $json_data . "<pre>";
+echo "<pre>" . $json_data . "</pre>";
 // echo "Connection success!";
 
 $conn->close();
