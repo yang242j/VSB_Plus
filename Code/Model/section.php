@@ -30,8 +30,8 @@
     // echo $addCond;
 
     if($short_name !== ""){
-        // Include the vsbp_db_config.php file
-        require_once "vsbp_db_config.php";
+        // Include the course_db_config.php file
+        require_once "course_db_config.php";
 
         $count_sql =  "SELECT COUNT(*) FROM section where short_name = '" . $short_name . "'" . $addCond;
         $count_res = mysqli_query($conn, $count_sql);
