@@ -81,8 +81,8 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 
             <script>
                 $(".dropZone").on("drop", function(event) {
-                    var dataTitle = event.originalEvent.dataTransfer.getData("text");
-                    courseList += dataTitle + " ";
+                    var dataTitle = event.originalEvent.dataTransfer.getData('Text');
+                    courseList.push(dataTitle);
                 });
             </script>
             <!--
@@ -91,7 +91,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             <div class="courseTag noDrop" id="ense496ad" draggable="true" ondragstart="drag(event)">ENSE496AD</div>
             -->
         </div>
-        <div class="middle-section">
+        <div class="middle-section" id="courseCard_list">
             <h3 class="section-title">Course Detail Info</h3>
             <div class="courseInfo">
                 <h2>ENSE 400</h2>
@@ -136,6 +136,15 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             </div>
             <div class="bottom-right" ondrop="dropBR(event)" ondragover="allowDrop(event)" ondragenter="dragEnter(event)" ondragleave="dragLeave(event)">
                 Courses To Take: <br>
+                <script>
+                    $(".bottom-right").on("drop", function(event) {
+                        var dataTitle = event.originalEvent.dataTransfer.getData('Text');
+                        const index = courseList.indexOf(dataTitle);
+                        if (index > -1) {
+                            courseList.splice(index, 1);
+                        }
+                    });
+                </script>
                 <div class="courseTag noDrop" id="ense401" draggable="true" ondragstart="drag(event)">ENSE401</div>
                 <div class="courseTag noDrop" id="ense400" draggable="true" ondragstart="drag(event)">ENSE400</div>
                 <div class="courseTag noDrop" id="ense496ac" draggable="true" ondragstart="drag(event)">ENSE496AC</div>
