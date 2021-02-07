@@ -17,6 +17,10 @@
 
     <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.5.1/main.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script>
+        var term = '';
+        var courseList = [];
+    </script>
 </head>
 
 <body>
@@ -45,6 +49,13 @@
     </nav>
 
     <section class="container">
+        <div id="termTest">CLICK</div>
+        <script>
+            $("#termTest").click(function() {
+                var text = term + courseList;
+                $( "#termTest" ).text( text );
+            });
+        </script>
         <div class="top-section">
             <label for="term">Choose a term:</label>
             <select id="term" onChange="termSelector()">
@@ -58,27 +69,26 @@
                 <option value="202030">Fall 2020</option>
                 <option value="202110" selected>Winter 2021</option>
             </select>
-            <div id="termTest">CLICK</div>
             <script>
-                $(document).ready(function() {
-                    var term = 'A';
-                    $("#termSelector").change(function() {
-                        term = $("#termSelector option:selected").val();
-                    });
+                term = $("#termSelector option:selected").val();
 
-                    $("#termTest").click(function() {
-                        $( "#termTest" ).text( term );
-                    });
-                    
+                $("#termSelector").change(function() {
+                    term = $("#termSelector option:selected").val();
                 });
             </script>
         </div>
         <div class="left-section">
             <h3 class="section-title">Course List</h3>
 
-            <div class="dropZone" ondrop="dropL(event)" ondragover="allowDrop(event)" ondragenter="dragEnter(event)"
-                ondragleave="dragLeave(event)"><img src="../img/drop-here.png" style="max-height: 100%;max-width: 100%;"
-                    draggable="false"></div>
+            <div class="dropZone" ondrop="dropL(event)" ondragover="allowDrop(event)" ondragenter="dragEnter(event)" ondragleave="dragLeave(event)"><img src="../img/drop-here.png" style="max-height: 100%;max-width: 100%;" draggable="false"></div>
+
+            <script> 
+                $(".dropZone").on("drop", function(event) {
+                    var dataTitle = event.originalEvent.dataTransfer.getData("text");
+                    courseList += dataTitle + " ";
+                });
+            </script>
+
             <!--
             <div class="courseTag noDrop" id="ense400" draggable="true" ondragstart="drag(event)">ENSE400</div>
             <div class="courseTag noDrop" id="ense496ac" draggable="true" ondragstart="drag(event)">ENSE496AC</div>

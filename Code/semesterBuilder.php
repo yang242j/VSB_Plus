@@ -28,6 +28,10 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 
     <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.5.1/main.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script>
+        var term = '';
+        var courseList = [];
+    </script>
 </head>
 
 <body>
@@ -63,16 +67,10 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                 <option value="202110">Winter 2021</option>
             </select>
             <script>
-                $(document).ready(function() {
-                    var term = '202030';
+                term = $("#termSelector option:selected").val();
 
-                    $("#termSelector").change(function() {
-                        term = $("#termSelector option:selected").val();
-                    });
-
-                    $("#termTest").click(function() {
-                        $("#termTest").text(term);
-                    });
+                $("#termSelector").change(function() {
+                    term = $("#termSelector option:selected").val();
                 });
             </script>
         </div>
@@ -80,6 +78,13 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             <h3 class="section-title">Course List</h3>
 
             <div class="dropZone" ondrop="dropL(event)" ondragover="allowDrop(event)" ondragenter="dragEnter(event)" ondragleave="dragLeave(event)"><img src="img/drop-here.png" style="max-height: 100%;max-width: 100%;" draggable="false"></div>
+
+            <script>
+                $(".dropZone").on("drop", function(event) {
+                    var dataTitle = event.originalEvent.dataTransfer.getData("text");
+                    courseList += dataTitle + " ";
+                });
+            </script>
             <!--
             <div class="courseTag noDrop" id="ense400" draggable="true" ondragstart="drag(event)">ENSE400</div>
             <div class="courseTag noDrop" id="ense496ac" draggable="true" ondragstart="drag(event)">ENSE496AC</div>
@@ -156,6 +161,12 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         <p class="info-link"><a href="homePage.php">About Us</a></p>
         <p class="info-link"><a href="View/api_test.html">API Test</a></p>
         <div id="termTest">CLICK</div>
+        <script>
+            $("#termTest").click(function() {
+                var text = term + courseList;
+                $("#termTest").text(text);
+            });
+        </script>
     </footer>
 </body>
 
