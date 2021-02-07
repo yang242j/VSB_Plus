@@ -25,7 +25,7 @@ function allowDrop(ev) {
 
 function drag(ev) {
     ev.dataTransfer.setData("text", ev.target.id);
-    console.log("drag", ev.target.id)
+    //console.log("drag", ev.target.id)
 }
 
 function dragEnter(ev) {
@@ -39,17 +39,33 @@ function dragLeave(ev) {
 }
 
 function dropL(ev) {
-    var dataTitle = ev.dataTransfer.getData("text");
+    var dataTitle = ev.dataTransfer.getData("Text");
+    const randomColorIndex = Math.floor(Math.random() * colors.length);
+    var BGC = colors[randomColorIndex];
 
     if (ev.target.classList.contains("noDrop")) {
         ev.preventDefault();
     } else {
         ev.preventDefault();
+        //1.Append courseTag-list
         document.getElementsByClassName("left-section")[0].appendChild(document.getElementById(dataTitle));
-        const randomColorIndex = Math.floor(Math.random() * colors.length);
-        document.getElementById(dataTitle).style.backgroundColor = colors[randomColorIndex];
-        console.log(randomColorIndex, colors[randomColorIndex], dataTitle, "left");
+        document.getElementById(dataTitle).style.backgroundColor = BGC;
+        //console.log(randomColorIndex, colors[randomColorIndex], dataTitle, "left");
 
+        //2.Append courseCard-list in class="middle-section" id="courseCard_list"
+        var course_json = "";
+        $.post('../Model/course.php', dataTitle, function(data){
+            course_json = data;
+        });
+        var course_card =
+            "<div class='courseInfo' style='background-color:" + BGC + ";>" +
+            "<h2>" + course_json.short_name + "</h2>" +
+            "<h4>" + course_json.title + "</h4>" +
+            "<p>Description: " + course_json.description + "</p>" +
+            "</div>";
+        document.getElementById("courseCard_list").innerHTML += course_card;
+
+        //3.Append calendar
         calendar.addEvent({
             id: dataTitle,
             title: dataTitle,
@@ -57,7 +73,7 @@ function dropL(ev) {
             end: '2021-01-13'
         });
     }
-    ev.target.style.backgroundColor = "";
+    //ev.target.style.backgroundColor = "";
 }
 
 function dropBR(ev) {
@@ -69,7 +85,7 @@ function dropBR(ev) {
         document.getElementsByClassName("bottom-right")[0].appendChild(document.getElementById(dataTitle));
         const randomColorIndex = Math.floor(Math.random() * colors.length);
         document.getElementById(dataTitle).style.backgroundColor = colors[randomColorIndex];
-        console.log(randomColorIndex, colors[randomColorIndex], dataTitle, "bottom-right");
+        //console.log(randomColorIndex, colors[randomColorIndex], dataTitle, "bottom-right");
 
         calendar.getEventById(dataTitle).remove();
     }
