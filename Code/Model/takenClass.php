@@ -32,7 +32,7 @@
         if (password_verify($pw, $row['password'])){
             // echo $sid;
             $tableName = "S" . $sid;
-            $takenClass_sql = "SELECT * FROM '" . $tableName . "'"; 
+            $takenClass_sql = "SELECT * FROM `" . $tableName . "`"; 
             $result = mysqli_query($conn, $takenClass_sql);
             if (!$result) {
                 printf("Error: %s\n", mysqli_error($conn));
