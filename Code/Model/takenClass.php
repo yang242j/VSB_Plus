@@ -34,6 +34,10 @@
             $tableName = "S" . $sid;
             $takenClass_sql = "SELECT * FROM '" . $tableName . "'"; 
             $result = mysqli_query($conn, $takenClass_sql);
+            if (!$result) {
+                printf("Error: %s\n", mysqli_error($conn));
+                exit();
+            }
             $data = array();
             while($row = mysqli_fetch_array($result)){
                 $oneTaken = array("courseIndex"=>$row['courseIndex'],
