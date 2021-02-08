@@ -61,6 +61,7 @@ function dropL(ev) {
         if($("#" + short_name).length){	
             console.log(short_name + " already exist in course List");
         } else {
+            console.log($("#" + short_name).length);
             //2.Append courseCard-list
             appendCourseCard(short_name, BGC);
             //3.Append calendar
