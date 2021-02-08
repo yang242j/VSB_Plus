@@ -54,11 +54,11 @@ function dropL(ev) {
         }
 
         //if tag exist, refuse to append
-        if ($("[id='" + short_name + "']").length) {	
-            console.log($("[id='" + short_name + "']").length);
+        if ($(".left-section[id='" + short_name + "']").length) {	
+            console.log($(".left-section[id='" + short_name + "']").length);
             console.log(short_name + " already exist in course List");
         } else {
-            console.log($("[id='" + short_name + "']").length);
+            console.log($(".left-section[id='" + short_name + "']").length);
             //1.Append courseTag-list
             document.getElementsByClassName("left-section")[0].appendChild(document.getElementById(short_name));
             document.getElementById(short_name).style.backgroundColor = BGC;
