@@ -93,19 +93,9 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         </div>
         <div class="middle-section" id="courseCard_list">
             <h3 class="section-title">Course Detail Info</h3>
-            <div class="courseInfo">
-                <h2>ENSE 400</h2>
-                <h4>ENSE Project Start-up</h4>
-                <p>Course Detail Info: **** **** *** ** * * * **</p>
-            </div>
-            <div class="courseInfo">
-                <h2>ENSE 496AC</h2>
-                <h4>Artificial Intelligence</h4>
-                <p>Course Detail Info: **** **** *** ** * * * **</p>
-            </div>
-            <div class="courseInfo">
-                <h2>ENSE 496AD</h2>
-                <h4>Machine Learning</h4>
+            <div class="courseInfo" id="exampleDiv">
+                <h2>Course Tag</h2>
+                <h4>Course Title</h4>
                 <p>Course Detail Info: **** **** *** ** * * * **</p>
             </div>
         </div>
