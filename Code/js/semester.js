@@ -80,7 +80,7 @@ function dropBR(ev) {
 function appendCourseCard(short_name, BGC) {
     var course_json = "";
     
-    $.post('Model/course.php', short_name, function(data) {
+    $.post('Model/course.php', { short_name: short_name }, function(data) {
         course_json = data;
         console.log(data);
         console.log(course_json);
