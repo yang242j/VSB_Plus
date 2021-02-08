@@ -129,9 +129,14 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                 <script>
                     $(".bottom-right").on("drop", function(event) {
                         var dataTitle = event.originalEvent.dataTransfer.getData('Text');
+                        // on drop, remove id from classList
                         const index = courseList.indexOf(dataTitle);
                         if (index > -1) {
                             courseList.splice(index, 1);
+                        }
+                        // if classList is empty, add example div
+                        if (courseList.length == 0) {
+                            $(".courseCard_list").append("<div class='courseInfo' id='exampleDiv'> <h2> Course Tag </h2> <h4> Course Title </h4> <p> Course Detail Info: **** ** ** ** * ** * * * ** < /p> </div>");
                         }
                     });
                 </script>

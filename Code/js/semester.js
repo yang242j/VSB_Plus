@@ -53,7 +53,9 @@ function dropL(ev) {
         console.log(short_name);
 
         //2.Append courseCard-list
-        document.getElementById("exampleDiv").outerHTML="";
+        if($("#exampleDiv").length){	
+            $( "#exampleDiv" ).remove();
+        }
         appendCourseCard(short_name, BGC);
 
         //3.Append calendar
