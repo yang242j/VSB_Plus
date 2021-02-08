@@ -50,15 +50,16 @@ function dropL(ev) {
         //1.Append courseTag-list
         document.getElementsByClassName("left-section")[0].appendChild(document.getElementById(short_name));
         document.getElementById(short_name).style.backgroundColor = BGC;
-        console.log(short_name);
+        //console.log(short_name);
 
         //if exampleDiv exist, remove
         if($("#exampleDiv").length){	
             $( "#exampleDiv" ).remove();
         }
+
         //if tag exist, refuse to append
         if ($(".left-section").has("#" + short_name)) {
-            console.log(dataTitle + " already exist in " + courseList);
+            console.log(short_name + " already exist in course List");
         } else {
             //2.Append courseCard-list
             appendCourseCard(short_name, BGC);
