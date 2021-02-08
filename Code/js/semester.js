@@ -52,14 +52,19 @@ function dropL(ev) {
         document.getElementById(short_name).style.backgroundColor = BGC;
         console.log(short_name);
 
-        //2.Append courseCard-list
+        //if exampleDiv exist, remove
         if($("#exampleDiv").length){	
             $( "#exampleDiv" ).remove();
         }
-        appendCourseCard(short_name, BGC);
-
-        //3.Append calendar
-        appendCalendar(short_name);
+        //if tag exist, refuse to append
+        if ($(".left-section").has("#" + short_name)) {
+            console.log(dataTitle + " already exist in " + courseList);
+        } else {
+            //2.Append courseCard-list
+            appendCourseCard(short_name, BGC);
+            //3.Append calendar
+            appendCalendar(short_name);
+        }
     }
     //ev.target.style.backgroundColor = "";
 }
