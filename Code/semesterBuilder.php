@@ -82,7 +82,12 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             <script>
                 $(".dropZone").on("drop", function(event) {
                     var dataTitle = event.originalEvent.dataTransfer.getData('Text');
-                    courseList.push(dataTitle);
+                    if ($.inArray(dataTitle, courseList) === -1) {
+                        courseList.push(dataTitle);
+                    } else {
+                        console.log(dataTitle + " already exist in " + classList);
+                    }
+
                 });
             </script>
             <!--
