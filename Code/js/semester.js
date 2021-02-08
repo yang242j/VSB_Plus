@@ -1,5 +1,5 @@
 const colors = ["lightblue", "lightseagreen", "pink", "yellow", "Azure", "Bisque", "Coral", "Cyan", "Cornsilk", "Lavender"];
-const pre_colorID = "";
+var pre_colorID = "";
 
 //Calendar init
 var calendarEl = document.getElementById('calendar');
@@ -41,9 +41,10 @@ function dragLeave(ev) {
 
 function dropL(ev) {
     var short_name = ev.dataTransfer.getData("Text");
-    const randomColorIndex = "";
+    var randomColorIndex = "";
     do {
         randomColorIndex = Math.floor(Math.random() * colors.length);
+        console.log(randomColorIndex);
     } while (randomColorIndex == pre_colorID);
     var BGC = colors[randomColorIndex];
 
