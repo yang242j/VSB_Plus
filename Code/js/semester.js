@@ -78,18 +78,18 @@ function dropBR(ev) {
 }
 
 function appendCourseCard(short_name, BGC) {
-    var course_json = "";
-    
+    var course_card = "";
+
     $.post('Model/course.php', { short_name: short_name }, function(data) {
-        course_json = JSON.parse(data);
-    });
-    
-    var course_card =
+        var course_json = JSON.parse(data);
+        course_card =
         "<div class='courseInfo' style='background-color:" + BGC + ";'>" +
         "<h2>" + course_json.short_name + "</h2>" +
         "<h4>" + course_json.title + "</h4>" +
         "<p>Description: " + course_json.description + "</p>" +
         "</div>";
+    });
+    
     document.getElementById("courseCard_list").innerHTML += course_card;
 }
 
