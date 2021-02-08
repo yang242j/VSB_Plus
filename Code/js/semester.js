@@ -87,7 +87,7 @@ function dropBR(ev) {
     } else {
         ev.preventDefault();
         document.getElementsByClassName("bottom-right")[0].appendChild(document.getElementById(short_name));
-        document.getElementById(short_name).style.backgroundColor = DarkGrey;
+        document.getElementById(short_name).style.backgroundColor = initial;
 
         calendar.getEventById(short_name).remove();
     }
