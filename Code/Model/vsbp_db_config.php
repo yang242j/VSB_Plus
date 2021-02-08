@@ -19,6 +19,6 @@ if($conn === FALSE){
     console.log( 'DB_SERVER: " . DB_SERVER . "');
     console.log( 'DB_NAME: " . DB_NAME . "');
     </script>";
-    echo $conn_message;
+    //echo $conn_message;
 }
 ?>
