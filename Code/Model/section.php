@@ -63,7 +63,7 @@ if ($short_name !== "") {
             array_push($data, $section);
         }
         $json_data = json_encode($data, JSON_PRETTY_PRINT);
-        echo "<pre>" . $json_data . "</pre>";
+        echo $json_data;
         // print_r($data);
     } else {
         echo "Cannot find the section!";

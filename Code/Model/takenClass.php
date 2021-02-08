@@ -53,7 +53,7 @@ if ($count > 0) {
             array_push($data, $oneTaken);
         }
         $json_data = json_encode($data, JSON_PRETTY_PRINT);
-        echo "<pre>" . $json_data . "</pre>";
+        echo $json_data;
     } else {
         echo "Wrong password!";
     }

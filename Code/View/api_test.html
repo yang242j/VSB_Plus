@@ -90,35 +90,40 @@
     function getCourse(){
         var short_name = $('#course_form').serializeArray();
         $.post('../Model/course.php', short_name, function(data, status){
-            $('#course_result').html(data);
+            var pre_json = "<pre>" + data + "</pre>";
+            $('#course_result').html(pre_json);
         });
     }
 
     function getSec(){
         var short_name = $('#course_form').serializeArray();
         $.post('../Model/section.php', short_name, function(data, status){
-            $('#course_result').html(data);
+            var pre_json = "<pre>" + data + "</pre>";
+            $('#course_result').html(pre_json);
         });
     }
 
     function sign_in(){
         var account = $('#Sign_in_form').serializeArray();
         $.post('../Model/sign_in.php', account, function(data, status){
-            $('#sign_in_result').html(data);
+            var pre_json = "<pre>" + data + "</pre>";
+            $('#sign_in_result').html(pre_json);
         });
     }
 
     function getDetail(){
         var account = $('#Sign_in_form').serializeArray();
         $.post('../Model/takenClass.php', account, function(data, status){
-            $('#sign_in_result').html(data);
+            var pre_json = "<pre>" + data + "</pre>";
+            $('#sign_in_result').html(pre_json);
         });
     }
 
     function sign_up(){
         var account = $('#sign_up_form').serializeArray();
         $.post('../Model/sign_in.php', account, function(data, status){
-            $('#sign_up_result').html(data);
+            var pre_json = "<pre>" + data + "</pre>";
+            $('#sign_up_result').html(pre_json);
         });
     }
 
