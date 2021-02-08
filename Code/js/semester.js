@@ -58,16 +58,17 @@ function dropL(ev) {
         }
 
         //if tag exist, refuse to append
-        var tagExist = $("#" + short_name).parents(".left-section").length == 1;
-        if ( tagExist ) {
-            console.log(short_name + " already exist in course List");
-            $("#" + short_name).parents(".left-section").css({"color": "red", "border": "2px solid red"});
-        } else {
-            //2.Append courseCard-list
-            appendCourseCard(short_name, BGC);
-            //3.Append calendar
-            appendCalendar(short_name);
-        }
+        $(document).ready(function () {
+            var tagExist = $("#" + short_name).parents(".left-section").length == 1;
+            if ( tagExist ) {
+                console.log(short_name + " already exist in course List");
+            } else {
+                //2.Append courseCard-list
+                appendCourseCard(short_name, BGC);
+                //3.Append calendar
+                appendCalendar(short_name);
+            }
+        });
     }
     //ev.target.style.backgroundColor = "";
 }
