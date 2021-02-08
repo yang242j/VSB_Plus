@@ -47,10 +47,6 @@ function dropL(ev) {
         ev.preventDefault();
     } else {
         ev.preventDefault();
-        //1.Append courseTag-list
-        document.getElementsByClassName("left-section")[0].appendChild(document.getElementById(short_name));
-        document.getElementById(short_name).style.backgroundColor = BGC;
-        //console.log(short_name);
 
         //if exampleDiv exist, remove
         if($("#exampleDiv").length){	
@@ -62,6 +58,9 @@ function dropL(ev) {
             console.log(short_name + " already exist in course List");
         } else {
             console.log($("[id='" + short_name + "']").length);
+            //1.Append courseTag-list
+            document.getElementsByClassName("left-section")[0].appendChild(document.getElementById(short_name));
+            document.getElementById(short_name).style.backgroundColor = BGC;
             //2.Append courseCard-list
             appendCourseCard(short_name, BGC);
             //3.Append calendar
