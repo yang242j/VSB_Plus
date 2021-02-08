@@ -81,7 +81,7 @@ function appendCourseCard(short_name, BGC) {
     var course_json = "";
     
     $.post('Model/course.php', { short_name: short_name }, function(data) {
-        course_json = data;
+        course_json = JSON.parse(data);
     });
     
     var course_card =
