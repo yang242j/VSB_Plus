@@ -1,4 +1,5 @@
 const colors = ["lightblue", "lightseagreen", "pink", "yellow", "Azure", "Bisque", "Coral", "Cyan", "Cornsilk", "Lavender"];
+const pre_colorID = "";
 
 //Calendar init
 var calendarEl = document.getElementById('calendar');
@@ -40,7 +41,10 @@ function dragLeave(ev) {
 
 function dropL(ev) {
     var short_name = ev.dataTransfer.getData("Text");
-    const randomColorIndex = Math.floor(Math.random() * colors.length);
+    const randomColorIndex = "";
+    do {
+        randomColorIndex = Math.floor(Math.random() * colors.length);
+    } while (randomColorIndex == pre_colorID);
     var BGC = colors[randomColorIndex];
 
     if (ev.target.classList.contains("noDrop")) {
@@ -65,6 +69,8 @@ function dropL(ev) {
             document.getElementById(short_name).classList.add("selected-tag");
             //2.Append courseCard-list
             appendCourseCard(short_name, BGC);
+            //2.1.Store color id
+            pre_colorID = randomColorIndex;
             //3.Append calendar
             appendCalendar(short_name);
         }
