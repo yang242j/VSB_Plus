@@ -85,7 +85,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                     if ($.inArray(dataTitle, courseList) === -1) {
                         courseList.push(dataTitle);
                     } else {
-                        console.log(dataTitle + " already exist in " + courseList);
+                        console.log(dataTitle + " already exist in courseList ->" + courseList);
                     }
 
                 });

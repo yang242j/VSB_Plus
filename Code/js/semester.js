@@ -59,7 +59,7 @@ function dropL(ev) {
 
         //if tag exist, refuse to append
         var tagExist = $("#" + short_name).parents(".left-section").length == 1;
-        if ( tagExist ) {
+        if ( !tagExist ) {
             console.log(short_name + " already exist in course List");
             console.log($("#" + short_name).parents(".left-section"));
         } else {
