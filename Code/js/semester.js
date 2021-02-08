@@ -58,8 +58,10 @@ function dropL(ev) {
         }
 
         //if tag exist, refuse to append
-        if ( $("#"+short_name).parents(".left-section").length == 1 ) {
+        var tagExist = $("#" + short_name).parents(".left-section").length == 1;
+        if ( tagExist ) {
             console.log(short_name + " already exist in course List");
+            console.log($("#" + short_name).parents(".left-section"));
         } else {
             //2.Append courseCard-list
             appendCourseCard(short_name, BGC);
