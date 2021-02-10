@@ -86,10 +86,14 @@ function dropBR(ev) {
         ev.preventDefault();
     } else {
         ev.preventDefault();
+        // Append tag at BR
         document.getElementsByClassName("bottom-right")[0].appendChild(document.getElementById(short_name));
-        const randomColorIndex = Math.floor(Math.random() * colors.length);
-        document.getElementById(short_name).style.backgroundColor = colors[randomColorIndex];
-
+        // Set tag BGC to DarkGrey
+        document.getElementById(short_name).style.backgroundColor = "DarkGrey";
+        // Remove course card from middle section
+        var card_id = short_name + "_Card";
+        document.getElementById(card_id).remove();
+        // Remove course event from calendar
         calendar.getEventById(short_name).remove();
     }
     ev.target.style.backgroundColor = "";
@@ -99,8 +103,9 @@ function appendCourseCard(short_name, BGC) {
     
     $.post('Model/course.php', { short_name: short_name }, function(data) {
         var course_json = JSON.parse(data);
+        var card_id = course_json.short_name + "_Card";
         var course_card =
-            "<div class='courseInfo' id='" + course_json.short_name +
+            "<div class='courseInfo' id='" + card_id +
             "' style='background-color:" + BGC + ";'>" +
             "<h2>" + course_json.short_name + "</h2>" +
             "<h4>" + course_json.title + "</h4>" +
