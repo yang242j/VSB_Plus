@@ -63,7 +63,7 @@ function dropL(ev) {
             //1.Append courseTag-list
             document.getElementsByClassName("left-section")[0].appendChild(document.getElementById(short_name));
             document.getElementById(short_name).style.backgroundColor = BGC;
-            document.getElementById(short_name).classList.toogle("selected-course"); // Add selected-course class
+            document.getElementById(short_name).classList.toggle("selected-course"); // Add selected-course class
             //2.Append courseCard-list
             appendCourseCard(short_name, BGC);
             pre_colorID = randomColorIndex; //2.1.Store color id
