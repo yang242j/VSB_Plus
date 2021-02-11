@@ -70,8 +70,8 @@ function courseSelect(event){
         if (this.readyState == 4 && this.status == 200){
             var jsonRsp = JSON.parse(this.responseText);
             setCourse(jsonRsp);
-            showGraph(jsonRsp);
             document.getElementById("message").innerHTML = short_name + " has been selected";
+            showGraph(jsonRsp);
         }
     };
     // xmlhttp.open("GET", "getCourse.php?short_name=" + short_name, false); // Get the data from database by the server php file
