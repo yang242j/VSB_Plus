@@ -15,6 +15,7 @@ function showGraph(sections) {
     }
 
     // Get the canvas element to generate the graph
+    console.log(document.getElementById('chart'));
     var ctx = document.getElementById('chart').getContext('2d');
 
     var chart = new Chart(ctx, {
