@@ -9,7 +9,7 @@ var colors = [
 
 var seleFaculty = [];
 var ALL_JSON;
-var num_perid = 10;
+var num_perid = 50;
 var filter_key = "all";
 
 window.onload = function init(){
@@ -70,6 +70,7 @@ function courseSelect(event){
         if (this.readyState == 4 && this.status == 200){
             var jsonRsp = JSON.parse(this.responseText);
             setCourse(jsonRsp);
+            showGraph(jsonRsp);
             document.getElementById("message").innerHTML = short_name + " has been selected";
         }
     };
