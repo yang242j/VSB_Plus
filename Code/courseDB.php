@@ -167,9 +167,7 @@ session_start(); // Initialize the session
                         </ul>
                     </li>
                 </ul>
-                <canvas id="courseGraph" width="200" height="200">
-                    Your browser doesn't support the HTML5 canvas element
-                </canvas>
+                <div id="graph" style="width: 300px; height:300px;"></div>
             </div>
         </div>
 

@@ -71,8 +71,6 @@ function courseSelect(event){
             var jsonRsp = JSON.parse(this.responseText);
             setCourse(jsonRsp);
             document.getElementById("message").innerHTML = short_name + " has been selected";
-            console.log($('#courseGraph'));
-            console.log(document.getElementById("courseGraph"));
             showGraph(jsonRsp);
         }
     };

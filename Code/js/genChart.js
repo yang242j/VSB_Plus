@@ -14,9 +14,14 @@ function showGraph(sections) {
         }
     }
 
+    //In case, there is no 'canvas' element in the html
+    if (!document.getElementById('chart')) {
+        $('#graph').html(createCanvas('chart', 100, 100));
+    }
+
     // Get the canvas element to generate the graph
-    console.log(document.getElementById("courseGraph"));
-    var ctx = document.getElementById("courseGraph").getContext('2d');
+    // console.log(document.getElementById("chart"));
+    var ctx = document.getElementById("chart").getContext('2d');
 
     var chart = new Chart(ctx, {
         type: 'bar',
@@ -74,4 +79,12 @@ function showGraph(sections) {
         },
         options: {scales:{yAxes:[{ticks:{beginAtZero: true}}]}}
     });
+}
+
+function createCanvas(id, width, height) {
+    var canvasNode = document.createElement('canvas');
+    canvasNode.id = id;
+    canvasNode.width = width;
+    canvasNode.height = height;
+    return canvasNode;
 }
