@@ -15,11 +15,6 @@ var calendar = new FullCalendar.Calendar(calendarEl, {
 });
 calendar.render();
 
-function termSelector() {
-    var term = document.getElementById("term").value;
-    document.getElementById("termDemo").innerHTML = "You selected: " + term;
-}
-
 function allowDrop(ev) {
     ev.preventDefault();
 }
@@ -59,8 +54,8 @@ function dropL(ev) {
         }
 
         //if tag exist, refuse to append
-        if ($(".selected-tag[id='" + short_name + "']").length) {	
-            //console.log($(".selected-tag[id='" + short_name + "']").length);
+        if ($(".selected-course[id='" + short_name + "']").length) {	
+            //console.log($(".selected-course[id='" + short_name + "']").length);
             //console.log(short_name + " already exist in course List");
             return;
         } else {
@@ -68,16 +63,14 @@ function dropL(ev) {
             //1.Append courseTag-list
             document.getElementsByClassName("left-section")[0].appendChild(document.getElementById(short_name));
             document.getElementById(short_name).style.backgroundColor = BGC;
-            document.getElementById(short_name).classList.add("selected-tag");
+            document.getElementById(short_name).classList.add("selected-course");
             //2.Append courseCard-list
             appendCourseCard(short_name, BGC);
-            //2.1.Store color id
-            pre_colorID = randomColorIndex;
+            pre_colorID = randomColorIndex; //2.1.Store color id
             //3.Append calendar
             appendCalendar(short_name);
         }
     }
-    //ev.target.style.backgroundColor = "";
 }
 
 function dropBR(ev) {
@@ -96,7 +89,6 @@ function dropBR(ev) {
         // Remove course event from calendar
         calendar.getEventById(short_name).remove();
     }
-    ev.target.style.backgroundColor = "";
 }
 
 function appendCourseCard(short_name, BGC) {

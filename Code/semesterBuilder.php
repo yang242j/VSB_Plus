@@ -81,11 +81,14 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 
             <script>
                 $(".dropZone").on("drop", function(event) {
-                    var dataTitle = event.originalEvent.dataTransfer.getData('Text');
-                    if ($.inArray(dataTitle, courseList) === -1) {
-                        courseList.push(dataTitle);
+                    var courseName = event.originalEvent.dataTransfer.getData('Text');
+                    console.log('L:' + courseName);
+
+                    // If this course Name is NOT in the courseList, push
+                    if ($.inArray(courseName, courseList) === -1) {
+                        courseList.push(courseName);
                     } else {
-                        console.log(dataTitle + " already exist in courseList ->" + courseList);
+                        console.log(courseName + " already exist in courseList { " + courseList + " }");
                     }
 
                 });
@@ -96,7 +99,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             <div class="courseTag noDrop" id="ense496ad" draggable="true" ondragstart="drag(event)">ENSE496AD</div>
             -->
         </div>
-        <div class="middle-section" id="courseCard_list">
+        <div class="middle-section" id="courseCardList">
             <h3 class="section-title">Course Detail Info</h3>
             <div class="courseInfo" id="exampleDiv">
                 <h2>Course Tag</h2>
@@ -133,20 +136,21 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                 Courses To Take: <br>
                 <script>
                     $(".bottom-right").on("drop", function(event) {
-                        var dataTitle = event.originalEvent.dataTransfer.getData('Text');
+                        var courseName = event.originalEvent.dataTransfer.getData('Text');
+                        console.log('BR:' + courseName);
 
-                        // on drop, remove tag from classList
-                        const index = courseList.indexOf(dataTitle);
+                        // on drop, remove course Name from courseList
+                        const index = courseList.indexOf(courseName);
                         if (index > -1) {
                             courseList.splice(index, 1);
                         }
 
-                        // on drop, remove card from classCard List
-                        $(".middle-section #" + dataTitle).remove();
-
                         // if classList is empty, add example div
                         if (courseList.length == 0) {
-                            $(".courseCard_list").append("<div class='courseInfo' id='exampleDiv'> <h2> Course Tag </h2> <h4> Course Title </h4> <p> Course Detail Info: **** ** ** ** * ** * * * ** < /p> </div>");
+                            $("#courseCardList").append("<div class='courseInfo' id='exampleDiv'> <h2> Course Tag </h2> <h4> Course Title </h4> <p> Course Detail Info: **** ** ** ** * ** * * * ** < /p> </div>");
+                            console.log('example-div appended');
+                        } else {
+                            console.log('example-div append FAILED');
                         }
                     });
                 </script>
