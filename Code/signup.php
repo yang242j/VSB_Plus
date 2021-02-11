@@ -158,7 +158,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Attempt to execute the prepared statement (add new student)
             if (mysqli_stmt_execute($stmt)) {
 
-                $new_tablename = "S".$sid;
+                $new_tablename = "S" . $sid;
                 $sql_table = "CREATE TABLE $new_tablename (courseIndex INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY, term VARCHAR(255) NOT NULL, course_ID VARCHAR(255) NOT NULL, section_num VARCHAR(255) NOT NULL, course_title VARCHAR(255) NOT NULL, final_grade VARCHAR(255) NOT NULL, credit_hour INT(11) NOT NULL DEFAULT 3, credit_earned INT(11) NOT NULL, class_size INT(11) NOT NULL, class_average INT(11) NOT NULL)";
 
                 if ($conn->query($sql_table) === TRUE) {
@@ -244,7 +244,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                     <div class="form-group <?php echo (!empty($campus_err)) ? 'has-error' : ''; ?>">
                         <label>Campus:</label>
-                        <input class="form-input" type="text" name="campus" placeholder="U of R" value="<?php echo $campus; ?>">
+                        <select class="form-input" name="campus">
+                            <option value="University of Regina" selected>University of Regina</option>
+                            <option value="Campion College">Campion College</option>
+                            <option value="First Nations University of Canada">First Nations University of Canada</option>
+                            <option value="Luther College">Luther College</option>
+                        </select>
                         <span class="help-block">
                             <?php echo $campus_err; ?>
                         </span>
@@ -252,7 +257,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                     <div class="form-group <?php echo (!empty($faculty_err)) ? 'has-error' : ''; ?>">
                         <label>Faculty:</label>
-                        <input class="form-input" type="text" name="faculty" placeholder="Engineering &amp; Applied Science" value="<?php echo $faculty; ?>">
+                        <select class="form-input" name="faculty">
+                            <option value="Engineering and Applied Science" selected>Engineering and Applied Science</option>
+                            <option value="Nursing">Nursing</option>
+                            <option value="Science">Science</option>
+                            <option value="Business Administration">Business Administration</option>
+                            <option value="Arts">Arts</option>
+                            <option value="Kinesiology and Health Studies">Kinesiology and Health Studies</option>
+                            <option value="Social Work">Social Work</option>
+                            <option value="Education">Education</option>
+                            <option value="Media, Art, and Performance">Media, Art, and Performance</option>
+                            <option value="Graduate Studies and Research">Graduate Studies and Research</option>
+                        </select>
                         <span class="help-block">
                             <?php echo $faculty_err; ?>
                         </span>
@@ -268,7 +284,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                     <div class="form-group <?php echo (!empty($major_err)) ? 'has-error' : ''; ?>">
                         <label>Major:</label>
-                        <input class="form-input" type="text" name="major" placeholder="Software Systems Engineering" value="<?php echo $major; ?>">
+                        <select class="form-input" name="campus">
+                            <option value="ESE">Electronic Systems Engineering</option>
+                            <option value="EVSE">Environmental Systems Engineering</option>
+                            <option value="ISE">Industrial Systems Engineering</option>
+                            <option value="PSE">Petroleum Systems Engineering</option>
+                            <option value="SSE" selected>Software Systems Engineering</option>
+                        </select>
                         <span class="help-block">
                             <?php echo $major_err; ?>
                         </span>
