@@ -126,6 +126,10 @@ footer .info-link {
     text-align: center;
 }
 
+footer a.info-link {
+    margin: 10px;
+}
+
 /* Course Tag */
 .courseTag {
     display: grid;
