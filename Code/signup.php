@@ -227,7 +227,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <h2>User SignUp</h1>
                 <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
                     <div class="form-group <?php echo (!empty($sid_err)) ? 'has-error' : ''; ?>">
-                        <label>Student ID:</label>
+                        <label>*** Student ID:</label>
                         <input class="form-input" type="text" name="sid" placeholder="200312345" value="<?php echo $sid; ?>" required>
                         <span class="help-block">
                             <?php echo $sid_err; ?>
@@ -235,7 +235,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     </div>
 
                     <div class="form-group <?php echo (!empty($name_err)) ? 'has-error' : ''; ?>">
-                        <label>Student Name:</label>
+                        <label>*** Student Name:</label>
                         <input class="form-input" type="text" name="name" placeholder="LastName, FirstName" value="<?php echo $name; ?>" required>
                         <span class="help-block">
                             <?php echo $name_err; ?>
@@ -317,7 +317,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     </div>
 
                     <div class="form-group <?php echo (!empty($credit_hour_err)) ? 'has-error' : ''; ?>">
-                        <label>Total Credit Hours:</label>
+                        <label>*** Total Credit Hours:</label>
                         <input class="form-input" type="text" name="credit_hour" placeholder="" value="<?php echo $credit_hour; ?>" required>
                         <span style="margin-left:-20px;">h</span>
                         <span class="help-block">
@@ -326,7 +326,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     </div>
 
                     <div class="form-group <?php echo (!empty($gpa_err)) ? 'has-error' : ''; ?>">
-                        <label>Grade Point Average:</label>
+                        <label>*** Grade Point Average:</label>
                         <input class="form-input" type="text" name="gpa" placeholder="60" value="<?php echo $gpa; ?>" required>
                         <span style="margin-left:-20px;">%</span>
                         <span class="help-block">
@@ -335,7 +335,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     </div>
 
                     <div class="form-group <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>">
-                        <label>Password:</label>
+                        <label>*** Password:</label>
                         <input class="form-input" type="password" name="password" value="<?php echo $password; ?>" required>
                         <span class="help-block">
                             <?php echo $password_err; ?>
@@ -343,7 +343,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     </div>
 
                     <div class="form-group <?php echo (!empty($confirm_password_err)) ? 'has-error' : ''; ?>">
-                        <label>Confirm Password:</label>
+                        <label>*** Confirm Password:</label>
                         <input class="form-input" type="password" name="confirm_password" value="<?php echo $confirm_password; ?>" required>
                         <span class="help-block">
                             <?php echo $confirm_password_err; ?>
