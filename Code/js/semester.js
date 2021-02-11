@@ -110,11 +110,10 @@ function appendCourseCard(short_name, BGC) {
 function removeCourseCard(short_name) {
     var card_id = short_name + "_Card";
     if ($("#" + card_id).length) {
-        document.getElementById(card_id).remove();
+        $( "#" + card_id ).remove();
     } else {
         console.log(card_id + " remove FAILED");
     }
-    
 }
 
 function appendCalendar(short_name) {
