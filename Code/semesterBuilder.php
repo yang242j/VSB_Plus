@@ -130,21 +130,27 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         <div class="stick-bottom">
             <div class="bottom-left" id="course_completed">
                 Courses Completed: <br>
-                <?php
-                // Include the vsbp_db_config.php file
-                require_once "Model/vsbp_db_config.php";
-                $tableName = "S" . $_SESSION['sid'];
-                $takenClass_sql = "SELECT 'course_ID' FROM `" . $tableName . "` WHERE `credit_earned`=`credit_hour`";
-                $result = mysqli_query($conn, $takenClass_sql);
-                if (!$result) {
-                    printf("Error: %s\n", mysqli_error($conn));
-                    exit();
-                }
-                while ($row = $result->fetch_assoc()) {
-                    echo $row["course_ID"];
-                };
-                ?>
-                <div class="courseTag noDrag" id="ense374" draggable="false">ENSE374</div>
+                <script>
+                    $(function() {
+                        <?php
+                        // Include the vsbp_db_config.php file
+                        require_once "Model/vsbp_db_config.php";
+                        $tableName = "S" . $_SESSION['sid'];
+                        $takenClass_sql = "SELECT `course_ID` FROM `" . $tableName . "` WHERE `credit_earned`=`credit_hour`";
+                        $result = mysqli_query($conn, $takenClass_sql);
+                        if (!$result) {
+                            printf("Error: %s\n", mysqli_error($conn));
+                            exit();
+                        }
+                        while ($row = mysqli_fetch_array($result)) {
+                        ?>
+                            courseTag = tagGenerator("<?php echo htmlspecialchars($row['course_ID']); ?>", false);
+                            document.getElementById("course_completed").innerHTML += courseTag;
+                        <?php
+                        };
+                        ?>
+                    });
+                </script>
             </div>
             <div class="bottom-right" ondrop="dropBR(event)" ondragover="allowDrop(event)" ondragenter="dragEnter(event)" ondragleave="dragLeave(event)">
                 Courses To Take: <br>
