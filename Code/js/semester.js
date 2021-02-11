@@ -112,7 +112,7 @@ function removeCourseCard(short_name) {
     if ($("#" + card_id).length) {
         document.getElementById(card_id).remove();
     } else {
-        console.log(card_id + " remove FAILED")
+        console.log(card_id + " remove FAILED");
     }
     
 }
@@ -127,7 +127,11 @@ function appendCalendar(short_name) {
 }
 
 function removeCalendar(short_name) {
-    calendar.getEventById(short_name).remove();
+    if (calendar.getEventById(short_name)) {
+        calendar.getEventById(short_name).remove();
+    } else {
+        console.log("Calendar event " + short_name + " remove FAILED");
+    }
 }
 
 function tagGenerator(short_name, draggable = true) {
