@@ -88,7 +88,7 @@ function setCourse(jsonRsp){
         // <li>Labels: Project Class, *****</li>
         "<li><span class='bold'>Course Description</span>: " + jsonRsp.description + "</li>" 
         // "<li>Professor have taught: </li>"
-    "</ul>" + "<canvas id='chart' width='200' height='200'></canvas>"; 
+    "</ul>" + "<div id='graph'></div>"; 
 
     document.getElementById("popView").innerHTML = detail;
 }

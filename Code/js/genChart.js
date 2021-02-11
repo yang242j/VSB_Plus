@@ -1,13 +1,3 @@
-var canvas;
-var loadStatu = false;
-
-$(document).ready(function(){
-    canvas = document.getElementById("chart").getContext('2d');;
-    loadStatu = true;
-    console.log("html load");
-    console.log(canvas);
-});
-
 function showGraph(sections) {
     //Compute the data for graph
     var lab_count = [0,0,0];
@@ -24,13 +14,12 @@ function showGraph(sections) {
         }
     }
 
-    if (loadStatu == true){
-
     //In case, there is no 'canvas' element in the html
-    // if (!document.getElementById('chart')) {
-    //     $('#graph').html(createCanvas('chart', 200, 200));
-    //     console.log("create the canvas element");
-    // }
+    if (!document.getElementById('chart')) {
+        console.log($('#graph'));
+        $('#graph').html(createCanvas('chart', 200, 200));
+        console.log("create the canvas element");
+    }
 
     // Get the canvas element to generate the graph
     console.log(document.getElementById("chart"));
@@ -92,7 +81,7 @@ function showGraph(sections) {
         },
         options: {scales:{yAxes:[{ticks:{beginAtZero: true}}]}}
     });
-}
+
 }
 
 function createCanvas(id, width, height) {
