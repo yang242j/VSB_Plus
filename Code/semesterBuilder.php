@@ -31,6 +31,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     <script>
         var term = '';
         var courseList = [];
+        var course_completed_list = ['A', 'B'];
     </script>
 </head>
 
@@ -130,6 +131,9 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         <div class="stick-bottom">
             <div class="bottom-left">
                 Courses Completed: <br>
+                <script>
+                    console.log($_SESSION["name"] + " completed courses { " + course_completed_list + " }");
+                </script>
                 <div class="courseTag noDrag" id="ense374" draggable="false">ENSE374</div>
             </div>
             <div class="bottom-right" ondrop="dropBR(event)" ondragover="allowDrop(event)" ondragenter="dragEnter(event)" ondragleave="dragLeave(event)">
