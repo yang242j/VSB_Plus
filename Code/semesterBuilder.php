@@ -132,12 +132,11 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                 Courses Completed: <br>
                 <script>
                     $(function() {
-                        var sid = "<?php echo htmlspecialchars($_SESSION['sid']); ?>";
-                        //completed_course_Func(sid);
+                        var sid = "<?php echo htmlspecialchars($row['course_ID']); ?>";
                         <?php
                         // Include the vsbp_db_config.php file
-                        require_once "vsbp_db_config.php";
-                        $tableName = "S" . $sid;
+                        require_once "Model/vsbp_db_config.php";
+                        $tableName = "S" . $_SESSION['sid'];
                         $takenClass_sql = "SELECT 'course_ID' FROM `" . $tableName . "` WHERE `credit_earned`=`credit_hour`";
                         $result = mysqli_query($conn, $takenClass_sql);
                         if (!$result) {
@@ -146,7 +145,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                         }
                         while ($row = mysqli_fetch_array($result)) {
                         ?>
-                            courseTag = tagGenerator("$row['course_ID']", false);
+                            courseTag = tagGenerator("<?php echo htmlspecialchars($row['course_ID']); ?>", false);
                             document.getElementById("course_completed").innerHTML += courseTag;
                         <?php
                         };
