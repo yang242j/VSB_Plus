@@ -133,8 +133,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                 <script>
                     $(function() {
                         var sid = "<?php echo htmlspecialchars($_SESSION['sid']); ?>";
-                        var pass = "<?php echo htmlspecialchars($_SESSION['password']); ?>";
-                        completed_course_Func(sid, pass);
+                        completed_course_Func(sid);
                     });
                 </script>
                 <div class="courseTag noDrag" id="ense374" draggable="false">ENSE374</div>

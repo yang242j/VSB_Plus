@@ -120,6 +120,6 @@ function appendCalendar(short_name) {
     });
 }
 
-function completed_course_Func(sid, pass) {
-    console.log("HERE")
+function completed_course_Func(sid) {
+    console.log("HERE" + sid);
 }
