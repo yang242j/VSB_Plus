@@ -134,7 +134,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                 // Include the vsbp_db_config.php file
                 require_once "Model/vsbp_db_config.php";
                 $tableName = "S" . $_SESSION['sid'];
-                $takenClass_sql = "SELECT 'course_ID' FROM `" . $tableName . "` WHERE `credit_earned`=`credit_hour`";
+                $takenClass_sql = "SELECT `course_ID` FROM `" . $tableName . "` WHERE `credit_earned`=`credit_hour`";
                 $result = mysqli_query($conn, $takenClass_sql);
                 if (!$result) {
                     printf("Error: %s\n", mysqli_error($conn));
