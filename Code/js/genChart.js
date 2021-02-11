@@ -15,8 +15,8 @@ function showGraph(sections) {
     }
 
     // Get the canvas element to generate the graph
-    console.log(document.getElementById('chart'));
-    var ctx = document.getElementById('chart').getContext('2d');
+    console.log(document.getElementById("courseGraph"));
+    var ctx = document.getElementById("courseGraph").getContext('2d');
 
     var chart = new Chart(ctx, {
         type: 'bar',

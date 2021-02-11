@@ -167,7 +167,7 @@ session_start(); // Initialize the session
                         </ul>
                     </li>
                 </ul>
-                <canvas id="chart" width="200" height="200">
+                <canvas id="courseGraph" width="200" height="200">
                     Your browser doesn't support the HTML5 canvas element
                 </canvas>
             </div>
@@ -183,9 +183,9 @@ session_start(); // Initialize the session
         </div> -->
 
         <!-- For line required js file -->
-        <script src="https://cdn.bootcss.com/jsPlumb/2.6.8/js/jsplumb.min.js"></script>
+        <!-- <script src="https://cdn.bootcss.com/jsPlumb/2.6.8/js/jsplumb.min.js"></script> -->
         <!-- For the popView to input the js file -->
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+        <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script> -->
         <!-- For the graph to input he js file -->
         <script src="https://cdn.bootcdn.net/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
         
