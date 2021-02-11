@@ -135,6 +135,8 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                         var sid = "<?php echo htmlspecialchars($_SESSION['sid']); ?>";
                         //completed_course_Func(sid);
                         <?php
+                        // Include the vsbp_db_config.php file
+                        require_once "vsbp_db_config.php";
                         $tableName = "S" . $sid;
                         $takenClass_sql = "SELECT 'course_ID' FROM `" . $tableName . "` WHERE `credit_earned`=`credit_hour`";
                         $result = mysqli_query($conn, $takenClass_sql);
