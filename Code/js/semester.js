@@ -84,9 +84,10 @@ function dropBR(ev) {
         document.getElementById(short_name).style.backgroundColor = "DarkGrey"; // Set tag BGC to DarkGrey
         document.getElementById(short_name).classList.toogle =("selected-course"); // Remove selected-course class
         // Remove course card from middle section
-        removeCourseCard(short_name)
+        removeCourseCard(short_name);
         // Remove course event from calendar
-        calendar.getEventById(short_name).remove();
+        removeCalendar(short_name);
+        
     }
 }
 
@@ -108,7 +109,12 @@ function appendCourseCard(short_name, BGC) {
 
 function removeCourseCard(short_name) {
     var card_id = short_name + "_Card";
-    document.getElementById(card_id).remove();
+    if ($("#" + card_id).length) {
+        document.getElementById(card_id).remove();
+    } else {
+        console.log(card_id + " remove FAILED")
+    }
+    
 }
 
 function appendCalendar(short_name) {
@@ -118,6 +124,10 @@ function appendCalendar(short_name) {
         start: '2021-01-12',
         end: '2021-01-13'
     });
+}
+
+function removeCalendar(short_name) {
+    calendar.getEventById(short_name).remove();
 }
 
 function tagGenerator(short_name, draggable = true) {
