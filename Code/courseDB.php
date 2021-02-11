@@ -168,8 +168,6 @@ session_start(); // Initialize the session
                     </li>
                 </ul>
                 <canvas id="chart" width="200" height="200"></canvas>
-                <script src="js/genChart.js"></script>
-                <script src="js/courseDB.js"></script>
                 <div id="graph" style="width: 300px; height:300px;"></div>
             </div>
         </div>
@@ -207,5 +205,6 @@ session_start(); // Initialize the session
         <p class="info-link"><a href="homePage.php">About Us</a></p>
     </footer>
 </body>
-
+<script src="js/genChart.js"></script>
+<script src="js/courseDB.js"></script>
 </html>
