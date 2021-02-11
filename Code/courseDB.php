@@ -169,6 +169,7 @@ session_start(); // Initialize the session
                 </ul>
                 <canvas id="chart" width="200" height="200"></canvas>
                 <script src="js/genChart.js"></script>
+                <script src="js/courseDB.js"></script>
                 <div id="graph" style="width: 300px; height:300px;"></div>
             </div>
         </div>
@@ -193,7 +194,6 @@ session_start(); // Initialize the session
 
     <footer>
         <script src="js/main.js"></script>
-        <script src="js/courseDB.js"></script>
         <!-- <script src="js/genChart.js"></script> -->
 
         <p class="copyright">Copyright &copy; Sep. 2020 to
