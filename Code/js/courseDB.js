@@ -71,7 +71,7 @@ function courseSelect(event){
             var jsonRsp = JSON.parse(this.responseText);
             setCourse(jsonRsp);
             document.getElementById("message").innerHTML = short_name + " has been selected";
-            // showGraph(short_name);
+            showGraph(short_name);
         }
     };
     // xmlhttp.open("GET", "getCourse.php?short_name=" + short_name, false); // Get the data from database by the server php file
