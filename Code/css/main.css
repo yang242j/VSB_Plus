@@ -126,7 +126,7 @@ footer .info-link {
     text-align: center;
 }
 
-footer a.info-link {
+footer .info-link a {
     margin: 10px;
 }
 
