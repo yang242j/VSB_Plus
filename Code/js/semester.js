@@ -119,3 +119,7 @@ function appendCalendar(short_name) {
         end: '2021-01-13'
     });
 }
+
+function completed_course_Func(sid, pass) {
+    console.log("HERE")
+}
