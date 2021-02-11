@@ -1,10 +1,11 @@
 var canvas;
 var loadStatu = false;
 
-$(document).ready(function(){ 
-    canvas = document.getElementById("chart");
+$(document).ready(function(){
+    canvas = document.getElementById("chart").getContext('2d');;
     loadStatu = true;
     console.log("html load");
+    console.log(canvas);
 });
 
 function showGraph(sections) {
