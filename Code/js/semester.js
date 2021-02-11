@@ -121,14 +121,14 @@ function appendCalendar(short_name) {
 }
 
 function completed_course_Func(sid) {
-    courseTag = tagGenerator("AAA 111");
+    courseTag = tagGenerator("AAA 111", false);
     document.getElementById("course_completed").innerHTML += courseTag;
 }
 
-function tagGenerator(short_name, draggable = TRUE) {
+function tagGenerator(short_name, draggable = true) {
     var course_tag = "";
 
-    if (draggable == TRUE) {
+    if (draggable == true) {
         course_tag =
             "<div class='courseTag' id='" + short_name +
             "' draggable='true'>" + short_name +

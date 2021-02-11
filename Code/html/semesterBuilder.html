@@ -130,8 +130,14 @@
             </div>
         </div>
         <div class="stick-bottom">
-            <div class="bottom-left">
+            <div class="bottom-left" id="course_completed">
                 Courses Completed: <br>
+                <script>
+                    $(function() {
+                        var sid = "<?php echo htmlspecialchars($_SESSION['sid']); ?>";
+                        completed_course_Func(sid);
+                    });
+                </script>
                 <div class="courseTag noDrag" id="ense374" draggable="false">ENSE374</div>
             </div>
             <div class="bottom-right" ondrop="dropBR(event)" ondragover="allowDrop(event)"
