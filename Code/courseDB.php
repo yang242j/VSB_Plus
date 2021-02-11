@@ -168,7 +168,6 @@ session_start(); // Initialize the session
                     </li>
                 </ul>
                 <canvas id="chart" width="200" height="200"></canvas>
-                <div id="graph" style="width: 300px; height:300px;"></div>
             </div>
         </div>
 
