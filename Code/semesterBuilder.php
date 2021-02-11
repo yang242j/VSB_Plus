@@ -140,8 +140,8 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                     printf("Error: %s\n", mysqli_error($conn));
                     exit();
                 }
-                while ($row = mysqli_fetch_array($result)) {
-                    echo $row['course_ID'];
+                while ($row = $result->fetch_assoc()) {
+                    echo $row["course_ID"];
                 };
                 ?>
                 <div class="courseTag noDrag" id="ense374" draggable="false">ENSE374</div>
