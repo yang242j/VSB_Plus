@@ -287,7 +287,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                     <div class="form-group <?php echo (!empty($major_err)) ? 'has-error' : ''; ?>">
                         <label>Major:</label>
-                        <select class="form-input" name="campus">
+                        <select class="form-input" name="major">
                             <option value="ESE">Electronic Systems Engineering</option>
                             <option value="EVSE">Environmental Systems Engineering</option>
                             <option value="ISE">Industrial Systems Engineering</option>
