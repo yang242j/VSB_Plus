@@ -173,8 +173,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             </cite>
             Note: <br>
         </p>
-        <p class="info-link"><a href="homePage.php">About Us</a></p>
-        <p class="info-link"><a href="View/api_test.html">API Test</a></p>
+        <p class="info-link"><a href="homePage.php">About Us</a><a href="View/api_test.html">API Test</a></p>
         <div id="test">CLICK</div>
         <script>
             $("#test").click(function() {
