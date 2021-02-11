@@ -151,7 +151,6 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                         ?>
                     });
                 </script>
-                <div class="courseTag noDrag" id="ense374" draggable="false">ENSE374</div>
             </div>
             <div class="bottom-right" ondrop="dropBR(event)" ondragover="allowDrop(event)" ondragenter="dragEnter(event)" ondragleave="dragLeave(event)">
                 Courses To Take: <br>
