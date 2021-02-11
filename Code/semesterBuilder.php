@@ -132,7 +132,6 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                 Courses Completed: <br>
                 <script>
                     $(function() {
-                        var sid = "<?php echo htmlspecialchars($row['course_ID']); ?>";
                         <?php
                         // Include the vsbp_db_config.php file
                         require_once "Model/vsbp_db_config.php";
