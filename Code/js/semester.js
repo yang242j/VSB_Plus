@@ -151,3 +151,7 @@ function tagGenerator(short_name, draggable = true) {
 
     return course_tag;
 }
+
+function menuFunc3() {
+    $(".stick-bottom").hide(1000);
+}
