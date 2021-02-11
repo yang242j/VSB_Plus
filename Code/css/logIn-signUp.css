@@ -26,10 +26,14 @@ body section.container div.form-div span.help-block {
     color: red;
 }
 
-body section.container div.form-div input.form-input {
+body section.container div.form-div .form-input {
     width: 96%;
     padding: 2%;
     border: none;
+}
+
+body section.container div.form-div select.form-input {
+    width: 100%;
 }
 
 /***all input buttons***/
