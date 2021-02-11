@@ -109,11 +109,12 @@ function appendCourseCard(short_name, BGC) {
 
 function removeCourseCard(short_name) {
     var card_id = short_name + "_Card";
-    if (document.getElementById(card_id).remove()) {
-        console.log(card_id + " remove SUCCESS");
-    } else {
-        console.log(card_id + " remove FAILED");
+    try {
+        document.getElementById(card_id).remove();
+    } catch (e) {
+        console.error(card_id + " remove FAILED");
     }
+    
 }
 
 function appendCalendar(short_name) {
@@ -126,10 +127,10 @@ function appendCalendar(short_name) {
 }
 
 function removeCalendar(short_name) {
-    if (calendar.getEventById(short_name).remove()) {
-        console.log("Calendar event " + short_name + " remove SUCCESS");
-    } else {
-        console.log("Calendar event " + short_name + " remove FAILED");
+    try {
+        calendar.getEventById(short_name).remove();
+    } catch (e) {
+        console.error("Calendar event" + short_name + " remove FAILED");
     }
 }
 
