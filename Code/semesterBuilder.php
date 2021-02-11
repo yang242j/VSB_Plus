@@ -166,7 +166,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                         }
 
                         // if classList is empty, add example div
-                        if (courseList.length == 0) {
+                        if (courseList.length == 0 && $("#exampleDiv").length == 0) {
                             $("#courseCardList").append("<div class='courseInfo' id='exampleDiv'> <h2> Course Tag </h2> <h4> Course Title </h4> <p> Course Detail Info: **** ** ** ** * ** * * * ** </p> </div>");
                         }
                     });
