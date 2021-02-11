@@ -153,5 +153,5 @@ function tagGenerator(short_name, draggable = true) {
 }
 
 function menuFunc3() {
-    $(".stick-bottom").toggle(1000);
+    $(".stick-bottom").toggle({bottom: '0'}, 1000);
 }
