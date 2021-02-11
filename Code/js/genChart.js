@@ -27,14 +27,15 @@ function showGraph(sections) {
     if (loadStatu == true){
 
     //In case, there is no 'canvas' element in the html
-    if (!document.getElementById('chart')) {
-        $('#graph').html(createCanvas('chart', 200, 200));
-        console.log("create the canvas element");
-    }
+    // if (!document.getElementById('chart')) {
+    //     $('#graph').html(createCanvas('chart', 200, 200));
+    //     console.log("create the canvas element");
+    // }
 
     // Get the canvas element to generate the graph
     // console.log(document.getElementById("chart"));
-    var ctx = document.getElementById("chart").getContext('2d');
+    // var ctx = document.getElementById("chart").getContext('2d');
+    var ctx = canvas;
 
     var chart = new Chart(ctx, {
         type: 'bar',
