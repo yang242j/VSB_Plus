@@ -29,7 +29,7 @@ function genGraph(sections) {
         data: {
             labels: labels_list,
             datasets: [{
-                label: 'Lab count',
+                label: 'Number of Lab',
                 data: lab_count,
                 backgroundColor: [
                     'rgba(255, 99, 132, 0.2)',
@@ -53,7 +53,7 @@ function genGraph(sections) {
                 ],
                 borderWidth: 1
             },{
-                label: 'Lecture count',
+                label: 'Number of Lecture',
                 data: lecture_count,
                 backgroundColor: [
                     // 'rgba(255, 99, 132, 0.2)',
