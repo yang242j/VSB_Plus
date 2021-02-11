@@ -121,5 +121,24 @@ function appendCalendar(short_name) {
 }
 
 function completed_course_Func(sid) {
-    console.log("HERE" + sid);
+    courseTag = tagGenerator("AAA 111", FALSE);
+    document.getElementById("course_completed").innerHTML += courseTag;
+}
+
+function tagGenerator(short_name, draggable = TRUE) {
+    var course_tag = "";
+
+    if (draggable == TRUE) {
+        course_tag =
+            "<div class='courseTag' id='" + short_name +
+            "' draggable='true'>" + short_name +
+            "</div>";
+    } else {
+        course_tag =
+            "<div class='courseTag noDrag' id='" + short_name +
+            "' draggable='false'>" + short_name +
+            "</div>";
+    }
+
+    return course_tag;
 }
