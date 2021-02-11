@@ -39,7 +39,7 @@ function dropL(ev) {
     var randomColorIndex = "";
     do {
         randomColorIndex = Math.floor(Math.random() * colors.length);
-        console.log(randomColorIndex);
+        //console.log(randomColorIndex);
     } while (randomColorIndex == pre_colorID);
     var BGC = colors[randomColorIndex];
 

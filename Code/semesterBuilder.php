@@ -82,7 +82,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             <script>
                 $(".dropZone").on("drop", function(event) {
                     var courseName = event.originalEvent.dataTransfer.getData('Text');
-                    console.log('L:' + courseName);
+                    console.log(courseName + ' Selected');
 
                     // If this course Name is NOT in the courseList, push
                     if ($.inArray(courseName, courseList) === -1) {
@@ -137,7 +137,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                 <script>
                     $(".bottom-right").on("drop", function(event) {
                         var courseName = event.originalEvent.dataTransfer.getData('Text');
-                        console.log('BR:' + courseName);
+                        console.log(courseName + ' Unselected');
 
                         // on drop, remove course Name from courseList
                         const index = courseList.indexOf(courseName);
@@ -148,9 +148,6 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                         // if classList is empty, add example div
                         if (courseList.length == 0) {
                             $("#courseCardList").append("<div class='courseInfo' id='exampleDiv'> <h2> Course Tag </h2> <h4> Course Title </h4> <p> Course Detail Info: **** ** ** ** * ** * * * ** </p> </div>");
-                            console.log('example-div appended');
-                        } else {
-                            console.log('example-div append FAILED');
                         }
                     });
                 </script>
