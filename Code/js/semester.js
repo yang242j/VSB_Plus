@@ -82,7 +82,7 @@ function dropBR(ev) {
         // 1.Append tag at BR
         document.getElementsByClassName("bottom-right")[0].appendChild(document.getElementById(short_name));
         document.getElementById(short_name).style.backgroundColor = "DarkGrey"; // Set tag BGC to DarkGrey
-        document.getElementById(short_name).classList.toogle =("selected-course"); // Remove selected-course class
+        document.getElementById(short_name).classList.toggle("selected-course"); // Remove selected-course class
         // Remove course card from middle section
         removeCourseCard(short_name);
         // Remove course event from calendar
