@@ -57,12 +57,13 @@ function dropL(ev) {
         if ($(".selected-course[id='" + short_name + "']").length) {	
             //console.log($(".selected-course[id='" + short_name + "']").length);
             console.log(short_name + " already exist in course List");
+            return;
         } else {
             //console.log($(".left-section[id='" + short_name + "']").length);
             //1.Append courseTag-list
             document.getElementsByClassName("left-section")[0].appendChild(document.getElementById(short_name));
             document.getElementById(short_name).style.backgroundColor = BGC;
-            document.getElementById(short_name).classList.toogle =("selected-course"); // Add selected-course class
+            document.getElementById(short_name).classList.toogle("selected-course"); // Add selected-course class
             //2.Append courseCard-list
             appendCourseCard(short_name, BGC);
             pre_colorID = randomColorIndex; //2.1.Store color id
