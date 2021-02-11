@@ -5,6 +5,7 @@ function showGraph(sections) {
     var labels_list = ['2020 Spring/Summer', '2020 Fall', '2021 Winter'];
     for (var i in sections) {
         var sec = sections[i];
+        console.log(sec);
         if (sec.schedule_type == 'Lecture'){
             var index = labels_list.indexOf(sec.term);
             lecture_count[index] += 1;
@@ -13,16 +14,14 @@ function showGraph(sections) {
             lab_count[index] += 1;
         }
     }
+    console.log(lecture_count);
 
     //In case, there is no 'canvas' element in the html
     if (!document.getElementById('chart')) {
-        console.log($('#graph'));
         $('#graph').html(createCanvas('chart', 200, 200));
-        console.log("create the canvas element");
     }
 
     // Get the canvas element to generate the graph
-    console.log(document.getElementById("chart"));
     var ctx = document.getElementById("chart").getContext('2d');
 
     var chart = new Chart(ctx, {

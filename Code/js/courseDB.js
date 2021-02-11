@@ -86,7 +86,7 @@ function setCourse(jsonRsp){
         "<li><span class='bold'>Course Name</span>: <span id='fullName'>" + jsonRsp.title + "</span> </li>" +
         "<li>***<span class='bold'>Prerequisites</span>: <span id='preReqClass'>" + jsonRsp.prerequisite + "</span> ***</li>" +
         // <li>Labels: Project Class, *****</li>
-        "<li><span class='bold'>Course Description</span>: " + jsonRsp.description + "</li>" + "</ul>" + "<div id='graph'></div>"; 
+        "<li><span class='bold'>Course Description</span>: " + jsonRsp.description + "</li>" + "</ul>" + "<div id='graph' class='graph_size'></div>"; 
         // "<li>Professor have taught: </li>"
     
 

@@ -191,3 +191,8 @@ body .course{
 .inline{
     display: inline;
 }
+
+.graph_size{
+    width: 200px;
+    height: 200px;
+}
