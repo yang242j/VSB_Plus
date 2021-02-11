@@ -86,9 +86,9 @@ function setCourse(jsonRsp){
         "<li><span class='bold'>Course Name</span>: <span id='fullName'>" + jsonRsp.title + "</span> </li>" +
         "<li>***<span class='bold'>Prerequisites</span>: <span id='preReqClass'>" + jsonRsp.prerequisite + "</span> ***</li>" +
         // <li>Labels: Project Class, *****</li>
-        "<li><span class='bold'>Course Description</span>: " + jsonRsp.description + "</li>" 
+        "<li><span class='bold'>Course Description</span>: " + jsonRsp.description + "</li>" + "</ul>" + "<div id='graph'></div>"; 
         // "<li>Professor have taught: </li>"
-    "</ul>" + "<div id='graph'></div>"; 
+    
 
     document.getElementById("popView").innerHTML = detail;
 }
