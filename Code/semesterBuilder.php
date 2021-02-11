@@ -142,9 +142,10 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                             printf("Error: %s\n", mysqli_error($conn));
                             exit();
                         }
-                        while ($row = $result->fetch_assoc()) {
+                        while ($row = mysqli_fetch_array($result)) {
+                            echo $row['course_ID'];
                         ?>
-                            var short_name = <?php echo $row['course_ID']; ?>
+                            var short_name = "<?php echo $row['course_ID']; ?>";
                             courseTag = tagGenerator(short_name, false);
                             document.getElementById("course_completed").innerHTML += courseTag;
                         <?php
