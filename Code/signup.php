@@ -228,7 +228,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
                     <div class="form-group <?php echo (!empty($sid_err)) ? 'has-error' : ''; ?>">
                         <label>Student ID:</label>
-                        <input class="form-input" type="text" name="sid" placeholder="200312345" value="<?php echo $sid; ?>">
+                        <input class="form-input" type="text" name="sid" placeholder="200312345" value="<?php echo $sid; ?>" required>
                         <span class="help-block">
                             <?php echo $sid_err; ?>
                         </span>
@@ -236,7 +236,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                     <div class="form-group <?php echo (!empty($name_err)) ? 'has-error' : ''; ?>">
                         <label>Student Name:</label>
-                        <input class="form-input" type="text" name="name" placeholder="LastName, FirstName" value="<?php echo $name; ?>">
+                        <input class="form-input" type="text" name="name" placeholder="LastName, FirstName" value="<?php echo $name; ?>" required>
                         <span class="help-block">
                             <?php echo $name_err; ?>
                         </span>
@@ -258,16 +258,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <div class="form-group <?php echo (!empty($faculty_err)) ? 'has-error' : ''; ?>">
                         <label>Faculty:</label>
                         <select class="form-input" name="faculty">
+                            <option value="Arts">Arts</option>
+                            <option value="Business Administration">Business Administration</option>
+                            <option value="Centre for Continuing Education">Centre for Continuing Education</option>
+                            <option value="Education">Education</option>
                             <option value="Engineering and Applied Science" selected>Engineering and Applied Science</option>
+                            <option value="Kinesiology and Health Studies">Kinesiology and Health Studies</option>
+                            <option value="La Cité universitaire francophone">La Cité universitaire francophone</option>
+                            <option value="Media, Art, and Performance">Media, Art, and Performance</option>
                             <option value="Nursing">Nursing</option>
                             <option value="Science">Science</option>
-                            <option value="Business Administration">Business Administration</option>
-                            <option value="Arts">Arts</option>
-                            <option value="Kinesiology and Health Studies">Kinesiology and Health Studies</option>
                             <option value="Social Work">Social Work</option>
-                            <option value="Education">Education</option>
-                            <option value="Media, Art, and Performance">Media, Art, and Performance</option>
-                            <option value="Graduate Studies and Research">Graduate Studies and Research</option>
                         </select>
                         <span class="help-block">
                             <?php echo $faculty_err; ?>
@@ -276,7 +277,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                     <div class="form-group <?php echo (!empty($program_err)) ? 'has-error' : ''; ?>">
                         <label>Program:</label>
-                        <input class="form-input" type="text" name="program" placeholder="Bachelor of Applied Science" value="<?php echo $program; ?>">
+                        <select class="form-input" name="program">
+                            <option value="BASc" selected>Bachelor of Applied Science</option>
+                        </select>
                         <span class="help-block">
                             <?php echo $program_err; ?>
                         </span>
@@ -315,7 +318,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                     <div class="form-group <?php echo (!empty($credit_hour_err)) ? 'has-error' : ''; ?>">
                         <label>Total Credit Hours:</label>
-                        <input class="form-input" type="text" name="credit_hour" placeholder="" value="<?php echo $credit_hour; ?>">
+                        <input class="form-input" type="text" name="credit_hour" placeholder="" value="<?php echo $credit_hour; ?>" required>
                         <span style="margin-left:-20px;">h</span>
                         <span class="help-block">
                             <?php echo $credit_hour_err; ?>
@@ -324,7 +327,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                     <div class="form-group <?php echo (!empty($gpa_err)) ? 'has-error' : ''; ?>">
                         <label>Grade Point Average:</label>
-                        <input class="form-input" type="text" name="gpa" placeholder="60" value="<?php echo $gpa; ?>">
+                        <input class="form-input" type="text" name="gpa" placeholder="60" value="<?php echo $gpa; ?>" required>
                         <span style="margin-left:-20px;">%</span>
                         <span class="help-block">
                             <?php echo $gpa_err; ?>
@@ -333,7 +336,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                     <div class="form-group <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>">
                         <label>Password:</label>
-                        <input class="form-input" type="password" name="password" value="<?php echo $password; ?>">
+                        <input class="form-input" type="password" name="password" value="<?php echo $password; ?>" required>
                         <span class="help-block">
                             <?php echo $password_err; ?>
                         </span>
@@ -341,7 +344,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                     <div class="form-group <?php echo (!empty($confirm_password_err)) ? 'has-error' : ''; ?>">
                         <label>Confirm Password:</label>
-                        <input class="form-input" type="password" name="confirm_password" value="<?php echo $confirm_password; ?>">
+                        <input class="form-input" type="password" name="confirm_password" value="<?php echo $confirm_password; ?>" required>
                         <span class="help-block">
                             <?php echo $confirm_password_err; ?>
                         </span>
