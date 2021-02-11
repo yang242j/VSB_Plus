@@ -128,7 +128,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             </div>
         </div>
         <div class="stick-bottom">
-            <div class="bottom-left">
+            <div class="bottom-left" id="course_completed">
                 Courses Completed: <br>
                 <script>
                     $(function() {
