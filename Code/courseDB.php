@@ -192,6 +192,8 @@ session_start(); // Initialize the session
 
     <footer>
         <script src="js/main.js"></script>
+        <script src="js/courseDB.js"></script>
+        <script src="js/genChart.js"></script>
         <!-- <script src="js/genChart.js"></script> -->
 
         <p class="copyright">Copyright &copy; Sep. 2020 to
@@ -205,6 +207,5 @@ session_start(); // Initialize the session
         <p class="info-link"><a href="homePage.php">About Us</a></p>
     </footer>
 </body>
-<script src="js/genChart.js"></script>
-<script src="js/courseDB.js"></script>
+
 </html>
