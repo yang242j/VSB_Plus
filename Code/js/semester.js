@@ -109,8 +109,8 @@ function appendCourseCard(short_name, BGC) {
 
 function removeCourseCard(short_name) {
     var card_id = short_name + "_Card";
-    if ($("#" + card_id).length) {
-        $( "#" + card_id ).remove();
+    if (document.getElementById(card_id).remove()) {
+        console.log(card_id + " remove SUCCESS");
     } else {
         console.log(card_id + " remove FAILED");
     }
@@ -126,8 +126,8 @@ function appendCalendar(short_name) {
 }
 
 function removeCalendar(short_name) {
-    if (calendar.getEventById(short_name)) {
-        calendar.getEventById(short_name).remove();
+    if (calendar.getEventById(short_name).remove()) {
+        console.log("Calendar event " + short_name + " remove SUCCESS");
     } else {
         console.log("Calendar event " + short_name + " remove FAILED");
     }
