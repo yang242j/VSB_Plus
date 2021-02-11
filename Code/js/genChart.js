@@ -1,4 +1,5 @@
-function showGraph(sections) {
+function showGraph(short_name) {
+    var sections = getSec(short_name);
     //Compute the data for graph
     var lab_count = [0,0,0];
     var lecture_count = [0,0,0];
@@ -89,4 +90,11 @@ function createCanvas(id, width, height) {
     canvasNode.width = width;
     canvasNode.height = height;
     return canvasNode;
+}
+
+function getSec(name){
+    var short_name = {'short_name':name};
+    $.post('Model/section.php', short_name, function (data, status) {
+        return JSON.parse(data);
+    });
 }
