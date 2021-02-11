@@ -133,7 +133,22 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                 <script>
                     $(function() {
                         var sid = "<?php echo htmlspecialchars($_SESSION['sid']); ?>";
-                        completed_course_Func(sid);
+                        //completed_course_Func(sid);
+                        <?php
+                        $tableName = "S" . $sid;
+                        $takenClass_sql = "SELECT 'course_ID' FROM `" . $tableName . "` WHERE `credit_earned`=`credit_hour`";
+                        $result = mysqli_query($conn, $takenClass_sql);
+                        if (!$result) {
+                            printf("Error: %s\n", mysqli_error($conn));
+                            exit();
+                        }
+                        while ($row = mysqli_fetch_array($result)) {
+                        ?>
+                            courseTag = tagGenerator("$row['course_ID']", false);
+                            document.getElementById("course_completed").innerHTML += courseTag;
+                        <?php
+                        };
+                        ?>
                     });
                 </script>
                 <div class="courseTag noDrag" id="ense374" draggable="false">ENSE374</div>
