@@ -16,7 +16,7 @@ function showGraph(sections) {
 
     //In case, there is no 'canvas' element in the html
     if (!document.getElementById('chart')) {
-        $('#graph').html(createCanvas('chart', 100, 100));
+        $('#graph').html(createCanvas('chart', 200, 200));
     }
 
     // Get the canvas element to generate the graph
