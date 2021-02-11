@@ -57,7 +57,6 @@ function dropL(ev) {
         if ($(".selected-course[id='" + short_name + "']").length) {	
             //console.log($(".selected-course[id='" + short_name + "']").length);
             console.log(short_name + " already exist in course List");
-            return;
         } else {
             //console.log($(".left-section[id='" + short_name + "']").length);
             //1.Append courseTag-list
