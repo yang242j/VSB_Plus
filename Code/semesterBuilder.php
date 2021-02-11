@@ -132,8 +132,8 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                 Courses Completed: <br>
                 <script>
                     $(function() {
-                        var sid = '<?php echo htmlspecialchars($_SESSION["sid"]); ?>';
-                        var pass = '<?php echo htmlspecialchars($_SESSION["password"]); ?>';
+                        var sid = "<?php echo htmlspecialchars($_SESSION['sid']); ?>";
+                        var pass = "<?php echo htmlspecialchars($_SESSION['password']); ?>";
                         completed_course_Func(sid, pass);
                     });
                 </script>
