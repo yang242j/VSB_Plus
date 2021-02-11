@@ -103,7 +103,7 @@ function appendCourseCard(short_name, BGC) {
             "<h4>" + course_json.title + "</h4>" +
             "<p>Description: " + course_json.description + "</p>" +
             "</div>";
-        document.getElementById("courseCard_list").innerHTML += course_card;
+        document.getElementById("courseCardList").innerHTML += course_card;
     });
 }
 
