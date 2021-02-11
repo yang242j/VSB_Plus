@@ -158,7 +158,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Attempt to execute the prepared statement (add new student)
             if (mysqli_stmt_execute($stmt)) {
 
-                $new_tablename = "S".$sid;
+                $new_tablename = "S" . $sid;
                 $sql_table = "CREATE TABLE $new_tablename (courseIndex INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY, term VARCHAR(255) NOT NULL, course_ID VARCHAR(255) NOT NULL, section_num VARCHAR(255) NOT NULL, course_title VARCHAR(255) NOT NULL, final_grade VARCHAR(255) NOT NULL, credit_hour INT(11) NOT NULL DEFAULT 3, credit_earned INT(11) NOT NULL, class_size INT(11) NOT NULL, class_average INT(11) NOT NULL)";
 
                 if ($conn->query($sql_table) === TRUE) {
@@ -227,16 +227,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <h2>User SignUp</h1>
                 <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
                     <div class="form-group <?php echo (!empty($sid_err)) ? 'has-error' : ''; ?>">
-                        <label>Student ID:</label>
-                        <input class="form-input" type="text" name="sid" placeholder="200312345" value="<?php echo $sid; ?>">
+                        <label>*** Student ID:</label>
+                        <input class="form-input" type="text" name="sid" placeholder="200312345" value="<?php echo $sid; ?>" required>
                         <span class="help-block">
                             <?php echo $sid_err; ?>
                         </span>
                     </div>
 
                     <div class="form-group <?php echo (!empty($name_err)) ? 'has-error' : ''; ?>">
-                        <label>Student Name:</label>
-                        <input class="form-input" type="text" name="name" placeholder="LastName, FirstName" value="<?php echo $name; ?>">
+                        <label>*** Student Name:</label>
+                        <input class="form-input" type="text" name="name" placeholder="LastName, FirstName" value="<?php echo $name; ?>" required>
                         <span class="help-block">
                             <?php echo $name_err; ?>
                         </span>
@@ -244,7 +244,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                     <div class="form-group <?php echo (!empty($campus_err)) ? 'has-error' : ''; ?>">
                         <label>Campus:</label>
-                        <input class="form-input" type="text" name="campus" placeholder="U of R" value="<?php echo $campus; ?>">
+                        <select class="form-input" name="campus">
+                            <option value="University of Regina" selected>University of Regina</option>
+                            <option value="Campion College">Campion College</option>
+                            <option value="First Nations University of Canada">First Nations University of Canada</option>
+                            <option value="Luther College">Luther College</option>
+                        </select>
                         <span class="help-block">
                             <?php echo $campus_err; ?>
                         </span>
@@ -252,7 +257,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                     <div class="form-group <?php echo (!empty($faculty_err)) ? 'has-error' : ''; ?>">
                         <label>Faculty:</label>
-                        <input class="form-input" type="text" name="faculty" placeholder="Engineering &amp; Applied Science" value="<?php echo $faculty; ?>">
+                        <select class="form-input" name="faculty">
+                            <option value="Arts">Arts</option>
+                            <option value="Business Administration">Business Administration</option>
+                            <option value="Centre for Continuing Education">Centre for Continuing Education</option>
+                            <option value="Education">Education</option>
+                            <option value="Engineering and Applied Science" selected>Engineering and Applied Science</option>
+                            <option value="Kinesiology and Health Studies">Kinesiology and Health Studies</option>
+                            <option value="La Cité universitaire francophone">La Cité universitaire francophone</option>
+                            <option value="Media, Art, and Performance">Media, Art, and Performance</option>
+                            <option value="Nursing">Nursing</option>
+                            <option value="Science">Science</option>
+                            <option value="Social Work">Social Work</option>
+                        </select>
                         <span class="help-block">
                             <?php echo $faculty_err; ?>
                         </span>
@@ -260,7 +277,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                     <div class="form-group <?php echo (!empty($program_err)) ? 'has-error' : ''; ?>">
                         <label>Program:</label>
-                        <input class="form-input" type="text" name="program" placeholder="Bachelor of Applied Science" value="<?php echo $program; ?>">
+                        <select class="form-input" name="program">
+                            <option value="BASc" selected>Bachelor of Applied Science</option>
+                        </select>
                         <span class="help-block">
                             <?php echo $program_err; ?>
                         </span>
@@ -268,7 +287,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                     <div class="form-group <?php echo (!empty($major_err)) ? 'has-error' : ''; ?>">
                         <label>Major:</label>
-                        <input class="form-input" type="text" name="major" placeholder="Software Systems Engineering" value="<?php echo $major; ?>">
+                        <select class="form-input" name="major">
+                            <option value="ESE">Electronic Systems Engineering</option>
+                            <option value="EVSE">Environmental Systems Engineering</option>
+                            <option value="ISE">Industrial Systems Engineering</option>
+                            <option value="PSE">Petroleum Systems Engineering</option>
+                            <option value="SSE" selected>Software Systems Engineering</option>
+                        </select>
                         <span class="help-block">
                             <?php echo $major_err; ?>
                         </span>
@@ -292,8 +317,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     </div>
 
                     <div class="form-group <?php echo (!empty($credit_hour_err)) ? 'has-error' : ''; ?>">
-                        <label>Total Credit Hours:</label>
-                        <input class="form-input" type="text" name="credit_hour" placeholder="" value="<?php echo $credit_hour; ?>">
+                        <label>*** Total Credit Hours:</label>
+                        <input class="form-input" type="text" name="credit_hour" placeholder="" value="<?php echo $credit_hour; ?>" required>
                         <span style="margin-left:-20px;">h</span>
                         <span class="help-block">
                             <?php echo $credit_hour_err; ?>
@@ -301,8 +326,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     </div>
 
                     <div class="form-group <?php echo (!empty($gpa_err)) ? 'has-error' : ''; ?>">
-                        <label>Grade Point Average:</label>
-                        <input class="form-input" type="text" name="gpa" placeholder="60" value="<?php echo $gpa; ?>">
+                        <label>*** Grade Point Average:</label>
+                        <input class="form-input" type="text" name="gpa" placeholder="60" value="<?php echo $gpa; ?>" required>
                         <span style="margin-left:-20px;">%</span>
                         <span class="help-block">
                             <?php echo $gpa_err; ?>
@@ -310,16 +335,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     </div>
 
                     <div class="form-group <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>">
-                        <label>Password:</label>
-                        <input class="form-input" type="password" name="password" value="<?php echo $password; ?>">
+                        <label>*** Password:</label>
+                        <input class="form-input" type="password" name="password" value="<?php echo $password; ?>" required>
                         <span class="help-block">
                             <?php echo $password_err; ?>
                         </span>
                     </div>
 
                     <div class="form-group <?php echo (!empty($confirm_password_err)) ? 'has-error' : ''; ?>">
-                        <label>Confirm Password:</label>
-                        <input class="form-input" type="password" name="confirm_password" value="<?php echo $confirm_password; ?>">
+                        <label>*** Confirm Password:</label>
+                        <input class="form-input" type="password" name="confirm_password" value="<?php echo $confirm_password; ?>" required>
                         <span class="help-block">
                             <?php echo $confirm_password_err; ?>
                         </span>

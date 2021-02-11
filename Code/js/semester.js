@@ -39,7 +39,7 @@ function dropL(ev) {
     var randomColorIndex = "";
     do {
         randomColorIndex = Math.floor(Math.random() * colors.length);
-        console.log(randomColorIndex);
+        //console.log(randomColorIndex);
     } while (randomColorIndex == pre_colorID);
     var BGC = colors[randomColorIndex];
 
@@ -56,14 +56,14 @@ function dropL(ev) {
         //if tag exist, refuse to append
         if ($(".selected-course[id='" + short_name + "']").length) {	
             //console.log($(".selected-course[id='" + short_name + "']").length);
-            //console.log(short_name + " already exist in course List");
+            console.log(short_name + " already exist in course List");
             return;
         } else {
             //console.log($(".left-section[id='" + short_name + "']").length);
             //1.Append courseTag-list
             document.getElementsByClassName("left-section")[0].appendChild(document.getElementById(short_name));
             document.getElementById(short_name).style.backgroundColor = BGC;
-            document.getElementById(short_name).classList.add("selected-course");
+            document.getElementById(short_name).classList.toogle =("selected-course"); // Add selected-course class
             //2.Append courseCard-list
             appendCourseCard(short_name, BGC);
             pre_colorID = randomColorIndex; //2.1.Store color id
@@ -79,13 +79,12 @@ function dropBR(ev) {
         ev.preventDefault();
     } else {
         ev.preventDefault();
-        // Append tag at BR
+        // 1.Append tag at BR
         document.getElementsByClassName("bottom-right")[0].appendChild(document.getElementById(short_name));
-        // Set tag BGC to DarkGrey
-        document.getElementById(short_name).style.backgroundColor = "DarkGrey";
+        document.getElementById(short_name).style.backgroundColor = "DarkGrey"; // Set tag BGC to DarkGrey
+        document.getElementById(short_name).classList.toogle =("selected-course"); // Remove selected-course class
         // Remove course card from middle section
-        var card_id = short_name + "_Card";
-        document.getElementById(card_id).remove();
+        removeCourseCard(short_name)
         // Remove course event from calendar
         calendar.getEventById(short_name).remove();
     }
@@ -107,6 +106,11 @@ function appendCourseCard(short_name, BGC) {
     });
 }
 
+function removeCourseCard(short_name) {
+    var card_id = short_name + "_Card";
+    document.getElementById(card_id).remove();
+}
+
 function appendCalendar(short_name) {
     calendar.addEvent({
         id: short_name,
@@ -114,4 +118,8 @@ function appendCalendar(short_name) {
         start: '2021-01-12',
         end: '2021-01-13'
     });
+}
+
+function completed_course_Func(sid) {
+    console.log("HERE" + sid);
 }

@@ -65,6 +65,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             $_SESSION["loggedin"] = true;
                             $_SESSION["sid"] = $studentid;
                             $_SESSION["name"] = $name;
+                            $_SESSION["major"] = $major;
 
                             // Redirect user to welcome page
                             header("location: academicBuilder_main.html");
