@@ -144,8 +144,8 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                         }
                         while ($row = mysqli_fetch_array($result)) {
                         ?>
-                            courseTag = tagGenerator("<?php echo htmlspecialchars($row['course_ID']); ?>", false);
-                            document.getElementById("course_completed").innerHTML += courseTag;
+                            course_tag = tagGenerator("<?php echo htmlspecialchars($row['course_ID']); ?>", false);
+                            document.getElementById("course_completed").innerHTML += course_tag;
                         <?php
                         };
                         ?>
