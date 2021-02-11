@@ -1,3 +1,12 @@
+var canvas;
+var loadStatu = false;
+
+$(document).ready(function(){ 
+    canvas = document.getElementById("chart");
+    loadStatu = true;
+    console.log("html load");
+});
+
 function showGraph(sections) {
     //Compute the data for graph
     var lab_count = [0,0,0];
@@ -13,6 +22,8 @@ function showGraph(sections) {
             lab_count[index] += 1;
         }
     }
+
+    if (loadStatu == true){
 
     //In case, there is no 'canvas' element in the html
     if (!document.getElementById('chart')) {
@@ -80,6 +91,7 @@ function showGraph(sections) {
         },
         options: {scales:{yAxes:[{ticks:{beginAtZero: true}}]}}
     });
+}
 }
 
 function createCanvas(id, width, height) {
