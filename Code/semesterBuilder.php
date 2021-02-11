@@ -132,7 +132,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             <div class="bottom-left">
                 Courses Completed: <br>
                 <script>
-                    console.log($_SESSION["name"] + " completed courses { " + course_completed_list + " }");
+                    console.log(<?php echo htmlspecialchars($_SESSION["name"]); ?> + " completed courses { " + course_completed_list + " }");
                 </script>
                 <div class="courseTag noDrag" id="ense374" draggable="false">ENSE374</div>
             </div>
