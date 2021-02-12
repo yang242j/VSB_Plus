@@ -31,6 +31,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     <script>
         var term = '';
         var courseList = [];
+        var courseCompletedList = [];
     </script>
 </head>
 
@@ -146,6 +147,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                         ?>
                             var course_tag = tagGenerator("<?php echo htmlspecialchars($row['course_ID']); ?>", false);
                             document.getElementById("course_completed").innerHTML += course_tag;
+                            courseCompletedList.push("<?php echo htmlspecialchars($row['course_ID']); ?>");
                         <?php
                         };
                         ?>
@@ -173,8 +175,8 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                 </script>
                 <div class="courseTag noDrop" id="ENGG 401" draggable="true" ondragstart="drag(event)">ENGG 401</div>
                 <div class="courseTag noDrop" id="ENSE 477" draggable="true" ondragstart="drag(event)">ENSE 477</div>
-                <div class="courseTag noDrop" id="ENSE 496AC" draggable="true" ondragstart="drag(event)">ENSE 496AC</div>
-                <div class="courseTag noDrop" id="ENSE 496AD" draggable="true" ondragstart="drag(event)">ENSE 496AD</div>
+                <div class="courseTag noDrop" id="ENEL 380" draggable="true" ondragstart="drag(event)">ENEL 380</div>
+                <div class="courseTag noDrop" id="ENEL 487" draggable="true" ondragstart="drag(event)">ENEL 487</div>
             </div>
         </div>
     </section>
@@ -199,7 +201,8 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             $("#test").click(function() {
                 var myObj = {
                     Term: term,
-                    Course_List: courseList
+                    Course_List: courseList,
+                    Course_Completed: courseCompletedList,
                 };
                 console.log(myObj);
             });
