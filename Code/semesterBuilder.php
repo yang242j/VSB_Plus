@@ -32,6 +32,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         var term = '';
         var courseList = [];
         var courseCompletedList = [];
+        var courseRecommendedList = [];
     </script>
 </head>
 
@@ -154,7 +155,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                     });
                 </script>
             </div>
-            <div class="bottom-right" ondrop="dropBR(event)" ondragover="allowDrop(event)" ondragenter="dragEnter(event)" ondragleave="dragLeave(event)">
+            <div id="course_recommended" class="bottom-right" ondrop="dropBR(event)" ondragover="allowDrop(event)" ondragenter="dragEnter(event)" ondragleave="dragLeave(event)">
                 Courses To Take: <br>
                 <script>
                     $(".bottom-right").on("drop", function(event) {
@@ -171,6 +172,17 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                         if (courseList.length == 0 && $("#exampleDiv").length == 0) {
                             $("#courseCardList").append("<div class='courseInfo' id='exampleDiv'> <h2> Course Tag </h2> <h4> Course Title </h4> <p> Course Detail Info: **** ** ** ** * ** * * * ** </p> </div>");
                         }
+                    });
+
+                    $(function() {
+                    // Store first 10 courses from the list
+                    // Fetch required courses from JSON file,
+                    // for each required-course,
+                    // if in the courseCompletedList, pass,
+                    // if NOT in the courseCompletedList, push into the recommended list, maximum 10 courses. 
+                    // generate dragable course tag,
+                    // append to the div with id "#course_recommended"
+                    // once reach max-10, stop
                     });
                 </script>
                 <div class="courseTag noDrop" id="ENGG 401" draggable="true" ondragstart="drag(event)">ENGG 401</div>
@@ -203,6 +215,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                     Term: term,
                     Course_List: courseList,
                     Course_Completed: courseCompletedList,
+                    Course_Recommended: courseRecommendedList,
                 };
                 console.log(myObj);
             });
