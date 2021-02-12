@@ -175,14 +175,14 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                     });
 
                     $(function() {
-                    // Store first 10 courses from the list
-                    // Fetch required courses from JSON file,
-                    // for each required-course,
-                    // if in the courseCompletedList, pass,
-                    // if NOT in the courseCompletedList, push into the recommended list, maximum 10 courses. 
-                    // generate dragable course tag,
-                    // append to the div with id "#course_recommended"
-                    // once reach max-10, stop
+                        // Store first 10 courses from the list
+                        // Fetch required courses from JSON file,
+                        // for each required-course,
+                        // if in the courseCompletedList, pass,
+                        // if NOT in the courseCompletedList, push into the recommended list, maximum 10 courses. 
+                        // generate dragable course tag,
+                        // append to the div with id "#course_recommended"
+                        // once reach max-10, stop
                     });
                 </script>
                 <div class="courseTag noDrop" id="ENGG 401" draggable="true" ondragstart="drag(event)">ENGG 401</div>

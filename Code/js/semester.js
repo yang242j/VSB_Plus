@@ -63,7 +63,7 @@ function dropL(ev) {
             //1.Append courseTag-list
             document.getElementsByClassName("left-section")[0].appendChild(document.getElementById(short_name));
             document.getElementById(short_name).style.backgroundColor = BGC;
-            document.getElementById(short_name).classList.toggle("selected-course"); // Add selected-course class
+            document.getElementById(short_name).classList.add("selected-course"); // Add selected-course class
             //2.Append courseCard-list
             appendCourseCard(short_name, BGC);
             pre_colorID = randomColorIndex; //2.1.Store color id
@@ -82,12 +82,11 @@ function dropBR(ev) {
         // 1.Append tag at BR
         document.getElementsByClassName("bottom-right")[0].appendChild(document.getElementById(short_name));
         document.getElementById(short_name).style.backgroundColor = "DarkGrey"; // Set tag BGC to DarkGrey
-        document.getElementById(short_name).classList.toggle("selected-course"); // Remove selected-course class
+        document.getElementById(short_name).classList.remove("selected-course"); // Remove selected-course class
         // Remove course card from middle section
         removeCourseCard(short_name);
         // Remove course event from calendar
         removeCalendar(short_name);
-        
     }
 }
 
