@@ -34,7 +34,7 @@ function dragLeave(ev) {
     //console.log("dragLeave", ev.target.id)
 }
 
-function dropL(ev) {
+function dropL(ev, term) {
     var short_name = ev.dataTransfer.getData("Text");
     var randomColorIndex = "";
     do {
@@ -65,12 +65,12 @@ function dropL(ev) {
             document.getElementById(short_name).style.backgroundColor = BGC;
             document.getElementById(short_name).classList.add("selected-course"); // Add selected-course class
             //2.Fetch JSON data
-            var course_json = fetchJSON(short_name);
+            var [course_json, section_json] = fetchJSON(short_name, term);
             //3.Append courseCard-list
-            appendCourseCard(course_json, short_name, BGC);
+            appendCourseCard(course_json, BGC);
             pre_colorID = randomColorIndex; //2.1.Store color id
             //4.Append calendar
-            appendCalendar(course_json, short_name);
+            appendCalendar(section_json);
         }
     }
 }
@@ -92,23 +92,26 @@ function dropBR(ev) {
     }
 }
 
-function fetchJSON(short_name) {
-    var course_json;
-    $.post('Model/course.php', { short_name: short_name }, function(data) {
-        course_json = JSON.parse(data);
+function fetchJSON(short_name, term) {
+    var course_json, section_json;
+    $.post('Model/course.php', { short_name: short_name }, function(data1) {
+        course_json = JSON.parse(data1);
     });
-    return course_json;
+    $.post('Model/section.php', { short_name: short_name, term: term }, function(data2) {
+        section_json = JSON.parse(data2);
+    });
+    return [course_json, section_json];
 }
 
-function appendCourseCard(course_json, short_name, BGC) {
+function appendCourseCard(course_json, BGC) {
     
-    var card_id = course_json.short_name + "_Card";
+    var card_id = course_json[short_name] + "_Card";
     var course_card =
         "<div class='courseInfo' id='" + card_id +
         "' style='background-color:" + BGC + ";'>" +
-        "<h2>" + course_json.short_name + "</h2>" +
-        "<h4>" + course_json.title + "</h4>" +
-        "<p>Description: " + course_json.description + "</p>" +
+        "<h2>" + course_json[short_name] + "</h2>" +
+        "<h4>" + course_json[title] + "</h4>" +
+        "<p>Description: " + course_json[description] + "</p>" +
         "</div>";
     document.getElementById("courseCardList").innerHTML += course_card;
 }
@@ -123,10 +126,10 @@ function removeCourseCard(short_name) {
     
 }
 
-function appendCalendar(course_json, short_name) {
+function appendCalendar(section_json) {
     calendar.addEvent({
-        id: short_name,
-        title: short_name,
+        id: section_json[short_name],
+        title: section_json[short_name],
         start: '2021-01-12',
         end: '2021-01-13'
     });
