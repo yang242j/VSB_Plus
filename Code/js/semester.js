@@ -76,7 +76,7 @@ function dropL(ev, term) {
                 fetchSectionJSON(short_name, schedule_type="Lecture", term).done(function (result2) {
                     var section_json_obj = JSON.parse(result2);
                     //5.Append calendar
-                    appendCalendar(section_json_obj[0], BGC);
+                    appendCalendar(section_json_obj["0"], BGC);
                 }).fail(function () {
                     console.error(short_name + "Leccture Section JSON Fetch ERROR");
                 });
@@ -85,7 +85,7 @@ function dropL(ev, term) {
                 fetchSectionJSON(short_name, schedule_type="Laboratory", term).done(function (result3) {
                     var section_json_obj = JSON.parse(result3);
                     //7.Append calendar
-                    appendCalendar(section_json_obj[0], BGC);
+                    appendCalendar(section_json_obj["0"], BGC);
                 }).fail(function () {
                     console.error(short_name + "Laboratory Section JSON Fetch ERROR");
                 });
@@ -94,7 +94,7 @@ function dropL(ev, term) {
                 fetchSectionJSON(short_name, schedule_type="Examination", term).done(function (result4) {
                     var section_json_obj = JSON.parse(result4);
                     //9.Append calendar
-                    appendCalendar(section_json_obj[0], BGC);
+                    appendCalendar(section_json_obj["0"], BGC);
                 }).fail(function () {
                     console.error(short_name + "Examination Section JSON Fetch ERROR");
                 });
