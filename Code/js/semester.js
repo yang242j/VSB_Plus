@@ -100,7 +100,7 @@ function fetchJSONData(short_name, term) {
     $.post('Model/section.php', { short_name: short_name, term: term }, function(data2) {
         course_data = data2;
     });
-    return [course_data, course_data];
+    return [course_data, section_data];
 }
 
 function appendCourseCard(course_data, BGC) {
