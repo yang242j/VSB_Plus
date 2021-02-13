@@ -64,11 +64,13 @@ function dropL(ev) {
             document.getElementsByClassName("left-section")[0].appendChild(document.getElementById(short_name));
             document.getElementById(short_name).style.backgroundColor = BGC;
             document.getElementById(short_name).classList.add("selected-course"); // Add selected-course class
-            //2.Append courseCard-list
-            appendCourseCard(short_name, BGC);
+            //2.Fetch JSON data
+            var course_json = fetchJSON(short_name);
+            //3.Append courseCard-list
+            appendCourseCard(course_json, short_name, BGC);
             pre_colorID = randomColorIndex; //2.1.Store color id
-            //3.Append calendar
-            appendCalendar(short_name);
+            //4.Append calendar
+            appendCalendar(course_json, short_name);
         }
     }
 }
@@ -90,20 +92,25 @@ function dropBR(ev) {
     }
 }
 
-function appendCourseCard(short_name, BGC) {
-    
+function fetchJSON(short_name) {
+    var course_json;
     $.post('Model/course.php', { short_name: short_name }, function(data) {
-        var course_json = JSON.parse(data);
-        var card_id = course_json.short_name + "_Card";
-        var course_card =
-            "<div class='courseInfo' id='" + card_id +
-            "' style='background-color:" + BGC + ";'>" +
-            "<h2>" + course_json.short_name + "</h2>" +
-            "<h4>" + course_json.title + "</h4>" +
-            "<p>Description: " + course_json.description + "</p>" +
-            "</div>";
-        document.getElementById("courseCardList").innerHTML += course_card;
+        course_json = JSON.parse(data);
     });
+    return course_json;
+}
+
+function appendCourseCard(course_json, short_name, BGC) {
+    
+    var card_id = course_json.short_name + "_Card";
+    var course_card =
+        "<div class='courseInfo' id='" + card_id +
+        "' style='background-color:" + BGC + ";'>" +
+        "<h2>" + course_json.short_name + "</h2>" +
+        "<h4>" + course_json.title + "</h4>" +
+        "<p>Description: " + course_json.description + "</p>" +
+        "</div>";
+    document.getElementById("courseCardList").innerHTML += course_card;
 }
 
 function removeCourseCard(short_name) {
@@ -116,7 +123,7 @@ function removeCourseCard(short_name) {
     
 }
 
-function appendCalendar(short_name) {
+function appendCalendar(course_json, short_name) {
     calendar.addEvent({
         id: short_name,
         title: short_name,
