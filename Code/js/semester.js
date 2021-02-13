@@ -104,7 +104,7 @@ function fetchJSON(short_name, term) {
 }
 
 function appendCourseCard(course_json, BGC) {
-    
+    var course_json = JSON.stringify(course_json);
     var card_id = course_json.short_name + "_Card";
     var course_card =
         "<div class='courseInfo' id='" + card_id +
