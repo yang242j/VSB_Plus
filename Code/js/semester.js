@@ -66,8 +66,8 @@ function dropL(ev, term) {
             document.getElementById(short_name).classList.add("selected-course"); // Add selected-course class
             //2.Fetch JSON data
             var course_json = fetchCourseJSON(short_name);
-            console.log("A: " + JSON.parse(course_json));
-            console.log("A.faculty: " + JSON.parse(course_json).faculty);
+            console.log("A: " + course_json);
+            console.log("A.faculty: " + course_json.faculty);
             //3.Append courseCard-list
             appendCourseCard(course_json, BGC);
             pre_colorID = randomColorIndex; //2.1.Store color id
