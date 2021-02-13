@@ -66,7 +66,7 @@ if ($short_name !== "") {
         echo $json_data;
         // print_r($data);
     } else {
-        echo "";
+        echo "{}";
     }
 
     // print_r($data);
