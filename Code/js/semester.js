@@ -68,16 +68,14 @@ function dropL(ev, term) {
             var course_json;
             fetchCourseJSON(short_name).done(function(result) {
                 course_json = JSON.parse(result);
-                console.log("A: " + course_json);
-                console.log("A.faculty: " + course_json.faculty);
+                //3.Append courseCard-list
+                appendCourseCard(course_json, BGC);
+                pre_colorID = randomColorIndex; //2.1.Store color id
+                //4.Append calendar
+                appendCalendar(section_json_obj);
             }).fail(function() {
                 console.error("Course JSON Fetch ERROR");
             });
-            //3.Append courseCard-list
-            appendCourseCard(course_json, BGC);
-            pre_colorID = randomColorIndex; //2.1.Store color id
-            //4.Append calendar
-            appendCalendar(section_json_obj);
         }
     }
 }
