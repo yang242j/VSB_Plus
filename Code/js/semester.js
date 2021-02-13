@@ -155,6 +155,7 @@ function removeCourseCard(short_name) {
 function appendCalendar(section_json, BGC) {
     console.log(section_json);
     try {
+        console.log(section_json.short_name);
         calendar.addEvent({
             id: section_json.short_name,
             title: section_json.short_name,
