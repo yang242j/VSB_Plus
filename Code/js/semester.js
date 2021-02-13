@@ -97,7 +97,7 @@ function fetchJSON(short_name, term) {
     $.post('Model/course.php', { short_name: short_name }, function (data1) {
         console.log("data1: " + data1);
         course_json = JSON.parse(data1);
-        console.log("course_json_parse: " + data1);
+        console.log("course_json_parse: " + course_json);
     });
     $.post('Model/section.php', { short_name: short_name, term: term }, function(data2) {
         section_json = JSON.parse(data2);
