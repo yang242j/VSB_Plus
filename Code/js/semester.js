@@ -65,7 +65,7 @@ function dropL(ev, term) {
             document.getElementById(short_name).style.backgroundColor = BGC;
             document.getElementById(short_name).classList.add("selected-course"); // Add selected-course class
             //2.Fetch JSON data
-            var [course_json, section_json] = fetchJSON(short_name, term);
+            var course_json = fetchJSON(short_name, term);
             console.log("course_json: " + course_json);
             console.log("course_json.faculty: " + course_json.faculty);
             //3.Append courseCard-list
@@ -102,7 +102,7 @@ function fetchJSON(short_name, term) {
     $.post('Model/section.php', { short_name: short_name, term: term }, function(data2) {
         section_json = JSON.parse(data2);
     });
-    return [course_json, section_json];
+    return course_json;
 }
 
 function appendCourseCard(course_json, BGC) {
