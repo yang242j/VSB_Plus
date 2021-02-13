@@ -105,13 +105,13 @@ function fetchJSON(short_name, term) {
 
 function appendCourseCard(course_json, BGC) {
     
-    var card_id = course_json[short_name] + "_Card";
+    var card_id = course_json["short_name"] + "_Card";
     var course_card =
         "<div class='courseInfo' id='" + card_id +
         "' style='background-color:" + BGC + ";'>" +
-        "<h2>" + course_json[short_name] + "</h2>" +
-        "<h4>" + course_json[title] + "</h4>" +
-        "<p>Description: " + course_json[description] + "</p>" +
+        "<h2>" + course_json['short_name'] + "</h2>" +
+        "<h4>" + course_json['title'] + "</h4>" +
+        "<p>Description: " + course_json['description'] + "</p>" +
         "</div>";
     document.getElementById("courseCardList").innerHTML += course_card;
 }
@@ -128,8 +128,8 @@ function removeCourseCard(short_name) {
 
 function appendCalendar(section_json) {
     calendar.addEvent({
-        id: section_json[short_name],
-        title: section_json[short_name],
+        id: section_json['short_name'],
+        title: section_json['short_name'],
         start: '2021-01-12',
         end: '2021-01-13'
     });
