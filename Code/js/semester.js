@@ -95,16 +95,14 @@ function dropBR(ev) {
 }
 
 function fetchCourseJSON(short_name) {
-    $.post('Model/course.php', { short_name: short_name }, function (data1) {
-        var obj = jQuery.parseJSON(data1);
-        return obj;
+    $.post('Model/course.php', { short_name: short_name }, function (data) {
+        return JSON.parse(data).faculty;
     });
 }
 
 function fetchSectionJSON(short_name, term) {
-    $.post('Model/section.php', { short_name: short_name, term: term }, function(data2) {
-        var obj = jQuery.parseJSON(data2);
-        return obj;
+    $.post('Model/section.php', { short_name: short_name, term: term }, function(data) {
+        return JSON.parse(data);
     });
 }
 
