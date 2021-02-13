@@ -98,7 +98,7 @@ function fetchJSONData(short_name, term) {
         course_data = data1;
     });
     $.post('Model/section.php', { short_name: short_name, term: term }, function(data2) {
-        course_data = data2;
+        section_data = data2;
     });
     return [course_data, section_data];
 }
