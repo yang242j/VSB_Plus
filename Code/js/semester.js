@@ -104,7 +104,7 @@ function fetchJSONData(short_name, term) {
 }
 
 function appendCourseCard(course_data, BGC) {
-    
+    console.log(JSON.parse(course_data));
     var course_json = JSON.parse(course_data);
     var card_id = course_json["short_name"] + "_Card";
     var course_card =
