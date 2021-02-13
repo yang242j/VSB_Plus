@@ -67,19 +67,39 @@ function dropL(ev, term) {
             //2.Fetch Course JSON data
             fetchCourseJSON(short_name).done(function(result1) {
                 var course_json = JSON.parse(result1);
+                
                 //3.Append courseCard-list
                 appendCourseCard(course_json, BGC);
                 pre_colorID = randomColorIndex; //3.1.Store color id
-                //4.Fetch Section JSON data
-                fetchSectionJSON(short_name, term).done(function (result2) {
+                
+                //4.Fetch Lecture Section JSON data
+                fetchSectionJSON(short_name, schedule_type="Lecture", term).done(function (result2) {
                     var section_json_obj = JSON.parse(result2);
                     //5.Append calendar
                     appendCalendar(section_json_obj, BGC);
                 }).fail(function () {
-                    console.error("Section JSON Fetch ERROR");
+                    console.error(short_name + "Leccture Section JSON Fetch ERROR");
+                });
+                
+                //6. Fetch Laboratory Section JSON data
+                fetchSectionJSON(short_name, schedule_type="Laboratory", term).done(function (result2) {
+                    var section_json_obj = JSON.parse(result2);
+                    //7.Append calendar
+                    appendCalendar(section_json_obj, BGC);
+                }).fail(function () {
+                    console.error(short_name + "Laboratory Section JSON Fetch ERROR");
+                });
+
+                //8. Fetch Examination Section JSON data
+                fetchSectionJSON(short_name, schedule_type="Examination", term).done(function (result2) {
+                    var section_json_obj = JSON.parse(result2);
+                    //9.Append calendar
+                    appendCalendar(section_json_obj, BGC);
+                }).fail(function () {
+                    console.error(short_name + "Examination Section JSON Fetch ERROR");
                 });
             }).fail(function() {
-                console.error("Course JSON Fetch ERROR");
+                console.error(short_name + "Course JSON Fetch ERROR");
             });
         }
     }
