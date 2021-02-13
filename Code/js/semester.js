@@ -126,8 +126,8 @@ function fetchCourseJSON(short_name) {
     return $.post('Model/course.php', { short_name: short_name }, function (data) {});
 }
 
-function fetchSectionJSON(short_name, term) {
-    return $.post('Model/section.php', { short_name: short_name, term: term }, function(data) {});
+function fetchSectionJSON(short_name, schedule_type, term) {
+    return $.post('Model/section.php', { short_name: short_name, schedule_type: schedule_type, term: term }, function(data) {});
 }
 
 function appendCourseCard(course_json, BGC) {
