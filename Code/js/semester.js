@@ -65,11 +65,11 @@ function dropL(ev, term) {
             document.getElementById(short_name).style.backgroundColor = BGC;
             document.getElementById(short_name).classList.add("selected-course"); // Add selected-course class
             //2.Fetch JSON data
-            var course_json_obj = fetchCourseJSON(short_name);
-            console.log("A: " + course_json_obj);
-            console.log("A.faculty: " + course_json_obj.faculty);
+            var course_json = fetchCourseJSON(short_name);
+            console.log("A: " + JSON.parse(course_json));
+            console.log("A.faculty: " + JSON.parse(course_json).faculty);
             //3.Append courseCard-list
-            appendCourseCard(course_json_obj, BGC);
+            appendCourseCard(course_json, BGC);
             pre_colorID = randomColorIndex; //2.1.Store color id
             //4.Append calendar
             appendCalendar(section_json_obj);
@@ -96,7 +96,7 @@ function dropBR(ev) {
 
 function fetchCourseJSON(short_name) {
     $.post('Model/course.php', { short_name: short_name }, function (data) {
-        return JSON.parse(data).faculty;
+        return JSON.parse(data);
     });
 }
 
