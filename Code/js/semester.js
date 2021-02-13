@@ -94,8 +94,10 @@ function dropBR(ev) {
 
 function fetchJSON(short_name, term) {
     var course_json, section_json;
-    $.post('Model/course.php', { short_name: short_name }, function(data1) {
+    $.post('Model/course.php', { short_name: short_name }, function (data1) {
+        console.log("data1", data1);
         course_json = JSON.stringify(data1);
+        console.log("course_json_string", course_json);
     });
     $.post('Model/section.php', { short_name: short_name, term: term }, function(data2) {
         section_json = JSON.stringify(data2);
