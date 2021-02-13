@@ -74,7 +74,7 @@ function dropL(ev, term) {
                 
                 //4.Fetch Lecture Section JSON data
                 fetchSectionJSON(short_name, schedule_type="Lecture", term).done(function (result2) {
-                    var section_json_obj = JSON.parse(result2);
+                    var section_json_obj = JSON.parse(result2)[0];
                     //5.Append calendar
                     appendCalendar(section_json_obj, BGC);
                 }).fail(function () {
@@ -82,8 +82,8 @@ function dropL(ev, term) {
                 });
                 
                 //6. Fetch Laboratory Section JSON data
-                fetchSectionJSON(short_name, schedule_type="Laboratory", term).done(function (result2) {
-                    var section_json_obj = JSON.parse(result2);
+                fetchSectionJSON(short_name, schedule_type="Laboratory", term).done(function (result3) {
+                    var section_json_obj = JSON.parse(result3)[0];
                     //7.Append calendar
                     appendCalendar(section_json_obj, BGC);
                 }).fail(function () {
@@ -91,8 +91,8 @@ function dropL(ev, term) {
                 });
 
                 //8. Fetch Examination Section JSON data
-                fetchSectionJSON(short_name, schedule_type="Examination", term).done(function (result2) {
-                    var section_json_obj = JSON.parse(result2);
+                fetchSectionJSON(short_name, schedule_type="Examination", term).done(function (result4) {
+                    var section_json_obj = JSON.parse(result4)[0];
                     //9.Append calendar
                     appendCalendar(section_json_obj, BGC);
                 }).fail(function () {
@@ -153,20 +153,16 @@ function removeCourseCard(short_name) {
 }
 
 function appendCalendar(section_json, BGC) {
-    var myObj = {
-        Term: term,            
-        Course_List: courseList,
-        Course_Completed: courseCompletedList,
-        Course_Recommended: courseRecommendedList,
-    };
-    console.log(section_json);
-    
-    calendar.addEvent({
-        id: section_json.short_name,
-        title: section_json.short_name,
-        start: '2021-01-12',
-        end: '2021-01-13'
-    });
+    try {
+        calendar.addEvent({
+            id: section_json.short_name,
+            title: section_json.short_name,
+            start: '2021-01-12',
+            end: '2021-01-13'
+        });
+    } catch (e) {
+        console.error("Calendar event" + short_name + " append FAILED");
+    }
 }
 
 function removeCalendar(short_name) {
