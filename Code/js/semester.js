@@ -96,8 +96,10 @@ function fetchJSON(short_name, term) {
     var course_json, section_json;
     $.post('Model/course.php', { short_name: short_name }, function (data1) {
         console.log("data1: " + data1);
+        console.log("data1.faculty: " + data1.faculty);
         course_json = JSON.parse(data1);
         console.log("course_json_parse: " + course_json);
+        console.log("course_json_parse.faculty: " + course_json.faculty);
     });
     $.post('Model/section.php', { short_name: short_name, term: term }, function(data2) {
         section_json = JSON.parse(data2);
@@ -106,7 +108,6 @@ function fetchJSON(short_name, term) {
 }
 
 function appendCourseCard(course_json, BGC) {
-    var course_json = JSON.parse(course_json);
     var card_id = course_json.short_name + "_Card";
     var course_card =
         "<div class='courseInfo' id='" + card_id +
