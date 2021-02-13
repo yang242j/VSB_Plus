@@ -161,7 +161,7 @@ function appendCalendar(section_json, BGC) {
             end: '2021-01-13'
         });
     } catch (e) {
-        console.error("Calendar event" + short_name + " append FAILED");
+        console.error("Calendar event" + section_json.short_name + " append FAILED");
     }
 }
 
