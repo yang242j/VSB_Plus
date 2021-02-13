@@ -64,15 +64,20 @@ function dropL(ev, term) {
             document.getElementsByClassName("left-section")[0].appendChild(document.getElementById(short_name));
             document.getElementById(short_name).style.backgroundColor = BGC;
             document.getElementById(short_name).classList.add("selected-course"); // Add selected-course class
-            //2.Fetch JSON data
-            var course_json;
-            fetchCourseJSON(short_name).done(function(result) {
-                course_json = JSON.parse(result);
+            //2.Fetch Course JSON data
+            fetchCourseJSON(short_name).done(function(result1) {
+                var course_json = JSON.parse(result1);
                 //3.Append courseCard-list
                 appendCourseCard(course_json, BGC);
-                pre_colorID = randomColorIndex; //2.1.Store color id
-                //4.Append calendar
-                appendCalendar(section_json_obj);
+                pre_colorID = randomColorIndex; //3.1.Store color id
+                //4.Fetch Section JSON data
+                fetchSectionJSON(short_name, term).done(function (result2) {
+                    var section_json_obj = JSON.parse(result2);
+                    //5.Append calendar
+                    appendCalendar(section_json_obj, BGC);
+                }).fail(function () {
+                    console.error("Section JSON Fetch ERROR");
+                });
             }).fail(function() {
                 console.error("Course JSON Fetch ERROR");
             });
@@ -106,8 +111,6 @@ function fetchSectionJSON(short_name, term) {
 }
 
 function appendCourseCard(course_json, BGC) {
-    console.log("course_json_ap: " + course_json);
-    console.log("course_json_ap.faculty: " + course_json.faculty);
     var card_id = course_json.short_name + "_Card";
     var course_card =
         "<div class='courseInfo' id='" + card_id +
@@ -129,7 +132,15 @@ function removeCourseCard(short_name) {
     
 }
 
-function appendCalendar(section_json) {
+function appendCalendar(section_json, BGC) {
+    var myObj = {
+        Term: term,            
+        Course_List: courseList,
+        Course_Completed: courseCompletedList,
+        Course_Recommended: courseRecommendedList,
+    };
+    console.log(section_json);
+    
     calendar.addEvent({
         id: section_json.short_name,
         title: section_json.short_name,
