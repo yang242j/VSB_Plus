@@ -96,7 +96,7 @@ function dropBR(ev) {
 
 function fetchCourseJSON(short_name) {
     $.post('Model/course.php', { short_name: short_name }, function (data1) {
-        return jQuery.parseJSON(data1);
+        return data1;
     });
 }
 
