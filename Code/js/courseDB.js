@@ -14,6 +14,7 @@ var filter_key = "all";
 
 window.onload = function init(){
     loadCourses();
+    showGraph('ENSE 400');
 }
 
 function loadCourses(){
@@ -158,10 +159,8 @@ function year_filter(courses){
 }
 
 $("#filter").on("change", function(event){
-    //acquire the menu entry number
-    var index = event.srcElement.selectedIndex
     //assign the filter key with the selected element value
-    filter_key = event.srcElement.options[index].value;
+    filter_key = $("#filter").val();
     reloadCourse();
 });
 

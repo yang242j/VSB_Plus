@@ -78,9 +78,9 @@ body .course{
     float:left;
     /* line-height: 200px; */
     width: 50%;
-    height: 450px;
+    height: 600px;
     display: grid;
-    grid-template-columns: 30% 70%;
+    grid-template-columns: 20% 80%;
     grid-template-rows: 90% 10%;
     grid-gap:10px;
 }
@@ -103,7 +103,7 @@ body .course{
 }
 
   #main_area{
-    height: 400px;
+    height: 600px;
   }
 
   #error{
@@ -164,7 +164,7 @@ body .course{
   /*popView*/
 #popView{
 	/*popView sytle*/
-	height: 400px;
+	height: 540px;
 	width: 45%;
 	border-radius: 10px;
 	background-color: #b0e6ec;
@@ -193,6 +193,6 @@ body .course{
 }
 
 .graph_size{
-    width: 400px;
-    height: 300px;
+    width: 200px;
+    height: 200px;
 }

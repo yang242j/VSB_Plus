@@ -86,7 +86,7 @@ session_start(); // Initialize the session
         </div>
         <div id="main_area">
             <div class="" id="search_area">
-                <div class=" shadow" id="classification">
+                <div class="shadow" id="classification">
                     <div class="border" id="faculty_title">Faculty</div>
                     <!-- <div class="tag round selected">ALL</div> -->
                     <div class="tag round">ENSE</div>
@@ -143,31 +143,15 @@ session_start(); // Initialize the session
             <div class="shadow" id="popView">
                 <h2 id='title'>ENSE 400</h2>
                 <ul>
-                    <li>Course Name: <span id='fullName'>Systems Engineering Design Project</span> </li>
-                    <li>***Prerequisites: <span id='preReqClass'>ENSE 470</span> ***</li>
-                    <li>Labels: Project Class, *****</li>
-                    <li>Course Description: ********</li>
-                    <li>Professor have taught: </li>
-                    <li>History Average: ****</li>
-                    <li>TextBook: (Not required)</li>
-                    <li>Course content:
-                        <ul>
-                            <li>Quize: No</li>
-                            <li>Project: Yes</li>
-                            <li>Lab: No</li>
-                            <li>Syllabus:
-                                <ul>
-                                    <li>Assignment: 0%</li>
-                                    <li>Lab: 0%</li>
-                                    <li>Quiz: 0%</li>
-                                    <li>Midterm: 0%</li>
-                                    <li>Final Exam: 0%</li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
+                    <li><span class="bold">Course Name</span>: <span id='fullName'>ENSE Project Start-up</span> </li>
+                    <li>***<span class="bold">Prerequisites</span>: <span id='preReqClass'>ENSE 470 and successful completion of 99 credit hours</span> ***</li>
+                    <li><span class="bold">Course Description</span>: Students are given the opportunity to propose, 
+                    develop and present engineering design projects which they are expected to further pursue in ENSE 477. 
+                    Issues of safety, feasibility, and engineering responsibility are discussed. Student form design teams in 
+                    this class and are expected to write a project plan document, compose a preliminary design document, and 
+                    present their project to their fellow students.</li>
                 </ul>
-                <div id="graph"></div>
+                <div class='graph_size' id="graph"></div>
             </div>
         </div>
 

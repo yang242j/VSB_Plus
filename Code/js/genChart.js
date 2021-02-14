@@ -5,7 +5,7 @@ function genGraph(sections) {
     var labels_list = ['2020 Spring/Summer', '2020 Fall', '2021 Winter'];
     for (var i in sections) {
         var sec = sections[i];
-        console.log(sec);
+        // console.log(sec);
         if (sec.schedule_type == 'Lecture'){
             var index = labels_list.indexOf(sec.term);
             lecture_count[index] += 1;
