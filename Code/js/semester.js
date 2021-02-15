@@ -221,10 +221,11 @@ function appendCalendar(section_num, short_name, time, days, date_range, BGC) {
     // Try to append the calendar
     try {
         calendar.addEvent({
+            allDay: false,
             id: event_id,
             title: event_title,
-            start: start_date,
-            end: end_date,
+            startRecur: start_date,
+            endRecur: end_date,
             startTime: start_time,
             endTime: end_time,
             daysOfWeek: daysOfWeek,
