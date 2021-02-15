@@ -78,7 +78,7 @@ function dropL(ev, term) {
                 fetchSectionJSON(short_name, schedule_type="Lecture", term).done(function (result2) {
                     section_json_obj = JSON.parse(result2);
                     section_id = "0";
-                    if (section_json_obj.length[section_id] != 0) {
+                    if (section_json_obj[section_id].length != 0) {
                         section_num = section_json_obj[section_id].section_num;
                         sec_short_name = section_json_obj[section_id].short_name;
                         time = section_json_obj[section_id].time;
@@ -97,7 +97,7 @@ function dropL(ev, term) {
                 fetchSectionJSON(short_name, schedule_type="Laboratory", term).done(function (result3) {
                     section_json_obj = JSON.parse(result3);
                     section_id = "0";
-                    if (section_json_obj.length[section_id] != 0) {
+                    if (section_json_obj[section_id].length != 0) {
                         section_num = section_json_obj[section_id].section_num;
                         sec_short_name = section_json_obj[section_id].short_name;
                         time = section_json_obj[section_id].time;
@@ -116,7 +116,7 @@ function dropL(ev, term) {
                 fetchSectionJSON(short_name, schedule_type="Examination", term).done(function (result4) {
                     section_json_obj = JSON.parse(result4);
                     section_id = "0";
-                    if (section_json_obj.length[section_id] != 0) {
+                    if (section_json_obj[section_id].length != 0) {
                         section_num = section_json_obj[section_id].section_num;
                         sec_short_name = section_json_obj[section_id].short_name;
                         time = section_json_obj[section_id].time;
