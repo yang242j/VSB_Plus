@@ -228,7 +228,7 @@ function appendCalendar(section_num, short_name, time, days, date_range, BGC) {
             startTime: start_time,
             endTime: end_time,
             daysOfWeek: daysOfWeek,
-            textColor: red,
+            textColor: "black",
             color: BGC,
         });
     } catch (e) {
