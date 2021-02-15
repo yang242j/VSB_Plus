@@ -15,6 +15,7 @@ var calendar = new FullCalendar.Calendar(calendarEl, {
         hour: "numeric",
         minute: "2-digit",
         meridiem: "short",
+        hour12: true,
     },
     timeFormat: "h(:mm)a",
     events: []
