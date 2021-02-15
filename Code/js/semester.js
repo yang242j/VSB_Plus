@@ -229,7 +229,7 @@ function appendCalendar(section_num, short_name, time, days, date_range, BGC) {
     try {
         calendar.addEvent({
             allDay: false,
-            timeFormat: "h(:mm)a",
+            timeFormat: "h:mma",
             id: event_id,
             title: event_title,
             startRecur: start_date,
