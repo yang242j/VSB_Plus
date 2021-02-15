@@ -188,8 +188,8 @@ function appendCalendar(section_num, short_name, time, days, date_range, BGC) {
     // Manage the input values
     var event_id = short_name;
     var event_title = event_id.concat(" [", section_num, "]");
-    var start_date = new Date(date_range.slice(0, 12)).toISOString();
-    var end_date = new Date(date_range.slice(15)).toISOString();
+    var start_date = new Date(date_range.slice(0, 12)).toISOString().substring(0, 10);
+    var end_date = new Date(date_range.slice(15)).toISOString().substring(0, 10);
     var start_time = time.slice(0, 7);
     var end_time = time.slice(10);
     var daysOfWeek = [];
