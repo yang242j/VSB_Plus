@@ -72,29 +72,49 @@ function dropL(ev, term) {
                 appendCourseCard(course_json, BGC);
                 pre_colorID = randomColorIndex; //3.1.Store color id
                 
+                // Init common section variables
+                var section_json_obj, section_id, section_num, short_name, time, days, date_range;
                 //4.Fetch Lecture Section JSON data
                 fetchSectionJSON(short_name, schedule_type="Lecture", term).done(function (result2) {
-                    var section_json_obj = JSON.parse(result2);
+                    section_json_obj = JSON.parse(result2);
+                    section_id = "0";
+                    section_num = section_json_obj[section_id].section_num;
+                    short_name = section_json_obj[section_id].short_name;
+                    time = section_json_obj[section_id].time;
+                    days = section_json_obj[section_id].days;
+                    date_range = section_json_obj[section_id].date_range;
                     //5.Append calendar
-                    appendCalendar(section_json_obj["0"], BGC);
+                    appendCalendar(section_num, short_name, time, days, date_range, BGC);
                 }).fail(function () {
                     console.error(short_name + "Leccture Section JSON Fetch ERROR");
                 });
                 
                 //6. Fetch Laboratory Section JSON data
                 fetchSectionJSON(short_name, schedule_type="Laboratory", term).done(function (result3) {
-                    var section_json_obj = JSON.parse(result3);
+                    section_json_obj = JSON.parse(result3);
+                    section_id = "0";
+                    section_num = section_json_obj[section_id].section_num;
+                    short_name = section_json_obj[section_id].short_name;
+                    time = section_json_obj[section_id].time;
+                    days = section_json_obj[section_id].days;
+                    date_range = section_json_obj[section_id].date_range;
                     //7.Append calendar
-                    appendCalendar(section_json_obj["0"], BGC);
+                    appendCalendar(section_num, short_name, time, days, date_range, BGC);
                 }).fail(function () {
                     console.error(short_name + "Laboratory Section JSON Fetch ERROR");
                 });
 
                 //8. Fetch Examination Section JSON data
                 fetchSectionJSON(short_name, schedule_type="Examination", term).done(function (result4) {
-                    var section_json_obj = JSON.parse(result4);
+                    section_json_obj = JSON.parse(result4);
+                    section_id = "0";
+                    section_num = section_json_obj[section_id].section_num;
+                    short_name = section_json_obj[section_id].short_name;
+                    time = section_json_obj[section_id].time;
+                    days = section_json_obj[section_id].days;
+                    date_range = section_json_obj[section_id].date_range;
                     //9.Append calendar
-                    appendCalendar(section_json_obj["0"], BGC);
+                    appendCalendar(section_num, short_name, time, days, date_range, BGC);
                 }).fail(function () {
                     console.error(short_name + "Examination Section JSON Fetch ERROR");
                 });
@@ -152,18 +172,54 @@ function removeCourseCard(short_name) {
     
 }
 
-function appendCalendar(section_json, BGC) {
-    console.log(section_json);
+function appendCalendar(section_num, short_name, time, days, date_range, BGC) {
+    // Manage the input values
+    var event_id = short_name;
+    var event_title = event_id.concat(" [", section_num, "]");
+    var start_date = date_range.slice(0, 12);
+    var end_date = date_range.slice(15);
+    var start_time = time.slice(0, 7);
+    var end_time = time.slice(10);
+    var daysOfWeek = [];
+
+    // Convert the daysOfWeek
+    for (var i = 0; i < days.length; i++) {
+        switch (days[i].toUpperCase()) {
+            case "M":
+                daysOfWeek.push("1");
+                break;
+            case "T":
+                daysOfWeek.push("2");
+                break;
+            case "W":
+                daysOfWeek.push("3");
+                break;
+            case "R":
+                daysOfWeek.push("4");
+                break;
+            case "F":
+                daysOfWeek.push("5");
+                break;
+            case "S":
+                daysOfWeek.push("6");
+                break;
+        }
+    }
+
+    // Try to append the calendar
     try {
-        console.log(section_json.short_name);
         calendar.addEvent({
-            id: section_json.short_name,
-            title: section_json.short_name,
-            start: '2021-01-12',
-            end: '2021-01-13'
+            id: event_id,
+            title: event_title,
+            start: start_date,
+            end: end_date,
+            startTime: start_time,
+            endTime: end_time,
+            daysOfWeek: daysOfWeek,
+            color: BGC,
         });
     } catch (e) {
-        console.error("Calendar event" + section_json.short_name + " append FAILED");
+        console.error("Calendar event" + event_title + " append FAILED");
     }
 }
 
