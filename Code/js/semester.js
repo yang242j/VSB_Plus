@@ -229,6 +229,7 @@ function appendCalendar(section_num, short_name, time, days, date_range, BGC) {
             endTime: end_time,
             daysOfWeek: daysOfWeek,
             color: BGC,
+            textColor: black,
         });
     } catch (e) {
         console.error("Calendar event" + event_title + " append FAILED");
