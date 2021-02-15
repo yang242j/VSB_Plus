@@ -78,13 +78,17 @@ function dropL(ev, term) {
                 fetchSectionJSON(short_name, schedule_type="Lecture", term).done(function (result2) {
                     section_json_obj = JSON.parse(result2);
                     section_id = "0";
-                    section_num = section_json_obj[section_id].section_num;
-                    sec_short_name = section_json_obj[section_id].short_name;
-                    time = section_json_obj[section_id].time;
-                    days = section_json_obj[section_id].days;
-                    date_range = section_json_obj[section_id].date_range;
-                    //5.Append calendar
-                    appendCalendar(section_num, sec_short_name, time, days, date_range, BGC);
+                    if (section_json_obj.length != 0) {
+                        section_num = section_json_obj[section_id].section_num;
+                        sec_short_name = section_json_obj[section_id].short_name;
+                        time = section_json_obj[section_id].time;
+                        days = section_json_obj[section_id].days;
+                        date_range = section_json_obj[section_id].date_range;
+                        //5.Append calendar
+                        appendCalendar(section_num, sec_short_name, time, days, date_range, BGC);
+                    } else {
+                        console.error(short_name + schedule_type + " is NULL");
+                    }
                 }).fail(function () {
                     console.error(short_name + "Leccture Section JSON Fetch ERROR");
                 });
@@ -93,13 +97,17 @@ function dropL(ev, term) {
                 fetchSectionJSON(short_name, schedule_type="Laboratory", term).done(function (result3) {
                     section_json_obj = JSON.parse(result3);
                     section_id = "0";
-                    section_num = section_json_obj[section_id].section_num;
-                    sec_short_name = section_json_obj[section_id].short_name;
-                    time = section_json_obj[section_id].time;
-                    days = section_json_obj[section_id].days;
-                    date_range = section_json_obj[section_id].date_range;
-                    //7.Append calendar
-                    appendCalendar(section_num, sec_short_name, time, days, date_range, BGC);
+                    if (section_json_obj.length != 0) {
+                        section_num = section_json_obj[section_id].section_num;
+                        sec_short_name = section_json_obj[section_id].short_name;
+                        time = section_json_obj[section_id].time;
+                        days = section_json_obj[section_id].days;
+                        date_range = section_json_obj[section_id].date_range;
+                        //7.Append calendar
+                        appendCalendar(section_num, sec_short_name, time, days, date_range, BGC);
+                    } else {
+                        console.error(short_name + schedule_type + " is NULL");
+                    }
                 }).fail(function () {
                     console.error(short_name + "Laboratory Section JSON Fetch ERROR");
                 });
@@ -108,13 +116,17 @@ function dropL(ev, term) {
                 fetchSectionJSON(short_name, schedule_type="Examination", term).done(function (result4) {
                     section_json_obj = JSON.parse(result4);
                     section_id = "0";
-                    section_num = section_json_obj[section_id].section_num;
-                    sec_short_name = section_json_obj[section_id].short_name;
-                    time = section_json_obj[section_id].time;
-                    days = section_json_obj[section_id].days;
-                    date_range = section_json_obj[section_id].date_range;
-                    //9.Append calendar
-                    appendCalendar(section_num, sec_short_name, time, days, date_range, BGC);
+                    if (section_json_obj.length != 0) {
+                        section_num = section_json_obj[section_id].section_num;
+                        sec_short_name = section_json_obj[section_id].short_name;
+                        time = section_json_obj[section_id].time;
+                        days = section_json_obj[section_id].days;
+                        date_range = section_json_obj[section_id].date_range;
+                        //9.Append calendar
+                        appendCalendar(section_num, sec_short_name, time, days, date_range, BGC);
+                    } else {
+                        console.error(short_name + schedule_type + " is NULL");
+                    }
                 }).fail(function () {
                     console.error(short_name + "Examination Section JSON Fetch ERROR");
                 });
