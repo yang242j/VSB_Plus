@@ -18,7 +18,6 @@ var calendar = new FullCalendar.Calendar(calendarEl, {
         hour12: true,
     },
     events: [],
-    timeFormat: 'h(:mm)'
 });
 calendar.render();
 
@@ -231,6 +230,7 @@ function appendCalendar(section_num, short_name, time, days, date_range, BGC) {
     try {
         calendar.addEvent({
             allDay: false,
+            timeFormat: 'h(:mm)',
             id: event_id,
             title: event_title,
             startRecur: start_date,
