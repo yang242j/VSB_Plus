@@ -194,6 +194,8 @@ function appendCalendar(section_num, short_name, time, days, date_range, BGC) {
     var end_time = time.slice(10);
     var daysOfWeek = [];
 
+    console.log(start_time);
+
     // Convert the daysOfWeek
     for (var i = 0; i < days.length; i++) {
         switch (days[i].toUpperCase()) {
@@ -222,7 +224,7 @@ function appendCalendar(section_num, short_name, time, days, date_range, BGC) {
     try {
         calendar.addEvent({
             allDay: false,
-            timeFormat: 'h(:mm)t',
+            timeFormat: 'h(:mm)',
             id: event_id,
             title: event_title,
             startRecur: start_date,
