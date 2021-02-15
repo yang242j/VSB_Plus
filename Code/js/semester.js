@@ -11,6 +11,11 @@ var calendar = new FullCalendar.Calendar(calendarEl, {
         center: 'title',
         right: 'dayGridMonth,timeGridWeek,timeGridDay'
     },
+    eventTimeFormat: {
+        hour: "numeric",
+        minute: "2-digit",
+        meridiem: "short",
+    },
     events: []
 });
 calendar.render();
