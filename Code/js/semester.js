@@ -17,8 +17,8 @@ var calendar = new FullCalendar.Calendar(calendarEl, {
         meridiem: "short",
         hour12: true,
     },
-    timeFormat: "h:mma",
-    events: []
+    events: [],
+    timeFormat: "h(:mm)",
 });
 calendar.render();
 
