@@ -18,7 +18,7 @@ var calendar = new FullCalendar.Calendar(calendarEl, {
         hour12: true,
     },
     events: [],
-    timeFormat: "h(:mm)",
+    timeFormat: 'h(:mm)'
 });
 calendar.render();
 
