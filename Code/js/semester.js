@@ -1,5 +1,5 @@
 const colors = ["lightblue", "lightseagreen", "pink", "yellow", "Azure", "Bisque", "Coral", "Cyan", "Cornsilk", "Lavender"];
-var pre_colorID = "", examDateDic = {"ENGG 400_Exam": new Date("Apr 20 2021")};
+var pre_colorID = "", examDateDic = {/*"ENGG 400_Exam": new Date("Apr 20 2021")*/};
 
 //Calendar init
 var calendarEl = document.getElementById('calendar');
@@ -303,7 +303,7 @@ function appendExamList(section_num, sec_short_name, time, days, date_range) {
     }
     document.getElementById("examDate_ul").innerHTML += examDate_li;
     examDateDic[examDate_id] = examDate;
-    console.log(examDateDic);
+    //console.log(examDateDic);
 }
 
 function removeExamList(sec_short_name) {
