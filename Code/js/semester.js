@@ -312,7 +312,7 @@ function removeExamList(sec_short_name) {
         // Append li
         document.getElementById(examDate_id).remove();
         // remove exam key and value from examDateDic
-        delete examDateDic[examDate];
+        delete examDateDic[examDate_id];
     } catch (e) {
         console.error("Exam date " + examDate_id + " remove FAILED");
     }
