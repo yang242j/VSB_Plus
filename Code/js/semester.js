@@ -1,5 +1,5 @@
 const colors = ["lightblue", "lightseagreen", "pink", "yellow", "Azure", "Bisque", "Coral", "Cyan", "Cornsilk", "Lavender"];
-var pre_colorID = "", examDateList = [new Date("Apr 22 2021")];
+var pre_colorID = "", examDateDic = {"ENGG 401_Exam": new Date("Apr 20 2021")};
 
 //Calendar init
 var calendarEl = document.getElementById('calendar');
@@ -157,6 +157,8 @@ function dropBR(ev) {
         removeCourseCard(short_name);
         // Remove course event from calendar
         removeCalendar(short_name);
+        // Remove exam date from List
+        removeExamList(short_name);
     }
 }
 
@@ -256,14 +258,15 @@ function removeCalendar(short_name) {
 function appendExamList(section_num, sec_short_name, time, days, date_range) {
     // Variable init
     var examDate_li, conflictExam, weekDay;
-    var examDate_id = sec_short_name.concat(" [", section_num, "]");
+    var examDate_id = sec_short_name.concat("_Exam");
+    var examDate_course = sec_short_name.concat(" [", section_num, "]");
     var examDate = new Date(date_range.slice(0, 12));
 
     // Check if exams are close or conflict
-    for (var i = 0; i < examDateList.length; i++) {
-        if (examDateList[i].getTime() === examDate.getTime()) {
+    for (var [key_id, value_date] of Object.entries(examDateDic)) {
+        if (value_date.getTime() === examDate.getTime()) {
             conflictExam = true;
-        } else if (Math.abs(examDateList[i].getTime() - examDate.getTime()) <= 86400000) {
+        } else if (Math.abs(value_date.getTime() - examDate.getTime()) <= 86400000) {
             conflictExam = true;
         } else {
             conflictExam = false;
@@ -294,17 +297,28 @@ function appendExamList(section_num, sec_short_name, time, days, date_range) {
     }
 
     if (conflictExam == true) {
-        examDate_li = "<li id='" + examDate_id + "'><mark>" + examDate_id + ": " + weekDay + ", " + examDate.toDateString().slice(3) + " " + time + "</mark></li>";
+        examDate_li = "<li id='" + examDate_id + "'><mark>" + examDate_course + ": " + weekDay + ", " + examDate.toDateString().slice(3) + " " + time + "</mark></li>";
     } else {
-        examDate_li = "<li id='" + examDate_id + "'>" + examDate_id + ": " + weekDay + ", " + examDate.toDateString().slice(3) + " " + time + "</li>";
+        examDate_li = "<li id='" + examDate_id + "'>" + examDate_course + ": " + weekDay + ", " + examDate.toDateString().slice(3) + " " + time + "</li>";
     }
     document.getElementById("examDate_ul").innerHTML += examDate_li;
-    examDateList.push(examDate);
-    console.log(examDateList);
+    examDateDic.push({
+        key:   examDate_id,
+        value: examDate
+    });
+    console.log(examDateDic);
 }
 
-function removeExamList() {
-
+function removeExamList(sec_short_name) {
+    var examDate_id = sec_short_name.concat("_Exam");
+    try {
+        // Append li
+        document.getElementById(examDate_id).remove();
+        // remove exam key and value from examDateDic
+        delete examDateDic[examDate];
+    } catch (e) {
+        console.error("Exam date " + examDate_id + " remove FAILED");
+    }
 }
 
 function tagGenerator(short_name, draggable = true) {
