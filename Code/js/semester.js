@@ -295,9 +295,9 @@ function appendExamList(section_num, sec_short_name, time, days, date_range) {
     }
 
     if (conflictExam == true) {
-        examDate_li = "<li id='" + examDate_id + "'><mark>" + examDate_id + ": " + weekDay + ", " + examDate.slice(0, 3) + " " + time + "</mark></li>";
+        examDate_li = "<li id='" + examDate_id + "'><mark>" + examDate_id + ": " + weekDay + ", " + examDate.slice(3) + " " + time + "</mark></li>";
     } else {
-        examDate_li = "<li id='" + examDate_id + "'>" + examDate_id + ": " + weekDay + ", " + examDate.slice(0, 3) + " " + time + "</li>";
+        examDate_li = "<li id='" + examDate_id + "'>" + examDate_id + ": " + weekDay + ", " + examDate.slice(3) + " " + time + "</li>";
     }
     
     document.getElementById("examDate_ul").innerHTML += examDate_li;
