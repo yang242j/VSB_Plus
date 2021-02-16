@@ -201,8 +201,6 @@ function appendCalendar(section_num, short_name, time, days, date_range, BGC) {
     var start_time = get24HrsFrm12Hrs(time.split("-")[0]);
     var end_time = get24HrsFrm12Hrs(time.split("-")[1]);
     var daysOfWeek = [];
-    console.log("Start:" + start_time);
-    console.log("End:" + end_time);
 
     // Convert the daysOfWeek
     for (var i = 0; i < days.length; i++) {
@@ -344,16 +342,9 @@ function get24HrsFrm12Hrs(timeString) {
     var minutes = Number(timeString.trim().match(/:(\d+)/)[1]);
     var AMPM = timeString.trim().match(/\s(.*)$/)[1];
 
-    console.log("timeString:" + timeString);
-    console.log("hours:" + hours);
-    console.log("minutes:" + minutes);
-    console.log("AMPM:" + AMPM);
-
     // Special cases
     if ( AMPM.toLowerCase() == "pm" && hours < 12 ) hours += 12;
     if ( AMPM.toLowerCase() == "am" && hours == 12 ) hours = 0;
-    
-    console.log("hours_after:" + hours);
     
     // Convertor
     var sHours = hours.toString();
