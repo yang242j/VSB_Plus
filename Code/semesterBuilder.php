@@ -123,7 +123,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             <div class="bottom-left" id="course_completed">
                 Courses Completed: <br>
                 <script>
-                    $(function() {
+                    $(document).ready( function() {
                         <?php
                         // Include the vsbp_db_config.php file
                         require_once "Model/vsbp_db_config.php";
@@ -164,7 +164,8 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                         }
                     });
 
-                    $(function() {
+                    $(window).load( function() {
+                        console.log(courseCompletedList);
                         // Store first 10 courses from the list
                         // Fetch required courses from JSON file,
                         // for each required-course,
