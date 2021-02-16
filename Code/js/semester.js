@@ -201,6 +201,8 @@ function appendCalendar(section_num, short_name, time, days, date_range, BGC) {
     var start_time = get24HrsFrm12Hrs(time.split("-")[0]);
     var end_time = get24HrsFrm12Hrs(time.split("-")[1]);
     var daysOfWeek = [];
+    console.log("Start:" + start_time);
+    console.log("End:" + end_time);
 
     // Convert the daysOfWeek
     for (var i = 0; i < days.length; i++) {
