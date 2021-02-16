@@ -1,5 +1,5 @@
 const colors = ["lightblue", "lightseagreen", "pink", "yellow", "Azure", "Bisque", "Coral", "Cyan", "Cornsilk", "Lavender"];
-var pre_colorID = "", examDateList = [new Date("Apr 21 2021")];
+var pre_colorID = "", examDateList = [new Date("Apr 22 2021")];
 
 //Calendar init
 var calendarEl = document.getElementById('calendar');
