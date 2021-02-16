@@ -1,5 +1,5 @@
 const colors = ["lightblue", "lightseagreen", "pink", "yellow", "Azure", "Bisque", "Coral", "Cyan", "Cornsilk", "Lavender"];
-var pre_colorID = "", examDateList = [];
+var pre_colorID = "", examDateList = ["Apr 20 2021"];
 
 //Calendar init
 var calendarEl = document.getElementById('calendar');
@@ -260,7 +260,6 @@ function appendExamList(section_num, sec_short_name, time, days, date_range) {
     var examDate = new Date(date_range.slice(0, 12)).toDateString();
 
     // Check if exams are close or conflict
-    console.log(examDate);
     for (var i = 0; i < examDateList.length; i++) {
         if (examDateList[i].getTime() === examDate.getTime()) {
             conflictExam = true;
@@ -299,8 +298,9 @@ function appendExamList(section_num, sec_short_name, time, days, date_range) {
     } else {
         examDate_li = "<li id='" + examDate_id + "'>" + examDate_id + ": " + weekDay + ", " + examDate.slice(3) + " " + time + "</li>";
     }
-    
     document.getElementById("examDate_ul").innerHTML += examDate_li;
+    examDateList.push(examDate);
+    console.log(examDateList);
 }
 
 function removeExamList() {
