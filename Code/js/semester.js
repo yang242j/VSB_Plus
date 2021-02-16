@@ -276,8 +276,11 @@ function tagGenerator(short_name, draggable = true) {
 function get24HrsFrm12Hrs(timeString) {
     // seperate H, M, am, pm
     var hours = Number(timeString.match(/^(\d+)/)[1]);
+    console.log("hours: "+hours);
     var minutes = Number(timeString.match(/:(\d+)/)[1]);
+    console.log("minutes: "+minutes);
     var AMPM = timeString.match(/\s(.*)$/)[1];
+    console.log("AMPM: "+AMPM);
 
     // Special cases
     if(AMPM.toLowerCase() == "pm" && hours<12) hours = hours+12;
