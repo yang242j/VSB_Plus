@@ -257,18 +257,18 @@ function appendExamList(section_num, sec_short_name, time, days, date_range) {
     // Variable init
     var examDate_li, conflictExam, weekDay;
     var examDate_id = sec_short_name.concat(" [", section_num, "]");
-    var examDate = new Date(date_range.slice(0, 12));
+    var examDate = new Date(date_range.slice(0, 12)).toDateString();
 
     // Check if exams are close or conflict
     console.log(examDate);
-    console.log(examDate.getTime());
     for (var i = 0; i < examDateList.length; i++) {
         if (examDateList[i].getTime() === examDate.getTime()) {
+            conflictExam = true;
+        } else if (Math.abs(examDateList[i].getTime() - examDate.getTime()) <= 86400000) {
             conflictExam = true;
         } else {
             conflictExam = false;
         }
-        console.log(Math.abs(examDateList[i].getTime() - examDate.getTime()));
     }
 
     // Convert days to fullword
