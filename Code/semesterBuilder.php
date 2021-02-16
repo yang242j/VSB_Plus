@@ -176,9 +176,9 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                     });
                 </script>
                 <div class="courseTag noDrop" id="CS 405" draggable="true" ondragstart="drag(event)">CS 405</div>
-                <div class="courseTag noDrop" id="ECON 201" draggable="true" ondragstart="drag(event)">ECON 201</div>
+                <div class="courseTag noDrop" id="ENEL 380" draggable="true" ondragstart="drag(event)">ENEL 380</div>
                 <div class="courseTag noDrop" id="ENGG 401" draggable="true" ondragstart="drag(event)">ENGG 401</div>
-                <div class="courseTag noDrop" id="ENGG 100" draggable="true" ondragstart="drag(event)">ENGG 100</div>
+                <div class="courseTag noDrop" id="ENEL 417" draggable="true" ondragstart="drag(event)">ENEL 417</div>
             </div>
         </div>
     </section>
