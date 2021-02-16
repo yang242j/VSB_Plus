@@ -302,7 +302,7 @@ function appendExamList(section_num, sec_short_name, time, days, date_range) {
         examDate_li = "<li id='" + examDate_id + "'>" + examDate_course + ": " + weekDay + ", " + examDate.toDateString().slice(3) + " " + time + "</li>";
     }
     document.getElementById("examDate_ul").innerHTML += examDate_li;
-    examDateDic.examDate_id = examDate;
+    examDateDic[examDate_id] = examDate;
     console.log(examDateDic);
 }
 
