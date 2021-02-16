@@ -257,7 +257,7 @@ function appendExamList(section_num, sec_short_name, time, days, date_range) {
     // Variable init
     var examDate_li, conflictExam, weekDay;
     var examDate_id = sec_short_name.concat(" [", section_num, "]");
-    var examDate = new Date(date_range.slice(0, 12)).toDateString();
+    var examDate = new Date(date_range.slice(0, 12));
 
     // Check if exams are close or conflict
     for (var i = 0; i < examDateList.length; i++) {
@@ -294,9 +294,9 @@ function appendExamList(section_num, sec_short_name, time, days, date_range) {
     }
 
     if (conflictExam == true) {
-        examDate_li = "<li id='" + examDate_id + "'><mark>" + examDate_id + ": " + weekDay + ", " + examDate.slice(3) + " " + time + "</mark></li>";
+        examDate_li = "<li id='" + examDate_id + "'><mark>" + examDate_id + ": " + weekDay + ", " + examDate.toDateString().slice(3) + " " + time + "</mark></li>";
     } else {
-        examDate_li = "<li id='" + examDate_id + "'>" + examDate_id + ": " + weekDay + ", " + examDate.slice(3) + " " + time + "</li>";
+        examDate_li = "<li id='" + examDate_id + "'>" + examDate_id + ": " + weekDay + ", " + examDate.toDateString().slice(3) + " " + time + "</li>";
     }
     document.getElementById("examDate_ul").innerHTML += examDate_li;
     examDateList.push(examDate);
