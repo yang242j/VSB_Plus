@@ -198,11 +198,8 @@ function appendCalendar(section_num, short_name, time, days, date_range, BGC) {
     var event_title = event_id.concat(" [", section_num, "]");
     var start_date = new Date(date_range.slice(0, 12)).toISOString().substring(0, 10);
     var end_date = new Date(date_range.slice(15)).toISOString().substring(0, 10);
-    console.log("Time:" + time);
-    console.log("Start:" + time.slice(0, 7));
-    console.log("End:" + time.slice(10));
-    var start_time = get24HrsFrm12Hrs(time.slice(0, 7));
-    var end_time = get24HrsFrm12Hrs(time.slice(10));
+    var start_time = get24HrsFrm12Hrs(time.split("-")[0]);
+    var end_time = get24HrsFrm12Hrs(time.split("-")[1]);
     var daysOfWeek = [];
 
     // Convert the daysOfWeek
