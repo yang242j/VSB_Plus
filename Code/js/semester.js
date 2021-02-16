@@ -345,8 +345,8 @@ function get24HrsFrm12Hrs(timeString) {
     var AMPM = timeString.match(/\s(.*)$/)[1];
 
     // Special cases
-    if(AMPM.toLowerCase() == "pm" && hours<12) hours = hours+12;
-    if(AMPM.toLowerCase() == "am" && hours==12) hours = 0;
+    if( AMPM.toLowerCase() == "pm" && hours < 12) hours += 12;
+    if( AMPM.toLowerCase() == "am" && hours == 12) hours = 0;
     
     // Convertor
     var sHours = hours.toString();
