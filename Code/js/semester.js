@@ -202,7 +202,7 @@ function appendCalendar(section_num, short_name, time, days, date_range, BGC) {
     var end_time = get24HrsFrm12Hrs(time.split("-")[1]);
     var daysOfWeek = [];
 
-    // Convert the daysOfWeek
+    // Convert days characters into daysOfWeek number
     for (var i = 0; i < days.length; i++) {
         switch (days[i].toUpperCase()) {
             case "M":
@@ -223,7 +223,7 @@ function appendCalendar(section_num, short_name, time, days, date_range, BGC) {
             case "S":
                 daysOfWeek.push("6");
                 break;
-            // Assume NO Sunday lecture or lab 
+            // Assume NO Sunday (0) lecture or lab 
         }
     }
 
