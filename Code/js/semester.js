@@ -340,9 +340,9 @@ function tagGenerator(short_name, draggable = true) {
 
 function get24HrsFrm12Hrs(timeString) {
     // seperate H, M, am, pm
-    var hours = Number(timeString.trim().match(/^(\d+)/g));
-    var minutes = Number(timeString.trim().match(/:(\d+)/g));
-    var AMPM = timeString.trim().match(/\s(.*)$/g);
+    var hours = Number(timeString.trim().match(/^(\d+)/)[1]);
+    var minutes = Number(timeString.trim().match(/:(\d+)/)[1]);
+    var AMPM = timeString.trim().match(/\s(.*)$/)[1];
 
     console.log("timeString:" + timeString);
     console.log("hours:" + hours);
