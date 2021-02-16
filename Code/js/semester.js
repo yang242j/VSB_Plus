@@ -1,5 +1,5 @@
 const colors = ["lightblue", "lightseagreen", "pink", "yellow", "Azure", "Bisque", "Coral", "Cyan", "Cornsilk", "Lavender"];
-var pre_colorID = "";
+var pre_colorID = "", examDateList = [];
 
 //Calendar init
 var calendarEl = document.getElementById('calendar');
@@ -128,8 +128,8 @@ function dropL(ev, term) {
                         time = section_json_obj[section_id].time;
                         days = section_json_obj[section_id].days;
                         date_range = section_json_obj[section_id].date_range;
-                        //9.Append calendar
-                        appendCalendar(section_num, sec_short_name, time, days, date_range, BGC);
+                        //9.Append exam list
+                        appendExamList(section_num, sec_short_name, time, days, date_range);
                     } else {
                         console.error("Something WRONG with " + short_name + " Examination section");
                     }
@@ -221,6 +221,7 @@ function appendCalendar(section_num, short_name, time, days, date_range, BGC) {
             case "S":
                 daysOfWeek.push("6");
                 break;
+            // Assume NO Sunday lecture or lab 
         }
     }
 
@@ -250,6 +251,60 @@ function removeCalendar(short_name) {
     } catch (e) {
         console.error("Calendar event" + short_name + " remove FAILED");
     }
+}
+
+function appendExamList(section_num, sec_short_name, time, days, date_range) {
+    // Variable init
+    var examDate_li, conflictExam, weekDay;
+    var examDate_id = sec_short_name.concat(" [", section_num, "]");
+    var examDate = new Date(date_range.slice(0, 12));
+
+    // Check if exams are close or conflict
+    console.log(examDate);
+    console.log(examDate.getTime());
+    for (var i = 0; i < examDateList.length; i++) {
+        if (examDateList[i].getTime() === examDate.getTime()) {
+            conflictExam = true;
+        } else {
+            conflictExam = false;
+        }
+        console.log(Math.abs(examDateList[i].getTime() - examDate.getTime()));
+    }
+
+    // Convert days to fullword
+    switch (days.toUpperCase()) {
+        case "M":
+            weekDay = "Monday";
+            break;
+        case "T":
+            weekDay = "Tuesday";
+            break;
+        case "W":
+            weekDay = "Wednesday";
+            break;
+        case "R":
+            weekDay = "Thursday";
+            break;
+        case "F":
+            weekDay = "Friday";
+            break;
+        case "S":
+            weekDay = "Saturday";
+            break;
+        // Assume NO Sunday exam
+    }
+
+    if (conflictExam == true) {
+        examDate_li = "<li id='" + examDate_id + "'><mark>" + examDate_id + ": " + weekDay + ", " + examDate + " " + time + "</mark></li>";
+    } else {
+        examDate_li = "<li id='" + examDate_id + "'>" + examDate_id + ": " + weekDay + ", " + examDate + " " + time + "</li>";
+    }
+    
+    document.getElementById("examDate_ul").innerHTML += examDate_li;
+}
+
+function removeExamList() {
+
 }
 
 function tagGenerator(short_name, draggable = true) {

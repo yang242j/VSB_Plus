@@ -115,18 +115,8 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                 <div id='calendar'></div>
             </div>
             <div class="Date">
-                <p>Midterm Exam Date:</p>
-                <ul>
-                    <li>ENSE 400: /</li>
-                    <li>ENSE 496AC: Tuesday, October 20, 2020</li>
-                    <li>ENSE 496AD: Monday, October 26, 2020</li>
-                </ul>
                 <p>Final Exam Date:</p>
-                <ul>
-                    <li><mark>ENSE 400: Wednesday, December 16, 2020</mark></li>
-                    <li>ENSE 496AC: Tuesday, December 22, 2020</li>
-                    <li><mark>ENSE 496AD: Wednesday, December 16, 2020</mark></li>
-                </ul>
+                <ul id="examDate_ul"></ul>
             </div>
         </div>
         <div class="stick-bottom">
