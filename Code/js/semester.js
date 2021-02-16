@@ -201,6 +201,7 @@ function appendCalendar(section_num, short_name, time, days, date_range, BGC) {
     var daysOfWeek = [];
 
     console.log(start_time);
+    console.log(get24HrsFrm12Hrs(start_time));
 
     // Convert the daysOfWeek
     for (var i = 0; i < days.length; i++) {
@@ -270,6 +271,24 @@ function tagGenerator(short_name, draggable = true) {
     }
 
     return course_tag;
+}
+
+function get24HrsFrm12Hrs(timeString) {
+    // seperate H, M, am, pm
+    var hours = Number(timeString.match(/^(\d+)/)[1]);
+    var minutes = Number(timeString.match(/:(\d+)/)[1]);
+    var AMPM = timeString.match(/\s(.*)$/)[1];
+
+    // Special cases
+    if(AMPM.toLowerCase() == "pm" && hours<12) hours = hours+12;
+    if(AMPM.toLowerCase() == "am" && hours==12) hours = 0;
+    
+    // Convertor
+    var sHours = hours.toString();
+    var sMinutes = minutes.toString();
+    if(hours<10) sHours = "0" + sHours;
+    if(minutes<10) sMinutes = "0" + sMinutes;
+    return sHours + ":" + sMinutes;;
 }
 
 function menuFunc3() {
