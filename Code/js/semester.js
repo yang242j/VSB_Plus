@@ -170,8 +170,8 @@ function fetchSectionJSON(short_name, schedule_type, term) {
     return $.post('Model/section.php', { short_name: short_name, schedule_type: schedule_type, term: term }, function(data) {});
 }
 
-function fetchRecJSON(courseCompletedList, major, term) {
-    return $.post('Model/courseREC.php', { courseCompletedList: courseCompletedList, major: major, term: term }, function(data) {});
+function fetchRecJSON(courseCompletedList, major, term, maxNum) {
+    return $.post('Model/courseREC.php', { courseCompletedList: courseCompletedList, major: major, term: term, maxNum: maxNum }, function(data) {});
 }
 
 function appendCourseCard(course_json, BGC) {
