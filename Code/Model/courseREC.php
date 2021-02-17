@@ -44,7 +44,7 @@ if ($doneList !== "" && $major !== "" && $term !== "") {
             }
         }
     }
-    echo $toTakeList;
+    echo json_encode($toTakeList, JSON_PRETTY_PRINT);
 
 } else {
     echo "One of three inputs is invalid";
