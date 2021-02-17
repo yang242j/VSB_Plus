@@ -164,8 +164,8 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                         fetchRecJSON(courseCompletedList, major="<?php echo htmlspecialchars($_SESSION['major']); ?>", term).done(function (result) {
                             var REC_json_obj = JSON.parse(result);
                             // For each recommended courses, generate and append the tag
-                            foreach ($REC_json_obj as $recommCourse) {
-                                var course_tag = tagGenerator($recommCourse, true);
+                            REC_json_obj.foreach (function (recommended)) {
+                                var course_tag = tagGenerator(recommended, true);
                                 document.getElementById("course_recommended").innerHTML += course_tag;
                             }
                         }).fail(function () {
