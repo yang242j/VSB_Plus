@@ -27,12 +27,12 @@ if ($doneList !== "" && $major !== "" && $term !== "") {
     $fileName = $major . '_req.json';
     $json_String = file_get_contents("../JSON/$fileName"); // Get the contents of the JSON file 
     $json_array = json_decode($json_String, true); // Convert to array 
-    $reqList_json = json_encode($json_array, JSON_PRETTY_PRINT); // Encode to json
+    //$reqList_json = json_encode($json_array, JSON_PRETTY_PRINT); // Encode to JSON format.
     //echo $reqList_json;
 
     // 2. Compare the doneList and the reqList_json, store the first 10 courses into an array.
-    foreach ($reqList_json as $reqCourse) {
-        echo $reqCourse;
+    foreach ($json_array as $reqTerm => $reqCourse) {
+        echo "$reqTerm = $reqCourse";
     }
 
 } else {
