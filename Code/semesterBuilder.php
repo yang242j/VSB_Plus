@@ -164,10 +164,10 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                         fetchRecJSON(courseCompletedList, major="<?php echo htmlspecialchars($_SESSION['major']); ?>", term).done(function (result) {
                             var REC_json_obj = JSON.parse(result);
                             // For each recommended courses, generate and append the tag
-                            REC_json_obj.foreach (function (recommended)) {
+                            REC_json_obj.foreach (function (recommended) {
                                 var course_tag = tagGenerator(recommended, true);
                                 document.getElementById("course_recommended").innerHTML += course_tag;
-                            }
+                            }); 
                         }).fail(function () {
                             console.error("Course Recommendation JSON Fetch FAILED");
                         });
