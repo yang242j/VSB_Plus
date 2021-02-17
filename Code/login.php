@@ -38,7 +38,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (empty($studentid_err) && empty($password_err)) {
 
         // Prepare a select statement
-        $sql = "SELECT student_id, name, password FROM students WHERE student_id = ?";
+        $sql = "SELECT student_id, name, major, password FROM students WHERE student_id = ?";
 
         if ($stmt = mysqli_prepare($conn, $sql)) {
             // Bind variables to the prepared statement as parameters
@@ -55,7 +55,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 // Check if student_id exists, if yes then verify password
                 if (mysqli_stmt_num_rows($stmt) == 1) {
                     // Bind result variables
-                    mysqli_stmt_bind_result($stmt, $studentid, $name, $hashed_password);
+                    mysqli_stmt_bind_result($stmt, $studentid, $name, $major, $hashed_password);
                     if (mysqli_stmt_fetch($stmt)) {
                         if (password_verify($password, $hashed_password)) {
                             // Password is correct, so start a new session
