@@ -94,6 +94,13 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                     }
                 });
             </script>
+
+            <!--
+            // Test tags
+            <div class="courseTag noDrop" id="ense400" draggable="true" ondragstart="drag(event)">ENSE400</div>
+            <div class="courseTag noDrop" id="ense496ac" draggable="true" ondragstart="drag(event)">ENSE496AC</div>
+            <div class="courseTag noDrop" id="ense496ad" draggable="true" ondragstart="drag(event)">ENSE496AD</div>
+            -->
         </div>
         <div class="middle-section" id="courseCardList">
             <h3 class="section-title">Course Detail Info</h3>
@@ -138,6 +145,14 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                         ?>
                     });
                 </script>
+
+                <!--
+                // Test tags
+                <div class="courseTag noDrag" id="CS 405" draggable="false">CS 405</div>
+                <div class="courseTag noDrag" id="ENEL 380" draggable="false">ENEL 380</div>
+                <div class="courseTag noDrag" id="ENGG 401" draggable="false">ENGG 401</div>
+                <div class="courseTag noDrag" id="ENEL 417" draggable="false">ENEL 417</div>
+                -->
             </div>
             <div id="course_recommended" class="bottom-right" ondrop="dropBR(event)" ondragover="allowDrop(event)" ondragenter="dragEnter(event)" ondragleave="dragLeave(event)">
                 Courses To Take: <br>
@@ -181,10 +196,14 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                         // once reach max-10, stop
                     });
                 </script>
+
+                <!--
+                // Test tags
                 <div class="courseTag noDrop" id="CS 405" draggable="true" ondragstart="drag(event)">CS 405</div>
                 <div class="courseTag noDrop" id="ENEL 380" draggable="true" ondragstart="drag(event)">ENEL 380</div>
                 <div class="courseTag noDrop" id="ENGG 401" draggable="true" ondragstart="drag(event)">ENGG 401</div>
                 <div class="courseTag noDrop" id="ENEL 417" draggable="true" ondragstart="drag(event)">ENEL 417</div>
+                -->
             </div>
         </div>
     </section>
