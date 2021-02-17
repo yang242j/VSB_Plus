@@ -93,7 +93,7 @@ function dropL(ev, term) {
                         //5.Append calendar
                         appendCalendar(section_num, sec_short_name, time, days, date_range, BGC);
                     } else {
-                        console.error(short_name + " does NOT have Lecture section" + section_id);
+                        console.error(short_name + " does NOT have Lecture section_" + section_id);
                     }
                 }).fail(function () {
                     console.error(short_name + "Leccture Section JSON Fetch FAILED");
@@ -112,7 +112,7 @@ function dropL(ev, term) {
                         //7.Append calendar
                         appendCalendar(section_num, sec_short_name, time, days, date_range, BGC);
                     } else {
-                        console.error(short_name + " does NOT have Lab section" + section_id);
+                        console.error(short_name + " does NOT have Lab section_" + section_id);
                     }
                 }).fail(function () {
                     console.error(short_name + "Lab Section JSON Fetch FAILED");
@@ -131,7 +131,7 @@ function dropL(ev, term) {
                         //9.Append exam list
                         appendExamList(section_num, sec_short_name, time, days, date_range);
                     } else {
-                        console.error(short_name + " does NOT have Examination section" + section_id);
+                        console.error(short_name + " does NOT have Examination section_" + section_id);
                     }
                 }).fail(function () {
                     console.error(short_name + "Examination Section JSON Fetch FAILED");
