@@ -31,10 +31,12 @@ if ($doneList !== "" && $major !== "" && $term !== "") {
     //echo $reqList_json;
 
     // 2. Compare the doneList and the reqList_json, store the first 10 courses into an array.
-    foreach ($json_array as $reqCourse) {
-        echo "$reqCourse";
+    foreach ($reqList_json as $reqCourse) {
+        echo $reqCourse;
     }
 
 } else {
     echo "One of three inputs is invalid";
 }
+
+?>
