@@ -37,7 +37,7 @@ if ($doneList !== "" && $major !== "" && $term !== "") {
         //echo "$reqTerm: <br>";
         foreach ($reqCourseArray as $reqCourse) {
             //echo $reqCourse;
-            if (in_array($reqCourse, $doneList) || $reqCourse == "Approved") {
+            if (in_array($reqCourse, $doneList) || $reqCourse == "Approved" || sizeof($toTakeList)>= 10 ) {
                 continue; //echo "$reqCourse done <br>";
             } else {
                 array_push($toTakeList, $reqCourse);
