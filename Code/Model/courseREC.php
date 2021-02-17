@@ -40,7 +40,7 @@ if ($doneList !== "" && $major !== "" && $term !== "") {
             if (in_array($reqCourse, $doneList)) {
                 echo "$reqCourse done <br>";
             } else {
-                array_push($reqCourse, $toTakeList);
+                array_push($toTakeList, $reqCourse);
             }
         }
     }
