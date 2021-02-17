@@ -34,11 +34,11 @@ if ($doneList !== "" && $major !== "" && $term !== "") {
 
     // 2. Compare the doneList and the reqList_json, store the first 10 courses into an array.
     foreach ($json_array as $reqTerm => $reqCourseArray) {
-        echo "$reqTerm: <br>";
+        //echo "$reqTerm: <br>";
         foreach ($reqCourseArray as $reqCourse) {
             //echo $reqCourse;
-            if (in_array($reqCourse, $doneList)) {
-                echo "$reqCourse done <br>";
+            if (in_array($reqCourse, $doneList) || $reqCourse == "Approved") {
+                continue; //echo "$reqCourse done <br>";
             } else {
                 array_push($toTakeList, $reqCourse);
             }
