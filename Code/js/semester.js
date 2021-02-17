@@ -327,8 +327,8 @@ function tagGenerator(short_name, draggable = true) {
 
     if (draggable == true) {
         course_tag =
-            "<div class='courseTag' id='" + short_name +
-            "' draggable='true'>" + short_name +
+            "<div class='courseTag noDrop' id='" + short_name +
+            "' draggable='true' ondragstart='drag(event)'>" + short_name +
             "</div>";
     } else {
         course_tag =
