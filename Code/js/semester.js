@@ -96,7 +96,7 @@ function dropL(ev, term) {
                         console.error("Something WRONG with " + short_name + " Lecture section");
                     }
                 }).fail(function () {
-                    console.error(short_name + "Leccture Section JSON Fetch ERROR");
+                    console.error(short_name + "Leccture Section JSON Fetch FAILED");
                 });
                 
                 //6. Fetch Laboratory Section JSON data
@@ -115,7 +115,7 @@ function dropL(ev, term) {
                         console.error("Something WRONG with " + short_name + " Lab section");
                     }
                 }).fail(function () {
-                    console.error(short_name + "Lab Section JSON Fetch ERROR");
+                    console.error(short_name + "Lab Section JSON Fetch FAILED");
                 });
 
                 //8. Fetch Examination Section JSON data
@@ -134,10 +134,10 @@ function dropL(ev, term) {
                         console.error("Something WRONG with " + short_name + " Examination section");
                     }
                 }).fail(function () {
-                    console.error(short_name + "Examination Section JSON Fetch ERROR");
+                    console.error(short_name + "Examination Section JSON Fetch FAILED");
                 });
             }).fail(function() {
-                console.error(short_name + "Course JSON Fetch ERROR");
+                console.error(short_name + "Course JSON Fetch FAILED");
             });
         }
     }
@@ -168,6 +168,10 @@ function fetchCourseJSON(short_name) {
 
 function fetchSectionJSON(short_name, schedule_type, term) {
     return $.post('Model/section.php', { short_name: short_name, schedule_type: schedule_type, term: term }, function(data) {});
+}
+
+function fetchRecJSON(courseCompletedList, major, term) {
+    return $.post('Model/courseREC.php', { courseCompletedList: courseCompletedList, major: major, term: term }, function(data) {});
 }
 
 function appendCourseCard(course_json, BGC) {
