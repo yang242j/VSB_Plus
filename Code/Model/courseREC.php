@@ -25,7 +25,7 @@ if (isset($_REQUEST["term"]) and $_REQUEST["term"] != '') {
 if ($doneList !== "" && $major !== "" && $term !== "") {
     // Based on the major, open and read the json file of required courses.
     $fileName = $major . '_req.json';
-    $strJsonFileContents = file_get_contents("../JSON/$fileName.json");
+    $strJsonFileContents = file_get_contents("../JSON/$fileName");
     var_dump($strJsonFileContents); // show contents
 
 } else {
