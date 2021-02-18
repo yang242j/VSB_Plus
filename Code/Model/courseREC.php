@@ -62,6 +62,7 @@ if ($doneList !== "" && $major !== "" && $term !== "") {
     $toTakeList = array();
     foreach ($reqList_json_array as $reqTerm => $reqCourses_array) {
         foreach ($reqCourses_array as $reqCourse) {
+            echo "$reqCourse <br>";
             $skipCondition_1 = in_array($reqCourse, $doneList); // Course was completed
             echo "$skipCondition_1 <br>";
             $skipCondition_2 = $reqCourse == "Approved"; // Approved elective
