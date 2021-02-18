@@ -215,15 +215,13 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             Note: <br>
         </p>
         <p class="info-link"><a href="homePage.php">About Us</a><a href="View/api_test.html">API Test</a></p>
-        <div id="test">CLICK</div>
+        <div id="test">CLICK</div><?php echo file_exists("../JSON/'202030'/'BUS 210'.json"); ?>
         <script>
             $("#test").click(function() {
                 var myObj = {
                     Term: term,
                     Course_List: courseList,
                     Course_Completed: courseCompletedList,
-                    File_Exists: "??? <?php echo file_exists("../JSON/'202030'/'BUS 210'.json"); ?>",
-                    File_NOT_Exists: "??? <?php echo file_exists("../JSON/'202030'/'BUS 220'.json"); ?>",
                 };
                 console.log(myObj);
             });
