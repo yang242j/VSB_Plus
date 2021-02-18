@@ -215,7 +215,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             Note: <br>
         </p>
         <p class="info-link"><a href="homePage.php">About Us</a><a href="View/api_test.html">API Test</a></p>
-        <div id="test">CLICK</div><?php echo file_exists("login.php") ? "true" : "false"; ?>
+        <div id="test">CLICK</div><?php echo file_exists("JSON") ? "true" : "false"; ?>
         <script>
             $("#test").click(function() {
                 var myObj = {
