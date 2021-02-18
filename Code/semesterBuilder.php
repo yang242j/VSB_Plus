@@ -187,6 +187,10 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                             console.error("Course Recommendation JSON Fetch FAILED");
                         });
                     });
+
+                    $("#termSelector").change(function() {
+                        console.log("Term", term);
+                    });
                 </script>
 
                 <!--
