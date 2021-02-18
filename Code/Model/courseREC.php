@@ -7,7 +7,7 @@
  *  2) Only return required number of courses.
  *  3) Semester (term) presented courses.
  *  4) Prerequisites of the course must met.
- *  5) Required courses take priority over approved courses.
+ *  5) Required courses take priority over approved courses. (Recommend all the required courses first.)
  * 
  * Steps:
  *  1) Collect inputs.( $doneList, $major, $term, $maxNum )
@@ -61,10 +61,12 @@ if ($doneList !== "" && $major !== "" && $term !== "") {
     // 4. Generate $toTakeList.
     $toTakeList = array();
     foreach ($reqList_json_array as $reqTerm => $reqCourses_array) {
-        //echo "$reqTerm: <br>";
         foreach ($reqCourses_array as $reqCourse) {
-            //echo $reqCourse;
-            if (in_array($reqCourse, $doneList) || $reqCourse == "Approved" || sizeof($toTakeList)>= $maxNum ) {
+            $skipCondition_1 = in_array($reqCourse, $doneList); // Course was completed
+            $skipCondition_2 = $reqCourse == "Approved"; // Approved elective
+            $skipCondition_3 = sizeof($toTakeList)>= $maxNum; // To take list is full
+            $skipCondition_4 = file_exists("../JSON/$term/$reqCourse.json") ? false : true; // Course is not presented in the selected term/semester
+            if ( $skipCondition_1 || $skipCondition_2 || $skipCondition_3 || $skipCondition_4 ) {
                 continue; //echo "$reqCourse done <br>";
             } else {
                 array_push($toTakeList, $reqCourse);
