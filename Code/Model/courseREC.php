@@ -33,25 +33,21 @@ $maxNum = isset($_REQUEST["maxNum"]) ? $_REQUEST["maxNum"] : '';
 
 // 2. Convert term input
 if (isset($_REQUEST["term"]) and $_REQUEST["term"] != '') {
+    $term_NUM = $_REQUEST["term"];
     switch ($_REQUEST["term"]) {
-        case "2020 Spring/Summer":
-        case "2020 Fall":
-        case "2021 Winter":
-            $term = $_REQUEST["term"];
-            break;
         case 202020:
-            $term = "2020 Spring/Summer";
+            $term_EN = "2020 Spring/Summer";
             break;
         case 202030:
-            $term = "2020 Fall";
+            $term_EN = "2020 Fall";
             break;
         case 202110:
-        default:
-            $term = "2021 Winter";
+            $term_EN = "2021 Winter";
+            break;
     }
 }
 
-if ($doneList !== "" && $major !== "" && $term !== "") {
+if ($doneList !== "" && $major !== "" && $term_NUM !== "" && $term_EN !== "") {
 
     // 3. Open & Collect required courses 
     $fileName = $major . '_req.json';
@@ -66,8 +62,8 @@ if ($doneList !== "" && $major !== "" && $term !== "") {
             $skipCondition_1 = in_array($reqCourse, $doneList); // Course was completed
             $skipCondition_2 = $reqCourse == "Approved"; // Approved elective
             $skipCondition_3 = sizeof($toTakeList)>= $maxNum; // To take list is full
-            $skipCondition_4 = file_exists("../JSON/$term/$reqCourse.json") ? false : true; // Course is not presented in the selected term/semester
-            echo "../JSON/$term/$reqCourse.json <br>";
+            $skipCondition_4 = file_exists("../JSON/$term_NUM/$reqCourse.json") ? false : true; // Course is not presented in the selected term/semester
+            echo "../JSON/$term_NUM/$reqCourse.json <br>";
             if ( $skipCondition_1 || $skipCondition_2 || $skipCondition_3 || $skipCondition_4 ) {
                 continue; //echo "$reqCourse done <br>";
             } else {
