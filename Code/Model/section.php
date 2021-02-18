@@ -1,4 +1,29 @@
 <?php
+/**
+ * Collect one courses all section details from the course database.
+ * 
+ * Requirments:
+ *  1) Required one courses short name as varible name short_name in the data set.
+ *  2) Allow to set the class type as "class", "exam" or "lab".
+ *  3) Allow to set the search term.
+ * 
+ * Steps:
+ *  1) Collect inputs.( $short_name, $schedule_type, $term)
+ *  2) Convert $short_name, $schedule_type and $term input into db readable format.
+ *  3) Based on the $short_name, $schedule_type, $term input, form the arrray for course detail.
+ *  4) Encode & Return as JSON format
+ * 
+ * @version 1.0
+ * @link      http://15.223.123.122/vsbp/Code/courseDB.php
+ * @author    Xinyu Liu (sid: 200362878) <liu725@uregina.ca>
+ * @param array $short_name "short_name of one course"
+ * @param array $schedule_type "schedule type of the course"
+ * @param array $term "term of the course at the different semester"
+ * @return json $toTakeList "Recommended courses to take in the selected term"
+ */
+
+
+//1) Collect inputs.( $short_name, $schedule_type, $term)
 // get the q parameter from URL or post or get method
 $short_name = isset($_REQUEST["short_name"]) ? $_REQUEST["short_name"] : '';
 $addCond = '';
@@ -6,7 +31,7 @@ $addCond = '';
 if (isset($_REQUEST["schedule_type"]) and $_REQUEST["schedule_type"] != '') {
     $addCond .= " AND schedule_type = '" . $_REQUEST["schedule_type"] . "'";
 }
-
+// 2) Convert $short_name, $schedule_type and $term input into db readable format.
 if (isset($_REQUEST["term"]) and $_REQUEST["term"] != '') {
     switch ($_REQUEST["term"]) {
         case "2020 Spring/Summer":
@@ -37,6 +62,7 @@ if ($short_name !== "") {
     $count_res = mysqli_query($conn, $count_sql);
     $count = mysqli_fetch_array($count_res)[0];
 
+    // 3) Based on the $short_name, $schedule_type, $term input, form the arrray for course detail.
     // If there is a course that is required.
     if ($count > 0) {
         $sec_sql = "SELECT * FROM section where short_name = '" . $short_name . "'" . $addCond;
@@ -62,6 +88,7 @@ if ($short_name !== "") {
             // array_push($data, json_encode($section)); 
             array_push($data, $section);
         }
+        //4) Encode & Return as JSON format
         $json_data = json_encode($data, JSON_PRETTY_PRINT);
         echo $json_data;
         // print_r($data);
