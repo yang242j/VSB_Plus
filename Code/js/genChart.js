@@ -98,3 +98,62 @@ function showGraph(name){
         // return JSON.parse(data);
     });
 }
+
+function genChart1(data, divId){
+  //Compute the data for graph
+  var goodGrade = 0;
+  var generalGrade = 0;
+  var poorGrade = 0;
+  var notPass = 0;
+  var total_class = 46;
+
+  var labels_list = new Set();
+  for (var i in data) {
+      var takenCourse = data[i];
+      labels_list.add(takenCourse.term);
+
+      var grade = takenCourse.final_grade
+      if (grade == 'NP') notPass += 1;
+      if (parseInt(grade) >= 85) goodGrade += 1;
+      if (parseInt(grade) >= 65) generalGrade += 1;
+      if (parseInt(grade) >= 50) poorGrade += 1;
+      
+  }
+  var left_class = total_class - goodGrade - generalGrade - poorGrade; 
+
+  //In case, there is no 'canvas' element in the html
+  if (!document.getElementById('chart')) {
+      $('#' + divId).html(createCanvas('chart', 100, 100));
+  }
+
+  // Get the canvas element to generate the graph
+  var ctx = document.getElementById("chart").getContext('2d');
+
+  data = {
+    datasets: [{
+        data: [goodGrade, generalGrade, poorGrade, notPass, left_class],
+        backgroundColor: ['rgba(255, 99, 132, 0.2)',
+        'rgba(54, 162, 235, 0.2)',
+        'rgba(255, 206, 86, 0.2)',
+        'rgba(75, 192, 192, 0.2)',
+        'rgba(153, 102, 255, 0.2)',
+    ]
+    }],
+
+    // These labels appear in the legend and in the tooltips when hovering different arcs
+    labels: [
+        'Good',
+        'General',
+        'Poor',
+        'NP',
+        'Untaken',
+    ]
+};
+
+
+  var chart = new Chart(ctx, {
+      type: 'doughnut',
+      data: data,
+      options: {}
+  });
+}

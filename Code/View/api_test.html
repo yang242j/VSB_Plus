@@ -29,7 +29,7 @@
             <h3>Get a single course information</h3>
             <form id="course_form" onclick="return false">
                 <label for="short_name">Course short name: </label>
-                <input type="text" name="short_name" id="short_name">
+                <input type="text" name="short_name" id="short_name" value="CHEM 104">
                 <input type="submit" value="Get Course" id="get_course"> <br>
                 <label for="schedule_type">Schedule Type</label>
                 <select name="schedule_type" id="schedule_type">
@@ -56,34 +56,39 @@
             <h3>Sign in </h3>
             <form id="Sign_in_form" onclick="return false">
                 <label for="sid">Student ID</label>
-                <input type="text" name="sid" id="sid"> <br>
+                <input type="text" name="sid" id="sid" value="200362586">
+                <br>
                 <label for="password"> password</label>
-                <input type="text" name="password" id="password"> <br>
+                <input type="text" name="password" id="password" value="rasmuslerdorf"> <br>
                 <input type="submit" value="Sign in" id="sign_in">
                 <input type="submit" value="Get course history" id="course_history">
+                <input type="submit" value="GenGraph1" id="gen_graph1">
             </form>
             <div id="sign_in_result"></div>
         </div>
 
-        <div>
+        <!-- <div>
             <h3>Sign up</h3>
             <form id="sign_up_form" onclick="return false">
                 <label for=""></label>
             </form>
             <div id="sign_up_result"></div>
-        </div>
+        </div> -->
 
     </body>
 </html>
 
 
 <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+<script type="text/javascript" src="../js/genChart.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
 <script>
     $(document).ready(function(){
         $('#get_course').bind('click', getCourse);
         $('#get_sec').bind('click', getSec);
         $('#sign_in').bind('click', sign_in);
         $('#course_history').bind('click', getDetail);
+        $('#gen_graph1').bind('click', genGraph1);
         // $('#sign_up_form').bind('click', sign_up); 
     });
 
@@ -119,12 +124,20 @@
         });
     }
 
-    function sign_up(){
-        var account = $('#sign_up_form').serializeArray();
-        $.post('../Model/sign_in.php', account, function(data, status){
-            var pre_json = "<pre>" + data + "</pre>";
-            $('#sign_up_result').html(pre_json);
+    // function sign_up(){
+    //     var account = $('#sign_up_form').serializeArray();
+    //     $.post('../Model/sign_in.php', account, function(data, status){
+    //         var pre_json = "<pre>" + data + "</pre>";
+    //         $('#sign_up_result').html(pre_json);
+    //     });
+    // }
+
+    function genGraph1(){
+        var account = $('#Sign_in_form').serializeArray();
+        $.post('../Model/takenClass.php', account, function(data, status){
+            var jsonData = JSON.parse(data);
+            var divId = 'sign_in_result';
+            genChart1(jsonData, divId);
         });
     }
-
 </script>
