@@ -222,8 +222,8 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                     Term: term,
                     Course_List: courseList,
                     Course_Completed: courseCompletedList,
-                    File_Exists: <?php echo "??? " . file_exists("../JSON/'202030'/'BUS 210'.json"); ?>,
-                    File_NOT_Exists: <?php echo "??? " . file_exists("../JSON/'202030'/'BUS 220'.json"); ?>,
+                    File_Exists: "??? <?php echo file_exists("../JSON/'202030'/'BUS 210'.json"); ?>",
+                    File_NOT_Exists: "??? <?php echo file_exists("../JSON/'202030'/'BUS 220'.json"); ?>",
                 };
                 console.log(myObj);
             });
