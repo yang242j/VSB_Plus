@@ -85,7 +85,8 @@ if ($doneList !== "" && $major !== "" && $term_NUM !== "" && $term_EN !== "") {
 function checkSectionEmpty($path) {
     $json_string = file_get_contents($path);
     $parsed_json = json_decode($json_string, true);
-    echo isset($parsed_json['section']) ? $parsed_json['short_name'] : null;
+    echo isset($parsed_json['section']) ? $parsed_json['short_name'] : 'null';
+    echo "<br>";
     //echo json_encode($parsed_json, JSON_PRETTY_PRINT);
 }
 
