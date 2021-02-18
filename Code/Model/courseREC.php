@@ -63,9 +63,13 @@ if ($doneList !== "" && $major !== "" && $term !== "") {
     foreach ($reqList_json_array as $reqTerm => $reqCourses_array) {
         foreach ($reqCourses_array as $reqCourse) {
             $skipCondition_1 = in_array($reqCourse, $doneList); // Course was completed
+            echo "$skipCondition_1 <br>";
             $skipCondition_2 = $reqCourse == "Approved"; // Approved elective
+            echo "$skipCondition_2 <br>";
             $skipCondition_3 = sizeof($toTakeList)>= $maxNum; // To take list is full
+            echo "$skipCondition_3 <br>";
             $skipCondition_4 = file_exists("../JSON/$term/$reqCourse.json") ? false : true; // Course is not presented in the selected term/semester
+            echo "$skipCondition_4 <br>";
             if ( $skipCondition_1 || $skipCondition_2 || $skipCondition_3 || $skipCondition_4 ) {
                 continue; //echo "$reqCourse done <br>";
             } else {
