@@ -80,7 +80,7 @@ if ($doneList !== "" && $major !== "" && $term !== "") {
     }
     
     // 5. Encode & Return as JSON format.
-    echo json_encode($toTakeList, JSON_PRETTY_PRINT); 
+    //echo json_encode($toTakeList, JSON_PRETTY_PRINT); 
 
 } else {
     echo "One of three inputs is invalid";
