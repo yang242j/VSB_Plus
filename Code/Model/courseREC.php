@@ -63,7 +63,7 @@ if ($doneList !== "" && $major !== "" && $term_NUM !== "" && $term_EN !== "") {
             $skipCondition_3 = sizeof($toTakeList)>= $maxNum; // To take list is full
             $skipCondition_4 = file_exists("../JSON/$term_NUM/$reqCourse.json") ? false : true; // Course is not presented in the selected term/semester
             if ( $skipCondition_1 || $skipCondition_2 || $skipCondition_3 || $skipCondition_4 ) {
-                echo "$reqCourse : $skipCondition_1, $skipCondition_2, $skipCondition_3, $skipCondition_4 <br>";
+                //echo "$reqCourse : $skipCondition_1, $skipCondition_2, $skipCondition_3, $skipCondition_4 <br>";
                 continue; 
             } else {
                 array_push($toTakeList, $reqCourse);
@@ -72,7 +72,7 @@ if ($doneList !== "" && $major !== "" && $term_NUM !== "" && $term_EN !== "") {
     }
     
     // 5. Encode & Return as JSON format.
-    //echo json_encode($toTakeList, JSON_PRETTY_PRINT); 
+    echo json_encode($toTakeList, JSON_PRETTY_PRINT); 
 
 } else {
     echo "One of three inputs is invalid";
