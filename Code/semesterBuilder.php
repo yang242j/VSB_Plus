@@ -72,6 +72,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 
                 $("#termSelector").change(function() {
                     term = $("#termSelector option:selected").val();
+                    $(".bottom-right").trigger("ready");
                 });
             </script>
         </div>
