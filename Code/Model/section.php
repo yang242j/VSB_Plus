@@ -88,9 +88,9 @@ if ($short_name !== "") {
             array_push($data, $section);
             // echo "<br> " . $section['course_code'];
             // echo $section["section_num"];
-            
+
         }
-        echo json_decode($data);
+        echo json_encode($data);
         //4) Encode & Return as JSON format
         // echo json_encode($data, JSON_PRETTY_PRINT);
         // print_r($data);
