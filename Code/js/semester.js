@@ -83,7 +83,6 @@ function dropL(ev, term) {
                     return JSON.parse(result2);
                 }).fail(function () {
                     console.error(short_name + "Leccture Section JSON Fetch FAILED");
-                    return JSON.parse('');
                 });
                 console.log(lec_json_obj);
 
