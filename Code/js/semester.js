@@ -203,9 +203,8 @@ function appendCalendar(section, BGC) {
     // Manage the input values
     var event_id = section.short_name;
     var event_title = event_id + " [" + section.section_num + "]";
-    var date_range = section.date_range;
-    var start_date = new Date(date_range.slice(0, 12)).toISOString().substring(0, 10);
-    var end_date = new Date(date_range.slice(15)).toISOString().substring(0, 10);
+    var start_date = new Date(section['date_range'].slice(0, 12)).toISOString().substring(0, 10);
+    var end_date = new Date(section['date_range'].slice(15)).toISOString().substring(0, 10);
     var start_time = get24HrsFrm12Hrs(section.time.split("-")[0]);
     var end_time = get24HrsFrm12Hrs(section.time.split("-")[1]);
     var daysOfWeek = [];
