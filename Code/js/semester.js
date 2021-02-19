@@ -79,17 +79,18 @@ function dropL(ev, term) {
                 pre_colorID = randomColorIndex; //3.1.Store color id
                 
                 // Init common section variables
-                var section_json_obj, section_id, section_num, sec_short_name, time, days, date_range;
+                var lecture_json_obj, lab_json_obj, exam_json_obj, section_id, section_num, sec_short_name, time, days, date_range;
                 //4.Fetch Lecture Section JSON data
                 fetchSectionJSON(short_name, schedule_type="Lecture", term).done(function (result2) {
-                    section_json_obj = JSON.parse(result2);
+                    lecture_json_obj = JSON.parse(result2);
+                    console.log(Object.keys(lecture_json_obj).length);
                     section_id = "0";
-                    if (section_json_obj[section_id]) {
-                        section_num = section_json_obj[section_id].section_num;
-                        sec_short_name = section_json_obj[section_id].short_name;
-                        time = section_json_obj[section_id].time;
-                        days = section_json_obj[section_id].days;
-                        date_range = section_json_obj[section_id].date_range;
+                    if (lecture_json_obj[section_id]) {
+                        section_num = lecture_json_obj[section_id].section_num;
+                        sec_short_name = lecture_json_obj[section_id].short_name;
+                        time = lecture_json_obj[section_id].time;
+                        days = lecture_json_obj[section_id].days;
+                        date_range = lecture_json_obj[section_id].date_range;
                         //5.Append calendar
                         appendCalendar(section_num, sec_short_name, time, days, date_range, BGC);
                     } else {
@@ -101,14 +102,15 @@ function dropL(ev, term) {
                 
                 //6. Fetch Laboratory Section JSON data
                 fetchSectionJSON(short_name, schedule_type="Lab", term).done(function (result3) {
-                    section_json_obj = JSON.parse(result3);
+                    lab_json_obj = JSON.parse(result3);
+                    console.log(Object.keys(lab_json_obj).length);
                     section_id = "0";
-                    if (section_json_obj[section_id]) {
-                        section_num = section_json_obj[section_id].section_num;
-                        sec_short_name = section_json_obj[section_id].short_name;
-                        time = section_json_obj[section_id].time;
-                        days = section_json_obj[section_id].days;
-                        date_range = section_json_obj[section_id].date_range;
+                    if (lab_json_obj[section_id]) {
+                        section_num = lab_json_obj[section_id].section_num;
+                        sec_short_name = lab_json_obj[section_id].short_name;
+                        time = lab_json_obj[section_id].time;
+                        days = lab_json_obj[section_id].days;
+                        date_range = lab_json_obj[section_id].date_range;
                         //7.Append calendar
                         appendCalendar(section_num, sec_short_name, time, days, date_range, BGC);
                     } else {
@@ -120,14 +122,15 @@ function dropL(ev, term) {
 
                 //8. Fetch Examination Section JSON data
                 fetchSectionJSON(short_name, schedule_type="Examination", term).done(function (result4) {
-                    section_json_obj = JSON.parse(result4);
+                    exam_json_obj = JSON.parse(result4);
+                    console.log(Object.keys(exam_json_obj).length);
                     section_id = "0";
-                    if (section_json_obj[section_id]) {
-                        section_num = section_json_obj[section_id].section_num;
-                        sec_short_name = section_json_obj[section_id].short_name;
-                        time = section_json_obj[section_id].time;
-                        days = section_json_obj[section_id].days;
-                        date_range = section_json_obj[section_id].date_range;
+                    if (exam_json_obj[section_id]) {
+                        section_num = exam_json_obj[section_id].section_num;
+                        sec_short_name = exam_json_obj[section_id].short_name;
+                        time = exam_json_obj[section_id].time;
+                        days = exam_json_obj[section_id].days;
+                        date_range = exam_json_obj[section_id].date_range;
                         //9.Append exam list
                         appendExamList(section_num, sec_short_name, time, days, date_range);
                     } else {
