@@ -66,7 +66,7 @@ if ($doneList !== "" && $major !== "" && $term_NUM !== "" && $term_EN !== "") {
             $skipCondition_4 = !file_exists($coursePath) ? true : false; // Course file exist in that semester dir.
             $skipCondition_5 = $skipCondition_4 ? true : isSectionEmpty($coursePath); // Check if course section is empty
 
-            if ( $skipCondition_1 || $skipCondition_2 || $skipCondition_3 || $skipCondition_4 ) {
+            if ( $skipCondition_1 || $skipCondition_2 || $skipCondition_3 || $skipCondition_4 || $skipCondition_5 ) {
                 //echo "$reqCourse : $skipCondition_1, $skipCondition_2, $skipCondition_3, $skipCondition_4 <br>";
                 continue; 
             } else {
@@ -76,7 +76,7 @@ if ($doneList !== "" && $major !== "" && $term_NUM !== "" && $term_EN !== "") {
     }
     
     // 5. Encode & Return as JSON format.
-    //echo json_encode($toTakeList, JSON_PRETTY_PRINT); 
+    echo json_encode($toTakeList, JSON_PRETTY_PRINT); 
 
 } else {
     echo "One of three inputs is invalid";
