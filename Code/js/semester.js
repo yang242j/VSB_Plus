@@ -177,7 +177,7 @@ function fetchRecJSON(courseCompletedList, major, term, maxNum) {
 function appendCourseCard(course_json, BGC) {
     var card_id = course_json.short_name + "_Card";
     var course_card =
-        "<div class='courseInfo' id='" + card_id +
+        "<div class='courseInfo courseCard' id='" + card_id +
         "' style='background-color:" + BGC + ";'>" +
         "<h2>" + course_json.short_name + "</h2>" +
         "<h4>" + course_json.title + "</h4>" +
