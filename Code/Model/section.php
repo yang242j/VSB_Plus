@@ -89,11 +89,10 @@ if ($short_name !== "") {
             array_push($data, $section);
         }
         //4) Encode & Return as JSON format
-        $json_data = json_encode($data, JSON_PRETTY_PRINT);
-        echo $json_data;
+        return json_encode($data, JSON_PRETTY_PRINT);
         // print_r($data);
     } else {
-        echo "{}";
+        return Json({});
     }
 
     // print_r($data);
