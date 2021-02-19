@@ -79,7 +79,7 @@ function dropL(ev, term) {
 
                 //3.1.Fetch Lecture Section JSON data
                 lec_json_obj = fetchSectionJSON(short_name, schedule_type = "Lecture", term).done(function (result2) {
-                    console.log(result2);
+                    console.log(JSON.parse(result2));
                     return JSON.parse(result2);
                 }).fail(function () {
                     console.error(short_name + "Leccture Section JSON Fetch FAILED");
