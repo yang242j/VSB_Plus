@@ -181,12 +181,11 @@ function appendCourseCard(course_json, BGC) {
         "<h2>" + course_json.short_name + "</h2>" +
         "<h4>" + course_json.title + "</h4>" +
         "<select id='sectionSelector'>" +
-        "<option value='" + "001-095" + "'>" + "001-095" + "</option>" +
+        "<option selected value='" + "001-095" + "'>" + "001-095" + "</option>" +
         "<option value='" + "001-096" + "'>" + "001-096" + "</option>" +
         "<option value='" + "002-095" + "'>" + "002-095" + "</option>" +
         "<option value='" + "002-096" + "'>" + "002-096" + "</option>" +
         "</select>" +
-        "<h5>Description:</h5>" +
         "<p>" + course_json.description + "</p>" +
         "</div>";
     document.getElementById("courseCardList").innerHTML += course_card;
