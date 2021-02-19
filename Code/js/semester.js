@@ -78,10 +78,11 @@ function dropL(ev, term) {
                 var lec_json_obj, lab_json_obj, exam_json_obj, lec_exam_id, lab_id; // Init common section variables
 
                 //3.1.Fetch Lecture Section JSON data
-                fetchSectionJSON(short_name, schedule_type="Lecture", term).done(function (result2) {
-                    lec_json_obj = JSON.parse(result2);
+                lec_json_obj = fetchSectionJSON(short_name, schedule_type="Lecture", term).done(function (result2) {
+                    return JSON.parse(result2);
                 }).fail(function () {
                     console.error(short_name + "Leccture Section JSON Fetch FAILED");
+                    return JSON.parse('');
                 });
 
                 console.log("Lecture: " + Object.keys(lec_json_obj).length);
