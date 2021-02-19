@@ -99,7 +99,7 @@ if ($short_name !== "") {
 
             
         }
-        echo json_encode($data);
+        echo json_encode($data, JSON_PRETTY_PRINT);
         // echo json_last_error();
         // //4) Encode & Return as JSON format
         // echo json_encode($data, JSON_PRETTY_PRINT);
