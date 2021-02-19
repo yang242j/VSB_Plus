@@ -90,6 +90,8 @@ if ($short_name !== "") {
             );
             // array_push($data, json_encode($section)); 
             array_push($data, $section);
+            echo "<br> ";
+            echo $section;
         }
         //4) Encode & Return as JSON format
         echo json_encode($data, JSON_PRETTY_PRINT);
