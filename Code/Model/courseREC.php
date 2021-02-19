@@ -86,7 +86,7 @@ function checkSectionEmpty($path) {
     $json_string = file_get_contents($path);
     $parsed_json = json_decode($json_string, true);
     echo !empty($parsed_json['section']) ? $parsed_json['short_name'] . ' Good' : $parsed_json['short_name'] . 'Bad';
-    //echo "<br>";
+    echo "<br>";
     //echo json_encode($parsed_json, JSON_PRETTY_PRINT);
 }
 
