@@ -54,6 +54,10 @@ body .container .middle-section .courseInfo {
     padding: 0 10px 0;
 }
 
+body .container .middle-section .courseInfo #sectionSelector {
+    float: right;
+}
+
 /*Right Section*/
 body .container .right-section {
     width: 45%;
