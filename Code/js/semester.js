@@ -75,16 +75,17 @@ function dropL(ev, term) {
                 var course_json = JSON.parse(result1);
 
                 //3. Fetch Course section JSON data
-                var lecture_json_obj, lab_json_obj, exam_json_obj, lec_exam_id, lab_id; // Init common section variables
+                var lec_json_obj, lab_json_obj, exam_json_obj, lec_exam_id, lab_id; // Init common section variables
 
                 //3.1.Fetch Lecture Section JSON data
-                fetchSectionJSON(short_name, schedule_type="Lecture", term).done(function (result2) {
-                    lecture_json_obj = JSON.parse(result2);
-                    console.log("Lecture: " + Object.keys(lecture_json_obj).length);
-                    lec_exam_id = "0";
+                lec_json_obj = (fetchSectionJSON(short_name, schedule_type="Lecture", term).done(function (result2) {
+                    lec_json_obj = JSON.parse(result2);
                 }).fail(function () {
                     console.error(short_name + "Leccture Section JSON Fetch FAILED");
-                });
+                })) ();
+
+                console.log("Lecture: " + Object.keys(lec_json_obj).length);
+                lec_exam_id = "0";
 
                 //3.2. Fetch Lab Section JSON data
                 fetchSectionJSON(short_name, schedule_type="Lab", term).done(function (result3) {
@@ -107,8 +108,8 @@ function dropL(ev, term) {
                 //4.Append cards, calendars, exams
                 appendCourseCard(course_json, BGC); //4.1.Append courseCard-list
 
-                if (lecture_json_obj[lec_exam_id]) {
-                    appendCalendar(lecture_json_obj[lec_exam_id], BGC); //4.2.1.Append lecture calendar event
+                if (lec_json_obj[lec_exam_id]) {
+                    appendCalendar(lec_json_obj[lec_exam_id], BGC); //4.2.1.Append lecture calendar event
                 } else {
                     console.warn(short_name + " does NOT have Lecture section_" + lec_exam_id);
                 }
