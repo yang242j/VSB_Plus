@@ -74,6 +74,7 @@ if ($short_name !== "") {
         while ($row = mysqli_fetch_array($sec_result)) {
             $type = ($row['type'] == 'Class') ? $row['type'] : "";
             // if ($row['type'] == "") {echo "null type!";}
+            echo "<br>" . $type;
             $section = array(
                 "title" => $row['title'],
                 "course_code" => $row['course_code'],
@@ -91,7 +92,7 @@ if ($short_name !== "") {
             // array_push($data, json_encode($section)); 
             array_push($data, $section);
             echo "<br> ";
-            echo $section;
+            echo $section["section_num"];
         }
         //4) Encode & Return as JSON format
         echo json_encode($data, JSON_PRETTY_PRINT);
