@@ -86,11 +86,12 @@ if ($short_name !== "") {
             );
             // array_push($data, json_encode($section)); 
             array_push($data, $section);
-            echo "<br> " . $section['course_code'];
+            // echo "<br> " . $section['course_code'];
             // echo $section["section_num"];
         }
+        echo json_decode($data);
         //4) Encode & Return as JSON format
-        echo json_encode($data, JSON_PRETTY_PRINT);
+        // echo json_encode($data, JSON_PRETTY_PRINT);
         // print_r($data);
     } else {
         echo json_encode (json_decode ("{}"));
