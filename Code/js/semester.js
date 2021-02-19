@@ -202,7 +202,7 @@ function removeCourseCard(short_name) {
 function appendCalendar(section, BGC) {
     // Manage the input values
     var event_id = section.short_name;
-    var event_title = section.short_name.concat(" [", section.section_num, "]");
+    var event_title = event_id + " [" + section.section_num + "]";
     var start_date = new Date(section.date_range.slice(0, 12)).toISOString().substring(0, 10);
     var end_date = new Date(section.date_range.slice(15)).toISOString().substring(0, 10);
     var start_time = get24HrsFrm12Hrs(section.time.split("-")[0]);
