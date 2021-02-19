@@ -105,7 +105,9 @@
         $.post('../Model/section.php', short_name, function(data, status){
             var pre_json = "<pre>" + data + "</pre>";
             $('#course_result').html(pre_json);
-        });
+        }, "json" ).fail( function(jqXHR, textStatus, errorThrown) {
+            alert(textStatus);
+        }););
     }
 
     function sign_in(){
