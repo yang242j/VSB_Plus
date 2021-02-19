@@ -101,13 +101,8 @@ function dropL(ev, term) {
                     console.log(Object.keys(lab_json_obj).length);
                     section_id = "0";
                     if (lab_json_obj[section_id]) {
-                        section_num = lab_json_obj[section_id].section_num;
-                        sec_short_name = lab_json_obj[section_id].short_name;
-                        time = lab_json_obj[section_id].time;
-                        days = lab_json_obj[section_id].days;
-                        date_range = lab_json_obj[section_id].date_range;
                         //7.Append calendar
-                        appendCalendar(section_num, sec_short_name, time, days, date_range, BGC);
+                        appendCalendar(lab_json_obj[section_id], BGC);
                     } else {
                         console.warn(short_name + " does NOT have Lab section_" + section_id);
                     }
@@ -121,13 +116,8 @@ function dropL(ev, term) {
                     console.log(Object.keys(exam_json_obj).length);
                     section_id = "0";
                     if (exam_json_obj[section_id]) {
-                        section_num = exam_json_obj[section_id].section_num;
-                        sec_short_name = exam_json_obj[section_id].short_name;
-                        time = exam_json_obj[section_id].time;
-                        days = exam_json_obj[section_id].days;
-                        date_range = exam_json_obj[section_id].date_range;
                         //9.Append exam list
-                        appendExamList(section_num, sec_short_name, time, days, date_range);
+                        appendExamList(exam_json_obj[section_id]);
                     } else {
                         console.warn(short_name + " does NOT have Examination section_" + section_id);
                     }
@@ -262,12 +252,12 @@ function removeCalendar(short_name) {
     }
 }
 
-function appendExamList(section_num, sec_short_name, time, days, date_range) {
+function appendExamList(section) {
     // Variable init
     var examDate_li, conflictExam, weekDay;
-    var examDate_id = sec_short_name.concat("_Exam");
-    var examDate_course = sec_short_name.concat(" [", section_num, "]");
-    var examDate = new Date(date_range.slice(0, 12));
+    var examDate_id = section.short_name + "_Exam";
+    var examDate_course = section.short_name + " [" + section.section_num + "]";
+    var examDate = new Date(section.date_range.slice(0, 12));
 
     // Check if exams are close or conflict
     for (var [key_id, value_date] of Object.entries(examDateDic)) {
@@ -281,7 +271,7 @@ function appendExamList(section_num, sec_short_name, time, days, date_range) {
     }
 
     // Convert days to fullword
-    switch (days.toUpperCase()) {
+    switch (section.days.toUpperCase()) {
         case "M":
             weekDay = "Monday";
             break;
@@ -304,9 +294,9 @@ function appendExamList(section_num, sec_short_name, time, days, date_range) {
     }
 
     if (conflictExam == true) {
-        examDate_li = "<li id='" + examDate_id + "'><mark>" + examDate_course + ": " + weekDay + ", " + examDate.toDateString().slice(3) + " " + time + "</mark></li>";
+        examDate_li = "<li id='" + examDate_id + "'><mark>" + examDate_course + ": " + weekDay + ", " + examDate.toDateString().slice(3) + " " + section.time + "</mark></li>";
     } else {
-        examDate_li = "<li id='" + examDate_id + "'>" + examDate_course + ": " + weekDay + ", " + examDate.toDateString().slice(3) + " " + time + "</li>";
+        examDate_li = "<li id='" + examDate_id + "'>" + examDate_course + ": " + weekDay + ", " + examDate.toDateString().slice(3) + " " + section.time + "</li>";
     }
     document.getElementById("examDate_ul").innerHTML += examDate_li;
     examDateDic[examDate_id] = examDate;
