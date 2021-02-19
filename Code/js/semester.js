@@ -70,60 +70,64 @@ function dropL(ev, term) {
             document.getElementsByClassName("left-section")[0].appendChild(document.getElementById(short_name));
             document.getElementById(short_name).style.backgroundColor = BGC;
             document.getElementById(short_name).classList.add("selected-course"); // Add selected-course class
-            //2.Fetch Course JSON data
+            //2.Fetch Course info JSON data
             fetchCourseJSON(short_name).done(function(result1) {
                 var course_json = JSON.parse(result1);
-                
-                //3.Append courseCard-list
-                appendCourseCard(course_json, BGC);
-                pre_colorID = randomColorIndex; //3.1.Store color id
-                
-                // Init common section variables
-                var lecture_json_obj, lab_json_obj, exam_json_obj, section_id, section_num, sec_short_name, time, days, date_range;
-                //4.Fetch Lecture Section JSON data
+
+                //3. Fetch Course section JSON data
+                var lecture_json_obj, lab_json_obj, exam_json_obj, lec_exam_id, lab_id; // Init common section variables
+
+                //3.1.Fetch Lecture Section JSON data
                 fetchSectionJSON(short_name, schedule_type="Lecture", term).done(function (result2) {
                     lecture_json_obj = JSON.parse(result2);
                     console.log("Lecture: " + Object.keys(lecture_json_obj).length);
-                    section_id = "0";
-                    if (lecture_json_obj[section_id]) {
-                        //5.Append calendar
-                        appendCalendar(lecture_json_obj[section_id], BGC);
-                    } else {
-                        console.warn(short_name + " does NOT have Lecture section_" + section_id);
-                    }
+                    lec_exam_id = "0";
                 }).fail(function () {
                     console.error(short_name + "Leccture Section JSON Fetch FAILED");
                 });
-                
-                //6. Fetch Laboratory Section JSON data
+
+                //3.2. Fetch Lab Section JSON data
                 fetchSectionJSON(short_name, schedule_type="Lab", term).done(function (result3) {
                     lab_json_obj = JSON.parse(result3);
                     console.log("Lab: " + Object.keys(lab_json_obj).length);
-                    section_id = "0";
-                    if (lab_json_obj[section_id]) {
-                        //7.Append calendar
-                        appendCalendar(lab_json_obj[section_id], BGC);
-                    } else {
-                        console.warn(short_name + " does NOT have Lab section_" + section_id);
-                    }
+                    lab_id = "0";
                 }).fail(function () {
                     console.error(short_name + "Lab Section JSON Fetch FAILED");
                 });
 
-                //8. Fetch Examination Section JSON data
+                //3.3. Fetch Exam Section JSON data
                 fetchSectionJSON(short_name, schedule_type="Examination", term).done(function (result4) {
                     exam_json_obj = JSON.parse(result4);
                     console.log("Exam: " + Object.keys(exam_json_obj).length);
-                    section_id = "0";
-                    if (exam_json_obj[section_id]) {
-                        //9.Append exam list
-                        appendExamList(exam_json_obj[section_id]);
-                    } else {
-                        console.warn(short_name + " does NOT have Examination section_" + section_id);
-                    }
+                    lec_exam_id = "0";
                 }).fail(function () {
                     console.error(short_name + "Examination Section JSON Fetch FAILED");
                 });
+                
+                //4.Append cards, calendars, exams
+                appendCourseCard(course_json, BGC); //4.1.Append courseCard-list
+
+                if (lecture_json_obj[lec_exam_id]) {
+                    appendCalendar(lecture_json_obj[lec_exam_id], BGC); //4.2.1.Append lecture calendar event
+                } else {
+                    console.warn(short_name + " does NOT have Lecture section_" + lec_exam_id);
+                }
+
+                if (lab_json_obj[lab_id]) {
+                    appendCalendar(lab_json_obj[lab_id], BGC); //4.2.2.Append lab calendar event
+                } else {
+                    console.warn(short_name + " does NOT have Lab section_" + lab_id);
+                }
+
+                if (exam_json_obj[lec_exam_id]) {
+                    appendExamList(exam_json_obj[lec_exam_id]); //4.2.3.Append exam list
+                } else {
+                    console.warn(short_name + " does NOT have Examination section_" + lec_exam_id);
+                }
+
+                //5.Store color id to prevent same color twice
+                pre_colorID = randomColorIndex; 
+   
             }).fail(function() {
                 console.error(short_name + "Course JSON Fetch FAILED");
             });
