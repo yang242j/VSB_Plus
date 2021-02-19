@@ -96,6 +96,7 @@ if ($short_name !== "") {
         echo json_encode($data, JSON_PRETTY_PRINT);
         echo "<br>";
         json_last_error();
+        
         // print_r($data);
     } else {
         echo json_encode (json_decode ("{}"));
