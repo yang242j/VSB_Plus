@@ -86,13 +86,8 @@ function dropL(ev, term) {
                     console.log(Object.keys(lecture_json_obj).length);
                     section_id = "0";
                     if (lecture_json_obj[section_id]) {
-                        section_num = lecture_json_obj[section_id].section_num;
-                        sec_short_name = lecture_json_obj[section_id].short_name;
-                        time = lecture_json_obj[section_id].time;
-                        days = lecture_json_obj[section_id].days;
-                        date_range = lecture_json_obj[section_id].date_range;
                         //5.Append calendar
-                        appendCalendar(section_num, sec_short_name, time, days, date_range, BGC);
+                        appendCalendar(lecture_json_obj[section_id], BGC);
                     } else {
                         console.warn(short_name + " does NOT have Lecture section_" + section_id);
                     }
@@ -204,19 +199,19 @@ function removeCourseCard(short_name) {
     
 }
 
-function appendCalendar(section_num, short_name, time, days, date_range, BGC) {
+function appendCalendar(section, BGC) {
     // Manage the input values
-    var event_id = short_name;
-    var event_title = event_id.concat(" [", section_num, "]");
-    var start_date = new Date(date_range.slice(0, 12)).toISOString().substring(0, 10);
-    var end_date = new Date(date_range.slice(15)).toISOString().substring(0, 10);
-    var start_time = get24HrsFrm12Hrs(time.split("-")[0]);
-    var end_time = get24HrsFrm12Hrs(time.split("-")[1]);
+    var event_id = section.short_name;
+    var event_title = event_id.concat(" [", section.section_num, "]");
+    var start_date = new Date(section.date_range.slice(0, 12)).toISOString().substring(0, 10);
+    var end_date = new Date(section.date_range.slice(15)).toISOString().substring(0, 10);
+    var start_time = get24HrsFrm12Hrs(section.time.split("-")[0]);
+    var end_time = get24HrsFrm12Hrs(section.time.split("-")[1]);
     var daysOfWeek = [];
 
     // Convert days characters into daysOfWeek number
-    for (var i = 0; i < days.length; i++) {
-        switch (days[i].toUpperCase()) {
+    for (var i = 0; i < section.days.length; i++) {
+        switch (section.days[i].toUpperCase()) {
             case "M":
                 daysOfWeek.push("1");
                 break;
