@@ -83,7 +83,7 @@ function dropL(ev, term) {
                 //4.Fetch Lecture Section JSON data
                 fetchSectionJSON(short_name, schedule_type="Lecture", term).done(function (result2) {
                     lecture_json_obj = JSON.parse(result2);
-                    console.log(Object.keys(lecture_json_obj).length);
+                    console.log("Lecture: " + Object.keys(lecture_json_obj).length);
                     section_id = "0";
                     if (lecture_json_obj[section_id]) {
                         //5.Append calendar
@@ -98,7 +98,7 @@ function dropL(ev, term) {
                 //6. Fetch Laboratory Section JSON data
                 fetchSectionJSON(short_name, schedule_type="Lab", term).done(function (result3) {
                     lab_json_obj = JSON.parse(result3);
-                    console.log(Object.keys(lab_json_obj).length);
+                    console.log("Lab: " + Object.keys(lab_json_obj).length);
                     section_id = "0";
                     if (lab_json_obj[section_id]) {
                         //7.Append calendar
@@ -113,7 +113,7 @@ function dropL(ev, term) {
                 //8. Fetch Examination Section JSON data
                 fetchSectionJSON(short_name, schedule_type="Examination", term).done(function (result4) {
                     exam_json_obj = JSON.parse(result4);
-                    console.log(Object.keys(exam_json_obj).length);
+                    console.log("Exam: " + Object.keys(exam_json_obj).length);
                     section_id = "0";
                     if (exam_json_obj[section_id]) {
                         //9.Append exam list
