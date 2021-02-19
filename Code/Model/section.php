@@ -67,8 +67,16 @@ if ($short_name !== "") {
         $sec_sql = "SELECT * FROM section where short_name = '" . $short_name . "'" . $addCond;
         $sec_result = mysqli_query($conn, $sec_sql);
         $data = array();
+        $x = 0;
         while ($row = mysqli_fetch_array($sec_result)) {
+            // $str = $row['days'];
+            // if (mb_detect_encoding($str, 'UTF-8'));
+            // else {
+            //     echo $str;
+            //     echo "<br>";
+            // }
             $type = ($row['type'] == 'Class') ? $row['type'] : "";
+            $days = mb_convert_encoding($row['days'], 'UTF-8', 'UTF-8');
             // if ($row['type'] == "") {echo "null type!";}
             $section = array(
                 "title" => $row['title'],
@@ -78,7 +86,7 @@ if ($short_name !== "") {
                 "term" => $row['term'],
                 "type" => $type,
                 "time" => $row['time'],
-                "days" => $row['days'],
+                "days" => $days,
                 "loc" => $row['loc'],
                 "date_range" => $row['date_range'],
                 "schedule_type" => $row['schedule_type'],
@@ -91,11 +99,11 @@ if ($short_name !== "") {
 
         }
         echo json_encode($data);
-        echo json_last_error();
-        //4) Encode & Return as JSON format
-        echo json_encode($data, JSON_PRETTY_PRINT);
-        echo "<br>";
-        echo json_last_error();
+        // echo json_last_error();
+        // //4) Encode & Return as JSON format
+        // echo json_encode($data, JSON_PRETTY_PRINT);
+        // echo "<br>";
+        // echo json_last_error();
 
         // print_r($data);
     } else {
