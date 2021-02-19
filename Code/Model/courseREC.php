@@ -54,6 +54,8 @@ if ($doneList !== "" && $major !== "" && $term_NUM !== "" && $term_EN !== "") {
     $reqList_json_String = file_get_contents("../JSON/$fileName"); // Get the contents of the JSON file 
     $reqList_json_array = json_decode($reqList_json_String, true); // Convert to array 
 
+    file_exists("../JSON/$term_NUM/ENGG 401.json");
+
     // 4. Generate $toTakeList.
     $toTakeList = array();
     foreach ($reqList_json_array as $reqTerm => $reqCourses_array) {
@@ -63,7 +65,7 @@ if ($doneList !== "" && $major !== "" && $term_NUM !== "" && $term_EN !== "") {
             $skipCondition_2 = $reqCourse == "Approved"; // Approved elective
             $skipCondition_3 = sizeof($toTakeList)>= $maxNum; // To take list is full
             $coursePath = "../JSON/$term_NUM/$reqCourse.json";
-            $skipCondition_4 = file_exists($coursePath) ? false : true; // Course file exist in that semester dir.
+            //$skipCondition_4 = file_exists($coursePath) ? false : true; // Course file exist in that semester dir.
             $skipCondition_5 = $skipCondition_4 ? false : checkSectionEmpty($coursePath); // Check if course section is empty
 
             if ( $skipCondition_1 || $skipCondition_2 || $skipCondition_3 || $skipCondition_4 ) {
@@ -85,6 +87,7 @@ if ($doneList !== "" && $major !== "" && $term_NUM !== "" && $term_EN !== "") {
 function checkSectionEmpty($path) {
     $json_string = file_get_contents($path);
     $parsed_json = json_decode($json_string, true);
+    echo $parsed_json['section'];
     echo ( isset($parsed_json['section']) and $parsed_json['section'] != "" ) ? $parsed_json['short_name'] . ' Good' : $parsed_json['short_name'] . 'Bad';
     echo "<br>";
     //echo json_encode($parsed_json, JSON_PRETTY_PRINT);
