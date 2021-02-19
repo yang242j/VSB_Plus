@@ -31,6 +31,7 @@ $addCond = '';
 if (isset($_REQUEST["schedule_type"]) and $_REQUEST["schedule_type"] != '') {
     $addCond .= " AND schedule_type = '" . $_REQUEST["schedule_type"] . "'";
 }
+
 // 2) Convert $short_name, $schedule_type and $term input into db readable format.
 if (isset($_REQUEST["term"]) and $_REQUEST["term"] != '') {
     switch ($_REQUEST["term"]) {
@@ -52,7 +53,7 @@ if (isset($_REQUEST["term"]) and $_REQUEST["term"] != '') {
     $addCond .= " AND term = '" . $term . "'";
 }
 
-// echo $addCond;
+echo "short_name" . $short_name . " and add conditon " . $addCond;
 
 if ($short_name !== "") {
     // Include the course_db_config.php file
@@ -65,8 +66,10 @@ if ($short_name !== "") {
     // 3) Based on the $short_name, $schedule_type, $term input, form the arrray for course detail.
     // If there is a course that is required.
     if ($count > 0) {
+        echo "<br> There is at least a count of sections";
         $sec_sql = "SELECT * FROM section where short_name = '" . $short_name . "'" . $addCond;
         $sec_result = mysqli_query($conn, $sec_sql);
+        echo "<br> get the result: ";
         $data = array();
         while ($row = mysqli_fetch_array($sec_result)) {
             $type = ($row['type'] == 'Class') ? $row['type'] : "";
