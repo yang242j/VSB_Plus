@@ -92,7 +92,7 @@ if ($short_name !== "") {
         return json_encode($data, JSON_PRETTY_PRINT);
         // print_r($data);
     } else {
-        return Json({});
+        return Json();
     }
 
     // print_r($data);
