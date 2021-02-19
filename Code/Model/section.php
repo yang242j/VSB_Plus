@@ -97,6 +97,7 @@ if ($short_name !== "") {
             // echo "<br> " . $section['course_code'];
             // echo $section["section_num"];
 
+            
         }
         echo json_encode($data);
         // echo json_last_error();
