@@ -80,15 +80,13 @@ function dropL(ev, term) {
                 fetchAllSectionData(short_name, term)
                     .then(function (result) {
                         // Do something with the result
-                        lec_json_obj = result[0]; //3.1.Fetch Lecture Section JSON data
+                        lec_json_obj = JSON.parse(result[0]); //3.1.Fetch Lecture Section JSON data
                         lab_json_obj = result[1]; //3.2. Fetch Lab Section JSON data
                         exam_json_obj = result[2] //3.3. Fetch Exam Section JSON data
 
-                        var lec_dict = {};
-                        result[0].each(function () {
-                            lec_dict[this.id] = this.num;
-                        });
-                        console.log(lec_dict);
+                        //var lec_dict = {};
+                        //result[0].each(function () { lec_dict[this.id] = this.num; });
+                        console.log(lec_json_obj);
 
                     })
                     .catch(function (error) {
