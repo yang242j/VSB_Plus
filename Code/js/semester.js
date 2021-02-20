@@ -75,30 +75,32 @@ function dropL(ev, term) {
                 var course_json = JSON.parse(result1);
 
                 //3. Fetch Course section JSON data
-                var lab_json_obj, exam_json_obj, lec_exam_id='0', lab_id='0'; // Init common section variables
+                var lec_exam_id='0', lab_id='0'; // Init common section variables
 
                 //3.1.Fetch Lecture Section JSON data
                 let lec_json_obj = $.post('Model/section.php', { short_name: short_name, schedule_type: "Lecture", term: term }, function(result2) {
-                    lec_json_obj = JSON.parse(result2);
-                    console.log(lec_json_obj);
-                    //alert("Lecture: " + Object.keys(lec_json_obj).length);
-                    return lec_json_obj;
+                    //test_obj = JSON.parse(result2);
+                    console.log("Test: " + test_obj);
+                    //alert("Lecture: " + Object.keys(test_obj).length);
+                    return JSON.parse(result2);
                 });
 
-                alert(lec_json_obj);
+                console.log("Lecture: " + lec_json_obj);
 
                 //3.2. Fetch Lab Section JSON data
-                $.post('Model/section.php', { short_name: short_name, schedule_type: "Lab", term: term }, function(result3) {
-                    lab_json_obj = JSON.parse(result3);
-                    console.log(lab_json_obj);
-                    //alert("Lab: " + Object.keys(lab_json_obj).length);
+                let lab_json_obj = $.post('Model/section.php', { short_name: short_name, schedule_type: "Lab", term: term }, function(result3) {
+                    //test_obj = JSON.parse(result3);
+                    //console.log(test_obj);
+                    //alert("Lab: " + Object.keys(test_obj).length);
+                    return JSON.parse(result3);
                 });
 
                 //3.3. Fetch Exam Section JSON data
-                $.post('Model/section.php', { short_name: short_name, schedule_type: "Examination", term: term }, function(result4) {
-                    exam_json_obj = JSON.parse(result4);
-                    console.log(exam_json_obj);
-                    //alert("Exam: " + Object.keys(exam_json_obj).length);
+                let exam_json_obj = $.post('Model/section.php', { short_name: short_name, schedule_type: "Examination", term: term }, function(result4) {
+                    //test_obj = JSON.parse(result4);
+                    //console.log(test_obj);
+                    //alert("Exam: " + Object.keys(test_obj).length);
+                    return JSON.parse(result4);
                 });
                 
                 //4.Append cards, calendars, exams
