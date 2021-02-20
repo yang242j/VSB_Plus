@@ -84,7 +84,8 @@ function dropL(ev, term) {
                         lab_json_obj = JSON.parse(result[1]); //3.2. Fetch Lab Section JSON data
                         exam_json_obj = JSON.parse(result[2]); //3.3. Fetch Exam Section JSON data
 
-                        combinationGenerator(lec_json_obj, lab_json_obj);
+                        combos = combinationGenerator(lec_json_obj, lab_json_obj);
+                        alert(combos);
                     })
                     .catch(function (error) {
                         // Handle error
@@ -345,6 +346,10 @@ function combinationGenerator(lec_obj, lab_obj) {
         lab_arr.push(lab_obj[x].section_num);
     }
 
+    if (lab_arr.length == 0) {
+        return lec_exam_arr;
+    }
+
     combos = [];
 
     for(var i = 0; i < lec_exam_arr.length; i++)
@@ -355,9 +360,7 @@ function combinationGenerator(lec_obj, lab_obj) {
         }
     }
 
-    console.log(combos);
-
-
+    return combos;
 }
 
 function get24HrsFrm12Hrs(timeString) {
