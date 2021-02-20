@@ -75,7 +75,7 @@ function dropL(ev, term) {
                 var course_json = JSON.parse(result1);
 
                 //3. Fetch Course section JSON data
-                var lec_json_obj, lab_json_obj, exam_json_obj, lec_exam_id='0', lab_id='0'; // Init common section variables
+                var lab_json_obj, exam_json_obj, lec_exam_id='0', lab_id='0'; // Init common section variables
 
                 //3.1.Fetch Lecture Section JSON data
                 let lec_json_obj = $.post('Model/section.php', { short_name: short_name, schedule_type: "Lecture", term: term }, function(result2) {
