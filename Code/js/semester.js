@@ -77,31 +77,17 @@ function dropL(ev, term) {
                 //3. Fetch Course section JSON data
                 var lec_exam_id='0', lab_id='0'; // Init common section variables
 
-                //3.1.Fetch Lecture Section JSON data
-                let lec_json_obj = $.post('Model/section.php', { short_name: short_name, schedule_type: "Lecture", term: term }, function (result2) {
-                    var obj = JSON.parse(result2);
-                    console.log("Test: " + obj[0].title);
-                    //alert("Lecture: " + Object.keys(obj).length);
-                    return JSON.parse(result2);
-                });
-                console.log(lec_json_obj);
-                //console.log(JSON.parse(lec_json_obj));
-
-                //3.2. Fetch Lab Section JSON data
-                let lab_json_obj = $.post('Model/section.php', { short_name: short_name, schedule_type: "Lab", term: term }, function(result3) {
-                    //test_obj = JSON.parse(result3);
-                    //console.log(test_obj);
-                    //alert("Lab: " + Object.keys(test_obj).length);
-                    return JSON.parse(result3);
-                });
-
-                //3.3. Fetch Exam Section JSON data
-                let exam_json_obj = $.post('Model/section.php', { short_name: short_name, schedule_type: "Examination", term: term }, function(result4) {
-                    //test_obj = JSON.parse(result4);
-                    //console.log(test_obj);
-                    //alert("Exam: " + Object.keys(test_obj).length);
-                    return JSON.parse(result4);
-                });
+                const lec_json_obj, lab_json_obj, exam_json_obj = fetchAllSectionData(short_name, term)
+                    .then(function (result) {
+                        // Do something with the result
+                        console.log("Lec: ", lec_json_obj);
+                        console.log("Lab: ", lab_json_obj);
+                        console.log("Exam: ", exam_json_obj);
+                    })
+                    .catch(function (error) {
+                        console.log("FUCK");
+                        // Handle error
+                    });
                 
                 //4.Append cards, calendars, exams
                 appendCourseCard(course_json, BGC); //4.1.Append courseCard-list
@@ -159,6 +145,16 @@ function dropBR(ev) {
 
 function fetchCourseJSON(short_name) {
     return $.post('Model/course.php', { short_name: short_name }, function (data) {});
+}
+
+async function fetchAllSectionData(short_name, term) {
+    const lec_obj = await $.post('Model/section.php', { short_name: short_name, schedule_type: "Lecture", term: term }, function (result) { });
+
+    const lab_obj = await $.post('Model/section.php', { short_name: short_name, schedule_type: "Lab", term: term }, function (result) { });
+
+    const exam_obj = await $.post('Model/section.php', { short_name: short_name, schedule_type: "Examination", term: term }, function (result) { });
+    
+    return [lec_obj, lab_obj, exam_obj];
 }
 
 function fetchRecJSON(courseCompletedList, major, term, maxNum) {
