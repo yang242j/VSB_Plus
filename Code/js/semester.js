@@ -82,7 +82,7 @@ function dropL(ev, term) {
                     test_obj = JSON.parse(result2);
                     console.log("Test: " + test_obj);
                     //alert("Lecture: " + Object.keys(test_obj).length);
-                    return JSON.parse(result2);
+                    return test_obj;
                 });
 
                 console.log("Lecture: " + lec_json_obj);
