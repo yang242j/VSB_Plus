@@ -335,17 +335,27 @@ function tagGenerator(short_name, draggable = true) {
 }
 
 function combinationGenerator(lec_obj, lab_obj) {
-    var lec_exam_dict = [], lab_dict = [];
+    var lec_exam_arr = [], lab_arr = [];
     
-    for (var id = 0; id < lec_obj.length; id++) {
-        lec_exam_dict.push(lec_obj[id].section_num);
+    for (var y = 0; y < lec_obj.length; y++) {
+        lec_exam_arr.push(lec_obj[y].section_num);
     }
 
-    for (var id = 0; id < lab_obj.length; id++) {
-        lab_dict.push(lab_obj[id].section_num);
+    for (var x = 0; x < lab_obj.length; x++) {
+        lab_arr.push(lab_obj[x].section_num);
     }
 
-    console.log(lec_exam_dict, lab_dict);
+    combos = [];
+
+    for(var i = 0; i < lec_exam_arr.length; i++)
+    {
+        for(var j = 0; j < lab_arr.length; j++)
+        {
+           combos.push(lec_exam_arr[i] + "-" + lab_arr[j])
+        }
+    }
+
+    console.log(combos);
 
 
 }
