@@ -82,8 +82,9 @@ function dropL(ev, term) {
                     //var obj = JSON.parse(result2);
                     //console.log("Test: " + obj);
                     //alert("Lecture: " + Object.keys(obj).length);
-                    return JSON.parse(result2);
+                    return result2;
                 });
+                console.log(lec_json_obj);
 
                 //3.2. Fetch Lab Section JSON data
                 let lab_json_obj = $.post('Model/section.php', { short_name: short_name, schedule_type: "Lab", term: term }, function(result3) {
@@ -104,7 +105,7 @@ function dropL(ev, term) {
                 //4.Append cards, calendars, exams
                 appendCourseCard(course_json, BGC); //4.1.Append courseCard-list
 
-                console.log(json_decode(lec_json_obj));
+                //console.log(JSON.parse(lec_json_obj));
 
                 if (lec_json_obj[lec_exam_id]) {
                     appendCalendar(lec_json_obj[lec_exam_id], BGC); //4.2.1.Append lecture calendar event
