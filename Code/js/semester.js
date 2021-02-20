@@ -86,7 +86,7 @@ function dropL(ev, term) {
 
                         //var lec_dict = {};
                         //$.each(lec_json_obj, ()=>{ lec_dict[this.id] = this.num; });
-                        console.log(lec_dict[0]);
+                        console.log(lec_json_obj[0]);
 
                     })
                     .catch(function (error) {
