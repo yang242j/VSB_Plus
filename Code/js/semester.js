@@ -81,16 +81,10 @@ function dropL(ev, term) {
                     .then(function (result) {
                         // Do something with the result
                         lec_json_obj = JSON.parse(result[0]); //3.1.Fetch Lecture Section JSON data
-                        lab_json_obj = result[1]; //3.2. Fetch Lab Section JSON data
-                        exam_json_obj = result[2] //3.3. Fetch Exam Section JSON data
+                        lab_json_obj = JSON.parse(result[1]); //3.2. Fetch Lab Section JSON data
+                        exam_json_obj = JSON.parse(result[2]); //3.3. Fetch Exam Section JSON data
 
-                        var lec_dict = [];
-                        for (var id = 0; id < lec_json_obj.length; id++) {
-                            lec_dict.push(lec_json_obj[id].section_num);
-                            //console.log(id, ": ", lec_json_obj[id].section_num);
-                        }
-                        console.log(lec_dict);
-
+                        combinationGenerator(lec_json_obj, lab_json_obj);
                     })
                     .catch(function (error) {
                         // Handle error
@@ -338,6 +332,22 @@ function tagGenerator(short_name, draggable = true) {
     }
 
     return course_tag;
+}
+
+function combinationGenerator(lec_obj, lab_obj) {
+    var lec_exam_dict = [], lab_dict = [];
+    
+    for (var id = 0; id < lec_obj.length; id++) {
+        lec_exam_dict.push(lec_obj[id].section_num);
+    }
+
+    for (var id = 0; id < lab_obj.length; id++) {
+        lab_dict.push(lab_obj[id].section_num);
+    }
+
+    console.log(lec_exam_dict, lab_dict);
+
+
 }
 
 function get24HrsFrm12Hrs(timeString) {
