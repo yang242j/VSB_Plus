@@ -85,7 +85,7 @@ function dropL(ev, term) {
                         exam_json_obj = result[2] //3.3. Fetch Exam Section JSON data
 
                         var lec_dict = {};
-                        lec_json_obj.each(function () { lec_dict[this.id] = this.num; });
+                        $.each(lec_json_obj, ()=>{ lec_dict[this.id] = this.num; });
                         console.log(lec_dict);
 
                     })
