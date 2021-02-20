@@ -104,7 +104,7 @@ function dropL(ev, term) {
                 //4.Append cards, calendars, exams
                 appendCourseCard(course_json, BGC); //4.1.Append courseCard-list
 
-                console.log(JSON.parse(lec_json_obj));
+                console.log(json_decode(lec_json_obj));
 
                 if (lec_json_obj[lec_exam_id]) {
                     appendCalendar(lec_json_obj[lec_exam_id], BGC); //4.2.1.Append lecture calendar event
