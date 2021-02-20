@@ -78,24 +78,27 @@ function dropL(ev, term) {
                 var lec_json_obj, lab_json_obj, exam_json_obj, lec_exam_id='0', lab_id='0'; // Init common section variables
 
                 //3.1.Fetch Lecture Section JSON data
-                $.post('Model/section.php', { short_name: short_name, schedule_type: "Lecture", term: term }, function(result2) {
+                let lec_json_obj = $.post('Model/section.php', { short_name: short_name, schedule_type: "Lecture", term: term }, function(result2) {
                     lec_json_obj = JSON.parse(result2);
                     console.log(lec_json_obj);
-                    alert("Lecture: " + Object.keys(lec_json_obj).length);
+                    //alert("Lecture: " + Object.keys(lec_json_obj).length);
+                    return lec_json_obj;
                 });
+
+                alert(lec_json_obj);
 
                 //3.2. Fetch Lab Section JSON data
                 $.post('Model/section.php', { short_name: short_name, schedule_type: "Lab", term: term }, function(result3) {
                     lab_json_obj = JSON.parse(result3);
                     console.log(lab_json_obj);
-                    alert("Lab: " + Object.keys(lab_json_obj).length);
+                    //alert("Lab: " + Object.keys(lab_json_obj).length);
                 });
 
                 //3.3. Fetch Exam Section JSON data
                 $.post('Model/section.php', { short_name: short_name, schedule_type: "Examination", term: term }, function(result4) {
                     exam_json_obj = JSON.parse(result4);
                     console.log(exam_json_obj);
-                    alert("Exam: " + Object.keys(exam_json_obj).length);
+                    //alert("Exam: " + Object.keys(exam_json_obj).length);
                 });
                 
                 //4.Append cards, calendars, exams
@@ -153,10 +156,6 @@ function dropBR(ev) {
 
 function fetchCourseJSON(short_name) {
     return $.post('Model/course.php', { short_name: short_name }, function (data) {});
-}
-
-function fetchSectionJSON(short_name, schedule_type, term) {
-    return $.post('Model/section.php', { short_name: short_name, schedule_type: schedule_type, term: term }, function(data) {});
 }
 
 function fetchRecJSON(courseCompletedList, major, term, maxNum) {
