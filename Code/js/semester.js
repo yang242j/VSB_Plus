@@ -75,51 +75,47 @@ function dropL(ev, term) {
                 var course_json = JSON.parse(result1);
 
                 //3. Fetch Course section JSON data
-                var lec_json_obj, lab_json_obj, exam_json_obj, lec_exam_id, lab_id; // Init common section variables
+                var lec_json_obj, lab_json_obj, exam_json_obj, lec_exam_id='0', lab_id='0'; // Init common section variables
 
                 //3.1.Fetch Lecture Section JSON data
                 $.post('Model/section.php', { short_name: short_name, schedule_type: "Lecture", term: term }, function(result2) {
                     lec_json_obj = JSON.parse(result2);
-                    alert(lec_json_obj);
+                    console.log(lec_json_obj);
+                    alert("Lecture: " + Object.keys(lec_json_obj).length);
                 });
 
                 //3.2. Fetch Lab Section JSON data
-                lab_json_obj = fetchSectionJSON(short_name, schedule_type="Lab", term).done(function (result3) {
-                    return JSON.parse(result3);
-                }).fail(function () {
-                    console.error(short_name + "Lab Section JSON Fetch FAILED");
-                    return JSON.parse('');
+                $.post('Model/section.php', { short_name: short_name, schedule_type: "Lab", term: term }, function(result3) {
+                    lab_json_obj = JSON.parse(result3);
+                    console.log(lab_json_obj);
+                    alert("Lab: " + Object.keys(lab_json_obj).length);
                 });
 
                 //3.3. Fetch Exam Section JSON data
-                exam_json_obj = fetchSectionJSON(short_name, schedule_type="Examination", term).done(function (result4) {
-                    return JSON.parse(result4);
-                }).fail(function () {
-                    console.error(short_name + "Examination Section JSON Fetch FAILED");
-                    return JSON.parse('');
+                $.post('Model/section.php', { short_name: short_name, schedule_type: "Examination", term: term }, function(result4) {
+                    exam_json_obj = JSON.parse(result4);
+                    console.log(exam_json_obj);
+                    alert("Exam: " + Object.keys(exam_json_obj).length);
                 });
                 
                 //4.Append cards, calendars, exams
                 appendCourseCard(course_json, BGC); //4.1.Append courseCard-list
 
-                console.log("Lecture: " + Object.keys(lec_json_obj).length);
-                lec_exam_id = "0";
+                
                 if (lec_json_obj[lec_exam_id]) {
                     appendCalendar(lec_json_obj[lec_exam_id], BGC); //4.2.1.Append lecture calendar event
                 } else {
                     console.warn(short_name + " does NOT have Lecture section_" + lec_exam_id);
                 }
 
-                console.log("Lab: " + Object.keys(lab_json_obj).length);
-                lab_id = "0";
+                
                 if (lab_json_obj[lab_id]) {
                     appendCalendar(lab_json_obj[lab_id], BGC); //4.2.2.Append lab calendar event
                 } else {
                     console.warn(short_name + " does NOT have Lab section_" + lab_id);
                 }
 
-                console.log("Exam: " + Object.keys(exam_json_obj).length);
-                lec_exam_id = "0";
+                
                 if (exam_json_obj[lec_exam_id]) {
                     appendExamList(exam_json_obj[lec_exam_id]); //4.2.3.Append exam list
                 } else {
