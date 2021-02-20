@@ -85,7 +85,7 @@ function dropL(ev, term) {
                     return JSON.parse(result2);
                 });
 
-                console.log("Lecture: " + lec_json_obj);
+                console.log("Lecture: " + json_decode(lec_json_obj));
 
                 //3.2. Fetch Lab Section JSON data
                 let lab_json_obj = $.post('Model/section.php', { short_name: short_name, schedule_type: "Lab", term: term }, function(result3) {
