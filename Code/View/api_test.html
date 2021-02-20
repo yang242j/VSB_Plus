@@ -63,8 +63,11 @@
                 <input type="submit" value="Sign in" id="sign_in">
                 <input type="submit" value="Get course history" id="course_history">
                 <input type="submit" value="GenGraph1" id="gen_graph1">
+                <input type="submit" value="GenGraph2" id="gen_graph2">
             </form>
             <div id="sign_in_result"></div>
+            <div id="graph1_result"></div>
+            <div id="graph2_result"></div>
         </div>
 
         <!-- <div>
@@ -89,6 +92,7 @@
         $('#sign_in').bind('click', sign_in);
         $('#course_history').bind('click', getDetail);
         $('#gen_graph1').bind('click', genGraph1);
+        $('#gen_graph2').bind('click', genGraph2);
         // $('#sign_up_form').bind('click', sign_up); 
     });
 
@@ -136,8 +140,17 @@
         var account = $('#Sign_in_form').serializeArray();
         $.post('../Model/takenClass.php', account, function(data, status){
             var jsonData = JSON.parse(data);
-            var divId = 'sign_in_result';
+            var divId = 'graph1_result';
             genChart1(jsonData, divId);
+        });
+    }
+
+    function genGraph2(){
+        var account = $('#Sign_in_form').serializeArray();
+        $.post('../Model/takenClass.php', account, function(data, status){
+            var jsonData = JSON.parse(data);
+            var divId = 'graph2_result';
+            genChart2(jsonData, divId);
         });
     }
 </script>

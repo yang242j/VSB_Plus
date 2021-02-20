@@ -107,6 +107,7 @@ function genChart1(data, divId){
   var notPass = 0;
   var total_class = 46;
 
+  // Loop the data and compute the datas.
   var labels_list = new Set();
   for (var i in data) {
       var takenCourse = data[i];
@@ -129,14 +130,16 @@ function genChart1(data, divId){
   // Get the canvas element to generate the graph
   var ctx = document.getElementById("chart").getContext('2d');
 
+  // Set the data and color parameters
   data = {
     datasets: [{
         data: [goodGrade, generalGrade, poorGrade, notPass, left_class],
-        backgroundColor: ['#FF6666',
-        'rgba(54, 162, 235, 0.2)',
-        'rgba(255, 206, 86, 0.2)',
-        'rgba(75, 192, 192, 0.2)',
-        'rgba(153, 102, 255, 0.2)',
+        backgroundColor: ['#99CC33','#99CCFF',
+        '#FF6666', '#333333','#CCCCCC',
+        // 'rgba(54, 162, 235, 0.2)',
+        // 'rgba(255, 206, 86, 0.2)',
+        // 'rgba(75, 192, 192, 0.2)',
+        // 'rgba(153, 102, 255, 0.2)',
     ]
     }],
 
@@ -150,10 +153,78 @@ function genChart1(data, divId){
     ]
 };
 
-
   var chart = new Chart(ctx, {
       type: 'doughnut',
       data: data,
       options: {}
   });
+}
+
+function genChart2(data, divId){
+    var grade = {};
+    var term_list = [];
+    console.log("start");
+    for (var i in data) {
+        var takenCourse = data[i];
+        var final_grade = parseInt(takenCourse.final_grade);
+
+        if (!Number.isNaN(final_grade)){
+            if (term_list.indexOf(takenCourse.term) != -1){
+                grade[takenCourse.term].push(final_grade);
+            }
+            else{
+                term_list.push(takenCourse.term);
+                grade[takenCourse.term] = [final_grade];
+            }
+        }
+    }
+
+    var ave_grades = [];
+    term_list.forEach((term)=>{
+        var sum = 0;
+        // console.log(term);
+        grade[term].forEach((grade_value)=>{sum += grade_value});
+        // console.log(sum);
+        // console.log(grade[term].length);
+        ave_grades.push(sum/grade[term].length);
+    });
+
+    console.log(ave_grades);
+
+    //In case, there is no 'canvas' element in the html
+    if (!document.getElementById('chart2')) {
+        $('#' + divId).html(createCanvas('chart2', 100, 100));
+    }
+  
+    // Get the canvas element to generate the graph
+    var ctx = document.getElementById("chart2").getContext('2d');
+  
+    var chart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: term_list,
+            datasets: [{
+                label: 'Performance Semester',
+                data: ave_grades,
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(255, 159, 64, 0.2)'
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)'
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {scales:{yAxes:[{ticks:{beginAtZero: true}}]}}
+    });
 }
