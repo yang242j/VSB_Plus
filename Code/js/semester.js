@@ -78,14 +78,10 @@ function dropL(ev, term) {
                 var lec_json_obj, lab_json_obj, exam_json_obj, lec_exam_id, lab_id; // Init common section variables
 
                 //3.1.Fetch Lecture Section JSON data
-                fetchSectionJSON(short_name, schedule_type = "Lecture", term).done(function (result2) {
-                    
+                $.post('Model/section.php', { short_name: short_name, schedule_type: "Lecture", term: term }, function(result2) {
                     lec_json_obj = JSON.parse(result2);
-                    console.log(lec_json_obj);
-                }).fail(function () {
-                    console.error(short_name + "Leccture Section JSON Fetch FAILED");
+                    alert(lec_json_obj);
                 });
-                console.log(lec_json_obj);
 
                 //3.2. Fetch Lab Section JSON data
                 lab_json_obj = fetchSectionJSON(short_name, schedule_type="Lab", term).done(function (result3) {
