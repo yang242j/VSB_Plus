@@ -80,8 +80,6 @@ function dropL(ev, term) {
                 //3.1.Fetch Lecture Section JSON data
                 let lec_json_obj = $.post('Model/section.php', { short_name: short_name, schedule_type: "Lecture", term: term }, function (result2) {
                     console.log("Result: " + result2);
-                    console.log("Result decode: " + json_decode(result2));
-                    console.log("Result decode parse: " + JSON.parse(json_decode(result2)));
                     
                     test_obj = JSON.parse(result2);
                     console.log("Test: " + test_obj);
@@ -89,7 +87,7 @@ function dropL(ev, term) {
                     return JSON.parse(result2);
                 });
 
-                console.log("Lecture: " + json_decode(lec_json_obj));
+                console.log("Lecture: " + lec_json_obj);
 
                 //3.2. Fetch Lab Section JSON data
                 let lab_json_obj = $.post('Model/section.php', { short_name: short_name, schedule_type: "Lab", term: term }, function(result3) {
