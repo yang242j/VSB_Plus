@@ -75,14 +75,21 @@ function dropL(ev, term) {
                 var course_json = JSON.parse(result1);
 
                 //3. Fetch Course section JSON data
-                var lec_json_obj, lab_json_obj, exam_json_obj, lec_exam_id='0', lab_id='0'; // Init common section variables
+                var lec_exam_id='0', lab_id='0'; // Init common section variables
 
                 fetchAllSectionData(short_name, term)
                     .then(function (result) {
                         // Do something with the result
-                        lec_json_obj = result[0];
-                        lab_json_obj = result[1];
-                        exam_json_obj = result[2]
+                        lec_json_obj = result[0]; //3.1.Fetch Lecture Section JSON data
+                        lab_json_obj = result[1]; //3.2. Fetch Lab Section JSON data
+                        exam_json_obj = result[2] //3.3. Fetch Exam Section JSON data
+
+                        var lec_dict = {};
+                        result[0].each(function () {
+                            lec_dict[this.id] = this.num;
+                        });
+                        console.log(lec_dict);
+
                     })
                     .catch(function (error) {
                         // Handle error
