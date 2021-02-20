@@ -82,7 +82,7 @@ function dropL(ev, term) {
                     //var obj = JSON.parse(result2);
                     //console.log("Test: " + obj);
                     //alert("Lecture: " + Object.keys(obj).length);
-                    return result2;
+                    return this.responseText;
                 });
                 console.log(lec_json_obj);
 
