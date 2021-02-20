@@ -73,17 +73,16 @@ function dropL(ev, term) {
             //2.Fetch Course info JSON data
             fetchCourseJSON(short_name).done(function(result1) {
                 var course_json = JSON.parse(result1);
-                console.log("Course: " + course_json);
 
                 //3. Fetch Course section JSON data
                 var lec_exam_id='0', lab_id='0'; // Init common section variables
 
                 //3.1.Fetch Lecture Section JSON data
-                $.post('Model/section.php', { short_name: short_name, schedule_type: "Lecture", term: term }, function (result2) {
+                let lab_json_obj = $.post('Model/section.php', { short_name: short_name, schedule_type: "Lecture", term: term }, function (result2) {
                     var obj = JSON.parse(result2);
                     console.log("Test: " + obj);
                     //alert("Lecture: " + Object.keys(obj).length);
-                    
+                    return JSON.parse(result2);
                 });
 
                 console.log("Lecture: " + lec_json_obj);
