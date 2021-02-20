@@ -77,15 +77,15 @@ function dropL(ev, term) {
                 //3. Fetch Course section JSON data
                 var lec_exam_id='0', lab_id='0'; // Init common section variables
 
-                const lec_json_obj, lab_json_obj, exam_json_obj = fetchAllSectionData(short_name, term)
+                fetchAllSectionData(short_name, term)
                     .then(function (result) {
                         // Do something with the result
-                        console.log("Lec: ", lec_json_obj);
-                        console.log("Lab: ", lab_json_obj);
-                        console.log("Exam: ", exam_json_obj);
+                        console.log("Lec: ", result[0]);
+                        console.log("Lab: ", result[1]);
+                        console.log("Exam: ", result[2]);
                     })
                     .catch(function (error) {
-                        console.log("FUCK");
+                        console.log("FUCK", error);
                         // Handle error
                     });
                 
