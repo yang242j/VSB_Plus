@@ -78,7 +78,7 @@ function dropL(ev, term) {
                 var lec_json_obj, lab_json_obj, exam_json_obj, lec_exam_id, lab_id; // Init common section variables
 
                 //3.1.Fetch Lecture Section JSON data
-                lec_json_obj = fetchSectionJSON(short_name, schedule_type = "Lecture", term);
+                lec_json_obj = fetchSectionJSON(short_name, schedule_type = "Lecture", term).responseText;
                 console.log(lec_json_obj);
 
                 //3.2. Fetch Lab Section JSON data
