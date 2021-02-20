@@ -80,13 +80,13 @@ function dropL(ev, term) {
                 fetchAllSectionData(short_name, term)
                     .then(function (result) {
                         // Do something with the result
-                        console.log("Lec: ", result[0]);
-                        console.log("Lab: ", result[1]);
-                        console.log("Exam: ", result[2]);
+                        lec_json_obj = result[0];
+                        lab_json_obj = result[1];
+                        exam_json_obj = result[2]
                     })
                     .catch(function (error) {
-                        console.log("FUCK", error);
                         // Handle error
+                        console.log("Section Data collection error -> ", error);
                     });
                 
                 //4.Append cards, calendars, exams
