@@ -84,12 +84,9 @@ function dropL(ev, term) {
                         lab_json_obj = result[1]; //3.2. Fetch Lab Section JSON data
                         exam_json_obj = result[2] //3.3. Fetch Exam Section JSON data
 
-                        var lec_dict = {};
-                        for (var id = 0; id < lec_json_obj.length; id++) {
-                            console.log(id, ": ", lec_json_obj[id].section_num);
-                        }
-                        //$.each(lec_json_obj, (obj)=>{ console.log(obj.); });
-                        //console.log(lec_json_obj[0]);lec_dict[this.id] = this.num;
+                        var lec_dict = [];
+                        $.each(lec_json_obj, (obj)=>{ lec_dict.push(obj.section_num); });
+                        console.log(lec_dict);
 
                     })
                     .catch(function (error) {
