@@ -111,7 +111,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             </div>
         </div>
         <script>
-            $("#sectionSelector").on('change', 'select', function() {
+            $(document).on('change', '#sectionSelector', function() {
                 console.log("2: " + sectionCombo);
                 sectionCombo = $("#sectionSelector option:selected").val();
                 console.log("3: " + sectionCombo);
