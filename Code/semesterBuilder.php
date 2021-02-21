@@ -70,7 +70,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             <script>
                 term = $("select#termSelector option:selected").val();
 
-                $("select#termSelector").change(function() {
+                $("select#termSelector").on('change', function() {
                     term = $("select#termSelector option:selected").val();
                     loadRecCourseTags();
                 });
@@ -110,12 +110,13 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                 <p>Course Detail Info: **** **** *** ** * * * **</p>
             </div>
             <script>
-                $(function(){ /* DOM ready */
-                    $("select#sectionSelector").on('change', function() {
-                        alert("2" + sectionCombo);
-                        sectionCombo = $("select#sectionSelector option:selected").val();
-                        alert("3" + sectionCombo);
-                    });
+                sectionCombo = $("select#sectionSelector option:selected").val();
+                console.log("1: " + sectionCombo);
+
+                $("select#sectionSelector").on('change', function() {
+                    console.log("2: " + sectionCombo);
+                    sectionCombo = $("select#sectionSelector option:selected").val();
+                    console.log("3: " + sectionCombo);
                 });
             </script>
         </div>
