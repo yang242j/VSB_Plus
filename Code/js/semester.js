@@ -282,6 +282,7 @@ function appendCalendar(section, eventType, BGC) {
 function removeCalendar(id, title) {
     try {
         let event = calendar.getEventById(id);
+        console.log(event.title, " & ", title)
         if (title && event.title === title) {
             event.remove();
         } else if (title && event.title !== title) {
