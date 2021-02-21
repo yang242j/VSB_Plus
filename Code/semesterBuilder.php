@@ -110,15 +110,13 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                 <p>Course Detail Info: **** **** *** ** * * * **</p>
             </div>
             <script>
-                sectionCombo = $("select#sectionSelector option:selected").val();
-
-            $(function(){ /* DOM ready */
-                $("select#sectionSelector").change(function() {
-                    alert("2" + sectionCombo);
-                    sectionCombo = $("select#sectionSelector option:selected").val();
-                    alert("3" + sectionCombo);
+                $(function(){ /* DOM ready */
+                    $("select#sectionSelector").on('change', function() {
+                        alert("2" + sectionCombo);
+                        sectionCombo = $("select#sectionSelector option:selected").val();
+                        alert("3" + sectionCombo);
+                    });
                 });
-            });
             </script>
         </div>
         <div class="right-section">
