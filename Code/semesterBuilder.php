@@ -111,9 +111,10 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             </div>
         </div>
         <script>
-            $(document).on('change', 'select#sectionSelector', function() {
+            $(document).on('change', 'select#sectionSelector', function(this) {
                 sectionCombo = $("select#sectionSelector option:selected").val();
-                changeCalendarAndExam(sectionCombo);
+                console.log($(this).closest("div").attr("id"));
+                //changeCalendarAndExam(sectionCombo);
             });
         </script>
         <div class="right-section">
