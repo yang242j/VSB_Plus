@@ -80,46 +80,37 @@ function dropL(ev, term) {
                 fetchAllSectionData(short_name, term)
                     .then(function (result) {
                         // Do something with the result
-                        lec_json_obj = JSON.parse(result[0]); //3.1.Fetch Lecture Section JSON data
-                        lab_json_obj = JSON.parse(result[1]); //3.2. Fetch Lab Section JSON data
-                        exam_json_obj = JSON.parse(result[2]); //3.3. Fetch Exam Section JSON data
+                        let lec_json_obj = JSON.parse(result[0]); //3.1.Fetch Lecture Section JSON data
+                        let lab_json_obj = JSON.parse(result[1]); //3.2. Fetch Lab Section JSON data
+                        let exam_json_obj = JSON.parse(result[2]); //3.3. Fetch Exam Section JSON data
 
+                        // Generate combo array for section selector
                         combos = combinationGenerator(lec_json_obj, lab_json_obj);
                         alert(combos);
+
+                        //4.Append cards, calendars, exams
+                        appendCourseCard(course_json, combos, BGC); //4.1.Append courseCard-list
+
+                        if (lec_json_obj[lec_exam_id] || exam_json_obj[lec_exam_id]) {
+                            appendCalendar(lec_json_obj[lec_exam_id], BGC); //4.2.1.Append lecture calendar event
+                            appendExamList(exam_json_obj[lec_exam_id]); //4.2.2.Append exam list
+                        } else {
+                            console.warn(short_name + " does NOT have Lecture-Exam section_" + lec_exam_id);
+                        }
+
+                        if (lab_json_obj[lab_id]) {
+                            appendCalendar(lab_json_obj[lab_id], BGC); //4.2.3.Append lab calendar event
+                        } else {
+                            console.warn(short_name + " does NOT have Lab section_" + lab_id);
+                        }
+
+                        //5.Store color id to prevent same color twice
+                        pre_colorID = randomColorIndex; 
                     })
                     .catch(function (error) {
                         // Handle error
                         console.log("Section Data collection error -> ", error);
                     });
-                
-                //4.Append cards, calendars, exams
-                appendCourseCard(course_json, BGC); //4.1.Append courseCard-list
-
-                //console.log(lec_json_obj);
-
-                if (lec_json_obj[lec_exam_id]) {
-                    appendCalendar(lec_json_obj[lec_exam_id], BGC); //4.2.1.Append lecture calendar event
-                } else {
-                    console.warn(short_name + " does NOT have Lecture section_" + lec_exam_id);
-                }
-
-                
-                if (lab_json_obj[lab_id]) {
-                    appendCalendar(lab_json_obj[lab_id], BGC); //4.2.2.Append lab calendar event
-                } else {
-                    console.warn(short_name + " does NOT have Lab section_" + lab_id);
-                }
-
-                
-                if (exam_json_obj[lec_exam_id]) {
-                    appendExamList(exam_json_obj[lec_exam_id]); //4.2.3.Append exam list
-                } else {
-                    console.warn(short_name + " does NOT have Examination section_" + lec_exam_id);
-                }
-
-                //5.Store color id to prevent same color twice
-                pre_colorID = randomColorIndex; 
-   
             }).fail(function() {
                 console.error(short_name + "Course JSON Fetch FAILED");
             });
