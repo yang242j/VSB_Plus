@@ -112,11 +112,13 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             <script>
                 sectionCombo = $("#sectionSelector option:selected").val();
 
+            $(function(){ /* DOM ready */
                 $("select#sectionSelector").change(function() {
                     alert("2" + sectionCombo);
                     sectionCombo = $("#sectionSelector option:selected").val();
                     alert("3" + sectionCombo);
                 });
+            });
             </script>
         </div>
         <div class="right-section">
