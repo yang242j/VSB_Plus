@@ -193,7 +193,8 @@ function changeCalendarAndExam(oldCombo, newcombo, cardId, term) {
                     }
                 });
             }
-console.log(lab_arr);
+            console.log(lab_obj);
+
             var exam_arr = [];
             if (exam_obj) {
                 exam_obj.forEach(function (section_array) {
@@ -203,11 +204,7 @@ console.log(lab_arr);
                     }
                 });
             }
-           console.log(exam_arr); 
-
-            
-            
-            
+            console.log(exam_arr); 
 
         })
         .catch(function (error) {
