@@ -113,8 +113,8 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         <script>
             $(document).on('change', 'select#sectionSelector', function() {
                 sectionCombo = $("select#sectionSelector option:selected").val();
-                console.log($(this).closest("div").attr("id"));
-                //changeCalendarAndExam(sectionCombo);
+                let cardId = $(this).closest("div").attr("id");
+                changeCalendarAndExam(sectionCombo, cardId);
             });
         </script>
         <div class="right-section">
