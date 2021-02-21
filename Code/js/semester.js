@@ -157,7 +157,7 @@ function changeCalendarAndExam(combo, cardId) {
     removeCalendar(short_name + "_Lec", lec_exam_eventTitle);
     // appendd new lecture section into calendar
     // remove old lab event from calendar
-    removeCalendar(short_name + "_Lab", lab_eventTitle);
+    if (lab_num) { removeCalendar(short_name + "_Lab", lab_eventTitle); }
     // appendd new lab event into calendar
     // remove old exam li from list
     removeExamList(short_name);
@@ -285,13 +285,13 @@ function removeCalendar(id, title) {
         if (title && event.title === title) {
             event.remove();
         } else if (title && event.title !== title) {
-            console.log("Title: " + event.title + " remove FAILED");
+            console.error("Title: " + event.title + " remove FAILED");
         } else if (!title) {
             event.remove();
             console.log("id: " + id + " remove SUCCESS");
         }
     } catch (e) {
-        console.error("Calendar event" + id + " remove FAILED");
+        console.error("Calendar event " + id + " remove FAILED");
     }
 }
 
