@@ -139,18 +139,18 @@ function dropBR(ev) {
     }
 }
 
-function changeCalendarAndExam(oldCombo, combo, cardId) {
+function changeCalendarAndExam(oldCombo, newcombo, cardId) {
     let short_name = cardId.split('_Card')[0];
 
     // split old combo into lec_exam_num and lab_num
-    let old_lec_exam_num = combo.split('-')[0];
-    let old_lab_num = combo.split('-')[1];
+    let old_lec_exam_num = oldCombo.split('-')[0];
+    let old_lab_num = oldCombo.split('-')[1];
     let old_lec_exam_eventTitle = (old_lec_exam_num) ? short_name + " [" + old_lec_exam_num + "]" : "";
     let old_lab_eventTitle = (old_lab_num) ? short_name + " [" + old_lab_num + "]" : "";
 
     // split new combo into lec_exam_num and lab_num
-    let new_lec_exam_num = combo.split('-')[0];
-    let new_lab_num = combo.split('-')[1];
+    let new_lec_exam_num = newcombo.split('-')[0];
+    let new_lab_num = newcombo.split('-')[1];
     let new_lec_exam_eventTitle = (new_lec_exam_num) ? short_name + " [" + new_lec_exam_num + "]" : "";
     let new_lab_eventTitle = (new_lab_num) ? short_name + " [" + new_lab_num + "]" : "";
 
