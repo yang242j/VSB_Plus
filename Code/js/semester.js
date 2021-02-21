@@ -173,7 +173,7 @@ function changeCalendarAndExam(oldCombo, newcombo, cardId, term) {
             let exam_obj = JSON.parse(data[2]); // Fetch Exam Section JSON data
             
             // Find the section info array with correct section_number
-            var lec_arr = [];
+            let lec_arr = [];
             if (lec_obj) { 
                 lec_obj.forEach(function (section_array) {
                     if (new_lec_exam_num == section_array.section_num) {
@@ -184,9 +184,8 @@ function changeCalendarAndExam(oldCombo, newcombo, cardId, term) {
             }
             console.log(lec_arr);
 
-            var lab_arr = [];
-            console.log(lab_obj);
-            if (lab_obj) {
+            let lab_arr = [];
+            if (new_lab_num) {
                 lab_obj.forEach(function (section_array) {
                     if (new_lab_num == section_array.section_num) {
                         lab_arr = section_array;
@@ -194,9 +193,9 @@ function changeCalendarAndExam(oldCombo, newcombo, cardId, term) {
                     }
                 });
             }
-            console.log(lab_obj);
+            console.log(lab_arr);
 
-            var exam_arr = [];
+            let exam_arr = [];
             if (exam_obj) {
                 exam_obj.forEach(function (section_array) {
                     if (new_lec_exam_num == section_array.section_num) {
