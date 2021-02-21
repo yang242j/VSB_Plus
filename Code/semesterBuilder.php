@@ -62,14 +62,6 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 
     <section class="container">
         <div class="top-section">
-                        <script>
-                term = $("select#termSelector option:selected").val();
-
-                $("select#termSelector").on('change', function() {
-                    term = $("select#termSelector option:selected").val();
-                    loadRecCourseTags();
-                });
-            </script>
             <label for="term">Choose a term:</label>
             <select id="termSelector">
                 <option value="202030" selected>Fall 2020</option>
@@ -77,6 +69,14 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             </select>
 
         </div>
+                    <script>
+                term = $("select#termSelector option:selected").val();
+
+                $("select#termSelector").on('change', function() {
+                    term = $("select#termSelector option:selected").val();
+                    loadRecCourseTags();
+                });
+            </script>
         <div class="left-section">
             <h3 class="section-title">Course List</h3>
 
