@@ -254,7 +254,7 @@ function appendCourseCard(course_json, comboList, BGC) {
     let course_card_1 =
         "<div class='courseInfo courseCard' id='" + card_id + "' style='background-color:" + BGC + ";'>" +
         "<h2>" + course_json.short_name + "</h2>" +
-        "<div href='courseDB.php?courseId='ENSE 400''>&#128269;</div>" +
+        "<div href='courseDB.php?courseId=ENSE 400' style='float: right;'>&#128269;</div>" +
         "<label for='sectionCombo'></label>" +
         "<select id='sectionSelector'>";
     
