@@ -170,7 +170,7 @@ function appendCourseCard(course_json, comboList, BGC) {
     let course_card_2 = "";
     $.each(comboList, function (index, combo) {
         if (index == 0) {
-            course_card_2 += "<option selected value='" + combo + "'>" + combo + "</option>";
+            course_card_2 += "<option value='" + combo + "' selected >" + combo + "</option>";
         } else {
             course_card_2 += "<option value='" + combo + "'>" + combo + "</option>";
         }
