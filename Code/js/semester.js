@@ -174,28 +174,35 @@ function changeCalendarAndExam(oldCombo, newcombo, cardId, term) {
             
             // Find the section info array with correct section_number
             var lec_arr = [];
-            lec_obj.forEach(function (section_array) {
-                if (new_lec_exam_num == section_array.section_num) {
-                    lec_arr = section_array;
-                    return false; // breaks
-                }
-            });
+            if (lec_obj) { 
+                lec_obj.forEach(function (section_array) {
+                    if (new_lec_exam_num == section_array.section_num) {
+                        lec_arr = section_array;
+                        return false; // breaks
+                    }
+                });
+            }
 
             var lab_arr = [];
-            lab_obj.forEach(function (section_array) {
-                if (new_lab_num == section_array.section_num) {
-                    lab_arr = section_array;
-                    return false; // breaks
-                }
-            });
+            if (lab_obj) {
+                lab_obj.forEach(function (section_array) {
+                    if (new_lab_num == section_array.section_num) {
+                        lab_arr = section_array;
+                        return false; // breaks
+                    }
+                });
+            }
 
             var exam_arr = [];
-            exam_obj.forEach(function (section_array) {
-                if (new_lec_exam_num == section_array.section_num) {
-                    exam_arr = section_array;
-                    return false; // breaks
-                }
-            });
+            if (exam_obj) {
+                exam_obj.forEach(function (section_array) {
+                    if (new_lec_exam_num == section_array.section_num) {
+                        exam_arr = section_array;
+                        return false; // breaks
+                    }
+                });
+            }
+            
 
             console.log(lec_arr);
             console.log(lab_arr);
