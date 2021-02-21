@@ -202,11 +202,14 @@ function appendCalendar(section, BGC) {
     var event_title = event_id + " [" + section.section_num + "]";
     var start_date = new Date(section['date_range'].slice(0, 12)).toISOString().substring(0, 10);
     var end_date = new Date(section['date_range'].slice(15)).toISOString().substring(0, 10);
+    
+    if (section.time == "TBA" || section.time == "?" || section.time == null) return;
     var start_time = get24HrsFrm12Hrs(section.time.split("-")[0]);
     var end_time = get24HrsFrm12Hrs(section.time.split("-")[1]);
-    var daysOfWeek = [];
-
+    
+    if (section.days == "TBA" || section.days == "?" || section.days == null) return;
     // Convert days characters into daysOfWeek number
+    var daysOfWeek = [];
     for (var i = 0; i < section.days.length; i++) {
         switch (section.days[i].toUpperCase()) {
             case "M":
