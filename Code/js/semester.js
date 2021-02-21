@@ -92,14 +92,14 @@ function dropL(ev, term) {
                         appendCourseCard(course_json, combos, BGC); //4.1.Append courseCard-list
 
                         if (lec_json_obj[lec_exam_id] || exam_json_obj[lec_exam_id]) {
-                            appendCalendar(lec_json_obj[lec_exam_id], BGC); //4.2.1.Append lecture calendar event
+                            appendCalendar(lec_json_obj[lec_exam_id], "Lecture", BGC); //4.2.1.Append lecture calendar event
                             appendExamList(exam_json_obj[lec_exam_id]); //4.2.2.Append exam list
                         } else {
                             console.warn(short_name + " does NOT have Lecture-Exam section_" + lec_exam_id);
                         }
 
                         if (lab_json_obj[lab_id]) {
-                            appendCalendar(lab_json_obj[lab_id], BGC); //4.2.3.Append lab calendar event
+                            appendCalendar(lab_json_obj[lab_id], "Lab", BGC); //4.2.3.Append lab calendar event
                         } else {
                             console.warn(short_name + " does NOT have Lab section_" + lab_id);
                         }
@@ -130,8 +130,10 @@ function dropBR(ev) {
         document.getElementById(short_name).classList.remove("selected-course"); // Remove selected-course class
         // Remove course card from middle section
         removeCourseCard(short_name);
-        // Remove course event from calendar
-        removeCalendar(short_name, 'groupId');
+        // Remove course lecture event from calendar
+        removeCalendar(short_name + "_Lec");
+        // Remove course lab event from calendar
+        removeCalendar(short_name + "_Lab");
         // Remove exam date from List
         removeExamList(short_name);
     }
@@ -206,9 +208,10 @@ function removeCourseCard(short_name) {
     
 }
 
-function appendCalendar(section, BGC) {
+function appendCalendar(section, eventType, BGC) {
     // Manage the input values
-    var event_id = section.short_name;
+    if (eventType == "Lecture") var event_id = section.short_name + "_Lec";
+    else if (eventType == "Lab") var event_id = section.short_name + "_Lab";
     var event_title = event_id + " [" + section.section_num + "]";
     var start_date = new Date(section['date_range'].slice(0, 12)).toISOString().substring(0, 10);
     var end_date = new Date(section['date_range'].slice(15)).toISOString().substring(0, 10);
@@ -249,8 +252,7 @@ function appendCalendar(section, BGC) {
         calendar.addEvent({
             allDay: false,
             timeFormat: 'h(:mm)t',
-            groupId: event_id,
-            id: event_title,
+            id: event_id,
             title: event_title,
             startRecur: start_date,
             endRecur: end_date,
@@ -260,23 +262,18 @@ function appendCalendar(section, BGC) {
             textColor: "black",
             color: BGC,
         });
-        console.log("id: " + event_title + " groupId: " + event_id + " append SUCCESS");
+        console.log("id: " + event_id + " title: " + event_title + " append SUCCESS");
     } catch (e) {
         console.error("Calendar event" + event_title + " append FAILED");
     }
 }
 
-function removeCalendar(id, inputType) {
+function removeCalendar(event_id) {
     try {
-        if (inputType == 'id') {
-            calendar.getEventById(id).remove();
-            console.log("id: " + id + " remove SUCCESS");
-        } else if (inputType == 'groupId') {
-            calendar.getGroupById(id).remove();
-            console.log("group id: " + id + " remove SUCCESS");
-        }
+        calendar.getEventById(event_id).remove();
+        console.log("id: " + event_id + " remove SUCCESS");
     } catch (e) {
-        console.error("Calendar event" + id + " remove FAILED");
+        console.error("Calendar event" + short_name + " remove FAILED");
     }
 }
 
