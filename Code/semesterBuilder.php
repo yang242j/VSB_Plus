@@ -190,7 +190,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                         $(".left-section .courseTag").remove();
                         $(".middle-section .courseCard").remove();
                         // Remove all previously displayed calendar events and exams
-                        $.each(courseList, function(course) {
+                        $.each(courseList, function(key, course) {
                             alert(course);
                             removeCalendar(course);
                             removeExamList(course);
