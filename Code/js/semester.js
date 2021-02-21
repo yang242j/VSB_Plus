@@ -141,8 +141,8 @@ function changeCalendarAndExam(combo) {
     // split combo into lec_exam_num and lab_num
     let lec_exam_num = combo.split('-')[0];
     let lab_num = combo.split('-')[1];
-
     alert(lec_exam_num + "\n" + lab_num);
+
     // remove old lecture event from calendar
     // appendd new lecture section into calendar
     // remove old lab event from calendar
@@ -259,6 +259,7 @@ function appendCalendar(section, BGC) {
             textColor: "black",
             color: BGC,
         });
+        console.error("id: " + event_id + " title: " + event_title + " append SUCCESS");
     } catch (e) {
         console.error("Calendar event" + event_title + " append FAILED");
     }
