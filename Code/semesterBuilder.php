@@ -109,6 +109,14 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                 <h4>Course Title</h4>
                 <p>Course Detail Info: **** **** *** ** * * * **</p>
             </div>
+            <script>
+                sectionCombo = $("#sectionSelector option:selected").val();
+
+                $("#sectionSelector").change(function() {
+                    sectionCombo = $("#sectionSelector option:selected").val();
+                    changeCalendarAndExam(sectionCombo);
+                });
+            </script>
         </div>
         <div class="right-section">
             <h3 class="section-title">Weekly Schedule & Exam Date</h3>

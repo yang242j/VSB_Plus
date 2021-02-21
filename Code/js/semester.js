@@ -137,6 +137,10 @@ function dropBR(ev) {
     }
 }
 
+function changeCalendarAndExam(combo) {
+    alert(combo);
+}
+
 function fetchCourseJSON(short_name) {
     return $.post('Model/course.php', { short_name: short_name }, function (data) {});
 }
