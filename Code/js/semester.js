@@ -139,7 +139,7 @@ function dropBR(ev) {
     }
 }
 
-function changeCalendarAndExam(oldCombo, newcombo, cardId, term) {
+function changeCalendarAndExam(oldCombo, newcombo, cardId, cardStyle, term) {
     let short_name = cardId.split('_Card')[0];
 
     // split old combo into lec_exam_num and lab_num
@@ -173,47 +173,61 @@ function changeCalendarAndExam(oldCombo, newcombo, cardId, term) {
             let exam_obj = JSON.parse(data[2]); // Fetch Exam Section JSON data
             
             // Find the section info array with correct section_number
-            let lec_arr = [];
             if (lec_obj) { 
-                lec_obj.forEach(function (section_array) {
-                    if (new_lec_exam_num == section_array.section_num) {
-                        lec_arr = section_array;
-                        return false; // breaks
-                    }
-                });
+                let lec_arr = [];
+                try {
+                    lec_obj.forEach(function (section_array) {
+                        if (new_lec_exam_num == section_array.section_num) {
+                            lec_arr = section_array;
+                            return false; // breaks
+                        }
+                    });
+                    //console.log(lec_arr);
+                    let BGC = cardStyle.split(':')[1].slice(0, -1);
+                    appendCalendar(lec_arr, "Lecture", BGC); // appendd new lecture section into calendar
+                } catch (error) {
+                    console.error("Change calendar " + short_name + " lecture event FAILED -> " + error);
+                }
             }
-            console.log(lec_arr);
-
-            let lab_arr = [];
+            
             if (new_lab_num) {
-                lab_obj.forEach(function (section_array) {
-                    if (new_lab_num == section_array.section_num) {
-                        lab_arr = section_array;
-                        return false; // breaks
-                    }
-                });
+                let lab_arr = [];
+                try {
+                    lab_obj.forEach(function (section_array) {
+                        if (new_lab_num == section_array.section_num) {
+                            lab_arr = section_array;
+                            return false; // breaks
+                        }
+                    });
+                    //console.log(lab_arr);
+                    let BGC = cardStyle.split(':')[1].slice(0, -1);
+                    appendCalendar(lab_arr, "Lab", BGC); // appendd new lab event into calendar
+                } catch (error) {
+                    console.error("Change calendar " + short_name + " lab event FAILED -> " + error);
+                }
             }
-            console.log(lab_arr);
-
-            let exam_arr = [];
+            
             if (exam_obj) {
-                exam_obj.forEach(function (section_array) {
-                    if (new_lec_exam_num == section_array.section_num) {
-                        exam_arr = section_array;
-                        return false; // breaks
-                    }
-                });
+                let exam_arr = [];
+                try {
+                    exam_obj.forEach(function (section_array) {
+                        if (new_lec_exam_num == section_array.section_num) {
+                            exam_arr = section_array;
+                            return false; // breaks
+                        }
+                    });
+                    //console.log(exam_arr);
+                    appendExamList(exam_arr); // appendd new exam li into list 
+                } catch (error) {
+                    console.error("Change " + short_name + " exam list FAILED -> " + error);
+                }
             }
-            console.log(exam_arr); 
 
         })
         .catch(function (error) {
             // Handle error
             console.log("Section Data collection error -> ", error);
         });
-    // appendd new lecture section into calendar
-    // appendd new lab event into calendar
-    // appendd new exam li into list 
 }
 
 function fetchCourseJSON(short_name) {

@@ -119,8 +119,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                 let newCombo = $("select#sectionSelector option:selected").val();
                 let cardId = $(this).closest("div").attr("id");
                 let cardStyle = $(this).closest("div").attr("style");
-                alert(cardStyle);
-                changeCalendarAndExam(oldCombo, newCombo, cardId, term);
+                changeCalendarAndExam(oldCombo, newCombo, cardId, cardStyle, term);
             });
         </script>
         <div class="right-section">
