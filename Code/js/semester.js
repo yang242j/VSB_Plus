@@ -182,6 +182,7 @@ function changeCalendarAndExam(oldCombo, newcombo, cardId, term) {
                     }
                 });
             }
+            console.log(lec_arr);
 
             var lab_arr = [];
             if (lab_obj) {
@@ -192,7 +193,7 @@ function changeCalendarAndExam(oldCombo, newcombo, cardId, term) {
                     }
                 });
             }
-
+console.log(lab_arr);
             var exam_arr = [];
             if (exam_obj) {
                 exam_obj.forEach(function (section_array) {
@@ -202,11 +203,11 @@ function changeCalendarAndExam(oldCombo, newcombo, cardId, term) {
                     }
                 });
             }
-            
+           console.log(exam_arr); 
 
-            console.log(lec_arr);
-            console.log(lab_arr);
-            console.log(exam_arr);
+            
+            
+            
 
         })
         .catch(function (error) {
