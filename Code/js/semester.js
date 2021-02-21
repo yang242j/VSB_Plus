@@ -131,7 +131,7 @@ function dropBR(ev) {
         // Remove course card from middle section
         removeCourseCard(short_name);
         // Remove course event from calendar
-        removeCalendar(short_name);
+        removeCalendar(short_name, 'id');
         // Remove exam date from List
         removeExamList(short_name);
     }
@@ -259,17 +259,23 @@ function appendCalendar(section, BGC) {
             textColor: "black",
             color: BGC,
         });
-        console.error("id: " + event_id + " title: " + event_title + " append SUCCESS");
+        console.log("id: " + event_id + " title: " + event_title + " append SUCCESS");
     } catch (e) {
         console.error("Calendar event" + event_title + " append FAILED");
     }
 }
 
-function removeCalendar(short_name) {
+function removeCalendar(id, inputType) {
     try {
-        calendar.getEventById(short_name).remove();
+        if (inputType == 'id') {
+            calendar.getEventById(id).remove();
+            console.log("id: " + id + " remove SUCCESS");
+        } else if (inputType == 'groupId') {
+            calendar.getGroupById(id).remove();
+            console.log("group id: " + id + " remove SUCCESS");
+        }
     } catch (e) {
-        console.error("Calendar event" + short_name + " remove FAILED");
+        console.error("Calendar event" + id + " remove FAILED");
     }
 }
 
