@@ -131,7 +131,7 @@ function dropBR(ev) {
         // Remove course card from middle section
         removeCourseCard(short_name);
         // Remove course event from calendar
-        removeCalendar(short_name, 'id');
+        removeCalendar(short_name, 'groupId');
         // Remove exam date from List
         removeExamList(short_name);
     }
@@ -249,7 +249,8 @@ function appendCalendar(section, BGC) {
         calendar.addEvent({
             allDay: false,
             timeFormat: 'h(:mm)t',
-            id: event_id,
+            groupId: event_id,
+            id: event_title,
             title: event_title,
             startRecur: start_date,
             endRecur: end_date,
@@ -259,7 +260,7 @@ function appendCalendar(section, BGC) {
             textColor: "black",
             color: BGC,
         });
-        console.log("id: " + event_id + " title: " + event_title + " append SUCCESS");
+        console.log("id: " + event_title + " groupId: " + event_id + " append SUCCESS");
     } catch (e) {
         console.error("Calendar event" + event_title + " append FAILED");
     }
