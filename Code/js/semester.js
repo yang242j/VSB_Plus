@@ -139,25 +139,30 @@ function dropBR(ev) {
     }
 }
 
-function changeCalendarAndExam(combo, cardId) {
-    // split combo into lec_exam_num and lab_num
-    let lec_exam_num = combo.split('-')[0];
-    let lab_num = combo.split('-')[1];
-    //alert(lec_exam_num + "\n" + lab_num);
-    
+function changeCalendarAndExam(oldCombo, combo, cardId) {
     let short_name = cardId.split('_Card')[0];
-    let lec_exam_eventTitle = (lec_exam_num) ? short_name + " [" + lec_exam_num + "]" : "";
-    let lab_eventTitle = (lab_num) ? short_name + " [" + lab_num + "]" : "";
+
+    // split old combo into lec_exam_num and lab_num
+    let old_lec_exam_num = combo.split('-')[0];
+    let old_lab_num = combo.split('-')[1];
+    let old_lec_exam_eventTitle = (old_lec_exam_num) ? short_name + " [" + old_lec_exam_num + "]" : "";
+    let old_lab_eventTitle = (old_lab_num) ? short_name + " [" + old_lab_num + "]" : "";
+
+    // split new combo into lec_exam_num and lab_num
+    let new_lec_exam_num = combo.split('-')[0];
+    let new_lab_num = combo.split('-')[1];
+    let new_lec_exam_eventTitle = (new_lec_exam_num) ? short_name + " [" + new_lec_exam_num + "]" : "";
+    let new_lab_eventTitle = (new_lab_num) ? short_name + " [" + new_lab_num + "]" : "";
 
     //console.log("short_name: ", short_name);
     //console.log("lec_exam_eventTitle: ", lec_exam_eventTitle);
     //console.log("lab_eventTitle: ", lab_eventTitle);
 
     // remove old lecture event from calendar
-    removeCalendar(short_name + "_Lec", lec_exam_eventTitle);
+    removeCalendar(short_name + "_Lec", old_lec_exam_eventTitle);
     // appendd new lecture section into calendar
     // remove old lab event from calendar
-    if (lab_num) { removeCalendar(short_name + "_Lab", lab_eventTitle); }
+    if (old_lab_num) { removeCalendar(short_name + "_Lab", old_lab_eventTitle); }
     // appendd new lab event into calendar
     // remove old exam li from list
     removeExamList(short_name);
