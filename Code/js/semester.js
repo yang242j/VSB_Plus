@@ -185,6 +185,7 @@ function changeCalendarAndExam(oldCombo, newcombo, cardId, term) {
             console.log(lec_arr);
 
             var lab_arr = [];
+            console.log(lab_obj);
             if (lab_obj) {
                 lab_obj.forEach(function (section_array) {
                     if (new_lab_num == section_array.section_num) {
