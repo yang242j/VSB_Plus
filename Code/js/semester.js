@@ -143,24 +143,24 @@ function changeCalendarAndExam(combo, cardId) {
     // split combo into lec_exam_num and lab_num
     let lec_exam_num = combo.split('-')[0];
     let lab_num = combo.split('-')[1];
-    alert(lec_exam_num + "\n" + lab_num);
+    //alert(lec_exam_num + "\n" + lab_num);
     
     let short_name = cardId.split('_Card')[0];
     let lec_exam_eventTitle = (lec_exam_num) ? short_name + " [" + lec_exam_num + "]" : "";
     let lab_eventTitle = (lab_num) ? short_name + " [" + lab_num + "]" : "";
 
-    console.log("short_name: ", short_name);
-    console.log("lec_exam_eventTitle: ", lec_exam_eventTitle);
-    console.log("lab_eventTitle: ", lab_eventTitle);
+    //console.log("short_name: ", short_name);
+    //console.log("lec_exam_eventTitle: ", lec_exam_eventTitle);
+    //console.log("lab_eventTitle: ", lab_eventTitle);
 
     // remove old lecture event from calendar
-    //removeCalendar(short_name + "_Lec", lec_exam_eventTitle);
+    removeCalendar(short_name + "_Lec", lec_exam_eventTitle);
     // appendd new lecture section into calendar
     // remove old lab event from calendar
-    //removeCalendar(short_name + "_Lab", lab_eventTitle);
+    removeCalendar(short_name + "_Lab", lab_eventTitle);
     // appendd new lab event into calendar
     // remove old exam li from list
-    //removeExamList(short_name);
+    removeExamList(short_name);
     // appendd new exam li into list 
 }
 
@@ -223,7 +223,7 @@ function appendCalendar(section, eventType, BGC) {
     // Manage the input values
     if (eventType == "Lecture") var event_id = section.short_name + "_Lec";
     else if (eventType == "Lab") var event_id = section.short_name + "_Lab";
-    var event_title = event_id + " [" + section.section_num + "]";
+    var event_title = section.short_name + " [" + section.section_num + "]";
     var start_date = new Date(section['date_range'].slice(0, 12)).toISOString().substring(0, 10);
     var end_date = new Date(section['date_range'].slice(15)).toISOString().substring(0, 10);
     
@@ -279,12 +279,19 @@ function appendCalendar(section, eventType, BGC) {
     }
 }
 
-function removeCalendar(event_id, event_title) {
+function removeCalendar(id, title) {
     try {
-        calendar.getEventById(event_id).remove();
-        console.log("id: " + event_id + " remove SUCCESS");
+        let event = calendar.getEventById(id);
+        if (title && event.title === title) {
+            event.remove();
+        } else if (title && event.title !== title) {
+            console.log("Title: " + event.title + " remove FAILED");
+        } else if (!title) {
+            event.remove();
+            console.log("id: " + id + " remove SUCCESS");
+        }
     } catch (e) {
-        console.error("Calendar event" + short_name + " remove FAILED");
+        console.error("Calendar event" + id + " remove FAILED");
     }
 }
 
