@@ -146,13 +146,13 @@ function changeCalendarAndExam(combo, cardId) {
     alert(lec_exam_num + "\n" + lab_num);
     
     let short_name = cardId.split('_Card')[0];
-    let lec_exam_eventTitle = (lab_num) ? short_name + " [" + lec_exam_num + "]" : "";
+    let lec_exam_eventTitle = (lec_exam_num) ? short_name + " [" + lec_exam_num + "]" : "";
     let lab_eventTitle = (lab_num) ? short_name + " [" + lab_num + "]" : "";
 
     console.log("short_name: ", short_name);
     console.log("lec_exam_eventTitle: ", lec_exam_eventTitle);
     console.log("lab_eventTitle: ", lab_eventTitle);
-    
+
     // remove old lecture event from calendar
     //removeCalendar(short_name + "_Lec", lec_exam_eventTitle);
     // appendd new lecture section into calendar
