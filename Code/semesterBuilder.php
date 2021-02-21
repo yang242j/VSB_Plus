@@ -109,17 +109,17 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                 <h4>Course Title</h4>
                 <p>Course Detail Info: **** **** *** ** * * * **</p>
             </div>
-            <script>
-                sectionCombo = $("select#sectionSelector option:selected").val();
-                console.log("1: " + sectionCombo);
-
-                $("select#sectionSelector").on('change', function() {
-                    console.log("2: " + sectionCombo);
-                    sectionCombo = $("select#sectionSelector option:selected").val();
-                    console.log("3: " + sectionCombo);
-                });
-            </script>
         </div>
+        <script>
+            sectionCombo = $("select#sectionSelector option:selected").val();
+            console.log("1: " + sectionCombo);
+
+            $("select#sectionSelector").on('change', function() {
+                console.log("2: " + sectionCombo);
+                sectionCombo = $("select#sectionSelector option:selected").val();
+                console.log("3: " + sectionCombo);
+            });
+        </script>
         <div class="right-section">
             <h3 class="section-title">Weekly Schedule & Exam Date</h3>
             <div class="Calendar">
