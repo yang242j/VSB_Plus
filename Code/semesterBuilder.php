@@ -70,7 +70,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             <script>
                 term = $("select#termSelector option:selected").val();
 
-                $("select#termSelector").on('change', function() {
+                $(document).on('change', 'select#termSelector', function() {
                     term = $("select#termSelector option:selected").val();
                     loadRecCourseTags();
                 });
@@ -111,9 +111,9 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             </div>
         </div>
         <script>
-            $(document).on('change', '#sectionSelector', function() {
-                sectionCombo = $("#sectionSelector option:selected").val();
-                console.log("3: " + sectionCombo);
+            $(document).on('change', 'select#sectionSelector', function() {
+                sectionCombo = $("select#sectionSelector option:selected").val();
+                console.log(sectionCombo);
             });
         </script>
         <div class="right-section">
