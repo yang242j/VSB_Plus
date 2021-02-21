@@ -139,7 +139,7 @@ function dropBR(ev) {
     }
 }
 
-function changeCalendarAndExam(oldCombo, newcombo, cardId) {
+function changeCalendarAndExam(oldCombo, newcombo, cardId, term) {
     let short_name = cardId.split('_Card')[0];
 
     // split old combo into lec_exam_num and lab_num
@@ -149,8 +149,8 @@ function changeCalendarAndExam(oldCombo, newcombo, cardId) {
     let old_lab_eventTitle = (old_lab_num) ? short_name + " [" + old_lab_num + "]" : "";
 
     // split new combo into lec_exam_num and lab_num
-    let new_lec_exam_num = newcombo.split('-')[0];
-    let new_lab_num = newcombo.split('-')[1];
+    var new_lec_exam_num = newcombo.split('-')[0];
+    var new_lab_num = newcombo.split('-')[1];
     let new_lec_exam_eventTitle = (new_lec_exam_num) ? short_name + " [" + new_lec_exam_num + "]" : "";
     let new_lab_eventTitle = (new_lab_num) ? short_name + " [" + new_lab_num + "]" : "";
 
@@ -160,12 +160,30 @@ function changeCalendarAndExam(oldCombo, newcombo, cardId) {
 
     // remove old lecture event from calendar
     removeCalendar(short_name + "_Lec", old_lec_exam_eventTitle);
-    // appendd new lecture section into calendar
     // remove old lab event from calendar
     if (old_lab_num) { removeCalendar(short_name + "_Lab", old_lab_eventTitle); }
-    // appendd new lab event into calendar
     // remove old exam li from list
     removeExamList(short_name);
+
+    fetchAllSectionData(short_name, term)
+        .then(function (data) {
+            // Do something with the result
+            let lec_obj = JSON.parse(data[0]); // Fetch Lecture Section JSON data
+            let lab_obj = JSON.parse(data[1]); // Fetch Lab Section JSON data
+            let exam_obj = JSON.parse(data[2]); // Fetch Exam Section JSON data
+            
+            // Find the section info array with correct section_number
+            lec_obj.forEach(function (section_array) {
+                console.log(section_array);
+            })
+
+        })
+        .catch(function (error) {
+            // Handle error
+            console.log("Section Data collection error -> ", error);
+        });
+    // appendd new lecture section into calendar
+    // appendd new lab event into calendar
     // appendd new exam li into list 
 }
 
@@ -287,7 +305,7 @@ function appendCalendar(section, eventType, BGC) {
 function removeCalendar(id, title) {
     try {
         let event = calendar.getEventById(id);
-        console.log(event.title, " & ", title)
+        //console.log(event.title, " & ", title)
         if (title && event.title === title) {
             event.remove();
         } else if (title && event.title !== title) {

@@ -112,13 +112,13 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         </div>
         <script>
             $(document).on('focusin', 'select#sectionSelector', function(){
-                console.log("Saving value " + $(this).val());
+                //console.log("Saving value " + $(this).val());
                 $(this).data('val', $(this).val());
             }).on('change', 'select#sectionSelector', function() {
                 let oldCombo = $(this).data('val');
                 let newCombo = $("select#sectionSelector option:selected").val();
                 let cardId = $(this).closest("div").attr("id");
-                changeCalendarAndExam(oldCombo, newCombo, cardId);
+                changeCalendarAndExam(oldCombo, newCombo, cardId, term);
             });
         </script>
         <div class="right-section">
