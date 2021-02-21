@@ -86,7 +86,7 @@ function dropL(ev, term) {
 
                         // Generate combo array for section selector
                         combos = combinationGenerator(lec_json_obj, lab_json_obj);
-                        alert(combos);
+                        //alert(combos);
 
                         //4.Append cards, calendars, exams
                         appendCourseCard(course_json, combos, BGC); //4.1.Append courseCard-list
@@ -155,21 +155,30 @@ function fetchRecJSON(courseCompletedList, major, term, maxNum) {
     return $.post('Model/courseREC.php', { courseCompletedList: courseCompletedList, major: major, term: term, maxNum: maxNum }, function(data) {});
 }
 
-function appendCourseCard(course_json, BGC) {
-    var card_id = course_json.short_name + "_Card";
-    var course_card =
+function appendCourseCard(course_json, comboList, BGC) {
+    let card_id = course_json.short_name + "_Card";
+    
+    let course_card_1 =
         "<div class='courseInfo courseCard' id='" + card_id + "' style='background-color:" + BGC + ";'>" +
         "<h2>" + course_json.short_name + "</h2>" +
-        "<h4>" + course_json.title + "</h4>" +
-        "<select id='sectionSelector'>" +
-        "<option selected value='" + "001-095" + "'>" + "001-095" + "</option>" +
-        "<option value='" + "001-096" + "'>" + "001-096" + "</option>" +
-        "<option value='" + "002-095" + "'>" + "002-095" + "</option>" +
-        "<option value='" + "002-096" + "'>" + "002-096" + "</option>" +
+        "<select id='sectionSelector'>";
+    
+    let course_card_2 = "";
+    $.each(comboList, function (index, combo) {
+        if (index == 0) {
+            course_card_2 += "<option selected value='" + combo + "'>" + combo + "</option>";
+        } else {
+            course_card_2 += "<option value='" + combo + "'>" + combo + "</option>";
+        }
+    });
+    
+    let course_card_3 =
         "</select>" +
+        "<h4>" + course_json.title + "</h4>" +
         "<p>" + course_json.description + "</p>" +
         "</div>";
-    document.getElementById("courseCardList").innerHTML += course_card;
+    
+    document.getElementById("courseCardList").innerHTML += course_card_1 + course_card_2 + course_card_3;
 }
 
 function removeCourseCard(short_name) {
