@@ -68,10 +68,10 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                 <option value="202110">Winter 2021</option>
             </select>
             <script>
-                term = $("#termSelector option:selected").val();
+                term = $("select#termSelector option:selected").val();
 
-                $("#termSelector").change(function() {
-                    term = $("#termSelector option:selected").val();
+                $("select#termSelector").change(function() {
+                    term = $("select#termSelector option:selected").val();
                     loadRecCourseTags();
                 });
             </script>
@@ -110,12 +110,12 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                 <p>Course Detail Info: **** **** *** ** * * * **</p>
             </div>
             <script>
-                sectionCombo = $("#sectionSelector option:selected").val();
+                sectionCombo = $("select#sectionSelector option:selected").val();
 
             $(function(){ /* DOM ready */
                 $("select#sectionSelector").change(function() {
                     alert("2" + sectionCombo);
-                    sectionCombo = $("#sectionSelector option:selected").val();
+                    sectionCombo = $("select#sectionSelector option:selected").val();
                     alert("3" + sectionCombo);
                 });
             });
