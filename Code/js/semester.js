@@ -174,7 +174,7 @@ function changeCalendarAndExam(oldCombo, newcombo, cardId, term) {
             
             // Find the section info array with correct section_number
             lec_obj.forEach(function (section_array) {
-                console.log(section_array);
+                console.log(section_array[section_num]);
             })
 
         })
