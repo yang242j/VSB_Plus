@@ -151,8 +151,8 @@ function changeCalendarAndExam(oldCombo, newcombo, cardId, cardStyle, term) {
     // split new combo into lec_exam_num and lab_num
     var new_lec_exam_num = newcombo.split('-')[0];
     var new_lab_num = newcombo.split('-')[1];
-    let new_lec_exam_eventTitle = (new_lec_exam_num) ? short_name + " [" + new_lec_exam_num + "]" : "";
-    let new_lab_eventTitle = (new_lab_num) ? short_name + " [" + new_lab_num + "]" : "";
+    //let new_lec_exam_eventTitle = (new_lec_exam_num) ? short_name + " [" + new_lec_exam_num + "]" : "";
+    //let new_lab_eventTitle = (new_lab_num) ? short_name + " [" + new_lab_num + "]" : "";
 
     //console.log("short_name: ", short_name);
     //console.log("lec_exam_eventTitle: ", lec_exam_eventTitle);
@@ -290,8 +290,9 @@ function appendCalendar(section, eventType, BGC) {
     if (eventType == "Lecture") var event_id = section.short_name + "_Lec";
     else if (eventType == "Lab") var event_id = section.short_name + "_Lab";
     var event_title = section.short_name + " [" + section.section_num + "]";
-    var start_date = new Date(section['date_range'].slice(0, 12)).toISOString().substring(0, 10);
-    var end_date = new Date(section['date_range'].slice(15)).toISOString().substring(0, 10);
+    let dateRange = section.date_range;
+    var start_date = new Date(dateRange.slice(0, 12)).toISOString().substring(0, 10);
+    var end_date = new Date(dateRange.slice(15)).toISOString().substring(0, 10);
     
     if (section.time == "TBA" || section.time == "?" || section.time == null) return;
     var start_time = get24HrsFrm12Hrs(section.time.split("-")[0]);
