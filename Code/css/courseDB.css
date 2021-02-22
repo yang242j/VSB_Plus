@@ -194,3 +194,7 @@ body .course{
     width: 400px;
     height: 300px;
 }
+
+footer {
+    padding-bottom: 0%;
+}
