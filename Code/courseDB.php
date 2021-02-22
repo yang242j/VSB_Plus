@@ -173,7 +173,7 @@ session_start(); // Initialize the session
         
     </section>
 
-    <footer>
+    <footer style="padding-bottom: 0%;">
         <script src="js/main.js"></script>
         <script src="js/courseDB.js"></script>
         <script src="js/genChart.js"></script>
