@@ -90,7 +90,7 @@ body .course{
     display: grid;
     grid-template-columns: repeat(1, 100%);
     grid-template-rows: repeat(auto-fill, 85px);
-    grid-gap:10px;
+    row-gap:10px;
   }
   
 .tow_course_show{
@@ -99,7 +99,7 @@ body .course{
 
 .scroll{
     overflow: scroll;
-    overflow-x:hidden；
+    overflow-x: hidden;
 }
 
   #main_area{
