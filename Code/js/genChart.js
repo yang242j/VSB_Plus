@@ -14,7 +14,7 @@ function genGraph(sections) {
             lab_count[index] += 1;
         }
     }
-    console.log(lecture_count);
+    // console.log(lecture_count);
 
     //In case, there is no 'canvas' element in the html
     if (!document.getElementById('chart')) {

@@ -12,9 +12,15 @@ var ALL_JSON;
 var num_perid = 50;
 var filter_key = "all";
 
+// Setting the default parameters for selected course
+var defaultShow = true;
+var defaultCourse = 'ENSE 400';
+
 window.onload = function init(){
     loadCourses();
-    showGraph('ENSE 400');
+    if (defaultShow){
+        showGraph(defaultCourse);
+    }
 }
 
 function loadCourses(){
@@ -63,6 +69,27 @@ function addCourse(course_json, index){
 
 function courseSelect(event){
     var short_name = event.getAttribute("value");
+    selected(short_name);
+    // var xmlhttp = new XMLHttpRequest();
+    // xmlhttp.onreadystatechange = function(){
+    //     if (this.status == 404){
+    //         document.getElementById("message").innerHTML = short_name + " cannot be found";
+    //     }
+    //     if (this.readyState == 4 && this.status == 200){
+    //         var jsonRsp = JSON.parse(this.responseText);
+    //         setCourse(jsonRsp);
+    //         document.getElementById("message").innerHTML = short_name + " has been selected";
+    //         showGraph(short_name);
+    //     }
+    // };
+    // // xmlhttp.open("GET", "getCourse.php?short_name=" + short_name, false); // Get the data from database by the server php file
+    // var json_url = "JSON/202020/" + short_name + ".json"; //Get the course information from the locat 
+    // xmlhttp.open("GET", json_url, false);
+    // xmlhttp.send();
+}
+
+function selected(short_name){
+    console.log("get set course funciton");
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function(){
         if (this.status == 404){

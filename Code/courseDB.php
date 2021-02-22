@@ -177,6 +177,15 @@ session_start(); // Initialize the session
         <script src="js/main.js"></script>
         <script src="js/courseDB.js"></script>
         <script src="js/genChart.js"></script>
+        <?php 
+            if (isset($_REQUEST["courseId"]) and $_REQUEST["courseId"] != '') {
+                $short_name = $_REQUEST["courseId"];
+                echo "<script> var defaultShow = false;
+                selected('" . $short_name . "'); </script>";
+            }
+            // var defaultShow = false;
+            // document.getElementById('popView').innerHTML = '';
+        ?>
         <!-- <script src="js/genChart.js"></script> -->
 
         <p class="copyright">Copyright &copy; Sep. 2020 to
