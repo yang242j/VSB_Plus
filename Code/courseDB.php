@@ -177,14 +177,14 @@ session_start(); // Initialize the session
         <script src="js/main.js"></script>
         <script src="js/courseDB.js"></script>
         <script src="js/genChart.js"></script>
+
+        <!-- Change the default selected course by pass the data(courseId) in url -->
         <?php 
             if (isset($_REQUEST["courseId"]) and $_REQUEST["courseId"] != '') {
                 $short_name = $_REQUEST["courseId"];
                 echo "<script> var defaultShow = false;
                 selected('" . $short_name . "'); </script>";
             }
-            // var defaultShow = false;
-            // document.getElementById('popView').innerHTML = '';
         ?>
         <!-- <script src="js/genChart.js"></script> -->
 
