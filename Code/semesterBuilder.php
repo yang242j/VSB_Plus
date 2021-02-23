@@ -7,19 +7,6 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     header("location: login.php");
     exit;
 }
-
-if(isset($_SERVER['HTTP_USER_AGENT'])){
-    $agent = $_SERVER['HTTP_USER_AGENT'];
-}
-echo $agent;
-
-// Check browser is firefox.
-if(strlen(strstr($agent,"Firefox")) > 0 ){      
-    $browser = 'firefox';
-} else {
-    $browser = 'notfirefox';
-    echo "<script> notFireFox(); </script>";
-}
 ?>
 
 <!doctype html>
@@ -45,6 +32,9 @@ if(strlen(strstr($agent,"Firefox")) > 0 ){
         var term = '';
         var courseList = [];
         var courseCompletedList = [];
+        // Detect Firefox 
+        let firefoxAgent = userAgentString.indexOf("Firefox") > -1; 
+        if (!firefoxAgent) notFireFox();
     </script>
 </head>
 
