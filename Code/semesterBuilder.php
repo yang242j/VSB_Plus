@@ -37,6 +37,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         // Detect Firefox 
         let firefoxAgent = userAgentString.indexOf("Firefox") > -1; 
         if (!firefoxAgent) notFireFox();
+        else console.log(firefoxAgent);
     </script>
 </head>
 

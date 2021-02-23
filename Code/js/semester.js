@@ -1,6 +1,6 @@
 const colors = ["lightblue", "lightseagreen", "pink", "yellow", "Azure", "Bisque", "Coral", "Cyan", "Cornsilk", "Lavender"];
 var pre_colorID = "", examDateDic = {/*"ENGG 400_Exam": new Date("Apr 20 2021")*/};
-$('.stick-bottom').css('z-index', 3);
+
 //Calendar init
 var calendarEl = document.getElementById('calendar');
 var calendar = new FullCalendar.Calendar(calendarEl, {
