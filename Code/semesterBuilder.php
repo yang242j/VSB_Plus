@@ -76,10 +76,14 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                 });
             </script>
         </div>
-        <div class="left-section">
+        <div class="left-section" ondragleave="dragLeave(event)">
             <h3 class="section-title">Course List</h3>
 
-            <div class="dropZone" ondrop="dropL(event, term)" ondragover="allowDrop(event)" ondragenter="dragEnter(event)" ondragleave="dragLeave(event)"><img src="img/drop-here.png" style="max-height: 100%;max-width: 100%;" draggable="false"></div>
+            <div class="dropZone L hidden" ondrop="dropL(event, term); dragEnd();" ondragover="allowDrop(event)" ondragenter="dragEnter(event)"></div>
+
+            <div id="courseList_Containor"></div>
+
+            <div class="dropZone BR hidden" ondrop="dropBR(event); dragEnd();" ondragenter="dragEnter(event)" ondragover="allowDrop(event)"></div>
 
             <script>
                 $(".dropZone").on("drop", function(event) {
@@ -166,7 +170,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                 <div class="courseTag noDrag" id="ENEL 417" draggable="false">ENEL 417</div>
                 -->
             </div>
-            <div id="course_recommended" class="bottom-right" ondrop="dropBR(event)" ondragover="allowDrop(event)" ondragenter="dragEnter(event)" ondragleave="dragLeave(event)">
+            <div id="course_recommended" class="bottom-right" ondragleave="dragLeave(event)">
                 Courses To Take: <br>
                 <script>
                     $(".bottom-right").on("drop", function(event) {
@@ -232,6 +236,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                 -->
             </div>
         </div>
+        <div id="shadowLayer" ondrop="dragEnd()" ondragover="allowDrop(event)"></div>
     </section>
 
     <footer>
