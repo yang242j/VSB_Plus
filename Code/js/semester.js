@@ -2,10 +2,10 @@ const colors = ["lightblue", "lightseagreen", "pink", "yellow", "Azure", "Bisque
 var pre_colorID = "", examDateDic = {/*"ENGG 400_Exam": new Date("Apr 20 2021")*/};
 
 // Detect Firefox 
-let firefoxAgent = navigator.userAgent.indexOf("Firefox") > -1; 
+var firefoxAgent = navigator.userAgent.indexOf("Firefox") > -1; 
 if (!firefoxAgent) {
-    $('.left-section.courseTag').css('position', 'relative');
-    $('.left-section.courseTag').css('z-index', 3);
+    $('.courseTag.noDrop.selected-course').css('position', 'relative');
+    $('.courseTag.noDrop.selected-course').css('z-index', 3);
     $('.stick-bottom').css('z-index', 3);
 }
 
