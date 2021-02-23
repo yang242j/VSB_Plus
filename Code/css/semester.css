@@ -77,6 +77,8 @@ body .container .left-section #courseList_Containor {
 
 body .container .left-section .courseTag {
     margin: 10px auto 10px;
+    z-index: 3;
+    position: relative;
 }
 
 /*Middle Section*/
