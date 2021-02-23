@@ -73,6 +73,7 @@ body .container .left-section #courseList_Containor {
     border: 3px solid black;
     min-height: 142.5px;
     min-width: 130px;
+    z-index: 3;
 }
 
 body .container .left-section .courseTag {
@@ -135,7 +136,7 @@ body .container .right-section .Date {
 /*Bottom Section*/
 body .container .stick-bottom {
     position: fixed;
-    z-index: 1;
+    z-index: 3;
     border: 2px solid black;
     bottom: 0;
     width: 95%;
