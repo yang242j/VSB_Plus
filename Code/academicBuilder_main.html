@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <!-- icon library -->
-    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <script src='https://kit.fontawesome.com/b95f8ace21.js'></script>
     <!-- icon library -->
 
     <title>VSB_Plus : Academic</title>
@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="css/academicBuilder_main.css">
 
     <script type="text/javascript" src="js/academicBuilder.js"></script>
+    <script type="text/javascript" src="js/academicMain.js"></script>
 </head>
 <style>
 
@@ -47,16 +48,32 @@
         </div>
     </nav>
 
-    <div class="welcome_tag">
+    <div class="welcome_tag" id = "welcome">
         <h1>Welcome UserName</h1>
     </div>
     <section class="user_summary_board">
-        <button class="right_arrow"><i class='fas fa-angle-right'></i></button>
-        <button class="left_arrow"><i class='fas fa-angle-left'></i></button>
-        <div class="summary_card" id="card1">1</div>
-        <div class="summary_card" id="card2">2</div>
-        <div class="summary_card" id="card3">3</div>
-        <div class="summary_card" id="card4">4</div>
+        <button class="right_arrow" onclick="pageUp()"><i class='fas fa-angle-right'></i></button>
+        <button class="left_arrow" onclick="pageDown()"><i class='fas fa-angle-left'></i></button>
+        <div class="summary_card" id="card1">
+            <h3>Credit Earned:</h3>
+            <p>120/136</p>
+            <p></p>
+        </div>
+        <div class="summary_card" id="card2">
+            <h3>Year:</h3>
+            <p>4th</p>
+            <p></p>
+        </div>
+        <div class="summary_card" id="card3">
+            <h3>Course Left:</h3>
+            <p>6</p>
+            <p></p>
+        </div>
+        <div class="summary_card" id="card4">
+            <h3>GPA:</h3>
+            <p>3.6</p>
+            <p></p>
+        </div>
     </section>
 
 
@@ -90,7 +107,6 @@
     </section>
     <footer>
         <script src="js/main.js"></script>
-        <script src="js/courseDB.js"></script>
         
         <p class="copyright">Copyright &copy; Sep. 2020 to
             <script>document.write(new Date().getFullYear())</script> UofR VSB_Plus Capstone Group All Rights Reserved<br>

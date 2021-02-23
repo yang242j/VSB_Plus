@@ -6,6 +6,10 @@ body .welcometag h1 {
     margin-left: 0;
     text-align: left;
 }
+#welcome h1 {
+    margin-left: 10px;
+    text-align: left;
+}
 h2{
     /*border: 2px solid blue;*/
     width:33%;
@@ -80,6 +84,9 @@ body .terms .course_cards{
         margin-left: 0;
         margin-top: 20px;
     }
+    body .terms .course_cards h3{
+        text-align: center;
+    }
 body .terms .add_to_term .course_cards{
         border-style: dashed;
 }
@@ -104,16 +111,16 @@ body .terms .add_to_term .course_cards{
     body .tags_courses .icons_annotation{
         /*border: 2px solid red;*/
         display: inline-grid;;
-        grid-template-columns: 50% 50%;
+        grid-template-columns: 55% 55%;
         grid-template-rows: 40% 40% 40%;
-        column-gap: 5px;
-        margin-top: -10px;
+        column-gap: -10px;
+        margin-top: -60px;
         margin-left: -25px;
     }
     body .tags_courses .icons_annotation .icons{
        /* border: 2px solid red;*/
-        margin-left: 15px;
-        margin-top: 20px;
+        margin-left: 25px;
+        margin-top: 10px;
     }
     body .tags_courses .course_list{
         /*border: 2px solid red;*/
@@ -129,7 +136,7 @@ body .terms .add_to_term .course_cards{
     body .tags_courses .course_list .course_tag_completed{
         /*border: 2px solid red;*/
         display: inline-grid;;
-        grid-template-columns: 20% 20% 20% 20%;
+        grid-template-columns: 24% 24% 24% 24%;
         grid-template-rows:30% 30% 30% 100%;
         row-gap: 0px;
         column-gap: 10px;
@@ -137,7 +144,7 @@ body .terms .add_to_term .course_cards{
     }
     body .tags_courses .course_list .course_tag_completed p{
         /*border: 2px solid red;*/
-        margin-left: 35px;
+        margin-left: 8px;
         background-color: #D4F19F;
         border-radius: 25px;
         box-shadow: -2px 4px 7px 0px #555555;
@@ -152,14 +159,14 @@ body .terms .add_to_term .course_cards{
     body .tags_courses .course_list .course_tag_not_completed{
       /*border: 2px solid red;*/
         display: inline-grid;;
-        grid-template-columns: 20% 20% 20% 20%;
+        grid-template-columns: 24% 24% 24% 24%;
         grid-template-rows:30% 30% 30% 100%;
         row-gap: 0px;
         column-gap: 10px;
     }
     body .tags_courses .course_list .course_tag_not_completed p{
         /*border: 2px solid red;*/
-        margin-left: 35px;
+        margin-left: 8px;
         background-color: #D4F19F;
         border-radius: 25px;
         box-shadow: -2px 4px 7px 0px #555555;
