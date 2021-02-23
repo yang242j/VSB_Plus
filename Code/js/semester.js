@@ -30,7 +30,9 @@ function drag(ev) {
     //console.log(ev.target.parentNode.classList[0]);
     if (ev.target.parentNode.id == "courseList_Containor") {
         $(".dropZone.L").hide();
+        $(".dropZone.BR").show();
     } else if (ev.target.parentNode.id == "course_recommended") {
+        $(".dropZone.L").show();
         $(".dropZone.BR").hide();
     }
 }
