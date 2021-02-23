@@ -4,8 +4,8 @@ var pre_colorID = "", examDateDic = {/*"ENGG 400_Exam": new Date("Apr 20 2021")*
 // Detect Firefox 
 var firefoxAgent = navigator.userAgent.indexOf("Firefox") > -1; 
 if (!firefoxAgent) {
-    $('.courseTag.noDrop.selected-course').css('position', 'relative');
-    $('.courseTag.noDrop.selected-course').css('z-index', 3);
+    $('.courseTag').css('position', 'relative');
+    $('.courseTag').css('z-index', 3);
     $('.stick-bottom').css('z-index', 3);
 }
 
