@@ -31,14 +31,14 @@
 .L {
     /* The image used */
     background-image: url('../img/drop-here.png');
-    top: 40%;
-    left: 40%;
+    top: 35%;
+    left: 35%;
 }
 
 .BR {
     /* The image used */
     background-image: url('../img/trashCan.jpg');
-    top: 40%;
+    top: 35%;
     left: 40%;
 }
 
@@ -77,8 +77,6 @@ body .container .left-section #courseList_Containor {
 
 body .container .left-section .courseTag {
     margin: 10px auto 10px;
-    z-index: 3;
-    position: relative;
 }
 
 /*Middle Section*/
@@ -137,7 +135,7 @@ body .container .right-section .Date {
 /*Bottom Section*/
 body .container .stick-bottom {
     position: fixed;
-    z-index: 3;
+    z-index: 2;
     border: 2px solid black;
     bottom: 0;
     width: 95%;
