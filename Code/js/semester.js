@@ -22,9 +22,9 @@ var calendar = new FullCalendar.Calendar(calendarEl, {
 calendar.render();
 
 function notFireFox() {
-    $('.left-section.courseTag').zIndex = 3;
-    $('.stick-bottom').zIndex = 3;
-    $('.left-section.courseTag').positioning = 'relative';
+    $('.left-section.courseTag').css('position', 'relative');
+    $('.left-section.courseTag').css('z-index', 3);
+    $('.stick-bottom').css('z-index', 3);
 }
 
 function allowDrop(ev) {
