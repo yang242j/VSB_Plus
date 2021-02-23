@@ -345,18 +345,20 @@ function appendCalendar(section, eventType, BGC) {
 
 function removeCalendar(id, title) {
     try {
-        let event = calendar.getEventById(id);
-        //console.log(event.title, " & ", title)
-        if (title && event.title === title) {
-            event.remove();
-        } else if (title && event.title !== title) {
-            console.error("Title: " + event.title + " remove FAILED");
-        } else if (!title) {
-            event.remove();
-            console.log("id: " + id + " remove SUCCESS");
+        if (calendar.getEventById(id)) {
+            let event = calendar.getEventById(id);
+            //console.log(event.title, " & ", title)
+            if (title && event.title === title) {
+                event.remove();
+            } else if (title && event.title !== title) {
+                console.error("Title: " + event.title + " remove FAILED");
+            } else if (!title) {
+                event.remove();
+                console.log("id: " + id + " remove SUCCESS");
+            }
         }
     } catch (e) {
-        console.error("Calendar event " + id + " remove FAILED");
+        console.error("Calendar event " + id + " remove FAILED -> " + ee);
     }
 }
 
