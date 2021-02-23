@@ -36,8 +36,11 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         let userAgentString =  navigator.userAgent; 
         // Detect Firefox 
         let firefoxAgent = userAgentString.indexOf("Firefox") > -1; 
-        if (!firefoxAgent) notFireFox();
-        else console.log(firefoxAgent);
+        if (!firefoxAgent) {
+            $('.left-section.courseTag').css('position', 'relative');
+            $('.left-section.courseTag').css('z-index', 3);
+            $('.stick-bottom').css('z-index', 3);
+        } else console.log(firefoxAgent);
     </script>
 </head>
 
