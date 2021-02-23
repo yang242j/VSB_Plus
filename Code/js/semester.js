@@ -31,14 +31,10 @@ function drag(ev) {
 
 function dragStart() {
     document.getElementById("shadowLayer").style.display = "block";
-    document.getElementsByClassName("dropZone L")[0].classList.remove("hidden");
-    document.getElementsByClassName("dropZone BR")[0].classList.remove("hidden");
 }
 
 function dragEnd() {
     //console.log("Drop on shadow");
-    document.getElementsByClassName("dropZone L")[0].classList.add("hidden");
-    document.getElementsByClassName("dropZone BR")[0].classList.add("hidden");
     document.getElementById("shadowLayer").style.display = "none";
 }
 

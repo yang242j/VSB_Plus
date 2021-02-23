@@ -13,8 +13,6 @@
 }
 
 .dropZone {
-    /* The image used */
-    background-image: url('../img/drop-here.png');
     /* Used if the image is unavailable */
     background-color: #cccccc;
     /* Center the image */
@@ -23,21 +21,25 @@
     background-repeat: no-repeat;
     /* Resize the background image to be contained within the container */
     background-size: contain;
-    position: relative;
+    position: fixed;
     z-index: 3;
+    height: 20%;
+    width: 20%;
+    border: 2px dashed black;
 }
 
 .L {
-    margin: 10px;
-    height: 110px;
-    border: 2px dashed black;
+    /* The image used */
+    background-image: url('../img/drop-here.png');
+    top: 40%;
+    right: 60%;
 }
 
 .BR {
+    /* The image used */
     background-image: url('../img/trashCan.jpg');
-    margin: 10px;
-    height: 110px;
-    border: 2px dashed black;
+    top: 40%;
+    left: 60%;
 }
 
 /* Body container */

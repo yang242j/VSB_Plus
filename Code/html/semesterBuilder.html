@@ -80,8 +80,6 @@
         <div class="left-section">
             <h3 class="section-title">Course List</h3>
 
-            <div class="dropZone L hidden" ondrop="dropL(event); dragEnd();" ondragover="allowDrop(event)" ></div>
-
             <div id="courseList_Containor"></div>
 
             <script> 
@@ -91,7 +89,6 @@
                 });
             </script>
 
-            <div class="dropZone BR hidden" ondrop="dropBR(event); dragEnd();" ondragover="allowDrop(event)"></div>
         </div>
         <div class="middle-section" id="courseCard_list">
             <h3 class="section-title">Course Detail Info</h3>
@@ -161,7 +158,10 @@
                 <div class="courseTag noDrop" id="CS 110" draggable="true" ondragstart="dragStart(event)">CS 110</div>
             </div>
         </div>
-        <div id="shadowLayer" ondrop="dragEnd()" ondragover="allowDrop(event)"></div>
+        <div id="shadowLayer" ondrop="dragEnd()" ondragover="allowDrop(event)">
+            <div class="dropZone L hidden" ondrop="dropL(event); dragEnd();" ondragover="allowDrop(event)" ></div>
+            <div class="dropZone BR hidden" ondrop="dropBR(event); dragEnd();" ondragover="allowDrop(event)"></div>
+        </div>
     </section>
 
     <footer>

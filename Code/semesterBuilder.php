@@ -78,27 +78,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         </div>
         <div class="left-section">
             <h3 class="section-title">Course List</h3>
-
-            <div class="dropZone L hidden" ondrop="dropL(event, term); dragEnd();" ondragover="allowDrop(event)"></div>
-
             <div id="courseList_Containor"></div>
-
-            <div class="dropZone BR hidden" ondrop="dropBR(event); dragEnd();" ondragover="allowDrop(event)"></div>
-
-            <script>
-                $(".dropZone").on("drop", function(event) {
-                    var courseName = event.originalEvent.dataTransfer.getData('Text');
-                    console.log(courseName + ' Selected');
-
-                    // If this course Name is NOT in the courseList, push
-                    if ($.inArray(courseName, courseList) === -1) {
-                        courseList.push(courseName);
-                    } else {
-                        console.log(courseName + " already exist in courseList { " + courseList + " }");
-                    }
-                });
-            </script>
-
             <!--
             // Test tags
             <div class="courseTag noDrop" id="ense400" draggable="true" ondragstart="drag(event)">ENSE400</div>
@@ -173,18 +153,6 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             <div id="course_recommended" class="bottom-right">
                 Courses To Take: <br>
                 <script>
-                    $(".bottom-right").on("drop", function(event) {
-                        var courseName = event.originalEvent.dataTransfer.getData('Text');
-                        console.log(courseName + ' Unselected');
-
-                        // on drop, remove course Name from courseList
-                        const index = courseList.indexOf(courseName);
-                        if (index > -1) {
-                            courseList.splice(index, 1);
-                        }
-
-                        appendExampleDiv();
-                    });
 
                     function appendExampleDiv() {
                         // if classList is empty, add example div
@@ -236,7 +204,35 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                 -->
             </div>
         </div>
-        <div id="shadowLayer" ondrop="dragEnd()" ondragover="allowDrop(event)"></div>
+        <div id="shadowLayer" ondrop="dragEnd()" ondragover="allowDrop(event)">
+            <div class="dropZone L" ondrop="dropL(event, term); dragEnd();" ondragover="allowDrop(event)"></div>
+            <div class="dropZone BR" ondrop="dropBR(event); dragEnd();" ondragover="allowDrop(event)"></div>
+            <script>
+                $(".dropZone.L").on("drop", function(event) {
+                    var courseName = event.originalEvent.dataTransfer.getData('Text');
+                    console.log(courseName + ' Selected');
+
+                    // If this course Name is NOT in the courseList, push
+                    if ($.inArray(courseName, courseList) === -1) {
+                        courseList.push(courseName);
+                    } else {
+                        console.log(courseName + " already exist in courseList { " + courseList + " }");
+                    }
+                });
+
+                $(".dropZone.BR").on("drop", function(event) {
+                    var courseName = event.originalEvent.dataTransfer.getData('Text');
+                    console.log(courseName + ' Unselected');
+
+                    // on drop, remove course Name from courseList
+                    const index = courseList.indexOf(courseName);
+                    if (index > -1) {
+                        courseList.splice(index, 1);
+                    }
+                    appendExampleDiv();
+                    });
+            </script>
+        </div>
     </section>
 
     <footer>
