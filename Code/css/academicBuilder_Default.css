@@ -196,11 +196,13 @@ body .terms .add_to_term .course_cards{
         font-size: 20px;
         width: 36%;
         margin-top: 2%;
-        margin-left: 25%;
+        margin-left: 35%;
         border-radius: 50%;
         /*background-image: linear-gradient(#B2D9E7, white);*/
         background-color: #B2D9E7;
         box-shadow: 20px 10px 15px 10px #BBB7B7;
     }
-
+footer{
+    margin-top: 40px;
+}
 

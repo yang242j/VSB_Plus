@@ -4,6 +4,7 @@ var termData;
 window.onload = function () {
     showNotCompletedCourse();
     showCompletedCourse();
+    showTerm();
 }
 getCourseData();
 getTermData();
@@ -23,7 +24,7 @@ function getTermData() {
     myRequest.onload = function () {
         var data = JSON.parse(myRequest.responseText);
         termData = data;
-        console.log(termData.term1[0]);
+        /*console.log(termData.term1[0]);*/
     }
     myRequest.send();
 }
@@ -80,4 +81,14 @@ else{
 
 }
     counter = counter + 1;
+}
+
+function showTerm(){
+   for(term in termData){
+       console.log(termData[term][0]);
+       /*for (course in termData[term])
+       {
+        console.log(course);
+       }*/
+    }
 }
