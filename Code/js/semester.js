@@ -27,31 +27,9 @@ function allowDrop(ev) {
 
 function dragStart(ev) {
     ev.dataTransfer.setData("Text", ev.target.id);
-    //console.log("drag", ev.target.id);
-}
-
-function dragEnter(ev) {
-    if ( ev.target.classList == "dropZone L" ) {
-        //console.log("Entered the dropzone L");
-    }
-    else if ( ev.target.classList == "dropZone BR" ) {
-        //console.log("Entered the dropzone BR");
-    }
-}
-
-function dragLeave(ev) {
-    if ( ev.target.className == "left-section" ) {
-        //console.log("Left left-section");
-        document.getElementById("shadowLayer").style.display = "block";
-        document.getElementsByClassName("dropZone L")[0].classList.remove("hidden");
-        document.getElementsByClassName("dropZone BR")[0].classList.remove("hidden");
-    }
-    else if ( ev.target.className == "bottom-right" ) {
-        //console.log("Left bottom-right");
-        document.getElementById("shadowLayer").style.display = "block";
-        document.getElementsByClassName("dropZone L")[0].classList.remove("hidden");
-        document.getElementsByClassName("dropZone BR")[0].classList.remove("hidden");
-    }
+    document.getElementById("shadowLayer").style.display = "block";
+    document.getElementsByClassName("dropZone L")[0].classList.remove("hidden");
+    document.getElementsByClassName("dropZone BR")[0].classList.remove("hidden");
 }
 
 function dragEnd() {
