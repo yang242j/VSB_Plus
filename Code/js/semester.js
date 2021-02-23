@@ -142,7 +142,7 @@ function dropL(ev, term) {
 
 function dropBR(ev) {
     //console.log("Drop on BR");
-    var short_name = ev.dataTransfer.getData("text");
+    var short_name = ev.dataTransfer.getData("Text");
     if (ev.target.classList.contains("noDrop")) {
         ev.preventDefault();
     } else {

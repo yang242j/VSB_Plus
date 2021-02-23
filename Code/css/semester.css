@@ -35,7 +35,7 @@
 
 .BR {
     background-image: url('../img/trashCan.jpg');
-    margin: 0 10px 10px;
+    margin: 10px;
     height: 110px;
     border: 2px dashed black;
 }
