@@ -21,10 +21,11 @@ var calendar = new FullCalendar.Calendar(calendarEl, {
 });
 calendar.render();
 
-function notFireFox() {
-    $('.left-section.courseTag').css('position', 'relative');
-    $('.left-section.courseTag').css('z-index', 3);
-    $('.stick-bottom').css('z-index', 3);
+function keyPress(ev) {
+    let shadowIsOn = $("#shadowLayer").display != "none";
+    if(ev.key === "Escape" && shadowIsOn) {
+        document.getElementById("shadowLayer").style.display = "none";
+    }
 }
 
 function allowDrop(ev) {
