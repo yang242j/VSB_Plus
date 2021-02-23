@@ -32,10 +32,6 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         var term = '';
         var courseList = [];
         var courseCompletedList = [];
-        // Get the user-agent string 
-        let userAgentString =  navigator.userAgent; 
-        // Detect Firefox 
-        let firefoxAgent = userAgentString.indexOf("Firefox") > -1; 
     </script>
 </head>
 
@@ -235,12 +231,6 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                     }
                     appendExampleDiv();
                     });
-
-                if (!firefoxAgent) {
-                    $('.left-section.courseTag').css('position', 'relative');
-                    $('.left-section.courseTag').css('z-index', 3);
-                    $('.stick-bottom').css('z-index', 3);
-                }
             </script>
         </div>
     </section>
