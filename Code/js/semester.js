@@ -25,8 +25,11 @@ function allowDrop(ev) {
     ev.preventDefault();
 }
 
-function dragStart(ev) {
+function drag(ev) {
     ev.dataTransfer.setData("Text", ev.target.id);
+}
+
+function dragStart() {
     document.getElementById("shadowLayer").style.display = "block";
     document.getElementsByClassName("dropZone L")[0].classList.remove("hidden");
     document.getElementsByClassName("dropZone BR")[0].classList.remove("hidden");
@@ -430,7 +433,7 @@ function tagGenerator(short_name, draggable = true) {
     if (draggable == true) {
         course_tag =
             "<div class='courseTag noDrop' id='" + short_name +
-            "' draggable='true' ondragstart='dragStart(event)'>" + short_name +
+            "' draggable='true' ondragstart='drag(event); dragStart();'>" + short_name +
             "</div>";
     } else {
         course_tag =
