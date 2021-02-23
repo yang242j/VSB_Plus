@@ -152,15 +152,15 @@
                         }
                     });
                 </script>
-                <div class="courseTag noDrop" id="ENGG 401" draggable="true" ondragstart="dragStart(event)">ENGG 401</div>
-                <div class="courseTag noDrop" id="ENSE 400" draggable="true" ondragstart="dragStart(event)">ENSE 400</div>
-                <div class="courseTag noDrop" id="ENGG 100" draggable="true" ondragstart="dragStart(event)">ENGG 100</div>
-                <div class="courseTag noDrop" id="CS 110" draggable="true" ondragstart="dragStart(event)">CS 110</div>
+                <div class="courseTag noDrop" id="ENGG 401" draggable="true" ondragstart="dragStart(); drag(event);">ENGG 401</div>
+                <div class="courseTag noDrop" id="ENSE 400" draggable="true" ondragstart="dragStart(); drag(event);">ENSE 400</div>
+                <div class="courseTag noDrop" id="ENGG 100" draggable="true" ondragstart="dragStart(); drag(event);">ENGG 100</div>
+                <div class="courseTag noDrop" id="CS 110" draggable="true" ondragstart="dragStart(); drag(event);">CS 110</div>
             </div>
         </div>
         <div id="shadowLayer" ondrop="dragEnd()" ondragover="allowDrop(event)">
-            <div class="dropZone L hidden" ondrop="dropL(event); dragEnd();" ondragover="allowDrop(event)" ></div>
-            <div class="dropZone BR hidden" ondrop="dropBR(event); dragEnd();" ondragover="allowDrop(event)"></div>
+            <div class="dropZone L" ondrop="dropL(event); dragEnd();" ondragover="allowDrop(event)" ></div>
+            <div class="dropZone BR" ondrop="dropBR(event); dragEnd();" ondragover="allowDrop(event)"></div>
         </div>
     </section>
 

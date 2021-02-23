@@ -27,6 +27,12 @@ function allowDrop(ev) {
 
 function drag(ev) {
     ev.dataTransfer.setData("Text", ev.target.id);
+    //console.log(ev.target.parentNode.classList[0]);
+    if (e.target.parentNode.id == "courseList_Containor") {
+        $(".dropZone.L").hide();
+    } else if (e.target.parentNode.id == "course_recommended") {
+        $(".dropZone.BR").hide();
+    }
 }
 
 function dragStart() {
