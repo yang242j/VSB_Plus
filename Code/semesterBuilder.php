@@ -7,6 +7,15 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     header("location: login.php");
     exit;
 }
+
+// Check browser is firefox.
+echo $agent;
+if(strlen(strstr($agent,"Firefox")) > 0 ){      
+    $browser = 'firefox';
+} else {
+    $browser = 'notfirefox';
+    echo "<script> notFireFox(); </script>";
+}
 ?>
 
 <!doctype html>
