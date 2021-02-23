@@ -31,6 +31,7 @@ calendar.render();
 
 function keyPress(ev) {
     let shadowIsOn = $("#shadowLayer").display != "none";
+    console.log(ev.key, shadowIsOn);
     if(ev.key === "Escape" && shadowIsOn) {
         document.getElementById("shadowLayer").style.display = "none";
     }
