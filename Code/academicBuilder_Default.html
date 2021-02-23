@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <!-- icon library -->
-    <script src='https://kit.fontawesome.com/b95f8ace21.js'></script>
+    <script src='https://kit.fontawesome.com/b95f8ace21.js' crossorigin='anonymous'></script>
     <!-- icon library -->
 
     <title>VSB_Plus : Academic</title>
@@ -50,11 +50,11 @@
         <div class="welcome_tag" id = "welcome">
             <h1>Default Schedule</h1>
         </div>
-    <div class = "term1">
+    <div class = "term1" id = "term1">
         <div class = "tittle"><h2>Term1:</h2></div>
         <div class = "course_cards">
               <h3>ENSE 370</h3>
-              <i class='fas fa-circle' style='font-size:24px;color:red'></i>  
+              <i class='fas fa-circle' id = "circle1" style='font-size:24px;'></i>  
               <i class='fas fa-circle' style='font-size:24px;color:red'></i>
               <i class='fas fa-circle' style='font-size:24px;color:red'></i>
               <i class='fas fa-circle' style='font-size:24px;color:red'></i> 
@@ -92,7 +92,7 @@
             <button class="right_arrow"><i class='fas fa-angle-right'></i></button>
         </div>   
     </div>
-    <div class = "term1">
+    <div class = "term1" id ="term2">
         <div class = "tittle"><h2>Term2:</h2></div>
         <div class = "course_cards"></div>
         <div class = "course_cards"></div>
@@ -105,7 +105,7 @@
             <button class="right_arrow"><i class='fas fa-angle-right'></i></button>  
     </div>
     </div>
-    <div class = "term1">
+    <div class = "term1" id ="term3">
 
         <div class = "tittle"><h2>Term3:</h2></div>
         <div class = "course_cards"></div>
@@ -120,18 +120,23 @@
         </div>
     </div>
 
-    <div class = "term1">
+    <div class = "term1" id ="term4">
         <div class = "tittle"><h2>Term4:</h2></div>
         <div class = "course_cards"></div>
         <div class = "course_cards"></div>
         <div class = "course_cards"></div>
         <div class = "course_cards"></div>
         <div class = "course_cards"></div>
+
         <div class = "arrows"><button class="right_arrow"><i class='fas fa-angle-left'></i></button>
             &nbsp;
             <button class="right_arrow"><i class='fas fa-angle-right'></i></button>
-        </div>   
+        </div>
+
     </div>
+    <div class = "arrows"><button class="up_arrow" id = "term_up"><i class='fas fa-angle-double-up'></i></button>
+        &nbsp;
+        <button class="down_arrow" id = "term_down"><i class='fas fa-angle-double-down'></i></button>
 </section>
 
 
@@ -148,8 +153,10 @@
 
     <div class= "course_list">
         <script type="text/javascript" src="js/academicDefault.js"></script>
-        <div class = "course_completed"><h3>Course Completed</h3></div>
-        <div class = "course_tag_completed">
+
+        <div class = "course_completed"><h3>Approved Course</h3></div>
+
+        <div class = "course_tag_completed" id = "approvedCourse">
             <p id = "ct0">ENSE 271</p>
             <p id = "ct1">ENSE 271</p>
             <p id = "ct2">ENSE 271</p>
@@ -164,8 +171,8 @@
             <p id = "ct9">ENSE 271</p>
             <p id = "ct10">ENSE 271</p>
             <p id = "ct11">ENSE 271</p>
-            <div><button class="left_arrow" id ="p1"><i class='fas fa-angle-left'></i></button>
-                <button class="right_arrow" id ="p2"><i class='fas fa-angle-right'></i></button></div>
+            <div><button class="left_arrow" id ="approvedLeft"  onclick = "aLeft()"><i class='fas fa-angle-left'></i></button>
+                <button class="right_arrow" id ="approvedRight" onclick = "aRight()"><i class='fas fa-angle-right'></i></button></div>
 
         </div>
 

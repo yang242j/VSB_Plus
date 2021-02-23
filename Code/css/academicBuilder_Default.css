@@ -12,7 +12,8 @@ body .welcometag h1 {
 }
 h2{
     /*border: 2px solid blue;*/
-    width:33%;
+    font-size: 24px;
+    width:10%;
 }
 h3 {
     margin-left: 0;
@@ -47,7 +48,7 @@ body .terms .term1 .arrows{
     width:1000%;
     text-align: center;
     margin-left: 62%;
-    margin-top: 8px; 
+    margin-top: 30px; 
 }
 body .terms .term1 .arrows button{
     font-size: 24px;
@@ -77,12 +78,12 @@ body .terms .course_cards{
         position: relative;
         height: 85%;;
         border: 2px black;
-        background-color: rgb(252, 252, 252);
+        background-color: rgb(255, 251, 251);
         border-radius: 5px;
         box-shadow: -2px 4px 7px 0px #555555;
         text-align: center;
         margin-left: 0;
-        margin-top: 20px;
+        margin-top: 50px;
     }
     body .terms .course_cards h3{
         text-align: center;
@@ -112,15 +113,15 @@ body .terms .add_to_term .course_cards{
         /*border: 2px solid red;*/
         display: inline-grid;;
         grid-template-columns: 55% 55%;
-        grid-template-rows: 40% 40% 40%;
+        grid-template-rows: 20% 20% 20%;
         column-gap: -10px;
-        margin-top: -60px;
+        margin-top: -100px;
         margin-left: -25px;
     }
     body .tags_courses .icons_annotation .icons{
        /* border: 2px solid red;*/
         margin-left: 25px;
-        margin-top: 10px;
+        margin-top: -20px;
     }
     body .tags_courses .course_list{
         /*border: 2px solid red;*/
@@ -128,6 +129,7 @@ body .terms .add_to_term .course_cards{
         grid-template-columns: 100%;
         grid-template-rows: 8% 40% 8% 40%;
         row-gap: 10px;
+        margin-top: -20%;
     }
     body .tags_courses .course_list .course_completed{
         /*border: 2px solid red;*/
@@ -203,6 +205,20 @@ body .terms .add_to_term .course_cards{
         box-shadow: 20px 10px 15px 10px #BBB7B7;
     }
 footer{
-    margin-top: 40px;
+    margin-top: 100px;
 }
 
+#term_up{
+    font-size: 28px;
+    background-color: transparent;
+    border: none;
+    margin-left:55%;
+    margin-top: 2%;
+
+}
+#term_down{
+    font-size: 28px;
+    background-color: transparent;
+    border: none;
+
+}

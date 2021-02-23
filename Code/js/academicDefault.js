@@ -1,9 +1,9 @@
-
+const colors = ["red", "yellow", "blue", "purple", "plum", "black"];
 var courseData;
 var termData;
 window.onload = function () {
     showNotCompletedCourse();
-    showCompletedCourse();
+    showApprovedCourse();
     showTerm();
 }
 getCourseData();
@@ -24,7 +24,7 @@ function getTermData() {
     myRequest.onload = function () {
         var data = JSON.parse(myRequest.responseText);
         termData = data;
-        /*console.log(termData.term1[0]);*/
+        console.log(termData);
     }
     myRequest.send();
 }
@@ -34,61 +34,158 @@ function showNotCompletedCourse() {
     }
 }
 
-function showCompletedCourse() {
-        for (i = 0 ; i <12 ; i++)
-        {
-        document.getElementById("ct" + i).innerHTML = " ";
+function showApprovedCourse() {
+    for (term in termData) {
+        if (term = "Approved") {
+            for (i = 0; i < 12; i++) {
+                document.getElementById("ct" + i).innerHTML = termData[term][i];
+            }
         }
     }
-var counter = 1;
-function nctLeft() {
-    counter = counter - 1 ;
-    k = 0;
-    /*document.getElementById("notCompletedLeft").innerHTML = counter;*/
-    if(counter >= 0){
-    for (i = 12 * counter; i < 12 * (counter + 1); i++) {
-        if(i > courseData.length)
-        {
-            document.getElementById("nct" + k).innerHTML = " ";ß
+
+}
+var counterForApproved = 0;
+function aRight() {
+    if(termData[term][i+12*counterForApproved] != null){
+    counterForApproved += 1;
+    }
+    if (counterForApproved >= 0) {
+        for (i = 0; i < 12; i++) {
+            document.getElementById("ct" + i).innerHTML = "";
         }
-        else{
-        document.getElementById("nct" + k).innerHTML = courseData[i].short_name;
+        for (term in termData) {
+            if (term = "Approved") {
+                for (i = 0; i < 12; i++) {
+                    if(termData[term][i+12*counterForApproved] != null){
+                    document.getElementById("ct" + i).innerHTML = termData[term][i+12*counterForApproved];
+                    }
+                    else{
+                        return;
+                    }                  
+                }
+            }
+
         }
-        k = k + 1;
+    }
+    else {
+        counterForApproved = 1;
     }
 }
-    else{
-        counter = 0;
+function aLeft() {
+    counterForApproved -= 1
+    if (counterForApproved >= 0) {
+        for (i = 0; i < 12; i++) {
+            document.getElementById("ct" + i).innerHTML = "";
+        }
+        for (term in termData) {
+            if (term = "Approved") {
+                for (i = 0; i < 12; i++) {
+                    if(termData[term][i+12*counterForApproved] != null){
+                    document.getElementById("ct" + i).innerHTML = termData[term][i+12*counterForApproved];
+                    }
+                    else{
+                        return;
+                    }                  
+                }
+            }
+        }
+    }
+    else {
+        counterForApproved = 1;
+    }
+}
+var counter = 0;
+function nctLeft() {
+    counter = counter - 1;
+    k = 0;
+    /*document.getElementById("notCompletedLeft").innerHTML = counter;*/
+    if (counter >= 0) {
+        for (i = 0; i < 12; i++) {
+            document.getElementById("nct" + i).innerHTML = "";
+        }
+
+        for (i = 12 * counter; i < 12 * (counter + 1); i++) {
+            if (i > courseData.length) {
+                document.getElementById("nct" + k).innerHTML = " "; 
+            }
+            else {
+                document.getElementById("nct" + k).innerHTML = courseData[i].short_name;
+            }
+            k = k + 1;
+        }
+    }
+    else {
+        counter = 1;
     }
 }
 function nctRight() {
     j = 0;
+    if (courseData[i].short_name != null){
+    counter +=1;
+    }
     /*document.getElementById("notCompletedRight").innerHTML = counter;*/
-    if (counter >= 0){
-    for (i = 12 * counter; i < 12 * (counter + 1); i++) {
-        if(i > courseData.length)
-        {
-            document.getElementById("nct" + j).innerHTML = " ";
+    if (counter >= 0) {
+        for (i = 0; i < 12; i++) {
+            document.getElementById("nct" + i).innerHTML = "";
         }
-        else{
-        document.getElementById("nct" + j).innerHTML = courseData[i].short_name;
+        for (i = 12 * counter; i < 12 * (counter + 1); i++) {
+            if (i > courseData.length) {
+                document.getElementById("nct" + j).innerHTML = " ";
+            }
+            else {
+                document.getElementById("nct" + j).innerHTML = courseData[i].short_name;
+            }
+            j = j + 1;
         }
-        j = j + 1;
+    }
+    else {
+        counter = 1;
     }
 }
-else{
-     counter = 0;
 
-}
-    counter = counter + 1;
-}
+function showTerm() {
+    var i = 1;
+    for (term in termData) {
+        /*console.log(termData[term][0]);*/
+        if (term != "Approved") {
+            if (i <= 4) {
+                var random = Math.floor(Math.random() * 6);
+                console.log(random);
+                document.getElementById("term" + i).innerHTML =
+                    "<div class = 'tittle'>" + "<h2>" + term + ":" + "</h2></div>" +
+                    "<div class = 'course_cards'>" + "<h3>" + termData[term][0] + "</h3>" +
+                    "<i class='fas fa-circle' id = 'circle1' style='font-size:24px;'></i>"+
+                    "<i class='fas fa-circle' style='font-size:24px;color:red'></i>"+
+                    "<i class='fas fa-circle' style='font-size:24px;color:red'></i>"+
+                    "<i class='fas fa-circle' style='font-size:24px;color:red'></i></div>"+
+                    
 
-function showTerm(){
-   for(term in termData){
-       console.log(termData[term][0]);
-       /*for (course in termData[term])
-       {
-        console.log(course);
-       }*/
+                   "<div class = 'course_cards'>" + "<h3>" + termData[term][1] + "</h3>" +
+                    "<i class='fas fa-circle' style='font-size:24px;color:red'></i>"+
+                    "<i class='fas fa-circle' style='font-size:24px;color:red'></i>"+
+                    "<i class='fas fa-circle' style='font-size:24px;color:red'></i>"+
+                    "<i class='fas fa-circle' style='font-size:24px;color:red'></i></div>"+
+
+                    "<div class = 'course_cards'>" + "<h3>" + termData[term][2] + "</h3>" +
+                    "<i class='fas fa-circle' style='font-size:24px;color:red'></i>"+
+                    "<i class='fas fa-circle' style='font-size:24px;color:red'></i>"+
+                    "<i class='fas fa-circle' style='font-size:24px;color:red'></i>"+
+                    "<i class='fas fa-circle' style='font-size:24px;color:red'></i></div>"+
+
+                    "<div class = 'course_cards'>" + "<h3>" + termData[term][3] + "</h3>" +
+                    "<i class='fas fa-circle' style='font-size:24px;color:red'></i>"+
+                    "<i class='fas fa-circle' style='font-size:24px;color:red'></i>"+
+                    "<i class='fas fa-circle' style='font-size:24px;color:red'></i>"+
+                    "<i class='fas fa-circle' style='font-size:24px;color:red'></i></div>"+
+
+                    "<div class = 'course_cards'>" + "<h3>" + termData[term][4] + "</h3>"+
+                    "<i class='fas fa-circle' style='font-size:24px;color:red'></i>"+
+                    "<i class='fas fa-circle' style='font-size:24px;color:red'></i>"+
+                    "<i class='fas fa-circle' style='font-size:24px;color:red'></i>"+
+                    "<i class='fas fa-circle' style='font-size:24px;color:yellow'></i></div>";
+                i = i + 1;
+            }
+        }
     }
 }
+document.getElementById("circle1").innerHTML = "asdasdsa";
