@@ -8,8 +8,12 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     exit;
 }
 
-// Check browser is firefox.
+if(isset($_SERVER['HTTP_USER_AGENT'])){
+    $agent = $_SERVER['HTTP_USER_AGENT'];
+}
 echo $agent;
+
+// Check browser is firefox.
 if(strlen(strstr($agent,"Firefox")) > 0 ){      
     $browser = 'firefox';
 } else {
