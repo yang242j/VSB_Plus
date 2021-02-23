@@ -25,22 +25,44 @@ function allowDrop(ev) {
     ev.preventDefault();
 }
 
-function drag(ev) {
-    ev.dataTransfer.setData("text", ev.target.id);
-    //console.log("drag", ev.target.id)
+function dragStart(ev) {
+    ev.dataTransfer.setData("Text", ev.target.id);
+    //console.log("drag", ev.target.id);
 }
 
 function dragEnter(ev) {
-    //ev.target.style.backgroundColor = "green";
-    //console.log("dragEnter", ev.target.id)
+    if ( ev.target.classList == "dropZone L" ) {
+        //console.log("Entered the dropzone L");
+    }
+    else if ( ev.target.classList == "dropZone BR" ) {
+        //console.log("Entered the dropzone BR");
+    }
 }
 
 function dragLeave(ev) {
-    //ev.target.style.backgroundColor = "black";
-    //console.log("dragLeave", ev.target.id)
+    if ( ev.target.className == "left-section" ) {
+        //console.log("Left left-section");
+        document.getElementById("shadowLayer").style.display = "block";
+        document.getElementsByClassName("dropZone L")[0].classList.remove("hidden");
+        document.getElementsByClassName("dropZone BR")[0].classList.remove("hidden");
+    }
+    else if ( ev.target.className == "bottom-right" ) {
+        //console.log("Left bottom-right");
+        document.getElementById("shadowLayer").style.display = "block";
+        document.getElementsByClassName("dropZone L")[0].classList.remove("hidden");
+        document.getElementsByClassName("dropZone BR")[0].classList.remove("hidden");
+    }
+}
+
+function dragEnd() {
+    //console.log("Drop on shadow");
+    document.getElementsByClassName("dropZone L")[0].classList.add("hidden");
+    document.getElementsByClassName("dropZone BR")[0].classList.add("hidden");
+    document.getElementById("shadowLayer").style.display = "none";
 }
 
 function dropL(ev, term) {
+    //console.log("Drop on L");
     var short_name = ev.dataTransfer.getData("Text");
     var randomColorIndex = "";
     do {
@@ -67,7 +89,7 @@ function dropL(ev, term) {
         } else {
             //console.log($(".left-section[id='" + short_name + "']").length);
             //1.Append courseTag-list
-            document.getElementsByClassName("left-section")[0].appendChild(document.getElementById(short_name));
+            document.getElementById("courseList_Containor").appendChild(document.getElementById(short_name));
             document.getElementById(short_name).style.backgroundColor = BGC;
             document.getElementById(short_name).classList.add("selected-course"); // Add selected-course class
             //2.Fetch Course info JSON data
@@ -119,7 +141,8 @@ function dropL(ev, term) {
 }
 
 function dropBR(ev) {
-    var short_name = ev.dataTransfer.getData("text");
+    //console.log("Drop on BR");
+    var short_name = ev.dataTransfer.getData("Text");
     if (ev.target.classList.contains("noDrop")) {
         ev.preventDefault();
     } else {

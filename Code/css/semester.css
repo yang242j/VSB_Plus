@@ -1,3 +1,45 @@
+/* All you can use */
+#shadowLayer {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+}
+
+.dropZone {
+    /* The image used */
+    background-image: url('../img/drop-here.png');
+    /* Used if the image is unavailable */
+    background-color: #cccccc;
+    /* Center the image */
+    background-position: center;
+    /* Do not repeat the image */
+    background-repeat: no-repeat;
+    /* Resize the background image to be contained within the container */
+    background-size: contain;
+    position: relative;
+    z-index: 3;
+}
+
+.L {
+    margin: 10px;
+    height: 110px;
+    border: 2px dashed black;
+}
+
+.BR {
+    background-image: url('../img/trashCan.jpg');
+    margin: 10px;
+    height: 110px;
+    border: 2px dashed black;
+}
+
 /* Body container */
 body .container {
     background-color: #f1f1f1;
@@ -24,12 +66,15 @@ body .container .left-section .section-title {
     text-align: center;
 }
 
-body .container .left-section .courseTag {
-    margin: 10px auto 10px;
+body .container .left-section #courseList_Containor {
+    margin: 10px auto 0;
+    border: 3px solid black;
+    min-height: 142.5px;
+    min-width: 130px;
 }
 
-body .container .left-section .dropZone {
-    margin: 10px;
+body .container .left-section .courseTag {
+    margin: 10px auto 10px;
 }
 
 /*Middle Section*/
@@ -88,7 +133,7 @@ body .container .right-section .Date {
 /*Bottom Section*/
 body .container .stick-bottom {
     position: fixed;
-    z-index: 999;
+    z-index: 1;
     border: 2px solid black;
     bottom: 0;
     width: 95%;

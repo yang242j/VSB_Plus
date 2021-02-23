@@ -77,10 +77,12 @@
                 });
             </script>
         </div>
-        <div class="left-section">
+        <div class="left-section" ondragleave="dragLeave(event)">
             <h3 class="section-title">Course List</h3>
 
-            <div class="dropZone" ondrop="dropL(event)" ondragover="allowDrop(event)" ondragenter="dragEnter(event)" ondragleave="dragLeave(event)"><img src="../img/drop-here.png" style="max-height: 100%;max-width: 100%;" draggable="false"></div>
+            <div class="dropZone L hidden" ondrop="dropL(event); dragEnd();" ondragover="allowDrop(event)" ondragenter="dragEnter(event)" ></div>
+
+            <div id="courseList_Containor"></div>
 
             <script> 
                 $(".dropZone").on("drop", function(event) {
@@ -89,11 +91,7 @@
                 });
             </script>
 
-            <!--
-            <div class="courseTag noDrop" id="ense400" draggable="true" ondragstart="drag(event)">ENSE400</div>
-            <div class="courseTag noDrop" id="ense496ac" draggable="true" ondragstart="drag(event)">ENSE496AC</div>
-            <div class="courseTag noDrop" id="ense496ad" draggable="true" ondragstart="drag(event)">ENSE496AD</div>
-            -->
+            <div class="dropZone BR hidden" ondrop="dropBR(event); dragEnd();" ondragenter="dragEnter(event)" ondragover="allowDrop(event)"></div>
         </div>
         <div class="middle-section" id="courseCard_list">
             <h3 class="section-title">Course Detail Info</h3>
@@ -146,8 +144,7 @@
                 </script>
                 <div class="courseTag noDrag" id="ense374" draggable="false">ENSE374</div>
             </div>
-            <div class="bottom-right" ondrop="dropBR(event)" ondragover="allowDrop(event)"
-                ondragenter="dragEnter(event)" ondragleave="dragLeave(event)">
+            <div class="bottom-right" ondragleave="dragLeave(event)">
                 Courses To Take: <br>
                 <script>
                     $(".bottom-right").on("drop", function(event) {
@@ -158,12 +155,13 @@
                         }
                     });
                 </script>
-                <div class="courseTag noDrop" id="ENGG 401" draggable="true" ondragstart="drag(event)">ENGG 401</div>
-                <div class="courseTag noDrop" id="ENSE 400" draggable="true" ondragstart="drag(event)">ENSE 400</div>
-                <div class="courseTag noDrop" id="ENGG 100" draggable="true" ondragstart="drag(event)">ENGG 100</div>
-                <div class="courseTag noDrop" id="CS 110" draggable="true" ondragstart="drag(event)">CS 110</div>
+                <div class="courseTag noDrop" id="ENGG 401" draggable="true" ondragstart="dragStart(event)">ENGG 401</div>
+                <div class="courseTag noDrop" id="ENSE 400" draggable="true" ondragstart="dragStart(event)">ENSE 400</div>
+                <div class="courseTag noDrop" id="ENGG 100" draggable="true" ondragstart="dragStart(event)">ENGG 100</div>
+                <div class="courseTag noDrop" id="CS 110" draggable="true" ondragstart="dragStart(event)">CS 110</div>
             </div>
         </div>
+        <div id="shadowLayer" ondrop="dragEnd()" ondragover="allowDrop(event)"></div>
     </section>
 
     <footer>
