@@ -37,10 +37,13 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         // Detect Firefox 
         let firefoxAgent = userAgentString.indexOf("Firefox") > -1; 
         if (!firefoxAgent) {
+            console.log(firefoxAgent);
             $('.left-section.courseTag').css('position', 'relative');
             $('.left-section.courseTag').css('z-index', 3);
             $('.stick-bottom').css('z-index', 3);
-        } else console.log(firefoxAgent);
+        } else {
+            console.log(firefoxAgent);
+        }
     </script>
 </head>
 
