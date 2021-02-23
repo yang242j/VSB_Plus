@@ -36,6 +36,12 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         let userAgentString =  navigator.userAgent; 
         // Detect Firefox 
         let firefoxAgent = userAgentString.indexOf("Firefox") > -1; 
+    </script>
+</head>
+
+<body>
+
+    <script type="text/javascript">
         if (!firefoxAgent) {
             console.log(firefoxAgent);
             $('.left-section.courseTag').css('position', 'relative');
@@ -45,9 +51,6 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             console.log(firefoxAgent);
         }
     </script>
-</head>
-
-<body>
 
     <header>
         <a href="https://www.uregina.ca"><img src="img/logo.png" class="logo" alt="UofR"></a>
