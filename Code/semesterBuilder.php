@@ -60,9 +60,9 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         </div>
     </nav>
 
-    <section class="container">
+    <div class="container">
         <!-- Top Section -->
-        <div class="top-section">
+        <section id="top">
             <label for="term">Choose a term:</label>
             <select id="termSelector">
                 <option value="202030" selected>Fall 2020</option>
@@ -76,10 +76,10 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                     loadRecCourseTags();
                 });
             </script>
-        </div>
+        </section>
 
         <!-- Left Section -->
-        <div class="left-section">
+        <section id="left">
             <h3 class="section-title">Course List</h3>
             <div id="courseList_Containor"></div>
             <!--
@@ -88,7 +88,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             <div class="courseTag noDrop" id="ense496ac" draggable="true" ondragstart="drag(event)">ENSE496AC</div>
             <div class="courseTag noDrop" id="ense496ad" draggable="true" ondragstart="drag(event)">ENSE496AD</div>
             -->
-        </div>
+        </section>
 
         <!-- Middle Section -->
         <div class="middle-section">
@@ -237,7 +237,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                     });
             </script>
         </div>
-    </section>
+    </div>
 
     <footer>
         <script src="js/main.js"></script>

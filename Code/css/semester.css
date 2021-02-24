@@ -48,14 +48,14 @@ body .container {
 }
 
 /*Top Section*/
-body .container .top-section {
+body .container section#top {
     width: 100%;
     height: 100%;
     float: left;
 }
 
 /*Left Section*/
-body .container .left-section {
+body .container section#left {
     width: 13%;
     height: 100%;
     float: left;
@@ -64,18 +64,18 @@ body .container .left-section {
     /*outline: 3px solid green;*/
 }
 
-body .container .left-section .section-title {
+body .container section#left .section-title {
     text-align: center;
 }
 
-body .container .left-section #courseList_Containor {
+body .container section#left #courseList_Containor {
     margin: 10px auto 0;
     border: 3px solid black;
     min-height: 142.5px;
     min-width: 130px;
 }
 
-body .container .left-section .courseTag {
+body .container section#left .courseTag {
     margin: 10px auto 10px;
     position: relative;
     z-index: 3;
