@@ -270,6 +270,13 @@ function fetchRecJSON(courseCompletedList, major, term, maxNum) {
     return $.post('Model/courseREC.php', { courseCompletedList: courseCompletedList, major: major, term: term, maxNum: maxNum }, function(data) {});
 }
 
+function appendExampleDiv() {
+    // if classList is empty, add example div
+    if (courseList.length == 0 && $("#exampleDiv").length == 0) {
+        $("#courseCard_Containor").append("<div class='courseInfo' id='exampleDiv'> <h2> Course Tag </h2> <h4> Course Title </h4> <p> Course Detail Info: **** ** ** ** * ** * * * ** </p> </div>");
+    }
+}
+
 function appendCourseCard(course_json, comboList, BGC) {
     let card_id = course_json.short_name + "_Card";
     
@@ -291,7 +298,7 @@ function appendCourseCard(course_json, comboList, BGC) {
         "<p>" + course_json.description + "</p>" +
         "</div>";
     
-    document.getElementById("courseCardList").innerHTML += course_card_1 + course_card_2 + course_card_3;
+    document.getElementById("courseCard_Containor").innerHTML += course_card_1 + course_card_2 + course_card_3;
 }
 
 function removeCourseCard(short_name) {
@@ -395,7 +402,7 @@ function appendExamList(section) {
     for (var [key_id, value_date] of Object.entries(examDateDic)) {
         if (value_date.getTime() === examDate.getTime()) {
             conflictExam = true;
-        } else if (Math.abs(value_date.getTime() - examDate.getTime()) <= 86400000) {
+        } else if (Math.abs(value_date.getTime() - examDate.getTime()) <= 86400000) { //24h
             conflictExam = true;
         } else {
             conflictExam = false;

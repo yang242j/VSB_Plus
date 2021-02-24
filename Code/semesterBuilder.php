@@ -61,6 +61,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     </nav>
 
     <section class="container">
+        <!-- Top Section -->
         <div class="top-section">
             <label for="term">Choose a term:</label>
             <select id="termSelector">
@@ -76,6 +77,8 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                 });
             </script>
         </div>
+
+        <!-- Left Section -->
         <div class="left-section">
             <h3 class="section-title">Course List</h3>
             <div id="courseList_Containor"></div>
@@ -86,26 +89,32 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             <div class="courseTag noDrop" id="ense496ad" draggable="true" ondragstart="drag(event)">ENSE496AD</div>
             -->
         </div>
-        <div class="middle-section" id="courseCardList">
+
+        <!-- Middle Section -->
+        <div class="middle-section">
             <h3 class="section-title">Course Detail Info</h3>
-            <div class="courseInfo" id="exampleDiv">
-                <h2>Course Tag</h2>
-                <h4>Course Title</h4>
-                <p>Course Detail Info: **** **** *** ** * * * **</p>
+            <div id="courseCard_Containor">
+                <div class="courseInfo" id="exampleDiv">
+                    <h2>Course Tag</h2>
+                    <h4>Course Title</h4>
+                    <p>Course Detail Info: **** **** *** ** * * * **</p>
+                </div>
             </div>
+            <script>
+                $(document).on('focusin', 'select#sectionSelector', function(){
+                    //console.log("Saving value " + $(this).val());
+                    $(this).data('val', $(this).val());
+                }).on('change', 'select#sectionSelector', function() {
+                    let oldCombo = $(this).data('val');
+                    let newCombo = $("select#sectionSelector option:selected").val();
+                    let cardId = $(this).closest("div").attr("id");
+                    let cardStyle = $(this).closest("div").attr("style");
+                    changeCalendarAndExam(oldCombo, newCombo, cardId, cardStyle, term);
+                });
+            </script>
         </div>
-        <script>
-            $(document).on('focusin', 'select#sectionSelector', function(){
-                //console.log("Saving value " + $(this).val());
-                $(this).data('val', $(this).val());
-            }).on('change', 'select#sectionSelector', function() {
-                let oldCombo = $(this).data('val');
-                let newCombo = $("select#sectionSelector option:selected").val();
-                let cardId = $(this).closest("div").attr("id");
-                let cardStyle = $(this).closest("div").attr("style");
-                changeCalendarAndExam(oldCombo, newCombo, cardId, cardStyle, term);
-            });
-        </script>
+        
+        <!-- Right Section -->
         <div class="right-section">
             <h3 class="section-title">Weekly Schedule & Exam Date</h3>
             <div class="Calendar">
@@ -116,6 +125,8 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                 <ul id="examDate_ul"></ul>
             </div>
         </div>
+
+        <!-- Bottom Section -->
         <div class="stick-bottom" ondrop="dragEnd()" ondragover="allowDrop(event)">
             <div class="bottom-left" id="course_completed">
                 Courses Completed: <br>
@@ -153,13 +164,6 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             <div id="course_recommended" class="bottom-right">
                 Courses To Take: <br>
                 <script>
-
-                    function appendExampleDiv() {
-                        // if classList is empty, add example div
-                        if (courseList.length == 0 && $("#exampleDiv").length == 0) {
-                            $("#courseCardList").append("<div class='courseInfo' id='exampleDiv'> <h2> Course Tag </h2> <h4> Course Title </h4> <p> Course Detail Info: **** ** ** ** * ** * * * ** </p> </div>");
-                        }
-                    }
 
                     function loadRecCourseTags() {
                         // Remove all previously displayed tags
