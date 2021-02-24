@@ -119,6 +119,33 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             <h3 class="section-title">Weekly Schedule & Exam Date</h3>
             <div class="Calendar">
                 <div id='calendar'></div>
+                <script>
+                    calendar.setOption('aspectRatio', 1.0);
+                    // switch (courseList.length()) {
+                    //     case 0:
+                    //     default:
+                    //         calendar.setOption('aspectRatio', 1.35);
+                    //         break;
+                    //     case 1:
+                    //         calendar.setOption('aspectRatio', 1.0);
+                    //         break;
+                    //     case 2:
+                    //         calendar.setOption('aspectRatio', 0.9);
+                    //         break;
+                    //     case 3:
+                    //         calendar.setOption('aspectRatio', 0.8);
+                    //         break;
+                    //     case 4:
+                    //         calendar.setOption('aspectRatio', 0.7);
+                    //         break;
+                    //     case 5:
+                    //         calendar.setOption('aspectRatio', 0.6);
+                    //         break;
+                    //     case 6:
+                    //         calendar.setOption('aspectRatio', 0.5);
+                    //         break;
+                    // }
+                </script>
             </div>
             <div class="Date">
                 <p>Final Exam Date:</p>

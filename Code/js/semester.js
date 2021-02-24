@@ -366,7 +366,7 @@ function appendCalendar(section, eventType, BGC) {
             textColor: "black",
             color: BGC,
         });
-        console.log("id: " + event_id + " title: " + event_title + " append SUCCESS");
+        //console.log("id: " + event_id + " title: " + event_title + " append SUCCESS");
     } catch (e) {
         console.error("Calendar event" + event_title + " append FAILED");
     }
