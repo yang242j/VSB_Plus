@@ -204,7 +204,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                 -->
             </div>
         </div>
-        <div id="shadowLayer" ondrop="dragEnd()" ondragover="allowDrop(event)" onkeydown="keyDown(event)">
+        <div id="shadowLayer" ondrop="dragEnd()" ondragover="allowDrop(event)">
             <div class="dropZone L" ondrop="dropL(event, term); dragEnd();" ondragover="allowDrop(event)"></div>
             <div class="dropZone BR" ondrop="dropBR(event); dragEnd();" ondragover="allowDrop(event)"></div>
             <script>

@@ -27,9 +27,9 @@ var calendar = new FullCalendar.Calendar(calendarEl, {
 });
 calendar.render();
 
-function keyDown(ev) {
-    let shadowIsOn = $("#shadowLayer").display != "none";
-    console.log(ev.key, shadowIsOn);
+document.body.onkeydown = function (ev) {
+    let shadowIsOn = document.getElementById("shadowLayer").style.display == "block";
+    //console.log(ev.key, shadowIsOn);
     if(ev.key === "Escape" && shadowIsOn) {
         document.getElementById("shadowLayer").style.display = "none";
     }
