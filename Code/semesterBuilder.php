@@ -94,11 +94,11 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         <section id="middle">
             <h3 class="section-title">Course Detail Info</h3>
             <div id="courseCard_Containor">
-                <span class="courseInfo" id="exampleCard">
+                <div class="courseInfo" id="exampleCard">
                     <h2>Course Tag</h2>
                     <h4>Course Title</h4>
                     <p>Course Detail Info: **** **** *** ** * * * **</p>
-                </span>
+                </div>
             </div>
             <script>
                 $(document).on('focusin', 'select#sectionSelector', function(){

@@ -273,7 +273,7 @@ function fetchRecJSON(courseCompletedList, major, term, maxNum) {
 function appendExampleCard() {
     // if classList is empty, add example div
     if (courseList.length == 0 && $("#exampleCard").length == 0) {
-        $("#courseCard_Containor").append("<span class='courseInfo' id='exampleCard'> <h2> Course Tag </h2> <h4> Course Title </h4> <p> Course Detail Info: **** ** ** ** * ** * * * ** </p> </span>");
+        $("#courseCard_Containor").append("<div class='courseInfo' id='exampleCard'> <h2> Course Tag </h2> <h4> Course Title </h4> <p> Course Detail Info: **** ** ** ** * ** * * * ** </p> </div>");
     }
 }
 
@@ -281,7 +281,7 @@ function appendCourseCard(course_json, comboList, BGC) {
     let card_id = course_json.short_name + "_Card";
     
     let course_card_1 =
-        "<span class='courseInfo courseCard' id='" + card_id + "' style='background-color:" + BGC + ";'>" +
+        "<div class='courseInfo courseCard' id='" + card_id + "' style='background-color:" + BGC + ";'>" +
         "<h2>" + course_json.short_name + "</h2>" +
         "<a href='courseDB.php?courseId=" + course_json.short_name + "' style='float: right;margin-left: 2%;'>&#128269;</a>" +
         "<label for='sectionCombo'></label>" +
@@ -296,7 +296,7 @@ function appendCourseCard(course_json, comboList, BGC) {
         "</select>" +
         "<h4>" + course_json.title + "</h4>" +
         "<p>" + course_json.description + "</p>" +
-        "</span>";
+        "</div>";
     
     document.getElementById("courseCard_Containor").innerHTML += course_card_1 + course_card_2 + course_card_3;
 }
