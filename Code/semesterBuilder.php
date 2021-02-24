@@ -116,7 +116,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                 <ul id="examDate_ul"></ul>
             </div>
         </div>
-        <div class="stick-bottom">
+        <div class="stick-bottom" ondrop="dragEnd()" ondragover="allowDrop(event)">
             <div class="bottom-left" id="course_completed">
                 Courses Completed: <br>
                 <script>
