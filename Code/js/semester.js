@@ -4,7 +4,7 @@ var pre_colorID = "", examDateDic = {/*"ENGG 400_Exam": new Date("Apr 20 2021")*
 // Detect Firefox 
 var firefoxAgent = navigator.userAgent.indexOf("Firefox") > -1; 
 if (!firefoxAgent) {
-    $('.stick-bottom').css('z-index', 3);
+    $('section#bottom').css('z-index', 3);
 }
 
 //Calendar init
@@ -76,8 +76,8 @@ function dropL(ev, term) {
         ev.preventDefault();
 
         //if exampleDiv exist, remove
-        if($("#exampleDiv").length){	
-            $( "#exampleDiv" ).remove();
+        if($("#exampleCard").length){	
+            $( "#exampleCard" ).remove();
         }
 
         //if tag exist, refuse to append
@@ -147,7 +147,7 @@ function dropBR(ev) {
     } else {
         ev.preventDefault();
         // 1.Append tag at BR
-        document.getElementsByClassName("bottom-right")[0].appendChild(document.getElementById(short_name));
+        document.getElementsByClassName("bottom_right")[0].appendChild(document.getElementById(short_name));
         document.getElementById(short_name).style.backgroundColor = "DarkGrey"; // Set tag BGC to DarkGrey
         document.getElementById(short_name).classList.remove("selected-course"); // Remove selected-course class
         // Remove course card from middle section
@@ -270,10 +270,10 @@ function fetchRecJSON(courseCompletedList, major, term, maxNum) {
     return $.post('Model/courseREC.php', { courseCompletedList: courseCompletedList, major: major, term: term, maxNum: maxNum }, function(data) {});
 }
 
-function appendExampleDiv() {
+function appendExampleCard() {
     // if classList is empty, add example div
-    if (courseList.length == 0 && $("#exampleDiv").length == 0) {
-        $("#courseCard_Containor").append("<div class='courseInfo' id='exampleDiv'> <h2> Course Tag </h2> <h4> Course Title </h4> <p> Course Detail Info: **** ** ** ** * ** * * * ** </p> </div>");
+    if (courseList.length == 0 && $("#exampleCard").length == 0) {
+        $("#courseCard_Containor").append("<div class='courseInfo' id='exampleCard'> <h2> Course Tag </h2> <h4> Course Title </h4> <p> Course Detail Info: **** ** ** ** * ** * * * ** </p> </div>");
     }
 }
 
@@ -366,7 +366,7 @@ function appendCalendar(section, eventType, BGC) {
             textColor: "black",
             color: BGC,
         });
-        console.log("id: " + event_id + " title: " + event_title + " append SUCCESS");
+        //console.log("id: " + event_id + " title: " + event_title + " append SUCCESS");
     } catch (e) {
         console.error("Calendar event" + event_title + " append FAILED");
     }
@@ -459,14 +459,14 @@ function tagGenerator(short_name, draggable = true) {
 
     if (draggable == true) {
         course_tag =
-            "<div class='courseTag noDrop' id='" + short_name +
+            "<span class='courseTag noDrop' id='" + short_name +
             "' draggable='true' ondragstart='drag(event); dragStart();'>" + short_name +
-            "</div>";
+            "</span>";
     } else {
         course_tag =
-            "<div class='courseTag noDrag' id='" + short_name +
+            "<span class='courseTag noDrag' id='" + short_name +
             "' draggable='false'>" + short_name +
-            "</div>";
+            "</span>";
     }
 
     return course_tag;
