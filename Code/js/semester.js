@@ -4,7 +4,7 @@ var pre_colorID = "", examDateDic = {/*"ENGG 400_Exam": new Date("Apr 20 2021")*
 // Detect Firefox 
 var firefoxAgent = navigator.userAgent.indexOf("Firefox") > -1; 
 if (!firefoxAgent) {
-    $('.stick-bottom').css('z-index', 3);
+    $('section#bottom').css('z-index', 3);
 }
 
 //Calendar init
