@@ -4,7 +4,7 @@ var termData;
 window.onload = function () {
     showNotCompletedCourse();
     showApprovedCourse();
-    showTerm();
+    showTerm(1);
 }
 getCourseData();
 getTermData();
@@ -143,12 +143,16 @@ function nctRight() {
     }
 }
 
-function showTerm() {
+function showTerm(pageNumber) {
     var i = 1;
     for (term in termData) {
         /*console.log(termData[term][0]);*/
+        console.log(termData.size);
+        termNumber = "term" + pageNumber;
+        if (term >= termNumber){
         if (term != "Approved") {
             if (i <= 4) {
+                if(pageNumber < 7){
                 var random = Math.floor(Math.random() * 6);
                 console.log(random);
                 document.getElementById("term" + i).innerHTML =
@@ -184,8 +188,29 @@ function showTerm() {
                     "<i class='fas fa-circle' style='font-size:24px;color:red'></i>"+
                     "<i class='fas fa-circle' style='font-size:24px;color:yellow'></i></div>";
                 i = i + 1;
+                }
             }
         }
     }
+    }
 }
-document.getElementById("circle1").innerHTML = "asdasdsa";
+var termPageCounter = 1 ;
+function termDown(){
+    termPageCounter +=1;
+    if (termPageCounter <= 6){
+    showTerm(termPageCounter);
+    }
+    else {
+        termPageCounter = 6 ;
+    }
+
+}
+function termUp(){
+    termPageCounter -=1;
+    if(termPageCounter >= 1){
+    showTerm(termPageCounter);
+    }
+    else{
+        termPageCounter = 1 ;
+    }
+}

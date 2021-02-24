@@ -138,8 +138,8 @@ body .terms .add_to_term .course_cards{
     body .tags_courses .course_list .course_tag_completed{
         /*border: 2px solid red;*/
         display: inline-grid;;
-        grid-template-columns: 24% 24% 24% 24%;
-        grid-template-rows:30% 30% 30% 100%;
+        grid-template-columns: 25% 25% 25% 25%;
+        grid-template-rows:28% 28% 28% 100%;
         row-gap: 0px;
         column-gap: 10px;
         margin-top: -20px;
@@ -161,8 +161,8 @@ body .terms .add_to_term .course_cards{
     body .tags_courses .course_list .course_tag_not_completed{
       /*border: 2px solid red;*/
         display: inline-grid;;
-        grid-template-columns: 24% 24% 24% 24%;
-        grid-template-rows:30% 30% 30% 100%;
+        grid-template-columns: 25% 25% 25% 25%;
+        grid-template-rows:28% 28% 28% 100%;
         row-gap: 0px;
         column-gap: 10px;
     }
