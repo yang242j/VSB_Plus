@@ -1,6 +1,12 @@
 const colors = ["lightblue", "lightseagreen", "pink", "yellow", "Azure", "Bisque", "Coral", "Cyan", "Cornsilk", "Lavender"];
 var pre_colorID = "", examDateDic = {/*"ENGG 400_Exam": new Date("Apr 20 2021")*/};
 
+// Detect Firefox 
+var firefoxAgent = navigator.userAgent.indexOf("Firefox") > -1; 
+if (!firefoxAgent) {
+    $('.stick-bottom').css('z-index', 3);
+}
+
 //Calendar init
 var calendarEl = document.getElementById('calendar');
 var calendar = new FullCalendar.Calendar(calendarEl, {
@@ -21,10 +27,12 @@ var calendar = new FullCalendar.Calendar(calendarEl, {
 });
 calendar.render();
 
-function notFireFox() {
-    $('.left-section.courseTag').css('position', 'relative');
-    $('.left-section.courseTag').css('z-index', 3);
-    $('.stick-bottom').css('z-index', 3);
+function keyPress(ev) {
+    let shadowIsOn = $("#shadowLayer").display != "none";
+    console.log(ev.key, shadowIsOn);
+    if(ev.key === "Escape" && shadowIsOn) {
+        document.getElementById("shadowLayer").style.display = "none";
+    }
 }
 
 function allowDrop(ev) {

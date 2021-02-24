@@ -32,12 +32,6 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         var term = '';
         var courseList = [];
         var courseCompletedList = [];
-        // Get the user-agent string 
-        let userAgentString =  navigator.userAgent; 
-        // Detect Firefox 
-        let firefoxAgent = userAgentString.indexOf("Firefox") > -1; 
-        if (!firefoxAgent) notFireFox();
-        else console.log(firefoxAgent);
     </script>
 </head>
 
@@ -210,7 +204,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                 -->
             </div>
         </div>
-        <div id="shadowLayer" ondrop="dragEnd()" ondragover="allowDrop(event)">
+        <div id="shadowLayer" ondrop="dragEnd()" ondragover="allowDrop(event)" onkeypress="keyPress(event)">
             <div class="dropZone L" ondrop="dropL(event, term); dragEnd();" ondragover="allowDrop(event)"></div>
             <div class="dropZone BR" ondrop="dropBR(event); dragEnd();" ondragover="allowDrop(event)"></div>
             <script>
