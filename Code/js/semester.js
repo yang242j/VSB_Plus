@@ -27,7 +27,7 @@ var calendar = new FullCalendar.Calendar(calendarEl, {
 });
 calendar.render();
 
-function keyPress(ev) {
+function keyDown(ev) {
     let shadowIsOn = $("#shadowLayer").display != "none";
     console.log(ev.key, shadowIsOn);
     if(ev.key === "Escape" && shadowIsOn) {
