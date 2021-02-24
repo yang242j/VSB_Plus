@@ -76,8 +76,8 @@ function dropL(ev, term) {
         ev.preventDefault();
 
         //if exampleDiv exist, remove
-        if($("#exampleDiv").length){	
-            $( "#exampleDiv" ).remove();
+        if($("#exampleCard").length){	
+            $( "#exampleCard" ).remove();
         }
 
         //if tag exist, refuse to append
@@ -147,7 +147,7 @@ function dropBR(ev) {
     } else {
         ev.preventDefault();
         // 1.Append tag at BR
-        document.getElementsByClassName("bottom-right")[0].appendChild(document.getElementById(short_name));
+        document.getElementsByClassName("bottom_right")[0].appendChild(document.getElementById(short_name));
         document.getElementById(short_name).style.backgroundColor = "DarkGrey"; // Set tag BGC to DarkGrey
         document.getElementById(short_name).classList.remove("selected-course"); // Remove selected-course class
         // Remove course card from middle section
@@ -270,10 +270,10 @@ function fetchRecJSON(courseCompletedList, major, term, maxNum) {
     return $.post('Model/courseREC.php', { courseCompletedList: courseCompletedList, major: major, term: term, maxNum: maxNum }, function(data) {});
 }
 
-function appendExampleDiv() {
+function appendExampleCard() {
     // if classList is empty, add example div
-    if (courseList.length == 0 && $("#exampleDiv").length == 0) {
-        $("#courseCard_Containor").append("<div class='courseInfo' id='exampleDiv'> <h2> Course Tag </h2> <h4> Course Title </h4> <p> Course Detail Info: **** ** ** ** * ** * * * ** </p> </div>");
+    if (courseList.length == 0 && $("#exampleCard").length == 0) {
+        $("#courseCard_Containor").append("<span class='courseInfo' id='exampleCard'> <h2> Course Tag </h2> <h4> Course Title </h4> <p> Course Detail Info: **** ** ** ** * ** * * * ** </p> </span>");
     }
 }
 
@@ -281,7 +281,7 @@ function appendCourseCard(course_json, comboList, BGC) {
     let card_id = course_json.short_name + "_Card";
     
     let course_card_1 =
-        "<div class='courseInfo courseCard' id='" + card_id + "' style='background-color:" + BGC + ";'>" +
+        "<span class='courseInfo courseCard' id='" + card_id + "' style='background-color:" + BGC + ";'>" +
         "<h2>" + course_json.short_name + "</h2>" +
         "<a href='courseDB.php?courseId=" + course_json.short_name + "' style='float: right;margin-left: 2%;'>&#128269;</a>" +
         "<label for='sectionCombo'></label>" +
@@ -296,7 +296,7 @@ function appendCourseCard(course_json, comboList, BGC) {
         "</select>" +
         "<h4>" + course_json.title + "</h4>" +
         "<p>" + course_json.description + "</p>" +
-        "</div>";
+        "</span>";
     
     document.getElementById("courseCard_Containor").innerHTML += course_card_1 + course_card_2 + course_card_3;
 }
@@ -459,14 +459,14 @@ function tagGenerator(short_name, draggable = true) {
 
     if (draggable == true) {
         course_tag =
-            "<div class='courseTag noDrop' id='" + short_name +
+            "<span class='courseTag noDrop' id='" + short_name +
             "' draggable='true' ondragstart='drag(event); dragStart();'>" + short_name +
-            "</div>";
+            "</span>";
     } else {
         course_tag =
-            "<div class='courseTag noDrag' id='" + short_name +
+            "<span class='courseTag noDrag' id='" + short_name +
             "' draggable='false'>" + short_name +
-            "</div>";
+            "</span>";
     }
 
     return course_tag;
