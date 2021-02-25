@@ -26,7 +26,7 @@ var calendar = new FullCalendar.Calendar(calendarEl, {
     events: [],
 });
 calendar.render();
-calendar.setOption('aspectRatio', 1.0);
+//calendar.setOption('aspectRatio', 0.9);
 
 document.body.onkeydown = function (ev) {
     let shadowIsOn = document.getElementById("shadowLayer").style.display == "block";
