@@ -140,7 +140,7 @@ session_start(); // Initialize the session
             <div class="course" id="c3" style="background-color: coral;">ENSE 496AC</div>
             <div class="course" id="c4" style="background-color: cornflowerblue;">ENSE 496AD</div>
             <div class="course" id="c5" style="background-color: darkkhaki;">ENSE 472</div> -->
-            <div class="shadow" id="popView">
+            <div class="shadow scroll" id="popView">
                 <h2 id='title'>ENSE 400</h2>
                 <ul>
                     <li><span class="bold">Course Name</span>: <span id='fullName'>ENSE Project Start-up</span> </li>
