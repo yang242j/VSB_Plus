@@ -76,7 +76,8 @@ body .course{
     float:left;
     /* line-height: 200px; */
     width: 50%;
-    height: 600px;
+    /* height: 600px; */
+    height: 60vh;
     display: grid;
     grid-template-columns: fit-content(20%) fit-content(80%);
     grid-template-rows: 90% 10%;
@@ -101,7 +102,7 @@ body .course{
 }
 
   #main_area{
-    height: 600px;
+    /* height: 600px; */
   }
 
   #error{
@@ -162,7 +163,8 @@ body .course{
   /*popView*/
 #popView{
 	/*popView sytle*/
-	height: 540px;
+	/* height: 540px; */
+    height: 54vh;
 	width: 45%;
 	border-radius: 10px;
 	background-color: #b0e6ec;
