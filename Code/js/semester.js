@@ -13,7 +13,7 @@ var calendar = new FullCalendar.Calendar(calendarEl, {
     initialView: 'dayGridMonth',
     initialDate: new Date(),
     headerToolbar: {
-        left: 'prev,next today',
+        left: 'prev,next',
         center: 'title',
         right: 'dayGridMonth,timeGridWeek,timeGridDay'
     },
@@ -368,6 +368,7 @@ function appendCalendar(section, eventType, BGC) {
             color: BGC,
         });
         //console.log("id: " + event_id + " title: " + event_title + " append SUCCESS");
+        calendar.gotoDate( start_date )
     } catch (e) {
         console.error("Calendar event" + event_title + " append FAILED");
     }
