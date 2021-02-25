@@ -1,3 +1,8 @@
+<?php
+session_start(); // Initialize the session
+?>
+
+
 <!doctype html>
 
 <html lang="en">
@@ -19,12 +24,31 @@
 
     <script type="text/javascript" src="js/academicBuilder.js"></script>
     <script type="text/javascript" src="js/academicMain.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $(".nav-right-2").hide();
+        });
+    </script>
 </head>
 <style>
 
 </style>
 
 <body>
+    <?php
+    // Check if the user is logged in, if not then hide nav-right div
+    if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
+    ?>
+        <script>
+            $(document).ready(function() {
+                $(".nav-right").hide();
+                $(".nav-right-2").show();
+                $(".session-required").hide();
+            });
+        </script>
+    <?php } ?>
+
     <header>
         <a href="https://www.uregina.ca"><img src="img/logo.png" class="logo" alt="UofR"></a>
         <h1>Visual Schedule Builder Plus</h1>
@@ -42,7 +66,7 @@
         <div class="nav-right">
             <a id="usertext" onclick="addonSwitchFunc()">php_userName</a>
             <div id="addon-menu">
-                <a>php_SID</a>
+                <a><?php echo htmlspecialchars($_SESSION["sid"]); ?></a>
                 <a href="Model/logout.php">Logout</a>
             </div>
         </div>
@@ -80,23 +104,23 @@
 
     <section class="summary_pie_graph">
         <div class="graph_introduction">
-            <h2>The Summary Pie Chart</h2>
+            <h2>Summary Pie Chart Intro</h2>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum ducimus, doloremque nulla eius reiciendis veritatis, enim accusantium voluptatem velit consequuntur neque autem, ullam deleniti itaque. Error repellat quam fugit dolor.</p>
         </div>
 
         <div class="graph">
-            <h2>The Summary Pie Chart</h2>
+            <h2>Summary Pie Chart</h2>
             <img class="photo" id="pie_chart" src="img/basic-pie-chart.png"></img>
 
         </div>
     </section>
     <section class="summary_line_graph">
         <div class="graph">
-            <h2>The Line Chart</h2>
+            <h2>Line Chart </h2>
             <img class="photo" id="line_chart" src="img/trend_chart_sample.svg"></img>
         </div>
         <div class="graph_introduction">
-            <h2>The Line Chart</h2>
+            <h2>Line Chart Intro</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur porro repudiandae ut voluptas culpa ab ipsam est numquam ea aperiam eligendi laboriosam similique, iusto beatae nesciunt amet exercitationem eius? Temporibus!</p>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis dolores, temporibus quaerat tempora, natus quam totam cupiditate magni omnis voluptatibus et provident. Ipsum autem laudantium blanditiis adipisci harum libero quidem?</p>
             <h3 id = "corner"><a href='academicBuilder_Default.html'>Go to Default Schedule</a></h3>

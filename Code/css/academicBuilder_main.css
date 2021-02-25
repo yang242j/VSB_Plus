@@ -55,7 +55,7 @@
                     
                     body .user_summary_board .right_arrow {
                         position: absolute;
-                        margin-top: 5%;
+                        margin-top: 120px;
                         margin-left: 26.8%;
                         font-size: 36px;
                         border: none;
@@ -64,7 +64,7 @@
                     
                     body .user_summary_board .left_arrow {
                         position: absolute;
-                        margin-top: 5%;
+                        margin-top: 120px;
                         margin-left: -3.5%;
                         font-size: 36px;
                         border: none;
