@@ -26,6 +26,7 @@ var calendar = new FullCalendar.Calendar(calendarEl, {
     events: [],
 });
 calendar.render();
+calendar.setOption('allDaySlot', false);
 //calendar.setOption('aspectRatio', 0.9);
 
 document.body.onkeydown = function (ev) {
