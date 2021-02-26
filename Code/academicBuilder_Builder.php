@@ -35,7 +35,7 @@ session_start();
 </style>
 
 <body>
-<a href="Model/takenClass.php">taken</a>
+<a href="Model/takenClass.php?">taken</a>
 
 <?php
     // Check if the user is logged in, if not then hide nav-right div
@@ -51,7 +51,7 @@ session_start();
     <?php } ?>
 <?php 
 $id = $_SESSION["sid"];
-$_POST["id"] = $id;
+$_POST["sid"] = $id;
 ?>
 
 
