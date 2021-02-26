@@ -35,7 +35,7 @@ session_start();
 </style>
 
 <body>
-<a href="Model/takenClass.php?sid=200362586&password=200362586">taken</a>
+  <!-- <a href="Model/takenClass.php?sid=200362586&password=200362586">taken</a> -->
 <?php
     // Check if the user is logged in, if not then hide nav-right div
     if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
@@ -49,9 +49,10 @@ session_start();
         </script>
     <?php } ?>
 <?php 
-//$id = $_SESSION["sid"];
-//echo ($id);
-//$_POST["sid"] = $id;
+$id = $_SESSION["sid"];
+echo ($id);
+$_POST["sid"] = $id;
+$_POST["password"] = $id;
 ?>
 
 
