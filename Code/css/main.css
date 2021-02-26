@@ -56,7 +56,7 @@ nav .dropdown:hover .dropbtn {
     cursor: pointer;
 }
 
-nav a.nav-active {
+nav .nav-active {
     background-color: #4CAF50;
     color: white;
 }
