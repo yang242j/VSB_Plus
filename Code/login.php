@@ -122,7 +122,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <div class="bar2"></div>
             <div class="bar3"></div>
         </div>
-        <a class="menu-list hidden" href="academicBuilder_Main.php" disabled>Academic Schedule Builder</a>
+        <div class="session-required menu-list hidden dropdown">
+            <button class="dropbtn">Academic Schedule Builder</button>
+            <div class="dropdown-content">
+                <a class="academicList" href="academicBuilder_Main.php">General Student Status</a>
+                <a class="academicList" href="academicBuilder_Default.php">Default Schedule</a>
+                <a class="academicList" href="academicBuilder_Builder.php">Customized Schedule</a>
+            </div>
+        </div>
         <a class="menu-list hidden" href="semesterBuilder.php">Semester Schedule Builder</a>
         <a class="menu-list hidden" href="courseDB.php">Course List Database</a>
         <div class="nav-right">
