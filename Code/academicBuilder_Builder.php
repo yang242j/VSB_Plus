@@ -23,6 +23,7 @@ session_start();
     <link rel="stylesheet" href="css/academicBuilder_Default.css">
     <script src = "js/academicCustomizeBuilder.js">
      var name = '<?=$name?>';
+     consle.log(name);
     </script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
