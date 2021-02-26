@@ -49,11 +49,12 @@ session_start();
         </script>
     <?php } ?>
 <?php 
-$id = $_SESSION["sid"];
+/*$id = $_SESSION["sid"];
 echo ($id);
 $_POST["sid"] = $id;
-$_POST["password"] = $id;
+$_POST["password"] = $id;*/
 ?>
+
 
 
     <header>
