@@ -2,7 +2,6 @@
 session_start();
  // Initialize the session
  $sid = $_SESSION["sid"];
- $password =$_SESSION["major"];
 ?>
 
 <!doctype html>
@@ -24,7 +23,6 @@ session_start();
     <link rel="stylesheet" href="css/academicBuilder_Default.css">
     <script src="js/academicCustomizeBuilder.js">
      var sid = '<?php echo $sid?>';
-     var password = '<?php echo $password?>';
     </script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
