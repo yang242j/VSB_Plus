@@ -1,6 +1,6 @@
 
 function fetchCourseJSON(sid) {
-    alert(sid);
+    alert("sid");
     $.post('../Model/takenClass.php', { sid: sid , password: sid}, function (data) {});
     }
 /*fetchCourseJSON();*/
