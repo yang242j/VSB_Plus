@@ -1,7 +1,8 @@
 <?php
 session_start();
  // Initialize the session
- $name = $_SESSION["name"];
+ $sid = $_SESSION["sid"];
+ $password =$_SESSION["password"];
 ?>
 
 <!doctype html>
@@ -22,7 +23,8 @@ session_start();
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/academicBuilder_Default.css">
     <script src="js/academicCustomizeBuilder.js">
-     var name = '<?php echo $name?>';
+     var sid = '<?php echo $sid?>';
+     var password = '<?php echo $password?>';
     </script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
