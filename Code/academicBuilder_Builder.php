@@ -1,7 +1,7 @@
 <?php
 session_start();
  // Initialize the session
- $sid = $_SESSION["major"];
+ $sid = $_SESSION["sid"];
 
 ?>
 
@@ -22,7 +22,7 @@ session_start();
 
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/academicBuilder_Default.css">
-    <script >
+    <script src ="js/academicCustomizeBuilder.js" >
      var sid = '<?php echo $sid?>';
      alert(sid);
     </script>
