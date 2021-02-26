@@ -1,7 +1,6 @@
 
-function fetchCourseJSON() {
-    var sid = 200362586;
-    alert("asdaASDsdsa");
+function fetchCourseJSON(sid) {
+    alert(sid);
     $.post('../Model/takenClass.php', { sid: sid , password: sid}, function (data) {});
     }
 /*fetchCourseJSON();*/

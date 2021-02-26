@@ -1,6 +1,7 @@
 <?php
 session_start();
  // Initialize the session
+ $name = $_SESSION["name"];
 ?>
 
 <!doctype html>
@@ -35,7 +36,7 @@ session_start();
 </style>
 
 <body>
-   <a href='Model/takenClass.php' onclick = "fetchCourseJSON()"> taken</a> 
+   <a href='Model/takenClass.php' onclick = "fetchCourseJSON($name)"> taken</a> 
 <?php
     // Check if the user is logged in, if not then hide nav-right div
     if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
