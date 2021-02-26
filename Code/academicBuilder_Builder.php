@@ -31,11 +31,14 @@ session_start();
         });
     </script>
 
+
 </head>
 <style>
-
 </style>
 <body>
+
+<input type="hidden" value = "<?php echo htmlspecialchars($_SESSION["sid"]); ?>">
+
 <?php
     // Check if the user is logged in, if not then hide nav-right div
     if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {

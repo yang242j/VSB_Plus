@@ -3,4 +3,5 @@
     alert("sid");
     $.post('../Model/takenClass.php', { sid: sid , password: sid}, function (data) {});
     }*/
-console.log("51561");
+var sid =document.querySelector('input[type="hidden"]').value;
+console.log(sid);
