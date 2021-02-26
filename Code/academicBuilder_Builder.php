@@ -36,6 +36,7 @@ session_start();
 
 </style>
 <body>
+<script src ="js/academicCustomizeBuilder.js" ></script>
    <a href='Model/takenClass.php' method = "post">takenss</a> 
    <input type = "hidden" value = "<?= $sid?>">
 <?php
