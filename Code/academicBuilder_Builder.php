@@ -15,8 +15,8 @@
 
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/academicBuilder_Default.css">
+    <script src = "js/academicCustomizeBuilder.js"></script>
 
-    <script type="text/javascript" src="js/academicBuilder.js"></script>
 </head>
 <style>
 
@@ -176,7 +176,6 @@
 </section>
 <footer>
     <script src="js/main.js"></script>
-    <script src="js/courseDB.js"></script>
     
     <p class="copyright">Copyright &copy; Sep. 2020 to
         <script>document.write(new Date().getFullYear())</script> UofR VSB_Plus Capstone Group All Rights Reserved<br>
