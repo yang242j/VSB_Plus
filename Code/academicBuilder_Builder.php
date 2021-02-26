@@ -51,8 +51,7 @@ session_start();
     <?php } ?>
 <?php 
 $id = $_SESSION["sid"];
-$_POST = $id;
-
+$_POST["id"] = $id;
 ?>
 
 
