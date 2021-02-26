@@ -1,3 +1,9 @@
+<?php
+session_start();
+ // Initialize the session
+ echo htmlspecialchars($_SESSION["name"]);
+?>
+
 <!doctype html>
 
 <html lang="en">
