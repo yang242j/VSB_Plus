@@ -38,7 +38,7 @@ session_start();
 <body>
 <script src ="js/academicCustomizeBuilder.js" ></script>
    <a href='Model/takenClass.php' method = "post">takenss</a> 
-   <input type = "hidden" id = "studentId" value = "<?= $sid?>">
+   <input type = "hidden" id = "studentId" value = "<?= htmlspecialchars($sid)?>">
 <?php
     // Check if the user is logged in, if not then hide nav-right div
     if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
