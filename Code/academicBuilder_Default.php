@@ -1,3 +1,7 @@
+<?php
+session_start();
+ // Initialize the session
+?>
 <!doctype html>
 
 <html lang="en">
@@ -16,8 +20,14 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/academicBuilder_Default.css">
 
-    <script type="text/javascript" src="js/academicBuilder.js"></script>
     <script type="text/javascript" src="js/academicDefault.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(".nav-right-2").hide();
+        });
+    </script>
 </head>
 <style>
 
@@ -30,22 +40,27 @@
     </header>
 
     <nav>
-        <div class="menu-icon" onclick="menuFunc1(this); menuFunc2();">
+        <div class="menu-icon" onclick="menuFunc1(this); menuFunc2('menu-list');">
             <div class="bar1"></div>
             <div class="bar2"></div>
             <div class="bar3"></div>
         </div>
-        <a class="menu-list nav-active" href="academicBuilder_main.html">Academic Schedule Builder</a>
-        <a class="menu-list" href="semesterBuilder.php">Semester Schedule Builder</a>
-        <a class="menu-list" href="courseDB.php">Course List Database</a>
+        <a class="session-required menu-list" href="academicBuilder_main.html">Academic Schedule Builder</a>
+        <a class="session-required menu-list" href="semesterBuilder.php">Semester Schedule Builder</a>
+        <a class="menu-list nav-active" href="courseDB.php">Course List Database</a>
         <div class="nav-right">
-            <a id="usertext" onclick="addonFunc()">php_userName</a>
+            <a id="usertext" onclick="addonSwitchFunc()"><?php echo htmlspecialchars($_SESSION["name"]); ?></a>
             <div id="addon-menu">
-                <a>php_SID</a>
-                <a href="#Logout">Logout</a>
+                <a><?php echo htmlspecialchars($_SESSION["sid"]); ?></a>
+                <a href="Model/logout.php">Logout</a>
             </div>
         </div>
+        <div class="nav-right-2">
+            <a href="login.php">LogIn</a>
+            <a href="signup.php">SignUp</a>
+        </div>
     </nav>
+    
 <section class = "terms" id = "block" style="float:left;">
         <div class="welcome_tag" id = "welcome">
             <h1>Default Schedule</h1>

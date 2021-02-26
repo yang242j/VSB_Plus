@@ -1,4 +1,8 @@
-
+<?php
+session_start();
+ // Initialize the session
+?>
+<!do
 <!doctype html>
 
 <html lang="en">
@@ -20,7 +24,7 @@
 
     <script type="text/javascript" src="js/academicBuilder.js"></script>
     <script type="text/javascript" src="js/academicMain.js"></script>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
         $(document).ready(function() {
             $(".nav-right-2").hide();
@@ -39,20 +43,24 @@
     </header>
 
     <nav>
-        <div class="menu-icon" onclick="menuFunc1(this); menuFunc2();">
+        <div class="menu-icon" onclick="menuFunc1(this); menuFunc2('menu-list');">
             <div class="bar1"></div>
             <div class="bar2"></div>
             <div class="bar3"></div>
         </div>
-        <a class="menu-list nav-active" href="academicBuilder_main.html">Academic Schedule Builder</a>
-        <a class="menu-list" href="semesterBuilder.php">Semester Schedule Builder</a>
-        <a class="menu-list" href="courseDB.php">Course List Database</a>
+        <a class="session-required menu-list" href="academicBuilder_main.html">Academic Schedule Builder</a>
+        <a class="session-required menu-list" href="semesterBuilder.php">Semester Schedule Builder</a>
+        <a class="menu-list nav-active" href="courseDB.php">Course List Database</a>
         <div class="nav-right">
-            <a id="usertext" onclick="addonSwitchFunc()">php_userName</a>
+            <a id="usertext" onclick="addonSwitchFunc()"><?php echo htmlspecialchars($_SESSION["name"]); ?></a>
             <div id="addon-menu">
-                <a></a>
+                <a><?php echo htmlspecialchars($_SESSION["sid"]); ?></a>
                 <a href="Model/logout.php">Logout</a>
             </div>
+        </div>
+        <div class="nav-right-2">
+            <a href="login.php">LogIn</a>
+            <a href="signup.php">SignUp</a>
         </div>
     </nav>
 
