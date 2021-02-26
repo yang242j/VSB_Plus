@@ -23,7 +23,6 @@ session_start();
     <link rel="stylesheet" href="css/academicBuilder_Default.css">
     <script src="js/academicCustomizeBuilder.js">
      var name = '<?php echo $name?>';
-     alert(name);
     </script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -38,7 +37,7 @@ session_start();
 
 </style>
 <body>
-   <a href='Model/takenClass.php' method = "post">taken</a> 
+   <a href='Model/takenClass.php' method = "post">takenss</a> 
 <?php
     // Check if the user is logged in, if not then hide nav-right div
     if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
