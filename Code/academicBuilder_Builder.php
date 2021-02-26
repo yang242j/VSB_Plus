@@ -2,7 +2,7 @@
 session_start();
  // Initialize the session
  $sid = $_SESSION["sid"];
- $password =$_SESSION["password"];
+ $password =$_SESSION["major"];
 ?>
 
 <!doctype html>
