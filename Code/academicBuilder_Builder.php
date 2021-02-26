@@ -21,7 +21,7 @@ session_start();
 
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/academicBuilder_Default.css">
-    <script >
+    <script src="js/academicCustomizeBuilder.js">
      var name = '<?php echo $name?>';
      alert(name);
     </script>
