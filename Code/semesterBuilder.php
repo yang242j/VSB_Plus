@@ -48,7 +48,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             <div class="bar2"></div>
             <div class="bar3"></div>
         </div>
-        <a class="menu-list" href="academicBuilder_main.html">Academic Schedule Builder</a>
+        <a class="menu-list" href="academicBuilder_Main.php">Academic Schedule Builder</a>
         <a class="menu-list nav-active" href="semesterBuilder.php">Semester Schedule Builder</a>
         <a class="menu-list" href="courseDB.php">Course List Database</a>
         <div class="nav-right">

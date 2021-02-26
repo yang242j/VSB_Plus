@@ -45,7 +45,7 @@ session_start();
             <div class="bar2"></div>
             <div class="bar3"></div>
         </div>
-        <a class="session-required menu-list" href="academicBuilder_main.html">Academic Schedule Builder</a>
+        <a class="session-required menu-list" href="academicBuilder_Main.php">Academic Schedule Builder</a>
         <a class="session-required menu-list" href="semesterBuilder.php">Semester Schedule Builder</a>
         <a class="menu-list nav-active" href="courseDB.php">Course List Database</a>
         <div class="nav-right">
@@ -227,6 +227,6 @@ session_start();
             Credit: 
         </cite>
     </p>
-    <p class="info-link"><a href="homePage.html">About Us</a></p>
+    <p class="info-link"><a href="homePage.php">About Us</a></p>
 </footer>
 

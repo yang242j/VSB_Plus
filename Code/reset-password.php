@@ -3,7 +3,7 @@ session_start(); // Initialize the session
 
 // Check if the user is already logged in, if yes then redirect him to Academic home page
 if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
-    header("location: academicBuilder_main.html");
+    header("location: academicBuilder_Main.php");
     exit;
 }
 
@@ -132,9 +132,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <div class="bar2"></div>
             <div class="bar3"></div>
         </div>
-        <a class="menu-list hidden" href="academicBuilder.html" disabled>Academic Schedule Builder</a>
+        <a class="menu-list hidden" href="academicBuilder_Main.php" disabled>Academic Schedule Builder</a>
         <a class="menu-list hidden" href="semesterBuilder.php">Semester Schedule Builder</a>
-        <a class="menu-list hidden" href="courseDB.html">Course List Database</a>
+        <a class="menu-list hidden" href="courseDB.php">Course List Database</a>
         <div class="nav-right">
             <a href="login.php">LogIn</a>
             <a href="signup.php">SignUp</a>

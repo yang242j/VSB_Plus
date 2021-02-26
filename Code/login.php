@@ -68,7 +68,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             $_SESSION["major"] = $major;
 
                             // Redirect user to welcome page
-                            header("location: academicBuilder_main.html");
+                            header("location: academicBuilder_Main.php");
                         } else {
                             // Display an error message if password is not valid
                             $password_err = "The password was not valid.";
@@ -122,9 +122,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <div class="bar2"></div>
             <div class="bar3"></div>
         </div>
-        <a class="menu-list hidden" href="academicBuilder.html" disabled>Academic Schedule Builder</a>
+        <a class="menu-list hidden" href="academicBuilder_Main.php" disabled>Academic Schedule Builder</a>
         <a class="menu-list hidden" href="semesterBuilder.php">Semester Schedule Builder</a>
-        <a class="menu-list hidden" href="courseDB.html">Course List Database</a>
+        <a class="menu-list hidden" href="courseDB.php">Course List Database</a>
         <div class="nav-right">
             <a class="nav-active" href="login.php">LogIn</a>
             <a href="signup.php">SignUp</a>

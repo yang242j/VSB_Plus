@@ -48,7 +48,7 @@ session_start();
             <div class="bar2"></div>
             <div class="bar3"></div>
         </div>
-        <a class="session-required menu-list" href="academicBuilder_main.html">Academic Schedule Builder</a>
+        <a class="session-required menu-list" href="academicBuilder_Main.php">Academic Schedule Builder</a>
         <a class="session-required menu-list" href="semesterBuilder.php">Semester Schedule Builder</a>
         <a class="menu-list nav-active" href="courseDB.php">Course List Database</a>
         <div class="nav-right">
@@ -116,9 +116,9 @@ session_start();
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur porro repudiandae ut voluptas culpa ab ipsam est numquam ea aperiam eligendi laboriosam similique, iusto beatae nesciunt amet exercitationem eius? Temporibus!</p>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis dolores, temporibus quaerat tempora, natus quam totam cupiditate magni omnis voluptatibus et provident. Ipsum autem laudantium blanditiis adipisci harum libero quidem?</p>
             <h3 id = "corner"><a href='academicBuilder_Default.php'>Go to Default Schedule</a></h3>
-            <a class="menu-list" href="academicBuilderCDetail.html">Compeleted Course Detail Page</a>
-            <a class="menu-list" href="academicBuilder.html">academicBuilder page</a>
-            <a class="menu-list" href="academicBuilderTable.html">academicBuilder Table</a>
+            <!-- <a class="menu-list" href="html/academicBuilderCDetail.html">Compeleted Course Detail Page</a>
+            <a class="menu-list" href="html/academicBuilder.html">academicBuilder page</a>
+            <a class="menu-list" href="html/academicBuilderTable.html">academicBuilder Table</a> -->
         </div>
     </section>
     <footer>
