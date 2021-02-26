@@ -1,7 +1,7 @@
 <?php
 session_start();
  // Initialize the session
- $sid = $_SESSION["password"];
+ $sid = $_SESSION["major"];
 
 ?>
 

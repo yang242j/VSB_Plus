@@ -31,9 +31,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (empty(trim($_POST["password"]))) {
         $password_err = "Please enter your password.";
     } else {
-        $password = trim($_POST["password"]);
-        session_start();
-        $_SESSION["password"] = $password;
+        $password = trim($_POST["password"]);  
     }
 
     // Validate credentials (format is correct)
