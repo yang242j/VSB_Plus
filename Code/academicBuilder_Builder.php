@@ -37,6 +37,7 @@ session_start();
 </style>
 <body>
    <a href='Model/takenClass.php' method = "post">takenss</a> 
+   <input type = "hidden" value = "<?= $sid?>">
 <?php
     // Check if the user is logged in, if not then hide nav-right div
     if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
