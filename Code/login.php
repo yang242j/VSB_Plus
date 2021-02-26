@@ -32,6 +32,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $password_err = "Please enter your password.";
     } else {
         $password = trim($_POST["password"]);
+        session_start();
+        $_SESSION["password"] = $password;
     }
 
     // Validate credentials (format is correct)
@@ -66,7 +68,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             $_SESSION["sid"] = $studentid;
                             $_SESSION["name"] = $name;
                             $_SESSION["major"] = $major;
-                            $_SESSION["password"] = $password;
 
                             // Redirect user to welcome page
                             header("location: academicBuilder_main.html");
