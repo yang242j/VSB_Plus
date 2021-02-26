@@ -22,9 +22,9 @@ session_start();
 
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/academicBuilder_Default.css">
-    <script src ="js/academicCustomizeBuilder.js" ></script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src ="js/academicCustomizeBuilder.js"></script>
     <script>
         $(document).ready(function() {
             $(".nav-right-2").hide();
@@ -37,7 +37,7 @@ session_start();
 </style>
 <body>
 
-<input type="hidden" value = "<?php echo htmlspecialchars($_SESSION["sid"]); ?>">
+<input type="text" value = "<?php echo htmlspecialchars($_SESSION["sid"]); ?>">
 
 <?php
     // Check if the user is logged in, if not then hide nav-right div
