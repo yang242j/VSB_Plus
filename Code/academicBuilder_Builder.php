@@ -35,7 +35,7 @@ session_start();
 </style>
 
 <body>
-<a href="model/takenClass.php">taken </a>
+<a href="Model/takenClass.php">taken </a>
 <?php
     // Check if the user is logged in, if not then hide nav-right div
     if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
