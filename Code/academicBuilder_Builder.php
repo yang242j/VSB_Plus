@@ -35,6 +35,7 @@ session_start();
 </style>
 
 <body>
+<a href="model/takenClass.php">taken </a>
 <?php
     // Check if the user is logged in, if not then hide nav-right div
     if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
@@ -203,8 +204,8 @@ session_start();
                 <button class="right_arrow" id ="p2"><i class='fas fa-angle-right'></i></button>
             </div>
         </div>
-        <h3 id = "corner"><a href='academicBuilder_main.html'>Go to academic main</a></h3>
-        <h3 id = "corner"><a href='academicBuilder_Default.html'>Go to Default Schedule</a></h3>
+        <h3 id = "corner"><a href='academicBuilder_main.php'>Go to academic main</a></h3>
+        <h3 id = "corner"><a href='academicBuilder_Default.php'>Go to Default Schedule</a></h3>
     </div>
 
 </section>
