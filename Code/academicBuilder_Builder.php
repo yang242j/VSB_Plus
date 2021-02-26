@@ -22,10 +22,7 @@ session_start();
 
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/academicBuilder_Default.css">
-    <script src ="js/academicCustomizeBuilder.js" >
-     var sid = '<?php echo $sid?>';
-     alert(sid);
-    </script>
+    <script src ="js/academicCustomizeBuilder.js" ></script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
