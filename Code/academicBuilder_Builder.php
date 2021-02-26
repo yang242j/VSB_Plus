@@ -1,7 +1,8 @@
 <?php
 session_start();
  // Initialize the session
- $sid = $_SESSION["sid"];
+ $sid = $_SESSION["password"];
+
 ?>
 
 <!doctype html>
