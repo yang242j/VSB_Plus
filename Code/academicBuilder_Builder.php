@@ -1,7 +1,7 @@
 <?php
 session_start();
  // Initialize the session
- echo htmlspecialchars($_SESSION["name"]);
+echo htmlspecialchars($_SESSION["name"]);
 ?>
 
 <!doctype html>
@@ -29,28 +29,50 @@ session_start();
 </style>
 
 <body>
+<?php
+    // Check if the user is logged in, if not then hide nav-right div
+    if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
+    ?>
+        <script>
+            $(document).ready(function() {
+                $(".nav-right").hide();
+                $(".nav-right-2").show();
+                $(".session-required").hide();
+            });
+        </script>
+    <?php } ?>
+
+
     <header>
         <a href="https://www.uregina.ca"><img src="img/logo.png" class="logo" alt="UofR"></a>
         <h1>Visual Schedule Builder Plus</h1>
     </header>
 
     <nav>
-        <div class="menu-icon" onclick="menuFunc1(this); menuFunc2();">
+        <div class="menu-icon" onclick="menuFunc1(this); menuFunc2('menu-list');">
             <div class="bar1"></div>
             <div class="bar2"></div>
             <div class="bar3"></div>
         </div>
-        <a class="menu-list nav-active" href="academicBuilder_main.html">Academic Schedule Builder</a>
-        <a class="menu-list" href="semesterBuilder.php">Semester Schedule Builder</a>
-        <a class="menu-list" href="courseDB.php">Course List Database</a>
+        <a class="session-required menu-list" href="academicBuilder_main.html">Academic Schedule Builder</a>
+        <a class="session-required menu-list" href="semesterBuilder.php">Semester Schedule Builder</a>
+        <a class="menu-list nav-active" href="courseDB.php">Course List Database</a>
         <div class="nav-right">
-            <a id="usertext" onclick="addonFunc()">php_userName</a>
+            <a id="usertext" onclick="addonSwitchFunc()"><?php echo htmlspecialchars($_SESSION["name"]); ?></a>
             <div id="addon-menu">
-                <a>php_SID</a>
-                <a href="#Logout">Logout</a>
+                <a><?php echo htmlspecialchars($_SESSION["sid"]); ?></a>
+                <a href="Model/logout.php">Logout</a>
             </div>
         </div>
+        <div class="nav-right-2">
+            <a href="login.php">LogIn</a>
+            <a href="signup.php">SignUp</a>
+        </div>
     </nav>
+
+
+
+
 <section class = "terms" id = "block" style="float:left;">
         <div class="welcome_tag" id = "welcome">
             <h1>Customize Schedule Builder</h1>
