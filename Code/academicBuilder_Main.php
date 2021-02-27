@@ -2,7 +2,7 @@
 session_start();
  // Initialize the session
 ?>
-<!do
+
 <!doctype html>
 
 <html lang="en">
@@ -98,8 +98,6 @@ session_start();
             <p></p>
         </div>
     </section>
-
-
 
     <section class="summary_pie_graph">
         <div class="graph_introduction">
