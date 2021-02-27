@@ -8,4 +8,5 @@ function fetchCourseJSON(sid) {
 window.onload = function init() {
     fetchCourseJSON("200362586");
 }
+
 // document.getElementById('course_cards_builder').innerHTML = "ENSE";
