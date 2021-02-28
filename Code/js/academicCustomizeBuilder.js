@@ -12,6 +12,6 @@ window.onload = function init() {
     getSid();
 }
 function getSid(){
-alert("dasdas");
-document.getElementById("userId").innerHTML = "Esad";
+var sid = document.getElementById("userId").innerHTML;
+alert(sid);
 }
