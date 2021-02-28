@@ -50,13 +50,13 @@ function findCourseToTake(data) {
                 courseNotCompleted.push(courseReqData[term][i]);
             }
         }
-        if (term == "Approved")
+        /*if (term == "Approved")
         {
             for (i = 0; i < courseReqData[term].length; i++) {
                 courseNotCompleted.push(courseReqData[term][i]);
             }
         }
-    }
+    }*/
     console.log(courseNotCompleted);
 }
 
