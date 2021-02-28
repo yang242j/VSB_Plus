@@ -1,11 +1,17 @@
 <?php
 
-$response = get_course_json($_POST["short_name"]);
-$resArr = array();
-$resArr = json_decode($response);
+$preStr = $expStr = '';
 
-$preStr = $resArr->prerequisite; 
-$expStr = '';
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+    $response = get_course_json($_POST["short_name"]);
+    $resArr = array();
+    $resArr = json_decode($response);
+
+    $preStr = $resArr->prerequisite; 
+    $expStr = '';
+    
+}
 
 function get_course_json($short_name) {
     $url = "http://15.223.123.122/vsbp/Code/Model/course.php";
