@@ -55,7 +55,7 @@ function findCourseToTake(data) {
     console.log(courseToTake);
 
     var courseNotCompleted = courseToTake.filter(function(n) {
-        return courseCompleted.indexOf(n) !== -1;
+        return courseCompleted.indexOf(n) === -1;
     });
     console.log(courseNotCompleted);
 }
