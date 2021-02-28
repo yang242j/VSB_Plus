@@ -12,7 +12,7 @@ window.onload = function init() {
     window.studentId = getSid();
     console.log(window.studentId);
 }
-fetchCourseJSON(window.studentId);
+fetchCourseJSON("200362586");
 console.log(window.studentData);
 function getSid() {
     var sid = document.getElementById("userId").innerHTML;
