@@ -186,8 +186,8 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             <p id = "ct9">ENSE 271</p>
             <p id = "ct10">ENSE 271</p>
             <p id = "ct11">ENSE 271</p>
-            <div><button class="right_arrow" id ="p1"><i class='fas fa-angle-left'></i></button>
-                <button class="right_arrow" id ="p2"><i class='fas fa-angle-right'></i></button></div>
+            <div><button class="right_arrow" id ="ctRight"><i class='fas fa-angle-left'></i></button>
+                <button class="right_arrow" id ="ctLeft"><i class='fas fa-angle-right'></i></button></div>
 
         </div>
 
@@ -211,8 +211,8 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             <p id = "nct9">ENSE 271</p>
             <p id = "nct10">ENSE 271</p>
             <p id = "nct11">ENSE 271</p>
-            <div><button class="right_arrow" id ="p1"><i class='fas fa-angle-left'></i></button>
-                <button class="right_arrow" id ="p2"><i class='fas fa-angle-right'></i></button>
+            <div><button class="right_arrow" id ="nctRight"><i class='fas fa-angle-left'></i></button>
+                <button class="right_arrow" id ="nctLeft"><i class='fas fa-angle-right'></i></button>
             </div>
         </div>
         <!-- <h3 id = "corner"><a href='academicBuilder_Main.php'>Go to academic main</a></h3>

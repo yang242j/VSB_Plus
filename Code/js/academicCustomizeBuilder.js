@@ -4,7 +4,7 @@ var courseReqData;
 function fetchCourseJSON(sid) {
     // alert(sid);
     $.post('Model/takenClass.php', { sid: sid, password: sid }, function (data) {
-        test(data);
+        btnForCourse(data);
         showCourses(data);
     });
 }
@@ -30,14 +30,6 @@ function getTermData() {
     myRequest.send();
 }
 // next page button
-function test(data) {
-    var btn = document.getElementById("p1");
-    var dataJSON = JSON.parse(data);
-    //console.log(dataJSON);
-    btn.onclick = function () {
-        console.log(dataJSON[0]);
-    }
-}
 //minus taken class from all course list
 function findCourseToTake(data) {
     /*console.log(data);
@@ -87,4 +79,25 @@ function showCourses(data) {
         }
     }
 
+}
+function btnForCourse(data) {
+    var ctRight = document.getElementById("ctRight");
+    var ctLeft = document.getElementById("ctLeft");
+    var nctRight = document.getElementById("nctRight");
+    var nctLeft = document.getElementById("nctLeft");
+    var dataJSON = JSON.parse(data);
+    var notCompletedData = findCourseToTake(dataJSON);
+    //console.log(dataJSON);
+    ctRight.onclick = function () {
+       alert("asd");
+    }
+    ctLeft.onclick = function () {
+        
+    }
+    nctRight.onclick = function () {
+        
+    }
+    nctLeft.onclick = function () {
+        
+    }
 }
