@@ -9,7 +9,7 @@ function fetchCourseJSON(sid) {
 
 window.onload = function init() {
     studentId = getSid();
-    console.log(fetchCourseJSON(sid));
+    console.log(fetchCourseJSON(studentId));
 }
 function getSid() {
     var sid = document.getElementById("userId").innerHTML;
