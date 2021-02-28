@@ -11,4 +11,4 @@ window.onload = function init() {
     fetchCourseJSON("200362586");
 }
 alert("dasdas");
-//document.getElementById("usertext").innerHTML = "Esad";
+document.getElementById("usertext").innerHTML = "Esad";
