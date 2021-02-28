@@ -39,7 +39,7 @@ function findCourseToTake(data){
       console.log(courseReqData);*/
       var courseCompleted = [];
       var courseNotCompleted;
-      for (i = 0; i<dataJSON.length;i++){
+      for (i = 0; i<data.length;i++){
           courseCompleted[i] = dataJSON[i].course_ID;
           console.log(courseCompleted);
       }
@@ -56,7 +56,7 @@ function findCourseToTake(data){
 
 function showCourses(data) {
     var dataJSON = JSON.parse(data);
-    findCourseToTake(data);
+    findCourseToTake(dataJSON);
     for (i = 0; i < 12; i++) {
         if (i < dataJSON.length) {
         document.getElementById("ct" + i).innerHTML = dataJSON[i].course_ID;
