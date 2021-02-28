@@ -25,10 +25,14 @@ function test(data) {
 function showCourses(data) {
     var dataJSON = JSON.parse(data);
     for (i = 0; i < 12; i++) {
+        if (i < dataJSON.length) {
         document.getElementById("ct" + i).innerHTML = dataJSON[i].course_ID;
-        /*if (i > dataJSON.length) {
-            document.getElementById("ct" + i).innerHTMl = dataJSON[i].course_ID;
-        }*/
+        }
+        else{
+        document.getElementById("ct" + i).innerHTML = " ";
+        }
+
+        
     }
 
 }
