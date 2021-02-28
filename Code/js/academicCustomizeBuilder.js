@@ -23,11 +23,10 @@ function getTermData() {
     myRequest.onload = function () {
         var data = JSON.parse(myRequest.responseText);
         courseReqData = data;
-        console.log(courseReqData);
     }
     myRequest.send();
 }
-
+console.log(courseReqData);
 function test(data) {
     var btn = document.getElementById("p1");
     var dataJSON = JSON.parse(data);
