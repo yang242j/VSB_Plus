@@ -197,20 +197,20 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         <div class = "course_not_completed"><h3>Course to take</h3></div>
 
         <div class = "course_tag_not_completed">
-            <p id = "ntc0">ENSE 271</p>
-            <p id = "ntc1">ENSE 271</p>
-            <p id = "ntc2">ENSE 271</p>
-            <p id = "ntc3">ENSE 271</p>
+            <p id = "nct0">ENSE 271</p>
+            <p id = "nct1">ENSE 271</p>
+            <p id = "nct2">ENSE 271</p>
+            <p id = "nct3">ENSE 271</p>
 
-            <p id = "ntc4">ENSE 271</p>
-            <p id = "ntc5">ENSE 271</p>
-            <p id = "ntc6">ENSE 271</p>
-            <p id = "ntc7">ENSE 271</p>
+            <p id = "nct4">ENSE 271</p>
+            <p id = "nct5">ENSE 271</p>
+            <p id = "nct6">ENSE 271</p>
+            <p id = "nct7">ENSE 271</p>
             
-            <p id = "ntc8">ENSE 271</p>
-            <p id = "ntc9">ENSE 271</p>
-            <p id = "ntc10">ENSE 271</p>
-            <p id = "ntc11">ENSE 271</p>
+            <p id = "nct8">ENSE 271</p>
+            <p id = "nct9">ENSE 271</p>
+            <p id = "nct10">ENSE 271</p>
+            <p id = "nct11">ENSE 271</p>
             <div><button class="right_arrow" id ="p1"><i class='fas fa-angle-left'></i></button>
                 <button class="right_arrow" id ="p2"><i class='fas fa-angle-right'></i></button>
             </div>

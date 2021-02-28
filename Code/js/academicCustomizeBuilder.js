@@ -23,11 +23,9 @@ function test(data) {
     }
 }
 function showCourses(data) {
-    var i = 1;
     var dataJSON = JSON.parse(data);
-    document.getElementById("ct" + i).innerHTML = dataJSON[i].course_ID;
     for (i = 0; i < 12; i++) {
-        document.getElementById("ct" + i).innerHTMl = " ";
+        document.getElementById("ct" + i).innerHTML = dataJSON[i].course_ID;
         /*if (i > dataJSON.length) {
             document.getElementById("ct" + i).innerHTMl = dataJSON[i].course_ID;
         }*/
