@@ -1,7 +1,11 @@
 <?php
-session_start();
-// Initialize the session
-$sid = $_SESSION["sid"];
+session_start();// Initialize the session
+
+// Check if the user is logged in, if not then redirect him to login page
+if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
+    header("location: login.php");
+    exit;
+}
 ?>
 
 <!doctype html>
@@ -32,7 +36,7 @@ $sid = $_SESSION["sid"];
         $(document).ready(function() {
             $(".nav-right-2").hide();
         });
-        var sid = "<?php echo $sid; ?>";
+        var sid = "<?php echo $_SESSION["sid"]; ?>";
     </script>
 </head>
 <style>
