@@ -13,5 +13,5 @@ window.onload = function init() {
 }
 
 function getSid (){
-     document.getElementById("studentIdContainer").innerHTML = "ENSE";
+     document.getElementById("usertext").innerHTML = "Esad";
 }
