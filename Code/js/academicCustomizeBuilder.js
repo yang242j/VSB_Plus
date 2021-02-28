@@ -45,10 +45,11 @@ function findCourseToTake(data) {
     //console.log(courseCompleted);
     console.log(courseReqData);
     for (term in courseReqData) {
+        for (i = 0; i < courseReqData[term].length; i++){
         if (courseReqData[term][i] != "Approved") {
-            for (i = 0; i < courseReqData[term].length; i++)
                 courseNotCompleted.push(courseReqData[term][i]);
         }
+    }
     }
     console.log(courseNotCompleted);
 }
