@@ -20,8 +20,13 @@ function test(data){
     console.log(dataJSON);
     btn.onclick = function (){
 
-        console.log(dataJSON[0]);
-
-
+        console.log(dataJSON[0].course_ID);
     }
+}
+function showCourses(data){
+    var dataJSON = JSON.parse(data);
+    for (i =0; i < 12; i++){
+document.getElementById("tc"+i).innerHTMl = dataJSON[i].course_ID;
+    }
+
 }
