@@ -28,7 +28,6 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     <link rel="stylesheet" href="css/academicBuilder_Default.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src ="js/academicCustomizeBuilder.js"></script>
     <script>
         $(document).ready(function() {
             $(".nav-right-2").hide();
