@@ -13,5 +13,6 @@ window.onload = function init() {
 }
 
 function getSid (){
+    alert("dasdas");
      document.getElementById("usertext").innerHTML = "Esad";
 }
