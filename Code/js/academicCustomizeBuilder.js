@@ -2,10 +2,8 @@ var studentData;
 var studentId;
 function fetchCourseJSON(sid) {
     // alert(sid);
-    $.post('Model/takenClass.php', { sid: sid, password: sid }, function (data) {
-        /*console.log(data);*/
-        return data;
-    });
+    return $.post('Model/takenClass.php', { sid: sid, password: sid }, function (data) {
+        /*console.log(data);*/});
 }
 
 window.onload = function init() {
