@@ -24,13 +24,13 @@ function test(data) {
 }
 function showCourses(data) {
     
-    document.getElementById("ct0").innerHTML = "asdasd";
+    document.getElementById("ct1").innerHTML = "asdasd";
     var dataJSON = JSON.parse(data);
     for (i = 0; i < 12; i++) {
         document.getElementById("ct" + i).innerHTMl = " ";
-        if (i > dataJSON.length) {
+        /*if (i > dataJSON.length) {
             document.getElementById("ct" + i).innerHTMl = dataJSON[i].course_ID;
-        }
+        }*/
     }
 
 }
