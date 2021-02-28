@@ -40,23 +40,44 @@ function get_course_json($short_name) {
 function str2Expression($preStr) {
     $pattern = "/([a-z]+\s[0-9]+)/i"; // seperate by short_name
     $wordArray = preg_split($pattern, trim($preStr), -1, PREG_SPLIT_DELIM_CAPTURE);
+
+    echo "<pre><b>";
+    print_r($wordArray);
+    echo "</pre></b>";
     
     $expStr = "";
     $orFlag = false;
     foreach ($wordArray as $string) {
         if (trim($string) == "One of") {
             $orFlag = true;
+            continue;
         } 
         elseif (trim($string) == "," && $orFlag == true) {
             $expStr .= " || ";
+            continue;
         }
         elseif (trim($string) == ", or" && $orFlag == true) {
             $expStr .= " || ";
             $orFlag = false;
+            continue;
         }
-        else {
-            $expStr .= $string;
+
+        if (trim($string) == "and") {
+            $expStr .= " && ";
+            continue;
         }
+
+        if (trim($string) == "or") {
+            $expStr .= " || ";
+            continue;
+        }
+
+        // ignore case
+        if (trim($string) == "successful completion of ") {
+            continue;
+        }
+
+        $expStr .= $string;
     }
 
     return $expStr;
