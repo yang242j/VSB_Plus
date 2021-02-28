@@ -41,6 +41,7 @@ function str2Expression($preStr) {
     $chars = str_split($preStr);
     foreach ($chars as $char) {
         echo $char;
+        echo "<br>";
     }
 }
 
