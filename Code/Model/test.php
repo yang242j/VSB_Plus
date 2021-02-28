@@ -88,17 +88,17 @@ function str2Expression($preStr) {
 }
 
 function getStatus($expStr, $doneList) {
-    echo $expStr;
+    echo $expStr."<br>";
     
     // Basic
     if (preg_match("/([a-z]+\s[0-9]+)/i", $expStr) == 1){
-        echo "1 $expStr";
+        echo "1 $expStr <br>";
         return in_array($expStr, $doneList) ? 'true' : 'false';
     }
 
     // Remove ()
     if ($innerComp = preg_split("/[()]/i", $expStr)) {
-        echo "(inner) $innerComp";
+        echo "(inner) $innerComp <br>";
         return getStatus($innerComp[1], $doneList);
     }
 
@@ -106,7 +106,7 @@ function getStatus($expStr, $doneList) {
     $andComp = preg_split("/(&{2})/", $expStr);
     foreach ($andComp as $component) {
         if ($component) {
-            echo "and $component";
+            echo "and $component <br>";
             if (getStatus($component, $doneList) == false) return false;
         }
     }
@@ -115,7 +115,7 @@ function getStatus($expStr, $doneList) {
     $orComp = preg_split("/(|{2})/", $expStr);
     foreach ($andComp as $component) {
         if ($component) {
-            echo "or $component";
+            echo "or $component <br>";
             if (getStatus($component, $doneList) == true) return true;
         }
     }
