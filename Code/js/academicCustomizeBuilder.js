@@ -24,8 +24,8 @@ function test(data) {
 }
 function showCourses(data) {
     var i = 1;
-    document.getElementById("ct" + i).innerHTML = "asdasd";
     var dataJSON = JSON.parse(data);
+    document.getElementById("ct" + i).innerHTML = dataJSON[i].course_ID;
     for (i = 0; i < 12; i++) {
         document.getElementById("ct" + i).innerHTMl = " ";
         /*if (i > dataJSON.length) {
