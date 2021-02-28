@@ -1,11 +1,11 @@
 <?php
 
-$response = get_course_json("ENGG 401");
+$response = get_course_json($_POST["short_name"]);
 $resArr = array();
 $resArr = json_decode($response);
-echo "<pre>"; 
-print_r($resArr->prerequisite); 
-echo "</pre>";
+
+$preStr = $resArr->prerequisite; 
+$expStr = '';
 
 function get_course_json($short_name) {
     $url = "http://15.223.123.122/vsbp/Code/Model/course.php";
@@ -32,3 +32,17 @@ function get_course_json($short_name) {
 }
 
 ?>
+
+<html>
+<body>
+
+<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST">
+    Name: <input type="text" name="short_name"><br>
+    <input type="submit">
+</form>
+
+Prerequisites: <mark><pre><?php echo print_r($preStr); ?></pre></mark><br>
+Expression: <mark><pre><?php echo print_r($expStr); ?></pre></mark><br>
+
+</body>
+</html>
