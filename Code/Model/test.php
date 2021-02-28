@@ -91,7 +91,7 @@ function getStatus($expStr, $doneList) {
     echo $expStr."<br>";
     
     // Basic
-    if (preg_match("/([a-z]+\s[0-9]+)/i", $expStr) == 1){
+    if (preg_match_all("/([a-z]+\s[0-9]+)/i", $expStr) == 1){
         echo "1 $expStr <br>";
         return in_array($expStr, $doneList) ? 'true' : 'false';
     }
