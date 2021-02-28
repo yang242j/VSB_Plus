@@ -8,7 +8,7 @@ function fetchCourseJSON(sid, callback) {
        
     });
 }
-studentData = fetchCourseJSON(200362586,returnData);
+fetchCourseJSON(200362586,returnData);
 console.log(studentData);
 window.onload = function init() {
 }
@@ -17,5 +17,5 @@ function getSid() {
     return sid;
 }
 function returnData(data){
-   return data;
+   console.log(data);
 }
