@@ -12,6 +12,7 @@ window.onload = function init() {
 }
 function getSid() {
     var sid = document.getElementById("userId").innerHTML;
+    document.getElementById("ct0").innerHTML = "asdasd";
     return sid;
 }
 function test(data) {
@@ -19,10 +20,7 @@ function test(data) {
     var dataJSON = JSON.parse(data);
     console.log(dataJSON);
     btn.onclick = function () {
-
-       var x = document.getElementById("tc0").innerHTMl;
-       document.getElementById("tc0").innerHTMl = "asdasd";
-       console.log(x);
+       console.log(dataJSON[0]);
     }
 }
 function showCourses(data) {
