@@ -15,5 +15,5 @@ function getSid() {
     return sid;
 }
 function test(data){
-    var btn = doeument.getElementById("p1").innerHTML = "asdas";
+    var btn = document.getElementById("p1").innerHTML = "asdas";
 }
