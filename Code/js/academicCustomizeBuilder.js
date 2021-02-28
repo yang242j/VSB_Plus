@@ -22,7 +22,7 @@ function getTermData() {
     myRequest.open("GET", url, false);
     myRequest.onload = function () {
         var data = JSON.parse(myRequest.responseText);
-        courseReqData = data;
+        /*courseReqData = data;*/
     }
     myRequest.send();
 }
@@ -38,15 +38,14 @@ function findCourseToTake(data){
       /*console.log(data);
       console.log(courseReqData);*/
       var courseCompleted = [];
-      var courseNotCompleted;
+      var courseNotCompleted = [];
       for (i = 0; i<data.length;i++){
           courseCompleted[i] = data[i].course_ID;
-          console.log(courseCompleted);
       }
-
-      /*for (term in termData) {
+      console.log(courseCompleted);
+      console.log(courseReqData);
+      /*for (term in courseReqData) {
         if (term = "Approved") {
-            for (i = 0; i < 12; i++) {
                 document.getElementById("ct" + i).innerHTML = termData[term][i];
             }
         }
