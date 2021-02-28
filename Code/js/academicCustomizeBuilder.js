@@ -20,8 +20,8 @@ function test(data) {
     console.log(dataJSON);
     btn.onclick = function () {
 
-        console.log(dataJSON[0].course_ID);
-        document.getElementById("tc0").innerHTMl = "asdasd";
+       var x = document.getElementById("tc0").innerHTMl;
+        console.log(x);
     }
 }
 function showCourses(data) {
