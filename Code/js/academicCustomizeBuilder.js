@@ -61,7 +61,7 @@ function findCourseToTake(data) {
 function showCourses(data) {
     var dataJSON = JSON.parse(data);
     var notCompletedData = findCourseToTake(dataJSON);
-    console.log(notCompletedData);
+    /*console.log(notCompletedData);*/
     for (i = 0; i < 12; i++) {
         if (i < dataJSON.length) {
             document.getElementById("ct" + i).innerHTML = dataJSON[i].course_ID;
@@ -85,17 +85,16 @@ function btnForCourse(data) {
     var ctLeft = document.getElementById("ctLeft");
     var nctRight = document.getElementById("nctRight");
     var nctLeft = document.getElementById("nctLeft");
-    var dataJSON = JSON.parse(data);
-    var notCompletedData = findCourseToTake(dataJSON);
-    //console.log(dataJSON);
+    var completedData = JSON.parse(data);
+    var notCompletedData = findCourseToTake(completedData);
     ctRight.onclick = function () {
-       alert("asd");
+
     }
     ctLeft.onclick = function () {
-        
+        console.log(completedData);
     }
     nctRight.onclick = function () {
-        
+        console.log(notCompletedData);
     }
     nctLeft.onclick = function () {
         
