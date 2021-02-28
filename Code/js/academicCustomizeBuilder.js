@@ -13,7 +13,7 @@ window.onload = function init() {
     /*console.log(window.studentData);*/
 }
 window.studentId = getSid();
-console(window.studentId);
+console.log(window.studentId);
 function getSid() {
     var sid = document.getElementById("userId").innerHTML;
     return sid;
