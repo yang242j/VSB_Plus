@@ -21,11 +21,12 @@ function test(data) {
     btn.onclick = function () {
 
        var x = document.getElementById("tc0").innerHTMl;
-        console.log(x);
+       document.getElementById("tc0").innerHTMl = "asdasd";
+       console.log(x);
     }
 }
 function showCourses(data) {
-    alert("dasdasdas");
+    
     //document.getElementById("tc0").innerHTMl = "asdasd";
     /*var dataJSON = JSON.parse(data);
     for (i = 0; i < 12; i++) {
