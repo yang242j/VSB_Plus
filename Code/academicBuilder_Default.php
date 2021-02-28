@@ -226,7 +226,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                 <button class="right_arrow" id ="notCompletedRight" onclick = "nctRight()"><i class='fas fa-angle-right'></i></button>
             </div>
         </div>
-        <h3 id = "corner"><a href='academicBuilder_Builder.php'>Go to Schedule Builder</a></h3>
+        <!-- <h3 id = "corner"><a href='academicBuilder_Builder.php'>Go to Schedule Builder</a></h3> -->
 
     </div>
 </section>
