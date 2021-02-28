@@ -38,9 +38,28 @@ function get_course_json($short_name) {
 }
 
 function str2Expression($preStr) {
-    $pattern = "/[\s,.]/";
-    $wordArray = preg_split($pattern, trim($preStr));
-    return $wordArray;
+    $pattern = "/([a-z]+\s[0-9]+)/i"; // seperate by short_name
+    $wordArray = preg_split($pattern, trim($preStr), -1, PREG_SPLIT_DELIM_CAPTURE);
+    
+    $expStr = "";
+    $orFlag = false;
+    foreach ($wordArray as $string) {
+        if (trim($string) == "One of") {
+            $orFlag = true;
+        } 
+        elseif (trim($string) == "," && $orFlag == true) {
+            $expStr .= " || ";
+        }
+        elseif (trim($string) == ", or" && $orFlag == true) {
+            $expStr .= " || ";
+            $orFlag = false;
+        }
+        else {
+            $expStr .= $string;
+        }
+    }
+
+    return $expStr;
 }
 
 ?>
