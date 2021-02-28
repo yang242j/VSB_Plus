@@ -26,7 +26,6 @@ function getTermData() {
     }
     myRequest.send();
 }
-console.log(courseReqData);
 function test(data) {
     var btn = document.getElementById("p1");
     var dataJSON = JSON.parse(data);
@@ -35,8 +34,18 @@ function test(data) {
        console.log(dataJSON[0]);
     }
 }
+function findCourseToTake(data){
+      console.log(data);
+      console.log(courseReqData);
+
+
+
+
+}
+
 function showCourses(data) {
     var dataJSON = JSON.parse(data);
+    findCourseToTake(data);
     for (i = 0; i < 12; i++) {
         if (i < dataJSON.length) {
         document.getElementById("ct" + i).innerHTML = dataJSON[i].course_ID;
