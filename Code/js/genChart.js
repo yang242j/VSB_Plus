@@ -123,12 +123,13 @@ function genChart1(data, divId){
   var left_class = total_class - goodGrade - generalGrade - poorGrade; 
 
   //In case, there is no 'canvas' element in the html
-  if (!document.getElementById('chart')) {
-      $('#' + divId).html(createCanvas('chart', 100, 100));
+  var canvasID = divId + 'Chart';
+  if (!document.getElementById(canvasID)) {
+      $('#' + divId).html(createCanvas(canvasID, 100, 100));
   }
 
   // Get the canvas element to generate the graph
-  var ctx = document.getElementById("chart").getContext('2d');
+  var ctx = document.getElementById(canvasID).getContext('2d');
 
   // Set the data and color parameters
   data = {
@@ -192,12 +193,13 @@ function genChart2(data, divId){
     console.log(ave_grades);
 
     //In case, there is no 'canvas' element in the html
-    if (!document.getElementById('chart2')) {
-        $('#' + divId).html(createCanvas('chart2', 100, 100));
+    var canvasID = divId + 'Chart';
+    if (!document.getElementById(canvasID)) {
+        $('#' + divId).html(createCanvas(canvasID, 200, 100));
     }
   
     // Get the canvas element to generate the graph
-    var ctx = document.getElementById("chart2").getContext('2d');
+    var ctx = document.getElementById(canvasID).getContext('2d');
   
     var chart = new Chart(ctx, {
         type: 'bar',

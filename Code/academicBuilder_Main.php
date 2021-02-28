@@ -1,8 +1,9 @@
 <?php
 session_start();
- // Initialize the session
+// Initialize the session
+$sid = $_SESSION["sid"];
 ?>
-<!do
+
 <!doctype html>
 
 <html lang="en">
@@ -24,11 +25,14 @@ session_start();
 
     <script type="text/javascript" src="js/academicBuilder.js"></script>
     <script type="text/javascript" src="js/academicMain.js"></script>
+    <script type="text/javascript" src="js/genChart.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
     <script>
         $(document).ready(function() {
             $(".nav-right-2").hide();
         });
+        var sid = "<?php echo $sid; ?>";
     </script>
 </head>
 <style>
@@ -71,70 +75,54 @@ session_start();
         </div>
     </nav>
 
-    <div class="welcome_tag" id = "welcome">
-        <h1>Welcome UserName</h1>
+    <div class="welcome_tag" id="welcome">
+        <h2>Welcome <?php echo htmlspecialchars($_SESSION["name"]); ?></h2>
     </div>
-    <section class="user_summary_board">
-        <button class="right_arrow" onclick="pageUp()"><i class='fas fa-angle-right'></i></button>
-        <button class="left_arrow" onclick="pageDown()"><i class='fas fa-angle-left'></i></button>
-        <div class="summary_card" id="card1">
-            <h3>Credit Earned:</h3>
-            <p>120/136</p>
-            <p></p>
-        </div>
-        <div class="summary_card" id="card2">
-            <h3>Year:</h3>
-            <p>3rd</p>
-            <p></p>
-        </div>
-        <div class="summary_card" id="card3">
-            <h3>Course Left:</h3>
-            <p>6</p>
-            <p></p>
-        </div>
-        <div class="summary_card" id="card4">
-            <h3>GPA:</h3>
-            <p>3.6</p>
-            <p></p>
-        </div>
-    </section>
+
+    <div id="main_area">
+        <div id="summaryBoard" class="">
+            <h2 class="center textCenter"><label for="summary">Summary Board</label></h1>
+            <div class="static">
+                <button class="left arrow" onclick="pageDown()"><i class='fas fa-angle-left'></i></button>
+                <div id="summary" class="center inline">
+                    <div class="card textCenter">
+                        <h3>Credit Earned:</h3>
+                        <p>120/136</p>
+                    </div>
+                    <div class="card">
+                        <h3>Year:</h3>
+                        <p>3rd</p>
+                    </div>
+                    <div class="card">
+                        <h3>Course Left:</h3>
+                        <p>6</p>
+                    </div>
+                    <div class="card">
+                        <h3>GPA:</h3>
+                        <p>3.6</p>
+                    </div>
+                </div>
+                <button class="right arrow" onclick="pageUp()"><i class='fas fa-angle-right'></i></button>
+            </div>
 
 
-
-    <section class="summary_pie_graph">
-        <div class="graph_introduction">
-            <h2>Summary Pie Chart Intro</h2>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum ducimus, doloremque nulla eius reiciendis veritatis, enim accusantium voluptatem velit consequuntur neque autem, ullam deleniti itaque. Error repellat quam fugit dolor.</p>
+            <div id="lineChart"></div>
         </div>
 
-        <div class="graph">
-            <h2>Summary Pie Chart</h2>
-            <img class="photo" id="pie_chart" src="img/basic-pie-chart.png"></img>
+        <div id="pieChart"></div>
 
-        </div>
-    </section>
-    <section class="summary_line_graph">
-        <div class="graph">
-            <h2>Line Chart </h2>
-            <img class="photo" id="line_chart" src="img/trend_chart_sample.svg"></img>
-        </div>
-        <div class="graph_introduction">
-            <h2>Line Chart Intro</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur porro repudiandae ut voluptas culpa ab ipsam est numquam ea aperiam eligendi laboriosam similique, iusto beatae nesciunt amet exercitationem eius? Temporibus!</p>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis dolores, temporibus quaerat tempora, natus quam totam cupiditate magni omnis voluptatibus et provident. Ipsum autem laudantium blanditiis adipisci harum libero quidem?</p>
-            <h3 id = "corner"><a href='academicBuilder_Default.php'>Go to Default Schedule</a></h3>
-            <!-- <a class="menu-list" href="html/academicBuilderCDetail.html">Compeleted Course Detail Page</a>
-            <a class="menu-list" href="html/academicBuilder.html">academicBuilder page</a>
-            <a class="menu-list" href="html/academicBuilderTable.html">academicBuilder Table</a> -->
-        </div>
-    </section>
+    </div>
+
+
     <footer>
         <script src="js/main.js"></script>
-        
+
         <p class="copyright">Copyright &copy; Sep. 2020 to
-            <script>document.write(new Date().getFullYear())</script> UofR VSB_Plus Capstone Group All Rights Reserved<br>
+            <script>
+                document.write(new Date().getFullYear())
+            </script> UofR VSB_Plus Capstone Group All Rights Reserved<br>
             <cite>
-                Credit: 
+                Credit:
             </cite>
         </p>
         <p class="info-link"><a href="homePage.php">About Us</a></p>

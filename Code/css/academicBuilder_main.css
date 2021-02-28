@@ -1,187 +1,143 @@
-                    body {
-                        background-repeat: no-repeat;
-                        background-image: linear-gradient(#B2D9E7, white, white)
-                    }
-                    
-                    #welcome h1 {
-                        margin-left:-5px;
-                        text-align: left;
-                    }
-                    
+body {
+    background-repeat: no-repeat;
+    background-image: linear-gradient(#B2D9E7, white, white)
+}
 
-                    h2 {
-                        font-family: Monospace;
-                        font-size: 32px;
-                    }
-                    
-                    p {
-                        font-family: Sans-serif;
-                        font-size: 20px;
-                        text-align: justify;
-                        text-indent: 40px;
-                    }
-                    
-                    #pie_chart {
-                        width: 80%;
-                        height: 60%;
-                    }
-                    
-                    #line_chart {
-                        width: 90%;
-                        height: 80%;
-                        margin-top: -20px;
-                        margin-left: -30px;
-                    }
-                    
-                    body .user_summary_board {
-                        width: 40%;
-                        height: 100%;
-                        /* border: 2px solid red;*/
-                        display: grid;
-                        grid-template-columns: 32% 32%;
-                        grid-template-rows: 55% 55%;
-                        margin-left: 3%;
-                        column-gap: 20px;
-                        row-gap: 15px;
-                    }
-                    
-                    body .user_summary_board .summary_card {
-                        /*border: 2px solid blue;*/
-                        background-color: #D4F19F;
-                        border-radius: 25px;
-                        box-shadow: -2px 4px 7px 0px #555555;
-                        text-align: center;
-                    }
-                    
-                    body .user_summary_board .right_arrow {
-                        position: absolute;
-                        margin-top: 120px;
-                        margin-left: 26.8%;
-                        font-size: 36px;
-                        border: none;
-                        background-color: transparent;
-                    }
-                    
-                    body .user_summary_board .left_arrow {
-                        position: absolute;
-                        margin-top: 120px;
-                        margin-left: -3.5%;
-                        font-size: 36px;
-                        border: none;
-                        background-color: transparent;
-                    }
-                    
-                    body .summary_pie_graph {
-                        width: 65%;
-                        height: 50%;
-                        /*border: 2px solid red;*/
-                        margin-top: -300px;
-                        margin-left: 35%;
-                        display: grid;
-                        grid-template-columns: 50% 50%;
-                        grid-template-rows: 100%;
-                    }
-                    
-                    body .summary_pie_graph .graph_introduction {
-                        /*border: 2px solid blue;*/
-                        margin-left: 0;
-                        margin-top: -1%;
-                        text-align: center;
-                    }
-                    
-                    body .summary_pie_graph .graph {
-                        /*border: 2px solid blue;*/
-                        margin-top: -5%;
-                        margin-left: 0%;
-                        text-align: center;
-                    }
-                    
-                    body .summary_line_graph {
-                        width: 100%;
-                        height: 30%;
-                        /*border: 2px solid red;*/
-                        margin-top: -10px;
-                        margin-left: 0px;
-                        display: grid;
-                        grid-template-columns: 30% 70%;
-                        grid-template-rows: 100%;
-                    }
-                    
-                    body .summary_line_graph .graph {
-                        /*border: 2px solid blue;*/
-                        margin-left: -2%;
-                        margin-top: 0;
-                        text-align: center;
-                    }
-                    
-                    body .summary_line_graph .graph_introduction {
-                        /*border: 2px solid blue;*/
-                        margin-top: 0px;
-                        margin-left: 0%;
-                        text-align: center;
-                    }
-                    
-                    body .summary_line_graph h3 {
-                        /*border: 2px solid blue;*/
-                        font-size: 20px;
-                        width: 28%;
-                        margin-top: 2%;
-                        margin-left: 65%;
-                        border-radius: 50%;
-                        /*background-image: linear-gradient(#B2D9E7, white);*/
-                        background-color: #B2D9E7;
-                        box-shadow: 20px 10px 15px 10px #BBB7B7;
-                    }
-                    
-                    body .summary_line_graph #corner_arrow {
-                        display: inline-block;
-                        position: absolute;
-                        font-size: 50px;
-                        border: none;
-                        background-color: transparent;
-                        margin-left: 55%;
-                        margin-top: -4.62%;
-                    }
-                    /*@media only screen and (max-width: 1200px) {
-                         For desktop: 
-                        #pie_chart {
-                            width: 80%;
-                            height: 90%;
-                        }
-                        #line_chart {
-                            width: 80%;
-                            height: 90%;
-                        }
-                        .user_summary_board {
-                            width: 100%;
-                            height: 100%;
-                        }
-                        body .user_summary_board .summary_card {
-                            width: 100%;
-                            height: 100%;
-                        }
-                        .col-5 {
-                            width: 41.66%;
-                        }
-                        .col-6 {
-                            width: 50%;
-                        }
-                        .col-7 {
-                            width: 58.33%;
-                        }
-                        ß .col-8 {
-                            width: 66.66%;
-                        }
-                        .col-9 {
-                            width: 75%;
-                        }
-                        .col-10 {
-                            width: 83.33%;
-                        }
-                        .col-11 {
-                            width: 91.66%;
-                        }
-                        .col-12 {
-                            width: 100%;
-                        }
-                    }*/
+#welcome h1 {
+    /* margin-left:-5px; */
+    text-align: left;
+}
+
+h2 {
+    font-family: Monospace;
+    font-size: 32px;
+}
+
+p {
+    font-family: Sans-serif;
+    font-size: 20px;
+    text-align: justify;
+    /* text-indent: 40px; */
+}
+
+#main{
+    border: #2e39d6;
+    background-color: antiquewhite;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50vh 50vh;
+}
+
+
+
+
+#main_area{
+    /* border: #ef342a;
+    margin: 2.5%; */
+    height: 80vh;
+    display: grid;
+    grid-template-columns: 50% 45%;
+    grid-template-rows: 80vh;
+}
+
+#summaryBoard{
+    background-color: #B2D9E7;
+    display: inline;
+}
+
+#summary{
+    width: 80%;
+    height: 36%;
+    margin-left: 10%;
+    margin-right: 10%;
+    display: inline-grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+}
+
+#test{
+    display: inline-grid;
+}
+
+.card{
+    margin: 10px;
+    background-color: #D4F19F;
+    border-radius: 25px;
+    box-shadow: -2px 4px 7px 0px #555555;
+    text-align: center;
+}
+
+.center{
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    
+}
+
+.inline{
+    display: inline;
+}
+
+.textCenter{
+    text-align: center;
+}
+
+.static{
+    position: relative;
+}
+
+.arrow{
+    position: absolute;
+    margin-top: 9%;
+    font-size: 36px;
+    border: none;
+    background-color: transparent;
+}
+
+.right{
+    top: 22%;
+    right: 5%;
+}
+
+.left{
+    top: 22%;
+    left: 5%;
+}
+
+#pie{
+    /* background-color: #65fa92; */
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    /* grid-column-start: 1;
+    grid-column-end: 2;   */
+}
+
+#line{
+    /* margin-right: 5vw; */
+    background-color: #ef342a;
+    /* grid-column-start: 1;
+    grid-column-end: 2;   */
+}
+
+
+
+#pieChart {
+    margin-left: 10%;
+    /* width: 80%;
+    height: 60%; */
+}
+
+#lineChart {
+    margin-left: 3%;
+    width: 94%;
+    height: 80%;
+    /* width: 90%;
+    height: 80%;
+    margin-top: -20px;
+    margin-left: -30px; */
+}
