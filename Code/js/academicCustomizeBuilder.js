@@ -14,6 +14,6 @@ function getSid() {
     var sid = document.getElementById("userId").innerHTML;
     return sid;
 }
-function test(){
-    alert("asd");
+function test(data){
+    var btn = doeument.getElementById("p1").innerHTML = "asdas";
 }
