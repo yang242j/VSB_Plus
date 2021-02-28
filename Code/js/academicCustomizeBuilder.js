@@ -35,11 +35,22 @@ function test(data) {
     }
 }
 function findCourseToTake(data){
-      console.log(data);
-      console.log(courseReqData);
+      /*console.log(data);
+      console.log(courseReqData);*/
+      var courseCompleted = [];
+      var courseNotCompleted;
+      for (i = 0; i<dataJSON.length;i++){
+          courseCompleted[i] = dataJSON[i].course_ID;
+          console.log(courseCompleted);
+      }
 
-
-
+      /*for (term in termData) {
+        if (term = "Approved") {
+            for (i = 0; i < 12; i++) {
+                document.getElementById("ct" + i).innerHTML = termData[term][i];
+            }
+        }
+    }*/
 
 }
 
