@@ -61,8 +61,6 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         <a href="https://www.uregina.ca"><img src="img/logo.png" class="logo" alt="UofR"></a>
         <h1>Visual Schedule Builder Plus</h1>
     </header>
-    <p id = "userId"><?php echo htmlspecialchars($_SESSION["sid"]); ?></p>
-
     <nav>
         <div class="menu-icon" onclick="menuFunc1(this); menuFunc2('menu-list');">
             <div class="bar1"></div>
