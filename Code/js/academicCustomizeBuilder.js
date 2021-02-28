@@ -17,10 +17,10 @@ function getSid() {
 function test(data){
     var btn = document.getElementById("p1");
     var dataJSON = JSON.parse(data);
-    console.log(data);
+    console.log(dataJSON);
     btn.onclick = function (){
 
-
+        console.log(dataJSON[0])
 
 
     }
