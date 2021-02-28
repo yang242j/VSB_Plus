@@ -20,7 +20,7 @@ function test(data){
     console.log(dataJSON);
     btn.onclick = function (){
 
-        console.log(dataJSON[0])
+        console.log(dataJSON[0]);
 
 
     }
