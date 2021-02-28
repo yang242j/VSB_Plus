@@ -1,14 +1,16 @@
 var studentData;
 function fetchCourseJSON(sid) {
     // alert(sid);
-    $.post('Model/takenClass.php', { sid: sid, password: sid }, function (data) {
-       window.studentData = 1;      
+   return $.post('Model/takenClass.php', { sid: sid, password: sid }, function (data) {
+           
     });
 }
-console.log(window.studentData);
+
 window.onload = function init() {
-    /*fetchCourseJSON(200362586,returnData);
-    console.log(window.studentData);*/
+    fetchCourseJSON(short_name).done(function(result1) {
+        var course_json = JSON.parse(result1);
+        console.log(course_json);
+    });
 }
 function getSid() {
     var sid = document.getElementById("userId").innerHTML;
