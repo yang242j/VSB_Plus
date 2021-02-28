@@ -38,6 +38,7 @@ function findCourseToTake(data) {
     /*console.log(data);
     console.log(courseReqData);*/
     var courseCompleted = [];
+    var courseToTake = [];
     var courseNotCompleted = [];
     for (i = 0; i < data.length; i++) {
         courseCompleted[i] = data[i].course_ID;
@@ -47,16 +48,15 @@ function findCourseToTake(data) {
     for (term in courseReqData) {
         for (i = 0; i < courseReqData[term].length; i++) {
             if (courseReqData[term][i] != "Approved") {
-                courseNotCompleted.push(courseReqData[term][i]);
+                courseToTake.push(courseReqData[term][i]);
             }
         }
-       /* if (term == "Approved")
-        {
-            for (i = 0; i < courseReqData[term].length; i++) {
-                courseNotCompleted.push(courseReqData[term][i]);
-            }
-        }*/
     }
+    console.log(courseToTake);
+
+    var courseNotCompleted = courseToTake.filter(function(n) {
+        return courseCompleted.indexOf(n) !== -1;
+    });
     console.log(courseNotCompleted);
 }
 
