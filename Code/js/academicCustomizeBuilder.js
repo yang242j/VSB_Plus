@@ -1,4 +1,4 @@
-
+var studentData;
 function fetchCourseJSON(sid, callback) {
     // alert(sid);
     $.post('Model/takenClass.php', { sid: sid, password: sid }, function (data) {
@@ -7,8 +7,8 @@ function fetchCourseJSON(sid, callback) {
     });
 }
 window.onload = function init() {
-    fetchCourseJSON(200362586,returnData);
-    console.log(window.studentData);
+    /*fetchCourseJSON(200362586,returnData);
+    console.log(window.studentData);*/
 }
 function getSid() {
     var sid = document.getElementById("userId").innerHTML;
@@ -16,5 +16,7 @@ function getSid() {
 }
 function returnData(data){
    /*console.log(data);*/
-   window.studentData = data;
+   studentData = data;
 }
+returnData(2333);
+console.log(studentData);
