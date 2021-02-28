@@ -9,8 +9,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $resArr = array();
     $resArr = json_decode($response);
                                         // ENGG 401
-    $preStr = $resArr->prerequisite;   // One of ENEL 400, ENEV 400, ENIN 400, ENPE 400, or ENSE 400
-    $expStr = str2Expression($preStr); // ENEL 400 || ENEV 400 || ENIN 400 || ENPE 400 || ENSE 400
+    //$preStr = $resArr->prerequisite;   // One of ENEL 400, ENEV 400, ENIN 400, ENPE 400, or ENSE 400
+    //$expStr = str2Expression($preStr); // ENEL 400 || ENEV 400 || ENIN 400 || ENPE 400 || ENSE 400
+    $preStr = "One of ENEL 400, ENEV 400, ENIN 400, ENPE 400, or ENSE 400";
+    $expStr = "ENEL 400 || ENEV 400 || ENIN 400 || ENPE 400 || ENSE 400";
     $status = getStatus($expStr, $doneList); // True or False
 
 }
@@ -89,7 +91,7 @@ function getStatus($expStr, $doneList) {
     
     // Basic
     if (preg_match("/([a-z]+\s[0-9]+)/i", $expStr) == 1)
-        return in_array($expStr, $doneList);
+        return in_array($expStr, $doneList) ? true : false;
 
     // Remove ()
     if ($innerComp = preg_split("/[()]/i", $expStr)) {
