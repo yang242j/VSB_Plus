@@ -9,6 +9,9 @@ function fetchCourseJSON(sid) {
 
 window.onload = function init() {
     fetchCourseJSON("200362586");
+    getSid();
 }
+function getSid(){
 alert("dasdas");
-document.getElementById("usertext").innerHTML = "Esad";
+document.getElementById("userId").innerHTML = "Esad";
+}
