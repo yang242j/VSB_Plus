@@ -9,8 +9,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $resArr = json_decode($response);
 
     $preStr = $resArr->prerequisite; 
-    $expStr = '';
-    
+    $expStr = str2Expression($preStr);
+
 }
 
 function get_course_json($short_name) {
@@ -37,6 +37,11 @@ function get_course_json($short_name) {
     return $content;
 }
 
+function str2Expression($preStr) {
+    $chars = str_split($str);
+    return $chars;
+}
+
 ?>
 
 <html>
@@ -47,8 +52,8 @@ function get_course_json($short_name) {
     <input type="submit">
 </form>
 
-Prerequisites: <mark><pre><?php echo print_r($preStr); ?></pre></mark><br>
-Expression: <mark><pre><?php echo print_r($expStr); ?></pre></mark><br>
+Prerequisites: <pre><mark><b><?php echo print_r($preStr); ?></b></mark></pre><br>
+Expression: <pre><mark><b><?php echo print_r($expStr); ?></b></mark></pre><br>
 
 </body>
 </html>
