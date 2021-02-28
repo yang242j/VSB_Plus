@@ -11,11 +11,10 @@ function fetchCourseJSON(sid) {
 window.onload = function init() {
     studentId = getSid();
     studentData = fetchCourseJSON(studentId);
+    console.log(studentData);
 }
 function getSid() {
     var sid = document.getElementById("userId").innerHTML;
     return sid;
 }
 
-console.log(studentId);
-console.log(studentData);
