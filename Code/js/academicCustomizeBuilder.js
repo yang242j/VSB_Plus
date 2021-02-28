@@ -16,7 +16,6 @@ function getSid() {
 }
 function test(data) {
     var btn = document.getElementById("p1");
-    document.getElementById("p1").innerHTML = "asdas";
     var dataJSON = JSON.parse(data);
     console.log(dataJSON);
     btn.onclick = function () {
@@ -26,7 +25,7 @@ function test(data) {
 }
 function showCourses(data) {
     alert("dasdasdas");
-    document.getElementById("tc0").innerHTMl = " ";
+    document.getElementById("tc0").innerHTMl = "asdasd";
     /*var dataJSON = JSON.parse(data);
     for (i = 0; i < 12; i++) {
         document.getElementById("tc" + i).innerHTMl = " ";
