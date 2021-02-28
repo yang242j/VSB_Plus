@@ -130,7 +130,7 @@ function getStatus($expStr, $doneList) {
 Done List: <pre><mark><b><?php print_r($doneList); ?></b></mark></pre><br>
 Prerequisites: <pre><mark><b><?php print_r($preStr); ?></b></mark></pre><br>
 Expression: <pre><mark><b><?php print_r($expStr); ?></b></mark></pre><br>
-Status: <mark><b><?php print_r($status); ?></b></mark>
+Status: <pre><mark><b><?php print_r($status); ?></b></mark></pre><br>
 
 </body>
 </html>
