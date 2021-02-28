@@ -98,7 +98,7 @@ function getStatus($expStr, $doneList) {
 
     // Remove ()
     if ($innerComp = preg_split("/[()]/i", $expStr)) {
-        echo "(inner) $innerComp <br>";
+        echo "(inner)". $innerComp[1] ."<br>";
         return getStatus($innerComp[1], $doneList);
     }
 
