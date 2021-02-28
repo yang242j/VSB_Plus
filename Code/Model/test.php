@@ -88,6 +88,7 @@ function str2Expression($preStr) {
 }
 
 function getStatus($expStr, $doneList) {
+    print_r($expStr);
     
     // Basic
     if (preg_match("/([a-z]+\s[0-9]+)/i", $expStr) == 1)
