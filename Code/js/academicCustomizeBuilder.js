@@ -17,5 +17,6 @@ function getSid() {
     return sid;
 }
 function returnData(data){
-   console.log(data);
+   /*console.log(data);*/
+   studentData = data;
 }
