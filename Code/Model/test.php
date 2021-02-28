@@ -3,7 +3,9 @@
 $response = get_course_json("ENGG 401");
 $resArr = array();
 $resArr = json_decode($response);
-echo "<pre>"; print_r($resArr); echo "</pre>";
+echo "<pre>"; 
+print_r($resArr.prerequisite); 
+echo "</pre>";
 
 function get_course_json($short_name) {
     $url = "http://15.223.123.122/vsbp/Code/Model/course.php";
