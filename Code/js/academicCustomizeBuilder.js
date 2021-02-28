@@ -16,10 +16,10 @@ function getSid() {
 }
 function test(data){
     var btn = document.getElementById("p1");
-    console.log(data[0]);
+    console.log(data);
     btn.onclick = function (){
 
-        alert("sdas");
+        alert(data[0]);
 
 
 
