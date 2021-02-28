@@ -92,7 +92,7 @@ function getStatus($expStr, $doneList) {
     
     // Basic
     if (preg_match("/([a-z]+\s[0-9]+)/i", $expStr) == 1)
-        return in_array($expStr, $doneList) ? true : false;
+        return in_array($expStr, $doneList) ? 'true' : 'false';
 
     // Remove ()
     if ($innerComp = preg_split("/[()]/i", $expStr)) {
