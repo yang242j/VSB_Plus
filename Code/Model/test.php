@@ -39,7 +39,7 @@ function get_course_json($short_name) {
 
 function str2Expression($preStr) {
     $pattern = "/[\s,.]/";
-    $wordArray = preg_split($pattern, $preStr);
+    $wordArray = preg_split($pattern, trim($preStr));
     return $wordArray;
 }
 
