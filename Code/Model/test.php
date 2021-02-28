@@ -4,7 +4,7 @@ $preStr = $expStr = '';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    $response = get_course_json($_POST["short_name"]);
+    $response = get_course_json(trim($_POST["short_name"]));
     $resArr = array();
     $resArr = json_decode($response);
 
