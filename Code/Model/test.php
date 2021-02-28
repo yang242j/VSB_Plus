@@ -1,6 +1,6 @@
 <?php
 
-$preStr = $expStr = '';
+$preStr = $expStr = $status = '';
 $doneList = array('MATH 100', 'CHEM 104', 'CS 110', 'ENGG 100', 'MATH 110', 'ENGG 123', 'MATH 122', 'PHYS 109', 'STAT 160', 'PHYS 119', 'CS 115', 'MATH 217', 'ENEL 280', 'MATH 213');
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
