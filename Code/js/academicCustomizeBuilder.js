@@ -9,13 +9,13 @@ function fetchCourseJSON(sid) {
 }
 
 window.onload = function init() {
-}
-getSid();
-fetchCourseJSON(sid);
-function getSid() {
-    var sid = document.getElementById("userId").innerHTML;
-    studentId = sid;
-    alert(sid);
+    getSid();
+    console.log(getSid());
 }
 
-console.log(studentData);
+function getSid() {
+    var sid = document.getElementById("userId").innerHTML;
+    alert(sid);
+    return sid;
+}
+
