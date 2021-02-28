@@ -91,11 +91,14 @@ function getStatus($expStr, $doneList) {
     print_r($expStr);
     
     // Basic
-    if (preg_match("/([a-z]+\s[0-9]+)/i", $expStr) == 1)
+    if (preg_match("/([a-z]+\s[0-9]+)/i", $expStr) == 1){
+        print_r("1 $expStr");
         return in_array($expStr, $doneList) ? 'true' : 'false';
+    }
 
     // Remove ()
     if ($innerComp = preg_split("/[()]/i", $expStr)) {
+        print_r("(inner) $innerComp");
         return getStatus($innerComp[1], $doneList);
     }
 
@@ -103,6 +106,7 @@ function getStatus($expStr, $doneList) {
     $andComp = preg_split("/(&{2})/", $expStr);
     foreach ($andComp as $component) {
         if ($component) {
+            print_r("and $component");
             if (getStatus($component, $doneList) == false) return false;
         }
     }
@@ -111,6 +115,7 @@ function getStatus($expStr, $doneList) {
     $orComp = preg_split("/(|{2})/", $expStr);
     foreach ($andComp as $component) {
         if ($component) {
+            print_r("or $component");
             if (getStatus($component, $doneList) == true) return true;
         }
     }
