@@ -25,6 +25,7 @@ function test(data) {
 }
 function showCourses(data) {
     alert("dasdasdas");
+    document.getElementById("tc0").innerHTMl = " ";
     /*var dataJSON = JSON.parse(data);
     for (i = 0; i < 12; i++) {
         document.getElementById("tc" + i).innerHTMl = " ";
