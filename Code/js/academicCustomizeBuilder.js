@@ -16,6 +16,7 @@ function getSid() {
 }
 function test(data) {
     var btn = document.getElementById("p1");
+    document.getElementById("p1").innerHTML = "asdas";
     var dataJSON = JSON.parse(data);
     console.log(dataJSON);
     btn.onclick = function () {
