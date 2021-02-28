@@ -5,8 +5,12 @@ function fetchCourseJSON(sid) {
         console.log(data);
      });
 }
+
 window.onload = function init() {
     fetchCourseJSON("200362586");
+    getSid();
 }
 
-// document.getElementById('course_cards_builder').innerHTML = "ENSE";
+function getSid (){
+     document.getElementById("studentIdContainer").innerHTML = "ENSE";
+}

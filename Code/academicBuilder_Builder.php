@@ -1,8 +1,6 @@
 <?php
 session_start();// Initialize the session
 
-$sid = $_SESSION["sid"];
-
 // Check if the user is logged in, if not then redirect him to login page
 if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     header("location: login.php");
@@ -43,7 +41,8 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 </style>
 <body>
 
-<input type="text" value = "<?php echo htmlspecialchars($_SESSION["sid"]); ?>">
+<input type="text" id = "studentIdContainer" value = "<?php echo htmlspecialchars($_SESSION["sid"]); ?>">
+<a href="Model/takenClass.php">takenClass</a>
 
 <?php
     // Check if the user is logged in, if not then hide nav-right div
@@ -93,8 +92,6 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             <a href="signup.php">SignUp</a>
         </div>
     </nav>
-
-
 
 
 <section class = "terms" id = "block" style="float:left;">
