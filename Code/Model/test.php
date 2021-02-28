@@ -11,6 +11,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                         // ENGG 401
     $preStr = $resArr->prerequisite;   // One of ENEL 400, ENEV 400, ENIN 400, ENPE 400, or ENSE 400
     $expStr = str2Expression($preStr); // ENEL 400 || ENEV 400 || ENIN 400 || ENPE 400 || ENSE 400
+    $status = getStatus($expStr, $doneList); // True or False
 
 }
 
