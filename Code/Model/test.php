@@ -49,7 +49,7 @@ function str2Expression($preStr) {
 <body>
 
 <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST">
-    Name: <input type="text" name="short_name"><br>
+    Name: <input type="text" name="short_name" value="<?php echo $_POST["short_name"]; ?>"><br>
     <input type="submit">
 </form>
 
