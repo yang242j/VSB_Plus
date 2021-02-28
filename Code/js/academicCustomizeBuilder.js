@@ -7,9 +7,9 @@ function fetchCourseJSON(sid) {
         window.studentData = data;
     });
 }
-
+fetchCourseJSON(getSid());
 window.onload = function init() {
-    studentId = getSid();
+    //studentId = getSid();
     console.log(window.studentData);
 }
 
