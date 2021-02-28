@@ -40,7 +40,7 @@ function findCourseToTake(data){
       var courseCompleted = [];
       var courseNotCompleted;
       for (i = 0; i<data.length;i++){
-          courseCompleted[i] = dataJSON[i].course_ID;
+          courseCompleted[i] = data[i].course_ID;
           console.log(courseCompleted);
       }
 
