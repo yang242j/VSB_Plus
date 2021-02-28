@@ -22,7 +22,7 @@ function getTermData() {
     myRequest.open("GET", url, false);
     myRequest.onload = function () {
         var data = JSON.parse(myRequest.responseText);
-        /*courseReqData = data;*/
+        courseReqData = data;
     }
     myRequest.send();
 }
