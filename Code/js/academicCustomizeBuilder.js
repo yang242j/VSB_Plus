@@ -23,8 +23,8 @@ function test(data) {
     }
 }
 function showCourses(data) {
-    
-    document.getElementById("ct1").innerHTML = "asdasd";
+    var i = 1;
+    document.getElementById("ct" + i).innerHTML = "asdasd";
     var dataJSON = JSON.parse(data);
     for (i = 0; i < 12; i++) {
         document.getElementById("ct" + i).innerHTMl = " ";
