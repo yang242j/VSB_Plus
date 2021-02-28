@@ -1,4 +1,4 @@
-var studentData;
+var studentData ;
 var studentId;
 function fetchCourseJSON(sid) {
     // alert(sid);
@@ -11,14 +11,12 @@ window.onload = function init() {
     studentId = getSid();
     console.log(fetchCourseJSON(studentId));
 }
+console.log(studentId);
 function getSid() {
     var sid = document.getElementById("userId").innerHTML;
     return sid;
 }
 function showCompletedCourse(){
-
-
-
 
 
 }

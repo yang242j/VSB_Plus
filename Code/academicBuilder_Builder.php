@@ -222,6 +222,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 </section>
 <footer>
     <script src="js/main.js"></script>
+    <script src ="js/academicCustomizeBuilder.js"></script>
     
     <p class="copyright">Copyright &copy; Sep. 2020 to
         <script>document.write(new Date().getFullYear())</script> UofR VSB_Plus Capstone Group All Rights Reserved<br>
