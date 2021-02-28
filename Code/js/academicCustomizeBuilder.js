@@ -7,7 +7,7 @@ function fetchCourseJSON(sid) {
 }
 
 window.onload = function init() {
-    fetchCourseJSON(short_name).done(function(result1) {
+    fetchCourseJSON(200362582).done(function(result1) {
         var course_json = JSON.parse(result1);
         console.log(course_json);
     });
