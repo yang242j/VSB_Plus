@@ -39,7 +39,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 <style>
 </style>
 <body>
-<p id = "userId" type = "hidden"><?php echo htmlspecialchars($_SESSION["sid"]); ?></p>
+<p id = "userId" hidden><?php echo htmlspecialchars($_SESSION["sid"]); ?></p>
 
 <?php
     // Check if the user is logged in, if not then hide nav-right div
