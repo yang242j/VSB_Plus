@@ -5,17 +5,17 @@ function fetchCourseJSON(sid) {
     $.post('Model/takenClass.php', { sid: sid, password: sid }, function (data) {
         studentData = data;
         console.log(data);
-     });
+    });
 }
 
 window.onload = function init() {
-    getSid();
 }
+getSid();
 fetchCourseJSON(sid);
-function getSid(){
-var sid = document.getElementById("userId").innerHTML;
-studentId = sid;
-alert(sid);
+function getSid() {
+    var sid = document.getElementById("userId").innerHTML;
+    studentId = sid;
+    alert(sid);
 }
 
 console.log(studentData);
