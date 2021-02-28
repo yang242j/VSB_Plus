@@ -14,10 +14,10 @@ h2 {
 }
 
 p {
-    font-family: Sans-serif;
+    /* font-family: Sans-serif;
     font-size: 20px;
     text-align: justify;
-    /* text-indent: 40px; */
+    text-indent: 40px; */
 }
 
 #main{
