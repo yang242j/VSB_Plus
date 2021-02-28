@@ -4,7 +4,7 @@ $response = get_course_json("ENGG 401");
 $resArr = array();
 $resArr = json_decode($response);
 echo "<pre>"; 
-print_r($resArr.prerequisite); 
+print_r($resArr->prerequisite); 
 echo "</pre>";
 
 function get_course_json($short_name) {
