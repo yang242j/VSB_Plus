@@ -1,6 +1,6 @@
 <?php
 
-$response = get_web_page("ENGG 401");
+$response = get_course_json("ENGG 401");
 $resArr = array();
 $resArr = json_decode($response);
 echo "<pre>"; print_r($resArr); echo "</pre>";
