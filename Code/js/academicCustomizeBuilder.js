@@ -20,7 +20,7 @@ function test(data){
     console.log(data);
     btn.onclick = function (){
 
-        alert(data[0]);
+        alert(data.courseIndex);
 
 
 
