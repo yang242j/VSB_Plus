@@ -173,19 +173,19 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         <div class = "course_completed"><h3>Course Completed</h3></div>
         <div class = "course_tag_completed">
             <p id = "ct0">ENSE 271</p>
-            <p id = "tc1">ENSE 271</p>
-            <p id = "tc2">ENSE 271</p>
-            <p id = "tc3">ENSE 271</p>
+            <p id = "ct1">ENSE 271</p>
+            <p id = "ct2">ENSE 271</p>
+            <p id = "ct3">ENSE 271</p>
 
-            <p id = "tc4">ENSE 271</p>
-            <p id = "tc5">ENSE 271</p>
-            <p id = "tc6">ENSE 271</p>
-            <p id = "tc7">ENSE 271</p>
+            <p id = "ct4">ENSE 271</p>
+            <p id = "ct5">ENSE 271</p>
+            <p id = "ct6">ENSE 271</p>
+            <p id = "ct7">ENSE 271</p>
 
-            <p id = "tc8">ENSE 271</p>
-            <p id = "tc9">ENSE 271</p>
-            <p id = "tc10">ENSE 271</p>
-            <p id = "tc11">ENSE 271</p>
+            <p id = "ct8">ENSE 271</p>
+            <p id = "ct9">ENSE 271</p>
+            <p id = "ct10">ENSE 271</p>
+            <p id = "ct11">ENSE 271</p>
             <div><button class="right_arrow" id ="p1"><i class='fas fa-angle-left'></i></button>
                 <button class="right_arrow" id ="p2"><i class='fas fa-angle-right'></i></button></div>
 
