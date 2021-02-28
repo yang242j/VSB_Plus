@@ -43,13 +43,14 @@ function findCourseToTake(data){
           courseCompleted[i] = data[i].course_ID;
       }
       console.log(courseCompleted);
-      console.log(courseReqData);
-      /*for (term in courseReqData) {
-        if (term = "Approved") {
-                document.getElementById("ct" + i).innerHTML = termData[term][i];
+      for (term in courseReqData) {
+        if (courseReqData[term][i] != "Approved") {
+            for (i=0;i<courseReqData[term].length;i++)
+            courseNotCompleted[i] = courseReqData[term][i];
             }
         }
-    }*/
+      console.log(courseNotCompleted);
+    }
 
 }
 
