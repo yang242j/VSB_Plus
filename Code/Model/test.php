@@ -38,7 +38,7 @@ function get_course_json($short_name) {
 }
 
 function str2Expression($preStr) {
-    $chars = str_split($str);
+    $chars = str_split($preStr);
     foreach ($chars as $char) {
         echo $char;
     }
