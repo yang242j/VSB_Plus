@@ -41,8 +41,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 </style>
 <body>
 
-<input type="text" id = "studentIdContainer" value = "<?php echo htmlspecialchars($_SESSION["sid"]); ?>">
-<a href="Model/takenClass.php">takenClass</a>
+<a type="text" id = "studentIdContainer" value = "<?php echo htmlspecialchars($_SESSION["sid"]); ?>"></a>
 
 <?php
     // Check if the user is logged in, if not then hide nav-right div
