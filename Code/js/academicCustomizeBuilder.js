@@ -21,6 +21,7 @@ function test(data) {
     btn.onclick = function () {
 
         console.log(dataJSON[0].course_ID);
+        document.getElementById("tc0").innerHTMl = "asdasd";
     }
 }
 function showCourses(data) {

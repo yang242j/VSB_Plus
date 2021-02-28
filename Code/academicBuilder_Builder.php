@@ -161,6 +161,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 
 
 <section class = "tags_courses" id ="block" style="float:right;">  
+<script src ="js/academicCustomizeBuilder.js"></script>
 
     <div class = "icons_annotation" id = "builder_icon">
         <div class ="icons" style='font-size:14px;color:red'>---- Strongly Recommend</div>
