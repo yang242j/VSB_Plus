@@ -3,11 +3,11 @@ var studentId;
 function fetchCourseJSON(sid) {
     // alert(sid);
     $.post('Model/takenClass.php', { sid: sid, password: sid }, function (data) {
-        /*console.log(data);*/
+        console.log(data);
         return data;
     });
 }
-studentData = fetchCourseJSON(200362586);
+fetchCourseJSON(200362586);
 console.log(getSid());
 window.onload = function init() {
 }
