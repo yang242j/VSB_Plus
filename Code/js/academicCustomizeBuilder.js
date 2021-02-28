@@ -77,8 +77,14 @@ function showCourses(data) {
         else {
             document.getElementById("ct" + i).innerHTML = " ";
         }
-
-
+    }
+    for (i = 0; i < 12; i++) {
+        if (i < notCompletedData.length) {
+            document.getElementById("nct" + i).innerHTML = notCompletedData[i];
+        }
+        else {
+            document.getElementById("nct" + i).innerHTML = " ";
+        }
     }
 
 }
