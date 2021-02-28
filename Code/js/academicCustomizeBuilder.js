@@ -1,5 +1,6 @@
 var studentData;
 var courseReqData;
+//fetch JSON data from takenClass database
 function fetchCourseJSON(sid) {
     // alert(sid);
     $.post('Model/takenClass.php', { sid: sid, password: sid }, function (data) {
@@ -11,10 +12,12 @@ getTermData();
 window.onload = function init() {
     fetchCourseJSON(getSid());
 }
+// get student ID form academac_builder
 function getSid() {
     var sid = document.getElementById("userId").innerHTML;
     return sid;
 }
+// get faculty needed course
 function getTermData() {
     var myRequest = new XMLHttpRequest;
     var faculty = "ESE";
@@ -26,6 +29,7 @@ function getTermData() {
     }
     myRequest.send();
 }
+// next page button
 function test(data) {
     var btn = document.getElementById("p1");
     var dataJSON = JSON.parse(data);
@@ -34,6 +38,7 @@ function test(data) {
         console.log(dataJSON[0]);
     }
 }
+//minus taken class from all course list
 function findCourseToTake(data) {
     /*console.log(data);
     console.log(courseReqData);*/
@@ -44,7 +49,7 @@ function findCourseToTake(data) {
         courseCompleted[i] = data[i].course_ID;
     }
     //console.log(courseCompleted);
-    console.log(courseReqData);
+    //console.log(courseReqData);
     for (term in courseReqData) {
         for (i = 0; i < courseReqData[term].length; i++) {
             if (courseReqData[term][i] != "Approved") {
@@ -52,18 +57,19 @@ function findCourseToTake(data) {
             }
         }
     }
-    console.log(courseToTake);
-
+    //console.log(courseToTake);
+   // minus taken class from all course list
     var courseNotCompleted = courseToTake.filter(function(n) {
         return courseCompleted.indexOf(n) === -1;
     });
-    console.log(courseNotCompleted);
+    return courseNotCompleted;
 }
 
 
 function showCourses(data) {
     var dataJSON = JSON.parse(data);
-    findCourseToTake(dataJSON);
+    var notCompletedData = findCourseToTake(dataJSON);
+    console.log(notCompletedData);
     for (i = 0; i < 12; i++) {
         if (i < dataJSON.length) {
             document.getElementById("ct" + i).innerHTML = dataJSON[i].course_ID;
