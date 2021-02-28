@@ -149,6 +149,11 @@ nav .nav-right #addon-menu {
 }
 /********************************/
 
+body {
+    background-repeat: no-repeat;
+    background-image: linear-gradient(#B2D9E7, white, white)
+}
+
 body .container {
     margin-top: 2%;
     /*min-height: 400px;
