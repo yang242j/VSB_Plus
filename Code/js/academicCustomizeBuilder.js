@@ -24,12 +24,13 @@ function test(data) {
     }
 }
 function showCourses(data) {
-    var dataJSON = JSON.parse(data);
+    alert("dasdasdas");
+    /*var dataJSON = JSON.parse(data);
     for (i = 0; i < 12; i++) {
         document.getElementById("tc" + i).innerHTMl = " ";
         if (i > dataJSON.length) {
             document.getElementById("tc" + i).innerHTMl = dataJSON[i].course_ID;
         }
-    }
+    }*/
 
 }
