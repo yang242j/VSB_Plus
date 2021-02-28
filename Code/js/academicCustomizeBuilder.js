@@ -7,14 +7,13 @@ function fetchCourseJSON(sid) {
         window.studentData = data;
     });
 }
-
 window.onload = function init() {
-    window.studentId = getSid();
-    fetchCourseJSON(window.studentId);
-    console.log(window.studentData);
+    //window.studentId = getSid();
+    /*fetchCourseJSON(window.studentId);*/
+    /*console.log(window.studentData);*/
 }
-
-console.log(window.studentId);
+window.studentId = getSid();
+console(window.studentId);
 function getSid() {
     var sid = document.getElementById("userId").innerHTML;
     return sid;
