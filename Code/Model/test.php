@@ -38,11 +38,9 @@ function get_course_json($short_name) {
 }
 
 function str2Expression($preStr) {
-    $chars = str_split($preStr);
-    foreach ($chars as $char) {
-        echo $char;
-        echo "<br>";
-    }
+    $pattern = "/[\s,.]/";
+    $wordArray = preg_split($pattern, $preStr);
+    return $wordArray;
 }
 
 ?>
@@ -55,8 +53,8 @@ function str2Expression($preStr) {
     <input type="submit">
 </form>
 
-Prerequisites: <pre><mark><b><?php echo print_r($preStr); ?></b></mark></pre><br>
-Expression: <pre><mark><b><?php echo print_r($expStr); ?></b></mark></pre><br>
+Prerequisites: <pre><mark><b><?php print_r($preStr); ?></b></mark></pre><br>
+Expression: <pre><mark><b><?php print_r($expStr); ?></b></mark></pre><br>
 
 </body>
 </html>
