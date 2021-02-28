@@ -10,7 +10,7 @@ function fetchCourseJSON(sid) {
 
 window.onload = function init() {
     fetchCourseJSON("200362586");
-    console.log(window.studentData);
+    console.log(studentData);
     
 }
 function getSid() {
