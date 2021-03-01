@@ -90,7 +90,7 @@ function btnForCourse(data) {
 
     var counterForCompleted = 0;
     var counterForNotCompleted = 0;
-
+  console.log(completedData);
     ctRight.onclick = function () {
         var i = 0;
         if (completedData[i + 12 * counterForCompleted].course_ID != null) {
