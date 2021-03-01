@@ -206,7 +206,7 @@ function changeCalendarAndExam(oldCombo, newcombo, cardId, cardStyle, term) {
                         appendCalendar(lec_arr, "Lecture", BGC); // appendd new lecture section into calendar
                     } else {
                         console.log(lec_arr);
-                        console.log(lec_arr.length);
+                        console.log(Object.keys(lec_arr).length);
                         console.warn("Lecture " + short_name + " have no match section_num");
                     }
                 } catch (error) {
