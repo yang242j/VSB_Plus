@@ -161,7 +161,6 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 
 
 <section class = "tags_courses" id ="block" style="float:right;">  
-<script src ="js/academicCustomizeBuilder.js"></script>
 
     <div class = "icons_annotation" id = "builder_icon">
         <div class ="icons" style='font-size:14px;color:red'>---- Strongly Recommend</div>
@@ -213,7 +212,6 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             <div><button class="right_arrow" id ="nctLeft"><i class='fas fa-angle-left'></i></button>
                 <button class="left_arrow" id ="nctRight"><i class='fas fa-angle-right'></i></button>
             </div>
-            <script src ="js/academicCustomizeBuilder.js"></script>
         </div>
         <!-- <h3 id = "corner"><a href='academicBuilder_Main.php'>Go to academic main</a></h3>
         <h3 id = "corner"><a href='academicBuilder_Default.php'>Go to Default Schedule</a></h3> -->
@@ -222,7 +220,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 </section>
 <footer>
     <script src="js/main.js"></script>
-    <script src ="js/academicCustomizeBuilder.js"></script>
+    <script type="text/javascript" src ="js/academicCustomizeBuilder.js"></script>
     
     <p class="copyright">Copyright &copy; Sep. 2020 to
         <script>document.write(new Date().getFullYear())</script> UofR VSB_Plus Capstone Group All Rights Reserved<br>
