@@ -83,38 +83,39 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     <div class="welcome_tag" id="welcome">
         <h2>Welcome <?php echo htmlspecialchars($_SESSION["name"]); ?></h2>
     </div>
-
     <div id="main_area" class="round">
         <div id="summaryBoard" class="">
-            <h2 class="center textCenter"><label for="summary">Summary Board</label></h1>
+            <h2 class="center textCenter"><label for="summary">Summary Board</label></h2>
             <div class="static">
                 <button class="left arrow" onclick="pageDown()"><i class='fas fa-angle-left'></i></button>
                 <div id="summary" class="center inline">
                     <div class="card textCenter" id="card1">
                         <h3>Credit Earned:</h3>
-                        <p class="">120/136</p>
+                        <!-- <p class="">120/136</p> -->
                     </div>
                     <div class="card" id="card2">
                         <h3>Program:</h3>
-                        <p>Applied Science</p>
+                        <!-- <p>Applied Science</p> -->
                     </div>
                     <div class="card" id="card3">
                         <h3>Course Left:</h3>
-                        <p>6</p>
+                        <!-- <p>6</p> -->
                     </div>
                     <div class="card" id="card4">
                         <h3>GPA:</h3>
-                        <p>3.6</p>
+                        <!-- <p>3.6</p> -->
                     </div>
                 </div>
                 <button class="right arrow" onclick="pageUp()"><i class='fas fa-angle-right'></i></button>
             </div>
-
-
+            <h3 class="center textCenter"><label for="lineChart"> Average in semesters </label></h1>
             <div id="lineChart"></div>
         </div>
-
-        <div id="pieChart"></div>
+        
+        <div id="pieGraph">
+        <h2 class="center textCenter"><label for="pieChart">Score Distribution</label></h1>
+            <div id="pieChart"></div>
+        </div>
 
     </div>
 

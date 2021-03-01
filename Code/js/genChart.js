@@ -115,7 +115,7 @@ function genChart1(data, divId){
 
       var grade = takenCourse.final_grade
       if (grade == 'NP') notPass += 1;
-      if (parseInt(grade) >= 85) goodGrade += 1;
+      if (parseInt(grade) >= 80) goodGrade += 1;
       if (parseInt(grade) >= 65) generalGrade += 1;
       if (parseInt(grade) >= 50) poorGrade += 1;
       
@@ -134,7 +134,8 @@ function genChart1(data, divId){
   // Set the data and color parameters
   data = {
     datasets: [{
-        data: [goodGrade, generalGrade, poorGrade, notPass, left_class],
+        // data: [goodGrade, generalGrade, poorGrade, notPass, left_class],
+        data: [goodGrade, generalGrade, poorGrade, notPass],
         backgroundColor: ['#99CC33','#99CCFF',
         '#FF6666', '#333333','#CCCCCC',
         // 'rgba(54, 162, 235, 0.2)',
@@ -146,11 +147,11 @@ function genChart1(data, divId){
 
     // These labels appear in the legend and in the tooltips when hovering different arcs
     labels: [
-        'Good',
-        'General',
+        'Good Grade',
+        'Generate',
         'Poor',
         'NP',
-        'Untaken',
+        // 'Untaken',
     ]
 };
 
@@ -164,7 +165,6 @@ function genChart1(data, divId){
 function genChart2(data, divId){
     var grade = {};
     var term_list = [];
-    console.log("start");
     for (var i in data) {
         var takenCourse = data[i];
         var final_grade = parseInt(takenCourse.final_grade);
@@ -190,7 +190,6 @@ function genChart2(data, divId){
         ave_grades.push(sum/grade[term].length);
     });
 
-    console.log(ave_grades);
 
     //In case, there is no 'canvas' element in the html
     var canvasID = divId + 'Chart';

@@ -34,16 +34,12 @@ function allParse(response){
     return result;
 }
 
-// Get the major by using AJAX
-function getMajor($sid){
-    $.post('../', {'sid': $sid}, function(data){
-        
+// Example to get basic infomation by using AJAX
+function getBasicInfo($sid, $jsonResult){
+    $.post('./Api.php/Student/BasicInfo', {'sid': $sid}, function(data){
+        json = JSON.parse(data)
+        console.log(json["data"].name);
+        $jsonResult =  json["data"];
     });
 }
 
-// Get the average by using AJAX
-function getAve($sid){
-    $.post('../', {'sid': $sid}, function(data){
-        
-    });
-}
