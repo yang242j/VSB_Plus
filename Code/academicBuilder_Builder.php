@@ -195,7 +195,6 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 
 
         <div class = "course_not_completed"><h3>Course to take</h3></div>
-
         <div class = "course_tag_not_completed">
             <p id = "nct0">ENSE 271</p>
             <p id = "nct1">ENSE 271</p>
@@ -214,6 +213,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             <div><button class="right_arrow" id ="nctLeft"><i class='fas fa-angle-left'></i></button>
                 <button class="left_arrow" id ="nctRight"><i class='fas fa-angle-right'></i></button>
             </div>
+            <script src ="js/academicCustomizeBuilder.js"></script>
         </div>
         <!-- <h3 id = "corner"><a href='academicBuilder_Main.php'>Go to academic main</a></h3>
         <h3 id = "corner"><a href='academicBuilder_Default.php'>Go to Default Schedule</a></h3> -->
