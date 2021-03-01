@@ -131,7 +131,7 @@ function btnForCourse(data) {
         }
         if (counterForCompleted >= 0) {
             for (i = 0; i < 12; i++) {
-                if (completedData[i + 12 * counterForCompleted].course_ID == null) {
+                if (completedData[i + 12 * counterForCompleted] == null) {
                     return;
                 }
                 else {
@@ -151,7 +151,7 @@ function btnForCourse(data) {
             }
             if (counterForCompleted >= 0) {
                 for (i = 0; i < 12; i++) {
-                    if (completedData[i + 12 * counterForCompleted].course_ID == null) {
+                    if (completedData[i + 12 * counterForCompleted]== null) {
                         return;
                     }
                     else {
