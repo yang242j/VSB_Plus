@@ -97,8 +97,7 @@ function getStatus($expStr, $doneList) {
     
     // Basic: exact one course name "ENSE 400"
     if (preg_match_all("/([a-z]+\s[0-9]+)/i", $expStr) == 1){
-        echo "1 $expStr";
-        echo in_array($expStr, $doneList) ? " in the Done array <br>" : " not in  done array <br>";
+        echo in_array($expStr, $doneList) ? "<b>True</b> $expStr is in the Done array <br>" : "<b>True</b> $expStr is not in  done array <br>";
         return in_array($expStr, $doneList) ? true : false;
     }
 
