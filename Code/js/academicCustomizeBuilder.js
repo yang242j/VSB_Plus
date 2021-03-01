@@ -211,3 +211,7 @@ function btnForCourse(data) {
 
     }
 }
+console.log(courseReqData);
+
+
+
