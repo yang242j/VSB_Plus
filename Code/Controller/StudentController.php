@@ -122,8 +122,6 @@ class StudentController
 			// 4) Covert to the data array with taken class 
 			while ($row = mysqli_fetch_array($takenCourse_result)) {
 				$oneTaken = array(
-					"_message" => "success",
-					"_code" => "200",
 					"courseIndex" => $row['courseIndex'],
 					"term" => $row['term'],
 					"course_ID" => $row['course_ID'],
@@ -137,7 +135,11 @@ class StudentController
 				);
 				array_push($data, $oneTaken);
 			}
-			return $data;
+			$statu = array(
+				"_message" => "success",
+				"_code" => "200"
+			);
+			return array_merge($data, $statu);
 		}
 	}
 }
