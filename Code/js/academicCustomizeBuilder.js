@@ -194,6 +194,7 @@ function btnForCourse(data) {
         if (counterForNotCompleted >= 0) {
             for (i = 0; i < 12; i++) {
                 if (notCompletedData[i + 12 * counterForNotCompleted] == null) {
+                    document.getElementById("nct" + i).innerHTML = "   ";
                     return;
                 }
                 else {
