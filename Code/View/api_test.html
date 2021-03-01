@@ -128,14 +128,6 @@
         });
     }
 
-    // function sign_up(){
-    //     var account = $('#sign_up_form').serializeArray();
-    //     $.post('../Model/sign_in.php', account, function(data, status){
-    //         var pre_json = "<pre>" + data + "</pre>";
-    //         $('#sign_up_result').html(pre_json);
-    //     });
-    // }
-
     function genGraph1(){
         var account = $('#Sign_in_form').serializeArray();
         $.post('../Model/takenClass.php', account, function(data, status){
@@ -153,4 +145,5 @@
             genChart2(jsonData, divId);
         });
     }
+
 </script>

@@ -58,7 +58,9 @@ function loadLineChart(sid) {
 }
 
 function setDefault(sid){
-    $.post('Api.php/Student/BasicInfo', {'sid': sid}, function(data){
+    console.log(GetUrlRelativePath());
+    $.post('./Api.php/Student/BasicInfo', {'sid': sid}, function(data){
+        console.log("data is ", data)
         basicInfo = JSON.parse(data).data;
         summary.name = basicInfo.name;
         summary.sid = basicInfo.student_id;
@@ -68,7 +70,7 @@ function setDefault(sid){
 }
 
 function setCmptedValue(sid){
-    $.post('Api.php/Student/TakenCourse', {'sid': sid}, function(data){
+    $.post('./Api.php/Student/TakenCourse', {'sid': sid}, function(data){
         var jsonData = JSON.parse(data).data;
         var sumGrade = 0;
         var passCount = 0;
@@ -91,3 +93,18 @@ function setCmptedValue(sid){
         pageDown();
     });   
 }
+
+
+　function GetUrlRelativePath()
+　　{
+　　　　var url = document.location.toString();
+　　　　var arrUrl = url.split("//");
+
+　　　　var start = arrUrl[1].indexOf("/");
+　　　　var relUrl = arrUrl[1].substring(start);//stop省略，截取从start开始到结尾的所有字符
+
+　　　　if(relUrl.indexOf("?") != -1){
+　　　　　　relUrl = relUrl.split("?")[0];
+　　　　}
+　　　　return relUrl;
+　　}
