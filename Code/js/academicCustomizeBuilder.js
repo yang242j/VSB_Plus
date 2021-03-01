@@ -96,9 +96,11 @@ function btnForCourse(data) {
         if (completedData[i + 12 * counterForCompleted].course_ID != null) {
             counterForCompleted += 1;
         }
+        for (i = 0; i < 12; i++) {
+        document.getElementById("ct" + i).innerHTML = " ";
+        }
         if (counterForCompleted >= 0) {
             for (i = 0; i < 12; i++) {
-                document.getElementById("ct" + i).innerHTML = " ";
                 if (completedData[i + 12 * counterForCompleted].course_ID != null){
                 document.getElementById("ct" + i).innerHTML = completedData[i + 12 * counterForCompleted].course_ID;
                 }
