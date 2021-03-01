@@ -6,7 +6,6 @@ function fetchCourseJSON(sid) {
     $.post('Model/takenClass.php', { sid: sid, password: sid }, function (data) {
         btnForCourse(data);
         showCourses(data);
-        getRidNP(data);
         console.log(data);
     });
 }
@@ -34,9 +33,8 @@ function getTermData() {
 // next page button
 //minus taken class from all course list
 function getRidNP(data) {
-    var dadaJSON = JSON.parse(data);
-    for (i = 0; i < dadaJSON.length; i++) {
-        if (dataJSON[i].final_grade == "NP") {
+    for (i = 0; i < dada.length; i++) {
+        if (data[i].final_grade == "NP") {
             console.log("NP");
         }
     }
@@ -69,6 +67,7 @@ function findCourseToTake(data) {
 function showCourses(data) {
     var dataJSON = JSON.parse(data);
     var notCompletedData = findCourseToTake(dataJSON);
+    getRidNP(dataJSON);
     /*console.log(notCompletedData);*/
     for (i = 0; i < 12; i++) {
         if (i < dataJSON.length) {
