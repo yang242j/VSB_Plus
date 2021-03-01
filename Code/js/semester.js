@@ -410,7 +410,7 @@ function appendExamList(section) {
         var examDate = new Date(section.date_range.slice(0, 12));
 
     // Check if exams are close or conflict
-    console.log("Exam list: " + examDateDic.toSource());
+    console.log("Exam list: " + Object.entries(examDateDic));
     for (var [key_id, value_date] of Object.entries(examDateDic)) {
         if (value_date.getTime() === examDate.getTime()) {
             conflictExam = true;
