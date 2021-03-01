@@ -116,6 +116,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                     let newCombo = $("select#sectionSelector option:selected").val();
                     let cardId = $(this).closest("div").attr("id");
                     let cardStyle = $(this).closest("div").attr("style");
+                    console.log(oldCombo, newCombo, cardId, cardStyle, term);
                     changeCalendarAndExam(oldCombo, newCombo, cardId, cardStyle, term);
                 });
             </script>
