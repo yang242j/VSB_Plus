@@ -205,7 +205,7 @@ function changeCalendarAndExam(oldCombo, newcombo, cardId, cardStyle, term) {
                         removeCalendar(short_name + "_Lec", old_lec_exam_eventTitle); // remove old lecture event from calendar
                         appendCalendar(lec_arr, "Lecture", BGC); // appendd new lecture section into calendar
                     } else {
-                        console.warn("Lecture " + short_name + " have no match section_num -> " + error);
+                        console.warn("Lecture " + short_name + " have no match section_num");
                     }
                 } catch (error) {
                     console.error("Change calendar " + short_name + " lecture event FAILED -> " + error);
@@ -227,7 +227,7 @@ function changeCalendarAndExam(oldCombo, newcombo, cardId, cardStyle, term) {
                         removeCalendar(short_name + "_Lab", old_lab_eventTitle); // remove old lab event from calendar
                         appendCalendar(lab_arr, "Lab", BGC); // appendd new lab event into calendar
                     } else {
-                        console.warn("Lab " + short_name + " have no match section_num -> " + error);
+                        console.warn("Lab " + short_name + " have no match section_num");
                     }
                 } catch (error) {
                     console.error("Change calendar " + short_name + " lab event FAILED -> " + error);
@@ -248,7 +248,7 @@ function changeCalendarAndExam(oldCombo, newcombo, cardId, cardStyle, term) {
                         removeExamList(short_name); // remove old exam li from list
                         appendExamList(exam_arr); // appendd new exam li into list 
                     } else {
-                        console.warn("Exam " + short_name + " section_num have no match with lecture section_num -> " + error);
+                        console.warn("Exam " + short_name + " section_num have no match with lecture section_num");
                     }
                 } catch (error) {
                     console.error("Change " + short_name + " exam list FAILED -> " + error);
