@@ -106,8 +106,14 @@ function btnForCourse(data) {
         }
         if (counterForCompleted >= 0) {
             for (i = 0; i < 12; i++) {
-                if (completedData[i + 12 * counterForCompleted].course_ID != null && completedData[i + 12 * counterForCompleted].final_grade != "NP") {
+                if (completedData[i + 12 * counterForCompleted].course_ID != null) {
+                    if(completedData[i + 12 * counterForCompleted].final_grade != "NP" 
+                    && completedData[i + 12 * counterForCompleted].final_grade != "W")
+                    {
                     document.getElementById("ct" + i).innerHTML = completedData[i + 12 * counterForCompleted].course_ID;
+                    }
+                    else
+                    i=i-1;
                 }
                 else {
                     if (i + 12 * counterForCompleted > completedData.length) return;
@@ -129,7 +135,8 @@ function btnForCourse(data) {
             }
         if (counterForCompleted >= 0) {
             for (i = 0; i < 12; i++) {
-                if (completedData[i + 12 * counterForCompleted].course_ID != null && completedData[i + 12 * counterForCompleted].final_grade != "NP") {
+                if (completedData[i + 12 * counterForCompleted].course_ID != null && completedData[i + 12 * counterForCompleted].final_grade != "NP"
+                && completedData[i + 12 * counterForCompleted].final_grade != "W") {
                     document.getElementById("ct" + i).innerHTML = completedData[i + 12 * counterForCompleted].course_ID;
                 }
                 else {
