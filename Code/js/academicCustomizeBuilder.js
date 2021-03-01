@@ -64,27 +64,22 @@ function showCourses(data) {
     var notCompletedData = findCourseToTake(dataJSON);
     /*console.log(notCompletedData);*/
     for (i = 0; i < 12; i++) {
-        if (i < dataJSON.length) {
-            if (dataJSON[i].final_grade != "NP"
-                && dataJSON[i].final_grade != "W"){
-
+        if (i < dataJSON.length) { 
                 document.getElementById("ct" + i).innerHTML = dataJSON[i].course_ID;
-                }
-                else
-            i = i - 1;
+
         }
         else {
-        document.getElementById("ct" + i).innerHTML = " ";
+            document.getElementById("ct" + i).innerHTML = " ";
+        }
     }
-}
-for (i = 0; i < 12; i++) {
-    if (i < notCompletedData.length && dataJSON[i].final_grade != "NP") {
-        document.getElementById("nct" + i).innerHTML = notCompletedData[i];
+    for (i = 0; i < 12; i++) {
+        if (i < notCompletedData.length && dataJSON[i].final_grade != "NP") {
+            document.getElementById("nct" + i).innerHTML = notCompletedData[i];
+        }
+        else {
+            document.getElementById("nct" + i).innerHTML = " ";
+        }
     }
-    else {
-        document.getElementById("nct" + i).innerHTML = " ";
-    }
-}
 
 }
 function btnForCourse(data) {
@@ -113,12 +108,8 @@ function btnForCourse(data) {
         if (counterForCompleted >= 0) {
             for (i = 0; i < 12; i++) {
                 if (completedData[i + 12 * counterForCompleted].course_ID != null) {
-                    if (completedData[i + 12 * counterForCompleted].final_grade != "NP"
-                        && completedData[i + 12 * counterForCompleted].final_grade != "W") {
+                   
                         document.getElementById("ct" + i).innerHTML = completedData[i + 12 * counterForCompleted].course_ID;
-                    }
-                    else
-                        i = i - 1;
                 }
                 else {
                     if (i + 12 * counterForCompleted > completedData.length) return;
@@ -140,8 +131,7 @@ function btnForCourse(data) {
             }
             if (counterForCompleted >= 0) {
                 for (i = 0; i < 12; i++) {
-                    if (completedData[i + 12 * counterForCompleted].course_ID != null && completedData[i + 12 * counterForCompleted].final_grade != "NP"
-                        && completedData[i + 12 * counterForCompleted].final_grade != "W") {
+                    if (completedData[i + 12 * counterForCompleted].course_ID != null ) {
                         document.getElementById("ct" + i).innerHTML = completedData[i + 12 * counterForCompleted].course_ID;
                     }
                     else {
