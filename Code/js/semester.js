@@ -318,10 +318,11 @@ function appendCalendar(section, eventType, BGC) {
     if (eventType == "Lecture") var event_id = section.short_name + "_Lec";
     else if (eventType == "Lab") var event_id = section.short_name + "_Lab";
     var event_title = section.short_name + " [" + section.section_num + "]";
-    if (section.date_range) {
+    console.log(section.date_range);
+    //if (section.date_range) {
         var start_date = new Date(section.date_range.slice(0, 12)).toISOString().substring(0, 10);
         var end_date = new Date(section.date_range.slice(15)).toISOString().substring(0, 10);
-    }
+    //}
     
     if (section.time == "TBA" || section.time == "?" || section.time == null) return;
     var start_time = get24HrsFrm12Hrs(section.time.split("-")[0]);
@@ -400,7 +401,8 @@ function appendExamList(section) {
     var examDate_li, conflictExam, weekDay;
     var examDate_id = section.short_name + "_Exam";
     var examDate_course = section.short_name + " [" + section.section_num + "]";
-    if (section.date_range) var examDate = new Date(section.date_range.slice(0, 12));
+    //if (section.date_range)
+        var examDate = new Date(section.date_range.slice(0, 12));
 
     // Check if exams are close or conflict
     for (var [key_id, value_date] of Object.entries(examDateDic)) {
