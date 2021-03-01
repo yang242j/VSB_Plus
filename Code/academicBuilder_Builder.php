@@ -1,8 +1,6 @@
 <?php
 session_start();// Initialize the session
 
-$sid = $_SESSION["sid"];
-
 // Check if the user is logged in, if not then redirect him to login page
 if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     header("location: login.php");
@@ -30,7 +28,6 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     <link rel="stylesheet" href="css/academicBuilder_Default.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src ="js/academicCustomizeBuilder.js"></script>
     <script>
         $(document).ready(function() {
             $(".nav-right-2").hide();
@@ -42,8 +39,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 <style>
 </style>
 <body>
-
-<input type="text" value = "<?php echo htmlspecialchars($_SESSION["sid"]); ?>">
+<p id = "userId" hidden><?php echo htmlspecialchars($_SESSION["sid"]); ?></p>
 
 <?php
     // Check if the user is logged in, if not then hide nav-right div
@@ -58,13 +54,12 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         </script>
     <?php } ?>
 
-
+    
 
     <header>
         <a href="https://www.uregina.ca"><img src="img/logo.png" class="logo" alt="UofR"></a>
         <h1>Visual Schedule Builder Plus</h1>
     </header>
-
     <nav>
         <div class="menu-icon" onclick="menuFunc1(this); menuFunc2('menu-list');">
             <div class="bar1"></div>
@@ -93,8 +88,6 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             <a href="signup.php">SignUp</a>
         </div>
     </nav>
-
-
 
 
 <section class = "terms" id = "block" style="float:left;">
@@ -168,6 +161,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 
 
 <section class = "tags_courses" id ="block" style="float:right;">  
+<script src ="js/academicCustomizeBuilder.js"></script>
 
     <div class = "icons_annotation" id = "builder_icon">
         <div class ="icons" style='font-size:14px;color:red'>---- Strongly Recommend</div>
@@ -178,22 +172,22 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     <div class= "course_list">
         <div class = "course_completed"><h3>Course Completed</h3></div>
         <div class = "course_tag_completed">
-            <p>ENSE 271</p>
-            <p>ENSE 271</p>
-            <p>ENSE 271</p>
-            <p>ENSE 271</p>
+            <p id = "ct0">ENSE 271</p>
+            <p id = "ct1">ENSE 271</p>
+            <p id = "ct2">ENSE 271</p>
+            <p id = "ct3">ENSE 271</p>
 
-            <p>ENSE 271</p>
-            <p>ENSE 271</p>
-            <p>ENSE 271</p>
-            <p>ENSE 271</p>
+            <p id = "ct4">ENSE 271</p>
+            <p id = "ct5">ENSE 271</p>
+            <p id = "ct6">ENSE 271</p>
+            <p id = "ct7">ENSE 271</p>
 
-            <p>ENSE 271</p>
-            <p>ENSE 271</p>
-            <p>ENSE 271</p>
-            <p>ENSE 271</p>
-            <div><button class="right_arrow" id ="p1"><i class='fas fa-angle-left'></i></button>
-                <button class="right_arrow" id ="p2"><i class='fas fa-angle-right'></i></button></div>
+            <p id = "ct8">ENSE 271</p>
+            <p id = "ct9">ENSE 271</p>
+            <p id = "ct10">ENSE 271</p>
+            <p id = "ct11">ENSE 271</p>
+            <div><button class="right_arrow" id ="ctLeft"><i class='fas fa-angle-left'></i></button>
+                <button class="right_arrow" id ="ctRight"><i class='fas fa-angle-right'></i></button></div>
 
         </div>
 
@@ -203,31 +197,32 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         <div class = "course_not_completed"><h3>Course to take</h3></div>
 
         <div class = "course_tag_not_completed">
-            <p>ENSE 271</p>
-            <p>ENSE 271</p>
-            <p>ENSE 271</p>
-            <p>ENSE 271</p>
+            <p id = "nct0">ENSE 271</p>
+            <p id = "nct1">ENSE 271</p>
+            <p id = "nct2">ENSE 271</p>
+            <p id = "nct3">ENSE 271</p>
 
-            <p>ENSE 271</p>
-            <p>ENSE 271</p>
-            <p>ENSE 271</p>
-            <p>ENSE 271</p>
+            <p id = "nct4">ENSE 271</p>
+            <p id = "nct5">ENSE 271</p>
+            <p id = "nct6">ENSE 271</p>
+            <p id = "nct7">ENSE 271</p>
             
-            <p>ENSE 271</p>
-            <p>ENSE 271</p>
-            <p>ENSE 271</p>
-            <p>ENSE 271</p>
-            <div><button class="right_arrow" id ="p1"><i class='fas fa-angle-left'></i></button>
-                <button class="right_arrow" id ="p2"><i class='fas fa-angle-right'></i></button>
+            <p id = "nct8">ENSE 271</p>
+            <p id = "nct9">ENSE 271</p>
+            <p id = "nct10">ENSE 271</p>
+            <p id = "nct11">ENSE 271</p>
+            <div><button class="right_arrow" id ="nctLeft"><i class='fas fa-angle-left'></i></button>
+                <button class="left_arrow" id ="nctRight"><i class='fas fa-angle-right'></i></button>
             </div>
         </div>
-        <h3 id = "corner"><a href='academicBuilder_Main.php'>Go to academic main</a></h3>
-        <h3 id = "corner"><a href='academicBuilder_Default.php'>Go to Default Schedule</a></h3>
+        <!-- <h3 id = "corner"><a href='academicBuilder_Main.php'>Go to academic main</a></h3>
+        <h3 id = "corner"><a href='academicBuilder_Default.php'>Go to Default Schedule</a></h3> -->
     </div>
 
 </section>
 <footer>
     <script src="js/main.js"></script>
+    <script src ="js/academicCustomizeBuilder.js"></script>
     
     <p class="copyright">Copyright &copy; Sep. 2020 to
         <script>document.write(new Date().getFullYear())</script> UofR VSB_Plus Capstone Group All Rights Reserved<br>

@@ -1,15 +1,19 @@
 <?php
 
-$preStr = $expStr = '';
+$preStr = $expStr = $status = '';
+$doneList = array('MATH 100', 'CHEM 104', 'CS 110', 'ENGG 100', 'MATH 110', 'ENGG 123', 'MATH 122', 'PHYS 109', 'STAT 160', 'PHYS 119', 'CS 115', 'MATH 217', 'ENEL 280', 'MATH 213');
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $response = get_course_json(trim($_POST["short_name"]));
     $resArr = array();
     $resArr = json_decode($response);
-
-    $preStr = $resArr->prerequisite; 
-    $expStr = str2Expression($preStr);
+                                        // ENGG 401
+    //$preStr = $resArr->prerequisite;   // One of ENEL 400, ENEV 400, ENIN 400, ENPE 400, or ENSE 400
+    //$expStr = str2Expression($preStr); // ENEL 400 || ENEV 400 || ENIN 400 || ENPE 400 || ENSE 400
+    $preStr = "One of ENEL 400, ENEV 400, ENIN 400, ENPE 400, or ENSE 400";
+    $expStr = "ENEL 400 || ENEV 400 || ENIN 400 || ENPE 400 || ENSE 400";
+    $status = getStatus($expStr, $doneList); // True or False
 
 }
 
@@ -18,15 +22,15 @@ function get_course_json($short_name) {
     $postField = "short_name=$short_name";
 
     $options = array(
-        CURLOPT_RETURNTRANSFER => true,   // return web page
-        CURLOPT_HEADER         => false,  // don't return headers
-        CURLOPT_FOLLOWLOCATION => true,   // follow redirects
-        CURLOPT_MAXREDIRS      => 10,     // stop after 10 redirects
-        CURLOPT_ENCODING       => "",     // handle compressed
-        CURLOPT_USERAGENT      => "test", // name of client
-        CURLOPT_AUTOREFERER    => true,   // set referrer on redirect
-        CURLOPT_CONNECTTIMEOUT => 120,    // time-out on connect
-        CURLOPT_TIMEOUT        => 120,    // time-out on response
+        CURLOPT_RETURNTRANSFER => true,       // return web page
+        CURLOPT_HEADER         => false,      // don't return headers
+        CURLOPT_FOLLOWLOCATION => true,       // follow redirects
+        CURLOPT_MAXREDIRS      => 10,         // stop after 10 redirects
+        CURLOPT_ENCODING       => "",         // handle compressed
+        CURLOPT_USERAGENT      => "test",     // name of client
+        CURLOPT_AUTOREFERER    => true,       // set referrer on redirect
+        CURLOPT_CONNECTTIMEOUT => 120,        // time-out on connect
+        CURLOPT_TIMEOUT        => 120,        // time-out on response
         CURLOPT_POSTFIELDS     => $postField, // set up post fields
     ); 
 
@@ -83,6 +87,45 @@ function str2Expression($preStr) {
     return $expStr;
 }
 
+function getStatus($expStr, $doneList) {
+    echo $expStr."<br>";
+    
+    // Basic
+    if (preg_match_all("/([a-z]+\s[0-9]+)/i", $expStr) == 1){
+        echo "1 $expStr <br>";
+        return in_array($expStr, $doneList) ? 'true' : 'false';
+    }
+
+    // Remove ()
+    if (substr($expStr, 0, 1) == "(" || substr($expStr, -1) == ")") {
+        
+    }
+    $innerComp = preg_split("/[()]/i", $expStr);
+    if ($innerComp[1]) {
+        echo "(inner)". $innerComp[1] ."<br>";
+        return getStatus($innerComp[1], $doneList);
+    }
+
+    // &&
+    $andComp = preg_split("/(&{2})/", $expStr);
+    foreach ($andComp as $component) {
+        if ($component) {
+            echo "and $component <br>";
+            if (getStatus($component, $doneList) == false) return false;
+        }
+    }
+
+    // ||
+    $orComp = preg_split("/(|{2})/", $expStr);
+    foreach ($andComp as $component) {
+        if ($component) {
+            echo "or $component <br>";
+            if (getStatus($component, $doneList) == true) return true;
+        }
+    }
+
+}
+
 ?>
 
 <html>
@@ -93,8 +136,10 @@ function str2Expression($preStr) {
     <input type="submit">
 </form>
 
+Done List: <pre><mark><b><?php print_r($doneList); ?></b></mark></pre><br>
 Prerequisites: <pre><mark><b><?php print_r($preStr); ?></b></mark></pre><br>
 Expression: <pre><mark><b><?php print_r($expStr); ?></b></mark></pre><br>
+Status: <pre><mark><b><?php print_r($status); ?></b></mark></pre><br>
 
 </body>
 </html>

@@ -65,6 +65,7 @@ if ($doneList !== "" && $major !== "" && $term_NUM !== "" && $term_EN !== "") {
             $coursePath = "../JSON/$term_NUM/$reqCourse.json";
             $skipCondition_4 = !file_exists($coursePath) ? true : false; // Course file exist in that semester dir.
             $skipCondition_5 = $skipCondition_4 ? true : isSectionEmpty($coursePath); // Check if course section is empty
+            $skipCondition_6 = matchingPrerequisites($reqCourse, $doneList); // Course mush match prerequistes.
 
             if ( $skipCondition_1 || $skipCondition_2 || $skipCondition_3 || $skipCondition_4 || $skipCondition_5 ) {
                 //echo "$reqCourse : $skipCondition_1, $skipCondition_2, $skipCondition_3, $skipCondition_4 <br>";
@@ -90,21 +91,41 @@ function isSectionEmpty($path) {
     //echo json_encode($parsed_json, JSON_PRETTY_PRINT);
 }
 
-function getCourseJSON($short_name) {
-    $ch = curl_init();
+function matchingPrerequisites($short_name, $doneList) {
+    // Get course json
+    $response = get_course_json($short_name);
+    $resArr = array();
+    $resArr = json_decode($response);
 
-    curl_setopt($ch, CURLOPT_URL,"course.php");
-    curl_setopt($ch, CURLOPT_POST, 1);
-    curl_setopt($ch, CURLOPT_POSTFIELDS, "short_name=".$short_name);
+    // Get and convert the prerequisites string to expression string
+    $preStr = $resArr->prerequisite;
+    $expStr = '';
+    
+    return false;
+}
 
-    // Receive server response ...
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+function get_course_json($short_name) {
+    $url = "http://15.223.123.122/vsbp/Code/Model/course.php";
+    $postField = "short_name=$short_name";
 
-    $server_output = curl_exec($ch);
+    $options = array(
+        CURLOPT_RETURNTRANSFER => true,   // return web page
+        CURLOPT_HEADER         => false,  // don't return headers
+        CURLOPT_FOLLOWLOCATION => true,   // follow redirects
+        CURLOPT_MAXREDIRS      => 10,     // stop after 10 redirects
+        CURLOPT_ENCODING       => "",     // handle compressed
+        CURLOPT_USERAGENT      => "test", // name of client
+        CURLOPT_AUTOREFERER    => true,   // set referrer on redirect
+        CURLOPT_CONNECTTIMEOUT => 120,    // time-out on connect
+        CURLOPT_TIMEOUT        => 120,    // time-out on response
+        CURLOPT_POSTFIELDS     => $postField, // set up post fields
+    ); 
 
-    echo $server_output;
-
-    curl_close ($ch);
+    $ch = curl_init($url);
+    curl_setopt_array($ch, $options);
+    $content  = curl_exec($ch);
+    curl_close($ch);
+    return $content;
 }
 
 ?>
