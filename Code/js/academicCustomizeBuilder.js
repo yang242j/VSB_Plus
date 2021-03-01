@@ -38,7 +38,8 @@ function findCourseToTake(data) {
     var courseCompleted = [];
     var courseToTake = [];
     var courseNotCompleted = [];
-    console.log(data[0]);
+    console.log(data);
+    console.log(data[2]);
     for (i = 0; i < 10; i++) {
         if(data[i].course_ID != null){
         courseCompleted[i] = data[i].course_ID;
