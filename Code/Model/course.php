@@ -32,6 +32,7 @@ if ($short_name !== "") {
     $count_res = mysqli_query($conn, $count_sql);
     $count = mysqli_fetch_array($count_res)[0];
 
+    
     // If there is a course that is required.
     if ($count > 0) {
         $detail_sql = "SELECT * FROM course where short_name = '" . $short_name . "'";
