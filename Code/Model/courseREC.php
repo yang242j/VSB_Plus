@@ -96,9 +96,8 @@ function matchingPrerequisites($short_name, $doneList) {
     $response = get_course_json($short_name);
     $resArr = array();
     $resArr = json_decode($response);
-
-    // Get and convert the prerequisites string to expression string
-    $preStr = $resArr->prerequisite;
+    echo $resArr;
+    // Get the prerequisites expression string
     $expStr = $resArr->preExpression;
 
     return getStatus($expStr, $doneList) ? false : true;
@@ -155,15 +154,15 @@ function get_course_json($short_name) {
     $postField = "short_name=$short_name";
 
     $options = array(
-        CURLOPT_RETURNTRANSFER => true,   // return web page
-        CURLOPT_HEADER         => false,  // don't return headers
-        CURLOPT_FOLLOWLOCATION => true,   // follow redirects
-        CURLOPT_MAXREDIRS      => 10,     // stop after 10 redirects
-        CURLOPT_ENCODING       => "",     // handle compressed
-        CURLOPT_USERAGENT      => "test", // name of client
-        CURLOPT_AUTOREFERER    => true,   // set referrer on redirect
-        CURLOPT_CONNECTTIMEOUT => 120,    // time-out on connect
-        CURLOPT_TIMEOUT        => 120,    // time-out on response
+        CURLOPT_RETURNTRANSFER => true,       // return web page
+        CURLOPT_HEADER         => false,      // don't return headers
+        CURLOPT_FOLLOWLOCATION => true,       // follow redirects
+        CURLOPT_MAXREDIRS      => 10,         // stop after 10 redirects
+        CURLOPT_ENCODING       => "",         // handle compressed
+        CURLOPT_USERAGENT      => "test",     // name of client
+        CURLOPT_AUTOREFERER    => true,       // set referrer on redirect
+        CURLOPT_CONNECTTIMEOUT => 120,        // time-out on connect
+        CURLOPT_TIMEOUT        => 120,        // time-out on response
         CURLOPT_POSTFIELDS     => $postField, // set up post fields
     ); 
 
