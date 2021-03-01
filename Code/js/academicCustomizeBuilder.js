@@ -105,10 +105,11 @@ function btnForCourse(data) {
     var nctRight = document.getElementById("nctRight");
     var nctLeft = document.getElementById("nctLeft");
     var completedData = JSON.parse(data);
-    var notCompletedData = findCourseToTake(completedData);
+    var dataJSON = JSON.parse(data);
+    var notCompletedData = findCourseToTake(dataJSON);
     var counterForCompleted = 0;
     var counterForNotCompleted = 0;
-    console.log(notcompletedData);
+    console.log(notCompletedData);
     // delete NP and W data
     for (i = 0; i < completedData.length; i++) {
         if (completedData[i].final_grade == "NP") {
