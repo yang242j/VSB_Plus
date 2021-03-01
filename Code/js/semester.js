@@ -118,13 +118,13 @@ function dropL(ev, term) {
                             appendCalendar(lec_json_obj[lec_exam_id], "Lecture", BGC); //4.2.1.Append lecture calendar event
                             appendExamList(exam_json_obj[lec_exam_id]); //4.2.2.Append exam list
                         } else {
-                            console.warn(short_name + " does NOT have Lecture-Exam section_" + lec_exam_id);
+                            console.warn(short_name + " Lecture-Exam info is empty.");
                         }
 
                         if (lab_json_obj[lab_id]) {
                             appendCalendar(lab_json_obj[lab_id], "Lab", BGC); //4.2.3.Append lab calendar event
                         } else {
-                            console.warn(short_name + " does NOT have Lab section_" + lab_id);
+                            console.warn(short_name + " does NOT have Lab required");
                         }
 
                         //5.Store color id to prevent same color twice
