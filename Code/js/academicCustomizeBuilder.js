@@ -120,6 +120,7 @@ function btnForCourse(data) {
     ctRight.onclick = function () {
 
         counterForCompleted += 1;
+        if (12 * counterForCompleted > completedData.length) return;
 
         if (i + 12 * counterForCompleted < completedData.length) {
             for (i = 0; i < 12; i++) {
@@ -140,7 +141,7 @@ function btnForCourse(data) {
     }
     ctLeft.onclick = function () {
         counterForCompleted -= 1;
-
+        
         if (counterForCompleted >= 0) {
             if (i + 12 * counterForCompleted < completedData.length) {
                 for (i = 0; i < 12; i++) {
@@ -167,7 +168,7 @@ function btnForCourse(data) {
 
         if (i + 12 * counterForCompleted < notCompletedData.length) {
             for (i = 0; i < 12; i++) {
-                document.getElementById("ct" + i).innerHTML = " ";
+                document.getElementById("nct" + i).innerHTML = " ";
             }
         }
         if (counterForCompleted >= 0) {
@@ -176,7 +177,7 @@ function btnForCourse(data) {
                     return;
                 }
                 else {
-                    document.getElementById("ct" + i).innerHTML = notCompletedData[i + 12 * counterForCompleted].course_ID;
+                    document.getElementById("nct" + i).innerHTML = notCompletedData[i + 12 * counterForCompleted].course_ID;
                 }
             }
         }
@@ -190,7 +191,7 @@ function btnForCourse(data) {
 
         if (i + 12 * counterForCompleted < notCompletedData.length) {
             for (i = 0; i < 12; i++) {
-                document.getElementById("ct" + i).innerHTML = " ";
+                document.getElementById("nct" + i).innerHTML = " ";
             }
         }
         if (counterForCompleted >= 0) {
@@ -199,7 +200,7 @@ function btnForCourse(data) {
                     return;
                 }
                 else {
-                    document.getElementById("ct" + i).innerHTML = notCompletedData[i + 12 * counterForCompleted].course_ID;
+                    document.getElementById("nct" + i).innerHTML = notCompletedData[i + 12 * counterForCompleted].course_ID;
                 }
             }
         }
