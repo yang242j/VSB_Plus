@@ -121,7 +121,7 @@ function btnForCourse(data) {
     completedData.sort();
 
     ctRight.onclick = function () {
-
+            counterForCompleted += 1;
         if (12 * counterForCompleted > completedData.length) return;
 
         if (i + 12 * counterForCompleted < completedData.length) {
@@ -139,13 +139,10 @@ function btnForCourse(data) {
                 }
             }
         }
-        if (12 * counterForCompleted > completedData.length) { }
-        else
-            counterForCompleted += 1;
 
     }
     ctLeft.onclick = function () {
-
+        counterForCompleted -= 1;
         if (counterForCompleted >= 0) {
             if (i + 12 * counterForCompleted < completedData.length) {
                 for (i = 0; i < 12; i++) {
@@ -166,12 +163,10 @@ function btnForCourse(data) {
         else
             counterForCompleted = 1;
 
-        counterForCompleted -= 1;
     }
 
     nctRight.onclick = function () {
         counterForNotCompleted += 1;
-        alert("dasdasdas");
         if (i + 12 * counterForCompleted < notCompletedData.length) {
             for (i = 0; i < 12; i++) {
                 document.getElementById("nct" + i).innerHTML = " ";
