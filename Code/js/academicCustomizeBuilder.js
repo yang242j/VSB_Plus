@@ -68,8 +68,10 @@ function showCourses(data) {
                 delete dataJSON[i];
             }
     }
-    //console.log(dataJSON);
+    dataJSON.sort();
+    console.log(dataJSON);
     /*console.log(notCompletedData);*/
+
     for (i = 0; i < 12; i++) {
         if (i < dataJSON.length) {
             document.getElementById("ct" + i).innerHTML = dataJSON[i].course_ID;
