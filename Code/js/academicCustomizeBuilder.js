@@ -144,7 +144,7 @@ function btnForCourse(data) {
     ctLeft.onclick = function () {
         counterForCompleted -= 1;
         if (counterForCompleted >= 0) {
-            f (i + 12 * counterForCompleted < completedData.length) {
+            if (i + 12 * counterForCompleted < completedData.length) {
                 for (i = 0; i < 12; i++) {
                     document.getElementById("ct" + i).innerHTML = " ";
                 }
