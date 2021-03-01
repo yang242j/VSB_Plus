@@ -203,11 +203,10 @@ function changeCalendarAndExam(oldCombo, newcombo, cardId, cardStyle, term) {
                     lec_obj.forEach(function (section_array) {
                         if (new_lec_exam_num == section_array.section_num) {
                             lec_arr = section_array;
-                            console.log(lec_arr);
                             return false; // breaks
                         }
                     });
-                    //console.log(lec_arr);
+                    console.log(lec_arr);
                     let BGC = cardStyle.split(':')[1].slice(0, -1);
                     appendCalendar(lec_arr, "Lecture", BGC); // appendd new lecture section into calendar
                 } catch (error) {
