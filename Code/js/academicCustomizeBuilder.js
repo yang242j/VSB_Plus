@@ -104,46 +104,48 @@ function btnForCourse(data) {
                 document.getElementById("ct" + i).innerHTML = " ";
             }
         }
-    if (counterForCompleted >= 0) {
-        for (i = 0; i < 12; i++) {
-            if (completedData[i + 12 * counterForCompleted].course_ID != null) {
-                document.getElementById("ct" + i).innerHTML = completedData[i + 12 * counterForCompleted].course_ID;
-            }
-            else {
-                if (i + 12 * counterForCompleted > completedData.length) return;
+        if (counterForCompleted >= 0) {
+            for (i = 0; i < 12; i++) {
+                if (completedData[i + 12 * counterForCompleted].course_ID != null) {
+                    document.getElementById("ct" + i).innerHTML = completedData[i + 12 * counterForCompleted].course_ID;
+                }
+                else {
+                    if (i + 12 * counterForCompleted > completedData.length) return;
+                }
             }
         }
-    }
 
-}
-ctLeft.onclick = function () {
-    var i = 0;
+    }
+    ctLeft.onclick = function () {
+        var i = 0;
         if (completedData[i + 12 * counterForCompleted].course_ID != null) {
             counterForCompleted -= 1;
         }
-
-        if (i + 12 * counterForCompleted < completedData.length) {
+        if (counterForCompleted >= 0 ){
+            if (i + 12 * counterForCompleted < completedData.length) {
+                for (i = 0; i < 12; i++) {
+                    document.getElementById("ct" + i).innerHTML = " ";
+                }
+            }
+        if (counterForCompleted >= 0) {
             for (i = 0; i < 12; i++) {
-                document.getElementById("ct" + i).innerHTML = " ";
-            }
-        }
-    if (counterForCompleted >= 0) {
-        for (i = 0; i < 12; i++) {
-            if (completedData[i + 12 * counterForCompleted].course_ID != null) {
-                document.getElementById("ct" + i).innerHTML = completedData[i + 12 * counterForCompleted].course_ID;
-            }
-            else {
-                if (i + 12 * counterForCompleted > completedData.length) return;
+                if (completedData[i + 12 * counterForCompleted].course_ID != null) {
+                    document.getElementById("ct" + i).innerHTML = completedData[i + 12 * counterForCompleted].course_ID;
+                }
+                else {
+                    if (i + 12 * counterForCompleted > completedData.length) return;
+                }
             }
         }
     }
+    else
+    counterForCompleted =1 ;
+    }
 
-}
+    nctRight.onclick = function () {
 
-nctRight.onclick = function () {
+    }
+    nctLeft.onclick = function () {
 
-}
-nctLeft.onclick = function () {
-
-}
+    }
 }
