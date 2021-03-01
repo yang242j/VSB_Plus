@@ -58,7 +58,7 @@ function loadLineChart(sid) {
 }
 
 function setDefault(sid){
-    $.post('./Api.php/Student/BasicInfo', {'sid': sid}, function(data){
+    $.post('Api.php/Student/BasicInfo', {'sid': sid}, function(data){
         basicInfo = JSON.parse(data).data;
         summary.name = basicInfo.name;
         summary.sid = basicInfo.student_id;
@@ -68,7 +68,7 @@ function setDefault(sid){
 }
 
 function setCmptedValue(sid){
-    $.post('./Api.php/Student/TakenCourse', {'sid': sid}, function(data){
+    $.post('Api.php/Student/TakenCourse', {'sid': sid}, function(data){
         var jsonData = JSON.parse(data).data;
         var sumGrade = 0;
         var passCount = 0;
