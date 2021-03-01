@@ -4,6 +4,7 @@ var courseReqData;
 function fetchCourseJSON(sid) {
     // alert(sid);
     $.post('Model/takenClass.php', { sid: sid, password: sid }, function (data) {
+        
         btnForCourse(data);
         showCourses(data);
         console.log(data);
@@ -64,13 +65,8 @@ function showCourses(data) {
     var notCompletedData = findCourseToTake(dataJSON);
     /*console.log(notCompletedData);*/
     for (i = 0; i < 12; i++) {
-        if (i < dataJSON.length) {
-            if (dataJSON[i].final_grade == "NP" ||  dataJSON[i].final_grade == "W"){ 
-                i = i-1;
-            }
-            else{
+        if (i < dataJSON.length) {          
                 document.getElementById("ct" + i).innerHTML = dataJSON[i].course_ID;
-            }
         }
         else {
             document.getElementById("ct" + i).innerHTML = " ";
