@@ -167,24 +167,37 @@ function btnForCourse(data) {
 
     nctRight.onclick = function () {
         counterForNotCompleted += 1;
-        document.getElementById("nct0").innerHTML = notCompletedData[3];
-         
-    }
-    nctLeft.onclick = function () {
-        counterForNotCompleted -= 1;
-
-        if (i + 12 * counterForCompleted < notCompletedData.length) {
+        if (i + 12 * counterForNotCompleted < notCompletedData.length) {
             for (i = 0; i < 12; i++) {
                 document.getElementById("nct" + i).innerHTML = " ";
             }
         }
-        if (counterForCompleted >= 0) {
+        if (counterForNotCompleted >= 0) {
             for (i = 0; i < 12; i++) {
-                if (notCompletedData[i + 12 * counterForCompleted] == null) {
+                if (notCompletedData[i + 12 * counterForNotCompleted] == null) {
                     return;
                 }
                 else {
-                    document.getElementById("nct" + i).innerHTML = notCompletedData[i + 12 * counterForCompleted];
+                    document.getElementById("nct" + i).innerHTML = notCompletedData[i + 12 * counterForNotCompleted];
+                }
+            }
+        }
+    }
+    nctLeft.onclick = function () {
+        counterForNotCompleted -= 1;
+
+        if (i + 12 * counterForNotCompleted < notCompletedData.length) {
+            for (i = 0; i < 12; i++) {
+                document.getElementById("nct" + i).innerHTML = " ";
+            }
+        }
+        if (counterForNotCompleted >= 0) {
+            for (i = 0; i < 12; i++) {
+                if (notCompletedData[i + 12 * counterForNotCompleted] == null) {
+                    return;
+                }
+                else {
+                    document.getElementById("nct" + i).innerHTML = notCompletedData[i + 12 * counterForNotCompleted];
                 }
             }
         }
