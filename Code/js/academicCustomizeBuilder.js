@@ -164,7 +164,7 @@ function btnForCourse(data) {
             counterForCompleted = 1;
     }
 
-   /* nctRight.onclick = function () {
+   nctRight.onclick = function () {
         counterForNotCompleted += 1;
 
         if (i + 12 * counterForCompleted < notCompletedData.length) {
@@ -174,11 +174,11 @@ function btnForCourse(data) {
         }
         if (counterForCompleted >= 0) {
             for (i = 0; i < 12; i++) {
-                if (notCompletedData[i + 12 * counterForCompleted].course_ID == null) {
+                if (notCompletedData[i + 12 * counterForCompleted]== null) {
                     return;
                 }
                 else {
-                    document.getElementById("nct" + i).innerHTML = notCompletedData[i + 12 * counterForCompleted].course_ID;
+                    document.getElementById("nct" + i).innerHTML = notCompletedData[i + 12 * counterForCompleted];
                 }
             }
         }
@@ -197,14 +197,14 @@ function btnForCourse(data) {
         }
         if (counterForCompleted >= 0) {
             for (i = 0; i < 12; i++) {
-                if (notCompletedData[i + 12 * counterForCompleted].course_ID == null) {
+                if (notCompletedData[i + 12 * counterForCompleted] == null) {
                     return;
                 }
                 else {
-                    document.getElementById("nct" + i).innerHTML = notCompletedData[i + 12 * counterForCompleted].course_ID;
+                    document.getElementById("nct" + i).innerHTML = notCompletedData[i + 12 * counterForCompleted];
                 }
             }
         }
 
-    }*/
+    }
 }
