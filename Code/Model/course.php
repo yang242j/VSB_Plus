@@ -32,14 +32,14 @@ if ($short_name !== "") {
     $count_res = mysqli_query($conn, $count_sql);
     $count = mysqli_fetch_array($count_res)[0];
 
-    
+
     // If there is a course that is required.
     if ($count > 0) {
         $detail_sql = "SELECT * FROM course where short_name = '" . $short_name . "'";
         $detail_result = mysqli_query($conn, $detail_sql);
         // 3) Based on the $short_name input, form the arrray for course detail.
         $row = mysqli_fetch_array($detail_result);
-        print_r($row);
+        // print_r($row);
         $data = array(
             "short_name" => $row['short_name'],
             "title" => $row["title"],
@@ -51,8 +51,8 @@ if ($short_name !== "") {
             "preExpression" => $row["preExpression"]
         );
         // 4) Encode & Return as JSON format
-        $json_data = json_encode($data, JSON_PRETTY_PRINT);
-        print(json_last_error());
+        $json_data = json_encode(utf8ize($data), JSON_PRETTY_PRINT);
+        // print(json_last_error());
         echo $json_data;
     } else {
         echo "Cannot find the course!";
@@ -61,4 +61,18 @@ if ($short_name !== "") {
     // print_r($data);
     // echo json_encode(array_values($data));
     mysqli_close($conn);
+}
+
+/* Use it for json_encode some corrupt UTF-8 chars
+ * useful for = malformed utf-8 characters possibly incorrectly encoded by json_encode
+ */
+function utf8ize( $mixed ) {
+    if (is_array($mixed)) {
+        foreach ($mixed as $key => $value) {
+            $mixed[$key] = utf8ize($value);
+        }
+    } elseif (is_string($mixed)) {
+        return mb_convert_encoding($mixed,"UTF-8","UTF-8");
+    }
+    return $mixed;
 }
