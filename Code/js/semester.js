@@ -164,13 +164,13 @@ function dropBR(ev) {
 }
 
 function changeCalendarAndExam(oldCombo, newcombo, cardId, cardStyle, term) {
-    let short_name = cardId.split('_Card')[0];
+    var short_name = cardId.split('_Card')[0];
 
     // split old combo into lec_exam_num and lab_num
-    let old_lec_exam_num = oldCombo.split('-')[0];
-    let old_lab_num = oldCombo.split('-')[1];
-    let old_lec_exam_eventTitle = (old_lec_exam_num) ? short_name + " [" + old_lec_exam_num + "]" : "";
-    let old_lab_eventTitle = (old_lab_num) ? short_name + " [" + old_lab_num + "]" : "";
+    var old_lec_exam_num = oldCombo.split('-')[0];
+    var old_lab_num = oldCombo.split('-')[1];
+    var old_lec_exam_eventTitle = (old_lec_exam_num) ? short_name + " [" + old_lec_exam_num + "]" : "";
+    var old_lab_eventTitle = (old_lab_num) ? short_name + " [" + old_lab_num + "]" : "";
 
     // split new combo into lec_exam_num and lab_num
     var new_lec_exam_num = newcombo.split('-')[0];
@@ -181,13 +181,6 @@ function changeCalendarAndExam(oldCombo, newcombo, cardId, cardStyle, term) {
     //console.log("short_name: ", short_name);
     //console.log("lec_exam_eventTitle: ", lec_exam_eventTitle);
     //console.log("lab_eventTitle: ", lab_eventTitle);
-
-    // remove old lecture event from calendar
-    removeCalendar(short_name + "_Lec", old_lec_exam_eventTitle);
-    // remove old lab event from calendar
-    if (old_lab_num) { removeCalendar(short_name + "_Lab", old_lab_eventTitle); }
-    // remove old exam li from list
-    removeExamList(short_name);
 
     fetchAllSectionData(short_name, term)
         .then(function (data) {
@@ -208,13 +201,18 @@ function changeCalendarAndExam(oldCombo, newcombo, cardId, cardStyle, term) {
                     });
                     //console.log(lec_arr);
                     let BGC = cardStyle.split(':')[1].slice(0, -1);
-                    appendCalendar(lec_arr, "Lecture", BGC); // appendd new lecture section into calendar
+                    if (lec_arr.length) {
+                        removeCalendar(short_name + "_Lec", old_lec_exam_eventTitle); // remove old lecture event from calendar
+                        appendCalendar(lec_arr, "Lecture", BGC); // appendd new lecture section into calendar
+                    } else {
+                        console.warn("Lecture " + short_name + " have no match section_num");
+                    }
                 } catch (error) {
                     console.error("Change calendar " + short_name + " lecture event FAILED -> " + error);
                 }
             }
             
-            if (new_lab_num) {
+            if (old_lab_num && new_lab_num) {
                 let lab_arr = [];
                 try {
                     lab_obj.forEach(function (section_array) {
@@ -225,7 +223,12 @@ function changeCalendarAndExam(oldCombo, newcombo, cardId, cardStyle, term) {
                     });
                     //console.log(lab_arr);
                     let BGC = cardStyle.split(':')[1].slice(0, -1);
-                    appendCalendar(lab_arr, "Lab", BGC); // appendd new lab event into calendar
+                    if (lab_arr.length) {
+                        removeCalendar(short_name + "_Lab", old_lab_eventTitle); // remove old lab event from calendar
+                        appendCalendar(lab_arr, "Lab", BGC); // appendd new lab event into calendar
+                    } else {
+                        console.warn("Lab " + short_name + " have no match section_num");
+                    }
                 } catch (error) {
                     console.error("Change calendar " + short_name + " lab event FAILED -> " + error);
                 }
@@ -241,7 +244,12 @@ function changeCalendarAndExam(oldCombo, newcombo, cardId, cardStyle, term) {
                         }
                     });
                     //console.log(exam_arr);
-                    appendExamList(exam_arr); // appendd new exam li into list 
+                    if (exam_arr.length) {
+                        removeExamList(short_name); // remove old exam li from list
+                        appendExamList(exam_arr); // appendd new exam li into list 
+                    } else {
+                        console.warn("Exam " + short_name + " section_num have no match with lecture section_num");
+                    }
                 } catch (error) {
                     console.error("Change " + short_name + " exam list FAILED -> " + error);
                 }
@@ -318,9 +326,8 @@ function appendCalendar(section, eventType, BGC) {
     if (eventType == "Lecture") var event_id = section.short_name + "_Lec";
     else if (eventType == "Lab") var event_id = section.short_name + "_Lab";
     var event_title = section.short_name + " [" + section.section_num + "]";
-    let dateRange = section.date_range;
-    var start_date = new Date(dateRange.slice(0, 12)).toISOString().substring(0, 10);
-    var end_date = new Date(dateRange.slice(15)).toISOString().substring(0, 10);
+    var start_date = new Date(section.date_range.slice(0, 12)).toISOString().substring(0, 10);
+    var end_date = new Date(section.date_range.slice(15)).toISOString().substring(0, 10);
     
     if (section.time == "TBA" || section.time == "?" || section.time == null) return;
     var start_time = get24HrsFrm12Hrs(section.time.split("-")[0]);
@@ -399,7 +406,8 @@ function appendExamList(section) {
     var examDate_li, conflictExam, weekDay;
     var examDate_id = section.short_name + "_Exam";
     var examDate_course = section.short_name + " [" + section.section_num + "]";
-    var examDate = new Date(section.date_range.slice(0, 12));
+    //if (section.date_range)
+        var examDate = new Date(section.date_range.slice(0, 12));
 
     // Check if exams are close or conflict
     for (var [key_id, value_date] of Object.entries(examDateDic)) {

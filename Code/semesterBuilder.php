@@ -108,15 +108,19 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                 </div>
             </div>
             <script>
-                $(document).on('focusin', 'select#sectionSelector', function(){
+                var selected;
+                $(document).on('focus', 'select#sectionSelector', function(){
                     //console.log("Saving value " + $(this).val());
-                    $(this).data('val', $(this).val());
+                    selected = $(this).val();
                 }).on('change', 'select#sectionSelector', function() {
-                    let oldCombo = $(this).data('val');
-                    let newCombo = $("select#sectionSelector option:selected").val();
+                    let oldCombo = selected;
+                    let newCombo = $(this).val();
                     let cardId = $(this).closest("div").attr("id");
                     let cardStyle = $(this).closest("div").attr("style");
-                    changeCalendarAndExam(oldCombo, newCombo, cardId, cardStyle, term);
+                    //console.log(oldCombo, newCombo, cardId, cardStyle, term);
+                    if (oldCombo != newCombo)
+                        changeCalendarAndExam(oldCombo, newCombo, cardId, cardStyle, term);
+                    selected = newCombo
                 });
             </script>
         </section>

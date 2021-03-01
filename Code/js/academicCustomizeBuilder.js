@@ -6,7 +6,7 @@ function fetchCourseJSON(sid) {
     $.post('Model/takenClass.php', { sid: sid, password: sid }, function (data) {
         btnForCourse(data);
         showCourses(data);
-        console.log(data);
+        //console.log(data);
     });
 }
 getTermData();
@@ -60,16 +60,19 @@ function findCourseToTake(data) {
 function showCourses(data) {
     var dataJSON = JSON.parse(data);
     var notCompletedData = findCourseToTake(dataJSON);
+
+    for (i = 0 ; i<dataJSON.length; i++)
+    { 
+        if (dataJSON[i].final_grade == "NP")
+            {
+                delete dataJSON[i];
+            }
+    }
+    //console.log(dataJSON);
     /*console.log(notCompletedData);*/
     for (i = 0; i < 12; i++) {
         if (i < dataJSON.length) {
-            if (dataJSON[i].final_grade != "NP")
-            {
             document.getElementById("ct" + i).innerHTML = dataJSON[i].course_ID;
-            }
-        }
-        else {
-            document.getElementById("ct" + i).innerHTML = " ";
         }
     }
 
