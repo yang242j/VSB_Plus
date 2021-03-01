@@ -63,6 +63,7 @@ function showCourses(data) {
     /*console.log(notCompletedData);*/
     for (i = 0; i < 12; i++) {
         if (i < dataJSON.length) {
+            console.log(dataJSON[i].final_grade);
             document.getElementById("ct" + i).innerHTML = dataJSON[i].course_ID;
         }
         else {
