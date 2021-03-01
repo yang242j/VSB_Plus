@@ -52,7 +52,7 @@ session_start(); // Initialize the session
             <div class="bar2"></div>
             <div class="bar3"></div>
         </div>
-        <div class="session-required menu-list nav-active dropdown">
+        <div class="session-required menu-list dropdown">
             <button class="dropbtn">Academic Schedule Builder</button>
             <div class="dropdown-content">
                 <a class="academicList" href="academicBuilder_Main.php">General Student Status</a>
@@ -158,6 +158,7 @@ session_start(); // Initialize the session
                     this class and are expected to write a project plan document, compose a preliminary design document, and 
                     present their project to their fellow students.</li>
                 </ul>
+                <h2 class="inline" id="graph_label">Num of course in semesters</h2>
                 <div class='graph_size' id="graph"></div>
             </div>
         </div>

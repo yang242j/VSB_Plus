@@ -14,8 +14,8 @@ body .course{
 }
 
 .word_overflow{
-    overflow: hidden;  /*溢出隐藏*/
-    text-overflow: ellipsis; /*以省略号...显示*/
+    overflow: hidden;  /*overflow hideen*/
+    text-overflow: ellipsis; /*use ... to show overflow*/
     /* white-space: nowrap;   */
     width: auto;
     margin-right: 0px;
@@ -77,7 +77,7 @@ body .course{
     /* line-height: 200px; */
     width: 50%;
     /* height: 600px; */
-    height: 60vh;
+    height: 80vh;
     display: grid;
     grid-template-columns: fit-content(20%) fit-content(80%);
     grid-template-rows: 90% 10%;
@@ -103,7 +103,7 @@ body .course{
 }
 
 #main_area{
-    /* height: 600px; */
+    height: 80vh;
 }
 
 #error{
@@ -168,7 +168,7 @@ body .course{
 #popView{
 	/*popView sytle*/
 	/* height: 540px; */
-    height: 54vh;
+    height: 72vh;
 	width: 45%;
 	border-radius: 10px;
 	background-color: #b0e6ec;
@@ -199,4 +199,12 @@ body .course{
 .graph_size{
     width: 400px;
     height: 300px;
+}
+
+#graph_label{
+    margin-left: 5%;
+}
+
+#graph_note{
+    color: red;
 }
