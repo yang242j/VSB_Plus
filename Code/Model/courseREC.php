@@ -67,8 +67,7 @@ if ($doneList !== "" && $major !== "" && $term_NUM !== "" && $term_EN !== "") {
             $skipCondition_5 = $skipCondition_4 ? true : isSectionEmpty($coursePath); // Check if course section is empty
             $skipCondition_6 = matchingPrerequisites($reqCourse, $doneList); // Course mush match prerequistes.
             
-            if ( $skipCondition_1 || $skipCondition_2 || $skipCondition_3 || $skipCondition_4 || $skipCondition_5 ) {
-                //echo "$reqCourse : $skipCondition_1, $skipCondition_2, $skipCondition_3, $skipCondition_4 <br>";
+            if ( $skipCondition_1 || $skipCondition_2 || $skipCondition_3 || $skipCondition_4 || $skipCondition_5 || $skipCondition_6 ) {
                 continue; 
             } else {
                 array_push($toTakeList, $reqCourse);
