@@ -65,8 +65,8 @@ function showCourses(data) {
     /*console.log(notCompletedData);*/
     for (i = 0; i < 12; i++) {
         if (i < dataJSON.length) {
-            if (completedData[i + 12 * counterForCompleted].final_grade != "NP"
-                && completedData[i + 12 * counterForCompleted].final_grade != "W"){
+            if (cdataJSON[i].final_grade != "NP"
+                && dataJSON[i].final_grade != "W"){
 
                 document.getElementById("ct" + i).innerHTML = dataJSON[i].course_ID;
                 }
