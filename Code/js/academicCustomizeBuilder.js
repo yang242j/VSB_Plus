@@ -39,7 +39,10 @@ function findCourseToTake(data) {
     var courseToTake = [];
     var courseNotCompleted = [];
     for (i = 0; i < data.length; i++) {
+        if(data[i].course_ID != null){
         courseCompleted[i] = data[i].course_ID;
+        }
+        else return;
     }
     //console.log(courseCompleted);
     //console.log(courseReqData);
@@ -113,7 +116,7 @@ function btnForCourse(data) {
                 delete completedData[i];
             }
     }
-    console.log(completedData.sort());
+    completedData.sort();
     var notCompletedData = findCourseToTake(completedData);
 
     ctRight.onclick = function () {
