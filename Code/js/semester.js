@@ -205,6 +205,7 @@ function changeCalendarAndExam(oldCombo, newcombo, cardId, cardStyle, term) {
                         removeCalendar(short_name + "_Lec", old_lec_exam_eventTitle); // remove old lecture event from calendar
                         appendCalendar(lec_arr, "Lecture", BGC); // appendd new lecture section into calendar
                     } else {
+                        console.log(lec_arr);
                         console.warn("Lecture " + short_name + " have no match section_num");
                     }
                 } catch (error) {
