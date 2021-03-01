@@ -102,8 +102,10 @@ function showCourses(data) {
 function btnForCourse(data) {
     var ctRight = document.getElementById("ctRight");
     var ctLeft = document.getElementById("ctLeft");
+
     var nctRight = document.getElementById("nctRight");
     var nctLeft = document.getElementById("nctLeft");
+
     var completedData = JSON.parse(data);
     var dataJSON = JSON.parse(data);
     var notCompletedData = findCourseToTake(dataJSON);
@@ -166,7 +168,7 @@ function btnForCourse(data) {
 
    nctRight.onclick = function () {
         counterForNotCompleted += 1;
-
+        alert("dasdasdas");
         if (i + 12 * counterForCompleted < notCompletedData.length) {
             for (i = 0; i < 12; i++) {
                 document.getElementById("nct" + i).innerHTML = " ";
@@ -182,8 +184,6 @@ function btnForCourse(data) {
                 }
             }
         }
-
-
 
 
     }
