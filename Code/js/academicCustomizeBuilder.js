@@ -64,21 +64,27 @@ function showCourses(data) {
     var notCompletedData = findCourseToTake(dataJSON);
     /*console.log(notCompletedData);*/
     for (i = 0; i < 12; i++) {
-        if (i < dataJSON.length && dataJSON[i].final_grade != "NP") {
-            document.getElementById("ct" + i).innerHTML = dataJSON[i].course_ID;
+        if (i < dataJSON.length) {
+            if (completedData[i + 12 * counterForCompleted].final_grade != "NP"
+                && completedData[i + 12 * counterForCompleted].final_grade != "W"){
+
+                document.getElementById("ct" + i).innerHTML = dataJSON[i].course_ID;
+                }
+                else
+            i = i - 1;
         }
         else {
-            document.getElementById("ct" + i).innerHTML = " ";
-        }
+        document.getElementById("ct" + i).innerHTML = " ";
     }
-    for (i = 0; i < 12; i++) {
-        if (i < notCompletedData.length && dataJSON[i].final_grade != "NP") {
-            document.getElementById("nct" + i).innerHTML = notCompletedData[i];
-        }
-        else {
-            document.getElementById("nct" + i).innerHTML = " ";
-        }
+}
+for (i = 0; i < 12; i++) {
+    if (i < notCompletedData.length && dataJSON[i].final_grade != "NP") {
+        document.getElementById("nct" + i).innerHTML = notCompletedData[i];
     }
+    else {
+        document.getElementById("nct" + i).innerHTML = " ";
+    }
+}
 
 }
 function btnForCourse(data) {
@@ -107,13 +113,12 @@ function btnForCourse(data) {
         if (counterForCompleted >= 0) {
             for (i = 0; i < 12; i++) {
                 if (completedData[i + 12 * counterForCompleted].course_ID != null) {
-                    if(completedData[i + 12 * counterForCompleted].final_grade != "NP" 
-                    && completedData[i + 12 * counterForCompleted].final_grade != "W")
-                    {
-                    document.getElementById("ct" + i).innerHTML = completedData[i + 12 * counterForCompleted].course_ID;
+                    if (completedData[i + 12 * counterForCompleted].final_grade != "NP"
+                        && completedData[i + 12 * counterForCompleted].final_grade != "W") {
+                        document.getElementById("ct" + i).innerHTML = completedData[i + 12 * counterForCompleted].course_ID;
                     }
                     else
-                    i=i-1;
+                        i = i - 1;
                 }
                 else {
                     if (i + 12 * counterForCompleted > completedData.length) return;
@@ -127,26 +132,26 @@ function btnForCourse(data) {
         if (completedData[i + 12 * counterForCompleted].course_ID != null) {
             counterForCompleted -= 1;
         }
-        if (counterForCompleted >= 0 ){
+        if (counterForCompleted >= 0) {
             if (i + 12 * counterForCompleted < completedData.length) {
                 for (i = 0; i < 12; i++) {
                     document.getElementById("ct" + i).innerHTML = " ";
                 }
             }
-        if (counterForCompleted >= 0) {
-            for (i = 0; i < 12; i++) {
-                if (completedData[i + 12 * counterForCompleted].course_ID != null && completedData[i + 12 * counterForCompleted].final_grade != "NP"
-                && completedData[i + 12 * counterForCompleted].final_grade != "W") {
-                    document.getElementById("ct" + i).innerHTML = completedData[i + 12 * counterForCompleted].course_ID;
-                }
-                else {
-                    if (i + 12 * counterForCompleted > completedData.length) return;
+            if (counterForCompleted >= 0) {
+                for (i = 0; i < 12; i++) {
+                    if (completedData[i + 12 * counterForCompleted].course_ID != null && completedData[i + 12 * counterForCompleted].final_grade != "NP"
+                        && completedData[i + 12 * counterForCompleted].final_grade != "W") {
+                        document.getElementById("ct" + i).innerHTML = completedData[i + 12 * counterForCompleted].course_ID;
+                    }
+                    else {
+                        if (i + 12 * counterForCompleted > completedData.length) return;
+                    }
                 }
             }
         }
-    }
-    else
-    counterForCompleted =1 ;
+        else
+            counterForCompleted = 1;
     }
 
     nctRight.onclick = function () {
