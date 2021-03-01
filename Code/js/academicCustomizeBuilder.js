@@ -121,7 +121,7 @@ function btnForCourse(data) {
     completedData.sort();
 
     ctRight.onclick = function () {
-            counterForCompleted += 1;
+        counterForCompleted += 1;
         if (12 * counterForCompleted > completedData.length) return;
 
         if (i + 12 * counterForCompleted < completedData.length) {
@@ -171,14 +171,14 @@ function btnForCourse(data) {
             for (i = 0; i < 12; i++) {
                 document.getElementById("nct" + i).innerHTML = " ";
             }
-        }
-        if (counterForNotCompleted >= 0) {
-            for (i = 0; i < 12; i++) {
-                if (notCompletedData[i + 12 * counterForNotCompleted] == null) {
-                    return;
-                }
-                else {
-                    document.getElementById("nct" + i).innerHTML = notCompletedData[i + 12 * counterForNotCompleted];
+            if (counterForNotCompleted >= 0) {
+                for (i = 0; i < 12; i++) {
+                    if (notCompletedData[i + 12 * counterForNotCompleted] == null) {
+                        return;
+                    }
+                    else {
+                        document.getElementById("nct" + i).innerHTML = notCompletedData[i + 12 * counterForNotCompleted];
+                    }
                 }
             }
         }
@@ -190,15 +190,16 @@ function btnForCourse(data) {
             for (i = 0; i < 12; i++) {
                 document.getElementById("nct" + i).innerHTML = " ";
             }
-        }
-        if (counterForNotCompleted >= 0) {
-            for (i = 0; i < 12; i++) {
-                if (notCompletedData[i + 12 * counterForNotCompleted] == null) {
-                    document.getElementById("nct" + i).innerHTML = "   ";
-                    return;
-                }
-                else {
-                    document.getElementById("nct" + i).innerHTML = notCompletedData[i + 12 * counterForNotCompleted];
+
+            if (counterForNotCompleted >= 0) {
+                for (i = 0; i < 12; i++) {
+                    if (notCompletedData[i + 12 * counterForNotCompleted] == null) {
+                        document.getElementById("nct" + i).innerHTML = "   ";
+                        return;
+                    }
+                    else {
+                        document.getElementById("nct" + i).innerHTML = notCompletedData[i + 12 * counterForNotCompleted];
+                    }
                 }
             }
         }
