@@ -63,8 +63,10 @@ function showCourses(data) {
     /*console.log(notCompletedData);*/
     for (i = 0; i < 12; i++) {
         if (i < dataJSON.length) {
-            console.log(dataJSON[i].final_grade);
+            if (dataJSON[i].final_grade != "NP")
+            {
             document.getElementById("ct" + i).innerHTML = dataJSON[i].course_ID;
+            }
         }
         else {
             document.getElementById("ct" + i).innerHTML = " ";
@@ -91,7 +93,7 @@ function btnForCourse(data) {
 
     var counterForCompleted = 0;
     var counterForNotCompleted = 0;
-    console.log(completedData);
+    //console.log(completedData);
 
     ctRight.onclick = function () {
         var i = 0;
