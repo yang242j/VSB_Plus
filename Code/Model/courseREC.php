@@ -96,8 +96,10 @@ function matchingPrerequisites($short_name, $doneList) {
     $response = get_course_json($short_name);
     $resArr = array();
     $resArr = json_decode($response);
-    echo $resArr;
+    
     // Get the prerequisites expression string
+    echo $resArr['preExpression'];
+    echo $resArr->preExpression;
     $expStr = $resArr->preExpression;
 
     return getStatus($expStr, $doneList) ? false : true;
