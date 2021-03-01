@@ -144,14 +144,14 @@ function btnForCourse(data) {
     ctLeft.onclick = function () {
         counterForCompleted -= 1;
         if (counterForCompleted >= 0) {
-            if (i + 12 * counterForCompleted < completedData.length) {
+            f (i + 12 * counterForCompleted < completedData.length) {
                 for (i = 0; i < 12; i++) {
                     document.getElementById("ct" + i).innerHTML = " ";
                 }
             }
             if (counterForCompleted >= 0) {
                 for (i = 0; i < 12; i++) {
-                    if (completedData[i + 12 * counterForCompleted]== null) {
+                    if (completedData[i + 12 * counterForCompleted] == null) {
                         return;
                     }
                     else {
@@ -159,6 +159,7 @@ function btnForCourse(data) {
                     }
                 }
             }
+    
         }
         else
             counterForCompleted = 1;
