@@ -113,7 +113,7 @@ function btnForCourse(data) {
                 delete completedData[i];
             }
     }
-    console.log(completedData);
+    console.log(completedData.sort());
     var notCompletedData = findCourseToTake(completedData);
 
     ctRight.onclick = function () {
