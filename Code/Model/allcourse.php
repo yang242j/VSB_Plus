@@ -31,7 +31,8 @@ while ($row = mysqli_fetch_array($result)) {
         "faculty" => $row["faculty"],
         "credit" => $row["credit"],
         "description" => $row["description"],
-        "prerequisite" => $row["prerequisite"]
+        "prerequisite" => $row["prerequisite"],
+        "preExpression" => $row["preExpression"]
     );
     array_push($data, json_encode($course));
 }
