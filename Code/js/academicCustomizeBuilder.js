@@ -41,10 +41,10 @@ function findCourseToTake(data) {
     console.log(data);
     console.log(data[2]);
     for (i = 0; i < 10; i++) {
-        if(data[i].course_ID != null){
-        courseCompleted[i] = data[i].course_ID;
+        if(data[i] == null){
+             return;
         }
-        else return;
+        else courseCompleted[i] = data[i].course_ID;;
     }
     //console.log(courseCompleted);
     //console.log(courseReqData);
