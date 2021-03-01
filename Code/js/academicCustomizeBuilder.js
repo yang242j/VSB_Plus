@@ -105,7 +105,6 @@ function btnForCourse(data) {
     var nctRight = document.getElementById("nctRight");
     var nctLeft = document.getElementById("nctLeft");
     var completedData = JSON.parse(data);
-    var notCompletedData = findCourseToTake(completedData);
     var counterForCompleted = 0;
     var counterForNotCompleted = 0;
     //console.log(completedData);
@@ -117,6 +116,7 @@ function btnForCourse(data) {
     }
     completedData.sort();
     var notCompletedData = findCourseToTake(completedData);
+    console.log(notCompletedData);
 
     ctRight.onclick = function () {
 
@@ -129,7 +129,7 @@ function btnForCourse(data) {
         }
         if (counterForCompleted >= 0) {
             for (i = 0; i < 12; i++) {
-                if (completedData[i + 12 * counterForCompleted].course_ID == "undefind") {
+                if (completedData[i + 12 * counterForCompleted].course_ID == null) {
                     return;
                 }
                 else {
@@ -150,7 +150,7 @@ function btnForCourse(data) {
             }
             if (counterForCompleted >= 0) {
                 for (i = 0; i < 12; i++) {
-                    if (completedData[i + 12 * counterForCompleted].course_ID == "undefind") {
+                    if (completedData[i + 12 * counterForCompleted].course_ID == null) {
                         return;
                     }
                     else {
