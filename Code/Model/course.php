@@ -45,7 +45,8 @@ if ($short_name !== "") {
             "course_num" => $row["course_num"],
             "credit" => $row["credit"],
             "description" => $row["description"],
-            "prerequisite" => $row["prerequisite"]
+            "prerequisite" => $row["prerequisite"],
+            "preExpression" => $row["preExpression"]
         );
         // 4) Encode & Return as JSON format
         $json_data = json_encode($data, JSON_PRETTY_PRINT);
