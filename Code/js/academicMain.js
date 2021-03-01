@@ -2,12 +2,7 @@ var summary = {
     "name":"",
     "sid" : "",
     "program" : "",
-    // "credit" : "",
-    // "gpa" : "",
     "major" : "",
-    // "year" : "",
-    // "courseLeft" : "",
-    // "ave" : "",
 }
 
 var cmpValue = {
@@ -40,8 +35,8 @@ window.onload = function () {
     loadPieChart(sid);
     loadLineChart(sid);
     console.log("init web");
-    setDefault("200362586");
-    setCmptedValue("200362586");
+    setDefault(sid);
+    setCmptedValue(sid);
 }
 
 function loadPieChart(sid) {
