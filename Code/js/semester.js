@@ -203,6 +203,7 @@ function changeCalendarAndExam(oldCombo, newcombo, cardId, cardStyle, term) {
                     lec_obj.forEach(function (section_array) {
                         if (new_lec_exam_num == section_array.section_num) {
                             lec_arr = section_array;
+                            console.log(lec_arr);
                             return false; // breaks
                         }
                     });
@@ -318,7 +319,6 @@ function appendCalendar(section, eventType, BGC) {
     if (eventType == "Lecture") var event_id = section.short_name + "_Lec";
     else if (eventType == "Lab") var event_id = section.short_name + "_Lab";
     var event_title = section.short_name + " [" + section.section_num + "]";
-    console.log(section.date_range);
     //if (section.date_range) {
         var start_date = new Date(section.date_range.slice(0, 12)).toISOString().substring(0, 10);
         var end_date = new Date(section.date_range.slice(15)).toISOString().substring(0, 10);
