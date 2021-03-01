@@ -380,7 +380,7 @@ function removeCalendar(id, title) {
     try {
         if (calendar.getEventById(id)) {
             let event = calendar.getEventById(id);
-            //console.log(event.title, " & ", title)
+            console.log(event.title, " & ", title)
             if (title && event.title === title) {
                 event.remove();
             } else if (title && event.title !== title) {
