@@ -9,10 +9,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $resArr = array();
     $resArr = json_decode($response);
                                         // ENGG 401
-    //$preStr = $resArr->prerequisite;   // One of ENEL 400, ENEV 400, ENIN 400, ENPE 400, or ENSE 400
+    $preStr = $resArr->prerequisite;   // One of ENEL 400, ENEV 400, ENIN 400, ENPE 400, or ENSE 400
     //$expStr = str2Expression($preStr); // ENEL 400 || ENEV 400 || ENIN 400 || ENPE 400 || ENSE 400
-    $preStr = "One of ENEL 400, ENEV 400, ENIN 400, ENPE 400, or ENSE 400";
-    $expStr = "ENEL 400 || ENEV 400 || ENIN 400 || ENPE 400 || ENSE 400";
+    $expStr = $resArr->preExpression; // ENEL 400 || ENEV 400 || ENIN 400 || ENPE 400 || ENSE 400
+    //$preStr = "One of ENEL 400, ENEV 400, ENIN 400, ENPE 400, or ENSE 400";
+    //$expStr = "ENEL 400 || ENEV 400 || ENIN 400 || ENPE 400 || ENSE 400";
     // $status = getStatus($expStr, $doneList); // True or False
     $status = getStatus($expStr, $doneList) ? "true" : "false";
 }
@@ -91,14 +92,14 @@ function getStatus($expStr, $doneList) {
     // echo $expStr."<br>";
     // $expStr = "ENSE 400 || ENEL 400";
     $expStr = trim($expStr);
-    // Basic
+    // Basic: exact one course name "ENSE 400"
     if (preg_match_all("/([a-z]+\s[0-9]+)/i", $expStr) == 1){
         echo "1 $expStr";
         echo in_array($expStr, $doneList) ? " in the Done array <br>" : " not in  done array <br>";
         return in_array($expStr, $doneList) ? true : false;
     }
 
-    // // Remove ()
+    // // Remove () if " (ENSE 400 || ENEL 400) "
     if (substr($expStr, 0, 1) == "(" || substr($expStr, -1) == ")") {
         return getStatus(substr($expStr, 0, 1), $doneList);
     }
@@ -109,7 +110,7 @@ function getStatus($expStr, $doneList) {
     //     return getStatus($innerComp[1], $doneList);
     // }
 
-    // &&
+    // &&: split "ENSE 400 && ENEL 400" 
     $andComp = preg_split("/(&{2})/", $expStr);
     if (sizeof($andComp) > 1){
         foreach ($andComp as $component) {
@@ -122,7 +123,7 @@ function getStatus($expStr, $doneList) {
     }
     
     echo "<br>";
-    // ||
+    // ||: split "ENSE 400 || ENEL 400" 
     $orComp = preg_split("/(\|{2})/", $expStr);
     if (sizeof($orComp) > 1){
         foreach ($orComp as $component) {
