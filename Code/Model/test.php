@@ -102,11 +102,6 @@ function getStatus($expStr, $doneList) {
         return in_array($expStr, $doneList) ? true : false;
     }
 
-    // // Remove () if " (ENSE 400 || ENEL 400) "
-    if (substr($expStr, 0, 1) == "(" || substr($expStr, -1) == ")") {
-        return getStatus(substr($expStr, 0, 1), $doneList);
-    }
-
     // $innerComp = preg_split("/[()]/i", $expStr);
     // if ($innerComp[1]) {
     //     echo "(inner)". $innerComp[1] ."<br>";
@@ -139,6 +134,11 @@ function getStatus($expStr, $doneList) {
         return false;
     } 
     else{ echo "something error";}
+
+    // Remove () if " (ENSE 400 || ENEL 400) "
+    if (substr($expStr, 0, 1) == "(" && substr($expStr, -1) == ")") {
+        return getStatus(substr($expStr, 1, -1), $doneList);
+    }
 
 }
 
