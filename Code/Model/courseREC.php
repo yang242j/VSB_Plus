@@ -65,7 +65,7 @@ if ($doneList !== "" && $major !== "" && $term_NUM !== "" && $term_EN !== "") {
             $coursePath = "../JSON/$term_NUM/$reqCourse.json";
             $skipCondition_4 = !file_exists($coursePath) ? true : false; // Course file exist in that semester dir.
             $skipCondition_5 = $skipCondition_4 ? true : isSectionEmpty($coursePath); // Check if course section is empty
-            //$skipCondition_6 = matchingPrerequisites($reqCourse, $doneList); // Course mush match prerequistes.
+            $skipCondition_6 = matchingPrerequisites($reqCourse, $doneList); // Course mush match prerequistes.
 
             if ( $skipCondition_1 || $skipCondition_2 || $skipCondition_3 || $skipCondition_4 || $skipCondition_5 ) {
                 //echo "$reqCourse : $skipCondition_1, $skipCondition_2, $skipCondition_3, $skipCondition_4 <br>";
@@ -99,9 +99,55 @@ function matchingPrerequisites($short_name, $doneList) {
 
     // Get and convert the prerequisites string to expression string
     $preStr = $resArr->prerequisite;
-    $expStr = '';
+    $expStr = $resArr->preExpression;
 
-    return false;
+    return getStatus($expStr, $doneList) ? false : true;
+}
+
+function getStatus($expStr, $doneList) {
+
+    $expStr = trim($expStr);
+
+    // Basic: if expStr == null, return true
+    if ($expStr == null) return true;
+    
+    // Basic: exact one course name "ENSE 400"
+    if (preg_match_all("/([a-z]+\s[0-9]+)/i", $expStr) == 1){
+        //echo in_array($expStr, $doneList) ? "<b>True</b> $expStr is in the Done array <br>" : "<b>False</b> $expStr is not in  done array <br>";
+        return in_array($expStr, $doneList) ? true : false;
+    }
+
+    // &&: split "ENSE 400 && ENEL 400" 
+    $andComp = preg_split("/(&{2})/", $expStr);
+    if (sizeof($andComp) > 1){
+        foreach ($andComp as $component) {
+            if ($component) {
+                //echo "and $component <br>";
+                if (getStatus($component, $doneList) == false) return false;
+            }
+        }
+        return true;
+    }
+
+    // Remove () if " (ENSE 400 || ENEL 400) "
+    if (substr($expStr, 0, 1) == "(" && substr($expStr, -1) == ")") {
+        return getStatus(substr($expStr, 1, -1), $doneList);
+    }
+    
+    // ||: split "ENSE 400 || ENEL 400" 
+    $orComp = preg_split("/(\|{2})/", $expStr);
+    if (sizeof($orComp) > 1){
+        foreach ($orComp as $component) {
+            // echo "or $component <br>";
+            if ($component) {
+                //echo "or $component <br>";
+                if (getStatus($component, $doneList) == true) return true;
+            }
+        }
+        return false;
+    } 
+    else{ echo "something error";}
+
 }
 
 function get_course_json($short_name) {
