@@ -167,21 +167,8 @@ function btnForCourse(data) {
 
     nctRight.onclick = function () {
         counterForNotCompleted += 1;
-        if (i + 12 * counterForCompleted < notCompletedData.length) {
-            for (i = 0; i < 12; i++) {
-                document.getElementById("nct" + i).innerHTML = " ";
-            }
-        }
-        if (counterForCompleted >= 0) {
-            for (i = 0; i < 12; i++) {
-                if (notCompletedData[i + 12 * counterForCompleted] == null) {
-                    return;
-                }
-                else {
-                    document.getElementById("nct" + i).innerHTML = notCompletedData[i + 12 * counterForCompleted];
-                }
-            }
-        }
+        document.getElementById("nct0").innerHTML = notCompletedData[3];
+         
     }
     nctLeft.onclick = function () {
         counterForNotCompleted -= 1;
