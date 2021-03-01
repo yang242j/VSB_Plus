@@ -65,7 +65,7 @@ if ($doneList !== "" && $major !== "" && $term_NUM !== "" && $term_EN !== "") {
             $coursePath = "../JSON/$term_NUM/$reqCourse.json";
             $skipCondition_4 = !file_exists($coursePath) ? true : false; // Course file exist in that semester dir.
             $skipCondition_5 = $skipCondition_4 ? true : isSectionEmpty($coursePath); // Check if course section is empty
-            $skipCondition_6 = matchingPrerequisites($reqCourse, $doneList); // Course mush match prerequistes.
+            //$skipCondition_6 = matchingPrerequisites($reqCourse, $doneList); // Course mush match prerequistes.
 
             if ( $skipCondition_1 || $skipCondition_2 || $skipCondition_3 || $skipCondition_4 || $skipCondition_5 ) {
                 //echo "$reqCourse : $skipCondition_1, $skipCondition_2, $skipCondition_3, $skipCondition_4 <br>";
@@ -100,7 +100,7 @@ function matchingPrerequisites($short_name, $doneList) {
     // Get and convert the prerequisites string to expression string
     $preStr = $resArr->prerequisite;
     $expStr = '';
-    
+
     return false;
 }
 
