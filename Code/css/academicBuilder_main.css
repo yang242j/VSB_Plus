@@ -1,3 +1,8 @@
+body {
+    background-repeat: no-repeat;
+    background-image: linear-gradient(#B2D9E7, white, white)
+}
+
 #welcome h1 {
     /* margin-left:-5px; */
     text-align: left;
@@ -9,10 +14,10 @@ h2 {
 }
 
 p {
-    /* font-family: Sans-serif;
+    /* font-family: Sans-serif; */
     font-size: 20px;
-    text-align: justify;
-    text-indent: 40px; */
+    /* text-align: justify; */
+    /* text-indent: 40px; */
 }
 
 #main{
@@ -22,8 +27,6 @@ p {
     grid-template-columns: 50% 50%;
     grid-template-rows: 50vh 50vh;
 }
-
-
 
 
 #main_area{
@@ -99,6 +102,11 @@ p {
 .left{
     top: 22%;
     left: 5%;
+}
+
+.round{
+    border-radius: 5px 5px;
+    border-width: 1px; 
 }
 
 #pie{

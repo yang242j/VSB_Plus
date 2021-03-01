@@ -22,6 +22,8 @@ function menuFunc2(x) {
     }
 
 }
+
+// Help to parse the json datas
 function allParse(response){
     var result = [];
     var all = JSON.parse(response);
@@ -30,4 +32,18 @@ function allParse(response){
         result.push(course);
     }
     return result;
+}
+
+// Get the major by using AJAX
+function getMajor($sid){
+    $.post('../', {'sid': $sid}, function(data){
+        
+    });
+}
+
+// Get the average by using AJAX
+function getAve($sid){
+    $.post('../', {'sid': $sid}, function(data){
+        
+    });
 }
