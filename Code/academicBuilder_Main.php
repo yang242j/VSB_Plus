@@ -116,9 +116,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         <h2 class="center textCenter"><label for="pieChart">Score Distribution</label></h1>
             <div id="pieChart"></div>
         </div>
-
     </div>
-
 
     <footer>
         <script src="js/main.js"></script>
