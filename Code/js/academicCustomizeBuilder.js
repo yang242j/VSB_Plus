@@ -38,8 +38,8 @@ function findCourseToTake(data) {
     var courseCompleted = [];
     var courseToTake = [];
     var courseNotCompleted = [];
-    console.log(data);
-    console.log(data[2]);
+    //console.log(data);
+    //console.log(data[2]);
     for (i = 0; i < data.length; i++) {
         if (data[i] == null) {
             return;
@@ -108,7 +108,7 @@ function btnForCourse(data) {
     var notCompletedData = findCourseToTake(completedData);
     var counterForCompleted = 0;
     var counterForNotCompleted = 0;
-    //console.log(completedData);
+    console.log(notcompletedData);
     // delete NP and W data
     for (i = 0; i < completedData.length; i++) {
         if (completedData[i].final_grade == "NP") {
@@ -163,7 +163,7 @@ function btnForCourse(data) {
             counterForCompleted = 1;
     }
 
-    nctRight.onclick = function () {
+   /* nctRight.onclick = function () {
         counterForNotCompleted += 1;
 
         if (i + 12 * counterForCompleted < notCompletedData.length) {
@@ -173,7 +173,7 @@ function btnForCourse(data) {
         }
         if (counterForCompleted >= 0) {
             for (i = 0; i < 12; i++) {
-                if (notCompletedData[i + 12 * counterForCompleted].course_ID == "undefind") {
+                if (notCompletedData[i + 12 * counterForCompleted].course_ID == null) {
                     return;
                 }
                 else {
@@ -196,7 +196,7 @@ function btnForCourse(data) {
         }
         if (counterForCompleted >= 0) {
             for (i = 0; i < 12; i++) {
-                if (notCompletedData[i + 12 * counterForCompleted].course_ID == "undefind") {
+                if (notCompletedData[i + 12 * counterForCompleted].course_ID == null) {
                     return;
                 }
                 else {
@@ -205,5 +205,5 @@ function btnForCourse(data) {
             }
         }
 
-    }
+    }*/
 }
