@@ -136,7 +136,7 @@ function btnForCourse(data) {
                     document.getElementById("ct" + i).innerHTML = completedData[i + 12 * counterForCompleted].course_ID;
                 }
                 else {
-                    if (i + 12 * counterForCompleted > completedData.length) return;
+                    return;
                 }
             }
         }
@@ -159,7 +159,7 @@ function btnForCourse(data) {
                         document.getElementById("ct" + i).innerHTML = completedData[i + 12 * counterForCompleted].course_ID;
                     }
                     else {
-                        if (i + 12 * counterForCompleted > completedData.length) return;
+                         return;
                     }
                 }
             }
