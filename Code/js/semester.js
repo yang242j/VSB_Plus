@@ -318,7 +318,7 @@ function appendCalendar(section, eventType, BGC) {
     if (eventType == "Lecture") var event_id = section.short_name + "_Lec";
     else if (eventType == "Lab") var event_id = section.short_name + "_Lab";
     var event_title = section.short_name + " [" + section.section_num + "]";
-    let dateRange = section.date_range;
+    let dateRange = section['date_range'];
     var start_date = new Date(dateRange.slice(0, 12)).toISOString().substring(0, 10);
     var end_date = new Date(dateRange.slice(15)).toISOString().substring(0, 10);
     
