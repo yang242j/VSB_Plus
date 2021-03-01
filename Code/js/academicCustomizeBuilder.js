@@ -68,7 +68,7 @@ function showCourses(data) {
                 delete dataJSON[i];
             }
     }
-    dataJSON.sort();
+    //dataJSON.sort();
     console.log(dataJSON);
     /*console.log(notCompletedData);*/
 
