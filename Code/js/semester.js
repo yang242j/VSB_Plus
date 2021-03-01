@@ -199,14 +199,13 @@ function changeCalendarAndExam(oldCombo, newcombo, cardId, cardStyle, term) {
                             return false; // breaks
                         }
                     });
-                    //console.log(lec_arr);
                     let BGC = cardStyle.split(':')[1].slice(0, -1);
-                    if (lec_arr.length) {
+                    if (Object.keys(lec_arr).length) {
                         removeCalendar(short_name + "_Lec", old_lec_exam_eventTitle); // remove old lecture event from calendar
                         appendCalendar(lec_arr, "Lecture", BGC); // appendd new lecture section into calendar
                     } else {
-                        console.log(lec_arr);
-                        console.log(Object.keys(lec_arr).length);
+                        //console.log(lec_arr);
+                        //console.log(Object.keys(lec_arr).length);
                         console.warn("Lecture " + short_name + " have no match section_num");
                     }
                 } catch (error) {
@@ -223,9 +222,8 @@ function changeCalendarAndExam(oldCombo, newcombo, cardId, cardStyle, term) {
                             return false; // breaks
                         }
                     });
-                    //console.log(lab_arr);
                     let BGC = cardStyle.split(':')[1].slice(0, -1);
-                    if (lab_arr.length) {
+                    if (Object.keys(lab_arr).length) {
                         removeCalendar(short_name + "_Lab", old_lab_eventTitle); // remove old lab event from calendar
                         appendCalendar(lab_arr, "Lab", BGC); // appendd new lab event into calendar
                     } else {
@@ -246,7 +244,7 @@ function changeCalendarAndExam(oldCombo, newcombo, cardId, cardStyle, term) {
                         }
                     });
                     //console.log(exam_arr);
-                    if (exam_arr.length) {
+                    if (Object.keys(exam_arr).length) {
                         removeExamList(short_name); // remove old exam li from list
                         appendExamList(exam_arr); // appendd new exam li into list 
                     } else {
