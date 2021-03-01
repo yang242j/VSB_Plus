@@ -64,7 +64,7 @@ class StudentController
 			return array(
 				"_message" => "Uncorrect student id",
 				"_code" => "102"
-			);
+			); 
 		} else {
 			$detail_sql = "SELECT * FROM students where student_id = '" . $sid . "'";
 			$detail_result = mysqli_query($conn, $detail_sql);
