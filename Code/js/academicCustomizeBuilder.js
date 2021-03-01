@@ -68,7 +68,7 @@ function showCourses(data) {
                 delete dataJSON[i];
             }
     }
-    console.log(dataJSON);
+    //console.log(dataJSON);
     /*console.log(notCompletedData);*/
     for (i = 0; i < 12; i++) {
         if (i < dataJSON.length) {
