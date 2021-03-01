@@ -410,7 +410,6 @@ function appendExamList(section) {
         var examDate = new Date(section.date_range.slice(0, 12));
 
     // Check if exams are close or conflict
-    console.log("Exam list: " + Object.entries(examDateDic));
     for (var [key_id, value_date] of Object.entries(examDateDic)) {
         if (value_date.getTime() === examDate.getTime()) {
             conflictExam = true;
@@ -451,7 +450,7 @@ function appendExamList(section) {
     }
     document.getElementById("examDate_ul").innerHTML += examDate_li;
     examDateDic[examDate_id] = examDate;
-    //console.log(examDateDic);
+    console.log(examDateDic);
 }
 
 function removeExamList(sec_short_name) {
