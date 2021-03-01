@@ -40,9 +40,9 @@ function findCourseToTake(data) {
     var courseNotCompleted = [];
     console.log(data);
     console.log(data[2]);
-    for (i = 0; i < 10; i++) {
-        if(data[i] == null){
-             return;
+    for (i = 0; i < data.length; i++) {
+        if (data[i] == null) {
+            return;
         }
         else courseCompleted[i] = data[i].course_ID;;
     }
@@ -66,12 +66,10 @@ function showCourses(data) {
     var dataJSON = JSON.parse(data);
     var notCompletedData = findCourseToTake(dataJSON);
 
-    for (i = 0 ; i<dataJSON.length; i++)
-    { 
-        if (dataJSON[i].final_grade == "NP" || dataJSON[i].final_grade == "W")
-            {
-                delete dataJSON[i];
-            }
+    for (i = 0; i < dataJSON.length; i++) {
+        if (dataJSON[i].final_grade == "NP" || dataJSON[i].final_grade == "W") {
+            delete dataJSON[i];
+        }
     }
     //dataJSON.sort();
     //console.log(dataJSON);
@@ -88,7 +86,7 @@ function showCourses(data) {
             document.getElementById("ct" + i).innerHTML = dataJSON[i].course_ID;
         }
         else
-        return;
+            return;
     }
 
     for (i = 0; i < 12; i++) {
@@ -110,22 +108,18 @@ function btnForCourse(data) {
     var counterForCompleted = 0;
     var counterForNotCompleted = 0;
     //console.log(completedData);
-   // delete NP and W data
-    for (i = 0 ; i<completedData.length; i++)
-    { 
-        if (completedData[i].final_grade == "NP")
-            {
-                delete completedData[i];
-            }
+    // delete NP and W data
+    for (i = 0; i < completedData.length; i++) {
+        if (completedData[i].final_grade == "NP") {
+            delete completedData[i];
+        }
     }
     completedData.sort();
     var notCompletedData = findCourseToTake(completedData);
 
     ctRight.onclick = function () {
-        var i = 0;
-        if (completedData[i + 12 * counterForCompleted].course_ID != null) {
-            counterForCompleted += 1;
-        }
+
+        counterForCompleted += 1;
 
         if (i + 12 * counterForCompleted < completedData.length) {
             for (i = 0; i < 12; i++) {
@@ -134,22 +128,19 @@ function btnForCourse(data) {
         }
         if (counterForCompleted >= 0) {
             for (i = 0; i < 12; i++) {
-                if (completedData[i + 12 * counterForCompleted].course_ID != null) {
-
-                    document.getElementById("ct" + i).innerHTML = completedData[i + 12 * counterForCompleted].course_ID;
+                if (completedData[i + 12 * counterForCompleted].course_ID == null) {
+                    return;
                 }
                 else {
-                    return;
+                    document.getElementById("ct" + i).innerHTML = completedData[i + 12 * counterForCompleted].course_ID;
                 }
             }
         }
 
     }
     ctLeft.onclick = function () {
-        var i = 0;
-        if (completedData[i + 12 * counterForCompleted].course_ID != null) {
-            counterForCompleted -= 1;
-        }
+        counterForCompleted -= 1;
+
         if (counterForCompleted >= 0) {
             if (i + 12 * counterForCompleted < completedData.length) {
                 for (i = 0; i < 12; i++) {
@@ -162,7 +153,7 @@ function btnForCourse(data) {
                         document.getElementById("ct" + i).innerHTML = completedData[i + 12 * counterForCompleted].course_ID;
                     }
                     else {
-                         return;
+                        return;
                     }
                 }
             }
