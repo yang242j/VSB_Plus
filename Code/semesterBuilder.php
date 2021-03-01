@@ -108,7 +108,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                 </div>
             </div>
             <script>
-                $(document).on('focusin', 'select#sectionSelector', function(){
+                $(document).on('focus', 'select#sectionSelector', function(){
                     //console.log("Saving value " + $(this).val());
                     $(this).data('val', $(this).val());
                 }).on('change', 'select#sectionSelector', function() {
