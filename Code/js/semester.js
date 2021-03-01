@@ -406,11 +406,10 @@ function appendExamList(section) {
     var examDate_li, conflictExam, weekDay;
     var examDate_id = section.short_name + "_Exam";
     var examDate_course = section.short_name + " [" + section.section_num + "]";
-    //if (section.date_range)
-        var examDate = new Date(section.date_range.slice(0, 12));
+    var examDate = new Date(section.date_range.slice(0, 12));
 
     // Check if exams are close or conflict
-    for (var [key_id, value_date] of Object.entries(examDateDic)) {
+    for (const [key_id, value_date] of Object.entries(examDateDic)) {
         if (value_date.getTime() === examDate.getTime()) {
             conflictExam = true;
         } else if (Math.abs(value_date.getTime() - examDate.getTime()) <= 86400000) { //24h
@@ -418,6 +417,7 @@ function appendExamList(section) {
         } else {
             conflictExam = false;
         }
+        console.log(`${key_id}: ${value_date}, ${conflictExam}`);
     }
 
     // Convert days to fullword
