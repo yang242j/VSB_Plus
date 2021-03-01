@@ -73,6 +73,10 @@ function showCourses(data) {
     dataJSON.sort();
     //console.log(dataJSON);
     //console.log(notCompletedData);*/
+    for (i = 0; i < 12; i++) {
+        document.getElementById("ct" + i).innerHTML = " ";
+        document.getElementById("nct" + i).innerHTML = " ";
+    }
 
     for (i = 0; i < 12; i++) {
         if (i < dataJSON.length) {
@@ -83,11 +87,11 @@ function showCourses(data) {
     }
 
     for (i = 0; i < 12; i++) {
-        if (i < notCompletedData.length && dataJSON[i].final_grade != "NP") {
+        if (i < notCompletedData.length) {
             document.getElementById("nct" + i).innerHTML = notCompletedData[i];
         }
         else {
-            document.getElementById("nct" + i).innerHTML = " ";
+            return;
         }
     }
 
