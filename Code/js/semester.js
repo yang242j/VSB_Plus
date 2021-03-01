@@ -415,7 +415,7 @@ function appendExamList(section) {
         } else if (Math.abs(value_date.getTime() - examDate.getTime()) <= 86400000) { //24h
             conflictExam = true;
         }
-        console.log(`${key_id}: ${value_date}, ${conflictExam}`);
+        //console.log(`${key_id}: ${value_date}, ${conflictExam}`);
     }
 
     // Convert days to fullword
@@ -448,7 +448,7 @@ function appendExamList(section) {
     }
     document.getElementById("examDate_ul").innerHTML += examDate_li;
     examDateDic[examDate_id] = examDate;
-    console.log(examDateDic);
+    //console.log(examDateDic);
 }
 
 function removeExamList(sec_short_name) {
