@@ -243,7 +243,6 @@ function changeCalendarAndExam(oldCombo, newcombo, cardId, cardStyle, term) {
                             return false; // breaks
                         }
                     });
-                    //console.log(exam_arr);
                     if (Object.keys(exam_arr).length) {
                         removeExamList(short_name); // remove old exam li from list
                         appendExamList(exam_arr); // appendd new exam li into list 
