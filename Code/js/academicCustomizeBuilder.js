@@ -69,7 +69,7 @@ function showCourses(data) {
             }
         }
         else {
-            document.getElementById("ct" + i).innerHTML = " ";
+            document.getElementById("ct" + i).innerHTML = "P";
         }
     }
 
