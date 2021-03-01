@@ -70,6 +70,8 @@ class StudentController
 			$detail_result = mysqli_query($conn, $detail_sql);
 			$row = mysqli_fetch_array($detail_result);
 			return array(
+				"_message" => "success",
+				"_code" => "200",
 				"student_id" => $row['student_id'],
 				"name" => $row['name'],
 				"campus" => $row['campus'],
@@ -111,7 +113,8 @@ class StudentController
 
 			if (!$takenCourse_result) {
 				return array(
-					"_message" => "No courses are taken"
+					"_message" => "No courses are taken",
+					"_code" => "103"
 				);
 			}
 
@@ -119,6 +122,8 @@ class StudentController
 			// 4) Covert to the data array with taken class 
 			while ($row = mysqli_fetch_array($takenCourse_result)) {
 				$oneTaken = array(
+					"_message" => "success",
+					"_code" => "200",
 					"courseIndex" => $row['courseIndex'],
 					"term" => $row['term'],
 					"course_ID" => $row['course_ID'],
