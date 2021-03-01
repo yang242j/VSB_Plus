@@ -240,8 +240,8 @@ function changeCalendarAndExam(oldCombo, newcombo, cardId, cardStyle, term) {
                             return false; // breaks
                         }
                     });
-                    //console.log(exam_arr);
-                    appendExamList(exam_arr); // appendd new exam li into list 
+                    console.log(exam_arr);
+                    if (exam_arr) appendExamList(exam_arr); // appendd new exam li into list 
                 } catch (error) {
                     console.error("Change " + short_name + " exam list FAILED -> " + error);
                 }
