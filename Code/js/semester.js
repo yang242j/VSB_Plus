@@ -118,13 +118,13 @@ function dropL(ev, term) {
                             appendCalendar(lec_json_obj[lec_exam_id], "Lecture", BGC); //4.2.1.Append lecture calendar event
                             appendExamList(exam_json_obj[lec_exam_id]); //4.2.2.Append exam list
                         } else {
-                            console.warn(short_name + " does NOT have Lecture-Exam section_" + lec_exam_id);
+                            console.warn(short_name + " Lecture-Exam info is empty.");
                         }
 
                         if (lab_json_obj[lab_id]) {
                             appendCalendar(lab_json_obj[lab_id], "Lab", BGC); //4.2.3.Append lab calendar event
                         } else {
-                            console.warn(short_name + " does NOT have Lab section_" + lab_id);
+                            console.warn(short_name + " does NOT have Lab required");
                         }
 
                         //5.Store color id to prevent same color twice
@@ -199,12 +199,13 @@ function changeCalendarAndExam(oldCombo, newcombo, cardId, cardStyle, term) {
                             return false; // breaks
                         }
                     });
-                    //console.log(lec_arr);
                     let BGC = cardStyle.split(':')[1].slice(0, -1);
-                    if (lec_arr.length) {
+                    if (Object.keys(lec_arr).length) {
                         removeCalendar(short_name + "_Lec", old_lec_exam_eventTitle); // remove old lecture event from calendar
                         appendCalendar(lec_arr, "Lecture", BGC); // appendd new lecture section into calendar
                     } else {
+                        //console.log(lec_arr);
+                        //console.log(Object.keys(lec_arr).length);
                         console.warn("Lecture " + short_name + " have no match section_num");
                     }
                 } catch (error) {
@@ -221,9 +222,8 @@ function changeCalendarAndExam(oldCombo, newcombo, cardId, cardStyle, term) {
                             return false; // breaks
                         }
                     });
-                    //console.log(lab_arr);
                     let BGC = cardStyle.split(':')[1].slice(0, -1);
-                    if (lab_arr.length) {
+                    if (Object.keys(lab_arr).length) {
                         removeCalendar(short_name + "_Lab", old_lab_eventTitle); // remove old lab event from calendar
                         appendCalendar(lab_arr, "Lab", BGC); // appendd new lab event into calendar
                     } else {
@@ -243,8 +243,7 @@ function changeCalendarAndExam(oldCombo, newcombo, cardId, cardStyle, term) {
                             return false; // breaks
                         }
                     });
-                    //console.log(exam_arr);
-                    if (exam_arr.length) {
+                    if (Object.keys(exam_arr).length) {
                         removeExamList(short_name); // remove old exam li from list
                         appendExamList(exam_arr); // appendd new exam li into list 
                     } else {
@@ -406,18 +405,16 @@ function appendExamList(section) {
     var examDate_li, conflictExam, weekDay;
     var examDate_id = section.short_name + "_Exam";
     var examDate_course = section.short_name + " [" + section.section_num + "]";
-    //if (section.date_range)
-        var examDate = new Date(section.date_range.slice(0, 12));
+    var examDate = new Date(section.date_range.slice(0, 12));
 
     // Check if exams are close or conflict
-    for (var [key_id, value_date] of Object.entries(examDateDic)) {
+    for (const [key_id, value_date] of Object.entries(examDateDic)) {
         if (value_date.getTime() === examDate.getTime()) {
             conflictExam = true;
         } else if (Math.abs(value_date.getTime() - examDate.getTime()) <= 86400000) { //24h
             conflictExam = true;
-        } else {
-            conflictExam = false;
         }
+        //console.log(`${key_id}: ${value_date}, ${conflictExam}`);
     }
 
     // Convert days to fullword

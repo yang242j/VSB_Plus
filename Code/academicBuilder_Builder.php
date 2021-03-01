@@ -161,7 +161,6 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 
 
 <section class = "tags_courses" id ="block" style="float:right;">  
-<script src ="js/academicCustomizeBuilder.js"></script>
 
     <div class = "icons_annotation" id = "builder_icon">
         <div class ="icons" style='font-size:14px;color:red'>---- Strongly Recommend</div>
@@ -195,7 +194,6 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 
 
         <div class = "course_not_completed"><h3>Course to take</h3></div>
-
         <div class = "course_tag_not_completed">
             <p id = "nct0">ENSE 271</p>
             <p id = "nct1">ENSE 271</p>
@@ -222,7 +220,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 </section>
 <footer>
     <script src="js/main.js"></script>
-    <script src ="js/academicCustomizeBuilder.js"></script>
+    <script type="text/javascript" src ="js/academicCustomizeBuilder.js"></script>
     
     <p class="copyright">Copyright &copy; Sep. 2020 to
         <script>document.write(new Date().getFullYear())</script> UofR VSB_Plus Capstone Group All Rights Reserved<br>
