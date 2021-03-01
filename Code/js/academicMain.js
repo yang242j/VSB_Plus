@@ -1,13 +1,13 @@
 function pageUp() {
-    document.getElementById("card1").innerHTML = "<h3>Year:</h3>" + "<p>4th</p>" + "<p></p>";
-    document.getElementById("card2").innerHTML = "<h3>Average:</h3>" + "<p>75</p>" + "<p></p>";
-    document.getElementById("card3").innerHTML = "<h3>GPA:</h3>" + "<p>3.6</p>" + "<p></p>";
-    document.getElementById("card4").innerHTML = "<h3>Holds</h3>" + "<p>No Hold</p>" + "<p></p>";
+    document.getElementById("card1").innerHTML = "<h3>Major:</h3>" + "<p>SSE</p>" + "<p></p>";
+    document.getElementById("card2").innerHTML = "<h3>Year:</h3>" + "<p>4th</p>" + "<p></p>";
+    document.getElementById("card3").innerHTML = "<h3>Course Left:</h3>" + "<p>6</p>" + "<p></p>";
+    document.getElementById("card4").innerHTML = "<h3>Average</h3>" + "<p>75</p>" + "<p></p>";
 }
 
 function pageDown() {
-    document.getElementById("card1").innerHTML = "<h3>Credit Earned:</h3>" + "<p>120/136</p>" + "<p></p>";
-    document.getElementById("card2").innerHTML = "<h3>Year:</h3>" + "<p>4th</p>" + "<p></p>";
+    document.getElementById("card1").innerHTML = "<h3>SID:</h3>" + "<p>20036....</p>" + "<p></p>";
+    document.getElementById("card2").innerHTML = "<h3>Program:</h3>" + "<p>Applied Science</p>" + "<p></p>";
     document.getElementById("card3").innerHTML = "<h3>Course Left:</h3>" + "<p>6</p>" + "<p></p>";
     document.getElementById("card4").innerHTML = "<h3>GPA:</h3>" + "<p>3.6</p>" + "<p></p>";
 }

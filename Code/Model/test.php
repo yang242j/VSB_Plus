@@ -13,8 +13,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     //$expStr = str2Expression($preStr); // ENEL 400 || ENEV 400 || ENIN 400 || ENPE 400 || ENSE 400
     $preStr = "One of ENEL 400, ENEV 400, ENIN 400, ENPE 400, or ENSE 400";
     $expStr = "ENEL 400 || ENEV 400 || ENIN 400 || ENPE 400 || ENSE 400";
-    $status = getStatus($expStr, $doneList); // True or False
-
+    // $status = getStatus($expStr, $doneList); // True or False
+    $status = getStatus($expStr, $doneList) ? "true" : "false";
 }
 
 function get_course_json($short_name) {
@@ -88,41 +88,53 @@ function str2Expression($preStr) {
 }
 
 function getStatus($expStr, $doneList) {
-    echo $expStr."<br>";
-    
+    // echo $expStr."<br>";
+    // $expStr = "ENSE 400 || ENEL 400";
+    $expStr = trim($expStr);
     // Basic
     if (preg_match_all("/([a-z]+\s[0-9]+)/i", $expStr) == 1){
-        echo "1 $expStr <br>";
-        return in_array($expStr, $doneList) ? 'true' : 'false';
+        echo "1 $expStr";
+        echo in_array($expStr, $doneList) ? " in the Done array <br>" : " not in  done array <br>";
+        return in_array($expStr, $doneList) ? true : false;
     }
 
-    // Remove ()
+    // // Remove ()
     if (substr($expStr, 0, 1) == "(" || substr($expStr, -1) == ")") {
-        
+        return getStatus(substr($expStr, 0, 1), $doneList);
     }
-    $innerComp = preg_split("/[()]/i", $expStr);
-    if ($innerComp[1]) {
-        echo "(inner)". $innerComp[1] ."<br>";
-        return getStatus($innerComp[1], $doneList);
-    }
+
+    // $innerComp = preg_split("/[()]/i", $expStr);
+    // if ($innerComp[1]) {
+    //     echo "(inner)". $innerComp[1] ."<br>";
+    //     return getStatus($innerComp[1], $doneList);
+    // }
 
     // &&
     $andComp = preg_split("/(&{2})/", $expStr);
-    foreach ($andComp as $component) {
-        if ($component) {
-            echo "and $component <br>";
-            if (getStatus($component, $doneList) == false) return false;
+    if (sizeof($andComp) > 1){
+        foreach ($andComp as $component) {
+            if ($component) {
+                // echo "and $component <br>";
+                if (getStatus($component, $doneList) == false) return false;
+            }
         }
+        return true;
     }
-
+    
+    echo "<br>";
     // ||
-    $orComp = preg_split("/(|{2})/", $expStr);
-    foreach ($andComp as $component) {
-        if ($component) {
-            echo "or $component <br>";
-            if (getStatus($component, $doneList) == true) return true;
+    $orComp = preg_split("/(\|{2})/", $expStr);
+    if (sizeof($orComp) > 1){
+        foreach ($orComp as $component) {
+            // echo "or $component <br>";
+            if ($component) {
+                // echo "or $component <br>";
+                if (getStatus($component, $doneList) == true) return true;
+            }
         }
-    }
+        return false;
+    } 
+    else{ echo "something error";}
 
 }
 

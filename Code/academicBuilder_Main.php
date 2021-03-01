@@ -84,7 +84,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         <h2>Welcome <?php echo htmlspecialchars($_SESSION["name"]); ?></h2>
     </div>
 
-    <div id="main_area">
+    <div id="main_area" class="round">
         <div id="summaryBoard" class="">
             <h2 class="center textCenter"><label for="summary">Summary Board</label></h1>
             <div class="static">
@@ -95,8 +95,8 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                         <p class="">120/136</p>
                     </div>
                     <div class="card" id="card2">
-                        <h3>Year:</h3>
-                        <p>3rd</p>
+                        <h3>Program:</h3>
+                        <p>Applied Science</p>
                     </div>
                     <div class="card" id="card3">
                         <h3>Course Left:</h3>
