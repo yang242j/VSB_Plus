@@ -4,13 +4,6 @@ var courseReqData;
 function fetchCourseJSON(sid) {
     // alert(sid);
     $.post('Model/takenClass.php', { sid: sid, password: sid }, function (data) {
-        var noNp;
-        var dadaJSON = JSON.parse(data);
-        for (i = 0;i<dadaJSON.length;i++){
-             if(dataJSON[i].final_grade == "NP"){
-                 console.log("NP");
-             }
-        }
         btnForCourse(data);
         showCourses(data);
         console.log(data);
@@ -64,15 +57,21 @@ function findCourseToTake(data) {
     });
     return courseNotCompleted;
 }
-
-
+function getRidNP(data) {
+    var dadaJSON = JSON.parse(data);
+    for (i = 0; i < dadaJSON.length; i++) {
+        if (dataJSON[i].final_grade == "NP") {
+            console.log("NP");
+        }
+    }
+}
 function showCourses(data) {
     var dataJSON = JSON.parse(data);
     var notCompletedData = findCourseToTake(dataJSON);
     /*console.log(notCompletedData);*/
     for (i = 0; i < 12; i++) {
-        if (i < dataJSON.length) {          
-                document.getElementById("ct" + i).innerHTML = dataJSON[i].course_ID;
+        if (i < dataJSON.length) {
+            document.getElementById("ct" + i).innerHTML = dataJSON[i].course_ID;
         }
         else {
             document.getElementById("ct" + i).innerHTML = " ";
@@ -115,8 +114,8 @@ function btnForCourse(data) {
         if (counterForCompleted >= 0) {
             for (i = 0; i < 12; i++) {
                 if (completedData[i + 12 * counterForCompleted].course_ID != null) {
-                   
-                        document.getElementById("ct" + i).innerHTML = completedData[i + 12 * counterForCompleted].course_ID;
+
+                    document.getElementById("ct" + i).innerHTML = completedData[i + 12 * counterForCompleted].course_ID;
                 }
                 else {
                     if (i + 12 * counterForCompleted > completedData.length) return;
@@ -138,7 +137,7 @@ function btnForCourse(data) {
             }
             if (counterForCompleted >= 0) {
                 for (i = 0; i < 12; i++) {
-                    if (completedData[i + 12 * counterForCompleted].course_ID != null ) {
+                    if (completedData[i + 12 * counterForCompleted].course_ID != null) {
                         document.getElementById("ct" + i).innerHTML = completedData[i + 12 * counterForCompleted].course_ID;
                     }
                     else {
