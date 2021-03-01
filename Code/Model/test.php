@@ -92,6 +92,9 @@ function getStatus($expStr, $doneList) {
     // echo $expStr."<br>";
     // $expStr = "ENSE 400 || ENEL 400";
     $expStr = trim($expStr);
+    // Basic: if expStr == null, return true
+    if ($expStr == null) return true;
+    
     // Basic: exact one course name "ENSE 400"
     if (preg_match_all("/([a-z]+\s[0-9]+)/i", $expStr) == 1){
         echo "1 $expStr";
