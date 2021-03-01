@@ -122,7 +122,6 @@ function btnForCourse(data) {
 
     ctRight.onclick = function () {
 
-        counterForCompleted += 1;
         if (12 * counterForCompleted > completedData.length) return;
 
         if (i + 12 * counterForCompleted < completedData.length) {
@@ -140,11 +139,13 @@ function btnForCourse(data) {
                 }
             }
         }
+        if (12 * counterForCompleted > completedData.length) { }
+        else
+            counterForCompleted += 1;
 
     }
     ctLeft.onclick = function () {
-        counterForCompleted -= 1;
-        
+
         if (counterForCompleted >= 0) {
             if (i + 12 * counterForCompleted < completedData.length) {
                 for (i = 0; i < 12; i++) {
@@ -164,27 +165,28 @@ function btnForCourse(data) {
         }
         else
             counterForCompleted = 1;
+
+        counterForCompleted -= 1;
     }
 
-   nctRight.onclick = function () {
+    nctRight.onclick = function () {
         counterForNotCompleted += 1;
         alert("dasdasdas");
-        document.getElementById("nct0").innerHTML = "asdas ";
-        /*if (i + 12 * counterForCompleted < notCompletedData.length) {
+        if (i + 12 * counterForCompleted < notCompletedData.length) {
             for (i = 0; i < 12; i++) {
                 document.getElementById("nct" + i).innerHTML = " ";
             }
         }
         if (counterForCompleted >= 0) {
             for (i = 0; i < 12; i++) {
-                if (notCompletedData[i + 12 * counterForCompleted]== null) {
+                if (notCompletedData[i + 12 * counterForCompleted] == null) {
                     return;
                 }
                 else {
                     document.getElementById("nct" + i).innerHTML = notCompletedData[i + 12 * counterForCompleted];
                 }
             }
-        }*/
+        }
     }
     nctLeft.onclick = function () {
         counterForNotCompleted -= 1;
