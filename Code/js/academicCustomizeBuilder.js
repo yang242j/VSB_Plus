@@ -63,7 +63,7 @@ function showCourses(data) {
 
     for (i = 0 ; i<dataJSON.length; i++)
     { 
-        if (dataJSON[i].final_grade == "NP")
+        if (dataJSON[i].final_grade == "NP" || dataJSON[i].final_grade == "W")
             {
                 delete dataJSON[i];
             }
@@ -102,11 +102,21 @@ function btnForCourse(data) {
     var nctRight = document.getElementById("nctRight");
     var nctLeft = document.getElementById("nctLeft");
     var completedData = JSON.parse(data);
-    var notCompletedData = findCourseToTake(completedData);
+
 
     var counterForCompleted = 0;
     var counterForNotCompleted = 0;
     //console.log(completedData);
+   // delete NP and W data
+    for (i = 0 ; i<completedData.length; i++)
+    { 
+        if (completedData[i].final_grade == "NP")
+            {
+                delete completedData[i];
+            }
+    }
+    completedData.sort();
+    var notCompletedData = findCourseToTake(completedData);
 
     ctRight.onclick = function () {
         var i = 0;
