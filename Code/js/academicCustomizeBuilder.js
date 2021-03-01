@@ -69,15 +69,17 @@ function showCourses(data) {
             }
     }
     //dataJSON.sort();
-    console.log(dataJSON);
+    //console.log(dataJSON);
     dataJSON.sort();
-    console.log(dataJSON);
-    /*console.log(notCompletedData);*/
+    //console.log(dataJSON);
+    //console.log(notCompletedData);*/
 
-    /*for (i = 0; i < 12; i++) {
+    for (i = 0; i < 12; i++) {
         if (i < dataJSON.length) {
             document.getElementById("ct" + i).innerHTML = dataJSON[i].course_ID;
         }
+        else
+        return;
     }
 
     for (i = 0; i < 12; i++) {
@@ -87,7 +89,7 @@ function showCourses(data) {
         else {
             document.getElementById("nct" + i).innerHTML = " ";
         }
-    }*/
+    }
 
 }
 function btnForCourse(data) {
