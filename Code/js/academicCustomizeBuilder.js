@@ -50,8 +50,8 @@ function findCourseToTake(data) {
         }
     }
     //console.log(courseToTake);
-   // minus taken class from all course list
-    var courseNotCompleted = courseToTake.filter(function(n) {
+    // minus taken class from all course list
+    var courseNotCompleted = courseToTake.filter(function (n) {
         return courseCompleted.indexOf(n) === -1;
     });
     return courseNotCompleted;
@@ -87,16 +87,35 @@ function btnForCourse(data) {
     var nctLeft = document.getElementById("nctLeft");
     var completedData = JSON.parse(data);
     var notCompletedData = findCourseToTake(completedData);
+
+    var counterForCompleted = 0;
+    var counterForNotCompleted = 0;
+
     ctRight.onclick = function () {
+        var i = 0;
+        if (completedData[i + 12 * counterForCompleted].course_ID != null) {
+            counterForCompleted += 1;
+        }
+        if (counterForCompleted >= 0) {
+            for (i = 0; i < 12; i++) {
+                document.getElementById("nct" + i).innerHTML = " ";
+                if (completedData[i + 12 * counterForCompleted].course_ID != null){
+                document.getElementById("ct" + i).innerHTML = completedData[i + 12 * counterForCompleted].course_ID;
+                }
+                else
+                return;
+            }
+        }
 
     }
     ctLeft.onclick = function () {
-        console.log(completedData);
+
     }
+
     nctRight.onclick = function () {
-        console.log(notCompletedData);
+
     }
     nctLeft.onclick = function () {
-        
+
     }
 }
