@@ -169,6 +169,7 @@ function btnForCourse(data) {
    nctRight.onclick = function () {
         counterForNotCompleted += 1;
         alert("dasdasdas");
+        document.getElementById("nct0").innerHTML = "asdas ";
         if (i + 12 * counterForCompleted < notCompletedData.length) {
             for (i = 0; i < 12; i++) {
                 document.getElementById("nct" + i).innerHTML = " ";
