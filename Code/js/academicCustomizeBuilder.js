@@ -102,8 +102,6 @@ function btnForCourse(data) {
     var nctRight = document.getElementById("nctRight");
     var nctLeft = document.getElementById("nctLeft");
     var completedData = JSON.parse(data);
-
-
     var counterForCompleted = 0;
     var counterForNotCompleted = 0;
     //console.log(completedData);
@@ -115,7 +113,7 @@ function btnForCourse(data) {
                 delete completedData[i];
             }
     }
-    completedData.sort();
+    console.log(completedData);
     var notCompletedData = findCourseToTake(completedData);
 
     ctRight.onclick = function () {
