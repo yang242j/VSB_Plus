@@ -5,7 +5,7 @@ function fetchCourseJSON(sid) {
     // alert(sid);
     $.post('Model/takenClass.php', { sid: sid, password: sid }, function (data) {
         var noNp;
-        dadaJSON = JSON.parse(data);
+        var dadaJSON = JSON.parse(data);
         for (i = 0;i<dadaJSON.length;i++){
              if(dataJSON[i].final_grade == "NP"){
                  console.log("NP");
