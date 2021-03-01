@@ -70,6 +70,8 @@ function showCourses(data) {
     }
     //dataJSON.sort();
     console.log(dataJSON);
+    dataJSON.sort();
+    console.log(dataJSON);
     /*console.log(notCompletedData);*/
 
     /*for (i = 0; i < 12; i++) {
