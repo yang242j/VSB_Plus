@@ -64,14 +64,19 @@ function showCourses(data) {
     var notCompletedData = findCourseToTake(dataJSON);
     /*console.log(notCompletedData);*/
     for (i = 0; i < 12; i++) {
-        if (i < dataJSON.length) { 
+        if (i < dataJSON.length) {
+            if (dataJSON[i].final_grade == "NP" ||  dataJSON[i].final_grade == "W"){ 
+                i = i-1;
+            }
+            else{
                 document.getElementById("ct" + i).innerHTML = dataJSON[i].course_ID;
-
+            }
         }
         else {
             document.getElementById("ct" + i).innerHTML = " ";
         }
     }
+
     for (i = 0; i < 12; i++) {
         if (i < notCompletedData.length && dataJSON[i].final_grade != "NP") {
             document.getElementById("nct" + i).innerHTML = notCompletedData[i];
