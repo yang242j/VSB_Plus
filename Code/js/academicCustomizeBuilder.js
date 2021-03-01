@@ -60,6 +60,15 @@ function findCourseToTake(data) {
 function showCourses(data) {
     var dataJSON = JSON.parse(data);
     var notCompletedData = findCourseToTake(dataJSON);
+
+    for (i = 0 ; i<dataJSON.length; i++)
+    { 
+        if (dataJSON[i].final_grade == "NP")
+            {
+                delete dataJSON[i];
+            }
+    }
+    console.log(dataJSON);
     /*console.log(notCompletedData);*/
     for (i = 0; i < 12; i++) {
         if (i < dataJSON.length) {
@@ -67,9 +76,9 @@ function showCourses(data) {
             {
             document.getElementById("ct" + i).innerHTML = dataJSON[i].course_ID;
             }
-        }
-        else {
-            document.getElementById("ct" + i).innerHTML = "P";
+            else {
+                document.getElementById("ct" + i).innerHTML = "P";
+            }
         }
     }
 
