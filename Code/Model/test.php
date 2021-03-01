@@ -112,7 +112,7 @@ function getStatus($expStr, $doneList) {
     if (sizeof($andComp) > 1){
         foreach ($andComp as $component) {
             if ($component) {
-                // echo "and $component <br>";
+                echo "and $component <br>";
                 if (getStatus($component, $doneList) == false) return false;
             }
         }
@@ -126,7 +126,7 @@ function getStatus($expStr, $doneList) {
         foreach ($orComp as $component) {
             // echo "or $component <br>";
             if ($component) {
-                // echo "or $component <br>";
+                echo "or $component <br>";
                 if (getStatus($component, $doneList) == true) return true;
             }
         }
