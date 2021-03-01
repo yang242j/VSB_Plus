@@ -90,37 +90,39 @@ function btnForCourse(data) {
 
     var counterForCompleted = 0;
     var counterForNotCompleted = 0;
-  console.log(completedData);
+    console.log(completedData);
+
     ctRight.onclick = function () {
         var i = 0;
         if (completedData[i + 12 * counterForCompleted].course_ID != null) {
             counterForCompleted += 1;
         }
-        if(i + 12 * counterForCompleted < completedData.length){}
-        for (i = 0; i < 12; i++) {
-        document.getElementById("ct" + i).innerHTML = " ";
-        }
-    }
-        if (counterForCompleted >= 0) {
+        if (i + 12 * counterForCompleted < completedData.length) {
             for (i = 0; i < 12; i++) {
-                if (completedData[i + 12 * counterForCompleted].course_ID != null){
-                document.getElementById("ct" + i).innerHTML = completedData[i + 12 * counterForCompleted].course_ID;
-                }
-                else{
-                    if(i + 12 * counterForCompleted >completedData.length)return;
-                }
+                document.getElementById("ct" + i).innerHTML = " ";
             }
         }
-
     }
-    ctLeft.onclick = function () {
-
+    if (counterForCompleted >= 0) {
+        for (i = 0; i < 12; i++) {
+            if (completedData[i + 12 * counterForCompleted].course_ID != null) {
+                document.getElementById("ct" + i).innerHTML = completedData[i + 12 * counterForCompleted].course_ID;
+            }
+            else {
+                if (i + 12 * counterForCompleted > completedData.length) return;
+            }
+        }
     }
 
-    nctRight.onclick = function () {
+}
+ctLeft.onclick = function () {
 
-    }
-    nctLeft.onclick = function () {
+}
 
-    }
+nctRight.onclick = function () {
+
+}
+nctLeft.onclick = function () {
+
+}
 }
