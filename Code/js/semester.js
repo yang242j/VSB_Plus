@@ -206,7 +206,7 @@ function changeCalendarAndExam(oldCombo, newcombo, cardId, cardStyle, term) {
                             return false; // breaks
                         }
                     });
-                    console.log(lec_arr);
+                    //console.log(lec_arr);
                     let BGC = cardStyle.split(':')[1].slice(0, -1);
                     appendCalendar(lec_arr, "Lecture", BGC); // appendd new lecture section into calendar
                 } catch (error) {
@@ -318,10 +318,8 @@ function appendCalendar(section, eventType, BGC) {
     if (eventType == "Lecture") var event_id = section.short_name + "_Lec";
     else if (eventType == "Lab") var event_id = section.short_name + "_Lab";
     var event_title = section.short_name + " [" + section.section_num + "]";
-    //if (section.date_range) {
-        var start_date = new Date(section.date_range.slice(0, 12)).toISOString().substring(0, 10);
-        var end_date = new Date(section.date_range.slice(15)).toISOString().substring(0, 10);
-    //}
+    var start_date = new Date(section.date_range.slice(0, 12)).toISOString().substring(0, 10);
+    var end_date = new Date(section.date_range.slice(15)).toISOString().substring(0, 10);
     
     if (section.time == "TBA" || section.time == "?" || section.time == null) return;
     var start_time = get24HrsFrm12Hrs(section.time.split("-")[0]);
@@ -380,7 +378,7 @@ function removeCalendar(id, title) {
     try {
         if (calendar.getEventById(id)) {
             let event = calendar.getEventById(id);
-            console.log(event.title, " & ", title)
+            //console.log(event.title, " & ", title)
             if (title && event.title === title) {
                 event.remove();
             } else if (title && event.title !== title) {
