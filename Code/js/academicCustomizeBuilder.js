@@ -105,6 +105,7 @@ function btnForCourse(data) {
     var nctRight = document.getElementById("nctRight");
     var nctLeft = document.getElementById("nctLeft");
     var completedData = JSON.parse(data);
+    var notCompletedData = findCourseToTake(completedData);
     var counterForCompleted = 0;
     var counterForNotCompleted = 0;
     //console.log(completedData);
@@ -149,11 +150,11 @@ function btnForCourse(data) {
             }
             if (counterForCompleted >= 0) {
                 for (i = 0; i < 12; i++) {
-                    if (completedData[i + 12 * counterForCompleted].course_ID != null) {
-                        document.getElementById("ct" + i).innerHTML = completedData[i + 12 * counterForCompleted].course_ID;
+                    if (completedData[i + 12 * counterForCompleted].course_ID == "undefind") {
+                        return;
                     }
                     else {
-                        return;
+                        document.getElementById("ct" + i).innerHTML = completedData[i + 12 * counterForCompleted].course_ID;
                     }
                 }
             }
@@ -163,9 +164,46 @@ function btnForCourse(data) {
     }
 
     nctRight.onclick = function () {
+        counterForNotCompleted += 1;
+
+        if (i + 12 * counterForCompleted < notCompletedData.length) {
+            for (i = 0; i < 12; i++) {
+                document.getElementById("ct" + i).innerHTML = " ";
+            }
+        }
+        if (counterForCompleted >= 0) {
+            for (i = 0; i < 12; i++) {
+                if (notCompletedData[i + 12 * counterForCompleted].course_ID == "undefind") {
+                    return;
+                }
+                else {
+                    document.getElementById("ct" + i).innerHTML = notCompletedData[i + 12 * counterForCompleted].course_ID;
+                }
+            }
+        }
+
+
+
 
     }
     nctLeft.onclick = function () {
+        counterForNotCompleted -= 1;
+
+        if (i + 12 * counterForCompleted < notCompletedData.length) {
+            for (i = 0; i < 12; i++) {
+                document.getElementById("ct" + i).innerHTML = " ";
+            }
+        }
+        if (counterForCompleted >= 0) {
+            for (i = 0; i < 12; i++) {
+                if (notCompletedData[i + 12 * counterForCompleted].course_ID == "undefind") {
+                    return;
+                }
+                else {
+                    document.getElementById("ct" + i).innerHTML = notCompletedData[i + 12 * counterForCompleted].course_ID;
+                }
+            }
+        }
 
     }
 }
