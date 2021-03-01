@@ -38,6 +38,7 @@ if ($short_name !== "") {
         $detail_result = mysqli_query($conn, $detail_sql);
         // 3) Based on the $short_name input, form the arrray for course detail.
         $row = mysqli_fetch_array($detail_result);
+        print_r($row);
         $data = array(
             "short_name" => $row['short_name'],
             "title" => $row["title"],
@@ -49,6 +50,7 @@ if ($short_name !== "") {
         );
         // 4) Encode & Return as JSON format
         $json_data = json_encode($data, JSON_PRETTY_PRINT);
+        print(json_last_error());
         echo $json_data;
     } else {
         echo "Cannot find the course!";

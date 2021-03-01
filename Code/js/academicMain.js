@@ -58,9 +58,9 @@ function loadLineChart(sid) {
 }
 
 function setDefault(sid){
-    console.log(GetUrlRelativePath());
+    // console.log(GetUrlRelativePath());
     $.post('./Api.php/Student/BasicInfo', {'sid': sid}, function(data){
-        console.log("data is ", data)
+        // console.log("data is ", data)
         basicInfo = JSON.parse(data).data;
         summary.name = basicInfo.name;
         summary.sid = basicInfo.student_id;
@@ -75,8 +75,14 @@ function setCmptedValue(sid){
         var sumGrade = 0;
         var passCount = 0;
         var totalCredit = 0;
+        var years = [];
         // console.log(jsonData);
         for (var key in jsonData){
+            // For computing the which years that student in
+            var year = parseInt(jsonData[key].term);
+            years.push(year);
+            
+            // Compiting the averages, learned credits, pass course count.
             var grade = parseInt(jsonData[key].final_grade);
             var earnedCredit = parseInt(jsonData[key].credit_earned);
             if(!isNaN(grade)){
@@ -89,7 +95,13 @@ function setCmptedValue(sid){
         cmpValue.courseLeft = reqCourseNum - passCount;
         cmpValue.credit = totalCredit;
         cmpValue.gpa = (4 * cmpValue.ave / 100.0).toFixed(1);
-        cmpValue.year = parseInt(4 * totalCredit / reqCredit);
+
+        // Get the year that student in.
+        yearMin = Math.min.apply(null, years);
+        yearMax = Math.max.apply(null, years);
+        cmpValue.year = yearMax - yearMin + 1;
+
+        // Refresh the summary borad
         pageDown();
     });   
 }
