@@ -32,13 +32,6 @@ function getTermData() {
 }
 // next page button
 //minus taken class from all course list
-function getRidNP(data) {
-    for (i = 0; i < dada.length; i++) {
-        if (data[i].final_grade == "NP") {
-            console.log("NP");
-        }
-    }
-}
 function findCourseToTake(data) {
     /*console.log(data);
     console.log(courseReqData);*/
@@ -67,7 +60,6 @@ function findCourseToTake(data) {
 function showCourses(data) {
     var dataJSON = JSON.parse(data);
     var notCompletedData = findCourseToTake(dataJSON);
-    getRidNP(dataJSON);
     /*console.log(notCompletedData);*/
     for (i = 0; i < 12; i++) {
         if (i < dataJSON.length) {
