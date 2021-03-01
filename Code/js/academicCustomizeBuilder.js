@@ -64,7 +64,7 @@ function showCourses(data) {
     var notCompletedData = findCourseToTake(dataJSON);
     /*console.log(notCompletedData);*/
     for (i = 0; i < 12; i++) {
-        if (i < dataJSON.length) {
+        if (i < dataJSON.length && dataJSON[i].final_grade != "NP") {
             document.getElementById("ct" + i).innerHTML = dataJSON[i].course_ID;
         }
         else {
@@ -72,7 +72,7 @@ function showCourses(data) {
         }
     }
     for (i = 0; i < 12; i++) {
-        if (i < notCompletedData.length) {
+        if (i < notCompletedData.length && dataJSON[i].final_grade != "NP") {
             document.getElementById("nct" + i).innerHTML = notCompletedData[i];
         }
         else {
@@ -106,7 +106,7 @@ function btnForCourse(data) {
         }
         if (counterForCompleted >= 0) {
             for (i = 0; i < 12; i++) {
-                if (completedData[i + 12 * counterForCompleted].course_ID != null) {
+                if (completedData[i + 12 * counterForCompleted].course_ID != null && completedData[i + 12 * counterForCompleted].final_grade != "NP") {
                     document.getElementById("ct" + i).innerHTML = completedData[i + 12 * counterForCompleted].course_ID;
                 }
                 else {
@@ -129,7 +129,7 @@ function btnForCourse(data) {
             }
         if (counterForCompleted >= 0) {
             for (i = 0; i < 12; i++) {
-                if (completedData[i + 12 * counterForCompleted].course_ID != null) {
+                if (completedData[i + 12 * counterForCompleted].course_ID != null && completedData[i + 12 * counterForCompleted].final_grade != "NP") {
                     document.getElementById("ct" + i).innerHTML = completedData[i + 12 * counterForCompleted].course_ID;
                 }
                 else {
