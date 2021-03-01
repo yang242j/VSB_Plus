@@ -118,8 +118,12 @@ function getStatus($expStr, $doneList) {
         }
         return true;
     }
+
+    // Remove () if " (ENSE 400 || ENEL 400) "
+    if (substr($expStr, 0, 1) == "(" && substr($expStr, -1) == ")") {
+        return getStatus(substr($expStr, 1, -1), $doneList);
+    }
     
-    echo "<br>";
     // ||: split "ENSE 400 || ENEL 400" 
     $orComp = preg_split("/(\|{2})/", $expStr);
     if (sizeof($orComp) > 1){
@@ -133,11 +137,6 @@ function getStatus($expStr, $doneList) {
         return false;
     } 
     else{ echo "something error";}
-
-    // Remove () if " (ENSE 400 || ENEL 400) "
-    if (substr($expStr, 0, 1) == "(" && substr($expStr, -1) == ")") {
-        return getStatus(substr($expStr, 1, -1), $doneList);
-    }
 
 }
 
