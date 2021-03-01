@@ -117,7 +117,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                     let newCombo = $(this).val();
                     let cardId = $(this).closest("div").attr("id");
                     let cardStyle = $(this).closest("div").attr("style");
-                    console.log(oldCombo, newCombo, cardId, cardStyle, term);
+                    //console.log(oldCombo, newCombo, cardId, cardStyle, term);
                     if (oldCombo != newCombo)
                         changeCalendarAndExam(oldCombo, newCombo, cardId, cardStyle, term);
                     selected = newCombo
