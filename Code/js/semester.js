@@ -414,8 +414,6 @@ function appendExamList(section) {
             conflictExam = true;
         } else if (Math.abs(value_date.getTime() - examDate.getTime()) <= 86400000) { //24h
             conflictExam = true;
-        } else {
-            conflictExam = false;
         }
         console.log(`${key_id}: ${value_date}, ${conflictExam}`);
     }
