@@ -24,6 +24,7 @@ $sid = $_SESSION["sid"];
     <link rel="stylesheet" href="css/academicBuilder_main.css">
 
     <script type="text/javascript" src="js/academicBuilder.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
     <script type="text/javascript" src="js/academicMain.js"></script>
     <script type="text/javascript" src="js/genChart.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -85,19 +86,19 @@ $sid = $_SESSION["sid"];
             <div class="static">
                 <button class="left arrow" onclick="pageDown()"><i class='fas fa-angle-left'></i></button>
                 <div id="summary" class="center inline">
-                    <div class="card textCenter">
+                    <div class="card textCenter" id="card1">
                         <h3>Credit Earned:</h3>
-                        <p>120/136</p>
+                        <p class="">120/136</p>
                     </div>
-                    <div class="card">
+                    <div class="card" id="card2">
                         <h3>Year:</h3>
                         <p>3rd</p>
                     </div>
-                    <div class="card">
+                    <div class="card" id="card3">
                         <h3>Course Left:</h3>
                         <p>6</p>
                     </div>
-                    <div class="card">
+                    <div class="card" id="card4">
                         <h3>GPA:</h3>
                         <p>3.6</p>
                     </div>
