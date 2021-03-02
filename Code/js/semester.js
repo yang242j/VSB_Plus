@@ -308,7 +308,7 @@ function appendCourseCard(course_json, comboList, BGC) {
         "</div>";
     
     //document.getElementById("courseCard_Containor").innerHTML += course_card_1 + course_card_2 + course_card_3;
-    document.getElementById("courseCard_Containor").appendChild(course_card_1 + course_card_2 + course_card_3);
+    document.getElementById("courseCard_Containor").insertAdjacentHTML( 'beforeend', course_card_1 + course_card_2 + course_card_3);
 }
 
 function removeCourseCard(short_name) {
