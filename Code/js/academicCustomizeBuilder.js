@@ -150,7 +150,11 @@ function btnForCourse(data) {
     // delete NP and W data
 
     ctRight.onclick = function () {
-        counterForCompleted += 1;
+        if(counterForCompleted < (CompletedData.length/12)){
+            counterForCompleted += 1;
+            }
+            else return;
+
         
         if (i + 12 * counterForCompleted < completedData.length) {
             for (i = 0; i < 12; i++) {
