@@ -227,15 +227,16 @@ function btnForCourse(data) {
 //get course info from all.json data
 function fetchOneCourseJSON(courseName) {
     // alert(sid);
-    usecourseName = courseName.serializeArray();
-    $.post('Model/course.php',  usecourseName, function (data) {
+    $.post('Model/course.php',  courseName, function (data) {
         console.log(data);
 
     });
 }
 function getTermCourse(data){
     var dataJSON = JSON.parse(data);
-    fetchOneCourseJSON("MATH 100");
+    var usecourseName ="MATH 100";
+    usecourseName = courseName.serializeArray();
+    fetchOneCourseJSON(usecourseName);
 }
 
 
