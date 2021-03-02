@@ -163,6 +163,7 @@ function btnForCourse(data) {
             }
             for (i = 0; i < 12; i++) {
                 if (completedData[i + 12 * counterForCompleted] == null) {
+                    counterForCompleted -= 1;
                     return;
                 }
                 else {
@@ -174,24 +175,24 @@ function btnForCourse(data) {
     }
     ctLeft.onclick = function () {
         counterForCompleted -= 1;
+        if (i + 12 * counterForCompleted < completedData.length) {
+            for (i = 0; i < 12; i++) {
+                document.getElementById("ct" + i).innerHTML = " ";
+            }
+        }
         if (counterForCompleted >= 0) {
-            if (i + 12 * counterForCompleted < completedData.length) {
-                for (i = 0; i < 12; i++) {
-                    document.getElementById("ct" + i).innerHTML = " ";
+            for (i = 0; i < 12; i++) {
+                document.getElementById("ct" + i).innerHTML = " ";
+            }
+            for (i = 0; i < 12; i++) {
+                if (completedData[i + 12 * counterForCompleted] == null) {
+                    return;
+                }
+                else {
+                    document.getElementById("ct" + i).innerHTML = completedData[i + 12 * counterForCompleted].course_ID;
+                    document.getElementById("ct" + i).style.color = getColor(i,dataJSON);
                 }
             }
-            if (counterForCompleted >= 0) {
-                for (i = 0; i < 12; i++) {
-                    if (completedData[i + 12 * counterForCompleted] == null) {
-                        return;
-                    }
-                    else {
-                        document.getElementById("ct" + i).innerHTML = completedData[i + 12 * counterForCompleted].course_ID;
-                        document.getElementById("ct" + i).style.color = getColor(i,dataJSON);
-                    }
-                }
-            }
-
         }
         else
             counterForCompleted = 1;
@@ -211,6 +212,7 @@ function btnForCourse(data) {
             }
             for (i = 0; i < 12; i++) {
                 if (notCompletedData[i + 12 * counterForNotCompleted] == null) {
+                    counterForCompleted -= 1;
                     return;
                 }
                 else {
