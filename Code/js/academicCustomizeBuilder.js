@@ -8,7 +8,7 @@ function fetchCourseJSON(sid) {
         btnForCourse(data);
         showCourses(data);
         getTermCourse(data);
-        //console.log(data);
+        console.log(data);
     });
 }
 getTermData("ESE");
