@@ -233,6 +233,6 @@ function findCourseInfo(courseName) {
         return "no such course";
 }
 }
-console.log(allCourseData[0]);
+console.log(findCourseInfo("CHEM 104"));
 
 
