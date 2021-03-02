@@ -23,7 +23,8 @@ h3 {
     font-size: 16px;
 }
 body .terms .term1 .course_cards p{
-    font-size: 20px;
+    font-size: 25px;
+    border: 2px solid red;
 }
 body .terms {
     position: relative;
@@ -136,7 +137,7 @@ body .terms .term1 #course_cards_builder p{
         grid-template-columns: 58% 58%;
         grid-template-rows: 20% 20% 20%;
         column-gap: -10px;
-        margin-top: 0px;
+        margin-top: 40px;
         margin-left: -25px;
     }
     body .tags_courses .icons_annotation .icons{
