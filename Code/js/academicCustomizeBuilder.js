@@ -131,7 +131,7 @@ function showCourses(data) {
     for (i = 0; i < 12; i++) {
         if (i < notCompletedData.length) {
             document.getElementById("nct" + i).innerHTML = notCompletedData[i];
-            alert("asd");
+        
         }
         else {
             return;
@@ -146,7 +146,7 @@ function btnForCourse(data) {
     var nctRight = document.getElementById("nctRight");
     var nctLeft = document.getElementById("nctLeft");
 
-    var completedData = data;
+    var completedData = JSON.parse(data);
     var dataJSON = JSON.parse(data);
     var notCompletedData = findCourseToTake(dataJSON);
     var counterForCompleted = 0;
