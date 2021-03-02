@@ -1,0 +1,64 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.table-responsive{
+    /* height: 80vw; */
+    max-width: 95vw;
+    overflow: auto;
+    margin: 50px auto;
+    border: solid 1px rgb(0, 0, 0);
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: 1px solid #999;
+    table-layout: fixed;
+    text-align:center;
+}
+
+th,td{
+    border: 1px solid #999;
+    height: 20vw;
+}
+td{
+    height: 35vw;
+    padding: 7px 7px;
+}
+
+#dashLine{
+    height: 90%;
+    width: 90%;
+    margin-left: 5%;
+    border: dashed 1px #111;
+}
+
+#addCol{
+    margin-top: 25%;
+}
+
+.block{
+    border: solid 1px rgb(56, 55, 55);
+
+}
+
+.scroll{
+    overflow: scroll;
+    scrollbar-width: thin;
+}
+
+.toLeft{
+    margin-right: 20%;
+    padding: 0px 3%;
+}
+
+.text_center{
+    text-align:center;
+}
+
+.inline{
+    display: inline;
+}
+
