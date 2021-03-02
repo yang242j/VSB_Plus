@@ -229,13 +229,13 @@ function fetchOneCourseJSON(courseName) {
     // alert(sid);
     $.post('Model/takenClass.php', { short_name: courseName }, function (data) {
         console.log(data);
-        
+
     });
 }
 function getACourse(data){
     var dataJSON = JSON.parse(data);
     fetchOneCourseJSON(dataJSON[1].course_ID);
-}ß
+}
 
 
 
