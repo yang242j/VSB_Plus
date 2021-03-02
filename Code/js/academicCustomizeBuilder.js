@@ -116,7 +116,7 @@ function showCourses(data) {
     console.log(dataJSON);
     for (i = 0; i < 12; i++) {
         if (i < dataJSON.length) {
-            document.getElementById("ct" + i).innerHTML = dataJSON[i].course_ID;
+            document.getElementById("ct" + i).innerHTML = dataJSON[i].course_ID + dataJSON[i].term;
             document.getElementById("ct" + i).style.color = getColor(i,dataJSON);
 
         }
@@ -173,7 +173,10 @@ function btnForCourse(data) {
         }
     }
     ctLeft.onclick = function () {
-        counterForCompleted -= 1;
+        if (counterForNotCompleted > 0){
+            counterForCompleted -= 1;
+            }
+            else return;
         if (i + 12 * counterForCompleted < completedData.length) {
             for (i = 0; i < 12; i++) {
                 document.getElementById("ct" + i).innerHTML = " ";
@@ -197,7 +200,10 @@ function btnForCourse(data) {
     }
 
     nctRight.onclick = function () {
+        if(counterForNotCompleted > (notCompletedData.length +1)){
         counterForNotCompleted += 1;
+        }
+        else return;
         if (i + 12 * counterForNotCompleted < notCompletedData.length) {
             for (i = 0; i < 12; i++) {
                 document.getElementById("nct" + i).innerHTML = " ";
@@ -218,8 +224,11 @@ function btnForCourse(data) {
         }
     }
     nctLeft.onclick = function () {
+        if (counterForNotCompleted > 0){
         counterForNotCompleted -= 1;
-
+        }
+        else return;
+        
         if (i + 12 * counterForNotCompleted < notCompletedData.length) {
             for (i = 0; i < 12; i++) {
                 document.getElementById("nct" + i).innerHTML = " ";
