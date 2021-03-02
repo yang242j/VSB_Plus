@@ -227,7 +227,7 @@ function btnForCourse(data) {
 //get course info from all.json data
 function findCourseInfo(courseName) {
     for (i = 0; i < allCourseData.length; i++) {
-        if (allCourseData[i].short_name == "CHEM 104"){
+        if (allCourseData[i].short_name == "CHEM 105"){
             return allCourseData[i];
         }
         else
