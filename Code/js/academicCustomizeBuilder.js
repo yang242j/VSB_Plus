@@ -134,6 +134,7 @@ function showCourses(data) {
             document.getElementById("nct" + i).innerHTML = notCompletedData[i];
         }
         else {
+            alert("asd");
             return;
         }
     }
