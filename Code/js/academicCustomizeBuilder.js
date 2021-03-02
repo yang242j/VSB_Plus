@@ -204,7 +204,7 @@ function btnForCourse(data) {
                     return;
                 }
                 else {
-                    document.getElementById("ct" + i).innerHTML = completedData[i + 12 * counterForCompleted].course_ID + " "+ completedData[i + 12 * counterForCompleted].term;
+                    document.getElementById("ct" + i).innerHTML = completedData[i + 12 * counterForCompleted].course_ID + "<br/>"+ completedData[i + 12 * counterForCompleted].term;
                     document.getElementById("ct" + i).style.color = getColor(i,dataJSON);
                 }
             }
