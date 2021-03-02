@@ -113,7 +113,7 @@ function showCourses(data) {
         document.getElementById("ct" + i).innerHTML = " ";
         document.getElementById("nct" + i).innerHTML = " ";
     }
-
+    console.log(dataJSON);
     for (i = 0; i < 12; i++) {
         if (i < dataJSON.length) {
             document.getElementById("ct" + i).innerHTML = dataJSON[i].course_ID;
@@ -148,12 +148,6 @@ function btnForCourse(data) {
     var counterForNotCompleted = 0;
     //console.log(notCompletedData);
     // delete NP and W data
-    for (i = 0; i < completedData.length; i++) {
-        if (completedData[i].final_grade == "NP") {
-            delete completedData[i];
-        }
-    }
-    completedData.sort();
 
     ctRight.onclick = function () {
         counterForCompleted += 1;
@@ -171,6 +165,7 @@ function btnForCourse(data) {
                 }
                 else {
                     document.getElementById("ct" + i).innerHTML = completedData[i + 12 * counterForCompleted].course_ID;
+                    document.getElementById("ct" + i).style.color = getColor(i,dataJSON);
                 }
             }
         }
@@ -191,6 +186,7 @@ function btnForCourse(data) {
                     }
                     else {
                         document.getElementById("ct" + i).innerHTML = completedData[i + 12 * counterForCompleted].course_ID;
+                        document.getElementById("ct" + i).style.color = getColor(i,dataJSON);
                     }
                 }
             }
