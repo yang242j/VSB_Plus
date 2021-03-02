@@ -4,7 +4,7 @@ var allCourseData;
 //fetch JSON data from takenClass database
 function fetchCourseJSON(sid) {
     // alert(sid);
-    $.post('Model/takenClass.php', { sid: sid, password: sid }, function (data) {
+    $.post('Model/takenClass.php', { sid: sid, password: 123 }, function (data) {
         btnForCourse(data);
         showCourses(data);
         console.log(data);
