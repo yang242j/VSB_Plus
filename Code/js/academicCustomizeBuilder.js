@@ -1,5 +1,6 @@
 var studentData;
 var courseReqData;
+var allCourseData;
 //fetch JSON data from takenClass database
 function fetchCourseJSON(sid) {
     // alert(sid);
@@ -33,11 +34,10 @@ function getTermData(faculty) {
 function getAllCourse() {
     var myRequest = new XMLHttpRequest;
     var faculty = "ESE";
-    var url = "JSON/reqCourse/" + faculty + "_req.json";
-    myRequest.open("GET", url, false);
+    myRequest.open("GET", "JSON/ALL.json", false);
     myRequest.onload = function () {
         var data = JSON.parse(myRequest.responseText);
-        courseReqData = data;
+        allCourseData = data;
     }
     myRequest.send();
 }
@@ -132,7 +132,7 @@ function btnForCourse(data) {
     completedData.sort();
 
     ctRight.onclick = function () {
-            counterForCompleted += 1;
+        counterForCompleted += 1;
         if (12 * counterForCompleted > completedData.length) return;
 
         if (i + 12 * counterForCompleted < completedData.length) {
@@ -170,7 +170,7 @@ function btnForCourse(data) {
                     }
                 }
             }
-    
+
         }
         else
             counterForCompleted = 1;
@@ -222,7 +222,17 @@ function btnForCourse(data) {
 
     }
 }
-console.log(courseReqData);
 
+//get course info from all.json data
+function findCourseInfo(courseName) {
+    for (i = 0; i < allCourseData.length; i++) {
+        if (allCourseData[i].short_name == courseName){
+            return allCourseData[i];
+        }
+        else
+        return "no such course";
+}
+}
+console.log(findCourseInfo("MATH 110"));
 
 
