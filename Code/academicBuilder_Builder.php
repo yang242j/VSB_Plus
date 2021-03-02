@@ -163,7 +163,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 
 <section class = "tags_courses" id ="block" style="float:right;">  
 
-    <div class = "icons_annotation" id = "builder_icon">
+    <div class = "icons_annotation">
         <div class ="icons" style='font-size:14px;color:red'>---- Strongly Recommend</div>
         <div class ="icons" style='font-size:14px;color:blue'>---- Recommend</div>
         <div class ="icons" style='font-size:14px;color:black'>---- Not Recommend</div>
