@@ -24,7 +24,7 @@ h3 {
 }
 body .terms .term1 .course_cards p{
     font:bold;
-    border: 2px solid red;
+    /*border: 2px solid red;*/
     font-size: 10px;
 }
 body .terms {
