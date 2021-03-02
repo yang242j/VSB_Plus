@@ -32,16 +32,16 @@ function pageDown() {
 }
 
 window.onload = function () {
-    loadPieChart(sid);
-    loadLineChart(sid);
+    loadPieChart(sid, pas);
+    loadLineChart(sid, pas);
     console.log("init web");
     setDefault(sid);
     setCmptedValue(sid);
 }
 
-function loadPieChart(sid) {
+function loadPieChart(sid, pas) {
     // console.log(sid);
-    $.post('Model/takenClass.php', { sid: sid, password: sid }, function (data) {
+    $.post('Model/takenClass.php', { sid: sid, password: pas }, function (data) {
         // console.log(data);
         var jsonData = JSON.parse(data);
         var divId = 'pieChart';
@@ -49,8 +49,8 @@ function loadPieChart(sid) {
     });
 }
 
-function loadLineChart(sid) {
-    $.post('Model/takenClass.php', { sid: sid, password: sid }, function (data) {
+function loadLineChart(sid, pas) {
+    $.post('Model/takenClass.php', { sid: sid, password: pas }, function (data) {
         var jsonData = JSON.parse(data);
         var divId = 'lineChart';
         genChart2(jsonData, divId);

@@ -1,15 +1,18 @@
 var studentData;
 var courseReqData;
+var allCourseData;
 //fetch JSON data from takenClass database
 function fetchCourseJSON(sid) {
     // alert(sid);
     $.post('Model/takenClass.php', { sid: sid, password: sid }, function (data) {
         btnForCourse(data);
         showCourses(data);
+        getTermCourse(data);
         //console.log(data);
     });
 }
-getTermData();
+getTermData("ESE");
+getAllCourse();
 window.onload = function init() {
     fetchCourseJSON(getSid());
 }
@@ -19,14 +22,23 @@ function getSid() {
     return sid;
 }
 // get faculty needed course
-function getTermData() {
+function getTermData(faculty) {
     var myRequest = new XMLHttpRequest;
-    var faculty = "ESE";
-    var url = "JSON/reqCourse/" + faculty + "_req.json";
+    var facultyName = faculty;
+    var url = "JSON/reqCourse/" + facultyName + "_req.json";
     myRequest.open("GET", url, false);
     myRequest.onload = function () {
         var data = JSON.parse(myRequest.responseText);
         courseReqData = data;
+    }
+    myRequest.send();
+}
+function getAllCourse() {
+    var myRequest = new XMLHttpRequest;
+    myRequest.open("GET", "JSON/ALL.json", false);
+    myRequest.onload = function () {
+        var data = JSON.parse(myRequest.responseText);
+        allCourseData = data;
     }
     myRequest.send();
 }
@@ -75,7 +87,7 @@ function showCourses(data) {
     //console.log(dataJSON);
     dataJSON.sort();
     //console.log(dataJSON);
-    console.log(notCompletedData);
+    //console.log(notCompletedData);
     for (i = 0; i < 12; i++) {
         document.getElementById("ct" + i).innerHTML = " ";
         document.getElementById("nct" + i).innerHTML = " ";
@@ -111,7 +123,7 @@ function btnForCourse(data) {
     var notCompletedData = findCourseToTake(dataJSON);
     var counterForCompleted = 0;
     var counterForNotCompleted = 0;
-    console.log(notCompletedData);
+    //console.log(notCompletedData);
     // delete NP and W data
     for (i = 0; i < completedData.length; i++) {
         if (completedData[i].final_grade == "NP") {
@@ -121,7 +133,7 @@ function btnForCourse(data) {
     completedData.sort();
 
     ctRight.onclick = function () {
-            counterForCompleted += 1;
+        counterForCompleted += 1;
         if (12 * counterForCompleted > completedData.length) return;
 
         if (i + 12 * counterForCompleted < completedData.length) {
@@ -131,7 +143,7 @@ function btnForCourse(data) {
         }
         if (counterForCompleted >= 0) {
             for (i = 0; i < 12; i++) {
-                if (completedData[i + 12 * counterForCompleted].course_ID == null) {
+                if (completedData[i + 12 * counterForCompleted] == null) {
                     return;
                 }
                 else {
@@ -151,7 +163,7 @@ function btnForCourse(data) {
             }
             if (counterForCompleted >= 0) {
                 for (i = 0; i < 12; i++) {
-                    if (completedData[i + 12 * counterForCompleted].course_ID == null) {
+                    if (completedData[i + 12 * counterForCompleted] == null) {
                         return;
                     }
                     else {
@@ -159,6 +171,7 @@ function btnForCourse(data) {
                     }
                 }
             }
+
         }
         else
             counterForCompleted = 1;
@@ -167,27 +180,65 @@ function btnForCourse(data) {
 
     nctRight.onclick = function () {
         counterForNotCompleted += 1;
-        document.getElementById("nct0").innerHTML = notCompletedData[3];
-         
-    }
-    nctLeft.onclick = function () {
-        counterForNotCompleted -= 1;
-
-        if (i + 12 * counterForCompleted < notCompletedData.length) {
+        if (i + 12 * counterForNotCompleted < notCompletedData.length) {
             for (i = 0; i < 12; i++) {
                 document.getElementById("nct" + i).innerHTML = " ";
             }
         }
-        if (counterForCompleted >= 0) {
+        if (counterForNotCompleted >= 0) {
             for (i = 0; i < 12; i++) {
-                if (notCompletedData[i + 12 * counterForCompleted] == null) {
+                document.getElementById("nct" + i).innerHTML = " ";
+            }
+            for (i = 0; i < 12; i++) {
+                if (notCompletedData[i + 12 * counterForNotCompleted] == null) {
                     return;
                 }
                 else {
-                    document.getElementById("nct" + i).innerHTML = notCompletedData[i + 12 * counterForCompleted];
+                    document.getElementById("nct" + i).innerHTML = notCompletedData[i + 12 * counterForNotCompleted];
+                }
+            }
+        }
+    }
+    nctLeft.onclick = function () {
+        counterForNotCompleted -= 1;
+
+        if (i + 12 * counterForNotCompleted < notCompletedData.length) {
+            for (i = 0; i < 12; i++) {
+                document.getElementById("nct" + i).innerHTML = " ";
+            }
+        }
+        if (counterForNotCompleted >= 0) {
+            for (i = 0; i < 12; i++) {
+                document.getElementById("nct" + i).innerHTML = " ";
+            }
+            for (i = 0; i < 12; i++) {
+                if (notCompletedData[i + 12 * counterForNotCompleted] == null) {
+                    return;
+                }
+                else {
+                    document.getElementById("nct" + i).innerHTML = notCompletedData[i + 12 * counterForNotCompleted];
                 }
             }
         }
 
     }
 }
+
+//get course info from all.json data
+function fetchOneCourseJSON(courseName) {
+    // alert(sid);
+    $.post('Model/course.php',  courseName, function (data) {
+        console.log(data);
+
+    });
+}
+function getTermCourse(data){
+    var dataJSON = JSON.parse(data);
+    var usecourseName = "MATH 100";
+    usecourseName = courseName.serializeArray();
+    console.log(usecourseName);
+    fetchOneCourseJSON(usecourseName);
+}
+
+
+
