@@ -234,7 +234,7 @@ function fetchOneCourseJSON(courseName) {
 }
 function getTermCourse(data){
     var dataJSON = JSON.parse(data);
-    fetchOneCourseJSON(dataJSON[1].course_ID);
+    fetchOneCourseJSON("MATH 100");
 }
 
 
