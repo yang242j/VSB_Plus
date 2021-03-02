@@ -233,13 +233,8 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                     console.log(courseName + ' Selected');
 
                     // If this course Name is NOT in the courseList, push
-<<<<<<< HEAD
-                    if (!courseList.hasOwnProperty(courseName)) {
-                        courseList[courseName] = new Array();
-=======
                     if ($.inArray(courseName, courseList) === -1) {
                         courseList.push(courseName);
->>>>>>> parent of a8b0131 (Change courseList from array to obj)
                     } else {
                         console.log(courseName + " already exist in courseList { " + courseList + " }");
                     }
