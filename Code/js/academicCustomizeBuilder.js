@@ -259,7 +259,7 @@ function showTerm(data) {
         }
     }
     term1.innerHTML = "";
-    for (i = 0; i <= 5; i++) {
+    for (i = 0; i < 5; i++) {
         getColor(i);
         term1.innerHTML += "<div class = 'tittle'>" + "<h2>" + dataJSON[i].term + "</h2></div>" +
             "<div class = 'course_cards' id = 'course_cards_builder' style = 'border-color:" + color + "'>" + "<h3>" + dataJSON[i].course_ID + "</h3>" +
