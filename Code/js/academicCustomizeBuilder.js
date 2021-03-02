@@ -122,7 +122,7 @@ function showCourses(data) {
         document.getElementById("ct" + i).innerHTML = " ";
         document.getElementById("nct" + i).innerHTML = " ";
     }
-    console.log(dataJSON);
+    //console.log(dataJSON);
     for (i = 0; i < 12; i++) {
         if (i < dataJSON.length) {
             document.getElementById("ct" + i).innerHTML = dataJSON[i].course_ID + " <br/> " +dataJSON[i].term;

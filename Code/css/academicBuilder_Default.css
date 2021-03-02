@@ -134,7 +134,7 @@ body .terms .term1 #course_cards_builder p{
     }
     body .tags_courses #builder_icon{
         /*border: 2px solid red;*/
-        display: grid;;
+        display: inline-grid;;
         grid-template-columns: 58% 58%;
         grid-template-rows: 20% 20% 20%;
         column-gap: -10px;
