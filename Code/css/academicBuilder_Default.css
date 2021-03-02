@@ -23,7 +23,8 @@ h3 {
     font-size: 16px;
 }
 body .terms .term1 .course_cards p{
-    font-size: 20px;
+    font-size: 16px;
+    font:bold;
     border: 2px solid red;
 }
 body .terms {
