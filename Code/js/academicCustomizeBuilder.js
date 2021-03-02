@@ -163,7 +163,6 @@ function btnForCourse(data) {
             }
             for (i = 0; i < 12; i++) {
                 if (completedData[i + 12 * counterForCompleted] == null) {
-                    counterForCompleted -= 1;
                     return;
                 }
                 else {
@@ -194,8 +193,6 @@ function btnForCourse(data) {
                 }
             }
         }
-        else
-            counterForCompleted = 0;
 
     }
 
@@ -212,7 +209,6 @@ function btnForCourse(data) {
             }
             for (i = 0; i < 12; i++) {
                 if (notCompletedData[i + 12 * counterForNotCompleted] == null) {
-                    counterNotForCompleted -= 1;
                     return;
                 }
                 else {
@@ -235,7 +231,6 @@ function btnForCourse(data) {
             }
             for (i = 0; i < 12; i++) {
                 if (notCompletedData[i + 12 * counterForNotCompleted] == null) {
-                    counterNotForCompleted += 1;
                     return;
                 }
                 else {
