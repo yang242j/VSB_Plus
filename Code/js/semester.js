@@ -206,7 +206,7 @@ function changeCalendarAndExam(oldCombo, newcombo, cardId, cardStyle, term) {
                     } else {
                         //console.log(lec_arr);
                         //console.log(Object.keys(lec_arr).length);
-                        console.warn("Lecture " + short_name + " have no match section_num");
+                        console.warn("Lecture： " + short_name + " have no section " + new_lec_exam_num);
                     }
                 } catch (error) {
                     console.error("Change calendar " + short_name + " lecture event FAILED -> " + error);
@@ -227,7 +227,7 @@ function changeCalendarAndExam(oldCombo, newcombo, cardId, cardStyle, term) {
                         removeCalendar(short_name + "_Lab", old_lab_eventTitle); // remove old lab event from calendar
                         appendCalendar(lab_arr, "Lab", BGC); // appendd new lab event into calendar
                     } else {
-                        console.warn("Lab " + short_name + " have no match section_num");
+                        console.warn("Lab： " + short_name + " have no section" + new_lab_num);
                     }
                 } catch (error) {
                     console.error("Change calendar " + short_name + " lab event FAILED -> " + error);
@@ -247,7 +247,7 @@ function changeCalendarAndExam(oldCombo, newcombo, cardId, cardStyle, term) {
                         removeExamList(short_name); // remove old exam li from list
                         appendExamList(exam_arr); // appendd new exam li into list 
                     } else {
-                        console.warn("Exam " + short_name + " section_num have no match with lecture section_num");
+                        console.warn("Exam： " + short_name + " [" + new_lec_exam_num + "] have no cooresponding exam section");
                     }
                 } catch (error) {
                     console.error("Change " + short_name + " exam list FAILED -> " + error);
@@ -392,7 +392,7 @@ function removeCalendar(id, title) {
                 console.error("Title: " + event.title + " remove FAILED");
             } else if (!title) {
                 event.remove();
-                console.log("id: " + id + " remove SUCCESS");
+                //console.log("id: " + id + " remove SUCCESS");
             }
         }
     } catch (e) {
