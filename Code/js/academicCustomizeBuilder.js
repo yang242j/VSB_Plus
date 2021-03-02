@@ -7,7 +7,7 @@ function fetchCourseJSON(sid) {
     $.post('Model/takenClass.php', { sid: sid, password: sid }, function (data) {
         btnForCourse(data);
         showCourses(data);
-        showTermInfo(data);
+        getTermCourse(data);
         //console.log(data);
     });
 }
@@ -232,7 +232,7 @@ function fetchOneCourseJSON(courseName) {
 
     });
 }
-function getACourse(data){
+function getTermCourse(data){
     var dataJSON = JSON.parse(data);
     fetchOneCourseJSON(dataJSON[1].course_ID);
 }
