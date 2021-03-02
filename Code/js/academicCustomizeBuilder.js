@@ -73,18 +73,40 @@ function findCourseToTake(data) {
     });
     return courseNotCompleted;
 }
+function getColor(index,dataJSON) {
+    var color;
+    if (dataJSON[index].final_grade == "NP") {
+        color = "blue";
+    }
+    else if (dataJSON[index].final_grade == "W") {
+        color = "yellow";
+    }
+    else if (dataJSON[index].final_grade <= 60) {
+        color = "grey";
+    }
+    else if (dataJSON[index].final_grade > 60) {
+        color = "orange";
+    }
+    else if (dataJSON[index].final_grade > 75) {
+        color = "pink";
+    }
+    else if (dataJSON[index].final_grade > 90) {
+        color = "red";
+    }
+    return color;
+}
 function showCourses(data) {
     var dataJSON = JSON.parse(data);
     var notCompletedData = findCourseToTake(dataJSON);
 
-    for (i = 0; i < dataJSON.length; i++) {
+    /*for (i = 0; i < dataJSON.length; i++) {
         if (dataJSON[i].final_grade == "NP" || dataJSON[i].final_grade == "W") {
             delete dataJSON[i];
         }
     }
     //dataJSON.sort();
     //console.log(dataJSON);
-    dataJSON.sort();
+    dataJSON.sort();*/
     //console.log(dataJSON);
     //console.log(notCompletedData);
     for (i = 0; i < 12; i++) {
@@ -95,7 +117,7 @@ function showCourses(data) {
     for (i = 0; i < 12; i++) {
         if (i < dataJSON.length) {
             document.getElementById("ct" + i).innerHTML = dataJSON[i].course_ID;
-            document.getElementById("ct" + i).style.color = "red";
+            document.getElementById("ct" + i).style.color = getColor(i,dataJSON);
 
         }
         else
