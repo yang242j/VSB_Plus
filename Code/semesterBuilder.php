@@ -295,8 +295,11 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             </cite>
             Note: <br>
         </p>
-        <p class="info-link"><a href="homePage.php">About Us</a><a href="View/api_test.html">API Test</a></p>
-        <div class="hidden" id="test">CLICK</div>
+        <p class="info-link">
+            <a href="homePage.php">About Us</a>
+            <a href="View/api_test.html">API Test</a>
+            <a class="hidden" id="test">Test CLICK</a>
+        </p>
         <script>
             $("#test").click(function() {
                 var myObj = {
