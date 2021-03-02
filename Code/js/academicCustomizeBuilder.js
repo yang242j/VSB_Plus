@@ -237,7 +237,7 @@ function showTerm(data) {
      }
      dataJSON.sort();*/
     var courseFullName = "Mechanics for EngineersDynamics asdasXSaas";
-    var color = "red";
+    var color = "black";
     function getColor(index) {
         if (dataJSON[index].final_grade == "NP") {
             color = "blue";
@@ -246,16 +246,22 @@ function showTerm(data) {
             color = "yellow";
         }
         else if (dataJSON[index].final_grade <= 60) {
-            color = "purple";
+            color = "grey";
         }
         else if (dataJSON[index].final_grade > 60) {
             color = "orange";
+        }
+        else if (dataJSON[index].final_grade > 70) {
+            color = "pink";
+        }
+        else if (dataJSON[index].final_grade > 90) {
+            color = "red";
         }
     }
 
     for (i = 0; i <= 5; i++) {
         getColor(i);
-        term1.innerHTML = "<div class = 'tittle'>" + "<h2>" + dataJSON[i].term + "</h2></div>" +
+        term1.innerHTML += "<div class = 'tittle'>" + "<h2>" + dataJSON[i].term + "</h2></div>" +
             "<div class = 'course_cards' id = 'course_cards_builder' style = 'border-color:" + color + "'>" + "<h3>" + dataJSON[i].course_ID + "</h3>" +
             "<p>" + courseFullName + "</p>" +
             "</div>";
