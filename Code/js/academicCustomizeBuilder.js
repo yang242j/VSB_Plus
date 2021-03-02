@@ -248,6 +248,9 @@ function showTerm(data) {
         else if (dataJSON[index].final_grade <= 60) {
             color = "purple";
         }
+        else if (dataJSON[index].final_grade > 60) {
+            color = "orange";
+        }
     }
 
     for (i = 0; i <= 5; i++) {
