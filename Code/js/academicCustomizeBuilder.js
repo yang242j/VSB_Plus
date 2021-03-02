@@ -11,6 +11,7 @@ function fetchCourseJSON(sid) {
     });
 }
 getTermData("ESE");
+getAllCourse();
 window.onload = function init() {
     fetchCourseJSON(getSid());
 }
@@ -33,7 +34,6 @@ function getTermData(faculty) {
 }
 function getAllCourse() {
     var myRequest = new XMLHttpRequest;
-    var faculty = "ESE";
     myRequest.open("GET", "JSON/ALL.json", false);
     myRequest.onload = function () {
         var data = JSON.parse(myRequest.responseText);
