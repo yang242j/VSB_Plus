@@ -1,6 +1,6 @@
 var summary = {
     "name":"",
-    "sid" : "",
+    "sid" : sid,
     "program" : "",
     "major" : major,
 }
@@ -18,7 +18,7 @@ var reqCredit = 136;
 
 
 function pageUp() {
-    document.getElementById("card1").innerHTML = "<h3>Major:</h3>" + "<p>" + summary.major + "</p>";
+    document.getElementById("card1").innerHTML = "<h3>Program:</h3>" + "<p>" + summary.program + "</p>";
     document.getElementById("card2").innerHTML = "<h3>Year:</h3>" + "<p>" + cmpValue.year + "th</p>";
     document.getElementById("card3").innerHTML = "<h3>Credit Earned:</h3>" + "<p>" + cmpValue.credit + " / "+ reqCredit + "</p>";
     document.getElementById("card4").innerHTML = "<h3>Average</h3>" + "<p>" + cmpValue.ave + "</p>";
@@ -26,7 +26,7 @@ function pageUp() {
 
 function pageDown() {
     document.getElementById("card1").innerHTML = "<h3>SID:</h3>" + "<p>" + summary.sid + "</p>";
-    document.getElementById("card2").innerHTML = "<h3>Program:</h3>" + "<p>" + summary.program + "</p>";
+    document.getElementById("card2").innerHTML = "<h3>Major:</h3>" + "<p>" + summary.major + "</p>";
     document.getElementById("card3").innerHTML = "<h3>Course Left:</h3>" + "<p>" + cmpValue.courseLeft + " / "+reqCourseNum+"</p>" ;
     document.getElementById("card4").innerHTML = "<h3>GPA:</h3>" + "<p>" + cmpValue.gpa + "</p>";
 }
