@@ -7,6 +7,7 @@ function fetchCourseJSON(sid) {
     $.post('Model/takenClass.php', { sid: sid, password: sid }, function (data) {
         btnForCourse(data);
         showCourses(data);
+        showTermInfo(data);
         //console.log(data);
     });
 }
@@ -233,6 +234,12 @@ function findCourseInfo(courseName) {
         return "no such course";
 }
 }
-console.log(findCourseInfo("CHEM 104"));
+function showTermInfo(data){
+    var dataJSON = JSON.parse(data);
+    console.log(findCourseInfo(dataJSON[1].course_ID));
+    console.log(dataJSON[1].term);
+
+}
+
 
 
