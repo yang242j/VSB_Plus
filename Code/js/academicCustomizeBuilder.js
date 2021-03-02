@@ -109,9 +109,9 @@ function showCourses(data) {
     dataJSON.sort();*/
     //console.log(dataJSON);
     //console.log(notCompletedData);
-    console.log(dataJSON);
+    /*console.log(dataJSON);
     console.log(courseReqData);
-    console.log(notCompletedData);
+    console.log(notCompletedData);*/
    
 
     for (i = 0; i < 12; i++) {
