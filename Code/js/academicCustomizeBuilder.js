@@ -234,8 +234,9 @@ function fetchOneCourseJSON(courseName) {
 }
 function getTermCourse(data){
     var dataJSON = JSON.parse(data);
-    var usecourseName ="MATH 100";
+    var usecourseName = "MATH 100";
     usecourseName = courseName.serializeArray();
+    console.log(usecourseName);
     fetchOneCourseJSON(usecourseName);
 }
 
