@@ -150,7 +150,7 @@ function btnForCourse(data) {
     // delete NP and W data
 
     ctRight.onclick = function () {
-        if(counterForCompleted < (CompletedData.length/12)){
+        if(counterForCompleted <= (CompletedData.length/12)){
             counterForCompleted += 1;
             }
             else return;
@@ -203,7 +203,7 @@ function btnForCourse(data) {
     }
 
     nctRight.onclick = function () {
-        if(counterForNotCompleted < (notCompletedData.length/12)){
+        if(counterForNotCompleted <= (notCompletedData.length/12)){
         counterForNotCompleted += 1;
         }
         else return;
