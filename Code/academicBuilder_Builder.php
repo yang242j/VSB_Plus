@@ -28,35 +28,11 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     <link rel="stylesheet" href="css/academicBuilder_Default.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            $(".nav-right-2").hide();
-        });
-    </script>
-
-
-
 </head>
-<style>
-</style>
+
 <body>
-<p id = "userId" hidden><?php echo htmlspecialchars($_SESSION["sid"]); ?></p>
-
-<?php
-    // Check if the user is logged in, if not then hide nav-right div
-    if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
-    ?>
-        <script>
-            $(document).ready(function() {
-                $(".nav-right").hide();
-                $(".nav-right-2").show();
-                $(".session-required").hide();
-            });
-        </script>
-    <?php } ?>
-
+    <p id = "userId" hidden><?php echo htmlspecialchars($_SESSION["sid"]); ?></p>
     
-
     <header>
         <a href="https://www.uregina.ca"><img src="img/logo.png" class="logo" alt="UofR"></a>
         <h1>Visual Schedule Builder Plus</h1>
@@ -84,10 +60,6 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                 <a href="Model/logout.php">Logout</a>
             </div>
         </div>
-        <div class="nav-right-2">
-            <a href="login.php">LogIn</a>
-            <a href="signup.php">SignUp</a>
-        </div>
     </nav>
 
 
@@ -95,71 +67,84 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         <div class="welcome_tag" id = "welcome">
             <h1>Customize Schedule Builder</h1>
         </div>
-    <div class = "term1" id = "term1">
-        <div class = "tittle"><h2>Term1:</h2></div>
-        <div class = "course_cards" id = "course_cards_builder"><h3>ENSE 370</h3>
-        <p>Mechanics for EngineersDynamics asdasXSaas</p>
-        <p></p>
+    
+        <div class = "term1" id = "term1">
+            <div class = "tittle">
+                <h2>Term1:</h2>
+            </div>
+            <div class = "course_cards" id = "course_cards_builder">
+                <h3>ENSE 370</h3>
+                <p>Mechanics for EngineersDynamics asdasXSaas</p>
+                <p></p>
+            </div>
+
+            <div class = "course_cards" id = "course_cards_builder">
+                <h3>ENSE 370</h3>
+                <p>Mechanics for EngineersDynamics asdasXSaas</p>
+                <p></p>
+            </div>
+
+            <div class = "course_cards" id = "course_cards_builder">
+                <h3>ENSE 370</h3>
+                <p>Mechanics for EngineersDynamics asdasXSaas</p>
+                <p></p>
+            </div>
+
+            <div class = "course_cards" id = "course_cards_builder">
+                <h3>ENSE 370</h3>
+                <p>Mechanics for EngineersDynamics asdasXSaas</p>
+                <p></p>
+            </div>
+
+            <div class = "course_cards" id = "course_cards_builder">
+                <h3>ENSE 370</h3>
+                <p>Mechanics for EngineersDynamics asdasXSaas</p>
+                <p></p>
+            </div>  
         </div>
 
-        <div class = "course_cards" id = "course_cards_builder">
-            <h3>ENSE 370</h3>
-        <p>Mechanics for EngineersDynamics asdasXSaas</p>
-        <p></p>
+        <div class = "add_to_term" d = "add_to_term1">
+            <div class = "tittle">
+                <h2>Add:</h2>
+            </div>
+            <div class = "course_cards" ></div>
+            <div class = "course_cards" ></div>
+            <div class = "course_cards" ></div>
+            <div class = "course_cards" ></div>
+            <div class = "course_cards" ></div>
+        </div>
+    
+        <div class = "term1" id = "term2">
+            <div class = "tittle">
+                <h2>Term2:</h2>
+            </div>
+            <div class = "course_cards" id = "course_cards_builder"></div>
+            <div class = "course_cards" id = "course_cards_builder"></div>
+            <div class = "course_cards" id = "course_cards_builder"></div>
+            <div class = "course_cards" id = "course_cards_builder"></div>
+            <div class = "course_cards" id = "course_cards_builder"></div>
         </div>
 
-        <div class = "course_cards" id = "course_cards_builder">
-            <h3>ENSE 370</h3>
-        <p>Mechanics for EngineersDynamics asdasXSaas</p>
-        <p></p>
+        <div class = "add_to_term" id = "add_to_term2">
+            <div class = "tittle">
+                <h2>Add:</h2>
+            </div>
+            <div class = "course_cards" ></div>
+            <div class = "course_cards" ></div>
+            <div class = "course_cards" ></div>
+            <div class = "course_cards" ></div>
+            <div class = "course_cards" ></div>
+            <div class = "arrows">
+                <button class="right_arrow">
+                    <i class='fas fa-angle-left'></i>
+                </button>
+                &nbsp;
+                <button class="right_arrow">
+                    <i class='fas fa-angle-right'></i>
+                </button>
+            </div>  
         </div>
-
-        <div class = "course_cards" id = "course_cards_builder">
-            <h3>ENSE 370</h3>
-        <p>Mechanics for EngineersDynamics asdasXSaas</p>
-        <p></p>
-        </div>
-
-        <div class = "course_cards" id = "course_cards_builder">
-            <h3>ENSE 370</h3>
-        <p>Mechanics for EngineersDynamics asdasXSaas</p>
-        <p></p>
-        </div>  
-    </div>
-    <div class = "add_to_term" d = "add_to_term1">
-        <div class = "tittle"><h2>Add:</h2></div>
-        <div class = "course_cards" ></div>
-        <div class = "course_cards" ></div>
-        <div class = "course_cards" ></div>
-        <div class = "course_cards" ></div>
-        <div class = "course_cards" ></div>
-
-    </div>
-    <div class = "term1" id = "term2">
-
-        <div class = "tittle"><h2>Term2:</h2></div>
-        <div class = "course_cards" id = "course_cards_builder"></div>
-        <div class = "course_cards" id = "course_cards_builder"></div>
-        <div class = "course_cards" id = "course_cards_builder"></div>
-        <div class = "course_cards" id = "course_cards_builder"></div>
-        <div class = "course_cards" id = "course_cards_builder"></div>
-
-    </div>
-
-    <div class = "add_to_term" id = "add_to_term2">
-        <div class = "tittle"><h2>Add:</h2></div>
-        <div class = "course_cards" ></div>
-        <div class = "course_cards" ></div>
-        <div class = "course_cards" ></div>
-        <div class = "course_cards" ></div>
-        <div class = "course_cards" ></div>
-        <div class = "arrows"><button class="right_arrow"><i class='fas fa-angle-left'></i></button>
-            &nbsp;
-            <button class="right_arrow"><i class='fas fa-angle-right'></i></button>
-        </div>   
-    </div>
 </section>
-
 
 <section class = "tags_courses" id ="block" style="float:right;">  
 
@@ -186,15 +171,16 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             <p id = "ct9"></p>
             <p id = "ct10"></p>
             <p id = "ct11"></p>
-            <div><button class="right_arrow" id ="ctLeft"><i class='fas fa-angle-left'></i></button>
-                <button class="right_arrow" id ="ctRight"><i class='fas fa-angle-right'></i></button></div>
+            <div>
+                <button class="right_arrow" id ="ctLeft"><i class='fas fa-angle-left'></i></button>
+                <button class="right_arrow" id ="ctRight"><i class='fas fa-angle-right'></i></button>
+            </div>
 
         </div>
 
-
-
-
-        <div class = "course_not_completed"><h3>Course to take</h3></div>
+        <div class = "course_not_completed">
+            <h3>Course to take</h3>
+        </div>
         <div class = "course_tag_not_completed">
             <p id = "nct0"></p>
             <p id = "nct1"></p>
@@ -210,7 +196,8 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             <p id = "nct9"></p>
             <p id = "nct10"></p>
             <p id = "nct11"></p>
-            <div><button class="right_arrow" id ="nctLeft"><i class='fas fa-angle-left'></i></button>
+            <div>
+                <button class="right_arrow" id ="nctLeft"><i class='fas fa-angle-left'></i></button>
                 <button class="left_arrow" id ="nctRight"><i class='fas fa-angle-right'></i></button>
             </div>
         </div>
@@ -219,6 +206,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     </div>
 
 </section>
+
 <footer>
     <script src="js/main.js"></script>
     <script type="text/javascript" src ="js/academicCustomizeBuilder.js"></script>
