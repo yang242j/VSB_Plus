@@ -1,0 +1,414 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <!-- icon library -->
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <!-- icon library -->
+
+    <title>VSB_Plus : Academic</title>
+    <meta name="description" content="The HTML5 Herald">
+    <meta name="author" content="team_vsbp">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="shortcut icon" href="#">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/academicBuilder.css">
+
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            align-self: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <a href="https://www.uregina.ca"><img src="img/logo.png" class="logo" alt="UofR"></a>
+        <h1>Visual Schedule Builder Plus</h1>
+    </header>
+
+    <nav>
+        <div class="menu-icon" onclick="menuFunc1(this); menuFunc2();">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+        <a class="menu-list nav-active" href="academicBuilder_main.html">Academic Schedule Builder</a>
+        <a class="menu-list" href="semesterBuilder.html">Semester Schedule Builder</a>
+        <a class="menu-list" href="courseDB.html">Course List Database</a>
+        <div class="nav-right">
+            <a id="usertext" onclick="addonSwitchFunc()">php_userName</a>
+            <div id="addon-menu">
+                <a>php_SID</a>
+                <a href="#Logout">Logout</a>
+            </div>
+        </div>
+    </nav>
+
+    <div>
+        <h2>Views: </h2>
+        <button class="view" id="viewButton" onclick="location.href ='academicBuilderTable.html'"><i
+                class='fas fa-grip-vertical' style='font-size:24px'></i>
+            <span class="viewTips">table</span>
+            <button class="view" id="viewButton" onclick="location.href ='academicBuilder.html'"><i
+                    class='fas fa-grip-lines-vertical' style='font-size:24px'></i></i>
+                <span class="viewTips">layout</span>
+            </button>
+    </div>
+  
+    <section class="container">
+        <section class="left-section">
+            <h3>Default Schedule</h3>
+            <table style="width: 100%">
+                <tr>
+                    <th>Term1</th>
+                    <th>Prerequisites</th>
+                    <th>Type</th>
+                </tr>
+                <tr>
+                    <td>CHEM104</td>
+                    <td>CHEM30 or CHEM100(minimum 65%); and Precalculus 30 or Mathematics C30 with a grade of at least 65%, or AMTH092 with a grade of at least 80%, or MATH102</td>
+                    <td>compulsory course, science</td>
+                </tr>
+                 <tr>
+                    <td>ENGG123</td>
+                    <td>None</td>
+                    <td>compulsory course, engineer</td>
+                </tr>
+                <tr>
+                    <td>ENGG140</td>
+                    <td>MATH110(may be take concurrently)</td>
+                    <td>compulsory course, engineer</td>
+                </tr>
+                <tr>
+                    <td>MATH110</td>
+                    <td>Precalculus 30 with at least 75%, or Calculus 30 or Mathematics B30 and C30 with a grade of at least 65% in each or Math102</td>
+                    <td>compulsory course, mathematics</td>
+                </tr>
+                <tr>
+                    <td>MATH122</td>
+                    <td>Precalculus 30, Mathematics B30 and C30, or Math102</td>
+                    <td>compulsory course, mathematics</td>
+                </tr>
+            </table>
+            &nbsp;
+            <table style="width: 100%">
+                <tr>
+                    <th>Term2</th>
+                    <th>Prerequisites</th>
+                    <th>Type</th>
+                </tr>
+                <tr>
+                    <td>CS110</td>
+                    <td>Precalculus 30, Calculus 30, or Math102</td>
+                    <td>compulsory course, computerscience</td>
+                </tr>
+                <tr>
+                    <td>ENGG100</td>
+                    <td>None</td>
+                    <td>compulsory course, engineer</td>
+                </tr>
+                <tr>
+                    <td>ENGL100</td>
+                    <td>None</td>
+                    <td>compulsory course, language</td>
+                </tr>
+                <tr>
+                    <td>MATH111</td>
+                    <td>MATH110, or MATH103 with a grade of at least 80%</td>
+                    <td>compulsory course, mathematics</td>
+                </tr>
+                <tr>
+                    <td>PHYS119</td>
+                    <td>PHYS109 or ENGG140</td>
+                    <td>compulsory course, science</td>
+                </tr>
+            </table>
+            &nbsp;
+            <table style="width: 100%">
+                <tr>
+                    <th>Term3</th>
+                    <th>Prerequisites</th>
+                    <th>Type</th>
+                </tr>
+                <tr>
+                    <td>CS115</td>
+                    <td>CS110 with a minimum grade of 65% and one of MATH110(may be taken concurrently) or MATH103 with a minimum grade of 80%</td>
+                    <td>compulsory course, computerscience</td>
+                </tr>
+                <tr>
+                    <td>ENEL280</td>
+                    <td>MATH111</td>
+                    <td>compulsory course, engineer</td>
+                </tr>
+                <tr>
+                    <td>ENEV223</td>
+                    <td>ENGG123</td>
+                    <td>compulsory course, engineer</td>
+                </tr>
+                <tr>
+                    <td>MATH213</td>
+                    <td>MATH111 and MATH122</td>
+                    <td>compulsory course, mathematics</td>
+                </tr>
+                <tr>
+                    <td>PHYS112</td>
+                    <td>PHYS111(recommended) or 109 or 119, and MATH110(may be taken concurrently)</td>
+                    <td>compulsory course, science</td>
+                </tr>
+            </table>
+            &nbsp;
+            <table style="width: 100%">
+                <tr>
+                    <th>Term4</th>
+                    <th>Prerequisites</th>
+                    <th>Type</th>
+                </tr>
+                <tr>
+                    <td>CS210</td>
+                    <td>CS115 and MATH110</td>
+                    <td>compulsory course, computerscience</td>
+                </tr>
+                <tr>
+                    <td>ENEL281</td>
+                    <td>MATH217(concurrent enrolment allowed) and ENEL280</td>
+                    <td>compulsory course, engineer</td>
+                </tr>
+                <tr>
+                    <td>ENEL282</td>
+                    <td>ENEL280</td>
+                    <td>compulsory course, engineer</td>
+                </tr>
+                <tr>
+                    <td>MATH217</td>
+                    <td>MATH111 and MATH122</td>
+                    <td>compulsory course, mathematics</td>
+                </tr>
+                <tr>
+                    <td>STAT289</td>
+                    <td>MATH111</td>
+                    <td>compulsory course, statistics</td>
+                </tr>
+            </table>
+            &nbsp;
+             <table style="width: 100%">
+                <tr>
+                    <th>Term5</th>
+                    <th>Prerequisites</th>
+                    <th>Type</th>
+                </tr>
+                <tr>
+                    <td>CS215</td>
+                    <td>CS210</td>
+                    <td>compulsory course, computerscience</td>
+                </tr>
+                <tr>
+                    <td>CS340</td>
+                    <td>CS210</td>
+                    <td>compulsory course, computerscience</td>
+                </tr>
+                <tr>
+                    <td>ENEL384</td>
+                    <td>ENEL282</td>
+                    <td>compulsory course, engineer</td>
+                </tr>
+                <tr>
+                    <td>ENSE352</td>
+                    <td>CS210 and ENEL384(concurrent enrollment is allowed)</td>
+                    <td>compulsory course, engineer</td>
+                </tr>
+                <tr>
+                    <td>ENSE374</td>
+                    <td>CS210</td>
+                    <td>compulsory course, engineer</td>
+                </tr>
+            </table>
+            &nbsp;
+            <table style="width: 100%">
+                <tr>
+                    <th>Term6</th>
+                    <th>Prerequisites</th>
+                    <th>Type</th>
+                </tr>
+                <tr>
+                    <td>BUS260</td>
+                    <td>None</td>
+                    <td>compulsory course, business</td>
+                </tr>
+                <tr>
+                    <td>ECON201</td>
+                    <td>MATH B30</td>
+                    <td>compulsory course, economy</td>
+                </tr>
+                <tr>
+                    <td>ENEL380</td>
+                    <td>ENIN233 or ENEL281 and ENEL280</td>
+                    <td>compulsory course, engineer</td>
+                </tr>
+                <tr>
+                    <td>ENSE353</td>
+                    <td>CS215</td>
+                    <td>compulsory course, engineer</td>
+                </tr>
+                <tr>
+                    <td>Approved</td>
+                    <td></td>
+                    <td>Approved elective</td>
+                </tr>
+            </table>
+            &nbsp;
+            <table style="width: 100%">
+                <tr>
+                    <th>Term7</th>
+                    <th>Prerequisites</th>
+                    <th>Type</th>
+                </tr>
+                <tr>
+                    <td>ENEL387</td>
+                    <td>ENSE352 and ENEL384</td>
+                    <td>compulsory course, engineer</td>
+                </tr>
+                <tr>
+                    <td>ENSE470</td>
+                    <td>ENSE374</td>
+                    <td>compulsory course, engineer</td>
+                </tr>
+                <tr>
+                    <td>ENSE471</td>
+                    <td>ENSE374</td>
+                    <td>compulsory course, engineer</td>
+                </tr>
+                <tr>
+                    <td>ENSE475</td>
+                    <td>ENSE374</td>
+                    <td>compulsory course, engineer</td>
+                </tr>
+                <tr>
+                    <td>Approved</td>
+                    <td></td>
+                    <td>Approved elective</td>
+                </tr>
+            </table>
+            &nbsp;
+            <table style="width: 100%">
+                <tr>
+                    <th>Term8</th>
+                    <th>Prerequisites</th>
+                    <th>Type</th>
+                </tr>
+                <tr>
+                    <td>ENGG303</td>
+                    <td>STAT160 or STAT289 and ECON201</td>
+                    <td>compulsory course, business</td>
+                </tr>
+                <tr>
+                    <td>ENSE400</td>
+                    <td>ENSE470 and successful completion of 99 credit hours</td>
+                    <td>compulsory course, economy</td>
+                </tr>
+                <tr>
+                    <td>ENSE472</td>
+                    <td>CS215</td>
+                    <td>compulsory course, engineer</td>
+                </tr>
+                <tr>
+                    <td>Approved</td>
+                    <td></td>
+                    <td>Approved elective</td>
+                </tr>
+                <tr>
+                    <td>Approved</td>
+                    <td></td>
+                    <td>Approved elective</td>
+                </tr>
+                <tr>
+                    <td>Approved</td>
+                    <td></td>
+                    <td>Approved elective</td>
+                </tr>
+            </table>
+            &nbsp;
+            <table style="width: 100%">
+                <tr>
+                    <th>Term9</th>
+                    <th>Prerequisites</th>
+                    <th>Type</th>
+                </tr>
+                <tr>
+                    <td>ENGG401</td>
+                    <td>One of ENEL400, ENEV400, ENIN400, ENPE400, or ENSE400</td>
+                    <td>compulsory course, engineer</td>
+                </tr>
+                <tr>
+                    <td>ENSE350</td>
+                    <td>Math110, 122 and CS210</td>
+                    <td>compulsory course, engineer</td>
+                </tr>
+                <tr>
+                    <td>ENSE477</td>
+                    <td>ENSE400 and ENSE470</td>
+                    <td>compulsory course, engineer</td>
+                </tr>
+                <tr>
+                    <td>Approved</td>
+                    <td></td>
+                    <td>Approved elective</td>
+                </tr>
+                <tr>
+                    <td>Approved</td>
+                    <td></td>
+                    <td>Approved elective</td>
+                </tr>
+            </table>
+        </section>
+        <section class="right-section">
+            <h3>Approved Electives(7 are required)</h3>
+            <table style="width: 100% ">
+                <tr>
+                    <th></th>
+                    <th>Prerequisites</th>
+                    <th>Type</th>
+                </tr>
+                <tr>
+                    <td>ENGG100</td>
+                    <td>None</td>
+                    <td>compulsory course, engineer</td>
+                </tr>
+                <tr>
+                    <td>ENGL100</td>
+                    <td>None</td>
+                    <td>compulsory course, language</td>
+                </tr>
+
+                <tr>
+                    <td>ENGL123</td>
+                    <td>None</td>
+                    <td>compulsory course, engineer</td>
+                </tr>
+            </table>
+        </section>
+
+
+       
+    </section>
+
+    <footer>
+        <script src="js/main.js"></script>
+        <p class="copyright">Copyright &copy; Sep. 2020 to
+            <script>document.write(new Date().getFullYear())</script> UofR VSB_Plus Capstone Group All Rights Reserved<br>
+            <cite>
+                Credit:
+            </cite>
+        </p>
+        <p class="info-link"><a href="homePage.html">About Us</a></p>
+    </footer>
+
+</body>
