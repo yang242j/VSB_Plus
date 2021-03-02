@@ -116,7 +116,7 @@ function showCourses(data) {
     console.log(dataJSON);
     for (i = 0; i < 12; i++) {
         if (i < dataJSON.length) {
-            document.getElementById("ct" + i).innerHTML = dataJSON[i].course_ID + dataJSON[i].term;
+            document.getElementById("ct" + i).innerHTML = dataJSON[i].course_ID + " " +dataJSON[i].term;
             document.getElementById("ct" + i).style.color = getColor(i,dataJSON);
 
         }
@@ -166,7 +166,7 @@ function btnForCourse(data) {
                     return;
                 }
                 else {
-                    document.getElementById("ct" + i).innerHTML = completedData[i + 12 * counterForCompleted].course_ID;
+                    document.getElementById("ct" + i).innerHTML = completedData[i + 12 * counterForCompleted].course_ID + " "+ completedData[i + 12 * counterForCompleted].term;
                     document.getElementById("ct" + i).style.color = getColor(i,dataJSON);
                 }
             }
@@ -191,7 +191,7 @@ function btnForCourse(data) {
                     return;
                 }
                 else {
-                    document.getElementById("ct" + i).innerHTML = completedData[i + 12 * counterForCompleted].course_ID;
+                    document.getElementById("ct" + i).innerHTML = completedData[i + 12 * counterForCompleted].course_ID + " "+ completedData[i + 12 * counterForCompleted].term;
                     document.getElementById("ct" + i).style.color = getColor(i,dataJSON);
                 }
             }
@@ -199,7 +199,7 @@ function btnForCourse(data) {
     }
 
     nctRight.onclick = function () {
-        if(counterForNotCompleted < (notCompletedData.length +1)){
+        if(counterForNotCompleted < (notCompletedData.length/counterForNotCompleted +1)){
         counterForNotCompleted += 1;
         }
         else return;
