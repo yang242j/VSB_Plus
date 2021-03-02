@@ -231,7 +231,7 @@ function showTerm(data) {
     var term = document.getElementById("term1");
     color = "red";
     term.innerHTML = "<div class = 'tittle'>" + "<h2>"+ "Term3:" + "</h2></div>" +
-    "<div class = 'course_cards' id = 'course_cards_builder'>" + "<h3>" + "ENSE 477"+ "</h3>" +
+    "<div class = 'course_cards' id = 'course_cards_builder' style = 'border-color:" + "red" + "'>" + "<h3>" + "ENSE 477"+ "</h3>" +
     "</div>";
 
     /*" <div class = 'tittle'>" + "<h2>" + "Term1:" + "</h2></div>" +
