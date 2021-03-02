@@ -4,7 +4,7 @@ var allCourseData;
 //fetch JSON data from takenClass database
 function fetchCourseJSON(sid) {
     // alert(sid);
-    $.post('Model/takenClass.php', { sid: sid, password: 123 }, function (data) {
+    $.post('Model/takenClass.php', { sid: sid, password: sid }, function (data) {
         btnForCourse(data);
         showCourses(data);
         console.log(data);
@@ -146,7 +146,7 @@ function btnForCourse(data) {
     var nctRight = document.getElementById("nctRight");
     var nctLeft = document.getElementById("nctLeft");
 
-    var completedData = JSON.parse(data);
+    var completedData = data;
     var dataJSON = JSON.parse(data);
     var notCompletedData = findCourseToTake(dataJSON);
     var counterForCompleted = 0;
