@@ -2,7 +2,7 @@ var summary = {
     "name":"",
     "sid" : "",
     "program" : "",
-    "major" : "",
+    "major" : major,
 }
 
 var cmpValue = {

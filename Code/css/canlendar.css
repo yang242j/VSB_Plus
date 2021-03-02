@@ -21,10 +21,11 @@ table{
 
 th,td{
     border: 1px solid #999;
-    height: 20vw;
+    height: 20vh;
 }
 td{
-    height: 35vw;
+    overflow-y: scroll;
+    height: 33vh;
     padding: 7px 7px;
 }
 
@@ -40,8 +41,12 @@ td{
 }
 
 .block{
+    margin-top: 10px;
     border: solid 1px rgb(56, 55, 55);
-
+    height: 5vh;
+    font-size: 3vh;
+    line-height:150%;
+    /* background-color: rgb(241, 193, 166); */
 }
 
 .scroll{
@@ -50,11 +55,14 @@ td{
 }
 
 .toLeft{
-    margin-right: 20%;
+    margin-right: 15%;
     padding: 0px 3%;
 }
 
 .text_center{
+    margin: auto;
+    top: 0;
+    bottom: 0;
     text-align:center;
 }
 
