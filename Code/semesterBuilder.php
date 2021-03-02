@@ -59,7 +59,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         var courseList = [];
         let presetCourses = ['Precalculus 30', 'Calculus 30', 'CHEM 30', 'Mathematics B30', 'Mathematics C30', 'AMTH 092', 'MATH 102', 'MATH 103'];
         var courseCompletedList = [];
-        courseCompletedList.push(presetCourses);
+        courseCompletedList.concat(presetCourses);
     </script>
 </head>
 
