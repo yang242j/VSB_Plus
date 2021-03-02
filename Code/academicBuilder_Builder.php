@@ -171,20 +171,20 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     <div class= "course_list">
         <div class = "course_completed"><h3>Course Completed</h3></div>
         <div class = "course_tag_completed">
-            <p id = "ct0">ENSE 271</p>
-            <p id = "ct1">ENSE 271</p>
-            <p id = "ct2">ENSE 271</p>
-            <p id = "ct3">ENSE 271</p>
+            <p id = "ct0"></p>
+            <p id = "ct1"></p>
+            <p id = "ct2"></p>
+            <p id = "ct3"></p>
 
-            <p id = "ct4">ENSE 271</p>
-            <p id = "ct5">ENSE 271</p>
-            <p id = "ct6">ENSE 271</p>
-            <p id = "ct7">ENSE 271</p>
+            <p id = "ct4"></p>
+            <p id = "ct5"></p>
+            <p id = "ct6"></p>
+            <p id = "ct7"></p>
 
-            <p id = "ct8">ENSE 271</p>
-            <p id = "ct9">ENSE 271</p>
-            <p id = "ct10">ENSE 271</p>
-            <p id = "ct11">ENSE 271</p>
+            <p id = "ct8"></p>
+            <p id = "ct9"></p>
+            <p id = "ct10"></p>
+            <p id = "ct11"></p>
             <div><button class="right_arrow" id ="ctLeft"><i class='fas fa-angle-left'></i></button>
                 <button class="right_arrow" id ="ctRight"><i class='fas fa-angle-right'></i></button></div>
 
@@ -195,20 +195,20 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 
         <div class = "course_not_completed"><h3>Course to take</h3></div>
         <div class = "course_tag_not_completed">
-            <p id = "nct0">ENSE 271</p>
-            <p id = "nct1">ENSE 271</p>
-            <p id = "nct2">ENSE 271</p>
-            <p id = "nct3">ENSE 271</p>
+            <p id = "nct0"></p>
+            <p id = "nct1"></p>
+            <p id = "nct2"></p>
+            <p id = "nct3"></p>
 
-            <p id = "nct4">ENSE 271</p>
-            <p id = "nct5">ENSE 271</p>
-            <p id = "nct6">ENSE 271</p>
-            <p id = "nct7">ENSE 271</p>
+            <p id = "nct4"></p>
+            <p id = "nct5"></p>
+            <p id = "nct6"></p>
+            <p id = "nct7"></p>
             
-            <p id = "nct8">ENSE 271</p>
-            <p id = "nct9">ENSE 271</p>
-            <p id = "nct10">ENSE 271</p>
-            <p id = "nct11">ENSE 271</p>
+            <p id = "nct8"></p>
+            <p id = "nct9"></p>
+            <p id = "nct10"></p>
+            <p id = "nct11"></p>
             <div><button class="right_arrow" id ="nctLeft"><i class='fas fa-angle-left'></i></button>
                 <button class="left_arrow" id ="nctRight"><i class='fas fa-angle-right'></i></button>
             </div>

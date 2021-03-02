@@ -9,7 +9,7 @@ function fetchCourseJSON(sid) {
         //console.log(data);
     });
 }
-getTermData();
+getTermData("ESE");
 window.onload = function init() {
     fetchCourseJSON(getSid());
 }
@@ -19,7 +19,18 @@ function getSid() {
     return sid;
 }
 // get faculty needed course
-function getTermData() {
+function getTermData(faculty) {
+    var myRequest = new XMLHttpRequest;
+    var facultyName = faculty;
+    var url = "JSON/reqCourse/" + facultyName + "_req.json";
+    myRequest.open("GET", url, false);
+    myRequest.onload = function () {
+        var data = JSON.parse(myRequest.responseText);
+        courseReqData = data;
+    }
+    myRequest.send();
+}
+function getAllCourse() {
     var myRequest = new XMLHttpRequest;
     var faculty = "ESE";
     var url = "JSON/reqCourse/" + faculty + "_req.json";
