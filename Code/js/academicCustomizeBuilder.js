@@ -196,11 +196,10 @@ function btnForCourse(data) {
                 }
             }
         }
-
     }
 
     nctRight.onclick = function () {
-        if(counterForNotCompleted > (notCompletedData.length +1)){
+        if(counterForNotCompleted < (notCompletedData.length +1)){
         counterForNotCompleted += 1;
         }
         else return;
