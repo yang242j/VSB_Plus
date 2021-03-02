@@ -236,7 +236,7 @@ function findCourseInfo(courseName) {
 }
 function showTermInfo(data){
     var dataJSON = JSON.parse(data);
-    console.log(findCourseInfo(dataJSON[1].course_ID));
+    console.log(findCourseInfo("ENGG 100"));
     console.log(dataJSON[1].term);
 
 }
