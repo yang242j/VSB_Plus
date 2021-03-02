@@ -28,6 +28,10 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     <link rel="stylesheet" href="css/academicBuilder_Default.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        var sid = "<?php echo $_SESSION["sid"]; ?>";
+        var pas = "<?php echo $_SESSION["password"]; ?>";
+    </script>
 </head>
 
 <body>

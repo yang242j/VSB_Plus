@@ -13,7 +13,7 @@ function fetchCourseJSON(sid,password) {
 getTermData("ESE");
 getAllCourse();
 window.onload = function init() {
-    fetchCourseJSON(getSid(),getPassword());
+    fetchCourseJSON(sid,pas);
 }
 // get student ID form academac_builder
 function getSid() {
