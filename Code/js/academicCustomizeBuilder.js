@@ -16,14 +16,14 @@ window.onload = function init() {
     fetchCourseJSON(sid,pas);
 }
 // get student ID form academac_builder
-function getSid() {
+/*function getSid() {
     var sid = document.getElementById("userId").innerHTML;
     return sid;
 }
 function getPassword() {
     var password = document.getElementById("password").innerHTML;
     return password;
-}
+}*/
 // get faculty needed course
 function getTermData(faculty) {
     var myRequest = new XMLHttpRequest;
