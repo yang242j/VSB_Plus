@@ -251,7 +251,7 @@ function showTerm(data) {
         else if (dataJSON[index].final_grade > 60) {
             color = "orange";
         }
-        else if (dataJSON[index].final_grade > 70) {
+        else if (dataJSON[index].final_grade > 75) {
             color = "pink";
         }
         else if (dataJSON[index].final_grade > 90) {
@@ -262,9 +262,9 @@ function showTerm(data) {
     term1.innerHTML = "<div class = 'tittle'>" + "<h2>" + dataJSON[0].term + "</h2></div>";
     for (i = 0; i < 5; i++) {
         getColor(i);
-        term1.innerHTML +=
+        term1.innerHTML += "<div class = 'tittle'>" + "<h2>" + dataJSON[0].term + "</h2></div>";
             "<div class = 'course_cards' id = 'course_cards_builder' style = 'border-color:" + color + "'>" + "<h3>" + dataJSON[i].course_ID + "</h3>" +
-            "<p>" + courseFullName + "</p>" +
+            "<p>" + dataJSON[0].term + "</p>" +
             "</div>";
     }
 
