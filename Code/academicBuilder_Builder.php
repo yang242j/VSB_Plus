@@ -148,12 +148,12 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 <section class = "tags_courses" id ="block" style="float:right;">  
 
     <div class = "icons_annotation" id ="builder_icon">
-        <div class ="icons" style='font-size:14px;color:yellow'>---- W</div>
-        <div class ="icons" style='font-size:14px;color:blue'>---- NP</div>
-        <div class ="icons" style='font-size:14px;color:grey'>---- Passed</div>
-        <div class ="icons" style='font-size:14px;color:orange'>---- Good</div>
-        <div class ="icons" style='font-size:14px;color:pink'>---- Great</div>
-        <div class ="icons" style='font-size:14px;color:red'>---- Excellent</div>
+        <div class ="icons" style='font-size:24px;color:yellow'>---- W</div>
+        <div class ="icons" style='font-size:24px;color:blue'>---- NP</div>
+        <div class ="icons" style='font-size:24px;color:grey'>---- Passed</div>
+        <div class ="icons" style='font-size:24px;color:orange'>---- Good</div>
+        <div class ="icons" style='font-size:24px;color:pink'>---- Great</div>
+        <div class ="icons" style='font-size:24px;color:red'>---- Excellent</div>
     </div>
 
     <div class= "course_list">
