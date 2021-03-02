@@ -95,7 +95,7 @@ function showCourses(data) {
     for (i = 0; i < 12; i++) {
         if (i < dataJSON.length) {
             document.getElementById("ct" + i).innerHTML = dataJSON[i].course_ID;
-            document.getElementById("ct" + i).style.borderColor = "red";
+            document.getElementById("ct" + i).style.color = "red";
 
         }
         else
