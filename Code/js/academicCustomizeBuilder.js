@@ -121,14 +121,13 @@ function showCourses(data) {
     console.log(dataJSON);
     for (i = 0; i < 12; i++) {
         if (i < dataJSON.length) {
-            document.getElementById("ct" + i).innerHTML = dataJSON[i].course_ID + " " +dataJSON[i].term;
+            document.getElementById("ct" + i).innerHTML = dataJSON[i].course_ID + "     " +dataJSON[i].term;
             document.getElementById("ct" + i).style.color = getColor(i,dataJSON);
 
         }
         else
             return;
     }
-
     for (i = 0; i < 12; i++) {
         if (i < notCompletedData.length) {
             document.getElementById("nct" + i).innerHTML = notCompletedData[i];
