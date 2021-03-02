@@ -230,20 +230,21 @@ function showTerm(data) {
     var dataJSON = JSON.parse(data);
     var term1 = document.getElementById("term1");
 
-    for (i = 0; i < dataJSON.length; i++) {
+   /* for (i = 0; i < dataJSON.length; i++) {
         if (dataJSON[i].final_grade == "NP" || dataJSON[i].final_grade == "W") {
             delete dataJSON[i];
         }
     }
-    dataJSON.sort();
+    dataJSON.sort();*/
     var courseFullName = "Mechanics for EngineersDynamics asdasXSaas";
     var color = "red";
     if (dataJSON[0].final_grade == "NP")
     {
         color = "blue";
+        alert(color);
     }
     term1.innerHTML = "<div class = 'tittle'>" + "<h2>" + dataJSON[0].term + "</h2></div>" +
-        "<div class = 'course_cards' id = 'course_cards_builder' style = 'border-color:" + color + "'>" + "<h3>" + "ENSE 477" + "</h3>" +
+        "<div class = 'course_cards' id = 'course_cards_builder' style = 'border-color:" + color + "'>" + "<h3>" + dataJSON[0].course_ID + "</h3>" +
         "<p>" + courseFullName + "</p>" +
         "</div>";
 
