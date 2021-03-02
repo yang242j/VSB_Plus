@@ -233,6 +233,6 @@ function findCourseInfo(courseName) {
         return "no such course";
 }
 }
-console.log(findCourseInfo("MATH 110"));
+console.log(allCourseData[0]);
 
 
