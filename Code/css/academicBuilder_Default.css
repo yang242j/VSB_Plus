@@ -25,6 +25,7 @@ h3 {
 body .terms .term1 .course_cards p{
     font-size: 25px;
     border: 2px solid red;
+    width:80%;
 }
 body .terms {
     position: relative;
@@ -139,11 +140,12 @@ body .terms .term1 #course_cards_builder p{
         column-gap: -10px;
         margin-top: 40px;
         margin-left: -25px;
+        row-gap:15px;
     }
     body .tags_courses .icons_annotation .icons{
        /* border: 2px solid red;*/
         margin-left: 25px;
-        margin-top: 0px;
+        margin-top: -20px;
     }
 
     body .tags_courses .course_list{
@@ -152,7 +154,7 @@ body .terms .term1 #course_cards_builder p{
         grid-template-columns: 100%;
         grid-template-rows: 8% 40% 8% 40%;
         row-gap: 10px;
-        margin-top: -20%;
+        margin-top: -10%;
     }
     body .tags_courses .course_list .course_completed{
         /*border: 2px solid red;*/
