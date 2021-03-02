@@ -1,8 +1,21 @@
 <?php
-/* 
-Connect to server 
-database "vsb_plus" 
-*/
+/**
+ * Connect to server database "vsb_plus"
+ * 
+ * Requirments:
+ *  1) If connection is goes false, print the error
+ * 
+ * php Steps:
+ *  1) define server
+ *  2) make connection
+ *  3) If connection is false, print the error
+ * 
+ * @version     1.0
+ * @link        http://15.223.123.122/vsbp/Code/Model/takenClass.php
+ * @link        http://15.223.123.122/vsbp/Code/Model/sign_in.php
+ * @author      Jingkang Yang (sid: 200362586) <yang242j@uregina.ca>
+ */
+
 // define('DB_SERVER', 'localhost');
 define('DB_SERVER', '127.0.0.1');
 define('DB_USERNAME', 'root');

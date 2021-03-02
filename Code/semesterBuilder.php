@@ -1,4 +1,30 @@
 <?php
+/**
+ * Simulate an interactive course registration.
+ * 
+ * Requirments:
+ *  1) User should be able to drag and drop desired courses to register. 
+ *  2) User should also be able to drag and drop unwanted courses to remove.
+ *  3) User should be able to review the history of all completed courses.
+ *  4) A list of recommended courses should be presented to the user.
+ *  5) After a successful (drag-n-drop) registration, a course-card with course general info apear automatically.
+ *  6) After a successful (drag-n-drop) registration, the calendar should be filled with corresponding section info.
+ *  7) After a successful (drag-n-drop) registration, the final exam list should be append automatically.
+ * 
+ * Recommended course requirements see http://15.223.123.122/vsbp/Code/Model/courseREC.php
+ * 
+ * php Steps:
+ *  1) Collect session variables. If not logged-in, redirect to login page.
+ * 
+ * @version     1.0
+ * @link        http://15.223.123.122/vsbp/Code/semesterBuilder.php
+ * @author      Jingkang Yang (sid: 200362586) <yang242j@uregina.ca>
+ * @param {boolean} $_SESSION["loggedin"]   Status of logged-in or not: true/false
+ * @param {integer} $_SESSION["sid"]        Student id
+ * @param {string}  $_SESSION["name"]       Student name
+ * @param {string}  $_SESSION['major']      Student major
+ */
+
 // Initialize the session
 session_start();
 

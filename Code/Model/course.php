@@ -14,8 +14,9 @@
  * @version 1.0
  * @link      http://15.223.123.122/vsbp/Code/courseDB.php
  * @author    Xinyu Liu (sid: 200362878) <liu725@uregina.ca>
- * @param array $short_name "short_name of one course"
- * @return json $toTakeList "Recommended courses to take in the selected term"
+ * @param   {array}     $short_name "short_name of one course"
+ * 
+ * @return  {json}      $toTakeList "Recommended courses to take in the selected term"
  */
 
 // 1) Get the parameter from URL

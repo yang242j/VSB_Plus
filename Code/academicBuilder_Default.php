@@ -1,4 +1,26 @@
 <?php
+/**
+ * The academic default builder page displayes the school provided default academic schedule as well as the program approved elective course list.
+ * 
+ * Requirments:
+ *  1) For the most part of the screen, an animated academic calendar schedule should be displayed.
+ *  2) The academic schedule should clearly tells user which semester or term is presenting.
+ *  3) For the rest part of the screen, the program approved elective course list should be displayed.
+ * 
+ * php Steps:
+ *  1) Start session.
+ *  2) If not logged in, redirect to login page.
+ * 
+ * @version     1.0
+ * @link        http://15.223.123.122/vsbp/Code/academicBuilder_Default.php
+ * @author      Priscilla Chua (sid: 200363504) <****@uregina.ca>
+ * @param       {boolean}       $_SESSION["loggedin"]       Status of logged-in or not: true/false
+ * @param       {integer}       $_SESSION["sid"]            Student id
+ * @param       {string}        $_SESSION["name"]           Student name
+ * @param       {string}        $_SESSION["major"]          Student major
+ * @param       {string}        $_SESSION["password"]       Student password
+ */
+
 session_start();// Initialize the session
 
 // Check if the user is logged in, if not then redirect him to login page

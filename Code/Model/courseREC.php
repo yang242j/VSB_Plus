@@ -16,14 +16,15 @@
  *  4) Based on the requirments, generate the $toTakeList.
  *  5) Encode & Return as JSON format
  * 
- * @version 1.0
- * @link      http://15.223.123.122/vsbp/Code/semesterBuilder.php
- * @author    Jingkang Yang (sid: 200362586) <yang242j@uregina.ca>
- * @param array $doneList "Courses completed"
- * @param string $major "The major of the student"
- * @param string $term "Term to be registerd"
- * @param string $maxNum "Maximum number of courses to collect"
- * @return json $toTakeList "Recommended courses to take in the selected term"
+ * @version     1.0
+ * @link        http://15.223.123.122/vsbp/Code/Model/courseREC.php
+ * @author      Jingkang Yang (sid: 200362586) <yang242j@uregina.ca>
+ * @param   {array}     $doneList       Courses completed
+ * @param   {string}    $major          The major of the student
+ * @param   {string}    $term           Term to be registerd
+ * @param   {string}    $maxNum         Maximum number of courses to collect
+ * 
+ * @return  {json}      $toTakeList     Recommended courses to take in the selected term
  */
 
 // 1. Collect inputs
@@ -65,7 +66,7 @@ if ($doneList !== "" && $major !== "" && $term_NUM !== "" && $term_EN !== "") {
             $coursePath = "../JSON/$term_NUM/$reqCourse.json";
             $skipCondition_4 = !file_exists($coursePath) ? true : false; // Course file exist in that semester dir.
             $skipCondition_5 = $skipCondition_4 ? true : isSectionEmpty($coursePath); // Check if course section is empty
-            $skipCondition_6 = matchingPrerequisites($reqCourse, $doneList); // Course mush match prerequistes.
+            $skipCondition_6 = notMatchPrerequisites($reqCourse, $doneList); // Course mush match prerequistes.
             
             if ( $skipCondition_1 || $skipCondition_2 || $skipCondition_3 || $skipCondition_4 || $skipCondition_5 || $skipCondition_6 ) {
                 continue; 
@@ -82,6 +83,10 @@ if ($doneList !== "" && $major !== "" && $term_NUM !== "" && $term_EN !== "") {
     echo "One of three inputs is invalid";
 }
 
+/**
+ * @param   {string}    $path   The file path to check whether it is empty or not.
+ * @return  {boolean}           True for empty, False for not empty. 
+ */
 function isSectionEmpty($path) {
     $json_string = file_get_contents($path);
     $parsed_json = json_decode($json_string, true);
@@ -90,7 +95,12 @@ function isSectionEmpty($path) {
     //echo json_encode($parsed_json, JSON_PRETTY_PRINT);
 }
 
-function matchingPrerequisites($short_name, $doneList) {
+/**
+ * @param   {string}      $short_name   The short name of the course to be checked, i.e. "ENGG 401"
+ * @param   {array}       $doneList     A list contains the short name of all completed courses. 
+ * @return  {boolean}                   True for not match with prerequisites, False for matched. 
+ */
+function notMatchPrerequisites($short_name, $doneList) {
     // Get course json
     $response = get_course_json($short_name);
     $resArr = array();
@@ -102,6 +112,11 @@ function matchingPrerequisites($short_name, $doneList) {
     return getStatus($expStr, $doneList) ? false : true;
 }
 
+/**
+ * @param   {string}      $expStr       The expression to represent the course prerequisites, i.e. For ENGG 401 is "ENEL 400 || ENEV 400 || ENIN 400 || ENPE 400 || ENSE 400".
+ * @param   {array}       $doneList     A list contains the short name of all completed courses. 
+ * @return  {boolean}                   True for match with the expression, False for not matched. 
+ */
 function getStatus($expStr, $doneList) {
 
     $expStr = trim($expStr);
@@ -148,6 +163,10 @@ function getStatus($expStr, $doneList) {
 
 }
 
+/**
+ * @param   {string}    $short_name     The short name of the course to be checked, i.e. "ENGG 401"
+ * @return  {json}      $content        The json content returned from course.php
+ */
 function get_course_json($short_name) {
     $url = "http://15.223.123.122/vsbp/Code/Model/course.php";
     $postField = "short_name=$short_name";

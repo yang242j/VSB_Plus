@@ -1,4 +1,26 @@
 <?php
+/**
+ * The about_us or team_info page.
+ * 
+ * Requirments:
+ *  1) Display the project general info. 
+ *  2) Display the team member info.
+ * 
+ * php Steps:
+ *  1) Start session.
+ *  2) If logged in, display logged in user info at navigation right.
+ *  3) If not logged in, display login and signup button at navigation right.
+ *  4) Guest can only use course list datebase.
+ *  5) Other links are either hidden or disabled.
+ * 
+ * @version     1.0
+ * @link        http://15.223.123.122/vsbp/Code/homePage.php
+ * @author      Priscilla Chua (sid: 200363504) <****@uregina.ca>
+ * @param       {boolean}       $_SESSION["loggedin"]       Status of logged-in or not: true/false
+ * @param       {integer}       $_SESSION["sid"]            Student id
+ * @param       {string}        $_SESSION["name"]           Student name
+ */
+
 session_start(); // Initialize the session
 ?>
 

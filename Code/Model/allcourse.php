@@ -13,8 +13,9 @@
  * @version 1.0
  * @link      http://15.223.123.122/vsbp/Code/courseDB.php
  * @author    Xinyu Liu (sid: 200362878) <liu725@uregina.ca>
- * @param Null
- * @return json $data "All the course that in the course database"
+ * @param   {Null}
+ * 
+ * @return  {json}  $data "All the course that in the course database"
  */
 
 
