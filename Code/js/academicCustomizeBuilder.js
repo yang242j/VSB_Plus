@@ -199,7 +199,7 @@ function btnForCourse(data) {
     }
 
     nctRight.onclick = function () {
-        if(counterForNotCompleted < (notCompletedData.length/12 +1)){
+        if(counterForNotCompleted < (notCompletedData.length/12)){
         counterForNotCompleted += 1;
         }
         else return;
