@@ -9,6 +9,7 @@ function fetchCourseJSON(sid) {
         showCourses(data);
         getTermCourse(data);
         console.log(data);
+        showTerm(data);
     });
 }
 getTermData("ESE");
@@ -224,18 +225,21 @@ function btnForCourse(data) {
     }
 }
 
-//get course info from all.json data
-function fetchOneCourseJSON(courseName) {
-    // alert(sid);
-    $.post('Model/course.php',  courseName, function (data) {
-        console.log(data);
+//show terms 
+function showTerm(data) {
+    var dataJSON = JSON.parse(data);
+    var term = document.getElementById("term1");
+    color = "red";
+    term.innerHTML =
+        " <div class = 'tittle'>" + "<h2>" + "Term1:" + "</h2></div>" +
+            "<div class = 'course_cards' id = 'course_cards_builder' style='background-color:" + color + ">" + "<h3>" + "ENSE 477"+ "</h3>" +
+                "<p>Mechanics for EngineersDynamics asdasXSaas</p>" +
+                " <p></p>" +
+                "</div>";
 
-    });
 }
-function getTermCourse(data){
 
-    
-}
+
 
 
 
