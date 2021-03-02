@@ -25,7 +25,7 @@ h3 {
 body .terms .term1 .course_cards p{
     font-size: 25px;
     border: 2px solid red;
-    width:80%;
+    width:50%;
 }
 body .terms {
     position: relative;
@@ -138,7 +138,7 @@ body .terms .term1 #course_cards_builder p{
         grid-template-columns: 58% 58%;
         grid-template-rows: 20% 20% 20%;
         column-gap: -10px;
-        margin-top: 10px;
+        margin-top: 0px;
         margin-left: -25px;
         row-gap:15px;
     }
