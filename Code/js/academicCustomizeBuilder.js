@@ -87,7 +87,7 @@ function showCourses(data) {
     //console.log(dataJSON);
     dataJSON.sort();
     //console.log(dataJSON);
-    console.log(notCompletedData);
+    //console.log(notCompletedData);
     for (i = 0; i < 12; i++) {
         document.getElementById("ct" + i).innerHTML = " ";
         document.getElementById("nct" + i).innerHTML = " ";
@@ -123,7 +123,7 @@ function btnForCourse(data) {
     var notCompletedData = findCourseToTake(dataJSON);
     var counterForCompleted = 0;
     var counterForNotCompleted = 0;
-    console.log(notCompletedData);
+    //console.log(notCompletedData);
     // delete NP and W data
     for (i = 0; i < completedData.length; i++) {
         if (completedData[i].final_grade == "NP") {
@@ -226,15 +226,16 @@ function btnForCourse(data) {
 
 //get course info from all.json data
 function findCourseInfo(courseName) {
-    var allCourseData = JSON.parse(allCourseData);
     for (i = 0; i < allCourseData.length; i++) {
-        if (allCourseData[i].short_name == courseName){
+        if (allCourseData[i].short_name == "ENGG 100"){
             return allCourseData[i];
         }
         else
         return "no such course";
 }
 }
+
+console.log(findCourseInfo("asdas"));
 function showTermInfo(data){
     var dataJSON = JSON.parse(data);
     console.log(findCourseInfo("ENGG 100"));
