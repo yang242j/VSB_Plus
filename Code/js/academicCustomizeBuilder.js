@@ -173,7 +173,7 @@ function btnForCourse(data) {
         }
     }
     ctLeft.onclick = function () {
-        if (counterForNotCompleted > 0){
+        if (counterForCompleted > 0){
             counterForCompleted -= 1;
             }
             else return;
@@ -199,7 +199,7 @@ function btnForCourse(data) {
     }
 
     nctRight.onclick = function () {
-        if(counterForNotCompleted < (notCompletedData.length/counterForNotCompleted +1)){
+        if(counterForNotCompleted < (notCompletedData.length/12 +1)){
         counterForNotCompleted += 1;
         }
         else return;
