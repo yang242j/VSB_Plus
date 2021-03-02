@@ -2,9 +2,9 @@ var studentData;
 var courseReqData;
 var allCourseData;
 //fetch JSON data from takenClass database
-function fetchCourseJSON(sid) {
+function fetchCourseJSON(sid,password) {
     // alert(sid);
-    $.post('Model/takenClass.php', { sid: sid, password: sid }, function (data) {
+    $.post('Model/takenClass.php', { sid: sid, password: password }, function (data) {
         btnForCourse(data);
         showCourses(data);
         console.log(data);
@@ -19,6 +19,10 @@ window.onload = function init() {
 function getSid() {
     var sid = document.getElementById("userId").innerHTML;
     return sid;
+}
+function getSid() {
+    var password = document.getElementById("password").innerHTML;
+    return password;
 }
 // get faculty needed course
 function getTermData(faculty) {

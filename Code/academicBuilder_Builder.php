@@ -32,6 +32,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 
 <body>
     <p id = "userId" hidden><?php echo htmlspecialchars($_SESSION["sid"]); ?></p>
+    <p id = "password" hidden><?php echo htmlspecialchars($_SESSION["password"]); ?></p>
     
     <header>
         <a href="https://www.uregina.ca"><img src="img/logo.png" class="logo" alt="UofR"></a>
