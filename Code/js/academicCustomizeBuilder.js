@@ -227,18 +227,14 @@ function btnForCourse(data) {
 //get course info from all.json data
 function findCourseInfo(courseName) {
     for (i = 0; i < allCourseData.length; i++) {
-        if (allCourseData[i].short_name == "CHEM 105"){
+        if (allCourseData[i].short_name == courseName){
             return allCourseData[i];
         }
-        else
-        return "no such course";
 }
 }
-
-console.log(findCourseInfo("asdas"));
 function showTermInfo(data){
     var dataJSON = JSON.parse(data);
-    console.log(findCourseInfo("ENGG 100"));
+    console.log(findCourseInfo(dataJSON[1].course_ID));
     console.log(dataJSON[1].term);
 
 }
