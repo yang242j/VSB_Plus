@@ -227,7 +227,7 @@ function btnForCourse(data) {
 //get course info from all.json data
 function fetchOneCourseJSON(courseName) {
     // alert(sid);
-    $.post('Model/course.php',  "MATH 100" , function (data) {
+    $.post('Model/course.php',  courseName, function (data) {
         console.log(data);
 
     });
