@@ -264,7 +264,7 @@ function showTerm(data) {
         getColor(i);
         term1.innerHTML += "<div class = 'tittle'>" + "<h2>" + dataJSON[0].term + "</h2></div>";
             "<div class = 'course_cards' id = 'course_cards_builder' style = 'border-color:" + color + "'>" + "<h3>" + dataJSON[i].course_ID + "</h3>" +
-            "<p>" + dataJSON[0].term + "</p>" +
+            "<p>" + dataJSON[i].term + "</p>" +
             "</div>";
     }
 
