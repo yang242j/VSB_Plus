@@ -7,7 +7,7 @@ function fetchCourseJSON(sid) {
     $.post('Model/takenClass.php', { sid: sid, password: sid }, function (data) {
         btnForCourse(data);
         showCourses(data);
-        getTermCourse(data);
+    
         console.log(data);
         showTerm(data);
     });
