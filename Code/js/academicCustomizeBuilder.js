@@ -232,11 +232,11 @@ function findCourseInfo(courseName) {
         }
 }
 }
+console.log(findCourseInfo("MATH 110"));
 function showTermInfo(data){
     var dataJSON = JSON.parse(data);
     console.log(findCourseInfo(dataJSON[1].course_ID));
     console.log(dataJSON[1].term);
-
 }
 
 
