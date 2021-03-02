@@ -14,7 +14,7 @@ function fetchCourseJSON(sid) {
 getTermData("ESE");
 getAllCourse();
 window.onload = function init() {
-    fetchCourseJSON(getSid());
+    fetchCourseJSON(sid);
 }
 // get student ID form academac_builder
 function getSid() {
