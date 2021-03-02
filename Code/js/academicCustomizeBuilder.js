@@ -125,7 +125,7 @@ function showCourses(data) {
     console.log(dataJSON);
     for (i = 0; i < 12; i++) {
         if (i < dataJSON.length) {
-            document.getElementById("ct" + i).innerHTML = dataJSON[i].course_ID + "     " +dataJSON[i].term;
+            document.getElementById("ct" + i).innerHTML = dataJSON[i].course_ID + " <br/> " +dataJSON[i].term;
             document.getElementById("ct" + i).style.color = getColor(i,dataJSON);
 
         }
@@ -179,7 +179,7 @@ function btnForCourse(data) {
                     return;
                 }
                 else {
-                    document.getElementById("ct" + i).innerHTML = completedData[i + 12 * counterForCompleted].course_ID + " "+ completedData[i + 12 * counterForCompleted].term;
+                    document.getElementById("ct" + i).innerHTML = completedData[i + 12 * counterForCompleted].course_ID + "<br/> "+ completedData[i + 12 * counterForCompleted].term;
                     document.getElementById("ct" + i).style.color = getColor(i,dataJSON);
                 }
             }
