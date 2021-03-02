@@ -32,8 +32,6 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         $(document).ready(function() {
             $(".nav-right-2").hide();
         });
-        var sid = "<?php echo $_SESSION["sid"]; ?>";
-        var pas = "<?php echo $_SESSION["password"]; ?>";
     </script>
 
 
