@@ -34,9 +34,6 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.bootcdn.net/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
     <script>
-        $(document).ready(function() {
-            $(".nav-right-2").hide();
-        });
         var sid = "<?php echo $_SESSION["sid"]; ?>";
         var pas = "<?php echo $_SESSION["password"]; ?>";
         var major = "<?php echo $_SESSION["major"]; ?>";
@@ -75,10 +72,6 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                 <a><?php echo htmlspecialchars($_SESSION["sid"]); ?></a>
                 <a href="Model/logout.php">Logout</a>
             </div>
-        </div>
-        <div class="nav-right-2">
-            <a href="login.php">LogIn</a>
-            <a href="signup.php">SignUp</a>
         </div>
     </nav>
 

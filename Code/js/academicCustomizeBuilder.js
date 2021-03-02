@@ -2,25 +2,28 @@ var studentData;
 var courseReqData;
 var allCourseData;
 //fetch JSON data from takenClass database
-function fetchCourseJSON(sid) {
+function fetchCourseJSON(sid,password) {
     // alert(sid);
-    $.post('Model/takenClass.php', { sid: sid, password: sid }, function (data) {
+    $.post('Model/takenClass.php', { sid: sid, password: password }, function (data) {
         btnForCourse(data);
         showCourses(data);
-        getTermCourse(data);
         //console.log(data);
     });
 }
 getTermData("ESE");
 getAllCourse();
 window.onload = function init() {
-    fetchCourseJSON(getSid());
+    fetchCourseJSON(sid,pas);
 }
 // get student ID form academac_builder
-function getSid() {
+/*function getSid() {
     var sid = document.getElementById("userId").innerHTML;
     return sid;
 }
+function getPassword() {
+    var password = document.getElementById("password").innerHTML;
+    return password;
+}*/
 // get faculty needed course
 function getTermData(faculty) {
     var myRequest = new XMLHttpRequest;
@@ -74,36 +77,66 @@ function findCourseToTake(data) {
     });
     return courseNotCompleted;
 }
+function getColor(index,dataJSON) {
+    var color;
+    if (dataJSON[index].final_grade == "NP") {
+        color = "blue";
+    }
+    else if (dataJSON[index].final_grade == "W") {
+        color = "yellow";
+    }
+    else if (dataJSON[index].final_grade <= 60) {
+        color = "grey";
+    }
+    else if (dataJSON[index].final_grade > 60) {
+        color = "orange";
+    }
+    else if (dataJSON[index].final_grade > 75) {
+        color = "pink";
+    }
+    else if (dataJSON[index].final_grade > 90) {
+        color = "red";
+    }
+    return color;
+}
 function showCourses(data) {
     var dataJSON = JSON.parse(data);
     var notCompletedData = findCourseToTake(dataJSON);
 
-    for (i = 0; i < dataJSON.length; i++) {
+    /*for (i = 0; i < dataJSON.length; i++) {
         if (dataJSON[i].final_grade == "NP" || dataJSON[i].final_grade == "W") {
             delete dataJSON[i];
         }
     }
     //dataJSON.sort();
     //console.log(dataJSON);
-    dataJSON.sort();
+    dataJSON.sort();*/
     //console.log(dataJSON);
     //console.log(notCompletedData);
+    /*console.log(dataJSON);
+    console.log(courseReqData);
+    console.log(notCompletedData);*/
+   
+
     for (i = 0; i < 12; i++) {
         document.getElementById("ct" + i).innerHTML = " ";
         document.getElementById("nct" + i).innerHTML = " ";
     }
-
+    //console.log(dataJSON);
     for (i = 0; i < 12; i++) {
         if (i < dataJSON.length) {
-            document.getElementById("ct" + i).innerHTML = dataJSON[i].course_ID;
+            //<br/>
+            document.getElementById("ct" + i).innerHTML = dataJSON[i].course_ID + "<br/> " +dataJSON[i].term;
+            document.getElementById("ct" + i).style.color = getColor(i,dataJSON);
+
         }
         else
             return;
     }
-
     for (i = 0; i < 12; i++) {
         if (i < notCompletedData.length) {
             document.getElementById("nct" + i).innerHTML = notCompletedData[i];
+        
         }
         else {
             return;
@@ -125,17 +158,14 @@ function btnForCourse(data) {
     var counterForNotCompleted = 0;
     //console.log(notCompletedData);
     // delete NP and W data
-    for (i = 0; i < completedData.length; i++) {
-        if (completedData[i].final_grade == "NP") {
-            delete completedData[i];
-        }
-    }
-    completedData.sort();
 
     ctRight.onclick = function () {
-        counterForCompleted += 1;
-        if (12 * counterForCompleted > completedData.length) return;
+        if(counterForCompleted <= (completedData.length/12)){
+            counterForCompleted += 1;
+            }
+            else return;
 
+        
         if (i + 12 * counterForCompleted < completedData.length) {
             for (i = 0; i < 12; i++) {
                 document.getElementById("ct" + i).innerHTML = " ";
@@ -143,43 +173,50 @@ function btnForCourse(data) {
         }
         if (counterForCompleted >= 0) {
             for (i = 0; i < 12; i++) {
+                document.getElementById("ct" + i).innerHTML = " ";
+            }
+            for (i = 0; i < 12; i++) {
                 if (completedData[i + 12 * counterForCompleted] == null) {
                     return;
                 }
                 else {
-                    document.getElementById("ct" + i).innerHTML = completedData[i + 12 * counterForCompleted].course_ID;
+                    document.getElementById("ct" + i).innerHTML = completedData[i + 12 * counterForCompleted].course_ID + " <br/>"+ completedData[i + 12 * counterForCompleted].term;
+                    document.getElementById("ct" + i).style.color = getColor(i,dataJSON);
                 }
             }
         }
-
     }
     ctLeft.onclick = function () {
-        counterForCompleted -= 1;
-        if (counterForCompleted >= 0) {
-            if (i + 12 * counterForCompleted < completedData.length) {
-                for (i = 0; i < 12; i++) {
-                    document.getElementById("ct" + i).innerHTML = " ";
-                }
+        if (counterForCompleted > 0){
+            counterForCompleted -= 1;
             }
-            if (counterForCompleted >= 0) {
-                for (i = 0; i < 12; i++) {
-                    if (completedData[i + 12 * counterForCompleted] == null) {
-                        return;
-                    }
-                    else {
-                        document.getElementById("ct" + i).innerHTML = completedData[i + 12 * counterForCompleted].course_ID;
-                    }
-                }
+            else return;
+        if (i + 12 * counterForCompleted < completedData.length) {
+            for (i = 0; i < 12; i++) {
+                document.getElementById("ct" + i).innerHTML = " ";
             }
-
         }
-        else
-            counterForCompleted = 1;
-
+        if (counterForCompleted >= 0) {
+            for (i = 0; i < 12; i++) {
+                document.getElementById("ct" + i).innerHTML = " ";
+            }
+            for (i = 0; i < 12; i++) {
+                if (completedData[i + 12 * counterForCompleted] == null) {
+                    return;
+                }
+                else {
+                    document.getElementById("ct" + i).innerHTML = completedData[i + 12 * counterForCompleted].course_ID + "<br/>"+ completedData[i + 12 * counterForCompleted].term;
+                    document.getElementById("ct" + i).style.color = getColor(i,dataJSON);
+                }
+            }
+        }
     }
 
     nctRight.onclick = function () {
+        if(counterForNotCompleted <= (notCompletedData.length/12)){
         counterForNotCompleted += 1;
+        }
+        else return;
         if (i + 12 * counterForNotCompleted < notCompletedData.length) {
             for (i = 0; i < 12; i++) {
                 document.getElementById("nct" + i).innerHTML = " ";
@@ -200,8 +237,11 @@ function btnForCourse(data) {
         }
     }
     nctLeft.onclick = function () {
+        if (counterForNotCompleted > 0){
         counterForNotCompleted -= 1;
-
+        }
+        else return;
+        
         if (i + 12 * counterForNotCompleted < notCompletedData.length) {
             for (i = 0; i < 12; i++) {
                 document.getElementById("nct" + i).innerHTML = " ";
@@ -224,21 +264,52 @@ function btnForCourse(data) {
     }
 }
 
-//get course info from all.json data
-function fetchOneCourseJSON(courseName) {
-    // alert(sid);
-    $.post('Model/course.php',  courseName, function (data) {
-        console.log(data);
-
-    });
-}
-function getTermCourse(data){
+//show terms 
+/*function showTerm(data) {
     var dataJSON = JSON.parse(data);
-    var usecourseName = "MATH 100";
-    usecourseName = courseName.serializeArray();
-    console.log(usecourseName);
-    fetchOneCourseJSON(usecourseName);
-}
+    var term1 = document.getElementById("term1");
+
+    //for (i = 0; i < dataJSON.length; i++) {
+         //if (dataJSON[i].final_grade == "NP" || dataJSON[i].final_grade == "W") {
+            // delete dataJSON[i];
+         //}
+     //}
+     dataJSON.sort();
+    var courseFullName = "Mechanics for EngineersDynamics asdasXSaas";
+    var color = "black";
+    function getColor(index) {
+        if (dataJSON[index].final_grade == "NP") {
+            color = "blue";
+        }
+        else if (dataJSON[index].final_grade == "W") {
+            color = "yellow";
+        }
+        else if (dataJSON[index].final_grade <= 60) {
+            color = "grey";
+        }
+        else if (dataJSON[index].final_grade > 60) {
+            color = "orange";
+        }
+        else if (dataJSON[index].final_grade > 75) {
+            color = "pink";
+        }
+        else if (dataJSON[index].final_grade > 90) {
+            color = "red";
+        }
+    }
+    term1.innerHTML = "";
+    term1.innerHTML = "<div class = 'tittle'>" + "<h2>" + dataJSON[0].term + "</h2></div>";
+    for (i = 0; i < 5; i++) {
+        getColor(i);
+        term1.innerHTML += "<div class = 'tittle'>" + "<h2>" + dataJSON[0].term + "</h2></div>";
+            "<div class = 'course_cards' id = 'course_cards_builder' style = 'border-color:" + color + "'>" + "<h3>" + dataJSON[i].course_ID + "</h3>" +
+            "<p>" + dataJSON[i].term + "</p>" +
+            "</div>";
+    }
+
+}*/
+
+
 
 
 
