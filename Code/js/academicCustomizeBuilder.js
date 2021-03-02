@@ -225,21 +225,17 @@ function btnForCourse(data) {
 }
 
 //get course info from all.json data
-function findCourseInfo(courseName) {
-    for (i = 0; i < allCourseData.length; i++) {
-        if (allCourseData[i].short_name == courseName){
-            return allCourseData[i];
-        }
+function fetchOneCourseJSON(courseName) {
+    // alert(sid);
+    $.post('Model/takenClass.php', { short_name: courseName }, function (data) {
+        console.log(data);
+        
+    });
 }
-}
-console.log(findCourseInfo("MATH 100"));
-function showTermInfo(data){
+function getACourse(data){
     var dataJSON = JSON.parse(data);
-    console.log(dataJSON[1].course_ID);
-      courseNmae = dataJSON[1].course_ID;
-    console.log(findCourseInfo(courseNmae));
-    console.log(dataJSON[1].term);
-}
+    fetchOneCourseJSON(dataJSON[1].course_ID);
+}ß
 
 
 
