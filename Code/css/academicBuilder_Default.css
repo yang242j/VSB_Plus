@@ -139,6 +139,7 @@ body .terms .term1 #course_cards_builder p{
         column-gap: -10px;
         margin-top: 40px;
         margin-left: -25px;
+        font-size : 40px;
     }
     body .tags_courses .icons_annotation .icons{
        /* border: 2px solid red;*/
@@ -156,7 +157,7 @@ body .terms .term1 #course_cards_builder p{
     }
     body .tags_courses .course_list .course_completed{
         /*border: 2px solid red;*/
-        margin-top: 0px;
+        margin-top: 20px;
     }
     body .tags_courses .course_list .course_tag_completed{
         /*border: 2px solid red;*/
