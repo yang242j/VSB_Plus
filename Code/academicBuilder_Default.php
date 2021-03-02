@@ -160,7 +160,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 
 <section class = "tags_courses" id ="block" style="float:right;">  
 
-    <div class = "icons_annotation">
+    <div class = "icons_annotation" id = "default_icon">
         <div class ="icons"><i class='fas fa-circle' style='font-size:24px;color:red'>Easy</i></div>
         <div class ="icons"><i class='fas fa-circle' style='font-size:24px;color:yellow'>Medium</i></div>
         <div class ="icons"><i class='fas fa-circle' style='font-size:24px;color:blue'>Hard</i></div>
