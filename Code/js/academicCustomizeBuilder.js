@@ -226,6 +226,7 @@ function btnForCourse(data) {
 
 //get course info from all.json data
 function findCourseInfo(courseName) {
+    var allCourseData = JSON.parse(allCourseData);
     for (i = 0; i < allCourseData.length; i++) {
         if (allCourseData[i].short_name == courseName){
             return allCourseData[i];
