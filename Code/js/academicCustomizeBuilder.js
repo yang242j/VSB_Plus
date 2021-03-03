@@ -350,7 +350,8 @@ function getTermInfo(courseName){
     var term = "Term: ";
     url2 = "JSON/202020/" +courseName+".json";
     url3 = "JSON/202030/" +courseName+".json";
-    url1= "JSON/202010/" +courseName+".json";
+    url1= "JSON/202110/" +courseName+".json";
+
 
     myRequest3.open("GET", url1, false);
     myRequest3.onload = function () {
@@ -361,6 +362,8 @@ function getTermInfo(courseName){
         }
     }
     myRequest3.send();
+
+
 
     myRequest.open("GET", url2, false);
     myRequest.onload = function () {
@@ -382,7 +385,7 @@ function getTermInfo(courseName){
 return term;
 }
 console.log(courseNeededArray());
-console.log(getTermInfo("BUS 210"));
+console.log(getTermInfo("CHEM 140"));
 
 
 
