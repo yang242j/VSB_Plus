@@ -407,10 +407,12 @@ function dragTest() {
         for (const dropZone of document.querySelectorAll(".course_cards")) {
             dropZone.addEventListener("dragover", e => {
                 e.preventDefault();
+                console.log(e);
                 dropZone.classList.add("drop-zone--over");
             });
             dropZone.addEventListener("drop", e => {
                 e.preventDefault();
+                
             });
 
 
