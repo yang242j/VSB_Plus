@@ -139,7 +139,7 @@ function showCourses(data) {
             "<div class = 'courseTags' >" +
             "<div draggable = 'true' id ='nct" + i + "'" + ">" +
             notCompletedData[i] +
-            "<p  id ='nnct" + i + "'" + ">" + notCompletedData[i] +"</p>" +
+            "<p  id ='nnct" + i + "'" + ">" + getPrerequisite(notCompletedData[i]) +"</p>" +
             "</div> </div>";
         document.getElementById("courseTagArea");
     }
@@ -428,10 +428,12 @@ function dragTest(elementId) {
             e.preventDefault();
             const droppedElementId = e.dataTransfer.getData("text/plain");
             const droppedElement = document.getElementById(droppedElementId);
-
+//show moreinfo in course card
             var newForAlern = "n" + droppedElementId;
             var content = document.getElementById(newForAlern).innerHTML;
-            document.getElementById(newForAlern).style.visibility = "hidden";
+            document.getElementById(newForAlern).style.visibility = "visible";
+
+
 
             dropZone.appendChild(droppedElement);
             dropZone.classList.remove("drop-zone--over");
@@ -452,7 +454,9 @@ function dragTest(elementId) {
             e.preventDefault();
             const droppedElementId = e.dataTransfer.getData("text/plain");
             const droppedElement = document.getElementById(droppedElementId);
-
+//show less info in course tag
+            var newForAlern = "n" + droppedElementId;
+            document.getElementById(newForAlern).style.visibility = "hidden";
 
             dropZone.appendChild(droppedElement);
             dropZone.classList.remove("drop-zone--over");
