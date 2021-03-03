@@ -404,7 +404,9 @@ function dragTest() {
         //console.log(e);
         for (const dropZone of document.querySelectorAll(".course_cards")) {
             dropZone.addEventListener("dragover", e => {
-                console.log("dsd");
+                e.preventDefault();
+                dropZone.classList.add("drop-zone--over");
+                //console.log("dsd");
             });
 
         }
