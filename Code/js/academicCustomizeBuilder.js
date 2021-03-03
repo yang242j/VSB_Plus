@@ -443,11 +443,7 @@ function dragTest(elementId) {
             
         }
     }
-//dragTest("#nct1");
-function allocateAlldrag(){
-    for (i=0;i<4;i++){
-        var x = "#nct" + i;
-        dragTest(x);
-    }
-}
+dragTest("#nct1");
+dragTest("#nct2");
+dragTest("#nct3");
 
