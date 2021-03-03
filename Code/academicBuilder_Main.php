@@ -109,13 +109,13 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                 <button class="left arrow" onclick="pageDown()"><i class='fas fa-angle-left'></i></button>
                 <div id="summary" class="center inline">
                     <div class="card textCenter" id="card1">
-                        <h3>Credit Earned:</h3>
+                        <h3>SID:</h3>
                         <!-- <p class="">120/136</p> -->
                     </div>
                     <div class="card" id="card2">
-                        <h3>Program:</h3>
+                        <h3>Major:</h3>
                         <!-- <p>Applied Science</p> -->
-                    </div>
+                    </div> 
                     <div class="card" id="card3">
                         <h3>Course Left:</h3>
                         <!-- <p>6</p> -->
