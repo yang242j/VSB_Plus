@@ -139,7 +139,7 @@ function showCourses(data) {
             "<div class = 'courseTags' >" +
             "<div draggable = 'true' id ='nct" + i + "'" + ">" +
             notCompletedData[i] +
-            "<p  id ='nnct" + i + "'" + ">" + notCompletedData[i]+"</p>" +
+            "<p  id ='nnct" + i + "'" + ">" + getTermInfo(notCompletedData[i])+"</p>" +
             "</div> </div>";
         document.getElementById("courseTagArea");
     }
