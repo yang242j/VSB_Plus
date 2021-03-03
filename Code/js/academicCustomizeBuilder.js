@@ -420,14 +420,24 @@ function dragTest() {
             dropZone.addEventListener("dropleave", e => {
                 dropZone.classList.remove("drop-zone--over");
             });
-
-
         }
+        for (const dropZone of document.querySelectorAll(".courseTag")) {
+            dropZone.addEventListener("dragover", e => {
+                e.preventDefault();
+                dropZone.classList.add("drop-zone--over");
+            });
+            dropZone.addEventListener("drop", e => {
+                e.preventDefault();       
+                const droppedElementId = e.dataTransfer.getData("text/plain");
+                const droppedElement = document.getElementById(droppedElementId);
 
+                dropZone.appendChild(droppedElement);
 
-
-
-
+            });
+            dropZone.addEventListener("dropleave", e => {
+                dropZone.classList.remove("drop-zone--over");
+            });
+        }
     }
 
 
