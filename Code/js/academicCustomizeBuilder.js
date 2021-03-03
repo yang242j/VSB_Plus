@@ -10,7 +10,8 @@ function fetchCourseJSON(sid,password) {
         //console.log(data);
     });
 }
-getTermData("ESE");
+
+getTermData(major);
 getAllCourse();
 window.onload = function init() {
     fetchCourseJSON(sid,pas);
