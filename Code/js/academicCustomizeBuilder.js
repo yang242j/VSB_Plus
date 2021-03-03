@@ -347,7 +347,7 @@ function getTermInfo(courseName){
     var myRequest = new XMLHttpRequest;
     var myRequest2 = new XMLHttpRequest;
     var myRequest3 = new XMLHttpRequest;
-    var term = "Term: ";
+    var term = "Applied Term: ";
     url2 = "JSON/202020/" +courseName+".json";
     url3 = "JSON/202030/" +courseName+".json";
     url1= "JSON/202110/" +courseName+".json";
@@ -356,7 +356,6 @@ function getTermInfo(courseName){
     myRequest3.open("GET", url1, false);
     myRequest3.onload = function () {
         var data = JSON.parse(myRequest3.responseText);
-        console.log(data.term);
         if (data.term != "No class for the term"){
         term += "Winter" + " ";
         }

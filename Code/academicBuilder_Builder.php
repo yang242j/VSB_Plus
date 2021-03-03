@@ -104,7 +104,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     
         <div class = "term1" id = "term1">
             <div class = "tittle">
-                <h2>Term1:</h2>
+                <h2>Winter</h2>
             </div>
             <div class = "course_cards" id = "course_cards_builder">
                 <h3>ENSE 370</h3>
@@ -138,7 +138,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             </div>
         <div class = "add_to_term" d = "add_to_term1">
             <div class = "tittle">
-                <h2>Add:</h2>
+                <h2>Spring/Summer</h2>
             </div>
             <div class = "course_cards" ></div>
             <div class = "course_cards" ></div>
@@ -149,7 +149,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     
         <div class = "term1" id = "term2">
             <div class = "tittle">
-                <h2>Term2:</h2>
+                <h2>Fall</h2>
             </div>
             <div class = "course_cards" id = "course_cards_builder"></div>
             <div class = "course_cards" id = "course_cards_builder"></div>
@@ -160,7 +160,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 
         <div class = "add_to_term" id = "add_to_term2">
             <div class = "tittle">
-                <h2>Add:</h2>
+                <h2>Winter</h2>
             </div>
             <div class = "course_cards" ></div>
             <div class = "course_cards" ></div>
