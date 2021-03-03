@@ -118,12 +118,15 @@ function showCourses(data) {
     /*console.log(dataJSON);
     console.log(courseReqData);
     console.log(notCompletedData);*/
+     for(i = 0; i < 12; i++)
+     {
+         console.log(getPrerequisite(notCompletedData[i]));
+     }
 
-
-    for (i = 0; i < 12; i++) {
+    /*for (i = 0; i < 12; i++) {
         document.getElementById("ct" + i).innerHTML = " ";
         // document.getElementById("nct" + i).innerHTML = " ";
-    }
+    }*/
     //console.log(dataJSON);
     for (i = 0; i < 12; i++) {
         if (i < dataJSON.length) {
