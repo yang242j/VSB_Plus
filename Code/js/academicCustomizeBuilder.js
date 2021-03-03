@@ -257,7 +257,7 @@ function getPrerequisite(courseName) {
             return "no such course";
     }
 }
-console.log(getPrerequisite("CS 210"));
+//console.log(getPrerequisite("CS 210"));
 //console.log(getTermInfo("CHEM 140"));
 // Knowing which term apply this course
 
@@ -272,7 +272,6 @@ function getTermInfo(courseName) {
 
     myRequest3.open("GET", url1, false);
     myRequest3.onload = function () {
-
         var data = JSON.parse(myRequest3.responseText);
         if (data.term != "No class for the term") {
             term += "Winter" + " ";
@@ -280,10 +279,8 @@ function getTermInfo(courseName) {
     }
     myRequest3.send();
 
-
     myRequest.open("GET", url2, false);
     myRequest.onload = function () {
-
         var data = JSON.parse(myRequest.responseText);
         if (data.term != "No class for the term") {
             term += "Spring/Summer" + " ";
@@ -303,7 +300,7 @@ function getTermInfo(courseName) {
     }
 }
 //console.log(courseNeededArray());
-console.log(getTermInfo("ENGG 140"));
+//console.log(getTermInfo("ENGG 140"));
 
 getAllCourse();
 function getAllCourse() {
@@ -315,7 +312,7 @@ function getAllCourse() {
     }
     myRequest.send();
 }
-
+console.log(getAllCourse());
 //console.log(allCourseData);
 function dragTest(elementId) {
     //const draggableElement = document.querySelector("#nct0");
