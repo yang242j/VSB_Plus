@@ -134,8 +134,6 @@ function showCourses(data) {
             document.getElementById("ct" + i).style.color = getColor(i, dataJSON);
 
         }
-        else
-            return;
     }
     console.log(notCompletedData);
     for (i = 0; i < notCompletedData.length; i++) {
