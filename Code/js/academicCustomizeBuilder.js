@@ -144,7 +144,7 @@ function showCourses(data) {
             "<p id ='nnct" + i + "'" + ">" +getTermInfo(notCompletedData[i])  +"</p>" +
             "</div> </div>";
         document.getElementById("nnct"+i).style.visibility = "hidden";
-        document.getElementById("nnct"+i).style.fontSize = "12px";
+        document.getElementById("nnct"+i).style.fontSize = "1px";
         document.getElementById("nnct"+i).style.lineHeight = "110%";
         document.getElementById("nnct"+i).style.marginTop = "-10px";
         document.getElementById("nct"+i).style.color="black";
@@ -364,6 +364,7 @@ function dragTest(elementId) {
             //var content = document.getElementById(newForAlern).innerHTML;
 
             document.getElementById(newForAlern).style.visibility = "visible";
+            document.getElementById(newForAlern).style.fontSize = "10px";
 
 
             dropZone.appendChild(droppedElement);
