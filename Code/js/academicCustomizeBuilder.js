@@ -341,13 +341,22 @@ function getPrerequisite(courseName){
           return "no such course";
     }
 }
-var info = getPrerequisite(courseNeededArray()[0]);
-console.log(info);
-console.log(allCourseData[0]);
 // Knowing which term apply this course
-function getTermInfo(){
-   
+function getTermInfo(courseName){
+    var myRequest = new XMLHttpRequest;
+    var term;
+    url = "JSON/202020/" +courseName+".json";
+    myRequest.open("GET", url, false);
+    myRequest.onload = function () {
+        var data = JSON.parse(myRequest.responseText);
+        if(data != null){
+        term += Spring/Summer;
+        } 
+    }
+    myRequest.send();
+return term;
 }
+getTermInfo("CHEM 104");
 
 courseNeededArray();
 getAllCourse();
