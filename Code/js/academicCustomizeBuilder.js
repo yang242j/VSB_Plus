@@ -343,6 +343,7 @@ function getPrerequisite(courseName){
 }
 var info = getPrerequisite("CHEM 104");
 console.log(info);
+console.log(allCourseData[0]);
 // Knowing which term apply this course
 function getTermInfo(){
    
