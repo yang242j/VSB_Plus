@@ -297,6 +297,7 @@ function getTermInfo(courseName) {
             if (data.term != "No class for the term") {
                 term += "Spring/Summer" + " ";
                 prerequisite += data.prerequisite;
+                credit = data.credit;
             }
         }
     }
@@ -309,13 +310,14 @@ function getTermInfo(courseName) {
             if (data.term != "No class for the term") {
                 term += "Fall" + " ";
                 prerequisite += data.prerequisite;
+                credit = data.credit;
             }
         }
     }
     myRequest2.send();
 
 
-    return [term,prerequisite];
+    return [term,prerequisite, credit];
 }
 //console.log(courseNeededArray());
 //console.log(getTermInfo("ENGG 140"));
