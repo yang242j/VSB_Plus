@@ -184,10 +184,11 @@ body .terms .term1 #course_cards_builder p{
         display: grid;
         height:120%;
         grid-template-columns: 24% 24% 24% 24%;
-        grid-template-rows:repeat(20,15%);
+        grid-template-rows:repeat(20,20%);
         row-gap: 0px;
         column-gap: 10px;
         margin-top: -360px;
+        font-size: 24px;
     }
     body .tags_courses .course_list .course_tag_not_completed p{
         /*border: 2px solid red;*/
