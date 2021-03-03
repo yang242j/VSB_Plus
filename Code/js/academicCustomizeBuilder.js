@@ -431,8 +431,9 @@ function dragTest(elementId) {
 
             var newForAlern = "n" + droppedElementId;
             var content = document.getElementById(newForAlern).innerHTML;
+            document.getElementById(newForAlern).style.visibility = "hidden";
 
-            dropZone.appendChild(newForAlern).style.visibility = "hidden";
+            dropZone.appendChild(droppedElement);
             dropZone.classList.remove("drop-zone--over");
 
         });
