@@ -410,8 +410,7 @@ function dragTest() {
                 dropZone.classList.add("drop-zone--over");
             });
             dropZone.addEventListener("drop", e => {
-                e.preventDefault();
-               
+                e.preventDefault();       
                 const droppedElementId = e.e.dataTransfer.setData("text/plain");
                 const droppedElement = document.getElementById(droppedElementId);
 
@@ -420,7 +419,7 @@ function dragTest() {
             });
             dropZone.addEventListener("dropleave", e => {
                 dropZone.classList.remove("drop-zone--over");
-            })
+            });
 
 
         }
