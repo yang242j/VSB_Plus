@@ -147,7 +147,7 @@ function showTerm(pageNumber) {
     var i = 1;
     for (term in termData) {
         /*console.log(termData[term][0]);*/
-        console.log(termData.size);
+        console.log(termData);
         termNumber = "term" + pageNumber;
         if (term >= termNumber){
         if (term != "Approved") {
