@@ -140,7 +140,7 @@ function showCourses(data) {
             "<div class = 'courseTags' >" +
             "<div draggable = 'true' id ='nct" + i + "'" + ">" +
             notCompletedData[i] +
-            "<p   id ='nnct" + i + "'" + ">" + notCompletedData[i]+ "</p>" +
+            "<p   id ='nnct" + i + "'" + ">" + notCompletedData[i] + "</p>" +
             "</div> </div>";
         document.getElementById("courseTagArea");
     }
@@ -250,14 +250,12 @@ function courseNeededArray() {
     return coursesList;
 }
 function getPrerequisite(courseName) {
-    var prerequisite;
     for (i = 0; i < allCourseData.length; i++) {
         if (allCourseData[i].short_name == courseName)
             return allCourseData[i].prerequisite;
         else
             return "no such course";
     }
-    return prerequisite;
 }
 console.log(getPrerequisite("CS 210"));
 //console.log(getTermInfo("CHEM 140"));
@@ -304,19 +302,19 @@ function getTermInfo(courseName) {
         return term;
     }
 }
-    //console.log(courseNeededArray());
-    console.log(getTermInfo("ENGG 140"));
+//console.log(courseNeededArray());
+console.log(getTermInfo("ENGG 140"));
 
-    getAllCourse();
-    function getAllCourse() {
-        var myRequest = new XMLHttpRequest;
-        myRequest.open("GET", "JSON/ALL.json", false);
-        myRequest.onload = function () {
-            var data = JSON.parse(myRequest.responseText);
-            allCourseData = data;
-        }
-        myRequest.send();
+getAllCourse();
+function getAllCourse() {
+    var myRequest = new XMLHttpRequest;
+    myRequest.open("GET", "JSON/ALL.json", false);
+    myRequest.onload = function () {
+        var data = JSON.parse(myRequest.responseText);
+        allCourseData = data;
     }
+    myRequest.send();
+}
 
 //console.log(allCourseData);
 function dragTest(elementId) {
@@ -342,7 +340,7 @@ function dragTest(elementId) {
 
             var newForAlern = "n" + droppedElementId;
             //var content = document.getElementById(newForAlern).innerHTML;
-    
+
             document.getElementById(newForAlern).style.visibility = "visible";
             document.getElementById(newForAlern).innerHTML = term;
 
