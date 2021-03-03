@@ -139,8 +139,9 @@ function showCourses(data) {
         "<div class = 'courseTags' >"+
         "<div draggable = 'true' id ='nct" + i+ "'" + ">"+
         notCompletedData[i]+
+        "<p>"+notCompletedData[i]+"</p>";
         "</div> </div>";
-        document.getElementById("courseTagArea").value = "ss"+notCompletedData[i];
+        document.getElementById("courseTagArea").
     }
     for(i=0;i<notCompletedData.length;i++)
     {
