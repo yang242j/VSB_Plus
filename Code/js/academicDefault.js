@@ -1,6 +1,7 @@
 const colors = ["red", "yellow", "blue", "purple", "plum", "black"];
 var courseData;
 var termData;
+var allCourse;
 window.onload = function () {
     showNotCompletedCourse();
     showApprovedCourse();
@@ -8,7 +9,25 @@ window.onload = function () {
 }
 getCourseData();
 getTermData();
-
+getAllCourse();
+function getAllCourse() {
+    var myRequest = new XMLHttpRequest;
+    myRequest.open("GET", "JSON/ALL.json", false);
+    myRequest.onload = function () {
+        var data = JSON.parse(myRequest.responseText);
+        allCourseData = data;
+    }
+    myRequest.send();
+}
+function getDescription(courseName) {
+    var pre = "Description: ";
+    for (i = 0; i < allCourseData.length; i++) {
+        if (allCourseData[i].short_name == courseName && allCourseData[i].description != null)
+            return (pre + allCourseData[i].description);
+    }
+    return (pre + "no such course or no prerequisite");
+}
+console.log(getDescription("CHEM 140"));
 function getCourseData() {
     var myRequest = new XMLHttpRequest;
     myRequest.open("GET", "JSON/ESE.json", false);
@@ -147,7 +166,6 @@ function showTerm(pageNumber) {
     var i = 1;
     for (term in termData) {
         /*console.log(termData[term][0]);*/
-        console.log(termData);
         termNumber = "term" + pageNumber;
         if (term >= termNumber){
         if (term != "Approved") {
