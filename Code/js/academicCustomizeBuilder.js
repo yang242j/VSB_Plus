@@ -449,6 +449,7 @@ dragTest(x);
 dragTest("#nct1");
 dragTest("#nct2");
 dragTest("#nct3");*/
+getdragTest();
 function getdragTest(){
     for(i=0;i<4;i++)
     dragTest("#nct"+i);
