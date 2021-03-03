@@ -118,10 +118,11 @@ function showCourses(data) {
     /*console.log(dataJSON);
     console.log(courseReqData);
     console.log(notCompletedData);*/
-     for(i = 0; i < 12; i++)
-     {
-         console.log(getPrerequisite(notCompletedData[i]));
-     }
+    console.log(getPrerequisite(notCompletedData[0]));
+    console.log(getPrerequisite(notCompletedData[1]));
+    console.log(getPrerequisite(notCompletedData[2]));
+    console.log(getPrerequisite(notCompletedData[3]));
+    console.log(getPrerequisite(notCompletedData[4]));
 
     /*for (i = 0; i < 12; i++) {
         document.getElementById("ct" + i).innerHTML = " ";
