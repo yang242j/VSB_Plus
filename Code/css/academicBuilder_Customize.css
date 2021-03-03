@@ -30,7 +30,7 @@ body .terms .term1 .course_cards p{
 body .terms {
     
     position:relative;
-    width: 65%;
+    width: 62%;
     margin-top: 1%;
    /* border: 2px solid red;*/
     display: inline-grid;
@@ -50,7 +50,7 @@ body .terms .term1{
     grid-template-columns: 8% 17% 17% 17% 17% 17% ; 
     grid-template-rows: 80% 25%;
     column-gap: 10px;
-    margin-left: -35px;
+    margin-left: -30px;
     row-gap:30px;
 }
 body .terms .term1 .arrows{
