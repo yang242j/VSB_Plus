@@ -13,7 +13,7 @@ function fetchCourseJSON(sid, password) {
 
 getTermData(major);
 getAllCourse();
-console.log(getTermInfo("CHEM 140"));
+//console.log(getTermInfo("CHEM 140"));
 window.onload = function init() {
     fetchCourseJSON(sid, pas);
 }
