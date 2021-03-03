@@ -143,7 +143,7 @@ body .terms .term1 #course_cards_builder p{
         grid-template-columns: 58% 58%;
         grid-template-rows: 20% 20% 20%;
         column-gap: -10px;
-        margin-top: 30px;
+        margin-top: -80px;
         margin-left: -25px;
         row-gap:15px;
     }
