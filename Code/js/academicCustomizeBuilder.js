@@ -147,7 +147,6 @@ function showCourses(data) {
     for (i = 0; i < notCompletedData.length; i++) {
         dragTest("#nct" + i);
     }
-    console.log(notCompletedData);
     /* for (i = 0; i < 12; i++) {
          if (i < notCompletedData.length) {
              document.getElementById("nct" + i).innerHTML = notCompletedData[i];
@@ -226,103 +225,7 @@ function btnForCourse(data) {
             }
         }
     }
-
-    /* nctRight.onclick = function () {
-         if (counterForNotCompleted <= (notCompletedData.length / 12)) {
-             counterForNotCompleted += 1;
-         }
-         else return;
-         if (i + 12 * counterForNotCompleted < notCompletedData.length) {
-             for (i = 0; i < 12; i++) {
-                 document.getElementById("nct" + i).innerHTML = " ";
-             }
-         }
-         if (counterForNotCompleted >= 0) {
-             for (i = 0; i < 12; i++) {
-                 document.getElementById("nct" + i).innerHTML = " ";
-             }
-             for (i = 0; i < 12; i++) {
-                 if (notCompletedData[i + 12 * counterForNotCompleted] == null) {
-                     return;
-                 }
-                 else {
-                     document.getElementById("nct" + i).innerHTML = notCompletedData[i + 12 * counterForNotCompleted];
-                 }
-             }
-         }
-     }*/
-    /*nctLeft.onclick = function () {
-        if (counterForNotCompleted > 0) {
-            counterForNotCompleted -= 1;
-        }
-        else return;
-
-        if (i + 12 * counterForNotCompleted < notCompletedData.length) {
-            for (i = 0; i < 12; i++) {
-                document.getElementById("nct" + i).innerHTML = " ";
-            }
-        }
-        if (counterForNotCompleted >= 0) {
-            for (i = 0; i < 12; i++) {
-                document.getElementById("nct" + i).innerHTML = " ";
-            }
-            for (i = 0; i < 12; i++) {
-                if (notCompletedData[i + 12 * counterForNotCompleted] == null) {
-                    return;
-                }
-                else {
-                    document.getElementById("nct" + i).innerHTML = notCompletedData[i + 12 * counterForNotCompleted];
-                }
-            }
-        }
-
-    }*/
 }
-
-//show terms 
-/*function showTerm(data) {
-    var dataJSON = JSON.parse(data);
-    var term1 = document.getElementById("term1");
-
-    //for (i = 0; i < dataJSON.length; i++) {
-         //if (dataJSON[i].final_grade == "NP" || dataJSON[i].final_grade == "W") {
-            // delete dataJSON[i];
-         //}
-     //}
-     dataJSON.sort();
-    var courseFullName = "Mechanics for EngineersDynamics asdasXSaas";
-    var color = "black";
-    function getColor(index) {
-        if (dataJSON[index].final_grade == "NP") {
-            color = "blue";
-        }
-        else if (dataJSON[index].final_grade == "W") {
-            color = "yellow";
-        }
-        else if (dataJSON[index].final_grade <= 60) {
-            color = "grey";
-        }
-        else if (dataJSON[index].final_grade > 60) {
-            color = "orange";
-        }
-        else if (dataJSON[index].final_grade > 75) {
-            color = "pink";
-        }
-        else if (dataJSON[index].final_grade > 90) {
-            color = "red";
-        }
-    }
-    term1.innerHTML = "";
-    term1.innerHTML = "<div class = 'tittle'>" + "<h2>" + dataJSON[0].term + "</h2></div>";
-    for (i = 0; i < 5; i++) {
-        getColor(i);
-        term1.innerHTML += "<div class = 'tittle'>" + "<h2>" + dataJSON[0].term + "</h2></div>";
-            "<div class = 'course_cards' id = 'course_cards_builder' style = 'border-color:" + color + "'>" + "<h3>" + dataJSON[i].course_ID + "</h3>" +
-            "<p>" + dataJSON[i].term + "</p>" +
-            "</div>";
-    }
-
-}*/
 
 /*
 Drag and drop courses to add box
@@ -332,6 +235,7 @@ Drag and drop courses to add box
 
 
 */
+
 
 function courseNeededArray() {
     var coursesList = [];
@@ -354,6 +258,7 @@ function getPrerequisite(courseName) {
             return "no such course";
     }
 }
+console.log(getPrerequisite("CHEM 140"));
 // Knowing which term apply this course
 
 function getTermInfo(courseName) {
