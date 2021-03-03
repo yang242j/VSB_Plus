@@ -118,12 +118,10 @@ function showCourses(data) {
     /*console.log(dataJSON);
     console.log(courseReqData);
     console.log(notCompletedData);*/
-    
+    for(j=0;j<5;j++){
     console.log(getPrerequisite(notCompletedData[6]));
-    console.log(getPrerequisite(notCompletedData[7]));
-    console.log(getPrerequisite(notCompletedData[8]));
-    console.log(getPrerequisite(notCompletedData[9]));
-    console.log(getPrerequisite(notCompletedData[10]));
+    }
+   
     
    
 
@@ -158,7 +156,7 @@ function showCourses(data) {
         //$("#nct"+ i).tooltip();  
     }
     for (i = 0; i < notCompletedData.length; i++) {
-        dragTest("#nct" + i);
+        //dragTest("#nct" + i);
     }
     /* for (i = 0; i < 12; i++) {
          if (i < notCompletedData.length) {
