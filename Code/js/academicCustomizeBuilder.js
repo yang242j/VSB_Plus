@@ -344,6 +344,8 @@ function getPrerequisite(courseName){
 // Knowing which term apply this course
 function getTermInfo(courseName){
     var myRequest = new XMLHttpRequest;
+    var myRequest2 = new XMLHttpRequest;
+    var myRequest3 = new XMLHttpRequest;
     var term = "Term: ";
     url2 = "JSON/202020/" +courseName+".json";
     url3 = "JSON/202030/" +courseName+".json";
@@ -356,15 +358,15 @@ function getTermInfo(courseName){
         }
     }
 
-    myRequest.open("GET", url3, false);
-    myRequest.onload = function () {
+    myRequest2.open("GET", url3, false);
+    myRequest2.onload = function () {
         if(myRequest.responseText != null){
         term += "Fall" + " ";
         }
     }
 
-    myRequest.open("GET", url1, false);
-    myRequest.onload = function () {
+    myRequest3.open("GET", url1, false);
+    myRequest3.onload = function () {
         if(myRequest.responseText != null){
         term += "Winter" + " ";
         }
