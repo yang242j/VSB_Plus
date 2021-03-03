@@ -209,8 +209,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         <div class ="icons"><i class='fas fa-circle' style='font-size:24px;color:black'>Pass Final</i></div>
     </div>
 -->
-<div class = "icons_annotation" id = "default_icon">
-</div>
+
 
     <div class= "course_list">
 

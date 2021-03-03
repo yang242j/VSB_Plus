@@ -182,28 +182,28 @@ function showTerm(pageNumber) {
                     
 
                    "<div class = 'course_cards'>" + "<h3>" + termData[term][1] + "</h3>" +
-                   "<p>"+ getTitle(termData[term][0])+"</p>"+
+                   "<p>"+ getTitle(termData[term][1])+"</p>"+
                    /* "<i class='fas fa-circle' style='font-size:24px;color:red'></i>"+
                     "<i class='fas fa-circle' style='font-size:24px;color:red'></i>"+
                     "<i class='fas fa-circle' style='font-size:24px;color:red'></i>"+
                     "<i class='fas fa-circle' style='font-size:24px;color:red'></i>*/ "</div>"+
 
                     "<div class = 'course_cards'>" + "<h3>" + termData[term][2] + "</h3>" +
-                    "<p>"+ getTitle(termData[term][0])+ "</p>"+
+                    "<p>"+ getTitle(termData[term][2])+ "</p>"+
                    /* "<i class='fas fa-circle' style='font-size:24px;color:red'></i>"+
                     "<i class='fas fa-circle' style='font-size:24px;color:red'></i>"+
                     "<i class='fas fa-circle' style='font-size:24px;color:red'></i>"+
                     "<i class='fas fa-circle' style='font-size:24px;color:red'></i>*/ "</div>"+
 
                     "<div class = 'course_cards'>" + "<h3>" + termData[term][3] + "</h3>" +
-                    "<p>"+ getTitle(termData[term][0])+ "</p>"+
+                    "<p>"+ getTitle(termData[term][3])+ "</p>"+
                    /* "<i class='fas fa-circle' style='font-size:24px;color:red'></i>"+
                     "<i class='fas fa-circle' style='font-size:24px;color:red'></i>"+
                     "<i class='fas fa-circle' style='font-size:24px;color:red'></i>"+
                     "<i class='fas fa-circle' style='font-size:24px;color:red'></i>*/ "</div>"+
 
                     "<div class = 'course_cards'>" + "<h3>" + termData[term][4] + "</h3>"+
-                    "<p>"+ getTitle(termData[term][0])+ "</p>"+
+                    "<p>"+ getTitle(termData[term][4])+ "</p>"+
                  /*  "<i class='fas fa-circle' style='font-size:24px;color:red'></i>"+
                     "<i class='fas fa-circle' style='font-size:24px;color:red'></i>"+
                     "<i class='fas fa-circle' style='font-size:24px;color:red'></i>"+
