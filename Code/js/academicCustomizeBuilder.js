@@ -145,7 +145,7 @@ function showCourses(data) {
         document.getElementById("courseTagArea");
     }
     for (i = 0; i < notCompletedData.length; i++) {
-        dragTest("#nct" + i);
+        //dragTest("#nct" + i);
     }
     /* for (i = 0; i < 12; i++) {
          if (i < notCompletedData.length) {
@@ -313,6 +313,7 @@ function getAllCourse() {
     myRequest.send();
 }
 console.log(allCourseData);
+console.log(getPrerequisite("CS 210"));
 //console.log(allCourseData);
 function dragTest(elementId) {
     //const draggableElement = document.querySelector("#nct0");
