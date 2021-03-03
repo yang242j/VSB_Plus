@@ -351,6 +351,12 @@ function getTermInfo(courseName){
     url3 = "JSON/202030/" +courseName+".json";
     url1= "JSON/202010/" +courseName+".json";
 
+    myRequest3.open("GET", url1, false);
+    myRequest3.onload = function () {
+        if(myRequest3.responseText != null){
+        term += "Winter" + " ";
+        }
+        
     myRequest.open("GET", url2, false);
     myRequest.onload = function () {
         if(myRequest.responseText != null){
@@ -365,11 +371,6 @@ function getTermInfo(courseName){
         }
     }
 
-    myRequest3.open("GET", url1, false);
-    myRequest3.onload = function () {
-        if(myRequest3.responseText != null){
-        term += "Winter" + " ";
-        }
     }
     myRequest.send();
 return term;
