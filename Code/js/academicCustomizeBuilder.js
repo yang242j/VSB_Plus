@@ -384,7 +384,7 @@ function getTermInfo(courseName){
 return term;
 }
 console.log(courseNeededArray());
-console.log(document.getElementById("nct1").innerText);
+console.log(document.getElementById("nct1").innerHTML);
 
 console.log(getTermInfo("ENGG 140"));
 
