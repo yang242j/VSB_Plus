@@ -140,8 +140,8 @@ function showCourses(data) {
         document.getElementById("courseTagArea").innerHTML +=
             "<div class = 'courseTags' >" +
             "<div title= 'Hooray!' draggable = 'true' id ='nct" + i + "'" + ">" +
-            notCompletedData[i] +
-            "<p id ='nnct" + i + "'" + ">" +getTermInfo(notCompletedData[0])  +"</p>" +
+            "<p id ='nnnct" + i + "'" + ">" +notCompletedData[i]  +"</p>" +
+            "<p id ='nnct" + i + "'" + ">" +getTermInfo(notCompletedData[i])  +"</p>" +
     
 
             "</div> </div>";
@@ -351,10 +351,11 @@ function dragTest(elementId) {
             //show moreinfo in course card
 
             var newForAlern = "n" + droppedElementId;
+            var newForAlern2 = "nn" + droppedElementId;
             //var content = document.getElementById(newForAlern).innerHTML;
 
             document.getElementById(newForAlern).style.visibility = "visible";
-            console.log(droppedElement.innerHTML);
+            console.log(newForAlern2.innerHTML);
 
 
             dropZone.appendChild(droppedElement);
