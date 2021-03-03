@@ -399,7 +399,7 @@ function getAllCourse() {
 dragTest();
 function dragTest() {
     //const draggableElement = document.querySelector("#nct0");
-    for (const draggableElement of document.querySelectorAll(".courseTags")) {
+    for (const draggableElement of document.querySelectorAll(".course_tag_not_completed")) {
         draggableElement.addEventListener("dragstart", e => {
             e.dataTransfer.setData("text/plain", draggableElement.id);
             //console.log(e);
