@@ -235,7 +235,7 @@ Drag and drop courses to add box
 
 
 */
-
+getAllCourse();
 
 function courseNeededArray() {
     var coursesList = [];
@@ -302,7 +302,7 @@ function getTermInfo(courseName) {
 //console.log(courseNeededArray());
 //console.log(getTermInfo("ENGG 140"));
 
-getAllCourse();
+
 function getAllCourse() {
     var myRequest = new XMLHttpRequest;
     myRequest.open("GET", "JSON/ALL.json", false);
@@ -312,7 +312,7 @@ function getAllCourse() {
     }
     myRequest.send();
 }
-console.log(getAllCourse());
+console.log(allCourseData);
 //console.log(allCourseData);
 function dragTest(elementId) {
     //const draggableElement = document.querySelector("#nct0");
