@@ -353,10 +353,13 @@ function getTermInfo(courseName){
 
     myRequest3.open("GET", url1, false);
     myRequest3.onload = function () {
-        var data = JSON.parse(myRequest.responseText);
+        var data = JSON.parse(myRequest3.responseText);
+        console.log(data.term);
         if (data.term != "No class for the term"){
         term += "Winter" + " ";
         }
+        else
+        term = "asdas";
     }
 
     myRequest.open("GET", url2, false);
@@ -369,7 +372,7 @@ function getTermInfo(courseName){
 
     myRequest2.open("GET", url3, false);
     myRequest2.onload = function () {
-        var data = JSON.parse(myRequest.responseText);
+        var data = JSON.parse(myRequest2.responseText);
         if (data.term != "No class for the term"){
         term += "Winter" + " ";
         }
