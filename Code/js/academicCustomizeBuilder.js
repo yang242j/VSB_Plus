@@ -135,9 +135,9 @@ function showCourses(data) {
             return;
     }
     for(i = 0;i<notCompletedData.length;i++){
-        document.getElementById("nct" + i).innerHTML += 
+        document.getElementById("courseTagArea").innerHTML += 
         "<div class = 'courseTags' >"+
-        "<div draggable = 'true' id ='nct" + i+ "'" +            ">"+
+        "<div draggable = 'true' id ='nct" + i+ "'" + ">"+
         notCompletedData[i]+
         "</div> </div>"
     }

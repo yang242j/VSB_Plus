@@ -221,7 +221,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         <div class = "course_not_completed">
             <h3>Course to take</h3>
         </div>
-        <div class = "course_tag_not_completed" style = "overflow:auto">
+        <div class = "course_tag_not_completed" id = "courseTagArea" style = "overflow:auto">
            <div class = "courseTags" >
                <div draggable = "true" id = "nct0">PlaceHoder</div>
            </div>
