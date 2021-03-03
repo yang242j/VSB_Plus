@@ -396,10 +396,9 @@ function getAllCourse() {
     myRequest.send();
 }
 //console.log(allCourseData);
-dragTest();
-function dragTest() {
+function dragTest(elementId) {
     //const draggableElement = document.querySelector("#nct0");
-
+        var id = "#"+elementId;
         const draggableElement = document.querySelector("#nct0");
         draggableElement.addEventListener("dragstart", e => {
             e.dataTransfer.setData("text/plain", draggableElement.id);
@@ -439,6 +438,10 @@ function dragTest() {
             });
         }
     }
-
-
+allocateAlldrag();
+function allocateAlldrag(){
+    for (i=0;i<4;i++){
+        dragTest("nct"+i);
+    }
+}
 
