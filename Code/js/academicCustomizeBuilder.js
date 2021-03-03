@@ -140,9 +140,10 @@ function showCourses(data) {
             "<div class = 'courseTags' >" +
             "<div draggable = 'true' id ='nct" + i + "'" + ">" +
             notCompletedData[i] +
-            "<p hidden id ='nnct" + i + "'" + ">" + notCompletedData[i] + "</p>" +
+            "<p id ='nnct" + i + "'" + ">" + notCompletedData[i] + "</p>" +
             "</div> </div>";
-        document.getElementById("courseTagArea");
+        document.getElementById("nnct"+i).style.visibility = "hidden";
+
     }
     for (i = 0; i < notCompletedData.length; i++) {
         dragTest("#nct" + i);
