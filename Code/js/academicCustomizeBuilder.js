@@ -134,6 +134,13 @@ function showCourses(data) {
         else
             return;
     }
+    for(i = 0;i<notCompletedData.length;i++){
+        document.getElementById("nct" + i).innerHTML += 
+        "<div class = 'courseTags' >"+
+        "<div draggable = 'true' id ='nct" + i+ "'" +            ">"+
+        notCompletedData[i]+
+        "</div> </div>"
+    }
     /* for (i = 0; i < 12; i++) {
          if (i < notCompletedData.length) {
              document.getElementById("nct" + i).innerHTML = notCompletedData[i];

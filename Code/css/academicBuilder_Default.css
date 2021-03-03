@@ -189,7 +189,7 @@ body .terms .term1 #course_cards_builder p{
         width :460px;
         display: inline-grid;
         grid-template-columns: 22% 22% 22% 22%;
-        grid-template-rows:28% 28% 28% 28%;
+        grid-template-rows:repeat(20,28%);
         row-gap: 0px;
         column-gap: 10px;
     }
