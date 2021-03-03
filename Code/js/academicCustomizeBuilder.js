@@ -366,7 +366,7 @@ function getTermInfo(courseName){
     myRequest.onload = function () {
         var data = JSON.parse(myRequest.responseText);
         if (data.term != "No class for the term"){
-        term += "Winter" + " ";
+        term += "Spring/Summer" + " ";
         }
     }
 
@@ -374,7 +374,7 @@ function getTermInfo(courseName){
     myRequest2.onload = function () {
         var data = JSON.parse(myRequest2.responseText);
         if (data.term != "No class for the term"){
-        term += "Winter" + " ";
+        term += "Fall" + " ";
         }
     }
 
