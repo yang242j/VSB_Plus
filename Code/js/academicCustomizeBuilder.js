@@ -344,7 +344,7 @@ function getPrerequisite(courseName){
 // Knowing which term apply this course
 function getTermInfo(courseName){
     var myRequest = new XMLHttpRequest;
-    var term;
+    var term = "";
     url = "JSON/202020/" +courseName+".json";
     myRequest.open("GET", url, false);
     myRequest.onload = function () {
@@ -356,7 +356,7 @@ function getTermInfo(courseName){
     myRequest.send();
 return term;
 }
-console.log(getTermInfo(courseNeededArray()[0]));
+console.log(getTermInfo("CHEM160"));
 
 console.log(courseNeededArray()[0]);
 getAllCourse();
