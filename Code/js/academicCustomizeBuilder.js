@@ -377,9 +377,10 @@ function getTermInfo(courseName){
     myRequest3.send();
 return term;
 }
-console.log(getTermInfo("BUS 210"));
-
+console.log(courseNeededArray());
 console.log(courseNeededArray()[0]);
+
+
 getAllCourse();
 function getAllCourse(){
         var myRequest = new XMLHttpRequest;
