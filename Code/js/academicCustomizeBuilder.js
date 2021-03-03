@@ -432,7 +432,7 @@ function dragTest(elementId) {
             var newForAlern = "n" + droppedElementId;
             var content = document.getElementById(newForAlern).innerHTML;
 
-            dropZone.appendChild(droppedElement);
+            dropZone.appendChild(newForAlern).style.visibility = "hidden";
             dropZone.classList.remove("drop-zone--over");
 
         });
@@ -451,6 +451,7 @@ function dragTest(elementId) {
             e.preventDefault();
             const droppedElementId = e.dataTransfer.getData("text/plain");
             const droppedElement = document.getElementById(droppedElementId);
+
 
             dropZone.appendChild(droppedElement);
             dropZone.classList.remove("drop-zone--over");
