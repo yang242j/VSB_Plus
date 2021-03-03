@@ -222,20 +222,20 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             <h3>Course to take</h3>
         </div>
         <div class = "course_tag_not_completed">
-            <p draggable = "true" id = "nct0"></p>
-            <p id = "nct1"></p>
-            <p id = "nct2"></p>
-            <p id = "nct3"></p>
+            <p class = "courseTags" draggable = "true" id = "nct0"></p>
+            <p class = "courseTags" draggable = "true" id = "nct1"></p>
+            <p class = "courseTags" draggable = "true" id = "nct2"></p>
+            <p class = "courseTags" draggable = "true" id = "nct3"></p>
 
-            <p id = "nct4"></p>
-            <p id = "nct5"></p>
-            <p id = "nct6"></p>
-            <p id = "nct7"></p>
+            <p class = "courseTags" draggable = "true" id = "nct4"></p>
+            <p class = "courseTags" draggable = "true" id = "nct5"></p>
+            <p class = "courseTags" draggable = "true" id = "nct6"></p>
+            <p class = "courseTags" draggable = "true" id = "nct7"></p>
             
-            <p id = "nct8"></p>
-            <p id = "nct9"></p>
-            <p id = "nct10"></p>
-            <p id = "nct11"></p>
+            <p class = "courseTags" draggable = "true" id = "nct8"></p>
+            <p class = "courseTags" draggable = "true" id = "nct9"></p>
+            <p class = "courseTags" draggable = "true" id = "nct10"></p>
+            <p class = "courseTags" draggable = "true" id = "nct11"></p>
             <div>
                 <button class="right_arrow" id ="nctLeft"><i class='fas fa-angle-left'></i></button>
                 <button class="left_arrow" id ="nctRight"><i class='fas fa-angle-right'></i></button>
