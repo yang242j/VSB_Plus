@@ -150,7 +150,7 @@ body .terms .term1 #course_cards_builder p{
     body .tags_courses .icons_annotation .icons{
        /* border: 2px solid red;*/
         margin-left: 25px;
-        margin-top: -40px;
+        margin-top: 0px;
     }
 
     body .tags_courses .course_list{
