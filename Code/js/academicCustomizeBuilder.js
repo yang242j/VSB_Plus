@@ -146,7 +146,7 @@ function showCourses(data) {
         document.getElementById("nnct"+i).style.visibility = "hidden";
         document.getElementById("nnct"+i).style.fontSize = "0.1px";
         document.getElementById("nnct"+i).style.lineHeight = "0%";
-        document.getElementById("nnct"+i).style.marginTop = "-100px";
+        document.getElementById("nnct"+i).style.marginTop = "-10px";
         document.getElementById("nct"+i).style.color="black";
         document.getElementById("nct"+i).style.marginTop = "-10px";
        //console.log(getPrerequisite(notCompletedData[i]));
