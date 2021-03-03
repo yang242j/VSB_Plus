@@ -157,6 +157,16 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                     <i class='fas fa-angle-right'></i>
                 </button>
             </div>  -->
+            <div class = "term1" id = "term1">
+            <div class = "tittle">
+                <h2>Spring/Summer</h2>
+            </div>
+            <div class = "course_cards" ></div>
+            <div class = "course_cards" ></div>
+            <div class = "course_cards" ></div>
+            <div class = "course_cards" ></div>
+            <div class = "course_cards" ></div>
+            </div>
        
 </section>
 
