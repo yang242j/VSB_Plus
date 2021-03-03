@@ -423,6 +423,7 @@ function getTermInfo(courseName) {
         }
         myRequest.send();
     }
+}
     //console.log(allCourseData);
     function dragTest(elementId) {
         //const draggableElement = document.querySelector("#nct0");
@@ -488,4 +489,3 @@ dragTest(x);
 dragTest("#nct1");
 dragTest("#nct2");
 dragTest("#nct3");*/
-
