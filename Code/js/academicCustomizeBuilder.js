@@ -257,7 +257,7 @@ function getPrerequisite(courseName) {
             return "no such course";
     }
 }
-//console.log(getPrerequisite("CS 210"));
+console.log(getPrerequisite("CS 210"));
 //console.log(getTermInfo("CHEM 140"));
 // Knowing which term apply this course
 
@@ -301,8 +301,6 @@ function getTermInfo(courseName) {
 }
 //console.log(courseNeededArray());
 //console.log(getTermInfo("ENGG 140"));
-
-console.log(getTermInfo("CS 210"));
 function getAllCourse() {
     var myRequest = new XMLHttpRequest;
     myRequest.open("GET", "JSON/ALL.json", false);
