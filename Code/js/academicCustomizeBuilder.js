@@ -141,7 +141,7 @@ function showCourses(data) {
         notCompletedData[i]+
         "<p>"+notCompletedData[i]+"</p>";
         "</div> </div>";
-        document.getElementById("courseTagArea").
+        document.getElementById("courseTagArea");
     }
     for(i=0;i<notCompletedData.length;i++)
     {
