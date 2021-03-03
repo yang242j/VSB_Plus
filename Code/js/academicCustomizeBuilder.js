@@ -142,6 +142,7 @@ function showCourses(data) {
         "</div> </div>";
         //dragTest("#nct"+i);
     }
+    dragTest("#nct1");
     /* for (i = 0; i < 12; i++) {
          if (i < notCompletedData.length) {
              document.getElementById("nct" + i).innerHTML = notCompletedData[i];
