@@ -85,53 +85,70 @@ session_start(); // Initialize the session
                 <col width="200">
                 <col width="200">
                 <col width="200">
+                <col width="200">
+                <!-- <col width="200"> -->
             </colgroup>
 
             <thead>
-                <tr>
+                <tr id="titleRow">
                     <th></th>
                     <th>Term 1<br> 2018 Fall<br>(Done)</th>
-                    <th>Term 2<br> 2018 Fall<br>(Done)</th>
+                    <th>Term 2<br> 2018 winter<br>(Done)</th>
                     <th>Term 3<br> 2018 Fall<br>(Done)</th>
                     <th>Term 4<br> 2018 Fall<br>(Done)</th>
-                    <th> <div id="dashLine"> <div id="addCol">+ Add Semester</div> </div></th>
+                    <th>Term 5<br> 2018 Fall<br>(Done)</th>
+                    <!-- <th>Term 6<br> 2018 Fall<br>(Done)</th> -->
+                    <th id='addColButton'> <div id="dashLine"> <div id="addCol">+ Add Semester</div> </div></th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
+                <tr id="defaultRow">
                     <td>Default Courses</td>
                     <td align="left" valign="top">
-                        <div class="block" value="BUS 210">
-                            <span class="toLeft">+</span> BUS 210
-                            <div></div>
-                        </div>
-                        <div class="block" value="BUS 210">
-                            <span class="toLeft">+</span> BUS 210
-                            <div></div>
-                        </div>
-                        <div class="block" value="BUS 210">
-                            <span class="toLeft">+</span> BUS 210
-                            <div></div>
-                        </div>
-                        <div class="block" value="BUS 210">
-                            <span class="toLeft">+</span> BUS 210
-                            <div></div>
-                        </div>
-                        <div class="block" value="BUS 210">
-                            <span class="toLeft">+</span> BUS 210
-                            <div></div>
+                        <div class="cell" id="default_term1" value="fall">
+                            <div class="block showDetail" value="BUS 210" draggable="true" id="bus210">
+                                <div class="short_name"><span class="toLeft">+</span> BUS 210 <span class="toRight dot"></span></div>
+                                <ul>
+                                    <li><b>Introduction to Marketing</b></li>
+                                    <li><b>Prereq:</b> BUS 100 (or ADMN 100) and BUS 260 (or ADMN 260). Concurrent enrolment is allowed in BUS 260. </li>
+                                </ul>
+                            </div>
+                            <div class="block" value="BUS 210" draggable="true" id="bus2102">
+                                <span class="toLeft">+</span> BUS 210
+                                <div></div>
+                            </div>
+                            <div class="block" value="BUS 210">
+                                <span class="toLeft">+</span> BUS 210
+                                <div></div>
+                            </div>
+                            <div class="block" value="BUS 210">
+                                <span class="toLeft">+</span> BUS 210
+                                <div></div>
+                            </div>
+                            <div class="block" value="BUS 210">
+                                <span class="toLeft">+</span> BUS 210
+                                <div></div>
+                            </div>
                         </div>
                     </td>
-                    <td></td>   
-                    <td></td> 
-                    <td></td>  
-                </tr>
-                <tr>
-                    <td>Course Schedules</td>
+                    <td>
+                        <div class="cell"></div>
+                    </td>   
+                    <td><div class="cell"></div></td> 
+                    <!-- <td></td>  
                     <td></td>
-                    <td></td>    
+                    <td></td>  -->
+                </tr>
+                <tr id="scheduleRow">
+                    <td>Course Schedules</td>
+                    <td>
+                        <div class="cell"></div>
+                    </td>
+                    <td> <div class="cell"></div></td>    
+                    <!-- <td></td> 
                     <td></td> 
                     <td></td> 
+                    <td></td>  -->
                 </tr>            
             </tbody>
         </table>
