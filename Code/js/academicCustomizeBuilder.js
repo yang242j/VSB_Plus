@@ -349,14 +349,12 @@ function dragTest(elementId) {
             e.preventDefault();
             dropZone.classList.add("drop-zone--over");
 
-            var newForAlern = "n" + droppedElementId;
-            document.getElementById(newForAlern).style.visibility = "hidden";
+            v
 
         });
 
         dropZone.addEventListener("dragleave", e => {
             dropZone.classList.remove("drop-zone--over");
-            document.getElementById(newForAlern).style.visibility = "hidden";
         });
         dropZone.addEventListener("drop", e => {
             e.preventDefault();
@@ -374,11 +372,11 @@ function dragTest(elementId) {
             if(document.getElementById(newForAlern).innerHTML.length <=100){
                 document.getElementById(newForAlern).style.fontSize = "20px";
             }
-            if(document.getElementById(newForAlern).innerHTML.length <= 150 && document.getElementById(newForAlern).innerHTML.length >100){
+            if(document.getElementById(newForAlern).innerHTML.length <= 120 && document.getElementById(newForAlern).innerHTML.length >100){
                 document.getElementById(newForAlern).style.fontSize = "12px";
             }
-            if(document.getElementById(newForAlern).innerHTML.length >150){
-                document.getElementById(newForAlern).style.fontSize = "8px";
+            if(document.getElementById(newForAlern).innerHTML.length >120){
+                document.getElementById(newForAlern).style.fontSize = "6px";
             }
 
 
