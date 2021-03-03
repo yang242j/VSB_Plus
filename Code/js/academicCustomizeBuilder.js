@@ -146,7 +146,7 @@ function showCourses(data) {
 
             "</div> </div>";
         document.getElementById("nnct"+i).style.visibility = "hidden";
-        document.getElementById("nnct"+i).style.fontSize = "4px";
+        document.getElementById("nnct"+i).style.fontSize = "8px";
         document.getElementById("nct"+i).style.color="black";
        //console.log(getPrerequisite(notCompletedData[i]));
         // reset the color after a short delay
@@ -354,7 +354,7 @@ function dragTest(elementId) {
             //var content = document.getElementById(newForAlern).innerHTML;
 
             document.getElementById(newForAlern).style.visibility = "visible";
-            console.log(getPrerequisite(droppedElement.innerHTML));
+            console.log(droppedElement.innerHTML);
 
 
             dropZone.appendChild(droppedElement);
