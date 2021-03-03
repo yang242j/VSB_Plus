@@ -19,15 +19,15 @@ function getAllCourse() {
     }
     myRequest.send();
 }
-function getDescription(courseName) {
-    var pre = "Description: ";
+function getTitle(courseName) {
+    var pre = "Title: ";
     for (i = 0; i < allCourseData.length; i++) {
-        if (allCourseData[i].short_name == courseName && allCourseData[i].description != null)
-            return (pre + allCourseData[i].description);
+        if (allCourseData[i].short_name == courseName && allCourseData[i].title != null)
+            return (pre + allCourseData[i].title);
     }
     return (pre + "no such course or no prerequisite");
 }
-console.log(getDescription("CHEM 140"));
+console.log(getTitle("CHEM 140"));
 function getCourseData() {
     var myRequest = new XMLHttpRequest;
     myRequest.open("GET", "JSON/ESE.json", false);
@@ -174,7 +174,7 @@ function showTerm(pageNumber) {
                 document.getElementById("term" + i).innerHTML =
                     "<div class = 'tittle'>" + "<h2>" + term + ":" + "</h2></div>" +
                     "<div class = 'course_cards'>" + "<h3>" + termData[term][0] + "</h3>" +
-                    "<p style = 'font-size:10px'>"+ getDescription(termData[term][0])+ "</p>"+
+                    "<p'>"+ getTitle(termData[term][0])+ "</p>"+
                     /*"<i class='fas fa-circle' id = 'circle1' style='font-size:24px;'></i>"+
                     "<i class='fas fa-circle' style='font-size:24px;color:red'></i>"+
                     "<i class='fas fa-circle' style='font-size:24px;color:red'></i>"+
@@ -182,28 +182,28 @@ function showTerm(pageNumber) {
                     
 
                    "<div class = 'course_cards'>" + "<h3>" + termData[term][1] + "</h3>" +
-                   "<p>"+ getDescription(termData[term][0])+ "</p>"+
+                   "<p>"+ getTitle(termData[term][0])+ "</p>"+
                    /* "<i class='fas fa-circle' style='font-size:24px;color:red'></i>"+
                     "<i class='fas fa-circle' style='font-size:24px;color:red'></i>"+
                     "<i class='fas fa-circle' style='font-size:24px;color:red'></i>"+
                     "<i class='fas fa-circle' style='font-size:24px;color:red'></i>*/ "</div>"+
 
                     "<div class = 'course_cards'>" + "<h3>" + termData[term][2] + "</h3>" +
-                    "<p>"+ getDescription(termData[term][0])+ "</p>"+
+                    "<p>"+ getTitle(termData[term][0])+ "</p>"+
                    /* "<i class='fas fa-circle' style='font-size:24px;color:red'></i>"+
                     "<i class='fas fa-circle' style='font-size:24px;color:red'></i>"+
                     "<i class='fas fa-circle' style='font-size:24px;color:red'></i>"+
                     "<i class='fas fa-circle' style='font-size:24px;color:red'></i>*/ "</div>"+
 
                     "<div class = 'course_cards'>" + "<h3>" + termData[term][3] + "</h3>" +
-                    "<p>"+ getDescription(termData[term][0])+ "</p>"+
+                    "<p>"+ getTitle(termData[term][0])+ "</p>"+
                    /* "<i class='fas fa-circle' style='font-size:24px;color:red'></i>"+
                     "<i class='fas fa-circle' style='font-size:24px;color:red'></i>"+
                     "<i class='fas fa-circle' style='font-size:24px;color:red'></i>"+
                     "<i class='fas fa-circle' style='font-size:24px;color:red'></i>*/ "</div>"+
 
                     "<div class = 'course_cards'>" + "<h3>" + termData[term][4] + "</h3>"+
-                    "<p>"+ getDescription(termData[term][0])+ "</p>"+
+                    "<p>"+ getTitle(termData[term][0])+ "</p>"+
                  /*  "<i class='fas fa-circle' style='font-size:24px;color:red'></i>"+
                     "<i class='fas fa-circle' style='font-size:24px;color:red'></i>"+
                     "<i class='fas fa-circle' style='font-size:24px;color:red'></i>"+
