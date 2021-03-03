@@ -309,6 +309,16 @@ function btnForCourse(data) {
     }
 
 }*/
+
+/*
+Drag and drop courses to add box
+
+
+
+
+
+*/
+
 function courseNeededArray(){
     var coursesList= [] ;
     for (term in courseReqData) {
@@ -318,12 +328,25 @@ function courseNeededArray(){
             }
         }
     }
-    console.log(coursesList);
+    //console.log(coursesList);
     return coursesList;
 }
 function getPrerequisite(courseName){
-
+    var prerequisite;
+    for(i = 0;i<allCourseData.length;i++)
+    {
+          if(allCourseData[i] =ourseName)
+          return allCourseData[i];
+          else 
+          return "no such course";
+    }
 }
+var info = getPrerequisite(courseNeededArray()[0]);
+console.log(info);
+function getTermInfo(){
+   
+}
+
 courseNeededArray();
 getAllCourse();
 function getAllCourse(){
@@ -335,7 +358,7 @@ function getAllCourse(){
         }
         myRequest.send();
     }
-console.log(allCourseData);
+//console.log(allCourseData);
 
 
 
