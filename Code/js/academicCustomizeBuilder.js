@@ -360,14 +360,14 @@ function getTermInfo(courseName){
 
     myRequest2.open("GET", url3, false);
     myRequest2.onload = function () {
-        if(myRequest.responseText != null){
+        if(myRequest2.responseText != null){
         term += "Fall" + " ";
         }
     }
 
     myRequest3.open("GET", url1, false);
     myRequest3.onload = function () {
-        if(myRequest.responseText != null){
+        if(myRequest3.responseText != null){
         term += "Winter" + " ";
         }
     }
