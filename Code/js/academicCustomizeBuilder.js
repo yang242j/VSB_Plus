@@ -358,8 +358,6 @@ function getTermInfo(courseName){
         if (data.term != "No class for the term"){
         term += "Winter" + " ";
         }
-        else
-        term = "asdas";
     }
 
     myRequest.open("GET", url2, false);
@@ -377,10 +375,9 @@ function getTermInfo(courseName){
         term += "Fall" + " ";
         }
     }
-
+    myRequest3.send();
     myRequest.send();
     myRequest2.send();
-    myRequest3.send();
 return term;
 }
 console.log(courseNeededArray());
