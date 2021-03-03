@@ -139,8 +139,8 @@ function showCourses(data) {
     for (i = 0; i < notCompletedData.length; i++) {
         document.getElementById("courseTagArea").innerHTML +=
             "<div class = 'courseTags' >" +
-            "<div title= 'Hooray!' draggable = 'true' id ='nct" + i + "'" + ">" +
-            "<p id ='nnnct" + i + "'" + ">" +notCompletedData[i]  +"</p>" +
+            "<div title= 'Hooray!' draggable = 'true' id ='nct" + i + "'" +notCompletedData[i]+ ">" +
+            "<input hidden value ='"+notCompletedData[i]+"'" +"id ='nnnct" + i + "'" + ">";
             "<p id ='nnct" + i + "'" + ">" +getTermInfo(notCompletedData[i])  +"</p>" +
     
 
