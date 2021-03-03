@@ -154,13 +154,13 @@ body .terms .term1 #course_cards_builder p{
     }
     body .tags_courses .course_list .course_completed{
         /*border: 2px solid red;*/
-        margin-top: -500px;
+        margin-top: -350px;
         margin-left: -20px;
     }
     body .tags_courses .course_list .course_tag_completed{
         /*border: 2px solid red;*/
         display: grid;;
-        grid-template-columns: 20% 20% 20% 20%;
+        grid-template-columns: 24% 24% 24% 24%;
         grid-template-rows:22% 22% 22% 10%;
         row-gap: 0px;
         column-gap: 10px;
@@ -183,7 +183,7 @@ body .terms .term1 #course_cards_builder p{
         border: 2px solid red;
         width :520px;
         display: grid;
-        grid-template-columns: 20% 20% 20% 20%;
+        grid-template-columns: 24% 24% 24% 24%;
         grid-template-rows:repeat(20,15%);
         row-gap: 0px;
         column-gap: 10px;
