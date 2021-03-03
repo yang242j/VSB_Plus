@@ -369,13 +369,13 @@ function dragTest(elementId) {
             document.getElementById(newForAlern).style.visibility = "visible";
             document.getElementById(newForAlern).style.fontSize = "10px";
             document.getElementById(newForAlern).style.lineHeight = "110%";
-            if(document.getElementById(newForAlern).innerHTML.length <=100){
+            if(document.getElementById(newForAlern).innerHTML.length <=80){
                 document.getElementById(newForAlern).style.fontSize = "20px";
             }
-            if(document.getElementById(newForAlern).innerHTML.length <= 120 && document.getElementById(newForAlern).innerHTML.length >100){
+            if(document.getElementById(newForAlern).innerHTML.length <= 100 && document.getElementById(newForAlern).innerHTML.length >80){
                 document.getElementById(newForAlern).style.fontSize = "12px";
             }
-            if(document.getElementById(newForAlern).innerHTML.length >120){
+            if(document.getElementById(newForAlern).innerHTML.length >100){
                 document.getElementById(newForAlern).style.fontSize = "6px";
             }
 
