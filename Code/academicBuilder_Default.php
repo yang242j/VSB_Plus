@@ -94,17 +94,11 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         <div class = "tittle"><h2>Term1:</h2></div>
         <div class = "course_cards">
               <h3>CHEM104</h3>
-              <i class='fas fa-circle' id = "circle1" style='font-size:24px;'></i>  
-              <i class='fas fa-circle' style='font-size:24px;color:red'></i>
-              <i class='fas fa-circle' style='font-size:24px;color:red'></i>
-              <i class='fas fa-circle' style='font-size:24px;color:red'></i> 
+            
         </div>
         <div class = "course_cards">
             <h3>ENGG123</h3>
-            <i class='fas fa-circle' style='font-size:24px;color:red'></i>  
-            <i class='fas fa-circle' style='font-size:24px;color:red'></i>
-            <i class='fas fa-circle' style='font-size:24px;color:red'></i>
-            <i class='fas fa-circle' style='font-size:24px;color:red'></i> 
+           
       </div>
       <div class = "course_cards">
         <h3>ENGG140</h3>
