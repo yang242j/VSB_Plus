@@ -141,7 +141,7 @@ function showCourses(data) {
             "<div class = 'courseTags' >" +
             "<div title= 'Hooray!' draggable = 'true' id ='nct" + i + "'" + ">" +
             notCompletedData[i] +
-            "<p id ='nnct" + i + "'" + ">" + "Math" +"</p>" +
+            "<p id ='nnct" + i + "'" + ">"   +"</p>" +
     
             "</div> </div>";
         document.getElementById("nnct"+i).style.visibility = "hidden";
