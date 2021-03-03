@@ -349,9 +349,9 @@ function getTermInfo(courseName){
     myRequest.open("GET", url, false);
     myRequest.onload = function () {
         var data = JSON.parse(myRequest.responseText);
-        if(data != null){
+        if(data == null){
         term += "Spring/Summer";
-        } 
+        }
     }
     myRequest.send();
 return term;
