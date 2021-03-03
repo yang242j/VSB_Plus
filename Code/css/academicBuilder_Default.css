@@ -28,10 +28,9 @@ body .terms .term1 .course_cards p{
     font-size: 16px;
 }
 body .terms {
-    overflow:auto;
-    position: absolute;
+    
+    position:relative;
     width: 60%;
-    height: 70%;
     margin-top: 1%;
     border: 2px solid red;
     display: inline-grid;
