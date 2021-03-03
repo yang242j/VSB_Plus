@@ -127,21 +127,11 @@ body .terms .term1 #course_cards_builder p{
         margin-left: 65%;
         margin-top: -480px;
     }
-
-    body .tags_courses #default_icon{
-        /*border: 2px solid red;*/
-        display: grid;;
-        grid-template-columns: 58% 58%;
-        grid-template-rows: 20% 20% 20%;
-        column-gap: -10px;
-        margin-top: -120px;
-        margin-left: -25px;
-    }
     body .tags_courses #builder_icon{
         /*border: 2px solid red;*/
         display: inline-grid;
         grid-template-columns: 58% 58%;
-        grid-template-rows: 20% 20% 20%;
+        grid-template-rows: 5% 5% 5%;
         column-gap: -10px;
         margin-top: -280px;
         margin-left: -25px;
