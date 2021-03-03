@@ -144,7 +144,7 @@ function showCourses(data) {
             "</div> </div>";
         document.getElementById("nnct"+i).style.visibility = "hidden";
         document.getElementById("nnct"+i).style.fontSize = "8px";
-        document.getElementById("nct"+i).style.color="#D4F19F";
+        document.getElementById("nct"+i).style.color="black";
         
 
     }
