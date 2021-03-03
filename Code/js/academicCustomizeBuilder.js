@@ -421,7 +421,7 @@ function dragTest() {
                 dropZone.classList.remove("drop-zone--over");
             });
         }
-        for (const dropZone of document.querySelectorAll(".courseTag")) {
+        for (const dropZone of document.querySelectorAll(".courseTags")) {
             dropZone.addEventListener("dragover", e => {
                 e.preventDefault();
                 dropZone.classList.add("drop-zone--over");
