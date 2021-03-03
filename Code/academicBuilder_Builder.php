@@ -101,7 +101,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     </nav>
 
 
-<section class = "terms" id = "block" style = "overflow:right; height:800px " >
+<section class = "terms" id = "block" style = "overflow:auto; height:800px " >
         <div class="welcome_tag" id = "welcome">
             <h1>Customize Schedule Builder</h1>
         </div>
