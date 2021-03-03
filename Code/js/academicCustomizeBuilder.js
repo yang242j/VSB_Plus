@@ -140,6 +140,7 @@ function showCourses(data) {
         "<div draggable = 'true' id ='nct" + i+ "'" + ">"+
         notCompletedData[i]+
         "</div> </div>";
+        document.getElementById("courseTagArea").value = "ss"+notCompletedData[i];
     }
     for(i=0;i<notCompletedData.length;i++)
     {
@@ -427,7 +428,7 @@ function dragTest(elementId) {
                 e.preventDefault();       
                 const droppedElementId = e.dataTransfer.getData("text/plain");
                 const droppedElement = document.getElementById(droppedElementId);
-                droppedElement.innerHTML = "s";
+                droppedElement.innerHTML = droppedElement.value;
                 dropZone.appendChild(droppedElement);
                 dropZone.classList.remove("drop-zone--over");
 
