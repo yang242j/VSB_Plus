@@ -141,8 +141,9 @@ function showCourses(data) {
             "<div class = 'courseTags' >" +
             "<div title= 'Hooray!' draggable = 'true' id ='nct" + i + "'" + ">" +
             notCompletedData[i] +
-            "<p id ='nnct" + i + "'" + ">"   +"</p>" +
+            "<p id ='nnct" + i + "'" + ">" +getTermInfo(notCompletedData[i])  +"</p>" +
     
+
             "</div> </div>";
         document.getElementById("nnct"+i).style.visibility = "hidden";
         document.getElementById("nnct"+i).style.fontSize = "4px";
@@ -150,6 +151,10 @@ function showCourses(data) {
        //console.log(getPrerequisite(notCompletedData[i]));
         // reset the color after a short delay
         //$("#nct"+ i).tooltip();  
+    }
+    for (i = 0; i < notCompletedData.length; i++) {
+        document.getElementById("courseTagArea").innerHTML +=
+        "<p id ='nnnct" + i + "'" + ">" + getPrerequisite(notCompletedData[i]) +"</p>" +
     }
     for (i = 0; i < notCompletedData.length; i++) {
         //dragTest("#nct" + i);
