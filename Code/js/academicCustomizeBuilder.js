@@ -440,7 +440,7 @@ function dragTest(elementId) {
             });
         }
     }
-    dragTest("#nct0");
+    dragTest("#nct1");
 function allocateAlldrag(){
     for (i=0;i<4;i++){
         dragTest("nct"+i);
