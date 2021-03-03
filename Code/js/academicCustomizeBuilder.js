@@ -139,7 +139,8 @@ function showCourses(data) {
         "<div class = 'courseTags' >"+
         "<div draggable = 'true' id ='nct" + i+ "'" + ">"+
         notCompletedData[i]+
-        "</div> </div>"
+        "</div> </div>";
+        dragTest("#nct"+i);
     }
     /* for (i = 0; i < 12; i++) {
          if (i < notCompletedData.length) {
@@ -456,9 +457,4 @@ dragTest(x);
 dragTest("#nct1");
 dragTest("#nct2");
 dragTest("#nct3");*/
-getdragTest();
-function getdragTest(){
-    for(i=0;i<4;i++)
-    dragTest("#nct"+i);
-}
 
