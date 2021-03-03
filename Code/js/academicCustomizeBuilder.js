@@ -146,7 +146,7 @@ function showCourses(data) {
         document.getElementById("nnct"+i).style.visibility = "hidden";
         document.getElementById("nnct"+i).style.fontSize = "4px";
         document.getElementById("nct"+i).style.color="black";
-       console.log(getPrerequisite(notCompletedData[i]));
+       //console.log(getPrerequisite(notCompletedData[i]));
         // reset the color after a short delay
         //$("#nct"+ i).tooltip();  
     }
