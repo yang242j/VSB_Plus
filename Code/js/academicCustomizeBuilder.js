@@ -47,7 +47,7 @@ function getAllCourse() {
     }
     myRequest.send();
 }
-// next page button
+
 //minus taken class from all course list
 function findCourseToTake(data) {
     /*console.log(data);
@@ -77,6 +77,7 @@ function findCourseToTake(data) {
     var courseNotCompleted = courseToTake.filter(function (n) {
         return courseCompleted.indexOf(n) === -1;
     });
+    console.log(courseNotCompleted);
     return courseNotCompleted;
 }
 function getColor(index, dataJSON) {

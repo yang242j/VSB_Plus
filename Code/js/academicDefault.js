@@ -148,7 +148,7 @@ function nctRight() {
             document.getElementById("nct" + i).innerHTML = "";
         }
         for (i = 12 * counter; i < 12 * (counter + 1); i++) {
-            if(courseData[i] ==null) return;
+            if(courseData[i] == null)return;
             if (i > courseData.length) {
                 document.getElementById("nct" + j).innerHTML = " ";
             }
