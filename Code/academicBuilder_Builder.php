@@ -108,35 +108,35 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     
         <div class = "term1" id = "term1">
             <div class = "tittle">
-                <h2>Winter</h2>
+                <h2></h2>
             </div>
             <div class = "course_cards" id = "course_cards_builder">
-                <h3>ENSE 370</h3>
-                <p>Mechanics for EngineersDynamics asdasXSaas</p>
+                <h3></h3>
+                <p></p>
                 <p></p>
             </div>
 
             <div class = "course_cards" id = "course_cards_builder">
-                <h3>ENSE 370</h3>
-                <p>Mechanics for EngineersDynamics asdasXSaas</p>
+                <h3></h3>
+                <p></p>
                 <p></p>
             </div>
 
             <div class = "course_cards" id = "course_cards_builder">
-                <h3>ENSE 370</h3>
-                <p>Mechanics for EngineersDynamics asdasXSaas</p>
+                <h3></h3>
+                <p></p>
                 <p></p>
             </div>
 
             <div class = "course_cards" id = "course_cards_builder">
-                <h3>ENSE 370</h3>
-                <p>Mechanics for EngineersDynamics asdasXSaas</p>
+                <h3></h3>
+                <p></p>
                 <p></p>
             </div>
 
             <div class = "course_cards" id = "course_cards_builder">
-                <h3>ENSE 370</h3>
-                <p>Mechanics for EngineersDynamics asdasXSaas</p>
+                <h3></h3>
+                <p></p>
                 <p></p>
             </div>  
             </div>
