@@ -263,11 +263,12 @@ function courseNeededArray() {
     return coursesList;
 }
 function getPrerequisite(courseName) {
+    var pre = "Prerequisite:";
     for (i = 0; i < allCourseData.length; i++) {
         if (allCourseData[i].short_name == courseName && allCourseData[i].prerequisite != null)
-            return allCourseData[i].prerequisite;
+            return (pre + allCourseData[i].prerequisite);
     }
-    return "no such course or no prerequisite";
+    return (pre + "no such course or no prerequisite");
 }
 
 //console.log(getPrerequisite("CS 210"));
