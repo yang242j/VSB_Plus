@@ -64,6 +64,9 @@ body .terms .term1 .arrows button{
     background-color: transparent;
     border: none;
 }
+body .terms .term1 .tittle{
+    margin-left: 30px;
+}
 body .terms .add_to_term{
     /*border: 2px solid blue;*/
     display: grid;
