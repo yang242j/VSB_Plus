@@ -427,8 +427,7 @@ function dragTest(elementId) {
                 e.preventDefault();       
                 const droppedElementId = e.dataTransfer.getData("text/plain");
                 const droppedElement = document.getElementById(droppedElementId);
-
-                droppedElement.innerHTML += "Winter";
+                droppedElement.innerHTML = "s";
                 dropZone.appendChild(droppedElement);
                 dropZone.classList.remove("drop-zone--over");
 
