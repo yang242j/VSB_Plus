@@ -282,7 +282,7 @@ function getTermInfo(courseName) {
         if (myRequest3.responseText != null) {
             var data = JSON.parse(myRequest3.responseText);
             if (data.term != "No class for the term") {
-                term += "Winter" + " ";
+                term += "Winter" + " </br>";
                 prerequisite += data.prerequisite;
                 credit = data.credit;
             }
@@ -295,7 +295,7 @@ function getTermInfo(courseName) {
         if (myRequest3.responseText != null) {
             var data = JSON.parse(myRequest.responseText);
             if (data.term != "No class for the term") {
-                term += "Spring/Summer" + " ";
+                term += "Spring/Summer" + "</br> ";
                 prerequisite += data.prerequisite;
                 credit = data.credit;
             }
@@ -308,7 +308,7 @@ function getTermInfo(courseName) {
         if (myRequest2.responseText != null) {
             var data = JSON.parse(myRequest2.responseText);
             if (data.term != "No class for the term") {
-                term += "Fall" + " ";
+                term += "Fall" + " </br>";
                 prerequisite += data.prerequisite;
                 credit = data.credit;
             }
@@ -317,7 +317,7 @@ function getTermInfo(courseName) {
     myRequest2.send();
 
 
-    return [term,prerequisite, credit];
+    return [term,prerequisite, "credits: </br>"+credit];
 }
 //console.log(courseNeededArray());
 //console.log(getTermInfo("ENGG 140"));
