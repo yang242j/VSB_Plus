@@ -431,7 +431,6 @@ function dragTest(elementId) {
 
             var newForAlern = "n" + droppedElementId;
             var content = document.getElementById(newForAlern).innerHTML;
-            document.getElementById(droppedElementId).innerHTML = content;
 
             dropZone.appendChild(droppedElement);
             dropZone.classList.remove("drop-zone--over");
