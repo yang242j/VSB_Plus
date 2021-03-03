@@ -254,9 +254,8 @@ function getPrerequisite(courseName) {
         console.log(allCourseData[i].short_name);
         if (allCourseData[i].short_name == courseName)
             return allCourseData[i].prerequisite;
-        else
-            return "no such course";
     }
+    return "no such course";
 }
 
 console.log(getPrerequisite("CS 210"));
