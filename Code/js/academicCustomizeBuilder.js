@@ -408,6 +408,12 @@ function dragTest() {
                 dropZone.classList.add("drop-zone--over");
                 //console.log("dsd");
             });
+            //when dropped
+            dropZone.addEventListener("drop", e =>{
+                e.preventDefault;
+                droppedElementId = e.dataTransfer.getData("text/plain");
+                console.log(droppedElementId);
+            });
 
         }
 
