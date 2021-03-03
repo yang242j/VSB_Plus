@@ -407,6 +407,10 @@ function dragTest(elementId) {
                 e.preventDefault();
                 dropZone.classList.add("drop-zone--over");
             });
+
+            dropZone.addEventListener("dragleave", e => {
+                dropZone.classList.remove("drop-zone--over");
+            });
             dropZone.addEventListener("drop", e => {
                 e.preventDefault();       
                 const droppedElementId = e.dataTransfer.getData("text/plain");
@@ -415,9 +419,6 @@ function dragTest(elementId) {
                 dropZone.appendChild(droppedElement);
                 dropZone.classList.remove("drop-zone--over");
 
-            });
-            dropZone.addEventListener("dropleave", e => {
-                dropZone.classList.remove("drop-zone--over");
             });
         }
 
@@ -426,6 +427,10 @@ function dragTest(elementId) {
                 e.preventDefault();
                 dropZone.classList.add("drop-zone--over");
             });
+
+            dropZone.addEventListener("dragleave", e => {
+                dropZone.classList.remove("drop-zone--over");
+            });
             dropZone.addEventListener("drop", e => {
                 e.preventDefault();       
                 const droppedElementId = e.dataTransfer.getData("text/plain");
@@ -435,15 +440,14 @@ function dragTest(elementId) {
                 dropZone.classList.remove("drop-zone--over");
 
             });
-            dropZone.addEventListener("dropleave", e => {
-                dropZone.classList.remove("drop-zone--over");
-            });
+            
         }
     }
     dragTest("#nct1");
 function allocateAlldrag(){
     for (i=0;i<4;i++){
-        dragTest("nct"+i);
+        var x = "#ncet" + i;
+        dragTest(x);
     }
 }
 
