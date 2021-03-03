@@ -117,10 +117,10 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     <i class='fas fa-circle' style='font-size:24px;color:red'></i>
     <i class='fas fa-circle' style='font-size:24px;color:red'></i> -->
 </div>
-        <div class = "arrows"><button class="right_arrow"><i class='fas fa-angle-left'></i></button>
+        <!--<div class = "arrows"><button class="right_arrow"><i class='fas fa-angle-left'></i></button>
             &nbsp;
             <button class="right_arrow"><i class='fas fa-angle-right'></i></button>
-        </div>   
+        </div>-->   
     </div>
     <div class = "term1" id ="term2">
         <div class = "tittle"><h2>Term2:</h2></div>
@@ -140,10 +140,10 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         <h3>PHYS119</h3>
         </div>
 
-        <div class = "arrows"><button class="right_arrow"><i class='fas fa-angle-left'></i></button>
+        <!--<div class = "arrows"><button class="right_arrow"><i class='fas fa-angle-left'></i></button>
             &nbsp;
             <button class="right_arrow"><i class='fas fa-angle-right'></i></button>  
-    </div>
+    </div>-->
     </div>
     <div class = "term1" id ="term3">
 
@@ -164,10 +164,10 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         <h3>PHYS112</h3>
         </div>
 
-        <div class = "arrows"><button class="right_arrow"><i class='fas fa-angle-left'></i></button>
+        <!--<div class = "arrows"><button class="right_arrow"><i class='fas fa-angle-left'></i></button>
             &nbsp;
             <button class="right_arrow"><i class='fas fa-angle-right'></i></button>
-        </div>
+        </div>-->
     </div>
 
     <div class = "term1" id ="term4">
