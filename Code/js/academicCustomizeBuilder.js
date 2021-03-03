@@ -434,9 +434,10 @@ function dragTest(elementId) {
 
             var newForAlern = "n" + droppedElementId;
             var content = document.getElementById(newForAlern).innerHTML;
-           // var prerequisite = getPrerequisite(content);
+            var term = getTermInfo(content);
+    
             document.getElementById(newForAlern).style.visibility = "visible";
-
+            document.getElementById(newForAlern).innerHTML = term;
 
 
             dropZone.appendChild(droppedElement);
