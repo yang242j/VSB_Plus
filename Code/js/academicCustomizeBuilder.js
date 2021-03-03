@@ -350,7 +350,7 @@ function getTermInfo(courseName){
     myRequest.onload = function () {
         var data = JSON.parse(myRequest.responseText);
         if(data != null){
-        term += Spring/Summer;
+        term += "Spring/Summer";
         } 
     }
     myRequest.send();
