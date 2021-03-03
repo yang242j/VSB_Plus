@@ -399,7 +399,7 @@ function getAllCourse() {
 dragTest();
 function dragTest() {
     //const draggableElement = document.querySelector("#nct0");
-    for (const draggableElement of document.querySelectorAll(".course_tag_not_completed")) {
+    for (const draggableElement of document.querySelectorAll(".courseTags")) {
         draggableElement.addEventListener("dragstart", e => {
             e.dataTransfer.setData("text/plain", draggableElement.id);
             //console.log(e);
@@ -409,7 +409,7 @@ function dragTest() {
                     dropZone.classList.add("drop-zone--over");
                     //console.log("dsd");
                 });
-                //when dropped
+                //when droppedcourseTags
                 dropZone.addEventListener("drop", e => {
                     e.preventDefault();
                     const droppedElementId = e.dataTransfer.getData("text/plain");
