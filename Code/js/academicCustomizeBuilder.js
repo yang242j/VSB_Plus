@@ -144,7 +144,7 @@ function showCourses(data) {
         document.getElementById("courseTagArea");
     }
     for (i = 0; i < notCompletedData.length; i++) {
-        //dragTest("#nct" + i);
+        dragTest("#nct" + i);
     }
 
     /* for (i = 0; i < 12; i++) {
