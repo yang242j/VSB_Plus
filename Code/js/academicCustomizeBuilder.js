@@ -342,6 +342,7 @@ function getPrerequisite(courseName){
     }
 }
 // Knowing which term apply this course
+
 function getTermInfo(courseName){
     var myRequest = new XMLHttpRequest;
     var myRequest2 = new XMLHttpRequest;
@@ -359,6 +360,7 @@ function getTermInfo(courseName){
         term += "Winter" + " ";
         }
     }
+    myRequest3.send();
 
     myRequest.open("GET", url2, false);
     myRequest.onload = function () {
@@ -367,6 +369,7 @@ function getTermInfo(courseName){
         term += "Spring/Summer" + " ";
         }
     }
+    myRequest.send();
 
     myRequest2.open("GET", url3, false);
     myRequest2.onload = function () {
@@ -375,13 +378,12 @@ function getTermInfo(courseName){
         term += "Fall" + " ";
         }
     }
-    myRequest3.send();
-    myRequest.send();
     myRequest2.send();
 return term;
 }
 console.log(courseNeededArray());
 console.log(getTermInfo("CHEM 140"));
+
 
 
 getAllCourse();
