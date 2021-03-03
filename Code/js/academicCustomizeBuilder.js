@@ -343,6 +343,7 @@ function getPrerequisite(courseName){
 }
 var info = getPrerequisite(courseNeededArray()[0]);
 console.log(info);
+// Knowing which term apply this course
 function getTermInfo(){
    
 }
