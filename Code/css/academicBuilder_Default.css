@@ -47,7 +47,7 @@ body .terms h1{
 body .terms .term1{
     /*border: 2px solid blue;*/
     display: grid;
-    grid-template-columns: 10% 15% 15% 15% 15% 15% ; 
+    grid-template-columns: 10% 16% 16% 16% 16% 16% ; 
     grid-template-rows: 88% 15%;
     column-gap: 10px;
     margin-left: -30px;
@@ -159,7 +159,7 @@ body .terms .term1 #course_cards_builder p{
         grid-template-columns: 100%;
         grid-template-rows: 8% 40% 8% 40%;
         row-gap: 10px;
-        margin-top: 10%;
+        margin-top: 0px;
     }
     body .tags_courses .course_list .course_completed{
         /*border: 2px solid red;*/
