@@ -364,33 +364,23 @@ function getTermInfo(courseName) {
     url3 = "JSON/202030/" + courseName + ".json";
     url1 = "JSON/202110/" + courseName + ".json";
 
-
     myRequest3.open("GET", url1, false);
     myRequest3.onload = function () {
-        if (myRequest3.responseText == null) {
-            term = "not applied";
-        }
-        else {
-            var data = JSON.parse(myRequest3.responseText);
-            if (data.term != "No class for the term") {
-                term += "Winter" + " ";
-            }
+
+        var data = JSON.parse(myRequest3.responseText);
+        if (data.term != "No class for the term") {
+            term += "Winter" + " ";
         }
     }
     myRequest3.send();
 
 
-
     myRequest.open("GET", url2, false);
     myRequest.onload = function () {
-        if (myRequest3.responseText == null) {
-            term = "not applied";
-        }
-        else {
-            var data = JSON.parse(myRequest.responseText);
-            if (data.term != "No class for the term") {
-                term += "Spring/Summer" + " ";
-            }
+
+        var data = JSON.parse(myRequest.responseText);
+        if (data.term != "No class for the term") {
+            term += "Spring/Summer" + " ";
         }
     }
     myRequest.send();
@@ -398,14 +388,9 @@ function getTermInfo(courseName) {
     myRequest2.open("GET", url3, false);
     myRequest2.onload = function () {
 
-        if (myRequest3.responseText == null) {
-            term = "not applied";
-        }
-        else {
-            var data = JSON.parse(myRequest2.responseText);
-            if (data.term != "No class for the term") {
-                term += "Fall" + " ";
-            }
+        var data = JSON.parse(myRequest2.responseText);
+        if (data.term != "No class for the term") {
+            term += "Fall" + " ";
         }
         myRequest2.send();
         return term;
@@ -424,65 +409,65 @@ function getTermInfo(courseName) {
         myRequest.send();
     }
 }
-    //console.log(allCourseData);
-    function dragTest(elementId) {
-        //const draggableElement = document.querySelector("#nct0");
-        const draggableElement = document.querySelector(elementId);
-        draggableElement.addEventListener("dragstart", e => {
-            e.dataTransfer.setData("text/plain", draggableElement.id);
+//console.log(allCourseData);
+function dragTest(elementId) {
+    //const draggableElement = document.querySelector("#nct0");
+    const draggableElement = document.querySelector(elementId);
+    draggableElement.addEventListener("dragstart", e => {
+        e.dataTransfer.setData("text/plain", draggableElement.id);
+    });
+    for (const dropZone of document.querySelectorAll(".course_cards")) {
+        dropZone.addEventListener("dragover", e => {
+            e.preventDefault();
+            dropZone.classList.add("drop-zone--over");
         });
-        for (const dropZone of document.querySelectorAll(".course_cards")) {
-            dropZone.addEventListener("dragover", e => {
-                e.preventDefault();
-                dropZone.classList.add("drop-zone--over");
-            });
 
-            dropZone.addEventListener("dragleave", e => {
-                dropZone.classList.remove("drop-zone--over");
-            });
-            dropZone.addEventListener("drop", e => {
-                e.preventDefault();
-                const droppedElementId = e.dataTransfer.getData("text/plain");
-                const droppedElement = document.getElementById(droppedElementId);
-                //show moreinfo in course card
+        dropZone.addEventListener("dragleave", e => {
+            dropZone.classList.remove("drop-zone--over");
+        });
+        dropZone.addEventListener("drop", e => {
+            e.preventDefault();
+            const droppedElementId = e.dataTransfer.getData("text/plain");
+            const droppedElement = document.getElementById(droppedElementId);
+            //show moreinfo in course card
 
-                var newForAlern = "n" + droppedElementId;
-                var content = document.getElementById(newForAlern).innerHTML;
-                var prerequisite = getPrerequisite(content);
-                document.getElementById(newForAlern).style.visibility = "visible";
+            var newForAlern = "n" + droppedElementId;
+            var content = document.getElementById(newForAlern).innerHTML;
+            var prerequisite = getPrerequisite(content);
+            document.getElementById(newForAlern).style.visibility = "visible";
 
 
 
-                dropZone.appendChild(droppedElement);
-                dropZone.classList.remove("drop-zone--over");
+            dropZone.appendChild(droppedElement);
+            dropZone.classList.remove("drop-zone--over");
 
-            });
-        }
-
-        for (const dropZone of document.querySelectorAll(".courseTags")) {
-            dropZone.addEventListener("dragover", e => {
-                e.preventDefault();
-                dropZone.classList.add("drop-zone--over");
-            });
-
-            dropZone.addEventListener("dragleave", e => {
-                dropZone.classList.remove("drop-zone--over");
-            });
-            dropZone.addEventListener("drop", e => {
-                e.preventDefault();
-                const droppedElementId = e.dataTransfer.getData("text/plain");
-                const droppedElement = document.getElementById(droppedElementId);
-                //show less info in course tag
-                var newForAlern = "n" + droppedElementId;
-                document.getElementById(newForAlern).style.visibility = "hidden";
-
-                dropZone.appendChild(droppedElement);
-                dropZone.classList.remove("drop-zone--over");
-
-            });
-
-        }
+        });
     }
+
+    for (const dropZone of document.querySelectorAll(".courseTags")) {
+        dropZone.addEventListener("dragover", e => {
+            e.preventDefault();
+            dropZone.classList.add("drop-zone--over");
+        });
+
+        dropZone.addEventListener("dragleave", e => {
+            dropZone.classList.remove("drop-zone--over");
+        });
+        dropZone.addEventListener("drop", e => {
+            e.preventDefault();
+            const droppedElementId = e.dataTransfer.getData("text/plain");
+            const droppedElement = document.getElementById(droppedElementId);
+            //show less info in course tag
+            var newForAlern = "n" + droppedElementId;
+            document.getElementById(newForAlern).style.visibility = "hidden";
+
+            dropZone.appendChild(droppedElement);
+            dropZone.classList.remove("drop-zone--over");
+
+        });
+
+    }
+}
 /*y=0;
 var x = "#nct" + y;
 dragTest(x);
