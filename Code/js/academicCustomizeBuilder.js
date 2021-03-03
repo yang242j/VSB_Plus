@@ -147,7 +147,7 @@ function showCourses(data) {
     for (i = 0; i < notCompletedData.length; i++) {
         dragTest("#nct" + i);
     }
-
+    console.notCompletedData();
     /* for (i = 0; i < 12; i++) {
          if (i < notCompletedData.length) {
              document.getElementById("nct" + i).innerHTML = notCompletedData[i];
@@ -433,8 +433,7 @@ function dragTest(elementId) {
             //show moreinfo in course card
 
             var newForAlern = "n" + droppedElementId;
-            var content = document.getElementById(newForAlern).innerHTML;
-            var term = getTermInfo(content);
+            //var content = document.getElementById(newForAlern).innerHTML;
     
             document.getElementById(newForAlern).style.visibility = "visible";
             document.getElementById(newForAlern).innerHTML = term;
