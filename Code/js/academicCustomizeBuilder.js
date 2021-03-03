@@ -369,15 +369,13 @@ function dragTest(elementId) {
             document.getElementById(newForAlern).style.visibility = "visible";
             document.getElementById(newForAlern).style.fontSize = "10px";
             document.getElementById(newForAlern).style.lineHeight = "110%";
-            if(document.getElementById(newForAlern).innerHTML.length <=70){
+            if(document.getElementById(newForAlern).innerHTML.length <=80){
                 document.getElementById(newForAlern).style.fontSize = "20px";
             }
-            if(document.getElementById(newForAlern).innerHTML.length <= 90 && document.getElementById(newForAlern).innerHTML.length >70){
+            if(document.getElementById(newForAlern).innerHTML.length <= 100 && document.getElementById(newForAlern).innerHTML.length >80){
                 document.getElementById(newForAlern).style.fontSize = "12px";
             }
-            if(document.getElementById(newForAlern).innerHTML.length >90){
-                document.getElementById(newForAlern).style.fontSize = "4px";
-            }
+            
 
 
             dropZone.appendChild(droppedElement);
