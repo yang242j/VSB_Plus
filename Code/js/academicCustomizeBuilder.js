@@ -356,9 +356,9 @@ function getTermInfo(courseName){
     myRequest.send();
 return term;
 }
-getTermInfo("CHEM 104");
+console.log(getTermInfo(courseNeededArray()[0]));
 
-courseNeededArray();
+console.log(courseNeededArray()[0]);
 getAllCourse();
 function getAllCourse(){
         var myRequest = new XMLHttpRequest;
