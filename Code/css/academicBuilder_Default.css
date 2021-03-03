@@ -31,6 +31,7 @@ body .terms {
     overflow:auto;
     position: relative;
     width: 60%;
+    height: 100%;
     margin-top: 1%;
     border: 2px solid red;
     display: inline-grid;
