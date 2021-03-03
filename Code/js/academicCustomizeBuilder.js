@@ -134,15 +134,15 @@ function showCourses(data) {
         else
             return;
     }
-   /* for (i = 0; i < 12; i++) {
-        if (i < notCompletedData.length) {
-            document.getElementById("nct" + i).innerHTML = notCompletedData[i];
-
-        }
-        else {
-            return;
-        }
-    }*/
+    /* for (i = 0; i < 12; i++) {
+         if (i < notCompletedData.length) {
+             document.getElementById("nct" + i).innerHTML = notCompletedData[i];
+ 
+         }
+         else {
+             return;
+         }
+     }*/
 
 }
 function btnForCourse(data) {
@@ -213,30 +213,30 @@ function btnForCourse(data) {
         }
     }
 
-   /* nctRight.onclick = function () {
-        if (counterForNotCompleted <= (notCompletedData.length / 12)) {
-            counterForNotCompleted += 1;
-        }
-        else return;
-        if (i + 12 * counterForNotCompleted < notCompletedData.length) {
-            for (i = 0; i < 12; i++) {
-                document.getElementById("nct" + i).innerHTML = " ";
-            }
-        }
-        if (counterForNotCompleted >= 0) {
-            for (i = 0; i < 12; i++) {
-                document.getElementById("nct" + i).innerHTML = " ";
-            }
-            for (i = 0; i < 12; i++) {
-                if (notCompletedData[i + 12 * counterForNotCompleted] == null) {
-                    return;
-                }
-                else {
-                    document.getElementById("nct" + i).innerHTML = notCompletedData[i + 12 * counterForNotCompleted];
-                }
-            }
-        }
-    }*/
+    /* nctRight.onclick = function () {
+         if (counterForNotCompleted <= (notCompletedData.length / 12)) {
+             counterForNotCompleted += 1;
+         }
+         else return;
+         if (i + 12 * counterForNotCompleted < notCompletedData.length) {
+             for (i = 0; i < 12; i++) {
+                 document.getElementById("nct" + i).innerHTML = " ";
+             }
+         }
+         if (counterForNotCompleted >= 0) {
+             for (i = 0; i < 12; i++) {
+                 document.getElementById("nct" + i).innerHTML = " ";
+             }
+             for (i = 0; i < 12; i++) {
+                 if (notCompletedData[i + 12 * counterForNotCompleted] == null) {
+                     return;
+                 }
+                 else {
+                     document.getElementById("nct" + i).innerHTML = notCompletedData[i + 12 * counterForNotCompleted];
+                 }
+             }
+         }
+     }*/
     /*nctLeft.onclick = function () {
         if (counterForNotCompleted > 0) {
             counterForNotCompleted -= 1;
@@ -399,36 +399,28 @@ function getAllCourse() {
 dragTest();
 function dragTest() {
     //const draggableElement = document.querySelector("#nct0");
-    for (const draggableElement of document.querySelectorAll(".courseTags")) {
-        draggableElement.addEventListener("dragstart", e => {
+
+    for (const draggableElement of document.querySelectorAll(".courseTag")) {
+        draggableElement.addEventListener("dtagstart", e => {
             e.dataTransfer.setData("text/plain", draggableElement.id);
-            //console.log(e);
-            for (const dropZone of document.querySelectorAll(".course_cards")) {
-                dropZone.addEventListener("dragover", e => {
-                    e.preventDefault();
-                    dropZone.classList.add("drop-zone--over");
-                    //console.log("dsd");
-                });
-                //when droppedcourseTags
-                dropZone.addEventListener("drop", e => {
-                    e.preventDefault();
-                    const droppedElementId = e.dataTransfer.getData("text/plain");
-                    const droppedElement = document.getElementById(droppedElementId);
-
-                    dropZone.appendChild(droppedElement);
-                    console.log(droppedElementId);
-                    dropZone.classList.remove("drop-zone--over");
-                });
-
-                dropZone.addEventListener("dragleave",e=>{
-                    dropZone.classList.remove("drop-zone--over");
-                });
-
-            }
-
         });
-    }
+        for (const dropZone of document.querySelectorAll(".course_cards")) {
+            dropZone.addEventListener("dragover", e => {
+                e.preventDefault();
+                dropZone.classList.add("drop-zone--over");
+            });
+            dropZone.addEventListener("drop", e => {
+                e.preventDefault();
+            });
 
+
+        }
+
+
+
+
+
+    }
 
 
 }

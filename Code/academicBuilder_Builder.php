@@ -223,25 +223,27 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         </div>
         <div class = "course_tag_not_completed" style = "overflow:auto">
            <div class = "courseTags" >
-               <p draggable = "true" id = "nct0"></p>
+               <div draggable = "true" id = "nct0">PlaceHoder</div>
            </div>
-            <p class = "courseTags" draggable = "true" id = "nct1"></p>
-            <p class = "courseTags" draggable = "true" id = "nct2"></p>
-            <p class = "courseTags" draggable = "true" id = "nct3"></p>
+           <div class = "courseTags" >
+               <div draggable = "true" id = "nct1">PlaceHoder</div>
+           </div>
+           <div class = "courseTags" >
+               <div draggable = "true" id = "nct2">PlaceHoder</div>
+           </div>
+           <div class = "courseTags" >
+               <div draggable = "true" id = "nct3">PlaceHoder</div>
+           </div>
+           
 
-            <p class = "courseTags" draggable = "true" id = "nct4"></p>
-            <p class = "courseTags" draggable = "true" id = "nct5"></p>
-            <p class = "courseTags" draggable = "true" id = "nct6"></p>
-            <p class = "courseTags" draggable = "true" id = "nct7"></p>
+
             
-            <p class = "courseTags" draggable = "true" id = "nct8"></p>
-            <p class = "courseTags" draggable = "true" id = "nct9"></p>
-            <p class = "courseTags" draggable = "true" id = "nct10"></p>
-            <p class = "courseTags" draggable = "true" id = "nct11"></p>
-            <div>
+
+           
+            <!--<div>
                 <button class="right_arrow" id ="nctLeft"><i class='fas fa-angle-left'></i></button>
                 <button class="left_arrow" id ="nctRight"><i class='fas fa-angle-right'></i></button>
-            </div>
+            </div> -->
         </div>
         <!-- <h3 id = "corner"><a href='academicBuilder_Main.php'>Go to academic main</a></h3>
         <h3 id = "corner"><a href='academicBuilder_Default.php'>Go to Default Schedule</a></h3> -->
