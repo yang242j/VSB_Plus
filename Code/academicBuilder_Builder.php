@@ -53,7 +53,8 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/academicBuilder_Default.css">
+    <link rel="stylesheet" href="css/academicBuilder_Customize.css">
+
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
@@ -61,6 +62,9 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         var pas = "<?php echo $_SESSION["password"]; ?>";
         var major = "<?php echo $_SESSION["major"]; ?>"
     </script>
+    <style>
+        .drop-zone--over{ opacity:0.5}
+    </style>
 </head>
 
 <body>
@@ -95,50 +99,28 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             </div>
         </div>
     </nav>
-
-
-<section class = "terms" id = "block" style="float:left;">
-        <div class="welcome_tag" id = "welcome">
+    <div class="welcome_tag" id = "welcome">
             <h1>Customize Schedule Builder</h1>
+        </div>
+
+<section class = "terms" id = "block" style = "overflow:auto; height:800px " >
+        <div class="welcome_tag" id = "welcome">
+            <h1>Credits Earned:</h1>
         </div>
     
         <div class = "term1" id = "term1">
             <div class = "tittle">
-                <h2>Term1:</h2>
+                <h2>Winter</h2>
             </div>
-            <div class = "course_cards" id = "course_cards_builder">
-                <h3>ENSE 370</h3>
-                <p>Mechanics for EngineersDynamics asdasXSaas</p>
-                <p></p>
+            <div class = "course_cards" id = "course_cards_builder"></div>
+            <div class = "course_cards" id = "course_cards_builder"> </div>
+            <div class = "course_cards" id = "course_cards_builder"></div>
+             <div class = "course_cards" id = "course_cards_builder"></div>
+             <div class = "course_cards" id = "course_cards_builder"></div>  
             </div>
-
-            <div class = "course_cards" id = "course_cards_builder">
-                <h3>ENSE 370</h3>
-                <p>Mechanics for EngineersDynamics asdasXSaas</p>
-                <p></p>
-            </div>
-
-            <div class = "course_cards" id = "course_cards_builder">
-                <h3>ENSE 370</h3>
-                <p>Mechanics for EngineersDynamics asdasXSaas</p>
-                <p></p>
-            </div>
-
-            <div class = "course_cards" id = "course_cards_builder">
-                <h3>ENSE 370</h3>
-                <p>Mechanics for EngineersDynamics asdasXSaas</p>
-                <p></p>
-            </div>
-
-            <div class = "course_cards" id = "course_cards_builder">
-                <h3>ENSE 370</h3>
-                <p>Mechanics for EngineersDynamics asdasXSaas</p>
-                <p></p>
-            </div>  
-            </div>
-        <div class = "add_to_term" d = "add_to_term1">
+        <div class = "term1" id = "term1">
             <div class = "tittle">
-                <h2>Add:</h2>
+                <h2>Spring/Summer</h2>
             </div>
             <div class = "course_cards" ></div>
             <div class = "course_cards" ></div>
@@ -147,9 +129,9 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             <div class = "course_cards" ></div>
         </div>
     
-        <div class = "term1" id = "term2">
+        <div class = "term1" id = "term1">
             <div class = "tittle">
-                <h2>Term2:</h2>
+                <h2>Fall</h2>
             </div>
             <div class = "course_cards" id = "course_cards_builder"></div>
             <div class = "course_cards" id = "course_cards_builder"></div>
@@ -158,16 +140,17 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             <div class = "course_cards" id = "course_cards_builder"></div>
         </div>
 
-        <div class = "add_to_term" id = "add_to_term2">
+        <div class = "term1" id = "term1">
             <div class = "tittle">
-                <h2>Add:</h2>
+                <h2>Winter</h2>
             </div>
             <div class = "course_cards" ></div>
             <div class = "course_cards" ></div>
             <div class = "course_cards" ></div>
             <div class = "course_cards" ></div>
             <div class = "course_cards" ></div>
-            <div class = "arrows">
+            </div>
+            <!--<div class = "arrows">
                 <button class="right_arrow">
                     <i class='fas fa-angle-left'></i>
                 </button>
@@ -175,19 +158,171 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                 <button class="right_arrow">
                     <i class='fas fa-angle-right'></i>
                 </button>
-            </div>  
+            </div>  -->
+            <div class = "term1" id = "term1">
+            <div class = "tittle">
+                <h2>Spring/Summer</h2>
+            </div>
+            <div class = "course_cards" ></div>
+            <div class = "course_cards" ></div>
+            <div class = "course_cards" ></div>
+            <div class = "course_cards" ></div>
+            <div class = "course_cards" ></div>
+            </div>
+
+            <div class = "term1" id = "term1">
+            <div class = "tittle">
+                <h2>Fall</h2>
+            </div>
+            <div class = "course_cards" id = "course_cards_builder"></div>
+            <div class = "course_cards" id = "course_cards_builder"></div>
+            <div class = "course_cards" id = "course_cards_builder"></div>
+            <div class = "course_cards" id = "course_cards_builder"></div>
+            <div class = "course_cards" id = "course_cards_builder"></div>
         </div>
+        <div class = "term1" id = "term1">
+            <div class = "tittle">
+                <h2>Winter</h2>
+            </div>
+            <div class = "course_cards" ></div>
+            <div class = "course_cards" ></div>
+            <div class = "course_cards" ></div>
+            <div class = "course_cards" ></div>
+            <div class = "course_cards" ></div>
+            </div>
+
+            <div class = "term1" id = "term1">
+            <div class = "tittle">
+                <h2>Spring/Summer</h2>
+            </div>
+            <div class = "course_cards" ></div>
+            <div class = "course_cards" ></div>
+            <div class = "course_cards" ></div>
+            <div class = "course_cards" ></div>
+            <div class = "course_cards" ></div>
+            </div>
+
+            <div class = "term1" id = "term1">
+            <div class = "tittle">
+                <h2>Fall</h2>
+            </div>
+            <div class = "course_cards" ></div>
+            <div class = "course_cards" ></div>
+            <div class = "course_cards" ></div>
+            <div class = "course_cards" ></div>
+            <div class = "course_cards" ></div>
+            </div>
+
+            <div class = "term1" id = "term1">
+            <div class = "tittle">
+                <h2>Winter</h2>
+            </div>
+            <div class = "course_cards" ></div>
+            <div class = "course_cards" ></div>
+            <div class = "course_cards" ></div>
+            <div class = "course_cards" ></div>
+            <div class = "course_cards" ></div>
+            </div>
+            <div class = "term1" id = "term1">
+            <div class = "tittle">
+                <h2>Spring/Summer</h2>
+            </div>
+            <div class = "course_cards" ></div>
+            <div class = "course_cards" ></div>
+            <div class = "course_cards" ></div>
+            <div class = "course_cards" ></div>
+            <div class = "course_cards" ></div>
+            </div>
+            <div class = "term1" id = "term1">
+            <div class = "tittle">
+                <h2>Fall</h2>
+            </div>
+            <div class = "course_cards" ></div>
+            <div class = "course_cards" ></div>
+            <div class = "course_cards" ></div>
+            <div class = "course_cards" ></div>
+            <div class = "course_cards" ></div>
+            </div>
+            <div class = "term1" id = "term1">
+            <div class = "tittle">
+                <h2>Winter</h2>
+            </div>
+            <div class = "course_cards" ></div>
+            <div class = "course_cards" ></div>
+            <div class = "course_cards" ></div>
+            <div class = "course_cards" ></div>
+            <div class = "course_cards" ></div>
+            </div>
+            <div class = "term1" id = "term1">
+            <div class = "tittle">
+                <h2>Spring/Summer</h2>
+            </div>
+            <div class = "course_cards" ></div>
+            <div class = "course_cards" ></div>
+            <div class = "course_cards" ></div>
+            <div class = "course_cards" ></div>
+            <div class = "course_cards" ></div>
+            </div>
+            <div class = "term1" id = "term1">
+            <div class = "tittle">
+                <h2>Fall</h2>
+            </div>
+            <div class = "course_cards" ></div>
+            <div class = "course_cards" ></div>
+            <div class = "course_cards" ></div>
+            <div class = "course_cards" ></div>
+            <div class = "course_cards" ></div>
+            </div>
+            <div class = "term1" id = "term1">
+            <div class = "tittle">
+                <h2>Winter</h2>
+            </div>
+            <div class = "course_cards" ></div>
+            <div class = "course_cards" ></div>
+            <div class = "course_cards" ></div>
+            <div class = "course_cards" ></div>
+            <div class = "course_cards" ></div>
+            </div>
+            <div class = "term1" id = "term1">
+            <div class = "tittle">
+                <h2>Spring/Summer</h2>
+            </div>
+            <div class = "course_cards" ></div>
+            <div class = "course_cards" ></div>
+            <div class = "course_cards" ></div>
+            <div class = "course_cards" ></div>
+            <div class = "course_cards" ></div>
+            </div>
+            <div class = "term1" id = "term1">
+            <div class = "tittle">
+                <h2>Fall</h2>
+            </div>
+            <div class = "course_cards" ></div>
+            <div class = "course_cards" ></div>
+            <div class = "course_cards" ></div>
+            <div class = "course_cards" ></div>
+            <div class = "course_cards" ></div>
+            </div>
+
+           
+
+          
+
+
+            
+
+       
 </section>
 
 <section class = "tags_courses" id ="block" style="float:right;">  
 
     <div class = "icons_annotation" id ="builder_icon">
-        <div class ="icons" style='font-size:24px;color:yellow'>---- W</div>
-        <div class ="icons" style='font-size:24px;color:blue'>---- NP</div>
-        <div class ="icons" style='font-size:24px;color:grey'>---- Passed</div>
-        <div class ="icons" style='font-size:24px;color:orange'>---- Good</div>
-        <div class ="icons" style='font-size:24px;color:pink'>---- Great</div>
-        <div class ="icons" style='font-size:24px;color:red'>---- Excellent</div>
+        <div class ="icons" style='font-size:16px;color:yellow'>---- W</div>
+        <div class ="icons" style='font-size:16px;color:blue'>---- NP</div>
+        <div class ="icons" style='font-size:16px;color:grey'>---- Passed</div>
+        <div class ="icons" style='font-size:16px;color:orange'>---- Good</div>
+        <div class ="icons" style='font-size:16px;color:pink'>---- Great</div>
+        <div class ="icons" style='font-size:16px;color:red'>---- Excellent</div>
     </div>
 
     <div class= "course_list">
@@ -217,25 +352,30 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         <div class = "course_not_completed">
             <h3>Course to take</h3>
         </div>
-        <div class = "course_tag_not_completed">
-            <p id = "nct0"></p>
-            <p id = "nct1"></p>
-            <p id = "nct2"></p>
-            <p id = "nct3"></p>
+        <div class = "course_tag_not_completed" id = "courseTagArea" style = "overflow:auto">
+           <!--<div class = "courseTags" >
+               <div draggable = "true" id = "nct0">PlaceHoder</div>
+           </div>
+           <div class = "courseTags" >
+               <div draggable = "true" id = "nct1">PlaceHoder</div>
+           </div>
+           <div class = "courseTags" >
+               <div draggable = "true" id = "nct2">PlaceHoder</div>
+           </div>
+           <div class = "courseTags" >
+               <div draggable = "true" id = "nct3">PlaceHoder</div>
+           </div>
+-->
+           
 
-            <p id = "nct4"></p>
-            <p id = "nct5"></p>
-            <p id = "nct6"></p>
-            <p id = "nct7"></p>
+
             
-            <p id = "nct8"></p>
-            <p id = "nct9"></p>
-            <p id = "nct10"></p>
-            <p id = "nct11"></p>
-            <div>
+
+           
+            <!--<div>
                 <button class="right_arrow" id ="nctLeft"><i class='fas fa-angle-left'></i></button>
                 <button class="left_arrow" id ="nctRight"><i class='fas fa-angle-right'></i></button>
-            </div>
+            </div> -->
         </div>
         <!-- <h3 id = "corner"><a href='academicBuilder_Main.php'>Go to academic main</a></h3>
         <h3 id = "corner"><a href='academicBuilder_Default.php'>Go to Default Schedule</a></h3> -->
