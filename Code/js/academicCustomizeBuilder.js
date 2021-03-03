@@ -141,21 +141,14 @@ function showCourses(data) {
             "<div draggable = 'true' id ='nct" + i + "'" + ">" +
             notCompletedData[i] +
             "<p id ='nnct" + i + "'" + ">" + getTermInfo(notCompletedData[i]) + "</p>" +
+            "<p id ='nnct" + i + "'" + ">" + getPrerequisite(notCompletedData[i]) + "</p>" +
             "</div> </div>";
         document.getElementById("nnct"+i).style.visibility = "hidden";
         document.getElementById("nnct"+i).style.fontSize = "8px";
         document.getElementById("nct"+i).style.color="black";
         var test = document.getElementById("nct"+i);
         
-        test.addEventListener("mouseover", function( event ) {
-            // highlight the mouseover target
-            event.target.style.color = "orange";
-          
-            // reset the color after a short delay
-            setTimeout(function() {
-              event.target.style.color = "";
-            }, 500);
-          }, false);
+
         
         // reset the color after a short delay
 
