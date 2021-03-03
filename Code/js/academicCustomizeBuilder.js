@@ -357,7 +357,7 @@ function getTermInfo(courseName){
         term += "Winter" + " ";
         }
     }
-    
+
     myRequest.open("GET", url2, false);
     myRequest.onload = function () {
         if(myRequest.responseText != null){
@@ -373,6 +373,8 @@ function getTermInfo(courseName){
     }
 
     myRequest.send();
+    myRequest2.send();
+    myRequest3.send();
 return term;
 }
 console.log(getTermInfo("BUS 210"));
