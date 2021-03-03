@@ -140,7 +140,7 @@ function showCourses(data) {
             "<div class = 'courseTags' >" +
             "<div draggable = 'true' id ='nct" + i + "'" + ">" +
             notCompletedData[i] +
-            "<p   id ='nnct" + i + "'" + ">" + notCompletedData[i] + "</p>" +
+            "<p  'hidden' id ='nnct" + i + "'" + ">" + getPrerequisite(notCompletedData[i]) + "</p>" +
             "</div> </div>";
         document.getElementById("courseTagArea");
     }
@@ -251,14 +251,13 @@ function courseNeededArray() {
 }
 function getPrerequisite(courseName) {
     for (i = 0; i < allCourseData.length; i++) {
-        console.log(allCourseData[i].short_name);
         if (allCourseData[i].short_name == courseName)
             return allCourseData[i].prerequisite;
     }
     return "no such course";
 }
 
-console.log(getPrerequisite("CS 210"));
+//console.log(getPrerequisite("CS 210"));
 //console.log(getTermInfo("CHEM 140"));
 // Knowing which term apply this course
 
