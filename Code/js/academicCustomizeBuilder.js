@@ -271,7 +271,8 @@ function getTermInfo(courseName) {
     var myRequest2 = new XMLHttpRequest;
     var myRequest3 = new XMLHttpRequest;
     var term = "Applied Term: </br>";
-    var prerequisite = "Prerequisite";
+    var prerequisite = "Prerequisite: </br>";
+    var credit;
     url2 = "JSON/202020/" + courseName + ".json";
     url3 = "JSON/202030/" + courseName + ".json";
     url1 = "JSON/202110/" + courseName + ".json";
@@ -283,6 +284,7 @@ function getTermInfo(courseName) {
             if (data.term != "No class for the term") {
                 term += "Winter" + " ";
                 prerequisite += data.prerequisite;
+                credit = data.credit;
             }
         }
     }
