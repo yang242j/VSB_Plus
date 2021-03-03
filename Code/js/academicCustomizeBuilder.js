@@ -384,7 +384,8 @@ function getTermInfo(courseName){
 return term;
 }
 console.log(courseNeededArray());
-console.log(getTermInfo("CHEM 140"));
+var course = document.getElementById("nct0").innerHTML;
+console.log(getTermInfo(course));
 
 
 
