@@ -296,13 +296,13 @@ function getTermInfo(courseName) {
             term += "Fall" + " ";
         }
         myRequest2.send();
-        return term;
     }
+    return term;
 }
 //console.log(courseNeededArray());
 //console.log(getTermInfo("ENGG 140"));
 
-
+console.log(getTermInfo("CS 210"));
 function getAllCourse() {
     var myRequest = new XMLHttpRequest;
     myRequest.open("GET", "JSON/ALL.json", false);
@@ -312,8 +312,8 @@ function getAllCourse() {
     }
     myRequest.send();
 }
-console.log(allCourseData);
-console.log(getPrerequisite("CS 210"));
+
+
 //console.log(allCourseData);
 function dragTest(elementId) {
     //const draggableElement = document.querySelector("#nct0");
