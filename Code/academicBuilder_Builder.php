@@ -59,7 +59,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     <script>
         var sid = "<?php echo $_SESSION["sid"]; ?>";
         var pas = "<?php echo $_SESSION["password"]; ?>";
-        var major = "<?php echo $_SESSION["password"]; ?>"
+        var major = "<?php echo $_SESSION["major"]; ?>"
     </script>
 </head>
 
