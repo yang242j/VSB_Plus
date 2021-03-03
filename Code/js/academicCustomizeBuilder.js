@@ -403,18 +403,24 @@ function dragTest() {
         const draggableElement = document.querySelector("#nct0");
         draggableElement.addEventListener("dragstart", e => {
             e.dataTransfer.setData("text/plain", draggableElement.id);
-            console.log(e);
         });
         for (const dropZone of document.querySelectorAll(".course_cards")) {
             dropZone.addEventListener("dragover", e => {
                 e.preventDefault();
-                console.log(e);
                 dropZone.classList.add("drop-zone--over");
             });
             dropZone.addEventListener("drop", e => {
                 e.preventDefault();
-                
+               
+                const droppedElementId = e.e.dataTransfer.setData("text/plain");
+                const droppedElement = document.getElementById(droppedElementId);
+
+                dropZone.appendChild(droppedElement);
+
             });
+            dropZone.addEventListener("dropleave", e => {
+                dropZone.classList.remove("drop-zone--over");
+            })
 
 
         }

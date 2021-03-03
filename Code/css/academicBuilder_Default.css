@@ -177,6 +177,9 @@ body .terms .term1 #course_cards_builder p{
         box-shadow: -2px 4px 7px 0px #555555;
         text-align: center;
     }
+    body .tags_courses .course_list .course_tag_completed .courseTag{
+        border: 2px solid red;
+    }
 
 
     body .tags_courses .course_list .course_not_completed{
