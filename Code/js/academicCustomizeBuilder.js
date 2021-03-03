@@ -140,13 +140,13 @@ function showCourses(data) {
             "<div class = 'courseTags' >" +
             "<div title= 'Hooray!' draggable = 'true' id ='nct" + i + "'" + ">" +
             notCompletedData[i] +
-            "<p id ='nnct" + i + "'" + ">" + getPrerequisite(notCompletedData[i]) +"</p>" +
+            "<p id ='nnct" + i + "'" + ">" + getTermInfo(notCompletedData[i]) +"</p>" +
     
             "</div> </div>";
         document.getElementById("nnct"+i).style.visibility = "hidden";
         document.getElementById("nnct"+i).style.fontSize = "4px";
         document.getElementById("nct"+i).style.color="black";
-
+       console.log(getPrerequisite(notCompletedData[i]));
         // reset the color after a short delay
         //$("#nct"+ i).tooltip();  
     }
