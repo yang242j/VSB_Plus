@@ -118,10 +118,6 @@ function showCourses(data) {
     /*console.log(dataJSON);
     console.log(courseReqData);
     console.log(notCompletedData);*/
-    for(j=0;j<5;j++){
-    console.log(getPrerequisite(notCompletedData[6]));
-    }
-   
     
    
 
@@ -145,7 +141,7 @@ function showCourses(data) {
             "<div class = 'courseTags' >" +
             "<div title= 'Hooray!' draggable = 'true' id ='nct" + i + "'" + ">" +
             notCompletedData[i] +
-            "<p id ='nnct" + i + "'" + ">" + getTermInfo(notCompletedData[i]) +"</p>" +
+            "<p id ='nnct" + i + "'" + ">" + getPrerequisite(notCompletedData[i]) +"</p>" +
     
             "</div> </div>";
         document.getElementById("nnct"+i).style.visibility = "hidden";
