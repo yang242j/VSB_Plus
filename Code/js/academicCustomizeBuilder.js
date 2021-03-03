@@ -12,7 +12,6 @@ function fetchCourseJSON(sid,password) {
 }
 
 getTermData(major);
-console.log(major);
 getAllCourse();
 window.onload = function init() {
     fetchCourseJSON(sid,pas);
@@ -310,8 +309,35 @@ function btnForCourse(data) {
     }
 
 }*/
+function courseNeededArray(){
+    var coursesList= [] ;
+    for (term in courseReqData) {
+        for (i = 0; i < courseReqData[term].length; i++) {
+            if (courseReqData[term][i] != "Approved") {
+                coursesList.push(courseReqData[term][i]);
+            }
+        }
+    }
+    console.log(coursesList);
+    return coursesList;
+}
+function getPrerequisite(courseName){
 
+}
 
+function getAllCourse(){
+    function getCourseData() {
+        var myRequest = new XMLHttpRequest;
+        myRequest.open("GET", "JSON/ALL.json", false);
+        myRequest.onload = function () {
+            var data = JSON.parse(myRequest.responseText);
+            allCourseData = data;
+        }
+        myRequest.send();
+    }
+
+}
+console.log(allCourseData);
 
 
 
