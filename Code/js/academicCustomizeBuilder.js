@@ -383,9 +383,7 @@ function getTermInfo(courseName){
     myRequest2.send();
 return term;
 }
-console.log(courseNeededArray());
-console.log(document.getElementById("nct1").innerHTML);
-
+//console.log(courseNeededArray());
 console.log(getTermInfo("ENGG 140"));
 
 getAllCourse();
@@ -399,6 +397,11 @@ function getAllCourse(){
         myRequest.send();
     }
 //console.log(allCourseData);
+test();
+function test(){
+    var x = document.getElementById("nct0").innerHTML;
+    console.log(x);
+}
 
 
 
