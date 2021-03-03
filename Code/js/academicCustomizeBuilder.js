@@ -400,9 +400,10 @@ dragTest();
 function dragTest() {
     //const draggableElement = document.querySelector("#nct0");
 
-    for (const draggableElement of document.querySelectorAll(".courseTag")) {
+        const draggableElement = document.querySelector("#nct0");
         draggableElement.addEventListener("dragstart", e => {
             e.dataTransfer.setData("text/plain", draggableElement.id);
+            console.log(e);
         });
         for (const dropZone of document.querySelectorAll(".course_cards")) {
             dropZone.addEventListener("dragover", e => {
