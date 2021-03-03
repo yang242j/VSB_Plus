@@ -140,7 +140,7 @@ function showCourses(data) {
             "<div class = 'courseTags' >" +
             "<div draggable = 'true' id ='nct" + i + "'" + ">" +
             notCompletedData[i] +
-            "<p hidden id ='nnct" + i + "'" + ">" + getTermInfo(notCompletedData[i])+ "</p>" +
+            "<p hidden id ='nnct" + i + "'" + ">" + getTermInfo(notCompletedData[i]) + "</p>" +
             "</div> </div>";
         document.getElementById("courseTagArea");
     }
@@ -272,31 +272,38 @@ function getTermInfo(courseName) {
 
     myRequest3.open("GET", url1, false);
     myRequest3.onload = function () {
-        var data = JSON.parse(myRequest3.responseText);
-        if (data.term != "No class for the term") {
-            term += "Winter" + " ";
+        if (myRequest3.responseText != null) {
+            var data = JSON.parse(myRequest3.responseText);
+            if (data.term != "No class for the term") {
+                term += "Winter" + " ";
+            }
         }
     }
     myRequest3.send();
 
     myRequest.open("GET", url2, false);
     myRequest.onload = function () {
-        var data = JSON.parse(myRequest.responseText);
-        if (data.term != "No class for the term") {
-            term += "Spring/Summer" + " ";
+        if (myRequest3.responseText != null) {
+            var data = JSON.parse(myRequest.responseText);
+            if (data.term != "No class for the term") {
+                term += "Spring/Summer" + " ";
+            }
         }
     }
     myRequest.send();
 
     myRequest2.open("GET", url3, false);
     myRequest2.onload = function () {
-
-        var data = JSON.parse(myRequest2.responseText);
-        if (data.term != "No class for the term") {
-            term += "Fall" + " ";
+        if (myRequest2.responseText != null) {
+            var data = JSON.parse(myRequest2.responseText);
+            if (data.term != "No class for the term") {
+                term += "Fall" + " ";
+            }
         }
-        myRequest2.send();
     }
+    myRequest2.send();
+
+    
     return term;
 }
 //console.log(courseNeededArray());
