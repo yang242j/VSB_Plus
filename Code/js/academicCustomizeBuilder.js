@@ -154,7 +154,7 @@ function showCourses(data) {
     }
     for (i = 0; i < notCompletedData.length; i++) {
         document.getElementById("courseTagArea").innerHTML +=
-        "<p id ='nnnct" + i + "'" + ">" + getPrerequisite(notCompletedData[i]) +"</p>" +
+        "<p id ='nnnct" + i + "'" + ">" + getPrerequisite(notCompletedData[i]) +"</p>" ;
     }
     for (i = 0; i < notCompletedData.length; i++) {
         //dragTest("#nct" + i);
