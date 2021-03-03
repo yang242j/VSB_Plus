@@ -355,7 +355,7 @@ function dragTest(elementId) {
             //var content = document.getElementById(newForAlern).innerHTML;
 
             document.getElementById(newForAlern).style.visibility = "visible";
-            console.log(newForAlern2.innerHTML);
+            console.log(newForAlern2.droppedElementId);
 
 
             dropZone.appendChild(droppedElement);
