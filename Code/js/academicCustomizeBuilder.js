@@ -139,7 +139,7 @@ function showCourses(data) {
             "<div class = 'courseTags' >" +
             "<div draggable = 'true' id ='nct" + i + "'" + ">" +
             notCompletedData[i] +
-            "<p  id ='nnct" + i + "'" + ">" + 'asd1' +"</p>" +
+            "<p  id ='nnct" + i + "'" + ">" + notCompletedData[i] +"</p>" +
             "</div> </div>";
         document.getElementById("courseTagArea");
     }
@@ -430,7 +430,8 @@ function dragTest(elementId) {
             const droppedElement = document.getElementById(droppedElementId);
 
             var newForAlern = "n" + droppedElementId;
-            document.getElementById(droppedElementId).innerHTML = document.getElementById(newForAlern).innerHTML;
+            var content = document.getElementById(newForAlern).innerHTML;
+            document.getElementById(droppedElementId).innerHTML = content;
 
             dropZone.appendChild(droppedElement);
             dropZone.classList.remove("drop-zone--over");
