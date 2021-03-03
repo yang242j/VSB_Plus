@@ -411,7 +411,7 @@ function dragTest() {
             });
             dropZone.addEventListener("drop", e => {
                 e.preventDefault();       
-                const droppedElementId = e.dataTransfer.setData("text/plain");
+                const droppedElementId = e.dataTransfer.getData("text/plain");
                 const droppedElement = document.getElementById(droppedElementId);
 
                 dropZone.appendChild(droppedElement);
