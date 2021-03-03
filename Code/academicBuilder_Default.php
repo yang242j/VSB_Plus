@@ -93,35 +93,35 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     <div class = "term1" id = "term1">
         <div class = "tittle"><h2>Term1:</h2></div>
         <div class = "course_cards">
-              <h3>ENSE 370</h3>
+              <h3>CHEM104</h3>
               <i class='fas fa-circle' id = "circle1" style='font-size:24px;'></i>  
               <i class='fas fa-circle' style='font-size:24px;color:red'></i>
               <i class='fas fa-circle' style='font-size:24px;color:red'></i>
               <i class='fas fa-circle' style='font-size:24px;color:red'></i> 
         </div>
         <div class = "course_cards">
-            <h3>ENSE 370</h3>
+            <h3>ENGG123</h3>
             <i class='fas fa-circle' style='font-size:24px;color:red'></i>  
             <i class='fas fa-circle' style='font-size:24px;color:red'></i>
             <i class='fas fa-circle' style='font-size:24px;color:red'></i>
             <i class='fas fa-circle' style='font-size:24px;color:red'></i> 
       </div>
       <div class = "course_cards">
-        <h3>ENSE 370</h3>
+        <h3>ENGG140</h3>
         <i class='fas fa-circle' style='font-size:24px;color:red'></i>  
         <i class='fas fa-circle' style='font-size:24px;color:red'></i>
         <i class='fas fa-circle' style='font-size:24px;color:red'></i>
         <i class='fas fa-circle' style='font-size:24px;color:red'></i> 
   </div>
   <div class = "course_cards">
-    <h3>ENSE 370</h3>
+    <h3>MATH110</h3>
     <i class='fas fa-circle' style='font-size:24px;color:red'></i>  
     <i class='fas fa-circle' style='font-size:24px;color:red'></i>
     <i class='fas fa-circle' style='font-size:24px;color:red'></i>
     <i class='fas fa-circle' style='font-size:24px;color:red'></i> 
 </div>
 <div class = "course_cards">
-    <h3>ENSE 370</h3>
+    <h3>MATH122</h3>
     <i class='fas fa-circle' style='font-size:24px;color:red'></i>  
     <i class='fas fa-circle' style='font-size:24px;color:red'></i>
     <i class='fas fa-circle' style='font-size:24px;color:red'></i>
@@ -134,11 +134,21 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     </div>
     <div class = "term1" id ="term2">
         <div class = "tittle"><h2>Term2:</h2></div>
-        <div class = "course_cards"></div>
-        <div class = "course_cards"></div>
-        <div class = "course_cards"></div>
-        <div class = "course_cards"></div>
-        <div class = "course_cards"></div>
+        <div class = "course_cards">
+        <h3>CS110</h3>
+        </div>
+        <div class = "course_cards">
+        <h3>ENGG100</h3>
+        </div>
+        <div class = "course_cards">
+        <h3>ENGL100</h3>
+        </div>
+        <div class = "course_cards">
+        <h3>MATH111</h3>
+        </div>
+        <div class = "course_cards">
+        <h3>PHYS119</h3>
+        </div>
 
         <div class = "arrows"><button class="right_arrow"><i class='fas fa-angle-left'></i></button>
             &nbsp;
@@ -148,11 +158,21 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     <div class = "term1" id ="term3">
 
         <div class = "tittle"><h2>Term3:</h2></div>
-        <div class = "course_cards"></div>
-        <div class = "course_cards"></div>
-        <div class = "course_cards"></div>
-        <div class = "course_cards"></div>
-        <div class = "course_cards"></div>
+        <div class = "course_cards">
+        <h3>CS115</h3>
+        </div>
+        <div class = "course_cards">
+        <h3>ENEL280</h3>
+        </div>
+        <div class = "course_cards">
+        <h3>ENEV223</h3>
+        </div>
+        <div class = "course_cards">
+        <h3>MATH213</h3>
+        </div>
+        <div class = "course_cards">
+        <h3>PHYS112</h3>
+        </div>
 
         <div class = "arrows"><button class="right_arrow"><i class='fas fa-angle-left'></i></button>
             &nbsp;
@@ -162,11 +182,21 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 
     <div class = "term1" id ="term4">
         <div class = "tittle"><h2>Term4:</h2></div>
-        <div class = "course_cards"></div>
-        <div class = "course_cards"></div>
-        <div class = "course_cards"></div>
-        <div class = "course_cards"></div>
-        <div class = "course_cards"></div>
+        <div class = "course_cards">
+        <h3>CS210</h3>
+        </div>
+        <div class = "course_cards">
+        <h3>ENEL281</h3>
+        </div>
+        <div class = "course_cards">
+        <h3>ENEL282</h3>
+        </div>
+        <div class = "course_cards">
+        <h3>MATH217</h3>
+        </div>
+        <div class = "course_cards">
+        <h3>STAT289</h3>
+        </div>
 
         <div class = "arrows"><button class="right_arrow"><i class='fas fa-angle-left'></i></button>
             &nbsp;
