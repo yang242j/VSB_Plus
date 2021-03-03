@@ -317,7 +317,7 @@ function getTermInfo(courseName) {
     myRequest2.send();
 
 
-    return [term+"</br>","credits:</br> "+credit,prerequisite];
+    return [term+"</br>","credits:"+credit+"</br>",prerequisite];
 }
 //console.log(courseNeededArray());
 //console.log(getTermInfo("ENGG 140"));
