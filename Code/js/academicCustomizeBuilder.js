@@ -141,7 +141,7 @@ function showCourses(data) {
             "<div class = 'courseTags' >" +
             "<div title= 'Hooray!' draggable = 'true' id ='nct" + i + "'" + ">" +
             notCompletedData[i] +
-            "<p id ='nnct" + i + "'" + ">" +getPrerequisite(notCompletedData[0])  +"</p>" +
+            "<p id ='nnct" + i + "'" + ">" +getTermInfo(notCompletedData[0])  +"</p>" +
     
 
             "</div> </div>";
@@ -153,7 +153,7 @@ function showCourses(data) {
         //$("#nct"+ i).tooltip();  
     }
     for (i = 0; i < notCompletedData.length; i++) {
-        //dragTest("#nct" + i);
+        dragTest("#nct" + i);
     }
     /* for (i = 0; i < 12; i++) {
          if (i < notCompletedData.length) {
@@ -354,7 +354,7 @@ function dragTest(elementId) {
             //var content = document.getElementById(newForAlern).innerHTML;
 
             document.getElementById(newForAlern).style.visibility = "visible";
-
+            console.log(getPrerequisite(droppedElement.innerHTML));
 
 
             dropZone.appendChild(droppedElement);
