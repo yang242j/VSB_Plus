@@ -366,8 +366,8 @@ function dragTest(elementId) {
             document.getElementById(newForAlern).style.visibility = "visible";
             document.getElementById(newForAlern).style.fontSize = "10px";
             document.getElementById(newForAlern).style.lineHeight = "110%";
-            if(document.getElementById(newForAlern).innerHTML.length >200){
-                document.getElementById(newForAlern).style.fontSize = "5px";
+            if(document.getElementById(newForAlern).innerHTML.length <200){
+                document.getElementById(newForAlern).style.fontSize = "20px";
             }
 
 
