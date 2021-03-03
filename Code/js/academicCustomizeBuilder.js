@@ -344,19 +344,35 @@ function getPrerequisite(courseName){
 // Knowing which term apply this course
 function getTermInfo(courseName){
     var myRequest = new XMLHttpRequest;
-    var term = " ss";
-    url = "JSON/202020/" +courseName+".json";
-    myRequest.open("GET", url, false);
+    var term = "Term: ";
+    url2 = "JSON/202020/" +courseName+".json";
+    url3 = "JSON/202030/" +courseName+".json";
+    url1= "JSON/202010/" +courseName+".json";
+
+    myRequest.open("GET", url2, false);
     myRequest.onload = function () {
-        //var data = JSON.parse(myRequest.responseText);
-        if(myRequest.responseText == null){
-        term += "Spring/Summer";
+        if(myRequest.responseText != null){
+        term += "Spring/Summer"+ " ";
+        }
+    }
+
+    myRequest.open("GET", url3, false);
+    myRequest.onload = function () {
+        if(myRequest.responseText != null){
+        term += "Fall" + " ";
+        }
+    }
+
+    myRequest.open("GET", url1, false);
+    myRequest.onload = function () {
+        if(myRequest.responseText != null){
+        term += "Winter" + " ";
         }
     }
     myRequest.send();
 return term;
 }
-console.log(getTermInfo("CHEM160"));
+console.log(getTermInfo("CHEM140"));
 
 console.log(courseNeededArray()[0]);
 getAllCourse();
