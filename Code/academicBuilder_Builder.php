@@ -222,7 +222,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             <h3>Course to take</h3>
         </div>
         <div class = "course_tag_not_completed">
-           <div draggable = "true"> <p class = "courseTags" draggable = "true" id = "nct0"></p> </div>
+           <div class = "courseTags" draggable = "true" id = "nct0"></div>
             <p class = "courseTags" draggable = "true" id = "nct1"></p>
             <p class = "courseTags" draggable = "true" id = "nct2"></p>
             <p class = "courseTags" draggable = "true" id = "nct3"></p>
