@@ -426,7 +426,4 @@ function dragTest() {
     }
 
 
-}
-
-
 
