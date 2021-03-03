@@ -421,7 +421,7 @@ function dragTest() {
                 });
                 dropZone.addEventListener("dragleave",e=>{
                     droppedElement.classList.remove("drop-zone--over");
-                })
+                });
 
             }
 
