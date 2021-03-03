@@ -443,7 +443,8 @@ function dragTest(elementId) {
             
         }
     }
-var x = "#nct0";
+y=0;
+var x = "#nct" + y;
 dragTest(x);
 dragTest("#nct1");
 dragTest("#nct2");
