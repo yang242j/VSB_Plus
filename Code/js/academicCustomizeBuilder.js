@@ -398,8 +398,7 @@ function getAllCourse() {
 //console.log(allCourseData);
 function dragTest(elementId) {
     //const draggableElement = document.querySelector("#nct0");
-        var id = "#"+elementId;
-        const draggableElement = document.querySelector("#nct0");
+        const draggableElement = document.querySelector(elementId);
         draggableElement.addEventListener("dragstart", e => {
             e.dataTransfer.setData("text/plain", draggableElement.id);
         });
@@ -420,6 +419,7 @@ function dragTest(elementId) {
                 dropZone.classList.remove("drop-zone--over");
             });
         }
+
         for (const dropZone of document.querySelectorAll(".courseTags")) {
             dropZone.addEventListener("dragover", e => {
                 e.preventDefault();
@@ -438,7 +438,7 @@ function dragTest(elementId) {
             });
         }
     }
-allocateAlldrag();
+    dragTest("#nct0");
 function allocateAlldrag(){
     for (i=0;i<4;i++){
         dragTest("nct"+i);
