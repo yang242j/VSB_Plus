@@ -270,7 +270,7 @@ function getTermInfo(courseName) {
     var myRequest = new XMLHttpRequest;
     var myRequest2 = new XMLHttpRequest;
     var myRequest3 = new XMLHttpRequest;
-    var term = "Applied Term: </br>";
+    var term = "Applied Term: ";
     var prerequisite = "Prerequisite: </br>";
     var credit;
     url2 = "JSON/202020/" + courseName + ".json";
@@ -282,7 +282,7 @@ function getTermInfo(courseName) {
         if (myRequest3.responseText != null) {
             var data = JSON.parse(myRequest3.responseText);
             if (data.term != "No class for the term") {
-                term += "Winter" + " </br>";
+                term += "Winter" + "";
                 prerequisite += data.prerequisite;
                 credit = data.credit;
             }
@@ -295,7 +295,7 @@ function getTermInfo(courseName) {
         if (myRequest3.responseText != null) {
             var data = JSON.parse(myRequest.responseText);
             if (data.term != "No class for the term") {
-                term += "Spring/Summer" + "</br> ";
+                term += "Spring/Summer" + " ";
                 prerequisite += data.prerequisite;
                 credit = data.credit;
             }
@@ -308,7 +308,7 @@ function getTermInfo(courseName) {
         if (myRequest2.responseText != null) {
             var data = JSON.parse(myRequest2.responseText);
             if (data.term != "No class for the term") {
-                term += "Fall" + " </br>";
+                term += "Fall" + " ";
                 prerequisite += data.prerequisite;
                 credit = data.credit;
             }
@@ -317,7 +317,7 @@ function getTermInfo(courseName) {
     myRequest2.send();
 
 
-    return [term,prerequisite, "</br>credits: "+credit];
+    return [term+"</br>","credits:</br> "+credit,prerequisite];
 }
 //console.log(courseNeededArray());
 //console.log(getTermInfo("ENGG 140"));
