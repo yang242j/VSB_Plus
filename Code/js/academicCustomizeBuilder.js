@@ -324,7 +324,8 @@ function courseNeededArray(){
 function getPrerequisite(courseName){
 
 }
-
+courseNeededArray();
+getAllCourse();
 function getAllCourse(){
     function getCourseData() {
         var myRequest = new XMLHttpRequest;
