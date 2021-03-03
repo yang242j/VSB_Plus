@@ -137,6 +137,7 @@ function showCourses(data) {
         else
             return;
     }
+    console.log(notCompletedData);
     for (i = 0; i < notCompletedData.length; i++) {
         document.getElementById("courseTagArea").innerHTML +=
             "<div class = 'courseTags' >" +
