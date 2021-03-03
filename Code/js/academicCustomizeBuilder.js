@@ -348,8 +348,8 @@ function getTermInfo(courseName){
     url = "JSON/202020/" +courseName+".json";
     myRequest.open("GET", url, false);
     myRequest.onload = function () {
-        var data = JSON.parse(myRequest.responseText);
-        if(data == null){
+        //var data = JSON.parse(myRequest.responseText);
+        if(myRequest.responseText == null){
         term += "Spring/Summer";
         }
     }
