@@ -356,7 +356,8 @@ function getTermInfo(courseName){
         if(myRequest3.responseText != null){
         term += "Winter" + " ";
         }
-        
+    }
+    
     myRequest.open("GET", url2, false);
     myRequest.onload = function () {
         if(myRequest.responseText != null){
@@ -371,7 +372,6 @@ function getTermInfo(courseName){
         }
     }
 
-    }
     myRequest.send();
 return term;
 }
