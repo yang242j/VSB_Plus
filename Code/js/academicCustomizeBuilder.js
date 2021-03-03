@@ -341,7 +341,7 @@ function getPrerequisite(courseName){
           return "no such course";
     }
 }
-var info = getPrerequisite(courseNeededArray()[0]);
+var info = getPrerequisite("CHEM 104");
 console.log(info);
 // Knowing which term apply this course
 function getTermInfo(){
