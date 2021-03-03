@@ -434,7 +434,7 @@ function dragTest(elementId) {
 
             var newForAlern = "n" + droppedElementId;
             var content = document.getElementById(newForAlern).innerHTML;
-            var prerequisite = getPrerequisite(content);
+           // var prerequisite = getPrerequisite(content);
             document.getElementById(newForAlern).style.visibility = "visible";
 
 
