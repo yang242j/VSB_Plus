@@ -102,24 +102,18 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
       </div>
       <div class = "course_cards">
         <h3>ENGG140</h3>
-        <i class='fas fa-circle' style='font-size:24px;color:red'></i>  
-        <i class='fas fa-circle' style='font-size:24px;color:red'></i>
-        <i class='fas fa-circle' style='font-size:24px;color:red'></i>
-        <i class='fas fa-circle' style='font-size:24px;color:red'></i> 
+        
   </div>
   <div class = "course_cards">
     <h3>MATH110</h3>
-    <i class='fas fa-circle' style='font-size:24px;color:red'></i>  
-    <i class='fas fa-circle' style='font-size:24px;color:red'></i>
-    <i class='fas fa-circle' style='font-size:24px;color:red'></i>
-    <i class='fas fa-circle' style='font-size:24px;color:red'></i> 
+    
 </div>
 <div class = "course_cards">
     <h3>MATH122</h3>
-    <i class='fas fa-circle' style='font-size:24px;color:red'></i>  
+   <!-- <i class='fas fa-circle' style='font-size:24px;color:red'></i>  
     <i class='fas fa-circle' style='font-size:24px;color:red'></i>
     <i class='fas fa-circle' style='font-size:24px;color:red'></i>
-    <i class='fas fa-circle' style='font-size:24px;color:red'></i> 
+    <i class='fas fa-circle' style='font-size:24px;color:red'></i> -->
 </div>
         <div class = "arrows"><button class="right_arrow"><i class='fas fa-angle-left'></i></button>
             &nbsp;
