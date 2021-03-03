@@ -266,7 +266,7 @@ function getTermInfo(courseName) {
     var myRequest = new XMLHttpRequest;
     var myRequest2 = new XMLHttpRequest;
     var myRequest3 = new XMLHttpRequest;
-    var term = "Applied Term: ";
+    var term = "Applied Term: </br>";
     url2 = "JSON/202020/" + courseName + ".json";
     url3 = "JSON/202030/" + courseName + ".json";
     url1 = "JSON/202110/" + courseName + ".json";
