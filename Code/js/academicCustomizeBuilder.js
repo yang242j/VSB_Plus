@@ -145,9 +145,10 @@ function showCourses(data) {
             "</div> </div>";
         document.getElementById("nnct"+i).style.visibility = "hidden";
         document.getElementById("nnct"+i).style.fontSize = "10px";
-        document.getElementById("nnct"+i).style.lineHeight = "90%";
-        document.getElementById("nnct"+i).style.marginTop = "-10px";
+        document.getElementById("nnct"+i).style.lineHeight = "100%";
+        document.getElementById("nnct"+i).style.marginTop = "-20px";
         document.getElementById("nct"+i).style.color="black";
+        document.getElementById("nct"+i).style.marginTop = "-20px";
        //console.log(getPrerequisite(notCompletedData[i]));
     }
     for (i = 0; i < notCompletedData.length; i++) {
