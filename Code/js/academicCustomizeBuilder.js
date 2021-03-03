@@ -348,6 +348,10 @@ function dragTest(elementId) {
         dropZone.addEventListener("dragover", e => {
             e.preventDefault();
             dropZone.classList.add("drop-zone--over");
+
+            var newForAlern = "n" + droppedElementId;
+            document.getElementById(newForAlern).style.visibility = "hidden";
+
         });
 
         dropZone.addEventListener("dragleave", e => {
@@ -366,10 +370,10 @@ function dragTest(elementId) {
             document.getElementById(newForAlern).style.visibility = "visible";
             document.getElementById(newForAlern).style.fontSize = "10px";
             document.getElementById(newForAlern).style.lineHeight = "110%";
-            if(document.getElementById(newForAlern).innerHTML.length <150){
+            if(document.getElementById(newForAlern).innerHTML.length <=150){
                 document.getElementById(newForAlern).style.fontSize = "20px";
             }
-            if(document.getElementById(newForAlern).innerHTML.length <200){
+            if(document.getElementById(newForAlern).innerHTML.length <200 && document.getElementById(newForAlern).innerHTML.length >150){
                 document.getElementById(newForAlern).style.fontSize = "12px";
             }
             if(document.getElementById(newForAlern).innerHTML.length >200){
