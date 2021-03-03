@@ -417,10 +417,11 @@ function dragTest() {
 
                     dropZone.appendChild(droppedElement);
                     console.log(droppedElementId);
-                    droppedElement.classList.remove("drop-zone--over");
+                    dropZone.classList.remove("drop-zone--over");
                 });
+
                 dropZone.addEventListener("dragleave",e=>{
-                    droppedElement.classList.remove("drop-zone--over");
+                    dropZone.classList.remove("drop-zone--over");
                 });
 
             }
