@@ -146,6 +146,15 @@ function showCourses(data) {
         document.getElementById("nnct"+i).style.fontSize = "8px";
         document.getElementById("nct"+i).style.color="black";
         
+        $( "nct"+i ).hover(
+            function() {
+              $( this ).append( $( "<span> ***</span>" ) );
+            }, function() {
+              $( this ).find( "span" ).last().remove();
+            }
+          );
+        
+        // reset the color after a short delay
 
     }
     for (i = 0; i < notCompletedData.length; i++) {
@@ -349,6 +358,7 @@ function dragTest(elementId) {
             //var content = document.getElementById(newForAlern).innerHTML;
 
             document.getElementById(newForAlern).style.visibility = "visible";
+
 
 
             dropZone.appendChild(droppedElement);
