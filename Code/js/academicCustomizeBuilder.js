@@ -399,7 +399,7 @@ function getAllCourse(){
 //console.log(allCourseData);
 test();
 function test(){
-    var x = $("#nct0").html;
+    var x = $("#nct0").html();
     console.log(x);
 }
 
