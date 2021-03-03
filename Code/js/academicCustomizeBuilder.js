@@ -138,7 +138,7 @@ function showCourses(data) {
     for (i = 0; i < notCompletedData.length; i++) {
         document.getElementById("courseTagArea").innerHTML +=
             "<div class = 'courseTags' >" +
-            "<div draggable = 'true' id ='nct" + i + "'" + ">" +
+            "<div title= 'Hooray!' draggable = 'true' id ='nct" + i + "'" + ">" +
             notCompletedData[i] +
             "<p id ='nnct" + i + "'" + ">" + getTermInfo(notCompletedData[i]) +"</p>" +
             "</div> </div>";
@@ -146,7 +146,7 @@ function showCourses(data) {
         document.getElementById("nnct"+i).style.fontSize = "8px";
         document.getElementById("nct"+i).style.color="black";
         // reset the color after a short delay
-
+        $("#nct"+ i).tooltip();  
     }
     for (i = 0; i < notCompletedData.length; i++) {
         dragTest("#nct" + i);
