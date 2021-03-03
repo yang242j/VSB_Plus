@@ -101,14 +101,14 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     </nav>
 
 
-<section class = "terms" id = "block" style="float:left;">
+<section class = "terms" id = "block" style = "overflow:auto">
         <div class="welcome_tag" id = "welcome">
             <h1>Customize Schedule Builder</h1>
         </div>
     
         <div class = "term1" id = "term1">
             <div class = "tittle">
-                <h2></h2>
+                <h2>Winter</h2>
             </div>
             <div class = "course_cards" id = "course_cards_builder">
                 <h3></h3>
