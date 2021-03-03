@@ -15,6 +15,8 @@ getTermData(major);
 getAllCourse();
 window.onload = function init() {
     fetchCourseJSON(sid,pas);
+    var course = document.getElementById("nct0").innerHTML;
+    console.log(course);
 }
 // get student ID form academac_builder
 /*function getSid() {
@@ -385,7 +387,6 @@ return term;
 }
 console.log(courseNeededArray());
 
-var course = document.getElementById("nct0").innerHTML;
 console.log(course);
 console.log(getTermInfo("ENGG 140"));
 
