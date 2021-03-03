@@ -303,6 +303,7 @@ function getTermInfo(courseName) {
         myRequest2.send();
         return term;
     }
+}
     //console.log(courseNeededArray());
     console.log(getTermInfo("ENGG 140"));
 
@@ -316,7 +317,7 @@ function getTermInfo(courseName) {
         }
         myRequest.send();
     }
-}
+
 //console.log(allCourseData);
 function dragTest(elementId) {
     //const draggableElement = document.querySelector("#nct0");
