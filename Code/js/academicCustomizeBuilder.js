@@ -413,6 +413,7 @@ function dragTest(elementId) {
                 const droppedElement = document.getElementById(droppedElementId);
 
                 dropZone.appendChild(droppedElement);
+                dropZone.classList.remove("drop-zone--over");
 
             });
             dropZone.addEventListener("dropleave", e => {
@@ -431,6 +432,7 @@ function dragTest(elementId) {
                 const droppedElement = document.getElementById(droppedElementId);
 
                 dropZone.appendChild(droppedElement);
+                dropZone.classList.remove("drop-zone--over");
 
             });
             dropZone.addEventListener("dropleave", e => {
