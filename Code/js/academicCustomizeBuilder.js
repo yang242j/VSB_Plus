@@ -327,7 +327,6 @@ function getPrerequisite(courseName){
 courseNeededArray();
 getAllCourse();
 function getAllCourse(){
-    function getCourseData() {
         var myRequest = new XMLHttpRequest;
         myRequest.open("GET", "JSON/ALL.json", false);
         myRequest.onload = function () {
@@ -336,8 +335,6 @@ function getAllCourse(){
         }
         myRequest.send();
     }
-
-}
 console.log(allCourseData);
 
 
