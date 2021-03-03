@@ -335,13 +335,13 @@ function getPrerequisite(courseName){
     var prerequisite;
     for(i = 0;i<allCourseData.length;i++)
     {
-          if(allCourseData[i] == courseName)
+          if(allCourseData[i].short_name == courseName)
           return allCourseData[i];
           else 
           return "no such course";
     }
 }
-var info = getPrerequisite("CHEM 104");
+var info = getPrerequisite(courseNeededArray()[0]);
 console.log(info);
 console.log(allCourseData[0]);
 // Knowing which term apply this course
