@@ -50,7 +50,7 @@ body .terms .term1{
     grid-template-columns: 8% 17% 17% 17% 17% 17% ; 
     grid-template-rows: 80% 25%;
     column-gap: 10px;
-    margin-left: -40px;
+    margin-left: -35px;
     row-gap:30px;
 }
 body .terms .term1 .arrows{
