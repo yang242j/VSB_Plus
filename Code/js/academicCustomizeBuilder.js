@@ -374,7 +374,7 @@ function getTermInfo(courseName){
     myRequest.send();
 return term;
 }
-console.log(getTermInfo("CHEM140"));
+console.log(getTermInfo("BUS 210"));
 
 console.log(courseNeededArray()[0]);
 getAllCourse();
