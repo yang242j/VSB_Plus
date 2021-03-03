@@ -251,12 +251,14 @@ function courseNeededArray() {
 }
 function getPrerequisite(courseName) {
     for (i = 0; i < allCourseData.length; i++) {
+        console.log(allCourseData[i].short_name);
         if (allCourseData[i].short_name == courseName)
             return allCourseData[i].prerequisite;
         else
             return "no such course";
     }
 }
+
 console.log(getPrerequisite("CS 210"));
 //console.log(getTermInfo("CHEM 140"));
 // Knowing which term apply this course
