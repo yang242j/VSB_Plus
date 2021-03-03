@@ -102,7 +102,7 @@ body .terms .term1 #course_cards_builder {
     border-style: dashed;
 }
 body .terms .term1 #course_cards_builder p{
-    font-size: 20px;
+    font-size: 16px;
 }
 
     body .tags .icons {
@@ -134,7 +134,7 @@ body .terms .term1 #course_cards_builder p{
     }
     body .tags_courses #builder_icon{
         /*border: 2px solid red;*/
-        display: inline-grid;;ƒ
+        display: inline-grid;
         grid-template-columns: 58% 58%;
         grid-template-rows: 20% 20% 20%;
         column-gap: -10px;
