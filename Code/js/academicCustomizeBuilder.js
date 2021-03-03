@@ -121,7 +121,7 @@ function showCourses(data) {
 
     for (i = 0; i < 12; i++) {
         document.getElementById("ct" + i).innerHTML = " ";
-       // document.getElementById("nct" + i).innerHTML = " ";
+        // document.getElementById("nct" + i).innerHTML = " ";
     }
     //console.log(dataJSON);
     for (i = 0; i < 12; i++) {
@@ -134,18 +134,17 @@ function showCourses(data) {
         else
             return;
     }
-    for(i = 0;i<notCompletedData.length;i++){
-        document.getElementById("courseTagArea").innerHTML += 
-        "<div class = 'courseTags' >"+
-        "<div draggable = 'true' id ='nct" + i+ "'" + ">"+
-        notCompletedData[i]+
-        "<p 'hidden' id ='nnct" + i+ "'" + ">" + "</p>"+
-        "</div> </div>";
+    for (i = 0; i < notCompletedData.length; i++) {
+        document.getElementById("courseTagArea").innerHTML +=
+            "<div class = 'courseTags' >" +
+            "<div draggable = 'true' id ='nct" + i + "'" + ">" +
+            notCompletedData[i] +
+            "<p  id ='nnct" + i + "'" + ">" + asd1 +"</p>" +
+            "</div> </div>";
         document.getElementById("courseTagArea");
     }
-    for(i=0;i<notCompletedData.length;i++)
-    {
-        dragTest("#nct"+i);
+    for (i = 0; i < notCompletedData.length; i++) {
+        dragTest("#nct" + i);
     }
 
     /* for (i = 0; i < 12; i++) {
@@ -412,51 +411,54 @@ function getAllCourse() {
 //console.log(allCourseData);
 function dragTest(elementId) {
     //const draggableElement = document.querySelector("#nct0");
-        const draggableElement = document.querySelector(elementId);
-        draggableElement.addEventListener("dragstart", e => {
-            e.dataTransfer.setData("text/plain", draggableElement.id);
+    const draggableElement = document.querySelector(elementId);
+    draggableElement.addEventListener("dragstart", e => {
+        e.dataTransfer.setData("text/plain", draggableElement.id);
+    });
+    for (const dropZone of document.querySelectorAll(".course_cards")) {
+        dropZone.addEventListener("dragover", e => {
+            e.preventDefault();
+            dropZone.classList.add("drop-zone--over");
         });
-        for (const dropZone of document.querySelectorAll(".course_cards")) {
-            dropZone.addEventListener("dragover", e => {
-                e.preventDefault();
-                dropZone.classList.add("drop-zone--over");
-            });
 
-            dropZone.addEventListener("dragleave", e => {
-                dropZone.classList.remove("drop-zone--over");
-            });
-            dropZone.addEventListener("drop", e => {
-                e.preventDefault();       
-                const droppedElementId = e.dataTransfer.getData("text/plain");
-                const droppedElement = document.getElementById(droppedElementId);
-                droppedElement.innerHTML = droppedElement.value;
-                dropZone.appendChild(droppedElement);
-                dropZone.classList.remove("drop-zone--over");
+        dropZone.addEventListener("dragleave", e => {
+            dropZone.classList.remove("drop-zone--over");
+        });
+        dropZone.addEventListener("drop", e => {
+            e.preventDefault();
+            const droppedElementId = e.dataTransfer.getData("text/plain");
+            const droppedElement = document.getElementById(droppedElementId);
 
-            });
-        }
+            var newForAlern = "n" + droppedElementId;
+            document.getElementById(droppedElementId).innerHTML = document.getElementById(newForAlern).innerHTML;
 
-        for (const dropZone of document.querySelectorAll(".courseTags")) {
-            dropZone.addEventListener("dragover", e => {
-                e.preventDefault();
-                dropZone.classList.add("drop-zone--over");
-            });
+            dropZone.appendChild(droppedElement);
+            dropZone.classList.remove("drop-zone--over");
 
-            dropZone.addEventListener("dragleave", e => {
-                dropZone.classList.remove("drop-zone--over");
-            });
-            dropZone.addEventListener("drop", e => {
-                e.preventDefault();       
-                const droppedElementId = e.dataTransfer.getData("text/plain");
-                const droppedElement = document.getElementById(droppedElementId);
-
-                dropZone.appendChild(droppedElement);
-                dropZone.classList.remove("drop-zone--over");
-
-            });
-            
-        }
+        });
     }
+
+    for (const dropZone of document.querySelectorAll(".courseTags")) {
+        dropZone.addEventListener("dragover", e => {
+            e.preventDefault();
+            dropZone.classList.add("drop-zone--over");
+        });
+
+        dropZone.addEventListener("dragleave", e => {
+            dropZone.classList.remove("drop-zone--over");
+        });
+        dropZone.addEventListener("drop", e => {
+            e.preventDefault();
+            const droppedElementId = e.dataTransfer.getData("text/plain");
+            const droppedElement = document.getElementById(droppedElementId);
+
+            dropZone.appendChild(droppedElement);
+            dropZone.classList.remove("drop-zone--over");
+
+        });
+
+    }
+}
 /*y=0;
 var x = "#nct" + y;
 dragTest(x);
