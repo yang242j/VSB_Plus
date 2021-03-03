@@ -140,7 +140,7 @@ function showCourses(data) {
         document.getElementById("courseTagArea").innerHTML +=
             "<div class = 'courseTags' >" +
             "<div  draggable = 'true' id ='nct" + i + "'" +notCompletedData[i]+ ">" +
-            "<p id ='nnnct" + i + "'" + ">" +notCompletedData[i]  +"</p>" +
+           // "<p id ='nnnct" + i + "'" + ">" +notCompletedData[i]  +"</p>" +
             "<p id ='nnct" + i + "'" + ">" +getTermInfo(notCompletedData[i])  +"</p>" +
             "</div> </div>";
         document.getElementById("nnct"+i).style.visibility = "hidden";
@@ -351,7 +351,6 @@ function dragTest(elementId) {
             //var content = document.getElementById(newForAlern).innerHTML;
 
             document.getElementById(newForAlern).style.visibility = "visible";
-            console.log(newForAlern.innerHTML);
 
 
             dropZone.appendChild(droppedElement);
