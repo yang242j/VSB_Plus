@@ -32,7 +32,7 @@ body .terms {
     position: relative;
     width: 60%;
     margin-top: 1%;
-    /*border: 2px solid red;*/
+    border: 2px solid red;
     display: inline-grid;
     grid-template-columns: 100%;
     grid-template-rows: 4% 35% 35% 35% 35%;
