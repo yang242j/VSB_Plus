@@ -196,7 +196,8 @@ body .terms .term1 #course_cards_builder p{
         grid-template-rows:24% 24% 24% 100%;
         row-gap: 0px;
         column-gap: 10px;
-        margin-top: -120px;
+        margin-top: -140px;
+        margin-left: -40px;
     }
     body .tags_courses .course_list .course_tag_not_completed #courseTagArea{
         border: 2px solid red;
