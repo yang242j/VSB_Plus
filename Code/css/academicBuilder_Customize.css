@@ -47,8 +47,8 @@ body .terms h1{
 body .terms .term1{
     /*border: 2px solid blue;*/
     display: grid;
-    grid-template-columns: 10% 16% 16% 16% 16% 16% ; 
-    grid-template-rows: 88% 15%;
+    grid-template-columns: 10% 18% 18% 18% 18% 18% ; 
+    grid-template-rows: 88% 25%;
     column-gap: 10px;
     margin-left: -30px;
 }
