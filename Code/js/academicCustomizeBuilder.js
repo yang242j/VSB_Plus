@@ -344,7 +344,7 @@ function getPrerequisite(courseName){
 // Knowing which term apply this course
 function getTermInfo(courseName){
     var myRequest = new XMLHttpRequest;
-    var term = "";
+    var term = " ss";
     url = "JSON/202020/" +courseName+".json";
     myRequest.open("GET", url, false);
     myRequest.onload = function () {
