@@ -165,6 +165,7 @@ body .terms .term1 #course_cards_builder p{
     body .tags_courses .course_list .course_completed{
         /*border: 2px solid red;*/
         margin-top: -140px;
+        margin-left: -40px;
     }
     body .tags_courses .course_list .course_tag_completed{
         /*border: 2px solid red;*/
@@ -184,22 +185,18 @@ body .terms .term1 #course_cards_builder p{
         box-shadow: -2px 4px 7px 0px #555555;
         text-align: center;
     }
-   
-
-
     body .tags_courses .course_list .course_not_completed{
         /*border: 2px solid red;*/
-        margin-top: -50px;
+        margin-top: -140px;
     }
     body .tags_courses .course_list .course_tag_not_completed{
         border: 2px solid red;
-        width :420px;
         display: inline-grid;
         grid-template-columns: 20% 20% 20% 20%;
         grid-template-rows:28% 28% 28% 100%;
         row-gap: 0px;
         column-gap: 10px;
-        margin-top: -80px;
+        margin-top: -120px;
     }
     body .tags_courses .course_list .course_tag_not_completed #courseTagArea{
         border: 2px solid red;
