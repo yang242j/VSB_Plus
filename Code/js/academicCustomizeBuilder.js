@@ -121,7 +121,7 @@ function showCourses(data) {
 
     for (i = 0; i < 12; i++) {
         document.getElementById("ct" + i).innerHTML = " ";
-        document.getElementById("nct" + i).innerHTML = " ";
+       // document.getElementById("nct" + i).innerHTML = " ";
     }
     //console.log(dataJSON);
     for (i = 0; i < 12; i++) {
