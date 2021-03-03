@@ -143,7 +143,7 @@ function showCourses(data) {
             "<p id ='nnct" + i + "'" + ">" + getTermInfo(notCompletedData[i]) + "</p>" +
             "</div> </div>";
         document.getElementById("nnct"+i).style.visibility = "hidden";
-        document.getElementById("nnct"+i).style.fontSize = "14px";
+        document.getElementById("nnct"+i).style.fontSize = "8px";
         document.getElementById("nct"+i).style.backgroundColor="#D4F19F";
         
 
