@@ -171,22 +171,22 @@ function showTerm(pageNumber) {
                     "<i class='fas fa-circle' style='font-size:24px;color:red'></i>*/ "</div>"+
 
                     "<div class = 'course_cards'>" + "<h3>" + termData[term][2] + "</h3>" +
+                   /* "<i class='fas fa-circle' style='font-size:24px;color:red'></i>"+
                     "<i class='fas fa-circle' style='font-size:24px;color:red'></i>"+
                     "<i class='fas fa-circle' style='font-size:24px;color:red'></i>"+
-                    "<i class='fas fa-circle' style='font-size:24px;color:red'></i>"+
-                    "<i class='fas fa-circle' style='font-size:24px;color:red'></i></div>"+
+                    "<i class='fas fa-circle' style='font-size:24px;color:red'></i>*/ "</div>"+
 
                     "<div class = 'course_cards'>" + "<h3>" + termData[term][3] + "</h3>" +
+                   /* "<i class='fas fa-circle' style='font-size:24px;color:red'></i>"+
                     "<i class='fas fa-circle' style='font-size:24px;color:red'></i>"+
                     "<i class='fas fa-circle' style='font-size:24px;color:red'></i>"+
-                    "<i class='fas fa-circle' style='font-size:24px;color:red'></i>"+
-                    "<i class='fas fa-circle' style='font-size:24px;color:red'></i></div>"+
+                    "<i class='fas fa-circle' style='font-size:24px;color:red'></i>*/ "</div>"+
 
                     "<div class = 'course_cards'>" + "<h3>" + termData[term][4] + "</h3>"+
-                   "<i class='fas fa-circle' style='font-size:24px;color:red'></i>"+
+                 /*  "<i class='fas fa-circle' style='font-size:24px;color:red'></i>"+
                     "<i class='fas fa-circle' style='font-size:24px;color:red'></i>"+
                     "<i class='fas fa-circle' style='font-size:24px;color:red'></i>"+
-                    "<i class='fas fa-circle' style='font-size:24px;color:yellow'></i></div>"
+                    "<i class='fas fa-circle' style='font-size:24px;color:yellow'></i>*/ "</div>";
                 i = i + 1;
                 }
             }
