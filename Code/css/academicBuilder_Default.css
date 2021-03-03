@@ -171,10 +171,10 @@ body .terms .term1 #course_cards_builder p{
         /*border: 2px solid red;*/
         display: grid;;
         grid-template-columns: 20% 20% 20% 20%;
-        grid-template-rows:28% 28% 28% 100%;
+        grid-template-rows:24% 24% 24% 100%;
         row-gap: 0px;
         column-gap: 10px;
-        margin-top: -120px;
+        margin-top: -140px;
         margin-left: -40px;
     }
     body .tags_courses .course_list .course_tag_completed p{
@@ -190,10 +190,10 @@ body .terms .term1 #course_cards_builder p{
         margin-top: -140px;
     }
     body .tags_courses .course_list .course_tag_not_completed{
-        border: 2px solid red;
-        display: inline-grid;
+        /*border: 2px solid red;*/
+        display: grid;
         grid-template-columns: 20% 20% 20% 20%;
-        grid-template-rows:28% 28% 28% 100%;
+        grid-template-rows:24% 24% 24% 100%;
         row-gap: 0px;
         column-gap: 10px;
         margin-top: -120px;

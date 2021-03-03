@@ -231,6 +231,8 @@ function btnForCourse(data) {
     }
 }
 
+
+
 /*
 Drag and drop courses to add box
 
