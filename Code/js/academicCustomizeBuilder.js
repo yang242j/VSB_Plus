@@ -155,8 +155,8 @@ function showCourses(data) {
     for (i = 0; i < notCompletedData.length; i++) {
         document.getElementById("courseTagArea").innerHTML +=
         "<p id ='nnnct" + i + "'" + ">" + getPrerequisite(notCompletedData[i]) +"</p>" ;
-        document.getElementById("nnct"+i).style.visibility = "hidden";
-        document.getElementById("nnct"+i).style.fontSize = "1px";
+        document.getElementById("nnnct"+i).style.visibility = "hidden";
+        document.getElementById("nnnct"+i).style.fontSize = "1px";
     }
     for (i = 0; i < notCompletedData.length; i++) {
         //dragTest("#nct" + i);
