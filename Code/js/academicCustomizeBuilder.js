@@ -429,8 +429,10 @@ function dragTest(elementId) {
             const droppedElementId = e.dataTransfer.getData("text/plain");
             const droppedElement = document.getElementById(droppedElementId);
 //show moreinfo in course card
+            
             var newForAlern = "n" + droppedElementId;
             var content = document.getElementById(newForAlern).innerHTML;
+            var prerequisite = getPrerequisite(content);
             document.getElementById(newForAlern).style.visibility = "visible";
 
 
