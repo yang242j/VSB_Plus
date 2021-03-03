@@ -335,7 +335,7 @@ function getPrerequisite(courseName){
     var prerequisite;
     for(i = 0;i<allCourseData.length;i++)
     {
-          if(allCourseData[i] =ourseName)
+          if(allCourseData[i] == courseName)
           return allCourseData[i];
           else 
           return "no such course";
