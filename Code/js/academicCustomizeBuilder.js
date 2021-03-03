@@ -410,7 +410,7 @@ function dragTest() {
             });
             //when dropped
             dropZone.addEventListener("drop", e =>{
-                e.preventDefault;
+                e.preventDefault();
                 droppedElementId = e.dataTransfer.getData("text/plain");
                 console.log(droppedElementId);
             });
