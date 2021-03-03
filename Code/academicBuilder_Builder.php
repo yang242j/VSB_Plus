@@ -171,7 +171,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             <div class = "course_cards" ></div>
             <div class = "course_cards" ></div>
             <div class = "course_cards" ></div>
-            <div class = "arrows">
+            <!--<div class = "arrows">
                 <button class="right_arrow">
                     <i class='fas fa-angle-left'></i>
                 </button>
@@ -179,7 +179,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                 <button class="right_arrow">
                     <i class='fas fa-angle-right'></i>
                 </button>
-            </div>  
+            </div>  -->
         </div>
 </section>
 

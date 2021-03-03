@@ -412,7 +412,10 @@ function dragTest() {
                 //when dropped
                 dropZone.addEventListener("drop", e => {
                     e.preventDefault();
-                    droppedElementId = e.dataTransfer.getData("text/plain");
+                    const droppedElementId = e.dataTransfer.getData("text/plain");
+                    const droppedElement = document.getElementById(droppedElementId);
+
+                    dropZone.appendChild(droppedElement);
                     console.log(droppedElementId);
                 });
 
