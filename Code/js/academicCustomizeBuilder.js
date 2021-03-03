@@ -140,12 +140,11 @@ function showCourses(data) {
         "<div draggable = 'true' id ='nct" + i+ "'" + ">"+
         notCompletedData[i]+
         "</div> </div>";
-        dragTest("#nct"+i);
     }
-    /*for(i=0;i<10;i++)
+    for(i=0;i<notCompletedData.length;i++)
     {
         dragTest("#nct"+i);
-    }*/
+    }
 
     /* for (i = 0; i < 12; i++) {
          if (i < notCompletedData.length) {
