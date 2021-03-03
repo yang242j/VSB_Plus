@@ -20,7 +20,7 @@ function getAllCourse() {
     myRequest.send();
 }
 function getTitle(courseName) {
-    var pre = "Title: ";
+    var pre = "Title: </br>" ;
     for (i = 0; i < allCourseData.length; i++) {
         if (allCourseData[i].short_name == courseName && allCourseData[i].title != null)
             return (pre + allCourseData[i].title);
@@ -182,7 +182,7 @@ function showTerm(pageNumber) {
                     
 
                    "<div class = 'course_cards'>" + "<h3>" + termData[term][1] + "</h3>" +
-                   "<p>"+ getTitle(termData[term][0])+ "</p>"+
+                   "<p>"+ getTitle(termData[term][0])+"</p>"+
                    /* "<i class='fas fa-circle' style='font-size:24px;color:red'></i>"+
                     "<i class='fas fa-circle' style='font-size:24px;color:red'></i>"+
                     "<i class='fas fa-circle' style='font-size:24px;color:red'></i>"+
