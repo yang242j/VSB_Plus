@@ -145,14 +145,17 @@ function showCourses(data) {
         document.getElementById("nnct"+i).style.visibility = "hidden";
         document.getElementById("nnct"+i).style.fontSize = "8px";
         document.getElementById("nct"+i).style.color="black";
+        var test = document.getElementById("nct"+i);
         
-        $( "nct"+i ).hover(
-            function() {
-              $( this ).append( $( "<span> ***</span>" ) );
-            }, function() {
-              $( this ).find( "span" ).last().remove();
-            }
-          );
+        test.addEventListener("mouseover", function( event ) {
+            // highlight the mouseover target
+            event.target.style.color = "orange";
+          
+            // reset the color after a short delay
+            setTimeout(function() {
+              event.target.style.color = "";
+            }, 500);
+          }, false);
         
         // reset the color after a short delay
 
