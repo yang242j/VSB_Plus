@@ -134,7 +134,7 @@ function showCourses(data) {
         else
             return;
     }
-    for (i = 0; i < 12; i++) {
+   /* for (i = 0; i < 12; i++) {
         if (i < notCompletedData.length) {
             document.getElementById("nct" + i).innerHTML = notCompletedData[i];
 
@@ -142,7 +142,7 @@ function showCourses(data) {
         else {
             return;
         }
-    }
+    }*/
 
 }
 function btnForCourse(data) {
@@ -213,7 +213,7 @@ function btnForCourse(data) {
         }
     }
 
-    nctRight.onclick = function () {
+   /* nctRight.onclick = function () {
         if (counterForNotCompleted <= (notCompletedData.length / 12)) {
             counterForNotCompleted += 1;
         }
@@ -236,8 +236,8 @@ function btnForCourse(data) {
                 }
             }
         }
-    }
-    nctLeft.onclick = function () {
+    }*/
+    /*nctLeft.onclick = function () {
         if (counterForNotCompleted > 0) {
             counterForNotCompleted -= 1;
         }
@@ -262,7 +262,7 @@ function btnForCourse(data) {
             }
         }
 
-    }
+    }*/
 }
 
 //show terms 
