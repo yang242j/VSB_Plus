@@ -96,16 +96,11 @@ body .terms .course_cards{
         text-align: center;
         margin-left: 0;
         margin-top: 50px;
+        border-style: dashed;
     }
     body .terms .course_cards h3{
         text-align: center;
     }
-body .terms .add_to_term .course_cards{
-        border-style: dashed;
-}
-body .terms .term1 #course_cards_builder {
-    border-style: dashed;
-}
 body .terms .term1 #course_cards_builder p{
     font-size: 16px;
 }
