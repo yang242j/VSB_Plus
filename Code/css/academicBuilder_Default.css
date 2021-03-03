@@ -165,7 +165,7 @@ body .terms .term1 #course_cards_builder p{
     body .tags_courses .course_list .course_completed{
         /*border: 2px solid red;*/
         margin-top: -400px;
-        margin-left: -20px;
+        margin-left: -30px;
     }
     body .tags_courses .course_list .course_tag_completed{
         /*border: 2px solid red;*/
@@ -175,7 +175,7 @@ body .terms .term1 #course_cards_builder p{
         row-gap: 0px;
         column-gap: 10px;
         margin-top: -420px;
-        margin-left: -20px;
+        margin-left: -30px;
     }
     body .tags_courses .course_list .course_tag_completed p{
         /*border: 2px solid red;*/
@@ -187,8 +187,8 @@ body .terms .term1 #course_cards_builder p{
     }
     body .tags_courses .course_list .course_not_completed{
         /*border: 2px solid red;*/
-        margin-top: -100px;
-        margin-left: -20px;
+        margin-top: -120px;
+        margin-left: -30px;
     }
     body .tags_courses .course_list .course_tag_not_completed{
         /*border: 2px solid red;*/
@@ -197,8 +197,8 @@ body .terms .term1 #course_cards_builder p{
         grid-template-rows:34% 34% 34% 100%;
         row-gap: 0px;
         column-gap: 10px;
-        margin-top: -120px;
-        margin-left: -20px;
+        margin-top: -140px;
+        margin-left: -30px;
     }
     body .tags_courses .course_list .course_tag_not_completed #courseTagArea{
         border: 2px solid red;
