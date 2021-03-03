@@ -10,7 +10,8 @@ function fetchCourseJSON(sid,password) {
         //console.log(data);
     });
 }
-getTermData("ESE");
+
+getTermData(major);
 getAllCourse();
 window.onload = function init() {
     fetchCourseJSON(sid,pas);
@@ -309,7 +310,55 @@ function btnForCourse(data) {
 
 }*/
 
+/*
+Drag and drop courses to add box
 
+
+
+
+
+*/
+
+function courseNeededArray(){
+    var coursesList= [] ;
+    for (term in courseReqData) {
+        for (i = 0; i < courseReqData[term].length; i++) {
+            if (courseReqData[term][i] != "Approved") {
+                coursesList.push(courseReqData[term][i]);
+            }
+        }
+    }
+    //console.log(coursesList);
+    return coursesList;
+}
+function getPrerequisite(courseName){
+    var prerequisite;
+    for(i = 0;i<allCourseData.length;i++)
+    {
+          if(allCourseData[i] =ourseName)
+          return allCourseData[i];
+          else 
+          return "no such course";
+    }
+}
+var info = getPrerequisite(courseNeededArray()[0]);
+console.log(info);
+function getTermInfo(){
+   
+}
+
+courseNeededArray();
+getAllCourse();
+function getAllCourse(){
+        var myRequest = new XMLHttpRequest;
+        myRequest.open("GET", "JSON/ALL.json", false);
+        myRequest.onload = function () {
+            var data = JSON.parse(myRequest.responseText);
+            allCourseData = data;
+        }
+        myRequest.send();
+    }
+//console.log(allCourseData);
 
 
 

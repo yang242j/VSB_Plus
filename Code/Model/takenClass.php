@@ -16,9 +16,10 @@
  * @version 1.0
  * @link      http://15.223.123.122/vsbp/Code/courseDB.php
  * @author    Xinyu Liu (sid: 200362878) <liu725@uregina.ca>
- * @param array $sid "Student id"
- * @param array $password "password of account"
- * @return json $toTakeList "Recommended courses to take in the selected term"
+ * @param   {array}     $sid "Student id"
+ * @param   {array}     $password "password of account"
+ * 
+ * @return  {json}      $toTakeList "Recommended courses to take in the selected term"
  */
 
 //1) Collect inputs.( $sid, $password)
