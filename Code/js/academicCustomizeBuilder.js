@@ -143,6 +143,7 @@ function showCourses(data) {
             "<p id ='nnct" + i + "'" + ">" + getTermInfo(notCompletedData[i]) + "</p>" +
             "</div> </div>";
         document.getElementById("nnct"+i).style.visibility = "hidden";
+        document.getElementById("nct"+i).style.borderColor="#D4F19F";
 
     }
     for (i = 0; i < notCompletedData.length; i++) {
