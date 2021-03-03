@@ -353,22 +353,25 @@ function getTermInfo(courseName){
 
     myRequest3.open("GET", url1, false);
     myRequest3.onload = function () {
-        if(myRequest3.responseText != null){
+        var data = JSON.parse(myRequest.responseText);
+        if (data.term != "No class for the term"){
         term += "Winter" + " ";
         }
     }
 
     myRequest.open("GET", url2, false);
     myRequest.onload = function () {
-        if(myRequest.responseText != null){
-        term += "Spring/Summer"+ " ";
+        var data = JSON.parse(myRequest.responseText);
+        if (data.term != "No class for the term"){
+        term += "Winter" + " ";
         }
     }
 
     myRequest2.open("GET", url3, false);
     myRequest2.onload = function () {
-        if(myRequest2.responseText != null){
-        term += "Fall" + " ";
+        var data = JSON.parse(myRequest.responseText);
+        if (data.term != "No class for the term"){
+        term += "Winter" + " ";
         }
     }
 
