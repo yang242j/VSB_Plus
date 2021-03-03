@@ -2,7 +2,7 @@ var studentData;
 var courseReqData;
 var allCourseData;
 //fetch JSON data from takenClass database
-function fetchCourseJSON(sid,password) {
+function fetchCourseJSON(sid, password) {
     // alert(sid);
     $.post('Model/takenClass.php', { sid: sid, password: password }, function (data) {
         btnForCourse(data);
@@ -14,8 +14,7 @@ function fetchCourseJSON(sid,password) {
 getTermData(major);
 getAllCourse();
 window.onload = function init() {
-    fetchCourseJSON(sid,pas);
-    test();
+    fetchCourseJSON(sid, pas);
 }
 // get student ID form academac_builder
 /*function getSid() {
@@ -79,7 +78,7 @@ function findCourseToTake(data) {
     });
     return courseNotCompleted;
 }
-function getColor(index,dataJSON) {
+function getColor(index, dataJSON) {
     var color;
     if (dataJSON[index].final_grade == "NP") {
         color = "blue";
@@ -118,7 +117,7 @@ function showCourses(data) {
     /*console.log(dataJSON);
     console.log(courseReqData);
     console.log(notCompletedData);*/
-   
+
 
     for (i = 0; i < 12; i++) {
         document.getElementById("ct" + i).innerHTML = " ";
@@ -128,8 +127,8 @@ function showCourses(data) {
     for (i = 0; i < 12; i++) {
         if (i < dataJSON.length) {
             //<br/>
-            document.getElementById("ct" + i).innerHTML = dataJSON[i].course_ID + "<br/> " +dataJSON[i].term;
-            document.getElementById("ct" + i).style.color = getColor(i,dataJSON);
+            document.getElementById("ct" + i).innerHTML = dataJSON[i].course_ID + "<br/> " + dataJSON[i].term;
+            document.getElementById("ct" + i).style.color = getColor(i, dataJSON);
 
         }
         else
@@ -138,7 +137,7 @@ function showCourses(data) {
     for (i = 0; i < 12; i++) {
         if (i < notCompletedData.length) {
             document.getElementById("nct" + i).innerHTML = notCompletedData[i];
-        
+
         }
         else {
             return;
@@ -162,12 +161,12 @@ function btnForCourse(data) {
     // delete NP and W data
 
     ctRight.onclick = function () {
-        if(counterForCompleted <= (completedData.length/12)){
+        if (counterForCompleted <= (completedData.length / 12)) {
             counterForCompleted += 1;
-            }
-            else return;
+        }
+        else return;
 
-        
+
         if (i + 12 * counterForCompleted < completedData.length) {
             for (i = 0; i < 12; i++) {
                 document.getElementById("ct" + i).innerHTML = " ";
@@ -182,17 +181,17 @@ function btnForCourse(data) {
                     return;
                 }
                 else {
-                    document.getElementById("ct" + i).innerHTML = completedData[i + 12 * counterForCompleted].course_ID + " <br/>"+ completedData[i + 12 * counterForCompleted].term;
-                    document.getElementById("ct" + i).style.color = getColor(i,dataJSON);
+                    document.getElementById("ct" + i).innerHTML = completedData[i + 12 * counterForCompleted].course_ID + " <br/>" + completedData[i + 12 * counterForCompleted].term;
+                    document.getElementById("ct" + i).style.color = getColor(i, dataJSON);
                 }
             }
         }
     }
     ctLeft.onclick = function () {
-        if (counterForCompleted > 0){
+        if (counterForCompleted > 0) {
             counterForCompleted -= 1;
-            }
-            else return;
+        }
+        else return;
         if (i + 12 * counterForCompleted < completedData.length) {
             for (i = 0; i < 12; i++) {
                 document.getElementById("ct" + i).innerHTML = " ";
@@ -207,16 +206,16 @@ function btnForCourse(data) {
                     return;
                 }
                 else {
-                    document.getElementById("ct" + i).innerHTML = completedData[i + 12 * counterForCompleted].course_ID + "<br/>"+ completedData[i + 12 * counterForCompleted].term;
-                    document.getElementById("ct" + i).style.color = getColor(i,dataJSON);
+                    document.getElementById("ct" + i).innerHTML = completedData[i + 12 * counterForCompleted].course_ID + "<br/>" + completedData[i + 12 * counterForCompleted].term;
+                    document.getElementById("ct" + i).style.color = getColor(i, dataJSON);
                 }
             }
         }
     }
 
     nctRight.onclick = function () {
-        if(counterForNotCompleted <= (notCompletedData.length/12)){
-        counterForNotCompleted += 1;
+        if (counterForNotCompleted <= (notCompletedData.length / 12)) {
+            counterForNotCompleted += 1;
         }
         else return;
         if (i + 12 * counterForNotCompleted < notCompletedData.length) {
@@ -239,11 +238,11 @@ function btnForCourse(data) {
         }
     }
     nctLeft.onclick = function () {
-        if (counterForNotCompleted > 0){
-        counterForNotCompleted -= 1;
+        if (counterForNotCompleted > 0) {
+            counterForNotCompleted -= 1;
         }
         else return;
-        
+
         if (i + 12 * counterForNotCompleted < notCompletedData.length) {
             for (i = 0; i < 12; i++) {
                 document.getElementById("nct" + i).innerHTML = " ";
@@ -320,8 +319,8 @@ Drag and drop courses to add box
 
 */
 
-function courseNeededArray(){
-    var coursesList= [] ;
+function courseNeededArray() {
+    var coursesList = [];
     for (term in courseReqData) {
         for (i = 0; i < courseReqData[term].length; i++) {
             if (courseReqData[term][i] != "Approved") {
@@ -332,33 +331,32 @@ function courseNeededArray(){
     //console.log(coursesList);
     return coursesList;
 }
-function getPrerequisite(courseName){
+function getPrerequisite(courseName) {
     var prerequisite;
-    for(i = 0;i<allCourseData.length;i++)
-    {
-          if(allCourseData[i].short_name == courseName)
-          return allCourseData[i].prerequisite;
-          else 
-          return "no such course";
+    for (i = 0; i < allCourseData.length; i++) {
+        if (allCourseData[i].short_name == courseName)
+            return allCourseData[i].prerequisite;
+        else
+            return "no such course";
     }
 }
 // Knowing which term apply this course
 
-function getTermInfo(courseName){
+function getTermInfo(courseName) {
     var myRequest = new XMLHttpRequest;
     var myRequest2 = new XMLHttpRequest;
     var myRequest3 = new XMLHttpRequest;
     var term = "Applied Term: ";
-    url2 = "JSON/202020/" +courseName+".json";
-    url3 = "JSON/202030/" +courseName+".json";
-    url1= "JSON/202110/" +courseName+".json";
+    url2 = "JSON/202020/" + courseName + ".json";
+    url3 = "JSON/202030/" + courseName + ".json";
+    url1 = "JSON/202110/" + courseName + ".json";
 
 
     myRequest3.open("GET", url1, false);
     myRequest3.onload = function () {
         var data = JSON.parse(myRequest3.responseText);
-        if (data.term != "No class for the term"){
-        term += "Winter" + " ";
+        if (data.term != "No class for the term") {
+            term += "Winter" + " ";
         }
     }
     myRequest3.send();
@@ -368,8 +366,8 @@ function getTermInfo(courseName){
     myRequest.open("GET", url2, false);
     myRequest.onload = function () {
         var data = JSON.parse(myRequest.responseText);
-        if (data.term != "No class for the term"){
-        term += "Spring/Summer" + " ";
+        if (data.term != "No class for the term") {
+            term += "Spring/Summer" + " ";
         }
     }
     myRequest.send();
@@ -377,30 +375,36 @@ function getTermInfo(courseName){
     myRequest2.open("GET", url3, false);
     myRequest2.onload = function () {
         var data = JSON.parse(myRequest2.responseText);
-        if (data.term != "No class for the term"){
-        term += "Fall" + " ";
+        if (data.term != "No class for the term") {
+            term += "Fall" + " ";
         }
     }
     myRequest2.send();
-return term;
+    return term;
 }
 //console.log(courseNeededArray());
 console.log(getTermInfo("ENGG 140"));
 
 getAllCourse();
-function getAllCourse(){
-        var myRequest = new XMLHttpRequest;
-        myRequest.open("GET", "JSON/ALL.json", false);
-        myRequest.onload = function () {
-            var data = JSON.parse(myRequest.responseText);
-            allCourseData = data;
-        }
-        myRequest.send();
+function getAllCourse() {
+    var myRequest = new XMLHttpRequest;
+    myRequest.open("GET", "JSON/ALL.json", false);
+    myRequest.onload = function () {
+        var data = JSON.parse(myRequest.responseText);
+        allCourseData = data;
     }
+    myRequest.send();
+}
 //console.log(allCourseData);
-function test(){
-    var x = $("#nct0").html();
-    console.log(x);
+function dragTest() {
+    const draggableElement = document.querySelector("#nct0");
+    draggableElement.addEventListener("dragstart",e =>{
+console.log(e);
+
+
+    });
+
+
 }
 
 
