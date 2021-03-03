@@ -282,7 +282,7 @@ function getTermInfo(courseName) {
         if (myRequest3.responseText != null) {
             var data = JSON.parse(myRequest3.responseText);
             if (data.term != "No class for the term") {
-                term += "Winter" + "";
+                term += "Winter" + " ";
                 prerequisite += data.prerequisite;
                 credit = data.credit;
             }

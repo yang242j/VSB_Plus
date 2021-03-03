@@ -99,11 +99,13 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             </div>
         </div>
     </nav>
-
+    <div class="welcome_tag" id = "welcome">
+            <h1>Customize Schedule Builder</h1>
+        </div>
 
 <section class = "terms" id = "block" style = "overflow:auto; height:800px " >
         <div class="welcome_tag" id = "welcome">
-            <h1>Customize Schedule Builder</h1>
+            <h1>Credits Earned:</h1>
         </div>
     
         <div class = "term1" id = "term1">
