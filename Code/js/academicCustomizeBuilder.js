@@ -396,12 +396,11 @@ function getAllCourse() {
     myRequest.send();
 }
 //console.log(allCourseData);
+dragTest();
 function dragTest() {
     const draggableElement = document.querySelector("#nct0");
     draggableElement.addEventListener("dragstart",e =>{
 console.log(e);
-
-
     });
 
 
