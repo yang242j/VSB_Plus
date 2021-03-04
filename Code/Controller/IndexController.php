@@ -9,8 +9,10 @@
 class IndexController
 {
 	/**
-	 * 会自动将请求参数中的name值注入到这个函数的name参数中
-	 * 声明这个接口是POST调用
+	 * Will automatically insert the name value 
+	 * in the request parameter into the name parameter of this function
+	 * 
+	 * Declare that this interface is initiated by GET
 	 * @method:get
 	 */
 	public function Index($name)
@@ -24,8 +26,10 @@ class IndexController
 
 
 	/**
-	 * 会自动将请求参数中的name,id值注入到这个函数的name,id参数中
-	 * 声明这个接口是GET调用
+	 * Will automatically insert the sid, password value 
+	 * in the request parameter into the sid, password  parameter of this function
+	 * 
+	 * Declare that this interface is initiated by GET
 	 * @method:get
 	 */
 	public function test($id, $name)

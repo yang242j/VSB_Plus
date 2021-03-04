@@ -83,7 +83,7 @@ function getYear(){
 }
 
 function getSemester(){
-    return semesters[termNum % semesters.length]
+    return semesters[termNum % semesters.length];
 }
 
 function getTermNum(){

@@ -10,8 +10,7 @@
 class StudentController
 {
 	/**
-	 * Will automatically insert the name value 
-	 * in the request parameter into the name parameter of this function
+	 * No parameter
 	 * 
 	 * Declare that this interface is initiated by GET
 	 * @method:GET
