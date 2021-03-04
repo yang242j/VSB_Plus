@@ -87,6 +87,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     </nav>
     
 <section class = "terms" id = "block" style="float:left;">
+        <div class="Term">
         <div class="welcome_tag" id = "welcome">
             <h1>Default Schedule</h1>
         </div>
@@ -283,7 +284,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         </div>
 
     </div>
-      
+    </div> 
     </div>
     <!--<div class = "arrows"><button class="up_arrow" id = "term_up" onclick = "termUp()"><i class='fas fa-angle-double-up'></i></button>
         &nbsp;
@@ -306,7 +307,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 
     <div class= "course_list">
 
-        <div class = "course_completed"><h3>Approved Course</h3></div>
+        <div class = "course_completed"><h3 style='font-size:24px;'>Approved Course</h3></div>
 
         <div class = "course_tag_completed" id = "approvedCourse">
             <p id = "ct0">ENSE 271</p>
@@ -331,7 +332,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 
 
 
-        <div class = "course_not_completed"><h3>Course to take</h3></div>
+        <div class = "course_not_completed"><h3 style='font-size:24px;'>Course to take</h3></div>
 
         <div class = "course_tag_not_completed" id = "not_completed_tag">
             <p id = "nct0">ENSE 271</p>
