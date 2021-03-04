@@ -269,3 +269,10 @@ footer{
     border: none;
 
 }
+
+
+#autoscroll {
+     overflow: auto;
+     width: 106%;
+     height: 200%;
+}
