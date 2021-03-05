@@ -307,7 +307,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 
     <div class= "course_list">
 
-        <div class = "course_completed"><h3 style='font-size:24px; color:"green;'>Approved Course</h3></div>
+        <div class = "course_completed"><h3 style='font-size:24px;'>Approved Course</h3></div>
 
         <div class = "course_tag_completed" id = "approvedCourse">
             <p id = "ct0">ENSE 271</p>
