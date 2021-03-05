@@ -138,7 +138,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </div>
 
             <div style="width: 50%; float: right;">
-                <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST">
+                <form onclick="return false" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST">
                     <label>Search A Class:</label>
                     <input type="text" name="courseid" value="<?php echo $courseid; ?>">
                     <input type="submit" value="Submit">
