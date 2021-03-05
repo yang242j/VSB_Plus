@@ -50,7 +50,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Validate conditions
         include 'http://15.223.123.122/vsbp/Code/Model/courseREC.php';
 
-        $term_NUM = echo "<script>document.writeln(term);</script>";
+        $term_NUM = $_COOKIE['term'];
         $courseid_msg = "Entered: $courseid in Term: $term_NUM";
     }
 
@@ -129,8 +129,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <script>
                     term = $("select#termSelector option:selected").val();
 
+                    document.cookie = "term = " + term;
+
                     $(document).on('change', 'select#termSelector', function() {
                         term = $("select#termSelector option:selected").val();
+                        document.cookie = "term = " + term;
                         loadRecCourseTags();
                     });
                 </script>
