@@ -172,7 +172,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     </div>
 
     <div class = "term1" id ="term4">
-        <div class = "tittle"><h2>Term4:</h2></div>
+        <div class = "tittle"><h2>Term3:</h2></div>
         <div class = "course_cards">
         <h3>CS210</h3>
         </div>
@@ -190,7 +190,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         </div>
 
         <div class = "term1" id ="term5">
-        <div class = "tittle"><h2>Term6:</h2></div>
+        <div class = "tittle"><h2>Term5:</h2></div>
         <div class = "course_cards">
         <h3>CS215</h3>
         </div>
