@@ -33,6 +33,25 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     header("location: login.php");
     exit;
 }
+
+// Define variables andd initialize with empty values
+$courseid = "";
+$courseid_msg = "";
+
+// Processing form data when form is submitted
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+    // Check if course_id is empty
+    if (empty(trim($_POST["courseid"]))) {
+        $courseid_msg = "Please enter course_id.";
+    } else {
+        $courseid = trim($_POST["courseid"]);
+        
+        // Validate credentials (format is correct)
+        $courseid_msg = "Entered: $courseid";
+    }
+
+}
 ?>
 
 <!doctype html>
@@ -98,19 +117,32 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     <div class="container">
         <!-- Top Section -->
         <section id="top">
-            <label for="term">Choose a term:</label>
-            <select id="termSelector">
-                <option value="202030" selected>Fall 2020</option>
-                <option value="202110">Winter 2021</option>
-            </select>
-            <script>
-                term = $("select#termSelector option:selected").val();
-
-                $(document).on('change', 'select#termSelector', function() {
+            <div style="width: 50%; float: left;">
+                <label for="term">Choose a term:</label>
+                <select id="termSelector">
+                    <option value="202030" selected>Fall 2020</option>
+                    <option value="202110">Winter 2021</option>
+                </select>
+                <script>
                     term = $("select#termSelector option:selected").val();
-                    loadRecCourseTags();
-                });
-            </script>
+
+                    $(document).on('change', 'select#termSelector', function() {
+                        term = $("select#termSelector option:selected").val();
+                        loadRecCourseTags();
+                    });
+                </script>
+            </div>
+
+            <div style="width: 50%; float: right;">
+                <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST">
+                    <label>Search A Class:</label>
+                    <input type="text" name="courseid" value="<?php echo $courseid; ?>">
+                    <input type="submit" value="Submit">
+                </form>
+                <span class="help-block">
+                    <?php echo $courseid_msg; ?>
+                </span>
+            </div>
         </section>
 
         <!-- Left Section -->
