@@ -1,9 +1,31 @@
 <?php
+/**
+ * A form to let user to reset password.
+ * 
+ * Requirments:
+ *  1) Required enter the student ID to reset password. 
+ *  2) Required the new password.
+ *  3) Required to confirm the new password.
+ * 
+ * php Steps:
+ *  1) If logged in, redirect to main page.
+ *  2) Required once vsbp_db_config.php
+ *  3) Define all variables.
+ *  4) If getting POST request, check each field legitimate.
+ *  5) For each field, if match validation, store, else print error message.
+ *  6) If no error messages, store new password into db. 
+ *  7) After 5 seconds, redirect to login page.
+ * 
+ * @version     1.0
+ * @link        http://15.223.123.122/vsbp/Code/reset-password.php
+ * @author      Jingkang Yang (sid: 200362586) <yang242j@uregina.ca>
+ */
+
 session_start(); // Initialize the session
 
 // Check if the user is already logged in, if yes then redirect him to Academic home page
 if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
-    header("location: academicBuilder_main.html");
+    header("location: academicBuilder_Main.php");
     exit;
 }
 
@@ -132,9 +154,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <div class="bar2"></div>
             <div class="bar3"></div>
         </div>
-        <a class="menu-list hidden" href="academicBuilder.html" disabled>Academic Schedule Builder</a>
+        <div class="session-required menu-list hidden dropdown">
+            <button class="dropbtn">Academic Schedule Builder</button>
+            <div class="dropdown-content">
+                <a class="academicList" href="academicBuilder_Main.php">General Student Status</a>
+                <a class="academicList" href="academicBuilder_Default.php">Default Schedule</a>
+                <a class="academicList" href="academicBuilder_Builder.php">Customized Schedule</a>
+            </div>
+        </div>
         <a class="menu-list hidden" href="semesterBuilder.php">Semester Schedule Builder</a>
-        <a class="menu-list hidden" href="courseDB.html">Course List Database</a>
+        <a class="menu-list hidden" href="courseDB.php">Course List Database</a>
         <div class="nav-right">
             <a href="login.php">LogIn</a>
             <a href="signup.php">SignUp</a>

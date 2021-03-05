@@ -1,4 +1,34 @@
 <?php
+/**
+ * A form to let user to signup an account.
+ * 
+ * Requirments:
+ *  1) Required using student ID to login. 
+ *  2) Required student name.
+ *  3) Campus default to "University of Regina".
+ *  4) Faculty default to "Engineering and Applied Science".
+ *  5) Program default to "Bachelor of Applied Science".
+ *  6) Major default to "Software Systems Engineering".
+ *  7) Minor not required, can be empty.
+ *  8) Concentration not required, can be empty.
+ *  9) Required Total Credit Hours with unit hours.
+ * 10) Required GPA with unit %
+ * 11) Required password
+ * 12) Required confirm password
+ * 
+ * php Steps:
+ *  1) Required once vsbp_db_config.php
+ *  2) Define all variables.
+ *  3) If getting POST request, check each field legitimate.
+ *  4) For each field, if match validation, store, else print error message.
+ *  5) If no error messages, store new account info into db and create personal grade table. 
+ *  6) After 5 seconds, redirect to login page.
+ * 
+ * @version     1.0
+ * @link        http://15.223.123.122/vsbp/Code/signup.php
+ * @author      Jingkang Yang (sid: 200362586) <yang242j@uregina.ca>
+ */
+
 // Include config file
 require_once "Model/vsbp_db_config.php";
 
@@ -213,9 +243,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <div class="bar2"></div>
             <div class="bar3"></div>
         </div>
-        <a class="menu-list hidden" href="academicBuilder.html" disabled>Academic Schedule Builder</a>
+        <div class="session-required menu-list hidden dropdown">
+            <button class="dropbtn">Academic Schedule Builder</button>
+            <div class="dropdown-content">
+                <a class="academicList" href="academicBuilder_Main.php">General Student Status</a>
+                <a class="academicList" href="academicBuilder_Default.php">Default Schedule</a>
+                <a class="academicList" href="academicBuilder_Builder.php">Customized Schedule</a>
+            </div>
+        </div>
         <a class="menu-list hidden" href="semesterBuilder.php">Semester Schedule Builder</a>
-        <a class="menu-list hidden" href="courseDB.html">Course List Database</a>
+        <a class="menu-list hidden" href="courseDB.php">Course List Database</a>
         <div class="nav-right">
             <a href="login.php">LogIn</a>
             <a class="nav-active" href="signup.php">SignUp</a>

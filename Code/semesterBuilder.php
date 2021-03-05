@@ -1,4 +1,30 @@
 <?php
+/**
+ * Simulate an interactive course registration.
+ * 
+ * Requirments:
+ *  1) User should be able to drag and drop desired courses to register. 
+ *  2) User should also be able to drag and drop unwanted courses to remove.
+ *  3) User should be able to review the history of all completed courses.
+ *  4) A list of recommended courses should be presented to the user.
+ *  5) After a successful (drag-n-drop) registration, a course-card with course general info apear automatically.
+ *  6) After a successful (drag-n-drop) registration, the calendar should be filled with corresponding section info.
+ *  7) After a successful (drag-n-drop) registration, the final exam list should be append automatically.
+ * 
+ * Recommended course requirements see http://15.223.123.122/vsbp/Code/Model/courseREC.php
+ * 
+ * php Steps:
+ *  1) Collect session variables. If not logged-in, redirect to login page.
+ * 
+ * @version     1.0
+ * @link        http://15.223.123.122/vsbp/Code/semesterBuilder.php
+ * @author      Jingkang Yang (sid: 200362586) <yang242j@uregina.ca>
+ * @param {boolean} $_SESSION["loggedin"]   Status of logged-in or not: true/false
+ * @param {integer} $_SESSION["sid"]        Student id
+ * @param {string}  $_SESSION["name"]       Student name
+ * @param {string}  $_SESSION['major']      Student major
+ */
+
 // Initialize the session
 session_start();
 
@@ -6,6 +32,26 @@ session_start();
 if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     header("location: login.php");
     exit;
+}
+
+// Define variables andd initialize with empty values
+$courseid = "";
+$courseid_msg = "";
+
+// Processing form data when form is submitted
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+    // Check if course_id is empty
+    if (empty(trim($_POST["courseid"]))) {
+        $courseid_msg = "Please enter course_id.";
+    } else {
+        $courseid = trim($_POST["courseid"]);
+        
+        // Validate conditions
+        $term_NUM = $_COOKIE['term'];
+        $courseid_msg = "Entered: $courseid in Term: $term_NUM";
+    }
+
 }
 ?>
 
@@ -31,7 +77,9 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     <script>
         var term = '';
         var courseList = [];
+        let presetCourses = ['Precalculus 30', 'Calculus 30', 'CHEM 30', 'Mathematics B30', 'Mathematics C30', 'AMTH 092', 'MATH 102', 'MATH 103'];
         var courseCompletedList = [];
+        courseCompletedList = courseCompletedList.concat(presetCourses);
     </script>
 </head>
 
@@ -48,7 +96,14 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             <div class="bar2"></div>
             <div class="bar3"></div>
         </div>
-        <a class="menu-list" href="academicBuilder_main.html">Academic Schedule Builder</a>
+        <div class="session-required menu-list dropdown">
+            <button class="dropbtn">Academic Schedule Builder</button>
+            <div class="dropdown-content">
+                <a class="academicList" href="academicBuilder_Main.php">General Student Status</a>
+                <a class="academicList" href="academicBuilder_Default.php">Default Schedule</a>
+                <a class="academicList" href="academicBuilder_Builder.php">Customized Schedule</a>
+            </div>
+        </div>
         <a class="menu-list nav-active" href="semesterBuilder.php">Semester Schedule Builder</a>
         <a class="menu-list" href="courseDB.php">Course List Database</a>
         <div class="nav-right">
@@ -60,69 +115,82 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         </div>
     </nav>
 
-    <section class="container">
-        <div class="top-section">
-            <label for="term">Choose a term:</label>
-            <select id="termSelector">
-                <option value="202030" selected>Fall 2020</option>
-                <option value="202110">Winter 2021</option>
-            </select>
-            <script>
-                term = $("select#termSelector option:selected").val();
-
-                $(document).on('change', 'select#termSelector', function() {
+    <div class="container">
+        <!-- Top Section -->
+        <section id="top">
+            <div style="width: 50%; float: left;">
+                <label for="term">Choose a term:</label>
+                <select id="termSelector">
+                    <option value="202030" selected>Fall 2020</option>
+                    <option value="202110">Winter 2021</option>
+                </select>
+                <script>
                     term = $("select#termSelector option:selected").val();
-                    loadRecCourseTags();
-                });
-            </script>
-        </div>
-        <div class="left-section">
+
+                    document.cookie = "term = " + term;
+
+                    $(document).on('change', 'select#termSelector', function() {
+                        term = $("select#termSelector option:selected").val();
+                        document.cookie = "term = " + term;
+                        loadRecCourseTags();
+                    });
+                </script>
+            </div>
+
+            <div style="width: 50%; float: right;">
+                <form onclick="return false" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST">
+                    <label>Search A Class:</label>
+                    <input type="text" name="courseid" value="<?php echo $courseid; ?>">
+                    <input type="submit" value="Submit">
+                </form>
+                <span class="help-block">
+                    <?php echo $courseid_msg; ?>
+                </span>
+            </div>
+        </section>
+
+        <!-- Left Section -->
+        <section id="left">
             <h3 class="section-title">Course List</h3>
-
-            <div class="dropZone" ondrop="dropL(event, term)" ondragover="allowDrop(event)" ondragenter="dragEnter(event)" ondragleave="dragLeave(event)"><img src="img/drop-here.png" style="max-height: 100%;max-width: 100%;" draggable="false"></div>
-
-            <script>
-                $(".dropZone").on("drop", function(event) {
-                    var courseName = event.originalEvent.dataTransfer.getData('Text');
-                    console.log(courseName + ' Selected');
-
-                    // If this course Name is NOT in the courseList, push
-                    if ($.inArray(courseName, courseList) === -1) {
-                        courseList.push(courseName);
-                    } else {
-                        console.log(courseName + " already exist in courseList { " + courseList + " }");
-                    }
-                });
-            </script>
-
+            <div id="courseList_Containor"></div>
             <!--
             // Test tags
             <div class="courseTag noDrop" id="ense400" draggable="true" ondragstart="drag(event)">ENSE400</div>
             <div class="courseTag noDrop" id="ense496ac" draggable="true" ondragstart="drag(event)">ENSE496AC</div>
             <div class="courseTag noDrop" id="ense496ad" draggable="true" ondragstart="drag(event)">ENSE496AD</div>
             -->
-        </div>
-        <div class="middle-section" id="courseCardList">
+        </section>
+
+        <!-- Middle Section -->
+        <section id="middle">
             <h3 class="section-title">Course Detail Info</h3>
-            <div class="courseInfo" id="exampleDiv">
-                <h2>Course Tag</h2>
-                <h4>Course Title</h4>
-                <p>Course Detail Info: **** **** *** ** * * * **</p>
+            <div id="courseCard_Containor">
+                <div class="courseInfo" id="exampleCard">
+                    <h2>Course Tag</h2>
+                    <h4>Course Title</h4>
+                    <p>Course Detail Info: **** **** *** ** * * * **</p>
+                </div>
             </div>
-        </div>
-        <script>
-            $(document).on('focusin', 'select#sectionSelector', function(){
-                //console.log("Saving value " + $(this).val());
-                $(this).data('val', $(this).val());
-            }).on('change', 'select#sectionSelector', function() {
-                let oldCombo = $(this).data('val');
-                let newCombo = $("select#sectionSelector option:selected").val();
-                let cardId = $(this).closest("div").attr("id");
-                let cardStyle = $(this).closest("div").attr("style");
-                changeCalendarAndExam(oldCombo, newCombo, cardId, cardStyle, term);
-            });
-        </script>
-        <div class="right-section">
+            <script>
+                var selected;
+                $(document).on('focus', 'select#sectionSelector', function(){
+                    //console.log("Saving value " + $(this).val());
+                    selected = $(this).val();
+                }).on('change', 'select#sectionSelector', function() {
+                    let oldCombo = selected;
+                    let newCombo = $(this).val();
+                    let cardId = $(this).closest("div").attr("id");
+                    let cardStyle = $(this).closest("div").attr("style");
+                    //console.log(oldCombo, newCombo, cardId, cardStyle, term);
+                    if (oldCombo != newCombo)
+                        changeCalendarAndExam(oldCombo, newCombo, cardId, cardStyle, term);
+                    selected = newCombo
+                });
+            </script>
+        </section>
+        
+        <!-- Right Section -->
+        <section id="right">
             <h3 class="section-title">Weekly Schedule & Exam Date</h3>
             <div class="Calendar">
                 <div id='calendar'></div>
@@ -131,9 +199,13 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                 <p>Final Exam Date:</p>
                 <ul id="examDate_ul"></ul>
             </div>
-        </div>
-        <div class="stick-bottom">
-            <div class="bottom-left" id="course_completed">
+        </section>
+
+        <!-- Bottom Section -->
+        <section id="bottom" ondrop="dragEnd()" ondragover="allowDrop(event)">
+                
+            <!-- Bottom Left Division -->
+            <div class="bottom_left" id="course_completed">
                 Courses Completed: <br>
                 <script>
                     $(document).ready( function() {
@@ -166,34 +238,16 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                 <div class="courseTag noDrag" id="ENEL 417" draggable="false">ENEL 417</div>
                 -->
             </div>
-            <div id="course_recommended" class="bottom-right" ondrop="dropBR(event)" ondragover="allowDrop(event)" ondragenter="dragEnter(event)" ondragleave="dragLeave(event)">
+
+            <!-- Bottom Right Division -->
+            <div class="bottom_right" id="course_recommended">
                 Courses To Take: <br>
                 <script>
-                    $(".bottom-right").on("drop", function(event) {
-                        var courseName = event.originalEvent.dataTransfer.getData('Text');
-                        console.log(courseName + ' Unselected');
-
-                        // on drop, remove course Name from courseList
-                        const index = courseList.indexOf(courseName);
-                        if (index > -1) {
-                            courseList.splice(index, 1);
-                        }
-
-                        appendExampleDiv();
-                    });
-
-                    function appendExampleDiv() {
-                        // if classList is empty, add example div
-                        if (courseList.length == 0 && $("#exampleDiv").length == 0) {
-                            $("#courseCardList").append("<div class='courseInfo' id='exampleDiv'> <h2> Course Tag </h2> <h4> Course Title </h4> <p> Course Detail Info: **** ** ** ** * ** * * * ** </p> </div>");
-                        }
-                    }
-
                     function loadRecCourseTags() {
                         // Remove all previously displayed tags
-                        $(".bottom-right .courseTag").remove();
-                        $(".left-section .courseTag").remove();
-                        $(".middle-section .courseCard").remove();
+                        $(".bottom_right .courseTag").remove();
+                        $("section#left .courseTag").remove();
+                        $("section#middle .courseCard").remove();
                         // Remove all previously displayed calendar events and exams
                         $.each(courseList, function(key, course) {
                             calendar.removeAllEvents();
@@ -202,7 +256,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                         // Empty the courseList
                         courseList = [];
                         // Append example course card.
-                        appendExampleDiv();
+                        appendExampleCard();
                         // Get the JSON file generated by courseREC.php
                         fetchRecJSON(courseCompletedList, major="<?php echo htmlspecialchars($_SESSION['major']); ?>", term, maxNum=10).done(function (result) {
                             var REC_json_obj = JSON.parse(result);
@@ -218,7 +272,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                         });
                     }
 
-                    $(".bottom-right").ready( function() {
+                    $(".bottom_right").ready( function() {
                         loadRecCourseTags();
                     });
                 </script>
@@ -231,8 +285,39 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                 <div class="courseTag noDrop" id="ENEL 417" draggable="true" ondragstart="drag(event)">ENEL 417</div>
                 -->
             </div>
+        </section>
+
+        <!-- Shadow Layer Division -->
+        <div id="shadowLayer" ondrop="dragEnd()" ondragover="allowDrop(event)">
+            <div class="dropZone L" ondrop="dropL(event, term); dragEnd();" ondragover="allowDrop(event)"></div>
+            <div class="dropZone BR" ondrop="dropBR(event); dragEnd();" ondragover="allowDrop(event)"></div>
+            <script>
+                $(".dropZone.L").on("drop", function(event) {
+                    var courseName = event.originalEvent.dataTransfer.getData('Text');
+                    console.log(courseName + ' Selected');
+
+                    // If this course Name is NOT in the courseList, push
+                    if ($.inArray(courseName, courseList) === -1) {
+                        courseList.push(courseName);
+                    } else {
+                        console.log(courseName + " already exist in courseList { " + courseList + " }");
+                    }
+                });
+
+                $(".dropZone.BR").on("drop", function(event) {
+                    var courseName = event.originalEvent.dataTransfer.getData('Text');
+                    console.log(courseName + ' Unselected');
+
+                    // on drop, remove course Name from courseList
+                    const index = courseList.indexOf(courseName);
+                    if (index > -1) {
+                        courseList.splice(index, 1);
+                    }
+                    appendExampleCard();
+                    });
+            </script>
         </div>
-    </section>
+    </div>
 
     <footer>
         <script src="js/main.js"></script>
@@ -248,8 +333,11 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             </cite>
             Note: <br>
         </p>
-        <p class="info-link"><a href="homePage.php">About Us</a><a href="View/api_test.html">API Test</a></p>
-        <div id="test">CLICK</div>
+        <p class="info-link">
+            <a href="homePage.php">About Us</a>
+            <a href="View/api_test.html">API Test</a>
+            <a class="" id="test">Test CLICK</a>
+        </p>
         <script>
             $("#test").click(function() {
                 var myObj = {

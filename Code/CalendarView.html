@@ -1,0 +1,183 @@
+<!-- <?php
+session_start(); // Initialize the session
+?> -->
+
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>VSB_Plus : CourseDB</title>
+    <meta name="description" content="The HTML5 Herald">
+    <meta name="author" content="team_vsbp">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="shortcut icon" href="#">
+    <link rel="stylesheet" href="css/canlendar.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(".nav-right-2").hide();
+        });
+    </script>
+</head>
+
+<body>
+
+    <!-- <?php
+    // Check if the user is logged in, if not then hide nav-right div
+    if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
+    ?>
+        <script>
+            $(document).ready(function() {
+                $(".nav-right").hide();
+                $(".nav-right-2").show();
+                $(".session-required").hide();
+            });
+        </script>
+    <?php } ?> -->
+
+    <header>
+        <a href="https://www.uregina.ca"><img src="img/logo.png" class="logo" alt="UofR"></a>
+        <h1>Visual Schedule Builder Plus</h1>
+    </header>
+
+    <nav>
+        <div class="menu-icon" onclick="menuFunc1(this); menuFunc2('menu-list');">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+        <div class="session-required menu-list dropdown">
+            <button class="dropbtn">Academic Schedule Builder</button>
+            <div class="dropdown-content">
+                <a class="academicList" href="academicBuilder_Main.php">General Student Status</a>
+                <a class="academicList" href="academicBuilder_Default.php">Default Schedule</a>
+                <a class="academicList" href="academicBuilder_Builder.php">Customized Schedule</a>
+            </div>
+        </div>
+        <a class="session-required menu-list" href="semesterBuilder.php">Semester Schedule Builder</a>
+        <a class="menu-list nav-active" href="courseDB.php">Course List Database</a>
+        <div class="nav-right">
+            <a id="usertext" onclick="addonSwitchFunc()"><?php echo htmlspecialchars($_SESSION["name"]); ?></a>
+            <div id="addon-menu">
+                <a><?php echo htmlspecialchars($_SESSION["sid"]); ?></a>
+                <a href="Model/logout.php">Logout</a>
+            </div>
+        </div>
+        <div class="nav-right-2">
+            <a href="login.php">LogIn</a>
+            <a href="signup.php">SignUp</a>
+        </div>
+    </nav>
+
+    <div class="table-responsive">
+        <table>
+
+            <colgroup>
+                <col width="150">
+                <col width="200">
+                <col width="200">
+                <col width="200">
+                <col width="200">
+                <col width="200">
+                <col width="200">
+                <!-- <col width="200"> -->
+            </colgroup>
+
+            <thead>
+                <tr id="titleRow">
+                    <th></th>
+                    <th>Term 1<br> 2018 Fall<br>(Done)</th>
+                    <th>Term 2<br> 2018 winter<br>(Done)</th>
+                    <th>Term 3<br> 2018 Fall<br>(Done)</th>
+                    <th>Term 4<br> 2018 Fall<br>(Done)</th>
+                    <th>Term 5<br> 2018 Fall<br>(Done)</th>
+                    <!-- <th>Term 6<br> 2018 Fall<br>(Done)</th> -->
+                    <th id='addColButton'> <div id="dashLine"> <div id="addCol">+ Add Semester</div> </div></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr id="defaultRow">
+                    <td>Default Courses</td>
+                    <td align="left" valign="top">
+                        <div class="cell" id="default_term1" value="fall">
+                            <div class="block showDetail" value="BUS 210" draggable="true" id="bus210">
+                                <div class="short_name"><span class="toLeft">+</span> BUS 210 <span class="toRight dot"></span></div>
+                                <ul>
+                                    <li><b>Introduction to Marketing</b></li>
+                                    <li><b>Prereq:</b> BUS 100 (or ADMN 100) and BUS 260 (or ADMN 260). Concurrent enrolment is allowed in BUS 260. </li>
+                                </ul>
+                            </div>
+                            <div class="block" value="BUS 210" draggable="true" id="bus2102">
+                                <span class="toLeft">+</span> BUS 210
+                                <div></div>
+                            </div>
+                            <div class="block" value="BUS 210">
+                                <span class="toLeft">+</span> BUS 210
+                                <div></div>
+                            </div>
+                            <div class="block" value="BUS 210">
+                                <span class="toLeft">+</span> BUS 210
+                                <div></div>
+                            </div>
+                            <div class="block" value="BUS 210">
+                                <span class="toLeft">+</span> BUS 210
+                                <div></div>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="cell"></div>
+                    </td>   
+                    <td><div class="cell"></div></td> 
+                    <!-- <td></td>  
+                    <td></td>
+                    <td></td>  -->
+                </tr>
+                <tr id="scheduleRow">
+                    <td>Course Schedules</td>
+                    <td>
+                        <div class="cell"></div>
+                    </td>
+                    <td> <div class="cell"></div></td>    
+                    <!-- <td></td> 
+                    <td></td> 
+                    <td></td> 
+                    <td></td>  -->
+                </tr>            
+            </tbody>
+        </table>
+    </div>
+
+    <footer style="padding-bottom: 0%;">
+        <script src="js/main.js"></script>
+        <script src="js/canlendar.js"></script>
+
+        <!-- Change the default selected course by pass the data(courseId) in url -->
+        <!-- <?php 
+            if (isset($_REQUEST["courseId"]) and $_REQUEST["courseId"] != '') {
+                $short_name = $_REQUEST["courseId"];
+                echo "<script> var defaultShow = false;
+                selected('" . $short_name . "'); </script>";
+            }
+        ?> -->
+        <!-- <script src="js/genChart.js"></script> -->
+
+        <p class="copyright">Copyright &copy; Sep. 2020 to
+            <script>
+                document.write(new Date().getFullYear())
+            </script> UofR VSB_Plus Capstone Group All Rights Reserved<br>
+            <cite>
+                Credit:
+            </cite>
+        </p>
+        <p class="info-link"><a href="homePage.php">About Us</a></p>
+    </footer>
+</body>
+
+</html>

@@ -1,10 +1,36 @@
 <?php
+/**
+ * A form to let user to login.
+ * 
+ * Requirments:
+ *  1) Required enter the student ID to login. 
+ *  2) Required the password.
+ * 
+ * php Steps:
+ *  1) If logged in, redirect to main page.
+ *  2) Required once vsbp_db_config.php
+ *  3) Define all variables.
+ *  4) If getting POST request, check each field legitimate.
+ *  5) For each field, if match validation, store, else print error message.
+ *  6) If no error messages, and password verified, start session. 
+ *  7) Redirect to main page.
+ * 
+ * @version     1.0
+ * @link        http://15.223.123.122/vsbp/Code/login.php
+ * @author      Jingkang Yang (sid: 200362586) <yang242j@uregina.ca>
+ * @param       {boolean}       $_SESSION["loggedin"]       Status of logged-in or not: true/false
+ * @param       {integer}       $_SESSION["sid"]            Student id
+ * @param       {string}        $_SESSION["password"]       Student password
+ * @param       {string}        $_SESSION["name"]           Student name
+ * @param       {string}        $_SESSION["major"]          Student major
+ */
+
 // Initialize the session
 session_start();
 
 // Check if the user is already logged in, if yes then redirect him to Academic home page
 if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
-    header("location: academicBuilder_main.html");
+    header("location: academicBuilder_Main.php");
     exit;
 }
 
@@ -31,7 +57,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (empty(trim($_POST["password"]))) {
         $password_err = "Please enter your password.";
     } else {
-        $password = trim($_POST["password"]);
+        $password = trim($_POST["password"]);  
     }
 
     // Validate credentials (format is correct)
@@ -64,11 +90,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             // Store data in session variables
                             $_SESSION["loggedin"] = true;
                             $_SESSION["sid"] = $studentid;
+                            $_SESSION["password"] = $password;
                             $_SESSION["name"] = $name;
                             $_SESSION["major"] = $major;
 
                             // Redirect user to welcome page
-                            header("location: academicBuilder_main.html");
+                            header("location: academicBuilder_Main.php");
                         } else {
                             // Display an error message if password is not valid
                             $password_err = "The password was not valid.";
@@ -122,9 +149,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <div class="bar2"></div>
             <div class="bar3"></div>
         </div>
-        <a class="menu-list hidden" href="academicBuilder.html" disabled>Academic Schedule Builder</a>
+        <div class="session-required menu-list hidden dropdown">
+            <button class="dropbtn">Academic Schedule Builder</button>
+            <div class="dropdown-content">
+                <a class="academicList" href="academicBuilder_Main.php">General Student Status</a>
+                <a class="academicList" href="academicBuilder_Default.php">Default Schedule</a>
+                <a class="academicList" href="academicBuilder_Builder.php">Customized Schedule</a>
+            </div>
+        </div>
         <a class="menu-list hidden" href="semesterBuilder.php">Semester Schedule Builder</a>
-        <a class="menu-list hidden" href="courseDB.html">Course List Database</a>
+        <a class="menu-list hidden" href="courseDB.php">Course List Database</a>
         <div class="nav-right">
             <a class="nav-active" href="login.php">LogIn</a>
             <a href="signup.php">SignUp</a>

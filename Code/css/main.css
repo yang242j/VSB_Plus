@@ -6,7 +6,7 @@ body {
 
 header {
     overflow: hidden;
-    background-color: #f1f1f1;
+    /* background-color: #f1f1f1; */
     padding: 10px 0px;
 }
 
@@ -17,9 +17,9 @@ header .logo {
     margin-left: 5%;
 }
 
-header .logo:hover {
+/* header .logo:hover {
     background-color: #ddd;
-}
+} */
 
 h1 {
     margin-left: 15%;
@@ -49,13 +49,14 @@ nav a {
     font-size: 17px;
 }
 
-nav a:hover {
+nav a:hover,
+nav .dropdown:hover .dropbtn {
     background-color: #ddd;
     color: black;
     cursor: pointer;
 }
 
-nav a.nav-active {
+nav .nav-active {
     background-color: #4CAF50;
     color: white;
 }
@@ -97,6 +98,47 @@ nav .nav-right-2 {
 }
 
 /********************************/
+nav .dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+nav .dropdown .dropbtn {
+    border: none;
+    outline: none;
+    background-color: inherit;
+    font-family: inherit;
+    padding: 14px 16px;
+    color: #f2f2f2;
+    text-align: center;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+nav .dropdown .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+nav .dropdown .dropdown-content .academicList {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+}
+
+nav .dropdown .dropdown-content .academicList:hover {
+    background-color: darkseagreen;
+}
+
+nav .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/********************************/
 nav .nav-right #addon-menu {
     display: none;
     overflow: auto;
@@ -106,6 +148,11 @@ nav .nav-right #addon-menu {
     right: 0;
 }
 /********************************/
+
+body {
+    background-repeat: no-repeat;
+    background-image: linear-gradient(#B2D9E7, white, white)
+}
 
 body .container {
     margin-top: 2%;

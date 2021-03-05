@@ -1,0 +1,227 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <!-- icon library -->
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <!-- icon library -->
+
+    <title>VSB_Plus : Academic</title>
+    <meta name="description" content="The HTML5 Herald">
+    <meta name="author" content="team_vsbp">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="shortcut icon" href="#">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/academicBuilderNCDetail.css">
+</head>
+
+<body>
+
+    <header>
+        <a href="https://www.uregina.ca"><img src="img/logo.png" class="logo" alt="UofR"></a>
+        <h1>Visual Schedule Builder Plus</h1>
+    </header>
+
+    <nav>
+        <div class="menu-icon" onclick="menuFunc1(this); menuFunc2();">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+        <a class="menu-list nav-active" href="academicBuilder_main.html">Academic Schedule Builder</a>
+        <a class="menu-list" href="semesterBuilder.html">Semester Schedule Builder</a>
+        <a class="menu-list" href="courseDB.html">Course List Database</a>
+        <div class="nav-right">
+            <a id="usertext" onclick="addonSwitchFunc()">php_userName</a>
+            <div id="addon-menu">
+                <a>php_SID</a>
+                <a href="#Logout">Logout</a>
+            </div>
+        </div>
+    </nav>
+
+    <h2>
+        Not Compeleted Course Detail Page
+    </h2>
+
+    <button class="view" id="viewButton" onclick="location.href ='academicBuilder_main.html'"><i class="fa fa-reply"
+            style="font-size:24px"></i>
+        <span class="viewTips">back to main page</span>
+    </button>
+
+    <section class="status">
+        <div class="course-status">
+                <div class="course-complete">
+                <div class="autoscroll">
+                <h2>Course Left</h2>
+                <div class="course-card">
+                    <h3>ENGL 100</h3>
+                    <p>- System Engineering Design Project</p>
+                    <p>- Term : 2019</p>
+                    <p>- Lab : None</p>
+                    <button class="course-card" id="course-card">Show More</button>
+
+                </div>
+                <div class="course-card">
+                    <h3>ENGL 100</h3>
+                    <p>- System Engineering Design Project</p>
+                    <p>- Term : 2019</p>
+                    <p>- Lab : None</p>
+
+                    <button class="course-card" id="course-card">Show More</button>
+                </div>
+                <div class="course-card">
+                    <h3>ENGL 100</h3>
+                    <p>- System Engineering Design Project</p>
+                    <p>- Term : 2019</p>
+                    <p>- Lab : None</p>
+
+                    <button class="course-card" id="course-card">Show More</button>
+                </div>
+                <div class="course-card">
+                    <h3>ENGL 100</h3>
+                    <p>- System Engineering Design Project</p>
+                    <p>- Term : 2019</p>
+                    <p>- Lab : None</p>
+                    <button class="course-card" id="course-card">Show More</button>
+                </div>
+                </div>
+                </div>
+            
+              &nbsp;
+              &nbsp;
+              &nbsp;
+              &nbsp;
+              &nbsp;
+              &nbsp;
+              &nbsp;
+              &nbsp;
+            
+         
+            <div class="dropdown">
+              <span><h2 class="block">Course In Progess</h2></span>
+              <div class="dropdown-content">
+              <div class="course-complete">
+              <div class="autoscroll">
+               <div class="course-card">
+                    <h3>ENGL 100</h3>
+                    <p>- System Engineering Design Project</p>
+                    <p>- Term : 2019</p>
+                    <p>- Lab : None</p>
+                    <button class="course-card" id="course-card">Show More</button>
+                </div>
+
+                <div class="course-card">
+                    <h3>ENGL 100</h3>
+                    <p>- System Engineering Design Project</p>
+                    <p>- Term : 2019</p>
+                    <p>- Lab : None</p>
+                    <p>- Time: xxxx</p>
+                    <p>- Instructor: xxxx xxxx</p>
+                    <p>- Exams : xxxxxxxx</p>
+                    <p id="distribution">- Distribution : Lorem ipsum dolor sit amet consecteturhil dignissimos con non,
+                        nisi ad corrupti eum molestias hic. Porro, suscipit! </p>
+                    <button class="course-card" id="course-card">Show Less</button>
+                </div>
+
+                <div class="course-card">
+                    <h3>ENGL 100</h3>
+                    <p>- System Engineering Design Project</p>
+                    <p>- Term : 2019</p>
+                    <p>- Lab : None</p>
+                    <button class="course-card" id="course-card">Show More</button>
+                </div>
+
+              </div>
+              </div>
+              </div>
+              
+            </div>
+           
+              
+              &nbsp;
+              &nbsp;
+              &nbsp;
+              &nbsp;
+              &nbsp;
+              &nbsp;
+              &nbsp;
+              &nbsp;
+            
+            <div class="dropdown">
+              <span><h2 class="block">Course Completed</h2></span>
+              <div class="dropdown-content">
+              <div class="course-complete">
+              <div class="autoscroll">
+                <div class="course-card">
+                    <h3>ENGL 100</h3>
+                    <p>- System Engineering Design Project</p>
+                    <p>- Term : 2019</p>
+                    <p>- Lab : None</p>
+                    <button class="course-card" id="course-card">Show More</button>
+
+                </div>
+                <div class="course-card">
+                    <h3>ENGL 100</h3>
+                    <p>- System Engineering Design Project</p>
+                    <p>- Term : 2019</p>
+                    <p>- Lab : None</p>
+
+                    <button class="course-card" id="course-card">Show More</button>
+                </div>
+                <div class="course-card">
+                    <h3>ENGL 100</h3>
+                    <p>- System Engineering Design Project</p>
+                    <p>- Term : 2019</p>
+                    <p>- Lab : None</p>
+
+                    <button class="course-card" id="course-card">Show More</button>
+                </div>
+                <div class="course-card">
+                    <h3>ENGL 100</h3>
+                    <p>- System Engineering Design Project</p>
+                    <p>- Term : 2019</p>
+                    <p>- Lab : None</p>
+                    <button class="course-card" id="course-card">Show More</button>
+                </div>
+
+              </div>
+              </div>
+              </div>
+              </div>
+
+                  
+            </div>
+            </div>
+
+        <div class="programDiv">
+            <h2>Program</h2>
+            <h3>Total Credit Hours:136(46 courses)</h3>
+            <div class="course-card">
+                <img class="photo" src="img/basic-pie-chart.png" width="300"></img>
+            </div>
+            <div class="course-card">
+                <img class="photo" src="img/trend_chart_sample.svg" width="300"></img>
+            </div>
+        </div>
+        </div>
+
+        </div>
+    </section>
+
+
+    <footer>
+        <script src="js/main.js"></script>
+        <p class="copyright">Copyright &copy; Sep. 2020 to
+            <script>document.write(new Date().getFullYear())</script> UofR VSB_Plus Capstone Group All Rights Reserved<br>
+            <cite>
+                Credit:
+            </cite>
+        </p>
+        <p class="info-link"><a href="homePage.html">About Us</a></p>
+    </footer>
+</body>

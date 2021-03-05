@@ -1,17 +1,61 @@
+/* All you can use */
+#shadowLayer {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+}
+
+.dropZone {
+    /* Used if the image is unavailable */
+    background-color: #cccccc;
+    /* Center the image */
+    background-position: center;
+    /* Do not repeat the image */
+    background-repeat: no-repeat;
+    /* Resize the background image to be contained within the container */
+    background-size: contain;
+    position: fixed;
+    z-index: 3;
+    height: 30%;
+    width: 30%;
+    border: 2px dashed black;
+}
+
+.L {
+    /* The image used */
+    background-image: url('../img/drop-here.png');
+    top: 35%;
+    left: 35%;
+}
+
+.BR {
+    /* The image used */
+    background-image: url('../img/trashCan.jpg');
+    top: 35%;
+    left: 35%;
+}
+
 /* Body container */
 body .container {
-    background-color: #f1f1f1;
+    /* background-color: #f1f1f1; */
 }
 
 /*Top Section*/
-body .container .top-section {
+body .container section#top {
     width: 100%;
     height: 100%;
     float: left;
 }
 
 /*Left Section*/
-body .container .left-section {
+body .container section#left {
     width: 13%;
     height: 100%;
     float: left;
@@ -20,20 +64,25 @@ body .container .left-section {
     /*outline: 3px solid green;*/
 }
 
-body .container .left-section .section-title {
+body .container section#left .section-title {
     text-align: center;
 }
 
-body .container .left-section .courseTag {
-    margin: 10px auto 10px;
+body .container section#left #courseList_Containor {
+    margin: 10px auto 0;
+    border: 3px solid black;
+    min-height: 142.5px;
+    min-width: 130px;
 }
 
-body .container .left-section .dropZone {
-    margin: 10px;
+body .container section#left .courseTag {
+    margin: 10px auto 10px;
+    position: relative;
+    z-index: 3;
 }
 
 /*Middle Section*/
-body .container .middle-section {
+body .container section#middle {
     width: 42%;
     height: 100%;
     float: left;
@@ -41,25 +90,25 @@ body .container .middle-section {
     /*outline: 3px solid green;*/
 }
 
-body .container .middle-section .section-title {
+body .container section#middle .section-title {
     width: 85%;
     margin-left: auto;
     margin-right: auto;
 }
 
-body .container .middle-section .courseInfo {
+body .container section#middle .courseInfo {
     margin: 10px auto 10px;
     width: 90%;
     border: 3px solid black;
     padding: 0 10px 0;
 }
 
-body .container .middle-section .courseInfo #sectionSelector {
+body .container section#middle .courseInfo #sectionSelector {
     float: right;
 }
 
 /*Right Section*/
-body .container .right-section {
+body .container section#right {
     width: 45%;
     height: 100%;
     float: right;
@@ -67,18 +116,18 @@ body .container .right-section {
     /*outline: 3px solid green;*/
 }
 
-body .container .right-section .section-title {
+body .container section#right .section-title {
     text-align: center;
 }
 
-body .container .right-section .Calendar {
+body .container section#right .Calendar {
     margin: 10px auto 10px;
     width: 90%;
     border: 3px solid black;
     padding: 5px 15px 5px;
 }
 
-body .container .right-section .Date {
+body .container section#right .Date {
     margin: 10px auto 10px;
     width: 90%;
     border: 3px solid black;
@@ -86,9 +135,9 @@ body .container .right-section .Date {
 }
 
 /*Bottom Section*/
-body .container .stick-bottom {
+body .container section#bottom {
     position: fixed;
-    z-index: 999;
+    z-index: 2;
     border: 2px solid black;
     bottom: 0;
     width: 95%;
@@ -97,7 +146,7 @@ body .container .stick-bottom {
     background-color: white;
 }
 
-body .container .bottom-left {
+body .container .bottom_left {
     flex: 1;
     /* additionally, equal width */
     float: left;
@@ -106,16 +155,16 @@ body .container .bottom-left {
     min-height: 90px;
 }
 
-body .container .bottom-left .courseTag {
+body .container .bottom_left .courseTag {
     float: left;
     margin: 5px 10px 5px;
 }
 
-body .container .bottom-left .noDrag:hover {
+body .container .bottom_left .noDrag:hover {
     cursor: not-allowed;
 }
 
-body .container .bottom-right {
+body .container .bottom_right {
     flex: 1;
     /* additionally, equal width */
     float: right;
@@ -124,7 +173,7 @@ body .container .bottom-right {
     min-height: 90px;
 }
 
-body .container .bottom-right .courseTag {
+body .container .bottom_right .courseTag {
     float: left;
     margin: 5px 10px 5px;
 }

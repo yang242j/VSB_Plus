@@ -70,22 +70,6 @@ function addCourse(course_json, index){
 function courseSelect(event){
     var short_name = event.getAttribute("value");
     selected(short_name);
-    // var xmlhttp = new XMLHttpRequest();
-    // xmlhttp.onreadystatechange = function(){
-    //     if (this.status == 404){
-    //         document.getElementById("message").innerHTML = short_name + " cannot be found";
-    //     }
-    //     if (this.readyState == 4 && this.status == 200){
-    //         var jsonRsp = JSON.parse(this.responseText);
-    //         setCourse(jsonRsp);
-    //         document.getElementById("message").innerHTML = short_name + " has been selected";
-    //         showGraph(short_name);
-    //     }
-    // };
-    // // xmlhttp.open("GET", "getCourse.php?short_name=" + short_name, false); // Get the data from database by the server php file
-    // var json_url = "JSON/202020/" + short_name + ".json"; //Get the course information from the locat 
-    // xmlhttp.open("GET", json_url, false);
-    // xmlhttp.send();
 }
 
 function selected(short_name){
@@ -113,11 +97,9 @@ function setCourse(jsonRsp){
     "<ul>" +
         "<li><span class='bold'>Course Name</span>: <span id='fullName'>" + jsonRsp.title + "</span> </li>" +
         "<li>***<span class='bold'>Prerequisites</span>: <span id='preReqClass'>" + jsonRsp.prerequisite + "</span> ***</li>" +
-        // <li>Labels: Project Class, *****</li>
-        "<li><span class='bold'>Course Description</span>: " + jsonRsp.description + "</li>" + "</ul>" + "<div id='graph' class='graph_size'></div>"; 
-        // "<li>Professor have taught: </li>"
-    
-
+        "<li><span class='bold'>Course Description</span>: " + jsonRsp.description + "</li>" + "</ul>" + 
+        "<h2 class='inline' id='graph_label'>Num of course in semesters</h2> " + 
+        "<div id='graph' class='graph_size'></div>"; 
     document.getElementById("popView").innerHTML = detail;
 }
 

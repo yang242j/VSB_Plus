@@ -1,0 +1,125 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.table-responsive{
+    /* height: 80vw; */
+    max-width: 95vw;
+    overflow: auto;
+    margin: 50px auto;
+    border: solid 1px rgb(0, 0, 0);
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: 1px solid #999;
+    table-layout: fixed;
+    /* text-align:center; */
+}
+
+th,td{
+    border: 1px solid #999;
+    height: 20vh;
+    /* overflow: scroll; */
+    
+}
+td{
+    /* overflow: hidden; */
+    height: 33vh;
+    padding: 7px 7px;
+    /* white-space: nowrap;  */
+    /* text-overflow: ellipsis;  */
+}
+
+th{
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis; 
+}
+
+#dashLine{
+    height: 90%;
+    width: 90%;
+    margin-left: 5%;
+    border: dashed 1px #111;
+}
+
+#addCol{
+    margin-top: 25%;
+}
+
+.cell{
+    height: 33vh;
+    overflow-y: scroll;
+}
+
+.block{
+    margin-top: 8px;
+    border: solid 1px rgb(56, 55, 55);
+    height: 4vh;
+    font-size: 3vh;
+    line-height:140%;
+    overflow: hidden;
+    /* overflow-y: hidden; */
+    /* background-color: rgb(241, 193, 166); */
+}
+
+.short_name{
+    border: solid 1px #111;
+}
+
+.showDetail{
+    height: auto;
+}
+
+ul li{
+    padding: 1%;
+    font-size: 70%;
+    line-height: 100%;
+}
+
+ul{
+    margin-top: 3%;
+}
+
+li{
+    margin-left: -10%;
+}
+
+.scroll{
+    overflow: scroll;
+    scrollbar-width: thin;
+}
+
+.toLeft{
+    margin-right: 15%;
+    padding: 0px 3%;
+}
+
+.toRight{
+    float: right;
+    margin-right: 4%;
+}
+
+.dot{
+    width:15px;
+    height:15px;
+    border-radius:50%;
+    background-color:rgb(150, 233, 81);
+    display: block;
+    margin-top: 3%;
+}
+
+.text_center{
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    text-align:center;
+}
+
+.inline{
+    display: inline;
+}
+

@@ -22,6 +22,8 @@ function menuFunc2(x) {
     }
 
 }
+
+// Help to parse the json datas
 function allParse(response){
     var result = [];
     var all = JSON.parse(response);
@@ -31,3 +33,13 @@ function allParse(response){
     }
     return result;
 }
+
+// Example to get basic infomation by using AJAX
+function getBasicInfo($sid, $jsonResult){
+    $.post('./Api.php/Student/BasicInfo', {'sid': $sid}, function(data){
+        json = JSON.parse(data)
+        console.log(json["data"].name);
+        $jsonResult =  json["data"];
+    });
+}
+

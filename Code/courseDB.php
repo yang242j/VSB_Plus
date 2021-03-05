@@ -1,4 +1,30 @@
 <?php
+/**
+ * The database visualization page embeded with search and filter function.
+ * 
+ * Requirments:
+ *  1) User should be able to search the course info by entering course short name (course id).
+ *  2) User should be able to filter the desired courses by faculty and year of course. 
+ *  3) User should be able to swap the display between large course card and small course card.
+ *  4) For the most area of the screen right hand side, display the selected course detail information.
+ *  5) Course details info should contains the name, prerequisites, description, course general opening status of each section. 
+ *  6) May also contain the lab info. 
+ * 
+ * php Steps:
+ *  1) Start session.
+ *  2) If logged in, display logged in user info at navigation right.
+ *  3) If not logged in, display login and signup button at navigation right.
+ *  4) Guest can have full functionality of this page.
+ *  5) Other pages are either hidden or disabled for guest.
+ * 
+ * @version     1.0
+ * @link        http://15.223.123.122/vsbp/Code/courseDB.php
+ * @author      Xinyu Liu (sid: 200362878) <liu725@uregina.ca>
+ * @param       {boolean}       $_SESSION["loggedin"]       Status of logged-in or not: true/false
+ * @param       {integer}       $_SESSION["sid"]            Student id
+ * @param       {string}        $_SESSION["name"]           Student name
+ */
+
 session_start(); // Initialize the session
 ?>
 
@@ -52,7 +78,14 @@ session_start(); // Initialize the session
             <div class="bar2"></div>
             <div class="bar3"></div>
         </div>
-        <a class="session-required menu-list" href="academicBuilder_main.html">Academic Schedule Builder</a>
+        <div class="session-required menu-list dropdown">
+            <button class="dropbtn">Academic Schedule Builder</button>
+            <div class="dropdown-content">
+                <a class="academicList" href="academicBuilder_Main.php">General Student Status</a>
+                <a class="academicList" href="academicBuilder_Default.php">Default Schedule</a>
+                <a class="academicList" href="academicBuilder_Builder.php">Customized Schedule</a>
+            </div>
+        </div>
         <a class="session-required menu-list" href="semesterBuilder.php">Semester Schedule Builder</a>
         <a class="menu-list nav-active" href="courseDB.php">Course List Database</a>
         <div class="nav-right">
@@ -140,7 +173,7 @@ session_start(); // Initialize the session
             <div class="course" id="c3" style="background-color: coral;">ENSE 496AC</div>
             <div class="course" id="c4" style="background-color: cornflowerblue;">ENSE 496AD</div>
             <div class="course" id="c5" style="background-color: darkkhaki;">ENSE 472</div> -->
-            <div class="shadow" id="popView">
+            <div class="shadow scroll" id="popView">
                 <h2 id='title'>ENSE 400</h2>
                 <ul>
                     <li><span class="bold">Course Name</span>: <span id='fullName'>ENSE Project Start-up</span> </li>
@@ -151,6 +184,7 @@ session_start(); // Initialize the session
                     this class and are expected to write a project plan document, compose a preliminary design document, and 
                     present their project to their fellow students.</li>
                 </ul>
+                <h2 class="inline" id="graph_label">Num of course in semesters</h2>
                 <div class='graph_size' id="graph"></div>
             </div>
         </div>
