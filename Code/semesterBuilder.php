@@ -48,8 +48,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $courseid = trim($_POST["courseid"]);
         
         // Validate conditions
-        include 'http://15.223.123.122/vsbp/Code/Model/courseREC.php';
-
         $term_NUM = $_COOKIE['term'];
         $courseid_msg = "Entered: $courseid in Term: $term_NUM";
     }
