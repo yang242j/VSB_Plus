@@ -47,8 +47,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         $courseid = trim($_POST["courseid"]);
         
-        // Validate credentials (format is correct)
-        $courseid_msg = "Entered: $courseid";
+        // Validate conditions
+        include 'http://15.223.123.122/vsbp/Code/Model/courseREC.php';
+
+        $term_NUM = echo "<script>document.writeln(term);</script>";
+        $courseid_msg = "Entered: $courseid in Term: $term_NUM";
     }
 
 }
