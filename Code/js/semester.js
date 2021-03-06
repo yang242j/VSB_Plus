@@ -79,6 +79,28 @@ function dropL(ev, term) {
     }
 }
 
+function dropBR(ev) {
+    //console.log("Drop on BR");
+    var short_name = ev.dataTransfer.getData("Text");
+    if (ev.target.classList.contains("noDrop")) {
+        ev.preventDefault();
+    } else {
+        ev.preventDefault();
+        // 1.Append tag at BR
+        document.getElementsByClassName("bottom_right")[0].appendChild(document.getElementById(short_name));
+        document.getElementById(short_name).style.backgroundColor = "DarkGrey"; // Set tag BGC to DarkGrey
+        document.getElementById(short_name).classList.remove("selected-course"); // Remove selected-course class
+        // Remove course card from middle section
+        removeCourseCard(short_name);
+        // Remove course lecture event from calendar
+        removeCalendar(short_name + "_Lec");
+        // Remove course lab event from calendar
+        removeCalendar(short_name + "_Lab");
+        // Remove exam date from List
+        removeExamList(short_name);
+    }
+}
+
 function registerCourse(short_name, term, BGC) {
         
     //if exampleDiv exist, remove
@@ -143,28 +165,6 @@ function registerCourse(short_name, term, BGC) {
         }).fail(function() {
             console.error(short_name + "Course JSON Fetch FAILED");
         });
-    }
-}
-
-function dropBR(ev) {
-    //console.log("Drop on BR");
-    var short_name = ev.dataTransfer.getData("Text");
-    if (ev.target.classList.contains("noDrop")) {
-        ev.preventDefault();
-    } else {
-        ev.preventDefault();
-        // 1.Append tag at BR
-        document.getElementsByClassName("bottom_right")[0].appendChild(document.getElementById(short_name));
-        document.getElementById(short_name).style.backgroundColor = "DarkGrey"; // Set tag BGC to DarkGrey
-        document.getElementById(short_name).classList.remove("selected-course"); // Remove selected-course class
-        // Remove course card from middle section
-        removeCourseCard(short_name);
-        // Remove course lecture event from calendar
-        removeCalendar(short_name + "_Lec");
-        // Remove course lab event from calendar
-        removeCalendar(short_name + "_Lab");
-        // Remove exam date from List
-        removeExamList(short_name);
     }
 }
 
