@@ -134,7 +134,9 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                         xhr.open("POST", "http://15.223.123.122/vsbp/Code/Model/courseRegStatus.php");
                         // When server responds
                         xhr.onload = function(){ 
-                            console.log(this.response); 
+                            let rsp = this.response;
+                            console.log(rsp.Status);
+
                         };
                         xhr.send(data);
                         
