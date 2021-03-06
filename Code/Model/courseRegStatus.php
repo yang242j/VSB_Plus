@@ -35,11 +35,11 @@ $term = isset($_REQUEST["term"]) ? $_REQUEST["term"] : '';
 if (preg_match_all("/([a-z]+\s[0-9]+)/i", $courseid) == 1){
     // 3. Generate the status number
     $status = array(
+        "Notes" => "<b>$courseid: </b>\n", // {string} Additional notes.
         "Status" => false,  // {bool} whether this course can be registered.
         "Completion" => false,  // {bool} whether this course has already completed.
         "Availability" => false, // {bool} whether this course is available at the given term.
-        "Prerequisites" => false, // {bool} whether this course has matched all prerequisites.
-        "Notes" => '' // {string} Additional notes.
+        "Prerequisites" => false // {bool} whether this course has matched all prerequisites.
     );
     
     // 3.1 Check if the course is in doneList
