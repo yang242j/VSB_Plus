@@ -149,9 +149,8 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                                     console.log(error);
                                 }
                                
-
                                 // Appendd new course tag
-                                document.getElementById("courseList_Containor").innerHTML += course_tag;
+                                dropL(courseid);
 
                             } else {
                                 // Do nothing and alert the returned Notes
