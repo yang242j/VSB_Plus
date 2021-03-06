@@ -136,16 +136,15 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                         // When server responds
                         xhr.onload = function(){ 
                             let rsp = JSON.parse(this.response);
-                            console.log(rsp);
+                            //console.log(rsp);
+                            
                             if (rsp.Status == true) {
                                 // Generate course tag
                                 let course_tag = tagGenerator(courseid, true);
     
                                 // Try to remove any existing course tags with same id.
-                                try {
-                                    $( "#" + courseid ).remove();
-                                }
-                                
+                                $( "#" + courseid ).remove();
+
                                 // Appendd new course tag
                                 document.getElementById("courseList_Containor").innerHTML += course_tag;
 
