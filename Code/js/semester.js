@@ -76,68 +76,74 @@ function dropL(ev, term) {
         ev.preventDefault();
     } else {
         ev.preventDefault();
+        registerCourse(short_name, term);
+    }
+}
 
-        //if exampleDiv exist, remove
-        if($("#exampleCard").length){	
-            $( "#exampleCard" ).remove();
-        }
+function registerCourse(short_name, term) {
+        
+    //if exampleDiv exist, remove
+    if($("#exampleCard").length){	
+        $( "#exampleCard" ).remove();
+    }
 
-        //if tag exist, refuse to append
-        if ($(".selected-course[id='" + short_name + "']").length) {	
-            //console.log($(".selected-course[id='" + short_name + "']").length);
-            console.log(short_name + " already exist in course List");
-            return;
-        } else {
-            //console.log($(".left-section[id='" + short_name + "']").length);
-            //1.Append courseTag-list
-            document.getElementById("courseList_Containor").appendChild(document.getElementById(short_name));
-            document.getElementById(short_name).style.backgroundColor = BGC;
-            document.getElementById(short_name).classList.add("selected-course"); // Add selected-course class
-            //2.Fetch Course info JSON data
-            fetchCourseJSON(short_name).done(function(result1) {
-                var course_json = JSON.parse(result1);
+    //if tag exist, refuse to append
+    if ($(".selected-course[id='" + short_name + "']").length) {	
+        //console.log($(".selected-course[id='" + short_name + "']").length);
+        console.log(short_name + " already exist in course List");
+        return;
+    } else {
 
-                //3. Fetch Course section JSON data
-                var lec_exam_id='0', lab_id='0'; // Init common section variables
+        //console.log($(".left-section[id='" + short_name + "']").length);
+        //1.Append courseTag-list
+        document.getElementById("courseList_Containor").appendChild(document.getElementById(short_name));
+        document.getElementById(short_name).style.backgroundColor = BGC;
+        document.getElementById(short_name).classList.add("selected-course"); // Add selected-course class
 
-                fetchAllSectionData(short_name, term)
-                    .then(function (result) {
-                        // Do something with the result
-                        let lec_json_obj = JSON.parse(result[0]); //3.1.Fetch Lecture Section JSON data
-                        let lab_json_obj = JSON.parse(result[1]); //3.2. Fetch Lab Section JSON data
-                        let exam_json_obj = JSON.parse(result[2]); //3.3. Fetch Exam Section JSON data
+        //2.Fetch Course info JSON data
+        fetchCourseJSON(short_name).done(function(result1) {
+            var course_json = JSON.parse(result1);
 
-                        // Generate combo array for section selector
-                        combos = combinationGenerator(lec_json_obj, lab_json_obj);
-                        //alert(combos);
+            //3. Fetch Course section JSON data
+            var lec_exam_id='0', lab_id='0'; // Init common section variables
 
-                        //4.Append cards, calendars, exams
-                        appendCourseCard(course_json, combos, BGC); //4.1.Append courseCard-list
+            fetchAllSectionData(short_name, term)
+                .then(function (result) {
+                    // Do something with the result
+                    let lec_json_obj = JSON.parse(result[0]); //3.1.Fetch Lecture Section JSON data
+                    let lab_json_obj = JSON.parse(result[1]); //3.2. Fetch Lab Section JSON data
+                    let exam_json_obj = JSON.parse(result[2]); //3.3. Fetch Exam Section JSON data
 
-                        if (lec_json_obj[lec_exam_id] || exam_json_obj[lec_exam_id]) {
-                            appendCalendar(lec_json_obj[lec_exam_id], "Lecture", BGC); //4.2.1.Append lecture calendar event
-                            appendExamList(exam_json_obj[lec_exam_id]); //4.2.2.Append exam list
-                        } else {
-                            console.warn(short_name + " Lecture-Exam info is empty.");
-                        }
+                    // Generate combo array for section selector
+                    combos = combinationGenerator(lec_json_obj, lab_json_obj);
+                    //alert(combos);
 
-                        if (lab_json_obj[lab_id]) {
-                            appendCalendar(lab_json_obj[lab_id], "Lab", BGC); //4.2.3.Append lab calendar event
-                        } else {
-                            console.warn(short_name + " does NOT have Lab required");
-                        }
+                    //4.Append cards, calendars, exams
+                    appendCourseCard(course_json, combos, BGC); //4.1.Append courseCard-list
 
-                        //5.Store color id to prevent same color twice
-                        pre_colorID = randomColorIndex; 
-                    })
-                    .catch(function (error) {
-                        // Handle error
-                        console.log("Section Data collection error -> ", error);
-                    });
-            }).fail(function() {
-                console.error(short_name + "Course JSON Fetch FAILED");
-            });
-        }
+                    if (lec_json_obj[lec_exam_id] || exam_json_obj[lec_exam_id]) {
+                        appendCalendar(lec_json_obj[lec_exam_id], "Lecture", BGC); //4.2.1.Append lecture calendar event
+                        appendExamList(exam_json_obj[lec_exam_id]); //4.2.2.Append exam list
+                    } else {
+                        console.warn(short_name + " Lecture-Exam info is empty.");
+                    }
+
+                    if (lab_json_obj[lab_id]) {
+                        appendCalendar(lab_json_obj[lab_id], "Lab", BGC); //4.2.3.Append lab calendar event
+                    } else {
+                        console.warn(short_name + " does NOT have Lab required");
+                    }
+
+                    //5.Store color id to prevent same color twice
+                    pre_colorID = randomColorIndex; 
+                })
+                .catch(function (error) {
+                    // Handle error
+                    console.log("Section Data collection error -> ", error);
+                });
+        }).fail(function() {
+            console.error(short_name + "Course JSON Fetch FAILED");
+        });
     }
 }
 
