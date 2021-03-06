@@ -31,17 +31,18 @@ $doneList = isset($_REQUEST["doneList"]) ? json_decode($_REQUEST["doneList"]) : 
 $courseid = isset($_REQUEST["courseid"]) ? strtoupper($_REQUEST["courseid"]) : '';
 $term = isset($_REQUEST["term"]) ? $_REQUEST["term"] : '';
 
-// 2. Check courseid is in correct format
-if (preg_match_all("/([a-z]+\s[0-9]+)/i", $courseid) == 1){
-    // 3. Generate the status number
-    $status = array(
-        "Status" => false,  // {bool} whether this course can be registered.
-        "Completion" => false,  // {bool} whether this course has already completed.
-        "Availability" => false, // {bool} whether this course is available at the given term.
-        "Prerequisites" => false, // {bool} whether this course has matched all prerequisites.
-        "Notes" => "$courseid:\n" // {string} Additional notes.
-    );
+// 2. Generate the status number
+$status = array(
+    "Status" => false,  // {bool} whether this course can be registered.
+    "Completion" => false,  // {bool} whether this course has already completed.
+    "Availability" => false, // {bool} whether this course is available at the given term.
+    "Prerequisites" => false, // {bool} whether this course has matched all prerequisites.
+    "Notes" => "$courseid:\n" // {string} Additional notes.
+);
 
+// 3. Check courseid is in correct format
+if (preg_match_all("/([a-z]+\s[0-9]+)/i", $courseid) == 1){
+    
     // 3.1 Check if the course is in doneList
     if ( in_array($courseid, $doneList) ) {
         $status["Completion"] = true;
@@ -78,12 +79,17 @@ if (preg_match_all("/([a-z]+\s[0-9]+)/i", $courseid) == 1){
         $status["Status"] = true;
     }
 
-    // 4. Encode & Return the status number as JSON format
-    echo json_encode($status, JSON_PRETTY_PRINT);
+    // 3.5 Course not found
+    if ( !$status["Status"] && !$status["Completion"] && !$status["Availability"] && !$status["Prerequisites"] ) {
+        $status["Notes"] .= "Course Not Found";
+    }
 
 } else {
-    echo "The course id format is invalid.";
+    $status["Notes"] .= "Input Format Iinvalid";
 }
+
+// 4. Encode & Return the status number as JSON format
+echo json_encode($status, JSON_PRETTY_PRINT);
 
 /**
  * @param   {string}    $path   The file path to check whether it is empty or not.
