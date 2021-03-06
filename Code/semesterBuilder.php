@@ -137,7 +137,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                         xhr.onload = function(){ 
                             let rsp = JSON.parse(this.response);
                             console.log(rsp);
-                            if (rsp.status == true) {
+                            if (rsp.Status == true) {
                                 // Generate course tag
                                 let course_tag = tagGenerator(courseid, true);
     
@@ -145,7 +145,8 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                                 document.getElementById("courseList_Containor").innerHTML += course_tag;
                             } else {
                                 // Do nothing and alert the returned Notes
-                                alert(rsp.Notes)
+                                string notes = rsp.Notes;
+                                alert($(notes));
                             }
                         };
                         xhr.send(data);
