@@ -145,8 +145,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                                 document.getElementById("courseList_Containor").innerHTML += course_tag;
                             } else {
                                 // Do nothing and alert the returned Notes
-                                string notes = rsp.Notes;
-                                alert($(notes));
+                                alert(rsp.Notes);
                             }
                         };
                         xhr.send(data);
