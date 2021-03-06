@@ -65,13 +65,13 @@ function dragEnd() {
 function dropL(ev, term) {
     //console.log("Drop on L");
     var short_name = ev.dataTransfer.getData("Text");
-    var randomColorIndex = Math.floor(Math.random() * colors.length);
+    
 
     if (ev.target.classList.contains("noDrop")) {
         ev.preventDefault();
     } else {
         ev.preventDefault();
-        registerCourse(short_name, term, colors[randomColorIndex]);
+        registerCourse(short_name, term);
     }
 }
 
@@ -97,7 +97,10 @@ function dropBR(ev) {
     }
 }
 
-function registerCourse(short_name, term, BGC) {
+function registerCourse(short_name, term) {
+
+    var randomColorIndex = Math.floor(Math.random() * colors.length);
+    var BGC = colors[randomColorIndex];
         
     //if exampleDiv exist, remove
     if($("#exampleCard").length){	

@@ -148,7 +148,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                                 }
                                
                                 // Appendd new course tag
-                                registerCourse(courseid, term, "lightblue");
+                                registerCourse(courseid, term);
                                 
                                 // If this course Name is NOT in the courseList, push
                                 if ($.inArray(courseid, courseList) === -1) {
