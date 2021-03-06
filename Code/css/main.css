@@ -128,13 +128,13 @@ nav .dropdown .dropdown-content .academicList:hover {
     background-color: darkseagreen;
 }
 
-nav .dropdown:hover .dropdown-content {
+/* nav .dropdown:hover .dropdown-content {
     display: block;
-}
+} */
 
 /********************************/
 nav .nav-right #addon-menu {
-    display: none;
+    /* display: none; */
     overflow: auto;
     background-color: #444;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);

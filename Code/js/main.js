@@ -9,6 +9,10 @@ function addonSwitchFunc() {
     }
 }
 
+function toogleDisplay(id) {
+  document.getElementById(id).classList.toggle("hidden");
+}
+
 // Menu toggle function
 function menuFunc1(x) {
     x.classList.toggle("change");
