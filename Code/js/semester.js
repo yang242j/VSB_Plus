@@ -70,13 +70,12 @@ function dropL(ev, term) {
         randomColorIndex = Math.floor(Math.random() * colors.length);
         //console.log(randomColorIndex);
     } while (randomColorIndex == pre_colorID);
-    var BGC = colors[randomColorIndex];
 
     if (ev.target.classList.contains("noDrop")) {
         ev.preventDefault();
     } else {
         ev.preventDefault();
-        registerCourse(short_name, term);
+        registerCourse(short_name, term, colors[randomColorIndex]);
     }
 }
 
