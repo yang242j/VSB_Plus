@@ -65,7 +65,7 @@ if (preg_match_all("/([a-z]+\s[0-9]+)/i", $courseid) == 1){
 
     // 3.3 Check if the prerequisites of the course has matched.
     $strArr = get_PregExp_PreString($courseid);
-    if ( exp_matched($strArr[1], $doneList) ) {
+    if ( file_exists($file_path) && exp_matched($strArr[1], $doneList) ) {
         $status["Prerequisites"] = true;
         $status["Notes"] .= "All the prerequisites are matched.\n";
     } else {
