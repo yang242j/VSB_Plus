@@ -77,7 +77,7 @@ function section_empty($path) {
  * @return  {string}    $expStr     The preg expression of the course prerequisites. 
  */
 function get_PregExp_PreString($courseid) {
-    $response = get_course_json($short_name);
+    $response = get_course_json($courseid);
     $resArr = array();
     $resArr = json_decode($response, true);
     
