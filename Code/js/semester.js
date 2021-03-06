@@ -107,7 +107,7 @@ function registerCourse(short_name, term, BGC) {
     //if tag exist, refuse to append
     if ($(".selected-course[id='" + short_name + "']").length) {	
         //console.log($(".selected-course[id='" + short_name + "']").length);
-        console.log(short_name + " already exist in course List");
+        //console.log(short_name + " already exist in course List");
         return;
     } else {
 
