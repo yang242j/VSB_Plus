@@ -34,25 +34,31 @@ $term = isset($_REQUEST["term"]) ? $_REQUEST["term"] : '';
 // 2. Check courseid is in correct format
 if (preg_match_all("/([a-z]+\s[0-9]+)/i", $courseid) == 1){
     // 3. Generate the status number
+    $status = "<h2>$courseid:</h2>\n";
     // 3.1 Check if the course is in doneList
     if ( in_array($courseid, $doneList) ) {
-        $status = "$courseid is already completed.";
+        $status += "<b>Status:</b> Completed.\n";
     } else {
-        // 3.2 Check if the course is available in the given term
-        $file_path = "../JSON/$term/$courseid.json";
-        if ( file_exists($file_path) && !section_empty($file_path) ) {
-            // 3.3 Check if the prerequisites of the course has matched.
-            $strArr = get_PregExp_PreString($courseid);
-            if ( exp_matched($strArr[1], $doneList) ) {
-                $status = "true";
-            } else {
-                $status = "$courseid has prerequisites:\n$strArr[0].";
-            }
-        } else {
-            $termStr = termNum2Str($term);
-            $status = "$courseid is not available at $termStr.";
-        }
+        $status += "<b>Status:</b> NOT Completed.\n";
     }
+
+    // 3.2 Check if the course is available in the given term
+    $termStr = termNum2Str($term);
+    $file_path = "../JSON/$term/$courseid.json";
+    if ( file_exists($file_path) && !section_empty($file_path) ) {
+        $status += "<b>Availability:</b> Can be picked at <u>$termStr</u>.\n";
+    } else {
+        $status += "<b>Availability:</b> NOT available at <u>$termStr</u>.\n";
+    }
+
+    // 3.3 Check if the prerequisites of the course has matched.
+    $strArr = get_PregExp_PreString($courseid);
+    if ( exp_matched($strArr[1], $doneList) ) {
+        $status += "<b>Prerequisites:</b> Matched.\n";
+    } else {
+        $status += "<b>Prerequisites:</b> Not Matched.\n";
+    }
+    $status += "<mark>$strArr[0]</mark>\n";
 
     // 4. Return the status number
     echo $status;
