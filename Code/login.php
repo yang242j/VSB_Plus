@@ -144,6 +144,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </header>
 
     <nav>
+        <div class="nav-right">
+            <a class="nav-active" href="login.php">LogIn</a>
+            <a href="signup.php">SignUp</a>
+        </div>
         <div class="menu-icon change">
             <div class="bar1"></div>
             <div class="bar2"></div>
@@ -159,10 +163,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </div>
         <a class="menu-list hidden" href="semesterBuilder.php">Semester Schedule Builder</a>
         <a class="menu-list hidden" href="courseDB.php">Course List Database</a>
-        <div class="nav-right">
-            <a class="nav-active" href="login.php">LogIn</a>
-            <a href="signup.php">SignUp</a>
-        </div>
     </nav>
 
     <section class="container">

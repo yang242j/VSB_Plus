@@ -73,6 +73,17 @@ session_start(); // Initialize the session
     </header>
 
     <nav>
+        <div class="nav-right">
+            <a id="usertext" onclick="addonSwitchFunc()"><?php echo htmlspecialchars($_SESSION["name"]); ?></a>
+            <div id="addon-menu">
+                <a><?php echo htmlspecialchars($_SESSION["sid"]); ?></a>
+                <a href="Model/logout.php">Logout</a>
+            </div>
+        </div>
+        <div class="nav-right-2">
+            <a href="login.php">LogIn</a>
+            <a href="signup.php">SignUp</a>
+        </div>
         <div class="menu-icon" onclick="menuFunc1(this); menuFunc2('menu-list');">
             <div class="bar1"></div>
             <div class="bar2"></div>
@@ -88,17 +99,6 @@ session_start(); // Initialize the session
         </div>
         <a class="session-required menu-list" href="semesterBuilder.php">Semester Schedule Builder</a>
         <a class="menu-list nav-active" href="courseDB.php">Course List Database</a>
-        <div class="nav-right">
-            <a id="usertext" onclick="addonSwitchFunc()"><?php echo htmlspecialchars($_SESSION["name"]); ?></a>
-            <div id="addon-menu">
-                <a><?php echo htmlspecialchars($_SESSION["sid"]); ?></a>
-                <a href="Model/logout.php">Logout</a>
-            </div>
-        </div>
-        <div class="nav-right-2">
-            <a href="login.php">LogIn</a>
-            <a href="signup.php">SignUp</a>
-        </div>
     </nav>
 
     <section class="container">

@@ -71,6 +71,13 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     </header>
 
     <nav>
+        <div class="nav-right">
+            <a id="usertext" onclick="addonSwitchFunc()"><?php echo htmlspecialchars($_SESSION["name"]); ?></a>
+            <div id="addon-menu">
+                <a><?php echo htmlspecialchars($_SESSION["sid"]); ?></a>
+                <a href="Model/logout.php">Logout</a>
+            </div>
+        </div>
         <div class="menu-icon" onclick="menuFunc1(this); menuFunc2('menu-list'); menuFunc3();">
             <div class="bar1"></div>
             <div class="bar2"></div>
@@ -86,13 +93,6 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         </div>
         <a class="menu-list nav-active" href="semesterBuilder.php">Semester Schedule Builder</a>
         <a class="menu-list" href="courseDB.php">Course List Database</a>
-        <div class="nav-right">
-            <a id="usertext" onclick="addonSwitchFunc()"><?php echo htmlspecialchars($_SESSION["name"]); ?></a>
-            <div id="addon-menu">
-                <a><?php echo htmlspecialchars($_SESSION["sid"]); ?></a>
-                <a href="Model/logout.php">Logout</a>
-            </div>
-        </div>
     </nav>
 
     <div class="container">
