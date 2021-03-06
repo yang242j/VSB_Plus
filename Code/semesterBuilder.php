@@ -151,6 +151,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                                
                                 // Appendd new course tag
                                 dropL(courseid);
+                                registerCourse(courseid, term, DarkGrey);
 
                             } else {
                                 // Do nothing and alert the returned Notes
