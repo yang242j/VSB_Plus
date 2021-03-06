@@ -81,7 +81,7 @@ if (preg_match_all("/([a-z]+\s[0-9]+)/i", $courseid) == 1){
 
     // 3.5 Course not found
     if ( !$status["Status"] && !$status["Completion"] && !$status["Availability"] && !$status["Prerequisites"] ) {
-        $status["Notes"] .= "Course Not Found";
+        $status["Notes"] = "$courseid:\nCourse Not Found";
     }
 
 } else {
