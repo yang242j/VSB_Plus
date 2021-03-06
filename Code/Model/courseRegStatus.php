@@ -42,7 +42,7 @@ if (preg_match_all("/([a-z]+\s[0-9]+)/i", $courseid) == 1){
         "Notes" => "<b>$courseid: </b>\n", // {string} Additional notes.
         "Test" => "<b>$courseid: </b>\n"
     );
-    $status["Test"] += "AAAA";
+    $status["Test"] .= "AAAA";
     // 3.1 Check if the course is in doneList
     if ( in_array($courseid, $doneList) ) {
         $status["Completion"] = true;
