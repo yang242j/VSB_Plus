@@ -117,15 +117,16 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             <div style="width: 50%; float: right;">
                 <form onsubmit="return ajaxpost()">
                     <label>Search Class:</label>
-                    <input type="text" id="courseid" required />
+                    <input type="text" id="search_courseid" required />
                     <input type="submit" value="Submit"/>
                 </form>
                 <p id="msg_p"></p>
                 <script>
                     function ajaxpost() {
                         // (A) GET FORM DATA
+                        var courseid = document.getElementById("search_courseid").value;
                         var data = new FormData();
-                        data.append("courseid", document.getElementById("courseid").value);
+                        data.append("courseid", courseid);
                         data.append("term", term);
                         data.append("doneList", JSON.stringify(courseCompletedList));
                         
@@ -135,8 +136,17 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                         // When server responds
                         xhr.onload = function(){ 
                             let rsp = JSON.parse(this.response);
-                            console.log(rsp.Status);
-
+                            console.log(rsp);
+                            if (rsp.status == true) {
+                                // Generate course tag
+                                let course_tag = tagGenerator(courseid, true);
+    
+                                // Appendd new course tag
+                                document.getElementById("courseList_Containor").innerHTML += course_tag;
+                            } else {
+                                // Do nothing and alert the returned Notes
+                                alert(rsp.Notes)
+                            }
                         };
                         xhr.send(data);
                         
