@@ -63,8 +63,8 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 
     <nav>
         <div class="nav-right">
-            <a id="usertext" onclick="addonSwitchFunc()"><?php echo htmlspecialchars($_SESSION["name"]); ?></a>
-            <div id="addon-menu">
+            <a id="usertext" onclick="toogleDisplay('addon-menu')"><?php echo htmlspecialchars($_SESSION["name"]); ?></a>
+            <div class="hidden" id="addon-menu">
                 <a><?php echo htmlspecialchars($_SESSION["sid"]); ?></a>
                 <a href="Model/logout.php">Logout</a>
             </div>
@@ -75,8 +75,8 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             <div class="bar3"></div>
         </div>
         <div class="session-required menu-list nav-active dropdown">
-            <button class="dropbtn">Academic Schedule Builder</button>
-            <div class="dropdown-content">
+            <button class="dropbtn" onclick="toogleDisplay('dropdown-content')">Academic Schedule Builder</button>
+            <div id="dropdown-content" class="dropdown-content">
                 <a class="academicList" href="academicBuilder_Main.php">General Student Status</a>
                 <a class="academicList" href="academicBuilder_Default.php">Default Schedule</a>
                 <a class="academicList" href="academicBuilder_Builder.php">Customized Schedule</a>
