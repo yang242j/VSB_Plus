@@ -79,7 +79,7 @@ function dropL(ev, term) {
     }
 }
 
-function registerCourse(short_name, term) {
+function registerCourse(short_name, term, BGC) {
         
     //if exampleDiv exist, remove
     if($("#exampleCard").length){	
