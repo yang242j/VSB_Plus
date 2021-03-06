@@ -1,5 +1,5 @@
 const colors = ["lightblue", "lightseagreen", "pink", "yellow", "Azure", "Bisque", "Coral", "Cyan", "Cornsilk", "Lavender"];
-var pre_colorID = "", examDateDic = {/*"ENGG 400_Exam": new Date("Apr 20 2021")*/};
+var examDateDic = {/*"ENGG 400_Exam": new Date("Apr 20 2021")*/};
 
 // Detect Firefox 
 var firefoxAgent = navigator.userAgent.indexOf("Firefox") > -1; 
@@ -65,11 +65,7 @@ function dragEnd() {
 function dropL(ev, term) {
     //console.log("Drop on L");
     var short_name = ev.dataTransfer.getData("Text");
-    var randomColorIndex = "";
-    do {
-        randomColorIndex = Math.floor(Math.random() * colors.length);
-        //console.log(randomColorIndex);
-    } while (randomColorIndex == pre_colorID);
+    var randomColorIndex = Math.floor(Math.random() * colors.length);
 
     if (ev.target.classList.contains("noDrop")) {
         ev.preventDefault();
@@ -154,9 +150,6 @@ function registerCourse(short_name, term, BGC) {
                     } else {
                         console.warn(short_name + " does NOT have Lab required");
                     }
-
-                    //5.Store color id to prevent same color twice
-                    pre_colorID = randomColorIndex; 
                 })
                 .catch(function (error) {
                     // Handle error
