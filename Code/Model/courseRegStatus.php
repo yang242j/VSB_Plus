@@ -28,7 +28,7 @@
 
 // 1. Collect inputs
 $doneList = isset($_REQUEST["doneList"]) ? json_decode($_REQUEST["doneList"]) : '';
-$courseid = isset($_REQUEST["courseid"]) ? $_REQUEST["courseid"] : '';
+$courseid = isset($_REQUEST["courseid"]) ? strtoupper($_REQUEST["courseid"]) : '';
 $term = isset($_REQUEST["term"]) ? $_REQUEST["term"] : '';
 
 // 2. Check courseid is in correct format
