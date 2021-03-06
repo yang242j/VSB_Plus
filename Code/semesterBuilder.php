@@ -124,7 +124,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                 <script>
                     function ajaxpost() {
                         // (A) GET FORM DATA
-                        var courseid = document.getElementById("search_courseid").value;
+                        var courseid = document.getElementById("search_courseid").value.toUpperCase();
                         var data = new FormData();
                         data.append("courseid", courseid);
                         data.append("term", term);
