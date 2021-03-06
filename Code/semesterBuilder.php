@@ -131,7 +131,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                         
                         // (B) AJAX
                         var xhr = new XMLHttpRequest();
-                        xhr.open("POST", "0-dummy.php");
+                        xhr.open("POST", "http://15.223.123.122/vsbp/Code/Model/courseRegStatus.php");
                         // When server responds
                         xhr.onload = function(){ 
                             console.log(this.response); 
