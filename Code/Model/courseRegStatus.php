@@ -39,17 +39,16 @@ if (preg_match_all("/([a-z]+\s[0-9]+)/i", $courseid) == 1){
         "Completion" => false,  // {bool} whether this course has already completed.
         "Availability" => false, // {bool} whether this course is available at the given term.
         "Prerequisites" => false, // {bool} whether this course has matched all prerequisites.
-        "Notes" => "<b>$courseid: </b>\n", // {string} Additional notes.
-        "Test" => "<b>$courseid: </b>\n"
+        "Notes" => "<b>$courseid: </b>\n" // {string} Additional notes.
     );
-    $status["Test"] .= "AAAA";
+
     // 3.1 Check if the course is in doneList
     if ( in_array($courseid, $doneList) ) {
         $status["Completion"] = true;
-        $status["Notes"] += "Already Completed.\n";
+        $status["Notes"] .= "Already Completed.\n";
     } else {
         $status["Completion"] = false;
-        $status["Notes"] += "NOT Completed yet.\n";
+        $status["Notes"] .= "NOT Completed yet.\n";
     }
 
     // 3.2 Check if the course is available in the given term
@@ -57,22 +56,22 @@ if (preg_match_all("/([a-z]+\s[0-9]+)/i", $courseid) == 1){
     $file_path = "../JSON/$term/$courseid.json";
     if ( file_exists($file_path) && !section_empty($file_path) ) {
         $status["Availability"] = true;
-        $status["Notes"] += "Can be picked at <u>$termStr</u>.\n";
+        $status["Notes"] .= "Can be picked at <u>$termStr</u>.\n";
     } else {
         $status["Availability"] = false;
-        $status["Notes"] += "NOT available at <u>$termStr</u>.\n";
+        $status["Notes"] .= "NOT available at <u>$termStr</u>.\n";
     }
 
     // 3.3 Check if the prerequisites of the course has matched.
     $strArr = get_PregExp_PreString($courseid);
     if ( exp_matched($strArr[1], $doneList) ) {
         $status["Prerequisites"] = true;
-        $status["Notes"] += "All the prerequisites are matched.\n";
+        $status["Notes"] .= "All the prerequisites are matched.\n";
     } else {
         $status["Prerequisites"] = false;
-        $status["Notes"] += "Prerequisites are NOT matched.\n";
+        $status["Notes"] .= "Prerequisites are NOT matched.\n";
     }
-    $status["Notes"] += "Prerequisites: <mark>$strArr[0]</mark>\n";
+    $status["Notes"] .= "Prerequisites: <mark>$strArr[0]</mark>\n";
 
     // 3.4 Final status decision.
     if (!$status["Completion"] && $status["Availability"] && $status["Prerequisites"]) {
