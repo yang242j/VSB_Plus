@@ -27,7 +27,7 @@
  */
 
 // 1. Collect inputs
-$doneList = isset($_REQUEST["doneList"]) ? $_REQUEST["doneList"] : '';
+$doneList = isset($_REQUEST["doneList"]) ? json_decode($_REQUEST["doneList"]) : '';
 $courseid = isset($_REQUEST["courseid"]) ? $_REQUEST["courseid"] : '';
 $term = isset($_REQUEST["term"]) ? $_REQUEST["term"] : '';
 
