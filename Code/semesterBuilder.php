@@ -141,8 +141,14 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                                 // Generate course tag
                                 let course_tag = tagGenerator(courseid, true);
     
+                                // Try to remove any existing course tags with same id.
+                                try {
+                                    $( "#" + courseid ).remove();
+                                }
+                                
                                 // Appendd new course tag
                                 document.getElementById("courseList_Containor").innerHTML += course_tag;
+
                             } else {
                                 // Do nothing and alert the returned Notes
                                 alert(rsp.Notes);
