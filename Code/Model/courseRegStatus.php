@@ -40,7 +40,7 @@ if (preg_match_all("/([a-z]+\s[0-9]+)/i", $courseid) == 1){
         "Availability" => false, // {bool} whether this course is available at the given term.
         "Prerequisites" => false, // {bool} whether this course has matched all prerequisites.
         "Notes" => "<b>$courseid: </b>\n", // {string} Additional notes.
-        "Test" => "<b>$courseid: </b>"
+        "Test" => "<b>$courseid: </b>\n"
     );
     
     // 3.1 Check if the course is in doneList
