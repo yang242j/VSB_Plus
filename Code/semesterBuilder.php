@@ -33,26 +33,6 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     header("location: login.php");
     exit;
 }
-
-// Define variables andd initialize with empty values
-$courseid = "";
-$courseid_msg = "";
-
-// Processing form data when form is submitted
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-
-    // Check if course_id is empty
-    if (empty(trim($_POST["courseid"]))) {
-        $courseid_msg = "Please enter course_id.";
-    } else {
-        $courseid = trim($_POST["courseid"]);
-        
-        // Validate conditions
-        $term_NUM = $_COOKIE['term'];
-        $courseid_msg = "Entered: $courseid in Term: $term_NUM";
-    }
-
-}
 ?>
 
 <!doctype html>
@@ -127,25 +107,41 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <script>
                     term = $("select#termSelector option:selected").val();
 
-                    document.cookie = "term = " + term;
-
                     $(document).on('change', 'select#termSelector', function() {
                         term = $("select#termSelector option:selected").val();
-                        document.cookie = "term = " + term;
                         loadRecCourseTags();
                     });
                 </script>
             </div>
 
             <div style="width: 50%; float: right;">
-                <form onclick="return false" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST">
-                    <label>Search A Class:</label>
-                    <input type="text" name="courseid" value="<?php echo $courseid; ?>">
-                    <input type="submit" value="Submit">
+                <form onsubmit="return ajaxpost()">
+                    <label>Search Class:</label>
+                    <input type="text" id="courseid" required />
+                    <input type="submit" value="Submit"/>
                 </form>
-                <span class="help-block">
-                    <?php echo $courseid_msg; ?>
-                </span>
+                <p id="msg_p"></p>
+                <script>
+                    function ajaxpost() {
+                        // (A) GET FORM DATA
+                        var data = new FormData();
+                        data.append("courseid", document.getElementById("courseid").value);
+                        data.append("term", term);
+                        data.append("doneList", courseCompletedList);
+                        
+                        // (B) AJAX
+                        var xhr = new XMLHttpRequest();
+                        xhr.open("POST", "0-dummy.php");
+                        // When server responds
+                        xhr.onload = function(){ 
+                            console.log(this.response); 
+                        };
+                        xhr.send(data);
+                        
+                        // (C) PREVENT HTML FORM SUBMIT
+                        return false;
+                    }
+                </script>
             </div>
         </section>
 
