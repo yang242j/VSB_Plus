@@ -127,7 +127,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                         var data = new FormData();
                         data.append("courseid", document.getElementById("courseid").value);
                         data.append("term", term);
-                        data.append("doneList", courseCompletedList);
+                        data.append("doneList", JSON.stringify(courseCompletedList));
                         
                         // (B) AJAX
                         var xhr = new XMLHttpRequest();
