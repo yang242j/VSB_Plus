@@ -280,8 +280,17 @@ function getTermInfo(courseName) {
     url2 = "JSON/202020/" + courseName + ".json";
     url3 = "JSON/202030/" + courseName + ".json";
     url1 = "JSON/202110/" + courseName + ".json";
+    const fs = require('fs')
+    try {
+        if (fs.existsSync( url1 )) {
+          //file exists
+        }
+      } catch(err) {
+        console.error(err)
+      }
 
-    console.log(myRequest3.open("GET", url1, false));
+
+    myRequest3.open("GET", url1, false);
     myRequest3.onload = function () {
         if (myRequest3.status==200 && myRequest3.responseText != null) {
             var data = JSON.parse(myRequest3.responseText);
