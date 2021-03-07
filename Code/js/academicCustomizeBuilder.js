@@ -140,7 +140,7 @@ function showCourses(data) {
             "<div class = 'courseTags' >" +
             "<div  draggable = 'true' id ='nct" + i + "'>" +
             "<p id ='nnnct" + i + "'" + ">" +notCompletedData[i]  + "</p>" +
-            "<p id ='nnct" + i + "'" + ">" +getTermInfo(notCompletedData[i])  +"</p>" +
+            "<p id ='nnct" + i + "'" + ">" +" "  +"</p>" +
             "</div> </div>";
         document.getElementById("nnct"+i).style.visibility = "hidden";
         document.getElementById("nnct"+i).style.fontSize = "0.1px";
@@ -372,14 +372,16 @@ function dragTest(elementId) {
             var newForAlern = "n" + droppedElementId;
             var newForAlern2 = "nn" + droppedElementId;
             //var content = document.getElementById(newForAlern).innerHTML;
+            //get the course name form innerHTML
+            var y = document.getElementById(newForAlern2).innerHTML;
+            document.getElementById(newForAlern).innerHTML = getTermInfo(y)
 
             document.getElementById(newForAlern).style.visibility = "visible";
             document.getElementById(newForAlern).style.fontSize = "10px";
             document.getElementById(newForAlern).style.lineHeight = "110%";
-            var x = document.getElementById(newForAlern).innerHTML;
-            var y = document.getElementById(newForAlern2).innerHTML;
-            //console.log(y,x);
-            console.log(getPrerequisite(y));
+         
+            
+           
 
 
 
