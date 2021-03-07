@@ -292,8 +292,8 @@ function getTermInfo(courseName) {
                 credit = data.credit;
             }    
         }
-        myRequest3.send();
     }
+    myRequest3.send();
     
       
 
@@ -308,9 +308,10 @@ function getTermInfo(courseName) {
                 
             }
         }
-        myRequest.send();
+       
     }
    
+    myRequest.send();
     
     myRequest2.open("GET", url3, false);
     myRequest2.onload = function () {
@@ -323,8 +324,9 @@ function getTermInfo(courseName) {
                 
             }
         }
-        myRequest2.send();
+        
     }
+    myRequest2.send();
   
 
     return [term+"</br>","credits:"+credit+"</br>",prerequisite];
