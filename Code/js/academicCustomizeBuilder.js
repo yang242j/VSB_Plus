@@ -289,12 +289,9 @@ function getTermInfo(courseName) {
                 term += "Winter" + " ";
                 prerequisite += data.prerequisite;
                 credit = data.credit;
+                myRequest3.send(null);
             }
         }
-    }
-    if (myRequest3.status != 404)
-    {
-    myRequest3.send(null);
     }
 
     myRequest.open("GET", url2, false);
@@ -305,13 +302,11 @@ function getTermInfo(courseName) {
                 term += "Spring/Summer" + " ";
                 prerequisite += data.prerequisite;
                 credit = data.credit;
+                myRequest.send(null);
             }
         }
     }
-    if (myRequest.status !=404)
-    {
-    myRequest.send(null);
-    }
+    
 
     myRequest2.open("GET", url3, false);
     myRequest2.onload = function () {
@@ -321,13 +316,11 @@ function getTermInfo(courseName) {
                 term += "Fall" + " ";
                 prerequisite += data.prerequisite;
                 credit = data.credit;
+                myRequest2.send(null);
             }
         }
     }
-    if (myRequest2.status !=404)
-    {
-    myRequest2.send(null);
-    }
+   
 
 
     return [term+"</br>","credits:"+credit+"</br>",prerequisite];
