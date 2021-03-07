@@ -285,14 +285,14 @@ function getTermInfo(courseName) {
     var myLog = new File(["test"],url1);
 
     // See if the file exists
-    if(myLog.exists()){
-      console.log('The file exists');
-    }else{
-      console.log('The file does not exist');
+    myRequest3.onreadystatechange = function() {
+        if (this.readyState === this.DONE) {
+            return "das";
+        }
     }
 
 
-    /*myRequest3.open("GET", url1, false);
+    myRequest3.open("GET", url1, false);
     myRequest3.onload = function () {
         if (myRequest3.status == 200 && myRequest3.responseText != null) {
             var data = JSON.parse(myRequest3.responseText);
@@ -342,7 +342,7 @@ function getTermInfo(courseName) {
     myRequest2.send();
 
 
-    return [term + "</br>", "credits:" + credit + "</br>", prerequisite];*/
+    return [term + "</br>", "credits:" + credit + "</br>", prerequisite];
 }
 //console.log(courseNeededArray());
 //console.log(getTermInfo("ENGG 140"));
