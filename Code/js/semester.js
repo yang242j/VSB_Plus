@@ -17,9 +17,6 @@ var calendar = new FullCalendar.Calendar(calendarEl, {
         center: 'title',
         right: 'dayGridMonth,timeGridWeek'
     },
-    eventTimeFormat: {
-        hour12: true
-    },
     titleFormat: {
         month: 'short',
         year: 'numeric'
