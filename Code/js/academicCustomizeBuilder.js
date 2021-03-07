@@ -282,9 +282,9 @@ function getTermInfo(courseName) {
     url1 = "JSON/202110/" + courseName + ".json";
 
     myRequest3.open("GET", url1, false);
-    console.log( myRequest3.status);
     myRequest3.onload = function () {
         if (myRequest3.status==200 && myRequest3.responseText != null) {
+            console.log(myRequest3.status);
             var data = JSON.parse(myRequest3.responseText);
             if (data.term != "No class for the term") {
                 term += "Winter" + " ";
@@ -292,8 +292,9 @@ function getTermInfo(courseName) {
                 credit = data.credit;
             }    
         }
+        myRequest3.send();
     }
-    myRequest3.send();
+    
       
 
     myRequest.open("GET", url2, false);
@@ -307,9 +308,10 @@ function getTermInfo(courseName) {
                 
             }
         }
+        myRequest.send();
     }
    
-    myRequest.send();
+    
     myRequest2.open("GET", url3, false);
     myRequest2.onload = function () {
         if (myRequest2.status==200 && myRequest2.responseText != null) {
@@ -321,8 +323,9 @@ function getTermInfo(courseName) {
                 
             }
         }
+        myRequest2.send();
     }
-    myRequest2.send();
+  
 
     return [term+"</br>","credits:"+credit+"</br>",prerequisite];
 }
