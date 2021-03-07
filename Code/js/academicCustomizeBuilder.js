@@ -290,11 +290,12 @@ function getTermInfo(courseName) {
                 prerequisite += data.prerequisite;
                 credit = data.credit;
             }
+            else
+            return "course not apply now";
         }
     }
-    if(myRequest.responseText != null){
-        myRequest3.send();
-        }
+    myRequest3.send();
+      
 
     myRequest.open("GET", url2, false);
     myRequest.onload = function () {
@@ -308,9 +309,8 @@ function getTermInfo(courseName) {
             }
         }
     }
-    if(myRequest.responseText != null){
+   
     myRequest.send();
-    }
     myRequest2.open("GET", url3, false);
     myRequest2.onload = function () {
         if (myRequest2.status==200 && myRequest2.responseText != null) {
