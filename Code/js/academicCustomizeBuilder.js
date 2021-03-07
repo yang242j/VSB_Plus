@@ -289,7 +289,7 @@ function getTermInfo(courseName) {
                 term += "Winter" + " ";
                 prerequisite += data.prerequisite;
                 credit = data.credit;
-                myRequest3.send(null);
+                myRequest3.send();
             }
         }
     }
@@ -302,7 +302,7 @@ function getTermInfo(courseName) {
                 term += "Spring/Summer" + " ";
                 prerequisite += data.prerequisite;
                 credit = data.credit;
-                myRequest.send(null);
+                myRequest.send();
             }
         }
     }
@@ -316,7 +316,7 @@ function getTermInfo(courseName) {
                 term += "Fall" + " ";
                 prerequisite += data.prerequisite;
                 credit = data.credit;
-                myRequest2.send(null);
+                myRequest2.send();
             }
         }
     }
