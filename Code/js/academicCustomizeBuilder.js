@@ -286,9 +286,9 @@ function getTermInfo(courseName) {
 
     // See if the file exists
     if(myLog.exists()){
-      write('The file exists');
+      console.log('The file exists');
     }else{
-      write('The file does not exist');
+      console.log('The file does not exist');
     }
 
 
