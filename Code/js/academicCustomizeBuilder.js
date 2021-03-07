@@ -22,7 +22,7 @@ window.onload = function init() {
 function getTotalCredits(data){
     var dataJSON = JSON.parse(data);
      for (i = 0; i < dataJSON.length; i++) {
-            int(totalCredits) += int(dataJSON[i].credit_earned);
+        parseInt(totalCredits) +=  parseInt(dataJSON[i].credit_earned);
     }
     console.log(totalCredits);
 }
