@@ -213,7 +213,8 @@ function showTerm(pageNumber) {
                     "<i class='fas fa-circle' style='font-size:24px;color:red'></i>"+
                     "<i class='fas fa-circle' style='font-size:24px;color:yellow'></i>*/ "</div>";*/
                     
-                i = i + 1;
+                /*i = i + 1;*/
+                    i++;
                 }
             }
         }
