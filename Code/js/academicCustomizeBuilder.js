@@ -163,7 +163,6 @@ function showCourses(data) {
              return;
          }
      }*/
-
 }
 function btnForCourse(data) {
     var ctRight = document.getElementById("ctRight");
@@ -283,8 +282,6 @@ function getTermInfo(courseName) {
     url1 = "JSON/202110/" + courseName + ".json";
 
     //check does the file exit in the path
-    var myLog = new File(["test"],url1);
-
     // See if the file exists
     myRequest3.open("GET", url1, false);
     myRequest3.onload = function () {
@@ -310,7 +307,6 @@ function getTermInfo(courseName) {
             var data = JSON.parse(myRequest.responseText);
             if (data.term != "No class for the term") {
                 term += "Spring/Summer" + " ";
-                prerequisite += data.prerequisite;
                 credit = data.credit;
 
             }
@@ -326,7 +322,6 @@ function getTermInfo(courseName) {
             var data = JSON.parse(myRequest2.responseText);
             if (data.term != "No class for the term") {
                 term += "Fall" + " ";
-                prerequisite += data.prerequisite;
                 credit = data.credit;
 
             }
