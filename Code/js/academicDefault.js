@@ -30,7 +30,8 @@ function getTitle(courseName) {
 console.log(getTitle("CHEM 140"));
 function getCourseData() {
     var myRequest = new XMLHttpRequest;
-    myRequest.open("GET", "JSON/ESE.json", false);
+    //myRequest.open("GET", "JSON/ESE.json", false);
+    myRequest.open("GET", "JSON/SSE.json", false);
     myRequest.onload = function () {
         var data = JSON.parse(myRequest.responseText);
         courseData = data;
@@ -39,7 +40,8 @@ function getCourseData() {
 }
 function getTermData() {
     var myRequest = new XMLHttpRequest;
-    myRequest.open("GET", "JSON/reqCourse/ESE_req.json", false);
+    //myRequest.open("GET", "JSON/reqCourse/ESE_req.json", false);
+    myRequest.open("GET", "JSON/reqCourse/SSE_req.json", false);
     myRequest.onload = function () {
         var data = JSON.parse(myRequest.responseText);
         termData = data;
@@ -50,6 +52,12 @@ function getTermData() {
 function showNotCompletedCourse() {
     for (i = 0; i < 12; i++) {
         document.getElementById("nct" + i).innerHTML = courseData[i].short_name;
+    }
+}
+
+function showNotCompletedElectivesCourse() {
+    for (i = 0; i < 12; i++) {
+        document.getElementById("enct" + i).innerHTML = courseData[i].short_name;
     }
 }
 
@@ -163,6 +171,56 @@ function nctRight() {
     }
 }
 
+var ecounter = 0;
+function enctLeft() {
+    ecounter = ecounter - 1;
+    z = 0;
+    /*document.getElementById("notCompletedLeft").innerHTML = counter;*/
+    if (ecounter >= 0) {
+        for (x = 0; x < 12; x++) {
+            document.getElementById("enct" + x).innerHTML = "";
+        }
+
+        for (x = 12 * ecounter; x < 12 * (ecounter + 1); x++) {
+            if (x > courseData.length) {
+                document.getElementById("enct" + z).innerHTML = " "; 
+            }
+            else {
+                document.getElementById("enct" + z).innerHTML = courseData[x].short_name;
+            }
+            z = z + 1;
+        }
+    }
+    else {
+        ecounter = 1;
+    }
+}
+function enctRight() {
+    y = 0;
+    if (courseData[x].short_name != null){
+    ecounter +=1;
+    }
+    /*document.getElementById("notCompletedRight").innerHTML = counter;*/
+    if (ecounter >= 0) {
+        for (x = 0; x < 12; x++) {
+            document.getElementById("enct" + x).innerHTML = "";
+        }
+        for (x = 12 * ecounter; x < 12 * (ecounter + 1); x++) {
+            if(courseData[x] == null)return;
+            if (x > courseData.length) {
+                document.getElementById("enct" + y).innerHTML = " ";
+            }
+            else {
+                document.getElementById("enct" + y).innerHTML = courseData[x].short_name;
+            }
+            y = y + 1;
+        }
+    }
+    else {
+        ecounter = 1;
+    }
+}
+
 function showTerm(pageNumber) {
     var i = 1;
     for (term in termData) {
@@ -170,8 +228,9 @@ function showTerm(pageNumber) {
         termNumber = "term" + pageNumber;
         if (term >= termNumber){
         if (term != "Approved") {
+            /*if (i <= 4) {*/
             if (i <= 4) {
-                if(pageNumber < 7){        
+                if(pageNumber < 7) {
                 document.getElementById("term" + i).innerHTML =
                     "<div class = 'tittle'>" + "<h2>" + term + ":" + "</h2></div>" +
                     "<div class = 'course_cards'>" + "<h3>" + termData[term][0] + "</h3>" +
@@ -209,6 +268,7 @@ function showTerm(pageNumber) {
                     "<i class='fas fa-circle' style='font-size:24px;color:red'></i>"+
                     "<i class='fas fa-circle' style='font-size:24px;color:red'></i>"+
                     "<i class='fas fa-circle' style='font-size:24px;color:yellow'></i>*/ "</div>";
+                    
                 i = i + 1;
                 }
             }

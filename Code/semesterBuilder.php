@@ -71,14 +71,21 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     </header>
 
     <nav>
+        <div class="nav-right">
+            <a id="usertext" onclick="toogleDisplay('addon-menu')"><?php echo htmlspecialchars($_SESSION["name"]); ?></a>
+            <div class="hidden" id="addon-menu">
+                <a><?php echo htmlspecialchars($_SESSION["sid"]); ?></a>
+                <a href="Model/logout.php">Logout</a>
+            </div>
+        </div>
         <div class="menu-icon" onclick="menuFunc1(this); menuFunc2('menu-list'); menuFunc3();">
             <div class="bar1"></div>
             <div class="bar2"></div>
             <div class="bar3"></div>
         </div>
         <div class="session-required menu-list dropdown">
-            <button class="dropbtn">Academic Schedule Builder</button>
-            <div class="dropdown-content">
+            <button class="dropbtn" onclick="toogleDisplay('dropdown-content')">Academic Schedule Builder</button>
+            <div id="dropdown-content" class="dropdown-content hidden">
                 <a class="academicList" href="academicBuilder_Main.php">General Student Status</a>
                 <a class="academicList" href="academicBuilder_Default.php">Default Schedule</a>
                 <a class="academicList" href="academicBuilder_Builder.php">Customized Schedule</a>
@@ -86,31 +93,82 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         </div>
         <a class="menu-list nav-active" href="semesterBuilder.php">Semester Schedule Builder</a>
         <a class="menu-list" href="courseDB.php">Course List Database</a>
-        <div class="nav-right">
-            <a id="usertext" onclick="addonSwitchFunc()"><?php echo htmlspecialchars($_SESSION["name"]); ?></a>
-            <div id="addon-menu">
-                <a><?php echo htmlspecialchars($_SESSION["sid"]); ?></a>
-                <a href="Model/logout.php">Logout</a>
-            </div>
-        </div>
     </nav>
 
     <div class="container">
         <!-- Top Section -->
         <section id="top">
-            <label for="term">Choose a term:</label>
-            <select id="termSelector">
-                <option value="202030" selected>Fall 2020</option>
-                <option value="202110">Winter 2021</option>
-            </select>
-            <script>
-                term = $("select#termSelector option:selected").val();
-
-                $(document).on('change', 'select#termSelector', function() {
+            <div style="width: 50%; float: left;">
+                <label for="term">Choose a term:</label>
+                <select id="termSelector" onfocus="menuFunc3()" onblur="menuFunc3()">
+                    <option value="202030" selected>Fall 2020</option>
+                    <option value="202110">Winter 2021</option>
+                </select>
+                <script>
                     term = $("select#termSelector option:selected").val();
-                    loadRecCourseTags();
-                });
-            </script>
+
+                    $(document).on('change', 'select#termSelector', function() {
+                        term = $("select#termSelector option:selected").val();
+                        loadRecCourseTags();
+                    });
+                </script>
+            </div>
+
+            <div style="width: 50%; float: right;">
+                <form onsubmit="return ajaxpost()">
+                    <label>Search Class:</label>
+                    <input type="text" id="search_courseid" placeholder="ENGL 100" onfocus="menuFunc3()" onblur="menuFunc3()" required />
+                    <input type="submit" value="Submit"/>
+                </form>
+                <p id="msg_p"></p>
+                <script>
+                    function ajaxpost() {
+                        // (A) GET FORM DATA
+                        var courseid = document.getElementById("search_courseid").value.toUpperCase();
+                        var data = new FormData();
+                        data.append("courseid", courseid);
+                        data.append("term", term);
+                        data.append("doneList", JSON.stringify(courseCompletedList));
+                        
+                        // (B) AJAX
+                        var xhr = new XMLHttpRequest();
+                        xhr.open("POST", "http://15.223.123.122/vsbp/Code/Model/courseRegStatus.php");
+                        // When server responds
+                        xhr.onload = function(){ 
+                            let rsp = JSON.parse(this.response);
+                            //console.log(rsp);
+
+                            if (rsp.Status == true) {
+                                // Generate course tag
+                                let course_tag = tagGenerator(courseid, true);
+    
+                                // Try to remove any existing course tags with same id.
+                                if($("#" + courseid).length != 0) {
+                                    $( "#" + courseid ).remove();
+                                }
+                               
+                                // Appendd new course tag
+                                registerCourse(courseid, term);
+                                
+                                // If this course Name is NOT in the courseList, push
+                                if ($.inArray(courseid, courseList) === -1) {
+                                    courseList.push(courseid);
+                                } else {
+                                    console.log(courseid + " already exist in courseList { " + courseList + " }");
+                                }
+
+                            } else {
+                                // Do nothing and alert the returned Notes
+                                alert(rsp.Notes);
+                            }
+                        };
+                        xhr.send(data);
+                        
+                        // (C) PREVENT HTML FORM SUBMIT
+                        return false;
+                    }
+                </script>
+            </div>
         </section>
 
         <!-- Left Section -->
@@ -212,15 +270,19 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                         $(".bottom_right .courseTag").remove();
                         $("section#left .courseTag").remove();
                         $("section#middle .courseCard").remove();
+                        
                         // Remove all previously displayed calendar events and exams
                         $.each(courseList, function(key, course) {
                             calendar.removeAllEvents();
                             removeExamList(course);
                         });
+                        
                         // Empty the courseList
                         courseList = [];
+                        
                         // Append example course card.
                         appendExampleCard();
+                        
                         // Get the JSON file generated by courseREC.php
                         fetchRecJSON(courseCompletedList, major="<?php echo htmlspecialchars($_SESSION['major']); ?>", term, maxNum=10).done(function (result) {
                             var REC_json_obj = JSON.parse(result);

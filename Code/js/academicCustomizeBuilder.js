@@ -1,12 +1,14 @@
 var studentData;
 var courseReqData;
 var allCourseData;
+var totalCredits = 0;
 //fetch JSON data from takenClass database
 function fetchCourseJSON(sid, password) {
     // alert(sid);
     $.post('Model/takenClass.php', { sid: sid, password: password }, function (data) {
         btnForCourse(data);
         showCourses(data);
+        getTotalCredits(data);
         //console.log(data);
     });
 }
@@ -16,6 +18,13 @@ getAllCourse();
 //console.log(getTermInfo("CHEM 140"));
 window.onload = function init() {
     fetchCourseJSON(sid, pas);
+}
+function getTotalCredits(data){
+    var dataJSON = JSON.parse(data);
+     for (i = 0; i < dataJSON.length; i++) {
+        totalCredits +=  parseInt(dataJSON[i].credit_earned);
+    }
+    console.log(totalCredits);
 }
 // get student ID form academac_builder
 /*function getSid() {
@@ -77,7 +86,7 @@ function findCourseToTake(data) {
     var courseNotCompleted = courseToTake.filter(function (n) {
         return courseCompleted.indexOf(n) === -1;
     });
-    console.log(courseNotCompleted);
+    //console.log(courseNotCompleted);
     return courseNotCompleted;
 }
 function getColor(index, dataJSON) {
@@ -105,7 +114,6 @@ function getColor(index, dataJSON) {
 function showCourses(data) {
     var dataJSON = JSON.parse(data);
     var notCompletedData = findCourseToTake(dataJSON);
-
     /*for (i = 0; i < dataJSON.length; i++) {
         if (dataJSON[i].final_grade == "NP" || dataJSON[i].final_grade == "W") {
             delete dataJSON[i];
@@ -119,8 +127,8 @@ function showCourses(data) {
     /*console.log(dataJSON);
     console.log(courseReqData);
     console.log(notCompletedData);*/
-    
-   
+
+
 
     /*for (i = 0; i < 12; i++) {
         document.getElementById("ct" + i).innerHTML = " ";
@@ -135,25 +143,25 @@ function showCourses(data) {
 
         }
     }
-    console.log(notCompletedData);
     for (i = 0; i < notCompletedData.length; i++) {
         document.getElementById("courseTagArea").innerHTML +=
             "<div class = 'courseTags' >" +
-            "<div  draggable = 'true' id ='nct" + i + "'" +notCompletedData[i]+ ">" +
-            "<p id ='nnnct" + i + "'" + ">" +notCompletedData[i]  +"</p>" +
-            "<p id ='nnct" + i + "'" + ">" +getTermInfo(notCompletedData[i])  +"</p>" +
+            "<div  draggable = 'true' id ='nct" + i + "'>" +
+            "<p id ='nnnct" + i + "'" + ">" + notCompletedData[i] + "</p>" +
+            "<p id ='nnct" + i + "'" + ">" + " " + "</p>" +
             "</div> </div>";
-        document.getElementById("nnct"+i).style.visibility = "hidden";
-        document.getElementById("nnct"+i).style.fontSize = "0.1px";
-        document.getElementById("nnct"+i).style.lineHeight = "0%";
-        document.getElementById("nnct"+i).style.marginTop = "-10px";
-        document.getElementById("nct"+i).style.color="black";
-        document.getElementById("nct"+i).style.marginTop = "-10px";
-       //console.log(getPrerequisite(notCompletedData[i]));
+        document.getElementById("nnct" + i).style.visibility = "hidden";
+        document.getElementById("nnct" + i).style.fontSize = "0.1px";
+        document.getElementById("nnct" + i).style.lineHeight = "0%";
+        document.getElementById("nnct" + i).style.marginTop = "-10px";
+        document.getElementById("nct" + i).style.color = "black";
+        document.getElementById("nct" + i).style.marginTop = "-10px";
+        //console.log(getPrerequisite(notCompletedData[i]));
     }
     for (i = 0; i < notCompletedData.length; i++) {
-        dragTest("#nct" + i);
+        dragStart("#nct" + i);
     }
+    dragTest();
     /* for (i = 0; i < 12; i++) {
          if (i < notCompletedData.length) {
              document.getElementById("nct" + i).innerHTML = notCompletedData[i];
@@ -163,7 +171,6 @@ function showCourses(data) {
              return;
          }
      }*/
-
 }
 function btnForCourse(data) {
     var ctRight = document.getElementById("ctRight");
@@ -282,47 +289,56 @@ function getTermInfo(courseName) {
     url3 = "JSON/202030/" + courseName + ".json";
     url1 = "JSON/202110/" + courseName + ".json";
 
+    //check does the file exit in the path
+    // See if the file exists
     myRequest3.open("GET", url1, false);
     myRequest3.onload = function () {
-        if (myRequest3.responseText != null) {
+        if (myRequest3.status == 200 && myRequest3.responseText != null) {
             var data = JSON.parse(myRequest3.responseText);
+            prerequisite += data.prerequisite;
+            credit = data.credit;
             if (data.term != "No class for the term") {
                 term += "Winter" + " ";
-                prerequisite += data.prerequisite;
-                credit = data.credit;
+                
             }
         }
     }
     myRequest3.send();
+    if(myRequest3.status == 404){
+        return "this class not applied";
+    }
+
+
 
     myRequest.open("GET", url2, false);
     myRequest.onload = function () {
-        if (myRequest3.responseText != null) {
+        if (myRequest.status == 200 && myRequest.responseText != null) {
             var data = JSON.parse(myRequest.responseText);
             if (data.term != "No class for the term") {
                 term += "Spring/Summer" + " ";
-                prerequisite += data.prerequisite;
-                credit = data.credit;
+
             }
         }
+
     }
+
     myRequest.send();
 
     myRequest2.open("GET", url3, false);
     myRequest2.onload = function () {
-        if (myRequest2.responseText != null) {
+        if (myRequest2.status == 200 && myRequest2.responseText != null) {
             var data = JSON.parse(myRequest2.responseText);
             if (data.term != "No class for the term") {
                 term += "Fall" + " ";
-                prerequisite += data.prerequisite;
-                credit = data.credit;
+
             }
         }
+
     }
     myRequest2.send();
 
 
-    return [term+"</br>","credits:"+credit+"</br>",prerequisite];
+    return [term + "</br>", "credits:" + credit + "</br>", prerequisite];
 }
 //console.log(courseNeededArray());
 //console.log(getTermInfo("ENGG 140"));
@@ -336,21 +352,23 @@ function getAllCourse() {
     myRequest.send();
 }
 
-
-//console.log(allCourseData);
-function dragTest(elementId) {
-    //const draggableElement = document.querySelector("#nct0");
+function dragStart(elementId){
     const draggableElement = document.querySelector(elementId);
     draggableElement.addEventListener("dragstart", e => {
         e.dataTransfer.setData("text/plain", draggableElement.id);
     });
+}
+
+
+//console.log(allCourseData);
+function dragTest() {
+    //const draggableElement = document.querySelector("#nct0");
+    
+
     for (const dropZone of document.querySelectorAll(".course_cards")) {
         dropZone.addEventListener("dragover", e => {
             e.preventDefault();
             dropZone.classList.add("drop-zone--over");
-
-            v
-
         });
 
         dropZone.addEventListener("dragleave", e => {
@@ -365,17 +383,23 @@ function dragTest(elementId) {
             var newForAlern = "n" + droppedElementId;
             var newForAlern2 = "nn" + droppedElementId;
             //var content = document.getElementById(newForAlern).innerHTML;
+            //get the course name form innerHTML
+            var y = document.getElementById(newForAlern2).innerHTML;
+            document.getElementById(newForAlern).innerHTML = getTermInfo(y);
 
             document.getElementById(newForAlern).style.visibility = "visible";
             document.getElementById(newForAlern).style.fontSize = "10px";
             document.getElementById(newForAlern).style.lineHeight = "110%";
-            if(document.getElementById(newForAlern).innerHTML.length <=80){
+
+
+
+            if (document.getElementById(newForAlern).innerHTML.length <= 80) {
                 document.getElementById(newForAlern).style.fontSize = "20px";
             }
-            if(document.getElementById(newForAlern).innerHTML.length <= 100 && document.getElementById(newForAlern).innerHTML.length >80){
+            if (document.getElementById(newForAlern).innerHTML.length <= 100 && document.getElementById(newForAlern).innerHTML.length > 80) {
                 document.getElementById(newForAlern).style.fontSize = "12px";
             }
-            
+
 
 
             dropZone.appendChild(droppedElement);
@@ -399,6 +423,7 @@ function dragTest(elementId) {
             const droppedElement = document.getElementById(droppedElementId);
             //show less info in course tag
             var newForAlern = "n" + droppedElementId;
+            document.getElementById(newForAlern).innerHTML = " ";
             document.getElementById(newForAlern).style.visibility = "hidden";
 
             dropZone.appendChild(droppedElement);

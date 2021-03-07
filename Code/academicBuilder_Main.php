@@ -75,14 +75,21 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     </header>
 
     <nav>
+        <div class="nav-right">
+            <a id="usertext" onclick="toogleDisplay('addon-menu')"><?php echo htmlspecialchars($_SESSION["name"]); ?></a>
+            <div class="hidden" id="addon-menu">
+                <a><?php echo htmlspecialchars($_SESSION["sid"]); ?></a>
+                <a href="Model/logout.php">Logout</a>
+            </div>
+        </div>
         <div class="menu-icon" onclick="menuFunc1(this); menuFunc2('menu-list');">
             <div class="bar1"></div>
             <div class="bar2"></div>
             <div class="bar3"></div>
         </div>
         <div class="session-required menu-list nav-active dropdown">
-            <button class="dropbtn">Academic Schedule Builder</button>
-            <div class="dropdown-content">
+            <button class="dropbtn" onclick="toogleDisplay('dropdown-content')">Academic Schedule Builder</button>
+            <div id="dropdown-content" class="dropdown-content hidden">
                 <a class="academicList" href="academicBuilder_Main.php">General Student Status</a>
                 <a class="academicList" href="academicBuilder_Default.php">Default Schedule</a>
                 <a class="academicList" href="academicBuilder_Builder.php">Customized Schedule</a>
@@ -90,13 +97,6 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         </div>
         <a class="session-required menu-list" href="semesterBuilder.php">Semester Schedule Builder</a>
         <a class="menu-list" href="courseDB.php">Course List Database</a>
-        <div class="nav-right">
-            <a id="usertext" onclick="addonSwitchFunc()"><?php echo htmlspecialchars($_SESSION["name"]); ?></a>
-            <div id="addon-menu">
-                <a><?php echo htmlspecialchars($_SESSION["sid"]); ?></a>
-                <a href="Model/logout.php">Logout</a>
-            </div>
-        </div>
     </nav>
 
     <div class="welcome_tag" id="welcome">

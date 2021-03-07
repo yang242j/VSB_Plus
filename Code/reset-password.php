@@ -149,24 +149,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </header>
 
     <nav>
+        <div class="nav-right">
+            <a href="login.php">LogIn</a>
+            <a href="signup.php">SignUp</a>
+        </div>
         <div class="menu-icon change">
             <div class="bar1"></div>
             <div class="bar2"></div>
             <div class="bar3"></div>
-        </div>
-        <div class="session-required menu-list hidden dropdown">
-            <button class="dropbtn">Academic Schedule Builder</button>
-            <div class="dropdown-content">
-                <a class="academicList" href="academicBuilder_Main.php">General Student Status</a>
-                <a class="academicList" href="academicBuilder_Default.php">Default Schedule</a>
-                <a class="academicList" href="academicBuilder_Builder.php">Customized Schedule</a>
-            </div>
-        </div>
-        <a class="menu-list hidden" href="semesterBuilder.php">Semester Schedule Builder</a>
-        <a class="menu-list hidden" href="courseDB.php">Course List Database</a>
-        <div class="nav-right">
-            <a href="login.php">LogIn</a>
-            <a href="signup.php">SignUp</a>
         </div>
     </nav>
 

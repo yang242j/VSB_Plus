@@ -1,12 +1,7 @@
 /* When the user clicks on the nav-right buttons, 
-toggle between hiding and showing the addOn content */
-function addonSwitchFunc() {
-    var addon_display = document.getElementById("addon-menu").style.display;
-    if (addon_display == "none") {
-        document.getElementById("addon-menu").style.display = "block";
-    } else {
-        document.getElementById("addon-menu").style.display = "none";
-    }
+toggle between hiding and showing the content with id */
+function toogleDisplay(id) {
+  document.getElementById(id).classList.toggle("hidden");
 }
 
 // Menu toggle function
