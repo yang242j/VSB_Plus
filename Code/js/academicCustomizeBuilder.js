@@ -1,12 +1,15 @@
 var studentData;
 var courseReqData;
 var allCourseData;
+var totalCredits;
+var earnedCredits;
 //fetch JSON data from takenClass database
 function fetchCourseJSON(sid, password) {
     // alert(sid);
     $.post('Model/takenClass.php', { sid: sid, password: password }, function (data) {
         btnForCourse(data);
         showCourses(data);
+        getTotalCredits(data);
         //console.log(data);
     });
 }
@@ -16,6 +19,13 @@ getAllCourse();
 //console.log(getTermInfo("CHEM 140"));
 window.onload = function init() {
     fetchCourseJSON(sid, pas);
+}
+function getTotalCredits(data){
+    var dataJSON = JSON.parse(data);
+     for (i = 0; i < dataJSON.length; i++) {
+            totalCredits += dataJSON[i].credit_earned;
+    }
+    console.log(totalCredits);
 }
 // get student ID form academac_builder
 /*function getSid() {
@@ -105,7 +115,6 @@ function getColor(index, dataJSON) {
 function showCourses(data) {
     var dataJSON = JSON.parse(data);
     var notCompletedData = findCourseToTake(dataJSON);
-
     /*for (i = 0; i < dataJSON.length; i++) {
         if (dataJSON[i].final_grade == "NP" || dataJSON[i].final_grade == "W") {
             delete dataJSON[i];
