@@ -151,8 +151,9 @@ function showCourses(data) {
         //console.log(getPrerequisite(notCompletedData[i]));
     }
     for (i = 0; i < notCompletedData.length; i++) {
-        dragTest("#nct" + 2);
+        dragStart("#nct" + i);
     }
+    dragTest();
     /* for (i = 0; i < 12; i++) {
          if (i < notCompletedData.length) {
              document.getElementById("nct" + i).innerHTML = notCompletedData[i];
@@ -349,20 +350,23 @@ function getAllCourse() {
     myRequest.send();
 }
 
-
-//console.log(allCourseData);
-function dragTest(elementId) {
-    //const draggableElement = document.querySelector("#nct0");
+function dragStart(elementId){
     const draggableElement = document.querySelector(elementId);
     draggableElement.addEventListener("dragstart", e => {
         e.dataTransfer.setData("text/plain", draggableElement.id);
     });
+}
+
+
+//console.log(allCourseData);
+function dragTest() {
+    //const draggableElement = document.querySelector("#nct0");
+    
+
     for (const dropZone of document.querySelectorAll(".course_cards")) {
         dropZone.addEventListener("dragover", e => {
             e.preventDefault();
             dropZone.classList.add("drop-zone--over");
-
-
         });
 
         dropZone.addEventListener("dragleave", e => {
@@ -379,14 +383,11 @@ function dragTest(elementId) {
             //var content = document.getElementById(newForAlern).innerHTML;
             //get the course name form innerHTML
             var y = document.getElementById(newForAlern2).innerHTML;
-            document.getElementById(newForAlern).innerHTML = getTermInfo(y)
+            document.getElementById(newForAlern).innerHTML = getTermInfo(y);
 
             document.getElementById(newForAlern).style.visibility = "visible";
             document.getElementById(newForAlern).style.fontSize = "10px";
             document.getElementById(newForAlern).style.lineHeight = "110%";
-
-
-
 
 
 
