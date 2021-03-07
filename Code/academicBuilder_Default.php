@@ -85,6 +85,15 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         <a class="session-required menu-list" href="semesterBuilder.php">Semester Schedule Builder</a>
         <a class="menu-list" href="courseDB.php">Course List Database</a>
     </nav>
+
+<?php
+    
+    // Include the vsbp_db_config.php file
+    require_once "Model/vsbp_db_config.php";
+    
+    // Close connection
+    mysqli_close($conn);
+    ?>
     
 <section class = "terms" id = "block" style="float:left;">
         <div class="Term">
