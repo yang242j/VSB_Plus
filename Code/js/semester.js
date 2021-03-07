@@ -17,6 +17,12 @@ var calendar = new FullCalendar.Calendar(calendarEl, {
         center: 'title',
         right: 'dayGridMonth,timeGridWeek'
     },
+    eventTimeFormat: {
+        hour: "2-digit",
+        minute: "2-digit",
+        meridiem: "short",
+        hour12: true
+    },
     titleFormat: {
         month: 'short',
         year: 'numeric'
@@ -25,6 +31,7 @@ var calendar = new FullCalendar.Calendar(calendarEl, {
 });
 calendar.render();
 calendar.setOption('allDaySlot', false);
+calendar.setOption('displayEventTime', false);
 //calendar.setOption('aspectRatio', 0.9);
 
 document.body.onkeydown = function (ev) {
