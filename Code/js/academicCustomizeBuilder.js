@@ -135,7 +135,6 @@ function showCourses(data) {
 
         }
     }
-    console.log(notCompletedData);
     for (i = 0; i < notCompletedData.length; i++) {
         document.getElementById("courseTagArea").innerHTML +=
             "<div class = 'courseTags' >" +
@@ -358,7 +357,6 @@ function dragTest(elementId) {
             e.preventDefault();
             dropZone.classList.add("drop-zone--over");
 
-            v
 
         });
 
@@ -378,7 +376,7 @@ function dragTest(elementId) {
             document.getElementById(newForAlern).style.visibility = "visible";
             document.getElementById(newForAlern).style.fontSize = "10px";
             document.getElementById(newForAlern).style.lineHeight = "110%";
-           var x = document.getElementById(newForAlern).innerHTML;
+            var x = document.getElementById(newForAlern).innerHTML;
             console.log(x);
 
 
