@@ -12,8 +12,8 @@ var calendarEl = document.getElementById('calendar');
 var calendar = new FullCalendar.Calendar(calendarEl, {
     initialView: 'dayGridMonth',
     initialDate: new Date(),
-    defaultView: 'agendaWeek',
-    dayBreakTime: "08:00:00",
+    minTime: '08:00:00',
+    maxTime: '20:00:00',
     headerToolbar: {
         left: 'prev,next',
         center: 'title',
