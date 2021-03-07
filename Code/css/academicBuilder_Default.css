@@ -235,6 +235,15 @@ body .terms .term1 #course_cards_builder p{
         text-align: center;
   
     }
+    body .tags_courses .course_list .course_tag_electives p{
+        /*border: 2px solid red;*/
+        margin-left: 8px;
+        background-color: #D4F19F;
+        border-radius: 25px;
+        box-shadow: -2px 4px 7px 0px #555555;
+        text-align: center;
+  
+    }
     body .tags_courses .course_list .course_tag_not_completed .courseTag{
         border: 2px solid red;
     }
