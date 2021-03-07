@@ -180,15 +180,9 @@ body .container .bottom_right .courseTag {
     body .container .bottom_left {
         display: none;
     }
-}
-
-@media screen and (max-width: 600px) {
-    body .container section#left {
-        width: 30%;
-    }
 
     body .container section#middle {
-        width: 60%;
+        width: 100%;
         float: right;
     }
 
