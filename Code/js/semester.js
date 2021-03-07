@@ -12,8 +12,8 @@ var calendarEl = document.getElementById('calendar');
 var calendar = new FullCalendar.Calendar(calendarEl, {
     initialView: 'dayGridMonth',
     initialDate: new Date(),
-    slotMinTime: '08:00:00',
-    slotMaxTime: '20:00:00',
+    slotMinTime: '07:00:00',
+    slotMaxTime: '22:00:00',
     headerToolbar: {
         left: 'prev,next',
         center: 'title',
@@ -33,7 +33,9 @@ var calendar = new FullCalendar.Calendar(calendarEl, {
 });
 calendar.render();
 calendar.setOption('weekends', false);
+calendar.setOption('expandRows', true);
 calendar.setOption('allDaySlot', false);
+calendar.setOption('contentHeight', 'auto');
 calendar.setOption('displayEventTime', false);
 //calendar.setOption('aspectRatio', 0.9);
 
