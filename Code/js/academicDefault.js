@@ -30,7 +30,8 @@ function getTitle(courseName) {
 console.log(getTitle("CHEM 140"));
 function getCourseData() {
     var myRequest = new XMLHttpRequest;
-    myRequest.open("GET", "JSON/ESE.json", false);
+    //myRequest.open("GET", "JSON/ESE.json", false);
+    myRequest.open("GET", "JSON/SSE.json", false);
     myRequest.onload = function () {
         var data = JSON.parse(myRequest.responseText);
         courseData = data;
@@ -39,7 +40,8 @@ function getCourseData() {
 }
 function getTermData() {
     var myRequest = new XMLHttpRequest;
-    myRequest.open("GET", "JSON/reqCourse/ESE_req.json", false);
+    //myRequest.open("GET", "JSON/reqCourse/ESE_req.json", false);
+    myRequest.open("GET", "JSON/reqCourse/SSE_req.json", false);
     myRequest.onload = function () {
         var data = JSON.parse(myRequest.responseText);
         termData = data;
@@ -170,8 +172,9 @@ function showTerm(pageNumber) {
         termNumber = "term" + pageNumber;
         if (term >= termNumber){
         if (term != "Approved") {
+            /*if (i <= 4) {*/
             if (i <= 4) {
-                if(pageNumber < 7){        
+                if(pageNumber < 7) {
                 document.getElementById("term" + i).innerHTML =
                     "<div class = 'tittle'>" + "<h2>" + term + ":" + "</h2></div>" +
                     "<div class = 'course_cards'>" + "<h3>" + termData[term][0] + "</h3>" +
@@ -203,12 +206,13 @@ function showTerm(pageNumber) {
                     "<i class='fas fa-circle' style='font-size:24px;color:red'></i>"+
                     "<i class='fas fa-circle' style='font-size:24px;color:red'></i>*/ "</div>"+
 
-                    "<div class = 'course_cards'>" + "<h3>" + termData[term][4] + "</h3>"+
+                    /*"<div class = 'course_cards'>" + "<h3>" + termData[term][4] + "</h3>"+
                     "<p>"+ getTitle(termData[term][4])+ "</p>"+
                  /*  "<i class='fas fa-circle' style='font-size:24px;color:red'></i>"+
                     "<i class='fas fa-circle' style='font-size:24px;color:red'></i>"+
                     "<i class='fas fa-circle' style='font-size:24px;color:red'></i>"+
-                    "<i class='fas fa-circle' style='font-size:24px;color:yellow'></i>*/ "</div>";
+                    "<i class='fas fa-circle' style='font-size:24px;color:yellow'></i>*/ "</div>";*/
+                    
                 i = i + 1;
                 }
             }
