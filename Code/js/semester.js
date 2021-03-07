@@ -15,7 +15,7 @@ var calendar = new FullCalendar.Calendar(calendarEl, {
     headerToolbar: {
         left: 'prev,next',
         center: 'title',
-        right: 'dayGridMonth,timeGridWeek,timeGridDay'
+        right: 'dayGridMonth,timeGridWeek'
     },
     eventTimeFormat: {
         hour: "2-digit",
