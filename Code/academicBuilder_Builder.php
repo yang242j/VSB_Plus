@@ -68,8 +68,6 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 </head>
 
 <body>
-     <!--<p id = "userId" hidden><?php echo htmlspecialchars($_SESSION["sid"]); ?></p>
-    <p id = "password" hidden><?php echo htmlspecialchars($_SESSION["password"]); ?></p> -->
     
     <header>
         <a href="https://www.uregina.ca"><img src="img/logo.png" class="logo" alt="UofR"></a>
@@ -100,7 +98,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         <a class="menu-list" href="courseDB.php">Course List Database</a>
     </nav>
     <div class="welcome_tag" id = "welcome">
-            <h1 id = "show_credits">Credits: </h1>
+            <h1 >Credits: <p id = "show_credits"></p></h1>
         </div>
 
 <section class = "terms" id = "block" style = "overflow:auto; height:800px " >

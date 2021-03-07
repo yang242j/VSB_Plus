@@ -340,7 +340,7 @@ function getTermInfo(courseName) {
     myRequest2.send();
 
 
-    return [term + "</br>", "credits:" + credit + "</br>", prerequisite];
+    return [term ,credit,prerequisite];
 }
 //console.log(courseNeededArray());
 //console.log(getTermInfo("ENGG 140"));
@@ -388,10 +388,14 @@ function dragTest() {
             //get the course name form innerHTML
             //ipdate term info 
             var y = document.getElementById(newForAlern2).innerHTML;
-            document.getElementById(newForAlern).innerHTML = getTermInfo(y);
+            var terminfo = getTermInfo(y);
 
+            document.getElementById(newForAlern).innerHTML = terminfo[0];//terminfo[0] is term
+           
             //update cerdits
-
+            if(totalCredits < 136){
+                document.getElementById("show_credits").innerHTML =+ parseInt(terminfo[1]);//terminfo[1] is credits
+            }
             document.getElementById(newForAlern).style.visibility = "visible";
             document.getElementById(newForAlern).style.fontSize = "10px";
             document.getElementById(newForAlern).style.lineHeight = "110%";
