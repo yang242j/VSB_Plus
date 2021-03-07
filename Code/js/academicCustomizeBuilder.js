@@ -292,7 +292,7 @@ function getTermInfo(courseName) {
             }
         }
     }
-    if(myRequest3.status != 404){
+    if(myRequest.responseText != null){
         myRequest3.send();
         }
 
@@ -308,7 +308,7 @@ function getTermInfo(courseName) {
             }
         }
     }
-    if(myRequest.status != 404){
+    if(myRequest.responseText != null){
     myRequest.send();
     }
     myRequest2.open("GET", url3, false);
