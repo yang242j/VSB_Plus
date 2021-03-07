@@ -203,7 +203,7 @@ body .terms .term1 #course_cards_builder p{
 
     body .tags_courses .course_list .electives_course{
         /*border: 2px solid red;*/
-        margin-top: -5px;
+        margin-top: 10px;
         margin-left: -20px;
     }
     body .tags_courses .course_list .course_tag_electives{
