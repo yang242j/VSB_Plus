@@ -100,7 +100,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         <section id="top">
             <div style="width: 50%; float: left;">
                 <label for="term">Choose a term:</label>
-                <select id="termSelector">
+                <select id="termSelector" onfocus="menuFunc3()" onblur="menuFunc3()">
                     <option value="202030" selected>Fall 2020</option>
                     <option value="202110">Winter 2021</option>
                 </select>
