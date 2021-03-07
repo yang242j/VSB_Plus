@@ -282,7 +282,7 @@ function getTermInfo(courseName) {
     url1 = "JSON/202110/" + courseName + ".json";
 
     //check does the file exit in the path
-    var myLog = new File(url1);
+    var myLog = new File(["test"],url1);
 
     // See if the file exists
     if(myLog.exists()){
