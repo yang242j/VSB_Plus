@@ -1,7 +1,7 @@
 var studentData;
 var courseReqData;
 var allCourseData;
-var itotalCredits = 0;
+var totalCredits = 0;
 //fetch JSON data from takenClass database
 function fetchCourseJSON(sid, password) {
     // alert(sid);
