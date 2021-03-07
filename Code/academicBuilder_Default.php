@@ -97,22 +97,23 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         <div class = "tittle"><h2>Term1:</h2></div>
         <div class = "course_cards">
               <h3>CHEM104</h3>
-              <h4>CHEM30 or CHEM100(minimum 65%); and Precalculus 30 or Mathematics C30 with a grade of at least 65%, or AMTH092 with a grade of at least 80%, or MATH102</h4>
+              <p>Title:</p>
         </div>
         <div class = "course_cards">
             <h3>ENGG123</h3>
-            <h4>None</h4>
+            <p>Title:</p>
       </div>
       <div class = "course_cards">
         <h3>ENGG140</h3>
-        <h4>MATH110(may be take concurrently)</h4>
+        <p>Title:</p>
   </div>
   <div class = "course_cards">
     <h3>MATH110</h3>
-    <h4>Precalculus 30 with at least 75%, or Calculus 30 or Mathematics B30 and C30 with a grade of at least 65% in each or Math102</h4>
+    <p>Title:</p>
 </div>
 <div class = "course_cards">
     <h3>MATH122</h3>
+    <p>Title:</p>
    <!-- <i class='fas fa-circle' style='font-size:24px;color:red'></i>  
     <i class='fas fa-circle' style='font-size:24px;color:red'></i>
     <i class='fas fa-circle' style='font-size:24px;color:red'></i>
@@ -127,18 +128,23 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         <div class = "tittle"><h2>Term2:</h2></div>
         <div class = "course_cards">
         <h3>CS110</h3>
+            <p>Title:</p>
         </div>
         <div class = "course_cards">
         <h3>ENGG100</h3>
+            <p>Title:</p>
         </div>
         <div class = "course_cards">
         <h3>ENGL100</h3>
+            <p>Title:</p>
         </div>
         <div class = "course_cards">
         <h3>MATH111</h3>
+            <p>Title:</p>
         </div>
         <div class = "course_cards">
         <h3>PHYS119</h3>
+            <p>Title:</p>
         </div>
 
         <!--<div class = "arrows"><button class="right_arrow"><i class='fas fa-angle-left'></i></button>
@@ -151,18 +157,23 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         <div class = "tittle"><h2>Term3:</h2></div>
         <div class = "course_cards">
         <h3>CS115</h3>
+            <p>Title:</p>
         </div>
         <div class = "course_cards">
         <h3>ENEL280</h3>
+            <p>Title:</p>
         </div>
         <div class = "course_cards">
         <h3>ENEV223</h3>
+            <p>Title:</p>
         </div>
         <div class = "course_cards">
         <h3>MATH213</h3>
+            <p>Title:</p>
         </div>
         <div class = "course_cards">
         <h3>PHYS112</h3>
+            <p>Title:</p>
         </div>
 
         <!--<div class = "arrows"><button class="right_arrow"><i class='fas fa-angle-left'></i></button>
@@ -175,36 +186,46 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         <div class = "tittle"><h2>Term4:</h2></div>
         <div class = "course_cards">
         <h3>CS210</h3>
+            <p>Title:</p>    
         </div>
         <div class = "course_cards">
         <h3>ENEL281</h3>
+            <p>Title:</p>
         </div>
         <div class = "course_cards">
         <h3>ENEL282</h3>
+            <p>Title:</p>
         </div>
         <div class = "course_cards">
         <h3>MATH217</h3>
+            <p>Title:</p>
         </div>
         <div class = "course_cards">
         <h3>STAT289</h3>
+            <p>Title:</p>
         </div>
 
         <div class = "term1" id ="term5">
         <div class = "tittle"><h2>Term5:</h2></div>
         <div class = "course_cards">
         <h3>CS215</h3>
+            <p>Title:</p>
         </div>
         <div class = "course_cards">
         <h3>CS340</h3>
+            <p>Title:</p>
         </div>
         <div class = "course_cards">
         <h3>ENEL384</h3>
+            <p>Title:</p>
         </div>
         <div class = "course_cards">
         <h3>ENSE352</h3>
+            <p>Title:</p>
         </div>
         <div class = "course_cards">
         <h3>ENSE374</h3>
+            <p>Title:</p>
         </div>
         </div>
         
@@ -212,15 +233,19 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         <div class = "tittle"><h2>Term6:</h2></div>
         <div class = "course_cards">
         <h3>BUS260</h3>
+            <p>Title:</p>
         </div>
         <div class = "course_cards">
         <h3>ECON201</h3>
+            <p>Title:</p>
         </div>
         <div class = "course_cards">
         <h3>ENEL380</h3>
+            <p>Title:</p>
         </div>
         <div class = "course_cards">
         <h3>ENSE353</h3>
+            <p>Title:</p>
         </div>
         <div class = "course_cards">
         <h3>Approved Elective</h3>
@@ -231,15 +256,19 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         <div class = "tittle"><h2>Term7:</h2></div>
         <div class = "course_cards">
         <h3>ENEL387</h3>
+            <p>Title:</p>
         </div>
         <div class = "course_cards">
         <h3>ENSE470</h3>
+            <p>Title:</p>
         </div>
         <div class = "course_cards">
         <h3>ENSE471</h3>
+            <p>Title:</p>
         </div>
         <div class = "course_cards">
         <h3>ENSE475</h3>
+            <p>Title:</p>
         </div>
         <div class = "course_cards">
         <h3>Approved Elective</h3>
@@ -250,12 +279,15 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         <div class = "tittle"><h2>Term8:</h2></div>
         <div class = "course_cards">
         <h3>ENGG303</h3>
+            <p>Title:</p>
         </div>
         <div class = "course_cards">
         <h3>ENSE400</h3>
+            <p>Title:</p>
         </div>
         <div class = "course_cards">
         <h3>ENSE472</h3>
+            <p>Title:</p>
         </div>
         <div class = "course_cards">
         <h3>Approved Elective</h3>
@@ -269,12 +301,15 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         <div class = "tittle"><h2>Term9:</h2></div>
         <div class = "course_cards">
         <h3>ENGG401</h3>
+            <p>Title:</p>
         </div>
         <div class = "course_cards">
         <h3>ENSE350</h3>
+            <p>Title:</p>
         </div>
         <div class = "course_cards">
         <h3>ENSE477</h3>
+            <p>Title:</p>
         </div>
         <div class = "course_cards">
         <h3>Approved Elective</h3>
