@@ -378,7 +378,8 @@ function dragTest(elementId) {
             document.getElementById(newForAlern).style.lineHeight = "110%";
             var x = document.getElementById(newForAlern).innerHTML;
             var y = document.getElementById(newForAlern2).innerHTML;
-            console.log(y,x);
+            //console.log(y,x);
+            console(getPrerequisite(y));
 
 
 
