@@ -288,9 +288,10 @@ function getTermInfo(courseName) {
         if (myRequest3.status == 200 && myRequest3.responseText != null) {
             var data = JSON.parse(myRequest3.responseText);
             prerequisite += data.prerequisite;
+            credit = data.credit;
             if (data.term != "No class for the term") {
                 term += "Winter" + " ";
-                credit = data.credit;
+                
             }
         }
     }
@@ -307,7 +308,6 @@ function getTermInfo(courseName) {
             var data = JSON.parse(myRequest.responseText);
             if (data.term != "No class for the term") {
                 term += "Spring/Summer" + " ";
-                credit = data.credit;
 
             }
         }
@@ -322,7 +322,6 @@ function getTermInfo(courseName) {
             var data = JSON.parse(myRequest2.responseText);
             if (data.term != "No class for the term") {
                 term += "Fall" + " ";
-                credit = data.credit;
 
             }
         }
