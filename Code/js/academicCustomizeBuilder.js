@@ -285,11 +285,20 @@ function getTermInfo(courseName) {
     var myLog = new File(["test"],url1);
 
     // See if the file exists
-    myRequest3.onreadystatechange = function() {
-        if (this.readyState === this.DONE) {
-            return "das";
+    $.ajax({
+        url:url1,
+        type:'HEAD',
+        error: function()
+        {
+            //file not exists
+            return 0;
+        },
+        success: function()
+        {
+            //file exists
+            continue;
         }
-    }
+    });
 
 
     myRequest3.open("GET", url1, false);
