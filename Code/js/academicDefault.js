@@ -55,6 +55,12 @@ function showNotCompletedCourse() {
     }
 }
 
+function showNotCompletedElectivesCourse() {
+    for (i = 0; i < 12; i++) {
+        document.getElementById("enct" + i).innerHTML = courseData[i].short_name;
+    }
+}
+
 function showApprovedCourse() {
     for (term in termData) {
         if (term = "Approved") {
