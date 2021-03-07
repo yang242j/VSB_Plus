@@ -86,17 +86,6 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         <a class="menu-list" href="courseDB.php">Course List Database</a>
     </nav>
 
-<?php
-    $course_ID = [];
-    $course_title = [];
-    
-
-
-   
-    
-    // Close connection
-    mysqli_close($conn);
-    ?>
     
 <section class = "terms" id = "block" style="float:left;">
         <div class="Term">
@@ -107,25 +96,13 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     <div id = "autoscroll">
     <div class = "term1" id = "term1">
         <div class = "tittle"><h2>Term1:</h2></div>
+        <div class = "course_cards"></div>
+        <div class = "course_cards"></div>
+        <div class = "course_cards"></div>
+        <div class = "course_cards"></div>
         <div class = "course_cards">
-              <h3><?php echo $_POST["course_ID"]; ?></h3>
-              <p>Title:</p>
-        </div>
-        <div class = "course_cards">
-            <h3><?php echo $_POST["course_ID"]; ?></h3>
-            <p>Title:</p>
-      </div>
-      <div class = "course_cards">
-        <h3><?php echo $_POST["course_ID"]; ?></h3>
-        <p>Title:</p>
-  </div>
-  <div class = "course_cards">
-    <h3><?php echo $_POST["course_ID"]; ?></h3>
-    <p>Title:</p>
-</div>
-<div class = "course_cards">
-    <h3><?php echo $_POST["course_ID"]; ?></h3>
-    <p>Title:</p>
+    <!--<h3>?php echo $_POST["course_ID"]; ?></h3>-->
+    
    <!-- <i class='fas fa-circle' style='font-size:24px;color:red'></i>  
     <i class='fas fa-circle' style='font-size:24px;color:red'></i>
     <i class='fas fa-circle' style='font-size:24px;color:red'></i>
@@ -138,26 +115,11 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     </div>
     <div class = "term1" id ="term2">
         <div class = "tittle"><h2>Term2:</h2></div>
-        <div class = "course_cards">
-        <h3>CS110</h3>
-            <p>Title:</p>
-        </div>
-        <div class = "course_cards">
-        <h3>ENGG100</h3>
-            <p>Title:</p>
-        </div>
-        <div class = "course_cards">
-        <h3>ENGL100</h3>
-            <p>Title:</p>
-        </div>
-        <div class = "course_cards">
-        <h3>MATH111</h3>
-            <p>Title:</p>
-        </div>
-        <div class = "course_cards">
-        <h3>PHYS119</h3>
-            <p>Title:</p>
-        </div>
+        <div class = "course_cards"></div>
+        <div class = "course_cards"></div>
+        <div class = "course_cards"></div>
+        <div class = "course_cards"></div>
+        <div class = "course_cards"></div>
 
         <!--<div class = "arrows"><button class="right_arrow"><i class='fas fa-angle-left'></i></button>
             &nbsp;
@@ -167,26 +129,11 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     <div class = "term1" id ="term3">
 
         <div class = "tittle"><h2>Term3:</h2></div>
-        <div class = "course_cards">
-        <h3>CS115</h3>
-            <p>Title:</p>
-        </div>
-        <div class = "course_cards">
-        <h3>ENEL280</h3>
-            <p>Title:</p>
-        </div>
-        <div class = "course_cards">
-        <h3>ENEV223</h3>
-            <p>Title:</p>
-        </div>
-        <div class = "course_cards">
-        <h3>MATH213</h3>
-            <p>Title:</p>
-        </div>
-        <div class = "course_cards">
-        <h3>PHYS112</h3>
-            <p>Title:</p>
-        </div>
+        <div class = "course_cards"></div>
+        <div class = "course_cards"></div>
+        <div class = "course_cards"></div>
+        <div class = "course_cards"></div>
+        <div class = "course_cards"></div>
 
         <!--<div class = "arrows"><button class="right_arrow"><i class='fas fa-angle-left'></i></button>
             &nbsp;
@@ -196,92 +143,39 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 
     <div class = "term1" id ="term4">
         <div class = "tittle"><h2>Term4:</h2></div>
-        <div class = "course_cards">
-        <h3>CS210</h3>
-            <p>Title:</p>    
-        </div>
-        <div class = "course_cards">
-        <h3>ENEL281</h3>
-            <p>Title:</p>
-        </div>
-        <div class = "course_cards">
-        <h3>ENEL282</h3>
-            <p>Title:</p>
-        </div>
-        <div class = "course_cards">
-        <h3>MATH217</h3>
-            <p>Title:</p>
-        </div>
-        <div class = "course_cards">
-        <h3>STAT289</h3>
-            <p>Title:</p>
-        </div>
+        <div class = "course_cards"></div>
+        <div class = "course_cards"></div>
+        <div class = "course_cards"></div>
+        <div class = "course_cards"></div>
+        <div class = "course_cards"></div>
 
         <div class = "term1" id ="term5">
         <div class = "tittle"><h2>Term5:</h2></div>
         <div class = "course_cards">
-        <h3>CS215</h3>
-            <p>Title:</p>
+        <!--<h3>CS215</h3>
+            <p>Title:</p>-->
         </div>
-        <div class = "course_cards">
-        <h3>CS340</h3>
-            <p>Title:</p>
-        </div>
-        <div class = "course_cards">
-        <h3>ENEL384</h3>
-            <p>Title:</p>
-        </div>
-        <div class = "course_cards">
-        <h3>ENSE352</h3>
-            <p>Title:</p>
-        </div>
-        <div class = "course_cards">
-        <h3>ENSE374</h3>
-            <p>Title:</p>
-        </div>
+        <div class = "course_cards"></div>
+        <div class = "course_cards"></div>
+        <div class = "course_cards"></div>
+        <div class = "course_cards"></div>
         </div>
         
         <div class = "term1" id ="term6">
         <div class = "tittle"><h2>Term6:</h2></div>
-        <div class = "course_cards">
-        <h3>BUS260</h3>
-            <p>Title:</p>
-        </div>
-        <div class = "course_cards">
-        <h3>ECON201</h3>
-            <p>Title:</p>
-        </div>
-        <div class = "course_cards">
-        <h3>ENEL380</h3>
-            <p>Title:</p>
-        </div>
-        <div class = "course_cards">
-        <h3>ENSE353</h3>
-            <p>Title:</p>
-        </div>
-        <div class = "course_cards">
-        <h3>Approved Elective</h3>
-        </div>
+        <div class = "course_cards"></div>
+        <div class = "course_cards"></div>
+        <div class = "course_cards"></div>
+        <div class = "course_cards"></div>
+        <div class = "course_cards"></div>
         </div>
 
     <div class = "term1" id ="term7">
         <div class = "tittle"><h2>Term7:</h2></div>
-        <div class = "course_cards">
-        <h3>ENEL387</h3>
-            <p>Title:</p>
-        </div>
-        <div class = "course_cards">
-        <h3>ENSE470</h3>
-            <p>Title:</p>
-        </div>
-        <div class = "course_cards">
-        <h3>ENSE471</h3>
-            <p>Title:</p>
-        </div>
-        <div class = "course_cards">
-        <h3>ENSE475</h3>
-            <p>Title:</p>
-        </div>
+        <div class = "course_cards"></div>
+        <div class = "course_cards"></div>
+        <div class = "course_cards"></div>
+        <div class = "course_cards"></div>
         <div class = "course_cards">
         <h3>Approved Elective</h3>
         </div>
@@ -289,46 +183,23 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 
     <div class = "term1" id ="term8">
         <div class = "tittle"><h2>Term8:</h2></div>
-        <div class = "course_cards">
-        <h3>ENGG303</h3>
-            <p>Title:</p>
-        </div>
-        <div class = "course_cards">
-        <h3>ENSE400</h3>
-            <p>Title:</p>
-        </div>
-        <div class = "course_cards">
-        <h3>ENSE472</h3>
-            <p>Title:</p>
-        </div>
-        <div class = "course_cards">
-        <h3>Approved Elective</h3>
-        </div>
-        <div class = "course_cards">
-        <h3>Approved Elective</h3>
-        </div>
+        <div class = "course_cards"></div>
+        <div class = "course_cards"></div>
+        <div class = "course_cards"></div>
+        <div class = "course_cards"></div>
+        <div class = "course_cards"></div>
         </div>
 
     <div class = "term1" id ="term9">
         <div class = "tittle"><h2>Term9:</h2></div>
         <div class = "course_cards">
-        <h3>ENGG401</h3>
-            <p>Title:</p>
+        <!--<h3>ENGG401</h3>
+            <p>Title:</p>-->
         </div>
-        <div class = "course_cards">
-        <h3>ENSE350</h3>
-            <p>Title:</p>
-        </div>
-        <div class = "course_cards">
-        <h3>ENSE477</h3>
-            <p>Title:</p>
-        </div>
-        <div class = "course_cards">
-        <h3>Approved Elective</h3>
-        </div>
-        <div class = "course_cards">
-        <h3>Approved Elective</h3>
-        </div>
+        <div class = "course_cards"></div>
+        <div class = "course_cards"></div>
+        <div class = "course_cards"></div>
+        <div class = "course_cards"></div>
 
     </div>
     </div> 
