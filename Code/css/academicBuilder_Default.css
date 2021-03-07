@@ -174,7 +174,7 @@ body .terms .term1 #course_cards_builder p{
         grid-template-rows:20% 20% 20% 100%;
         row-gap: 0px;
         column-gap: 10px;
-        margin-top: -200px;
+        margin-top: -900px;
         margin-left: -20px;
     }
     body .tags_courses .course_list .course_tag_completed p{
