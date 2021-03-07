@@ -282,7 +282,7 @@ function getTermInfo(courseName) {
     url1 = "JSON/202110/" + courseName + ".json";
 
     myRequest3.open("GET", url1, false);
-    console(myRequest3.open.data);
+    console.log(myRequest3.open.data);
     myRequest3.onload = function () {
         if (myRequest3.status==200 && myRequest3.responseText != null) {
             var data = JSON.parse(myRequest3.responseText);
