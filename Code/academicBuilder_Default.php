@@ -87,9 +87,12 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     </nav>
 
 <?php
+    $course_ID = [];
+    $course_title = [];
     
-    // Include the vsbp_db_config.php file
-    require_once "Model/vsbp_db_config.php";
+
+
+   
     
     // Close connection
     mysqli_close($conn);
@@ -105,23 +108,23 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     <div class = "term1" id = "term1">
         <div class = "tittle"><h2>Term1:</h2></div>
         <div class = "course_cards">
-              <h3>CHEM104</h3>
+              <h3><?php echo $_POST["course_ID"]; ?></h3>
               <p>Title:</p>
         </div>
         <div class = "course_cards">
-            <h3>ENGG123</h3>
+            <h3><?php echo $_POST["course_ID"]; ?></h3>
             <p>Title:</p>
       </div>
       <div class = "course_cards">
-        <h3>ENGG140</h3>
+        <h3><?php echo $_POST["course_ID"]; ?></h3>
         <p>Title:</p>
   </div>
   <div class = "course_cards">
-    <h3>MATH110</h3>
+    <h3><?php echo $_POST["course_ID"]; ?></h3>
     <p>Title:</p>
 </div>
 <div class = "course_cards">
-    <h3>MATH122</h3>
+    <h3><?php echo $_POST["course_ID"]; ?></h3>
     <p>Title:</p>
    <!-- <i class='fas fa-circle' style='font-size:24px;color:red'></i>  
     <i class='fas fa-circle' style='font-size:24px;color:red'></i>
