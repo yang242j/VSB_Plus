@@ -296,7 +296,6 @@ function getTermInfo(courseName) {
         success: function()
         {
             //file exists
-            continue;
         }
     });
 
