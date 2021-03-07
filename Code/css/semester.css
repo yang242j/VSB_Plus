@@ -175,6 +175,13 @@ body .container .bottom_right .courseTag {
 }
 
 /********************************/
+@media screen and (max-width: 800px) {
+    body .container section#left,
+    body .container .bottom_left {
+        display: none;
+    }
+}
+
 @media screen and (max-width: 600px) {
     body .container section#left {
         width: 30%;

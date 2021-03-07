@@ -57,7 +57,7 @@ if (preg_match_all("/([a-z]+\s[0-9]+)/i", $courseid) == 1){
     $file_path = "../JSON/$term/$courseid.json";
     if ( file_exists($file_path) && !section_empty($file_path) ) {
         $status["Availability"] = true;
-        $status["Notes"] .= "Can be picked at $termStr.\n";
+        $status["Notes"] .= "Available at $termStr.\n";
     } else {
         $status["Availability"] = false;
         $status["Notes"] .= "NOT available at $termStr.\n";
