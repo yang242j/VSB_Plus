@@ -186,7 +186,7 @@ function enctLeft() {
                 document.getElementById("enct" + z).innerHTML = " "; 
             }
             else {
-                document.getElementById("enct" + z).innerHTML = courseData[c].short_name;
+                document.getElementById("enct" + z).innerHTML = courseData[x].short_name;
             }
             z = z + 1;
         }
