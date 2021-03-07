@@ -151,7 +151,7 @@ function showCourses(data) {
         //console.log(getPrerequisite(notCompletedData[i]));
     }
     for (i = 0; i < notCompletedData.length; i++) {
-        dragTest("#nct" + i);
+        dragTest("#nct" + 2);
     }
     /* for (i = 0; i < 12; i++) {
          if (i < notCompletedData.length) {
@@ -285,21 +285,6 @@ function getTermInfo(courseName) {
     var myLog = new File(["test"],url1);
 
     // See if the file exists
-    $.ajax({
-        url:url1,
-        type:'HEAD',
-        error: function()
-        {
-            //file not exists
-            return 0;
-        },
-        success: function()
-        {
-            //file exists
-        }
-    });
-
-
     myRequest3.open("GET", url1, false);
     myRequest3.onload = function () {
         if (myRequest3.status == 200 && myRequest3.responseText != null) {
