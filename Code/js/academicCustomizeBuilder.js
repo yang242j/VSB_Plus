@@ -306,9 +306,10 @@ function getTermInfo(courseName) {
                 
             }
         }
+        myRequest.send();
     }
     
-    myRequest.send();
+    
     myRequest2.open("GET", url3, false);
     myRequest2.onload = function () {
         if (myRequest2.status==200 && myRequest2.responseText != null) {
