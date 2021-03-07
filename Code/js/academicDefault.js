@@ -172,8 +172,9 @@ function showTerm(pageNumber) {
         termNumber = "term" + pageNumber;
         if (term >= termNumber){
         if (term != "Approved") {
-            if (i <= 4) {
-                if(pageNumber < 7){        
+            /*if (i <= 4) {*/
+            if (i <= 8) {
+                if(pageNumber < 7) {
                 document.getElementById("term" + i).innerHTML =
                     "<div class = 'tittle'>" + "<h2>" + term + ":" + "</h2></div>" +
                     "<div class = 'course_cards'>" + "<h3>" + termData[term][0] + "</h3>" +
@@ -211,6 +212,9 @@ function showTerm(pageNumber) {
                     "<i class='fas fa-circle' style='font-size:24px;color:red'></i>"+
                     "<i class='fas fa-circle' style='font-size:24px;color:red'></i>"+
                     "<i class='fas fa-circle' style='font-size:24px;color:yellow'></i>*/ "</div>";
+                    
+                    "<div class = 'course_cards'>" + "<h3>" + termData[term][5] + "</h3>"+
+                    "<p>"+ getTitle(termData[term][5])+ "</p>"+ "</div>";
                 i = i + 1;
                 }
             }
