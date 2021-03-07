@@ -290,9 +290,10 @@ function getTermInfo(courseName) {
                 prerequisite += data.prerequisite;
                 credit = data.credit;
             }
-            else
-            return "course not apply now";
+            
         }
+        else
+            return "course not apply now";
     }
     myRequest3.send();
       
