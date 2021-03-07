@@ -12,6 +12,8 @@ var calendarEl = document.getElementById('calendar');
 var calendar = new FullCalendar.Calendar(calendarEl, {
     initialView: 'dayGridMonth',
     initialDate: new Date(),
+    defaultView: 'agendaWeek',
+    dayBreakTime: "08:00:00",
     headerToolbar: {
         left: 'prev,next',
         center: 'title',
@@ -30,6 +32,7 @@ var calendar = new FullCalendar.Calendar(calendarEl, {
     events: [],
 });
 calendar.render();
+calendar.setOption('weekends', false);
 calendar.setOption('allDaySlot', false);
 calendar.setOption('displayEventTime', false);
 //calendar.setOption('aspectRatio', 0.9);
