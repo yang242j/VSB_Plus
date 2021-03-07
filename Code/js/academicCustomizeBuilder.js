@@ -1,8 +1,7 @@
 var studentData;
 var courseReqData;
 var allCourseData;
-var totalCredits;
-var earnedCredits;
+var itotalCredits = 0;
 //fetch JSON data from takenClass database
 function fetchCourseJSON(sid, password) {
     // alert(sid);
@@ -23,7 +22,7 @@ window.onload = function init() {
 function getTotalCredits(data){
     var dataJSON = JSON.parse(data);
      for (i = 0; i < dataJSON.length; i++) {
-            totalCredits += dataJSON[i].credit_earned;
+            int(totalCredits) += int(dataJSON[i].credit_earned);
     }
     console.log(totalCredits);
 }
