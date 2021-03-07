@@ -59,12 +59,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         $password = trim($_POST["password"]);  
     }
- // Check if credits is empty
-    if (empty(trim($_POST["totalCredits"]))) {
-        $password_err = "Please enter your password.";
-    } else {
-        $totalCredits = trim($_POST["totalCredits"]);  
-    }
 
     // Validate credentials (format is correct)
     if (empty($studentid_err) && empty($password_err)) {
@@ -99,7 +93,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             $_SESSION["password"] = $password;
                             $_SESSION["name"] = $name;
                             $_SESSION["major"] = $major;
-                            $_SESSION["total_credits"] = $totalCredits;
 
                             // Redirect user to welcome page
                             header("location: academicBuilder_Main.php");

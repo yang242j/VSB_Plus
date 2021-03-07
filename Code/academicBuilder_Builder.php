@@ -61,7 +61,6 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         var sid = "<?php echo $_SESSION["sid"]; ?>";
         var pas = "<?php echo $_SESSION["password"]; ?>";
         var major = "<?php echo $_SESSION["major"]; ?>"
-        var totalCredits = "<?php echo $_SESSION["total_credits"]; ?>"
     </script>
     <style>
         .drop-zone--over{ opacity:0.5}
@@ -111,7 +110,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     
         <div class = "term1" id = "term1">
             <div class = "tittle">
-                <h2>Winter <?php echo $_SESSION["total_credits"]; ?></h2>
+                <h2>Winter</h2>
             </div>
             <div class = "course_cards" id = "course_cards_builder"></div>
             <div class = "course_cards" id = "course_cards_builder"> </div>
