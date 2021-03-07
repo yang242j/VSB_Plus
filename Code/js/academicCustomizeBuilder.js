@@ -77,7 +77,7 @@ function findCourseToTake(data) {
     var courseNotCompleted = courseToTake.filter(function (n) {
         return courseCompleted.indexOf(n) === -1;
     });
-    console.log(courseNotCompleted);
+    //console.log(courseNotCompleted);
     return courseNotCompleted;
 }
 function getColor(index, dataJSON) {
@@ -284,7 +284,7 @@ function getTermInfo(courseName) {
 
     myRequest3.open("GET", url1, false);
     myRequest3.onload = function () {
-        if (myRequest3.responseText != null) {
+        if (myRequest3.status==200 && myRequest3.responseText != null) {
             var data = JSON.parse(myRequest3.responseText);
             if (data.term != "No class for the term") {
                 term += "Winter" + " ";
@@ -297,7 +297,7 @@ function getTermInfo(courseName) {
 
     myRequest.open("GET", url2, false);
     myRequest.onload = function () {
-        if (myRequest3.responseText != null) {
+        if (myRequest.status==200 && myRequest.responseText != null) {
             var data = JSON.parse(myRequest.responseText);
             if (data.term != "No class for the term") {
                 term += "Spring/Summer" + " ";
@@ -310,7 +310,7 @@ function getTermInfo(courseName) {
 
     myRequest2.open("GET", url3, false);
     myRequest2.onload = function () {
-        if (myRequest2.responseText != null) {
+        if (myRequest2.status==200 && myRequest2.responseText != null) {
             var data = JSON.parse(myRequest2.responseText);
             if (data.term != "No class for the term") {
                 term += "Fall" + " ";
