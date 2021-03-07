@@ -25,8 +25,7 @@ var calendar = new FullCalendar.Calendar(calendarEl, {
     },
     titleFormat: {
         month: 'short',
-        year: 'numeric',
-        day: 'numeric'
+        year: 'numeric'
     },
     events: [],
 });
