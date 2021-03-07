@@ -280,13 +280,15 @@ function getTermInfo(courseName) {
     url2 = "JSON/202020/" + courseName + ".json";
     url3 = "JSON/202030/" + courseName + ".json";
     url1 = "JSON/202110/" + courseName + ".json";
-    const fs = require('fs')
+    
+    const fs = require('fs');
+    //check does the file exit in the path
     try {
         if (fs.existsSync( url1 )) {
           //file exists
         }
       } catch(err) {
-        console.error(err)
+        console.error(err);
       }
 
 
