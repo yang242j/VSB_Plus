@@ -272,6 +272,8 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             </div>
         </div>
         <!-- <h3 id = "corner"><a href='academicBuilder_Builder.php'>Go to Schedule Builder</a></h3> -->
+        
+        <div class = "electives_course"><h3 style='font-size:24px;'>Approved Electives</h3></div>
 
     </div>
 </section>
