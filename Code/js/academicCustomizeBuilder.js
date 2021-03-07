@@ -2,13 +2,14 @@ var studentData;
 var courseReqData;
 var allCourseData;
 var totalCredits = 0;
+var creditsEarned = 0;
 //fetch JSON data from takenClass database
 function fetchCourseJSON(sid, password) {
     // alert(sid);
     $.post('Model/takenClass.php', { sid: sid, password: password }, function (data) {
         btnForCourse(data);
         showCourses(data);
-        getTotalCredits(data);
+        getCreditsEarned(data);
         //console.log(data);
     });
 }
@@ -19,13 +20,14 @@ getAllCourse();
 window.onload = function init() {
     fetchCourseJSON(sid, pas);
 }
-function getTotalCredits(data){
+function getCreditsEarned(data){
     var dataJSON = JSON.parse(data);
      for (i = 0; i < dataJSON.length; i++) {
-        totalCredits +=  parseInt(dataJSON[i].credit_earned);
+        creditsEarned +=  parseInt(dataJSON[i].credit_earned);
     }
-    console.log(totalCredits);
+    document.getElementById("show_credits").innerHTML += creditsEarned;    
 }
+console.log(creditsEarned);
 // get student ID form academac_builder
 /*function getSid() {
     var sid = document.getElementById("userId").innerHTML;
@@ -384,15 +386,18 @@ function dragTest() {
             var newForAlern2 = "nn" + droppedElementId;
             //var content = document.getElementById(newForAlern).innerHTML;
             //get the course name form innerHTML
+            //ipdate term info 
             var y = document.getElementById(newForAlern2).innerHTML;
             document.getElementById(newForAlern).innerHTML = getTermInfo(y);
+
+            //update cerdits
 
             document.getElementById(newForAlern).style.visibility = "visible";
             document.getElementById(newForAlern).style.fontSize = "10px";
             document.getElementById(newForAlern).style.lineHeight = "110%";
+              
 
-
-
+            
             if (document.getElementById(newForAlern).innerHTML.length <= 80) {
                 document.getElementById(newForAlern).style.fontSize = "20px";
             }

@@ -155,6 +155,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         <!--<h3>CS215</h3>
             <p>Title:</p>-->
         </div>
+
         <div class = "course_cards"></div>
         <div class = "course_cards"></div>
         <div class = "course_cards"></div>
