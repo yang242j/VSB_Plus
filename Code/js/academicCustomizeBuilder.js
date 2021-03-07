@@ -292,7 +292,7 @@ function getTermInfo(courseName) {
     }
 
 
-    myRequest3.open("GET", url1, false);
+    /*myRequest3.open("GET", url1, false);
     myRequest3.onload = function () {
         if (myRequest3.status == 200 && myRequest3.responseText != null) {
             var data = JSON.parse(myRequest3.responseText);
@@ -342,7 +342,7 @@ function getTermInfo(courseName) {
     myRequest2.send();
 
 
-    return [term + "</br>", "credits:" + credit + "</br>", prerequisite];
+    return [term + "</br>", "credits:" + credit + "</br>", prerequisite];*/
 }
 //console.log(courseNeededArray());
 //console.log(getTermInfo("ENGG 140"));
