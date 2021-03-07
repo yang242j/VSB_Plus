@@ -421,6 +421,7 @@ function dragTest() {
             const droppedElement = document.getElementById(droppedElementId);
             //show less info in course tag
             var newForAlern = "n" + droppedElementId;
+            document.getElementById(newForAlern).innerHTML = " ";
             document.getElementById(newForAlern).style.visibility = "hidden";
 
             dropZone.appendChild(droppedElement);
