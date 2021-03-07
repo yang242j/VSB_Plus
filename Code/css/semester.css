@@ -185,6 +185,13 @@ body .container .bottom_right .courseTag {
         float: right;
     }
 
+    .courseCard p {
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
+    }
+
     body .container section#middle .courseInfo,
     body .container section#right .Date {
         width: 85%;
