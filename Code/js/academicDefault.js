@@ -30,7 +30,8 @@ function getTitle(courseName) {
 console.log(getTitle("CHEM 140"));
 function getCourseData() {
     var myRequest = new XMLHttpRequest;
-    myRequest.open("GET", "JSON/ESE.json", false);
+    //myRequest.open("GET", "JSON/ESE.json", false);
+    myRequest.open("GET", "JSON/SSE.json", false);
     myRequest.onload = function () {
         var data = JSON.parse(myRequest.responseText);
         courseData = data;
@@ -39,7 +40,8 @@ function getCourseData() {
 }
 function getTermData() {
     var myRequest = new XMLHttpRequest;
-    myRequest.open("GET", "JSON/reqCourse/ESE_req.json", false);
+    //myRequest.open("GET", "JSON/reqCourse/ESE_req.json", false);
+    myRequest.open("GET", "JSON/reqCourse/SSE_req.json", false);
     myRequest.onload = function () {
         var data = JSON.parse(myRequest.responseText);
         termData = data;
