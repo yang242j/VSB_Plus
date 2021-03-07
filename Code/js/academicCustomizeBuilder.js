@@ -138,8 +138,8 @@ function showCourses(data) {
     for (i = 0; i < notCompletedData.length; i++) {
         document.getElementById("courseTagArea").innerHTML +=
             "<div class = 'courseTags' >" +
-            "<div  draggable = 'true' id ='nct" + i + "'" +notCompletedData[i]+ ">" +
-            "<p id ='nnnct" + i + "'" + ">" +notCompletedData[i]  +"</p>" +
+            "<div  draggable = 'true' id ='nct" + i + "'>" +
+            "<p id ='nnnct" + i + "'" + ">" +notCompletedData[i]  + "</p>" +
             "<p id ='nnct" + i + "'" + ">" +getTermInfo(notCompletedData[i])  +"</p>" +
             "</div> </div>";
         document.getElementById("nnct"+i).style.visibility = "hidden";
@@ -294,7 +294,7 @@ function getTermInfo(courseName) {
     }
     if (myRequest3.status != 404)
     {
-    myRequest3.send();
+    myRequest3.send(null);
     }
 
     myRequest.open("GET", url2, false);
@@ -310,7 +310,7 @@ function getTermInfo(courseName) {
     }
     if (myRequest.status !=404)
     {
-    myRequest.send();
+    myRequest.send(null);
     }
 
     myRequest2.open("GET", url3, false);
@@ -326,7 +326,7 @@ function getTermInfo(courseName) {
     }
     if (myRequest2.status !=404)
     {
-    myRequest2.send();
+    myRequest2.send(null);
     }
 
 
@@ -377,7 +377,8 @@ function dragTest(elementId) {
             document.getElementById(newForAlern).style.fontSize = "10px";
             document.getElementById(newForAlern).style.lineHeight = "110%";
             var x = document.getElementById(newForAlern).innerHTML;
-            console.log(x);
+            var y = document.getElementById(newForAlern2).innerHTML;
+            console.log(y,x);
 
 
 
