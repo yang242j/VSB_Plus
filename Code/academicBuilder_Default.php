@@ -274,6 +274,26 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         <!-- <h3 id = "corner"><a href='academicBuilder_Builder.php'>Go to Schedule Builder</a></h3> -->
         
         <div class = "electives_course"><h3 style='font-size:24px;'>Approved Electives</h3></div>
+        
+        <div class = "course_tag_electives" id = "electives_tag">
+            <p id = "nct0">ENSE 271</p>
+            <p id = "nct1">ENSE 271</p>
+            <p id = "nct2">ENSE 271</p>
+            <p id = "nct3">ENSE 271</p>
+
+            <p id = "nct4">ENSE 271</p>
+            <p id = "nct5">ENSE 271</p>
+            <p id = "nct6">ENSE 271</p>
+            <p id = "nct7">ENSE 271</p>
+            
+            <p id = "nct8">ENSE 271</p>
+            <p id = "nct9">ENSE 271</p>
+            <p id = "nct10">ENSE 271</p>
+            <p id = "nct11">ENSE 271</p>
+            <div><button class="left_arrow" id ="notCompletedLeft" onclick = "nctLeft()"><i class='fas fa-angle-left'></i></button>
+                <button class="right_arrow" id ="notCompletedRight" onclick = "nctRight()"><i class='fas fa-angle-right'></i></button>
+            </div>
+        </div>
 
     </div>
 </section>
