@@ -379,7 +379,7 @@ function dragTest(elementId) {
             var x = document.getElementById(newForAlern).innerHTML;
             var y = document.getElementById(newForAlern2).innerHTML;
             //console.log(y,x);
-            console(getPrerequisite(y));
+            console.log(getPrerequisite(y));
 
 
 
