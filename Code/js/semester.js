@@ -18,10 +18,16 @@ var calendar = new FullCalendar.Calendar(calendarEl, {
         right: 'dayGridMonth,timeGridWeek,timeGridDay'
     },
     eventTimeFormat: {
-        hour: "numeric",
+        hour: "2-digit",
         minute: "2-digit",
         meridiem: "short",
         hour12: true,
+    },
+    titleFormat: {
+        month: 'short',
+        year: 'numeric',
+        day: 'numeric',
+        weekday: 'narrow'
     },
     events: [],
 });
