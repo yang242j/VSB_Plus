@@ -192,8 +192,8 @@ function showTerm(pageNumber) {
                     "<i class='fas fa-circle' style='font-size:24px;color:red'></i>"+
                     "<i class='fas fa-circle' style='font-size:24px;color:red'></i>*/ "</div>"+
 
-                    "<div class = 'course_cards'>" + "<h3>" + termData[term][2] + "</h3>" +
-                    "<p>"+ getTitle(termData[term][2])+ "</p>"+
+                    "<div class = 'course_cards'>" + "<h3>" + termData[term][4] + "</h3>" +
+                    "<p>"+ getTitle(termData[term][4])+ "</p>"+
                    /* "<i class='fas fa-circle' style='font-size:24px;color:red'></i>"+
                     "<i class='fas fa-circle' style='font-size:24px;color:red'></i>"+
                     "<i class='fas fa-circle' style='font-size:24px;color:red'></i>"+
@@ -213,8 +213,7 @@ function showTerm(pageNumber) {
                     "<i class='fas fa-circle' style='font-size:24px;color:red'></i>"+
                     "<i class='fas fa-circle' style='font-size:24px;color:yellow'></i>*/ "</div>";*/
                     
-                /*i = i + 1;*/
-                    i++;
+                i = i + 1;
                 }
             }
         }
