@@ -282,13 +282,7 @@ function getTermInfo(courseName) {
     url1 = "JSON/202110/" + courseName + ".json";
 
     //check does the file exit in the path
-    var myLog = new File(url1);
-    // See if the file exists
-    if (myLog.exists()) {
-        console.log('The file exists');
-    } else {
-        console.log('The file does not exist');
-    }
+  
 
 
     myRequest3.open("GET", url1, false);
@@ -303,6 +297,9 @@ function getTermInfo(courseName) {
         }
     }
     myRequest3.send();
+    if(myRequest3.status == 404){
+        return "this class not applied";
+    }
 
 
 
