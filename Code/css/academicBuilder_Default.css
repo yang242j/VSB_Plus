@@ -164,7 +164,7 @@ body .terms .term1 #course_cards_builder p{
     }
     body .tags_courses .course_list .course_completed{
         /*border: 2px solid red;*/
-        margin-top: -200px;
+        margin-top: -500px;
         margin-left: -20px;
     }
     body .tags_courses .course_list .course_tag_completed{
