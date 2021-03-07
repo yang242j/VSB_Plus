@@ -289,10 +289,9 @@ function getTermInfo(courseName) {
                 term += "Winter" + " ";
                 prerequisite += data.prerequisite;
                 credit = data.credit;
-            }
-            
+            }    
         }
-        else
+        else if(myRequest3.status==404)
             return "course not apply now";
     }
     myRequest3.send();
