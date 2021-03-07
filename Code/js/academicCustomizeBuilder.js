@@ -293,7 +293,10 @@ function getTermInfo(courseName) {
             }
         }
     }
+    if (myRequest3.status ==200)
+    {
     myRequest3.send();
+    }
 
     myRequest.open("GET", url2, false);
     myRequest.onload = function () {
@@ -306,7 +309,10 @@ function getTermInfo(courseName) {
             }
         }
     }
+    if (myRequest.status ==200)
+    {
     myRequest.send();
+    }
 
     myRequest2.open("GET", url3, false);
     myRequest2.onload = function () {
@@ -319,7 +325,10 @@ function getTermInfo(courseName) {
             }
         }
     }
+    if (myRequest2.status ==200)
+    {
     myRequest2.send();
+    }
 
 
     return [term+"</br>","credits:"+credit+"</br>",prerequisite];
