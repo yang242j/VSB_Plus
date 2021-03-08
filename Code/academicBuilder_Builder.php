@@ -98,7 +98,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         <a class="menu-list" href="courseDB.php">Course List Database</a>
     </nav>
     <div class="welcome_tag" id = "welcome">
-            <h1 >Credits: <p id = "show_credits"></p></h1>
+            <h1 id = "show_credits">Credits:</h1>
         </div>
 
 <section class = "terms" id = "block" style = "overflow:auto; height:800px " >

@@ -25,7 +25,7 @@ function getCreditsEarned(data) {
     for (i = 0; i < dataJSON.length; i++) {
         creditsEarned += parseInt(dataJSON[i].credit_earned);
     }
-    document.getElementById("show_credits").innerHTML += creditsEarned;
+    document.getElementById("show_credits").innerHTML = "Credits: " + creditsEarned;
 }
 console.log(creditsEarned);
 // get student ID form academac_builder
@@ -395,9 +395,8 @@ function dragTest() {
 
             //update cerdits
             if (totalCredits < 136 && terminfo[1] != null) {
-                getCredits = parseInt(document.getElementById("show_credits").innerHTML);
-                var newCredits = getCredits + parseInt(terminfo[1]);
-                document.getElementById("show_credits").innerHTML = newCredits;//terminfo[1] is credits
+                creditsEarned += parseInt(terminfo[1]);
+                document.getElementById("show_credits").innerHTML = "Credits: " +creditsEarned;//terminfo[1] is credits
             }
 
             document.getElementById(newForAlern).style.visibility = "visible";
@@ -451,9 +450,8 @@ function dragTest() {
             //terminfo[0] is term
             //terminfo[1] is credits
             if (totalCredits < 136 && terminfo[1] != null) {
-                getCredits = parseInt(document.getElementById("show_credits").innerHTML);
-                var newCredits = getCredits - parseInt(terminfo[1]);
-                document.getElementById("show_credits").innerHTML = newCredits;
+                creditsEarned -= parseInt(terminfo[1]);
+                document.getElementById("show_credits").innerHTML = "Credits: " + creditsEarned;
             }
 
 
