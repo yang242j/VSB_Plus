@@ -39,6 +39,7 @@ session_start(); // Initialize the session
     <meta name="description" content="The HTML5 Herald">
     <meta name="author" content="team_vsbp">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel=”stylesheet” type=”text/css” media=”screen and (max-device-width: 400px)” href=”tinyScreen.css” /> -->
 
     <link rel="shortcut icon" href="#">
     <link rel="stylesheet" href="css/courseDB.css">

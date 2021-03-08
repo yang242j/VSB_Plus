@@ -187,9 +187,11 @@ body .course{
     overflow: scroll;
     overflow-x:hidden;
 
-    padding-left: 10px;
-    padding-right: 10px;
-    margin-left: 25px;
+    padding-left: 1%;
+    padding-right: 1%;
+    margin-left: 1%;
+    /* margin-right: 1%; */
+
 }
 
 .inline{
@@ -207,4 +209,18 @@ body .course{
 
 #graph_note{
     color: red;
+}
+
+@media screen and (max-device-width: 600px) {
+    #search_area{
+        width: 100%;
+    }
+    #popView{
+        width: 100%;
+        /* overflow:scroll; */
+    }
+    .graph_size{
+        width: 50vw;
+        height: 40vh;
+    }
 }

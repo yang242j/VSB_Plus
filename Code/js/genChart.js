@@ -194,7 +194,7 @@ function genChart2(data, divId){
     //In case, there is no 'canvas' element in the html
     var canvasID = divId + 'Chart';
     if (!document.getElementById(canvasID)) {
-        $('#' + divId).html(createCanvas(canvasID, 200, 100));
+        $('#' + divId).html(createCanvas(canvasID, 150, 100));
     }
   
     // Get the canvas element to generate the graph
