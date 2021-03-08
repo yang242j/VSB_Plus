@@ -74,16 +74,18 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             <div class="bar2"></div>
             <div class="bar3"></div>
         </div>
-        <div class="session-required menu-list nav-active dropdown">
-            <button class="dropbtn" onclick="toogleDisplay('dropdown-content')">Academic Schedule Builder</button>
-            <div id="dropdown-content" class="dropdown-content hidden">
-                <a class="academicList" href="academicBuilder_Main.php">General Student Status</a>
-                <a class="academicList" href="academicBuilder_Default.php">Default Schedule</a>
-                <a class="academicList" href="academicBuilder_Builder.php">Customized Schedule</a>
+        <div class="menu-list">
+            <div class="session-required nav-active dropdown">
+                <button class="dropbtn" onclick="toogleDisplay('dropdown-content')">Academic Schedule Builder</button>
+                <div id="dropdown-content" class="dropdown-content hidden">
+                    <a class="academicList" href="academicBuilder_Main.php">General Student Status</a>
+                    <a class="academicList" href="academicBuilder_Default.php">Default Schedule</a>
+                    <a class="academicList" href="academicBuilder_Builder.php">Customized Schedule</a>
+                </div>
             </div>
-        </div>
-        <a class="session-required menu-list" href="semesterBuilder.php">Semester Schedule Builder</a>
-        <a class="menu-list" href="courseDB.php">Course List Database</a>
+            <a class="session-required" href="semesterBuilder.php">Semester Schedule Builder</a>
+            <a class="" href="courseDB.php">Course List Database</a>
+        </nav>
     </nav>
 
     
@@ -156,6 +158,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         <!--<h3>CS215</h3>
             <p>Title:</p>-->
         </div>
+
         <div class = "course_cards"></div>
         <div class = "course_cards"></div>
         <div class = "course_cards"></div>
@@ -253,20 +256,20 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         <div class = "course_not_completed"><h3 style='font-size:24px;'>Courses</h3></div>
 
         <div class = "course_tag_not_completed" id = "not_completed_tag">
-            <p id = "nct0">ENSE 271</p>
-            <p id = "nct1">ENSE 271</p>
-            <p id = "nct2">ENSE 271</p>
-            <p id = "nct3">ENSE 271</p>
+            <p id = "nct0" onclick="alert(getTermInfo(""))">ENSE 271</p>
+            <p id = "nct1" onclick="alert(course_info())">ENSE 271</p>
+            <p id = "nct2" onclick="alert(course_info())">ENSE 271</p>
+            <p id = "nct3" onclick="alert(course_info())">ENSE 271</p>
 
-            <p id = "nct4">ENSE 271</p>
-            <p id = "nct5">ENSE 271</p>
-            <p id = "nct6">ENSE 271</p>
-            <p id = "nct7">ENSE 271</p>
+            <p id = "nct4" onclick="alert(course_info())">ENSE 271</p>
+            <p id = "nct5" onclick="alert(course_info())">ENSE 271</p>
+            <p id = "nct6" onclick="alert(course_info())">ENSE 271</p>
+            <p id = "nct7" onclick="alert(course_info())">ENSE 271</p>
             
-            <p id = "nct8">ENSE 271</p>
-            <p id = "nct9">ENSE 271</p>
-            <p id = "nct10">ENSE 271</p>
-            <p id = "nct11">ENSE 271</p>
+            <p id = "nct8" onclick="alert(course_info())">ENSE 271</p>
+            <p id = "nct9" onclick="alert(course_info())">ENSE 271</p>
+            <p id = "nct10" onclick="alert(course_info())">ENSE 271</p>
+            <p id = "nct11" onclick="alert(course_info())">ENSE 271</p>
             <div><button class="left_arrow" id ="notCompletedLeft" onclick = "nctLeft()"><i class='fas fa-angle-left'></i></button>
                 <button class="right_arrow" id ="notCompletedRight" onclick = "nctRight()"><i class='fas fa-angle-right'></i></button>
             </div>
@@ -276,8 +279,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         
         <div class = "electives_course"><h3 style='font-size:24px;'>Approved Electives</h3></div>
         
-        <!--<div class = "course_tag_electives" id = "electives_tag">-->
-        <div class = "course_tag_not_completed" id = "not_completed_tag">
+        <div class = "course_tag_electives" id = "electives_tag">
             <p id = "enct0">ENSE 271</p>
             <p id = "enct1">ENSE 271</p>
             <p id = "enct2">ENSE 271</p>
@@ -292,6 +294,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             <p id = "enct9">ENSE 271</p>
             <p id = "enct10">ENSE 271</p>
             <p id = "enct11">ENSE 271</p>
+            <!--<p id = "enct12">ENSE 271</p>-->
             <div><button class="left_arrow" id ="notCompletedLeft" onclick = "enctLeft()"><i class='fas fa-angle-left'></i></button>
                 <button class="right_arrow" id ="notCompletedRight" onclick = "enctRight()"><i class='fas fa-angle-right'></i></button>
             </div>

@@ -2,13 +2,14 @@ var studentData;
 var courseReqData;
 var allCourseData;
 var totalCredits = 0;
+var creditsEarned = 0;
 //fetch JSON data from takenClass database
 function fetchCourseJSON(sid, password) {
     // alert(sid);
     $.post('Model/takenClass.php', { sid: sid, password: password }, function (data) {
         btnForCourse(data);
         showCourses(data);
-        getTotalCredits(data);
+        getCreditsEarned(data);
         //console.log(data);
     });
 }
@@ -19,13 +20,14 @@ getAllCourse();
 window.onload = function init() {
     fetchCourseJSON(sid, pas);
 }
-function getTotalCredits(data){
+function getCreditsEarned(data) {
     var dataJSON = JSON.parse(data);
-     for (i = 0; i < dataJSON.length; i++) {
-        totalCredits +=  parseInt(dataJSON[i].credit_earned);
+    for (i = 0; i < dataJSON.length; i++) {
+        creditsEarned += parseInt(dataJSON[i].credit_earned);
     }
-    console.log(totalCredits);
+    document.getElementById("show_credits").innerHTML = "Credits: " + creditsEarned;
 }
+//console.log(creditsEarned);
 // get student ID form academac_builder
 /*function getSid() {
     var sid = document.getElementById("userId").innerHTML;
@@ -299,14 +301,14 @@ function getTermInfo(courseName) {
             credit = data.credit;
             if (data.term != "No class for the term") {
                 term += "Winter" + " ";
-                
+
             }
         }
     }
     myRequest3.send();
-    if(myRequest3.status == 404){
-        return "this class not applied";
-    }
+    /*if(myRequest3.status == 404){
+        return null;
+    }*/
 
 
 
@@ -338,7 +340,7 @@ function getTermInfo(courseName) {
     myRequest2.send();
 
 
-    return [term + "</br>", "credits:" + credit + "</br>", prerequisite];
+    return [term, credit, prerequisite];
 }
 //console.log(courseNeededArray());
 //console.log(getTermInfo("ENGG 140"));
@@ -352,19 +354,18 @@ function getAllCourse() {
     myRequest.send();
 }
 
-function dragStart(elementId){
+function dragStart(elementId) {
     const draggableElement = document.querySelector(elementId);
     draggableElement.addEventListener("dragstart", e => {
         e.dataTransfer.setData("text/plain", draggableElement.id);
     });
 }
 
-
-//console.log(allCourseData);
+var getCredits = 0;
+var dragLeaveStopper = 0;
+//recored prev drop item course name
 function dragTest() {
     //const draggableElement = document.querySelector("#nct0");
-    
-
     for (const dropZone of document.querySelectorAll(".course_cards")) {
         dropZone.addEventListener("dragover", e => {
             e.preventDefault();
@@ -372,26 +373,68 @@ function dragTest() {
         });
 
         dropZone.addEventListener("dragleave", e => {
+            e.preventDefault();
             dropZone.classList.remove("drop-zone--over");
+            //console.log("dasdasdasd");
+           // dragLeaveStopper+=1;
+            /*if(dragLeaveStopper==1)
+            {
+            creditsEarned = getCredits;
+            document.getElementById("show_credits").innerHTML = "Credits: " + creditsEarned;
+            }*/
+
         });
+        dropZone.addEventListener("dragstart", e => {
+            //e.preventDefault();
+            dropZone.classList.remove("drop-zone--over");
+            //console.log("dasdasdasd");
+            creditsEarned -= getCredits;
+            document.getElementById("show_credits").innerHTML = "Credits: " + creditsEarned;
+        });
+        
+
         dropZone.addEventListener("drop", e => {
             e.preventDefault();
+            dragLeaveStopper = 0
             const droppedElementId = e.dataTransfer.getData("text/plain");
             const droppedElement = document.getElementById(droppedElementId);
             //show moreinfo in course card
+
 
             var newForAlern = "n" + droppedElementId;
             var newForAlern2 = "nn" + droppedElementId;
             //var content = document.getElementById(newForAlern).innerHTML;
             //get the course name form innerHTML
+            //ipdate term info 
             var y = document.getElementById(newForAlern2).innerHTML;
-            document.getElementById(newForAlern).innerHTML = getTermInfo(y);
+            // set the course id to prev dropped
 
+            var terminfo = getTermInfo(y);
+            console.log(terminfo);
+            if( terminfo[1] != null){
+                document.getElementById(newForAlern).innerHTML = terminfo[0];//terminfo[0] is term
+                getCredits = parseInt(terminfo[1]);
+            }
+            else
+            {
+                alert("this course not applied");
+                return 0;
+            //getCredits = 0;
+            //document.getElementById(newForAlern).innerHTML = "this course not applied for now";
+            }
+            //update cerdits
+            if (creditsEarned > 136) {
+                alert("totoal greater than 136");
+                return;
+            }
+
+            else {
+                creditsEarned += getCredits;
+                document.getElementById("show_credits").innerHTML = "Credits: " + creditsEarned;//terminfo[1] is credits
+            }
             document.getElementById(newForAlern).style.visibility = "visible";
             document.getElementById(newForAlern).style.fontSize = "10px";
             document.getElementById(newForAlern).style.lineHeight = "110%";
-
-
 
             if (document.getElementById(newForAlern).innerHTML.length <= 80) {
                 document.getElementById(newForAlern).style.fontSize = "20px";
@@ -399,8 +442,6 @@ function dragTest() {
             if (document.getElementById(newForAlern).innerHTML.length <= 100 && document.getElementById(newForAlern).innerHTML.length > 80) {
                 document.getElementById(newForAlern).style.fontSize = "12px";
             }
-
-
 
             dropZone.appendChild(droppedElement);
             dropZone.classList.remove("drop-zone--over");
@@ -421,10 +462,18 @@ function dragTest() {
             e.preventDefault();
             const droppedElementId = e.dataTransfer.getData("text/plain");
             const droppedElement = document.getElementById(droppedElementId);
-            //show less info in course tag
+            // get some html ids
             var newForAlern = "n" + droppedElementId;
+            //var newForAlern2 = "nn" + droppedElementId;
             document.getElementById(newForAlern).innerHTML = " ";
             document.getElementById(newForAlern).style.visibility = "hidden";
+
+            // renew html
+            /*creditsEarned -= getCredits;
+             document.getElementById("show_credits").innerHTML = "Credits: " + creditsEarned;*/
+
+
+
 
             dropZone.appendChild(droppedElement);
             dropZone.classList.remove("drop-zone--over");
@@ -439,3 +488,4 @@ dragTest(x);
 dragTest("#nct1");
 dragTest("#nct2");
 dragTest("#nct3");*/
+

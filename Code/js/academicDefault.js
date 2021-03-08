@@ -228,9 +228,9 @@ function showTerm(pageNumber) {
         termNumber = "term" + pageNumber;
         if (term >= termNumber){
         if (term != "Approved") {
-            /*if (i <= 4) {*/
             if (i <= 4) {
-                if(pageNumber < 7) {
+                /*if(pageNumber < 7) {*/
+                if(pageNumber < 11) {
                 document.getElementById("term" + i).innerHTML =
                     "<div class = 'tittle'>" + "<h2>" + term + ":" + "</h2></div>" +
                     "<div class = 'course_cards'>" + "<h3>" + termData[term][0] + "</h3>" +
@@ -276,6 +276,70 @@ function showTerm(pageNumber) {
     }
     }
 }
+
+function getTermInfo(courseName) {
+    var myRequest = new XMLHttpRequest;
+    var myRequest2 = new XMLHttpRequest;
+    var myRequest3 = new XMLHttpRequest;
+    var term = "Applied Term: ";
+    var prerequisite = "Prerequisite: </br>";
+    var credit;
+    url2 = "JSON/202020/" + courseName + ".json";
+    url3 = "JSON/202030/" + courseName + ".json";
+    url1 = "JSON/202110/" + courseName + ".json";
+
+    //check does the file exit in the path
+    // See if the file exists
+    myRequest3.open("GET", url1, false);
+    myRequest3.onload = function () {
+        if (myRequest3.status == 200 && myRequest3.responseText != null) {
+            var data = JSON.parse(myRequest3.responseText);
+            prerequisite += data.prerequisite;
+            credit = data.credit;
+            if (data.term != "No class for the term") {
+                term += "Winter" + " ";
+
+            }
+        }
+    }
+    myRequest3.send();
+    /*if(myRequest3.status == 404){
+        return null;
+    }*/
+
+
+
+    myRequest.open("GET", url2, false);
+    myRequest.onload = function () {
+        if (myRequest.status == 200 && myRequest.responseText != null) {
+            var data = JSON.parse(myRequest.responseText);
+            if (data.term != "No class for the term") {
+                term += "Spring/Summer" + " ";
+
+            }
+        }
+
+    }
+
+    myRequest.send();
+
+    myRequest2.open("GET", url3, false);
+    myRequest2.onload = function () {
+        if (myRequest2.status == 200 && myRequest2.responseText != null) {
+            var data = JSON.parse(myRequest2.responseText);
+            if (data.term != "No class for the term") {
+                term += "Fall" + " ";
+
+            }
+        }
+
+    }
+    myRequest2.send();
+
+
+    return [term, credit, prerequisite];
+}
+
 var termPageCounter = 1 ;
 function termDown(){
     termPageCounter +=1;

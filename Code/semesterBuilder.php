@@ -60,6 +60,10 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         let presetCourses = ['Precalculus 30', 'Calculus 30', 'CHEM 30', 'Mathematics B30', 'Mathematics C30', 'AMTH 092', 'MATH 102', 'MATH 103'];
         var courseCompletedList = [];
         courseCompletedList = courseCompletedList.concat(presetCourses);
+        
+        $(document).ready(function() {
+            $(".openbtn").hide();
+        });
     </script>
 </head>
 
@@ -78,29 +82,31 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                 <a href="Model/logout.php">Logout</a>
             </div>
         </div>
-        <div class="menu-icon" onclick="menuFunc1(this); menuFunc2('menu-list'); menuFunc3();">
+        <div class="menu-icon" onclick="menuFunc1(this); menuFunc2('menu-list');">
             <div class="bar1"></div>
             <div class="bar2"></div>
             <div class="bar3"></div>
         </div>
-        <div class="session-required menu-list dropdown">
-            <button class="dropbtn" onclick="toogleDisplay('dropdown-content')">Academic Schedule Builder</button>
-            <div id="dropdown-content" class="dropdown-content hidden">
-                <a class="academicList" href="academicBuilder_Main.php">General Student Status</a>
-                <a class="academicList" href="academicBuilder_Default.php">Default Schedule</a>
-                <a class="academicList" href="academicBuilder_Builder.php">Customized Schedule</a>
+        <div class="menu-list">
+            <div class="session-required dropdown">
+                <button class="dropbtn" onclick="toogleDisplay('dropdown-content')">Academic Schedule Builder</button>
+                <div id="dropdown-content" class="dropdown-content hidden">
+                    <a class="academicList" href="academicBuilder_Main.php">General Student Status</a>
+                    <a class="academicList" href="academicBuilder_Default.php">Default Schedule</a>
+                    <a class="academicList" href="academicBuilder_Builder.php">Customized Schedule</a>
+                </div>
             </div>
+            <a class="nav-active" href="semesterBuilder.php">Semester Schedule Builder</a>
+            <a class="" href="courseDB.php">Course List Database</a>
         </div>
-        <a class="menu-list nav-active" href="semesterBuilder.php">Semester Schedule Builder</a>
-        <a class="menu-list" href="courseDB.php">Course List Database</a>
     </nav>
 
     <div class="container">
         <!-- Top Section -->
         <section id="top">
             <div style="width: 50%; float: left;">
-                <label for="term">Choose a term:</label>
-                <select id="termSelector" onfocus="menuFunc3()" onblur="menuFunc3()">
+                <label for="term">Step 1: Choose Semester</label>
+                <select id="termSelector" onfocus="hideBottom()" onblur="showBottom()">
                     <option value="202030" selected>Fall 2020</option>
                     <option value="202110">Winter 2021</option>
                 </select>
@@ -116,8 +122,8 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 
             <div style="width: 50%; float: right;">
                 <form onsubmit="return ajaxpost()">
-                    <label>Search Class:</label>
-                    <input type="text" id="search_courseid" placeholder="ENGL 100" onfocus="menuFunc3()" onblur="menuFunc3()" required />
+                    <label>Step 2: Search Class</label>
+                    <input type="text" id="search_courseid" placeholder="ENGL 100" onfocus="hideBottom()" onblur="showBottom()" required />
                     <input type="submit" value="Submit"/>
                 </form>
                 <p id="msg_p"></p>
@@ -208,6 +214,20 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                         changeCalendarAndExam(oldCombo, newCombo, cardId, cardStyle, term);
                     selected = newCombo
                 });
+
+                $(document).on('click', 'span.closebtn.courseCard', function() {
+                    let short_name = $(this).closest('div').attr('id').split('_Card')[0];
+                    // Remove course 
+                    removeCourse(short_name);
+                    console.log(short_name + ' Unselected');
+
+                    // on drop, remove course Name from courseList
+                    const index = courseList.indexOf(short_name);
+                    if (index > -1) {
+                        courseList.splice(index, 1);
+                    }
+                    appendExampleCard();
+                });
             </script>
         </section>
         
@@ -263,8 +283,9 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 
             <!-- Bottom Right Division -->
             <div class="bottom_right" id="course_recommended">
-                Courses To Take: <br>
+                Courses Recommended: <br>
                 <script>
+
                     function loadRecCourseTags() {
                         // Remove all previously displayed tags
                         $(".bottom_right .courseTag").remove();
@@ -311,13 +332,24 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                 <div class="courseTag noDrop" id="ENEL 417" draggable="true" ondragstart="drag(event)">ENEL 417</div>
                 -->
             </div>
+
+            <!-- Close Button Spanner -->
+            <span class="closebtn bottom_right" onclick="hideBottom();" >&bigotimes;</span>
         </section>
+
+        <!-- Open Button Spanner -->
+        <span class="openbtn" onclick="showBottom();" >&bigoplus;</span>
 
         <!-- Shadow Layer Division -->
         <div id="shadowLayer" ondrop="dragEnd()" ondragover="allowDrop(event)">
+            <span class="closebtn shadowLayer">&times;</span>  
             <div class="dropZone L" ondrop="dropL(event, term); dragEnd();" ondragover="allowDrop(event)"></div>
             <div class="dropZone BR" ondrop="dropBR(event); dragEnd();" ondragover="allowDrop(event)"></div>
             <script>
+                $(".closebtn.shadowLayer").click(function() {
+                    this.parentElement.style.display = "none";
+                });
+
                 $(".dropZone.L").on("drop", function(event) {
                     var courseName = event.originalEvent.dataTransfer.getData('Text');
                     console.log(courseName + ' Selected');

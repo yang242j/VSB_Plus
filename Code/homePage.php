@@ -85,18 +85,18 @@ session_start(); // Initialize the session
         <div class="bar2"></div>
         <div class="bar3"></div>
     </div>
-
-    <div class="session-required menu-list dropdown">
-        <button class="dropbtn" onclick="toogleDisplay('dropdown-content')">Academic Schedule Builder</button>
-        <div id="dropdown-content" class="dropdown-content hidden">
-            <a class="academicList" href="academicBuilder_Main.php">General Student Status</a>
-            <a class="academicList" href="academicBuilder_Default.php">Default Schedule</a>
-            <a class="academicList" href="academicBuilder_Builder.php">Customized Schedule</a>
-        </div>
+    <div class="menu-list">
+      <div class="session-required dropdown">
+          <button class="dropbtn" onclick="toogleDisplay('dropdown-content')">Academic Schedule Builder</button>
+          <div id="dropdown-content" class="dropdown-content hidden">
+              <a class="academicList" href="academicBuilder_Main.php">General Student Status</a>
+              <a class="academicList" href="academicBuilder_Default.php">Default Schedule</a>
+              <a class="academicList" href="academicBuilder_Builder.php">Customized Schedule</a>
+          </div>
+      </div>
+      <a class="session-required" href="semesterBuilder.php">Semester Schedule Builder</a>
+      <a class="" href="courseDB.php">Course List Database</a>
     </div>
-
-    <a class="session-required menu-list" href="semesterBuilder.php">Semester Schedule Builder</a>
-    <a class="menu-list" href="courseDB.php">Course List Database</a>
   </nav>
 
   <section class="container">
