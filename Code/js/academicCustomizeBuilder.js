@@ -375,6 +375,7 @@ function dragTest() {
 
         dropZone.addEventListener("dragleave", e => {
             dropZone.classList.remove("drop-zone--over");
+
             const droppedElementId = e.dataTransfer.getData("text/plain");
             const droppedElement = document.getElementById(droppedElementId);
             var newForAlern2 = "nn" + droppedElementId;
@@ -394,6 +395,7 @@ function dragTest() {
             e.preventDefault();
             const droppedElementId = e.dataTransfer.getData("text/plain");
             const droppedElement = document.getElementById(droppedElementId);
+            e.dataTransfer.setData("text/plain", droppedElementId);
             //show moreinfo in course card
 
             var newForAlern = "n" + droppedElementId;
