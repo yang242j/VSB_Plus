@@ -363,8 +363,6 @@ function dragStart(elementId) {
 
 var getCredits = 0;
 //recored prev drop item course name
-var prevDrop;
-//console.log(allCourseData);
 function dragTest() {
     //const draggableElement = document.querySelector("#nct0");
     for (const dropZone of document.querySelectorAll(".course_cards")) {
@@ -396,12 +394,11 @@ function dragTest() {
             document.getElementById(newForAlern).innerHTML = terminfo[0];//terminfo[0] is term
 
             //update cerdits
-            if (totalCredits < 136 && terminfo[1] != null && y != prevDrop) {
+            if (totalCredits < 136 && terminfo[1] != null) {
                 getCredits = parseInt(document.getElementById("show_credits").innerHTML);
                 var newCredits = getCredits + parseInt(terminfo[1]);
                 document.getElementById("show_credits").innerHTML = newCredits;//terminfo[1] is credits
             }
-            prevDrop = y;
 
             document.getElementById(newForAlern).style.visibility = "visible";
             document.getElementById(newForAlern).style.fontSize = "10px";
@@ -441,6 +438,21 @@ function dragTest() {
             var newForAlern = "n" + droppedElementId;
             document.getElementById(newForAlern).innerHTML = " ";
             document.getElementById(newForAlern).style.visibility = "hidden";
+
+            var y = document.getElementById(newForAlern2).innerHTML;
+            // set the course id to prev dropped
+
+            var terminfo = getTermInfo(y);
+
+            document.getElementById(newForAlern).innerHTML = terminfo[0];//terminfo[0] is term
+
+            //update cerdits
+            if (totalCredits < 136 && terminfo[1] != null) {
+                getCredits = parseInt(document.getElementById("show_credits").innerHTML);
+                var newCredits = getCredits - parseInt(terminfo[1]);
+                document.getElementById("show_credits").innerHTML = newCredits;//terminfo[1] is credits
+            }
+
 
             dropZone.appendChild(droppedElement);
             dropZone.classList.remove("drop-zone--over");
