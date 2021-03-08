@@ -27,7 +27,7 @@ function getCreditsEarned(data) {
     }
     document.getElementById("show_credits").innerHTML = "Credits: " + creditsEarned;
 }
-console.log(creditsEarned);
+//console.log(creditsEarned);
 // get student ID form academac_builder
 /*function getSid() {
     var sid = document.getElementById("userId").innerHTML;
@@ -376,7 +376,7 @@ function dragTest() {
             e.preventDefault();
             dropZone.classList.remove("drop-zone--over");
             i=i+1;
-            if(i<=1)
+            if(i == 1)
             {
             console.log(i);
             i = i-1;
