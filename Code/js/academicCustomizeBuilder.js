@@ -393,7 +393,7 @@ function dragTest() {
 
 
         });
-        dropZone.addEventListener("dragend", e => {
+        dropZone.addEventListener("drop", e => {
             e.preventDefault();
             dragLeaveStopper = 0
             const droppedElementId = e.dataTransfer.getData("text/plain");
