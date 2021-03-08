@@ -362,7 +362,6 @@ function dragStart(elementId) {
 }
 
 var getCredits = 0;
-var i = 0;
 //recored prev drop item course name
 function dragTest() {
     //const draggableElement = document.querySelector("#nct0");
@@ -375,12 +374,10 @@ function dragTest() {
         dropZone.addEventListener("dragleave", e => {
             //e.preventDefault();
             dropZone.classList.remove("drop-zone--over");
+            var i = 0;
             i=i+1;
-            if(i <= 1000)
-            {
             console.log(i);
-            i = i-1;
-            }
+            
 
         });
         dropZone.addEventListener("drop", e => {
