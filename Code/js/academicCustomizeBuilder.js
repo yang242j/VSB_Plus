@@ -384,6 +384,18 @@ function dragTest() {
             }*/
 
         });
+        dropZone.addEventListener("dragstart", e => {
+            e.preventDefault();
+            dropZone.classList.remove("drop-zone--over");
+            //console.log("dasdasdasd");
+            dragLeaveStopper+=1;
+            if(dragLeaveStopper==1)
+            {
+            creditsEarned -= getCredits;
+            document.getElementById("show_credits").innerHTML = "Credits: " + creditsEarned;
+            }
+
+        });
         dropZone.addEventListener("drop", e => {
             e.preventDefault();
             dragLeaveStopper = 0
@@ -411,8 +423,6 @@ function dragTest() {
             getCredits = 0;
             document.getElementById(newForAlern).innerHTML = "this course not applied for now";
             }
-
-
             //update cerdits
             if (creditsEarned > 136) {
                 alert("totoal greater than 136");
@@ -423,13 +433,9 @@ function dragTest() {
                 creditsEarned += getCredits;
                 document.getElementById("show_credits").innerHTML = "Credits: " + creditsEarned;//terminfo[1] is credits
             }
-
-
             document.getElementById(newForAlern).style.visibility = "visible";
             document.getElementById(newForAlern).style.fontSize = "10px";
             document.getElementById(newForAlern).style.lineHeight = "110%";
-
-
 
             if (document.getElementById(newForAlern).innerHTML.length <= 80) {
                 document.getElementById(newForAlern).style.fontSize = "20px";
@@ -437,8 +443,6 @@ function dragTest() {
             if (document.getElementById(newForAlern).innerHTML.length <= 100 && document.getElementById(newForAlern).innerHTML.length > 80) {
                 document.getElementById(newForAlern).style.fontSize = "12px";
             }
-
-
 
             dropZone.appendChild(droppedElement);
             dropZone.classList.remove("drop-zone--over");
@@ -466,8 +470,8 @@ function dragTest() {
             document.getElementById(newForAlern).style.visibility = "hidden";
 
             // renew html
-            creditsEarned -= getCredits;
-             document.getElementById("show_credits").innerHTML = "Credits: " + creditsEarned;
+            /*creditsEarned -= getCredits;
+             document.getElementById("show_credits").innerHTML = "Credits: " + creditsEarned;*/
 
 
 
