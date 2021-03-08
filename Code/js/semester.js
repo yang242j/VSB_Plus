@@ -551,3 +551,7 @@ function showBottom() {
     $("section#bottom").show();
     $(".plus_button.open").hide();
 }
+
+function hideParent() {
+    this.parentElement.style.display = "none";
+}

@@ -249,6 +249,8 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                 
             <!-- Bottom Left Division -->
             <div class="bottom_left" id="course_completed">
+                <!-- Close Button -->
+                <button class="plus_button close" onclick="hideParent();"></button>
                 Courses Completed: <br>
                 <script>
                     $(document).ready( function() {
@@ -284,6 +286,8 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 
             <!-- Bottom Right Division -->
             <div class="bottom_right" id="course_recommended">
+                <!-- Close Button -->
+                <button class="plus_button close" onclick="hideParent();"></button>
                 Courses Recommended: <br>
                 <script>
 
@@ -333,9 +337,6 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                 <div class="courseTag noDrop" id="ENEL 417" draggable="true" ondragstart="drag(event)">ENEL 417</div>
                 -->
             </div>
-
-            <!-- Close Button Spanner -->
-            <button class="plus_button close bottom_right" onclick="hideBottom();"></button>
         </section>
 
         <!-- Open Button Spanner -->
@@ -343,13 +344,13 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 
         <!-- Shadow Layer Division -->
         <div id="shadowLayer" ondrop="dragEnd()" ondragover="allowDrop(event)">
-            <button class="plus_button close shadowLayer"></button>
+            <button class="plus_button close" onclick="hideParent();"></button>
             <div class="dropZone L" ondrop="dropL(event, term); dragEnd();" ondragover="allowDrop(event)"></div>
             <div class="dropZone BR" ondrop="dropBR(event); dragEnd();" ondragover="allowDrop(event)"></div>
             <script>
-                $(".plus_button.close.shadowLayer").click(function() {
-                    this.parentElement.style.display = "none";
-                });
+                // $(".plus_button.close.shadowLayer").click(function() {
+                //     this.parentElement.style.display = "none";
+                // });
 
                 $(".dropZone.L").on("drop", function(event) {
                     var courseName = event.originalEvent.dataTransfer.getData('Text');
