@@ -395,7 +395,6 @@ function dragTest() {
 
         dropZone.addEventListener("drop", e => {
             e.preventDefault();
-            console.log(dropZone.isDefaultNamespace(".course_cards"));
             dragLeaveStopper = 0
             const droppedElementId = e.dataTransfer.getData("text/plain");
             const droppedElement = document.getElementById(droppedElementId);
@@ -489,3 +488,4 @@ dragTest(x);
 dragTest("#nct1");
 dragTest("#nct2");
 dragTest("#nct3");*/
+

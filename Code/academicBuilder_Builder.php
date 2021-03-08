@@ -118,7 +118,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
              <div class = "course_cards" id = "course_cards_builder"></div>
              <div class = "course_cards" id = "course_cards_builder"></div>  
             </div>
-        <div class = "term1" id = "term1">
+        <div class = "term1" id = "term2">
             <div class = "tittle">
                 <h2>Spring/Summer</h2>
             </div>
@@ -129,7 +129,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             <div class = "course_cards" ></div>
         </div>
     
-        <div class = "term1" id = "term1">
+        <div class = "term1" id = "term3">
             <div class = "tittle">
                 <h2>Fall</h2>
             </div>
@@ -140,7 +140,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             <div class = "course_cards" id = "course_cards_builder"></div>
         </div>
 
-        <div class = "term1" id = "term1">
+        <div class = "term1" id = "term4">
             <div class = "tittle">
                 <h2>Winter</h2>
             </div>
