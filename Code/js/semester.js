@@ -556,6 +556,6 @@ function hideParent(x) {
     x.parentElement.style.display = "none";
 
     if ($('div#course_completed').is(':hidden') && $('div#course_recommended').is(':hidden')) {
-        hiddeBottom();
+        hideBottom();
     }
 }
