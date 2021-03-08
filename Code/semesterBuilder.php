@@ -321,10 +321,10 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 
             <!-- Close Button Spanner -->
             <span class="closebtn bottom_right" onclick="toggleBottom();" >&bigotimes;</span>
-
-            <!-- Open Button Spanner -->
-            <span class="openbtn" onclick="toggleBottom();" >&bigoplus;</span>
         </section>
+
+        <!-- Open Button Spanner -->
+        <span class="openbtn" onclick="toggleBottom();" >&bigoplus;</span>
 
         <!-- Shadow Layer Division -->
         <div id="shadowLayer" ondrop="dragEnd()" ondragover="allowDrop(event)">

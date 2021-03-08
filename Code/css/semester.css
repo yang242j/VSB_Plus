@@ -131,6 +131,22 @@ body .container section#right .Date {
 }
 
 /*Bottom Section*/
+.openbtn {
+    position: fixed;
+    z-index: 2;
+    border: 2px solid black;
+    bottom: 0;
+    width: 95%;
+    background-color: #a9a9a9;
+    text-align: center;
+    font-size: xx-large;
+    font-weight: bold;
+    font-size: xxx-large;
+    cursor: pointer;
+    transition: 0.3s;
+    z-index: 3;
+}
+
 .closebtn {
     color: white;
     font-weight: bold;
@@ -143,9 +159,10 @@ body .container section#right .Date {
 }
 
 .closebtn.bottom_right {
+    color: black;
     flex: 0 !important;
     background-color: #a9a9a9;
-    padding-top: 20px;
+    padding-top: 10px;
 }
 
 body .container section#bottom {
