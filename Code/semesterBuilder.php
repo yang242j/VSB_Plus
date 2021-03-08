@@ -78,21 +78,23 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                 <a href="Model/logout.php">Logout</a>
             </div>
         </div>
-        <div class="menu-icon" onclick="menuFunc1(this); menuFunc2('menu-list'); menuFunc3();">
+        <div class="menu-icon" onclick="menuFunc1(this); menuFunc2('menu-list'); toggleBottom();">
             <div class="bar1"></div>
             <div class="bar2"></div>
             <div class="bar3"></div>
         </div>
-        <div class="session-required menu-list dropdown">
-            <button class="dropbtn" onclick="toogleDisplay('dropdown-content')">Academic Schedule Builder</button>
-            <div id="dropdown-content" class="dropdown-content hidden">
-                <a class="academicList" href="academicBuilder_Main.php">General Student Status</a>
-                <a class="academicList" href="academicBuilder_Default.php">Default Schedule</a>
-                <a class="academicList" href="academicBuilder_Builder.php">Customized Schedule</a>
+        <div class="menu-list">
+            <div class="session-required dropdown">
+                <button class="dropbtn" onclick="toogleDisplay('dropdown-content')">Academic Schedule Builder</button>
+                <div id="dropdown-content" class="dropdown-content hidden">
+                    <a class="academicList" href="academicBuilder_Main.php">General Student Status</a>
+                    <a class="academicList" href="academicBuilder_Default.php">Default Schedule</a>
+                    <a class="academicList" href="academicBuilder_Builder.php">Customized Schedule</a>
+                </div>
             </div>
+            <a class="nav-active" href="semesterBuilder.php">Semester Schedule Builder</a>
+            <a class="" href="courseDB.php">Course List Database</a>
         </div>
-        <a class="menu-list nav-active" href="semesterBuilder.php">Semester Schedule Builder</a>
-        <a class="menu-list" href="courseDB.php">Course List Database</a>
     </nav>
 
     <div class="container">
@@ -100,7 +102,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         <section id="top">
             <div style="width: 50%; float: left;">
                 <label for="term">Choose a term:</label>
-                <select id="termSelector" onfocus="menuFunc3()" onblur="menuFunc3()">
+                <select id="termSelector" onfocus="toggleBottom()" onblur="toggleBottom()">
                     <option value="202030" selected>Fall 2020</option>
                     <option value="202110">Winter 2021</option>
                 </select>
@@ -117,7 +119,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             <div style="width: 50%; float: right;">
                 <form onsubmit="return ajaxpost()">
                     <label>Search Class:</label>
-                    <input type="text" id="search_courseid" placeholder="ENGL 100" onfocus="menuFunc3()" onblur="menuFunc3()" required />
+                    <input type="text" id="search_courseid" placeholder="ENGL 100" onfocus="toggleBottom()" onblur="toggleBottom()" required />
                     <input type="submit" value="Submit"/>
                 </form>
                 <p id="msg_p"></p>
@@ -315,9 +317,14 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 
         <!-- Shadow Layer Division -->
         <div id="shadowLayer" ondrop="dragEnd()" ondragover="allowDrop(event)">
+            <span class="closebtn">&times;</span>  
             <div class="dropZone L" ondrop="dropL(event, term); dragEnd();" ondragover="allowDrop(event)"></div>
             <div class="dropZone BR" ondrop="dropBR(event); dragEnd();" ondragover="allowDrop(event)"></div>
             <script>
+                $(".closebtn").click(function() {
+                    this.parentElement.style.display = "none";
+                });
+
                 $(".dropZone.L").on("drop", function(event) {
                     var courseName = event.originalEvent.dataTransfer.getData('Text');
                     console.log(courseName + ' Selected');
