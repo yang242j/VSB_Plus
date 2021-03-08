@@ -370,13 +370,6 @@ function dragTest() {
         dropZone.addEventListener("dragover", e => {
             e.preventDefault();
             dropZone.classList.add("drop-zone--over");
-            dropZone.addEventListener("dragend", e => {
-                e.preventDefault();
-                dropZone.classList.remove("drop-zone--over");
-                //console.log("dasdasdasd");
-                creditsEarned += getCredits;
-                document.getElementById("show_credits").innerHTML = "Credits: " + creditsEarned;
-            });
         });
 
         dropZone.addEventListener("dragleave", e => {
@@ -453,6 +446,9 @@ function dragTest() {
             dropZone.appendChild(droppedElement);
             dropZone.classList.remove("drop-zone--over");
 
+            dropZone.addEventListener("drop", e => { 
+                return;
+            });
         });
     }
 
