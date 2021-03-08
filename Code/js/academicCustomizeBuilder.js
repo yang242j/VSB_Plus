@@ -362,6 +362,8 @@ function dragStart(elementId) {
 }
 
 var getCredits = 0;
+//recored prev drop item course name
+var prevDrop;
 //console.log(allCourseData);
 function dragTest() {
     //const draggableElement = document.querySelector("#nct0");
@@ -374,36 +376,33 @@ function dragTest() {
         dropZone.addEventListener("dragleave", e => {
             e.preventDefault();
             dropZone.classList.remove("drop-zone--over");
-            var credits = document.getElementById("show_credits").innerHTML; 
-            var newCredits = credits - getCredits;
-            document.getElementById("show_credits").innerHTML = newCredits;
-
-
-
-
         });
         dropZone.addEventListener("drop", e => {
             e.preventDefault();
             const droppedElementId = e.dataTransfer.getData("text/plain");
             const droppedElement = document.getElementById(droppedElementId);
             //show moreinfo in course card
-
+            
             var newForAlern = "n" + droppedElementId;
             var newForAlern2 = "nn" + droppedElementId;
             //var content = document.getElementById(newForAlern).innerHTML;
             //get the course name form innerHTML
             //ipdate term info 
             var y = document.getElementById(newForAlern2).innerHTML;
+            // set the course id to prev dropped
+
             var terminfo = getTermInfo(y);
 
             document.getElementById(newForAlern).innerHTML = terminfo[0];//terminfo[0] is term
 
             //update cerdits
-            if (totalCredits < 136 && terminfo[1] != null) {
+            if (totalCredits < 136 && terminfo[1] != null && y != prevDrop) {
                 getCredits = parseInt(document.getElementById("show_credits").innerHTML);
                 var newCredits = getCredits + parseInt(terminfo[1]);
                 document.getElementById("show_credits").innerHTML = newCredits;//terminfo[1] is credits
             }
+            prevDrop = y;
+
             document.getElementById(newForAlern).style.visibility = "visible";
             document.getElementById(newForAlern).style.fontSize = "10px";
             document.getElementById(newForAlern).style.lineHeight = "110%";
