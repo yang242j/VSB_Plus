@@ -391,16 +391,9 @@ function dragTest() {
             creditsEarned -= getCredits;
             document.getElementById("show_credits").innerHTML = "Credits: " + creditsEarned;
 
-        });
-        dropZone.addEventListener("dragend", e => {
-            //e.preventDefault();
-            dropZone.classList.remove("drop-zone--over");
-            //console.log("dasdasdasd");
-            creditsEarned += getCredits;
-            document.getElementById("show_credits").innerHTML = "Credits: " + creditsEarned;
 
         });
-        dropZone.addEventListener("drop", e => {
+        dropZone.addEventListener("dragend", e => {
             e.preventDefault();
             dragLeaveStopper = 0
             const droppedElementId = e.dataTransfer.getData("text/plain");
