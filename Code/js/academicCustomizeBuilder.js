@@ -385,7 +385,7 @@ function dragTest() {
 
         });
         dropZone.addEventListener("dragstart", e => {
-            e.preventDefault();
+            //e.preventDefault();
             dropZone.classList.remove("drop-zone--over");
             //console.log("dasdasdasd");
             creditsEarned -= getCredits;
