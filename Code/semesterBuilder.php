@@ -165,7 +165,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 
                             } else {
                                 // Do nothing and alert the returned Notes
-                                alert(rsp.Notes);
+                                alert(rsp.Notes.bold());
                             }
                         };
                         xhr.send(data);
