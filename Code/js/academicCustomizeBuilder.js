@@ -376,7 +376,7 @@ function dragTest() {
             e.preventDefault();
             dropZone.classList.remove("drop-zone--over");
             //console.log("dasdasdasd");
-            dragLeaveStopper+=1;
+           // dragLeaveStopper+=1;
             /*if(dragLeaveStopper==1)
             {
             creditsEarned = getCredits;
@@ -416,8 +416,10 @@ function dragTest() {
             }
             else
             {
-            getCredits = 0;
-            document.getElementById(newForAlern).innerHTML = "this course not applied for now";
+                alert("this course not applied");
+                return 0;
+            //getCredits = 0;
+            //document.getElementById(newForAlern).innerHTML = "this course not applied for now";
             }
             //update cerdits
             if (creditsEarned > 136) {
