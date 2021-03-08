@@ -217,16 +217,17 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 
                 $(document).on('click', 'span.closebtn.courseCard', function() {
                     let short_name = $(this).closest('div').attr('id').split('_Card')[0];
-                    console.log("1: ", short_name);
                     // Remove course 
                     removeCourse(short_name);
-                });
+                    console.log(short_name + ' Unselected');
 
-                $(".closebtn.courseCard").click(function() {
-                    let short_name = $(this).closest('div').attr('id').split('_Card')[0];
-                    console.log("2: ", short_name);
-                    // Remove course 
-                    removeCourse(short_name);
+                    // on drop, remove course Name from courseList
+                    const index = courseList.indexOf(short_name);
+                    if (index > -1) {
+                        courseList.splice(index, 1);
+                    }
+                    appendExampleCard();
+                    });
                 });
             </script>
         </section>
