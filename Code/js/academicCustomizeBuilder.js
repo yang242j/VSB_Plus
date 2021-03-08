@@ -362,6 +362,7 @@ function dragStart(elementId) {
 }
 
 var getCredits = 0;
+var i = 0;
 //recored prev drop item course name
 function dragTest() {
     //const draggableElement = document.querySelector("#nct0");
@@ -374,32 +375,7 @@ function dragTest() {
         dropZone.addEventListener("dragleave", e => {
             e.preventDefault();
             dropZone.classList.remove("drop-zone--over");
-
-            const droppedElementId = e.dataTransfer.getData("text/plain");
-            const droppedElement = document.getElementById(droppedElementId);
-            //show less info in course tag
-            var newForAlern = "n" + droppedElementId;
-            var newForAlern2 = "nn" + droppedElementId;
-            document.getElementById(newForAlern).innerHTML = " ";
-            document.getElementById(newForAlern).style.visibility = "hidden";
-
-            var y = document.getElementById(newForAlern2).innerHTML;
-            // set the course id to prev dropped
-
-            var terminfo = getTermInfo(y);
-
-            document.getElementById(newForAlern).innerHTML = terminfo[0];
-
-            //update cerdits
-            //terminfo[0] is term
-            //terminfo[1] is credits
-            if (totalCredits < 136 && terminfo[1] != null) {
-                creditsEarned -= parseInt(terminfo[1]);
-                document.getElementById("show_credits").innerHTML = "Credits: " + creditsEarned;
-            }
-
-
-            
+            console.log(i+1);
 
         });
         dropZone.addEventListener("drop", e => {
