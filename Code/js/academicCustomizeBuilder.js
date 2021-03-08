@@ -372,6 +372,7 @@ function dragTest() {
         });
 
         dropZone.addEventListener("dragleave", e => {
+            e.preventDefault();
             dropZone.classList.remove("drop-zone--over");
             var credits = document.getElementById("show_credits").innerHTML; 
             var newCredits = credits - getCredits;
