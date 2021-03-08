@@ -92,18 +92,7 @@ function dropBR(ev) {
         ev.preventDefault();
     } else {
         ev.preventDefault();
-        // 1.Append tag at BR
-        document.getElementsByClassName("bottom_right")[0].appendChild(document.getElementById(short_name));
-        document.getElementById(short_name).style.backgroundColor = "DarkGrey"; // Set tag BGC to DarkGrey
-        document.getElementById(short_name).classList.remove("selected-course"); // Remove selected-course class
-        // Remove course card from middle section
-        removeCourseCard(short_name);
-        // Remove course lecture event from calendar
-        removeCalendar(short_name + "_Lec");
-        // Remove course lab event from calendar
-        removeCalendar(short_name + "_Lab");
-        // Remove exam date from List
-        removeExamList(short_name);
+        removeCourse(short_name);
     }
 }
 
@@ -172,6 +161,21 @@ function registerCourse(short_name, term) {
             console.error(short_name + "Course JSON Fetch FAILED");
         });
     }
+}
+
+function removeCourse(short_name) {
+    // Append tag at BR
+    document.getElementsByClassName("bottom_right")[0].appendChild(document.getElementById(short_name));
+    document.getElementById(short_name).style.backgroundColor = "DarkGrey"; // Set tag BGC to DarkGrey
+    document.getElementById(short_name).classList.remove("selected-course"); // Remove selected-course class
+    // Remove course card from middle section
+    removeCourseCard(short_name);
+    // Remove course lecture event from calendar
+    removeCalendar(short_name + "_Lec");
+    // Remove course lab event from calendar
+    removeCalendar(short_name + "_Lab");
+    // Remove exam date from List
+    removeExamList(short_name);
 }
 
 function changeCalendarAndExam(oldCombo, newcombo, cardId, cardStyle, term) {
@@ -302,6 +306,7 @@ function appendCourseCard(course_json, comboList, BGC) {
     
     let course_card_1 =
         "<div class='courseInfo courseCard' id='" + card_id + "' style='background-color:" + BGC + ";'>" +
+        "<span class='closebtn courseCard' style='color: black;'>&times;</span>" +
         "<h2>" + course_json.short_name + "</h2>" +
         "<a href='courseDB.php?courseId=" + course_json.short_name + "' style='float: right;margin-left: 2%;'>&#128269;</a>" +
         "<label for='sectionCombo'></label>" +
