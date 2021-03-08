@@ -375,19 +375,11 @@ function dragTest() {
 
         dropZone.addEventListener("dragleave", e => {
             dropZone.classList.remove("drop-zone--over");
-
             const droppedElementId = e.dataTransfer.getData("text/plain");
-            console.log(droppedElementId);
             const droppedElement = document.getElementById(droppedElementId);
-            var newForAlern2 = "nn" + droppedElementId;
-            //var content = document.getElementById(newForAlern).innerHTML;
-            //get the course name form innerHTML
-            //ipdate term info 
-            var y = document.getElementById(newForAlern2).innerHTML;
-            var terminfo = getTermInfo(y);
-            var credits = parseInt(document.getElementById("show_credits").innerHTML);
-            var newCredits = credits - parseInt(terminfo[1]);
-            document.getElementById("show_credits").innerHTML = newCredits;//terminfo[1] is credits
+            console.log(droppedElementId);
+            var credits = document.getElementById("show_credits").innerHTML; 
+
 
 
 
@@ -396,7 +388,6 @@ function dragTest() {
             e.preventDefault();
             const droppedElementId = e.dataTransfer.getData("text/plain");
             const droppedElement = document.getElementById(droppedElementId);
-            e.dataTransfer.setData("text/plain", droppedElementId);
             //show moreinfo in course card
 
             var newForAlern = "n" + droppedElementId;
