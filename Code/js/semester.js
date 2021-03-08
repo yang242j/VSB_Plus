@@ -548,7 +548,7 @@ function hideBottom() {
 }
 
 function showBottom() {
-    $("div#course_completed").style.display = "block";
+    $("div#course_completed").show();
     $("div#course_recommended").show();
 }
 
