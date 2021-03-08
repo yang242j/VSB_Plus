@@ -405,7 +405,7 @@ function dragTest() {
             getCredits = parseInt(terminfo[1]);
 
             //update cerdits
-            if (totalCredits < 136 && terminfo[1] != null) {
+            if (creditsEarned < 136 && terminfo[1] != null) {
                 creditsEarned += getCredits;
                 document.getElementById("show_credits").innerHTML = "Credits: " +creditsEarned;//terminfo[1] is credits
             }
@@ -444,14 +444,14 @@ function dragTest() {
             e.preventDefault();
             const droppedElementId = e.dataTransfer.getData("text/plain");
             const droppedElement = document.getElementById(droppedElementId);
-            //show less info in course tag
+           // get some html ids
             var newForAlern = "n" + droppedElementId;
             var newForAlern2 = "nn" + droppedElementId;
             document.getElementById(newForAlern).innerHTML = " ";
             document.getElementById(newForAlern).style.visibility = "hidden";
 
-            // set the course id to prev dropped
-            document.getElementById("show_credits").innerHTML = "Credits: " +creditsEarned;
+            // renew html
+            document.getElementById("show_credits").innerHTML = "Credits: " + creditsEarned;
 
 
 
