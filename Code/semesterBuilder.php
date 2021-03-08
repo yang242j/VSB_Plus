@@ -62,7 +62,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         courseCompletedList = courseCompletedList.concat(presetCourses);
         
         $(document).ready(function() {
-            $(".openbtn").hide();
+            $("button.plus_button.open").hide();
             $(".menu-icon").click();
         });
     </script>
@@ -216,7 +216,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                     selected = newCombo
                 });
 
-                $(document).on('click', 'span.closebtn.courseCard', function() {
+                $(document).on('click', 'button.close.courseCard', function() {
                     let short_name = $(this).closest('div').attr('id').split('_Card')[0];
                     // Remove course 
                     removeCourse(short_name);
@@ -335,19 +335,19 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             </div>
 
             <!-- Close Button Spanner -->
-            <span class="closebtn bottom_right" onclick="hideBottom();" >&times;</span>
+            <button class="plus_button close bottom_right" onclick="hideBottom();"></button>
         </section>
 
         <!-- Open Button Spanner -->
-        <span class="openbtn" onclick="showBottom();" >&plus;</span>
+        <button class="plus_button open" onclick="showBottom();"></button>
 
         <!-- Shadow Layer Division -->
         <div id="shadowLayer" ondrop="dragEnd()" ondragover="allowDrop(event)">
-            <span class="closebtn shadowLayer">&times;</span>  
+            <button class="plus_button close shadowLayer"></button>
             <div class="dropZone L" ondrop="dropL(event, term); dragEnd();" ondragover="allowDrop(event)"></div>
             <div class="dropZone BR" ondrop="dropBR(event); dragEnd();" ondragover="allowDrop(event)"></div>
             <script>
-                $(".closebtn.shadowLayer").click(function() {
+                $(".plus_button.close.shadowLayer").click(function() {
                     this.parentElement.style.display = "none";
                 });
 

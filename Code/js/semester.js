@@ -306,7 +306,7 @@ function appendCourseCard(course_json, comboList, BGC) {
     
     let course_card_1 =
         "<div class='courseInfo courseCard' id='" + card_id + "' style='background-color:" + BGC + ";'>" +
-        "<span class='closebtn courseCard' style='color: black;'>&times;</span>" +
+        "<button class='plus_button close courseCard' style='color: black;'></button>" +
         "<h2>" + course_json.short_name + "</h2>" +
         "<a href='courseDB.php?courseId=" + course_json.short_name + "' style='float: right;margin-left: 2%;'>&#128269;</a>" +
         "<label for='sectionCombo'></label>" +
@@ -544,10 +544,10 @@ function get24HrsFrm12Hrs(timeString) {
 
 function hideBottom() {
     $("section#bottom").hide();
-    $(".openbtn").show();
+    $(".plus_button.open").show();
 }
 
 function showBottom() {
     $("section#bottom").show();
-    $(".openbtn").hide();
+    $(".plus_button.open").hide();
 }

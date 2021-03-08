@@ -131,34 +131,56 @@ body .container section#right .Date {
 }
 
 /*Bottom Section*/
-.openbtn {
-    position: fixed;
+.plus_button {
     border: 2px solid black;
-    bottom: 0;
     background-color: #a9a9a9;
-    text-align: center;
     font-weight: bold;
     font-size: xx-large;
-    cursor: pointer;
-    transition: 0.3s;
-    z-index: 3;
-}
-
-.closebtn {
-    color: white;
-    font-weight: bold;
-    float: right;
-    font-size: xxx-large;
+    height: 2.5em;
+    width: 2.5em;
+    border-radius: 50%;
     cursor: pointer;
     transition: 0.3s;
     z-index: 3;
     position: relative;
 }
 
-.closebtn.bottom_right {
+.plus_button::after,
+.plus_button::before {
+    content: "";
+    display: block;
+    background-color: #a9a9a9;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.plus_button::before {
+    height: 1em;
+    width: 0.2em;
+}
+
+.plus_button::after {
+    height: 0.2em;
+    width: 1em;
+}
+
+.open {
+    position: fixed;
+    bottom: 0;
+}
+
+.close {
+    transform: rotate(-45deg);
+    color: white;
+    float: right;
+    position: relative;
+}
+
+.close.bottom_right {
     color: black;
     flex: 0 !important;
-    background-color: #a9a9a9;
     padding-top: 10px;
 }
 
@@ -167,7 +189,7 @@ body .container section#bottom {
     z-index: 2;
     border: 2px solid black;
     bottom: 0;
-    width: 90%;
+    width: 95%;
     display: flex;
     /* equal height of the children */
     background-color: white;
