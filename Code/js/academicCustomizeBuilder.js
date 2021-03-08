@@ -377,6 +377,7 @@ function dragTest() {
             dropZone.classList.remove("drop-zone--over");
 
             const droppedElementId = e.dataTransfer.getData("text/plain");
+            console.log(droppedElementId);
             const droppedElement = document.getElementById(droppedElementId);
             var newForAlern2 = "nn" + droppedElementId;
             //var content = document.getElementById(newForAlern).innerHTML;
