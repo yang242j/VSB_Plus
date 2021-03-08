@@ -145,8 +145,8 @@ body .container section#right .Date {
     position: relative;
 }
 
-.plus-button::after,
-.plus-button::before {
+.plus_button::after,
+.plus_button::before {
     content: "";
     display: block;
     background-color: #a9a9a9;
@@ -156,7 +156,7 @@ body .container section#right .Date {
     transform: translate(-50%, -50%);
 }
 
-.plus-button::before {
+.plus_button::before {
     height: 1em;
     width: 0.2em;
 }
