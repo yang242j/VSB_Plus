@@ -105,7 +105,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         <!-- Top Section -->
         <section id="top">
             <div style="width: 50%; float: left;">
-                <label for="term">Step 1: Choose Semester</label>
+                <label for="term"><b>Step 1:</b> Choose Semester</label>
                 <select id="termSelector" onfocus="hideBottom()" onblur="showBottom()">
                     <option value="202030" selected>Fall 2020</option>
                     <option value="202110">Winter 2021</option>
@@ -122,7 +122,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 
             <div style="width: 50%; float: right;">
                 <form onsubmit="return ajaxpost()">
-                    <label>Step 2: Search Class</label>
+                    <label><b>Step 2:</b> Search Class</label>
                     <input type="text" id="search_courseid" placeholder="ENGL 100" onfocus="hideBottom()" onblur="showBottom()" required />
                     <input type="submit" value="Submit"/>
                 </form>
