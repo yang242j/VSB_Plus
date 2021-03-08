@@ -400,6 +400,7 @@ function dragTest() {
             // set the course id to prev dropped
 
             var terminfo = getTermInfo(y);
+            console.log(terminfo);
             if( terminfo != null){
                 document.getElementById(newForAlern).innerHTML = terminfo[0];//terminfo[0] is term
                 getCredits = parseInt(terminfo[1]);
@@ -410,7 +411,7 @@ function dragTest() {
 
             //update cerdits
             if (creditsEarned > 136) {
-                alert(">136");
+                alert("totoal greater than 136");
                 return;
             }
 
