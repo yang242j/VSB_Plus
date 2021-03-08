@@ -306,9 +306,9 @@ function getTermInfo(courseName) {
         }
     }
     myRequest3.send();
-    if(myRequest3.status == 404){
-        return "this class not applied";
-    }
+    /*if(myRequest3.status == 404){
+        return null;
+    }*/
 
 
 
