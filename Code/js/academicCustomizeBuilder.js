@@ -381,7 +381,7 @@ function dragTest() {
             {
             creditsEarned -= getCredits;
             }*/
-            
+
         });
         dropZone.addEventListener("drop", e => {
             e.preventDefault();
@@ -389,8 +389,8 @@ function dragTest() {
             const droppedElementId = e.dataTransfer.getData("text/plain");
             const droppedElement = document.getElementById(droppedElementId);
             //show moreinfo in course card
-           
-            
+
+
             var newForAlern = "n" + droppedElementId;
             var newForAlern2 = "nn" + droppedElementId;
             //var content = document.getElementById(newForAlern).innerHTML;
@@ -405,8 +405,15 @@ function dragTest() {
             getCredits = parseInt(terminfo[1]);
 
             //update cerdits
-            creditsEarned += getCredits;
-            document.getElementById("show_credits").innerHTML = "Credits: " +creditsEarned;//terminfo[1] is credits
+            if (creditsEarned > 136) {
+                alert(">136");
+                return;
+            }
+
+            else {
+                creditsEarned += getCredits;
+                document.getElementById("show_credits").innerHTML = "Credits: " + creditsEarned;//terminfo[1] is credits
+            }
 
 
             document.getElementById(newForAlern).style.visibility = "visible";
@@ -443,14 +450,14 @@ function dragTest() {
             e.preventDefault();
             const droppedElementId = e.dataTransfer.getData("text/plain");
             const droppedElement = document.getElementById(droppedElementId);
-           // get some html ids
+            // get some html ids
             var newForAlern = "n" + droppedElementId;
             //var newForAlern2 = "nn" + droppedElementId;
             document.getElementById(newForAlern).innerHTML = " ";
             document.getElementById(newForAlern).style.visibility = "hidden";
 
             // renew html
-           // document.getElementById("show_credits").innerHTML = "Credits: " + creditsEarned;
+            // document.getElementById("show_credits").innerHTML = "Credits: " + creditsEarned;
 
 
 
