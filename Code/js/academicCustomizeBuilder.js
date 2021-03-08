@@ -374,11 +374,11 @@ function dragTest() {
         dropZone.addEventListener("dragleave", e => {
             //e.preventDefault();
             dropZone.classList.remove("drop-zone--over");
-            var i = 0;
-            i=i+1;
-            console.log(i);
+            var credits = getCredits;
+            var earnedCredits = creditsEarned;
+            var newCredits = creditsEarned - getCredits;
+            document.getElementById("show_credits").innerHTML = "Credits: " +newCredits ;
             
-
         });
         dropZone.addEventListener("drop", e => {
             e.preventDefault();
