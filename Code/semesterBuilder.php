@@ -60,6 +60,10 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         let presetCourses = ['Precalculus 30', 'Calculus 30', 'CHEM 30', 'Mathematics B30', 'Mathematics C30', 'AMTH 092', 'MATH 102', 'MATH 103'];
         var courseCompletedList = [];
         courseCompletedList = courseCompletedList.concat(presetCourses);
+        
+        $(document).ready(function() {
+            $(".openbtn").hide();
+        });
     </script>
 </head>
 
@@ -316,7 +320,10 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             </div>
 
             <!-- Close Button Spanner -->
-            <span class="closebtn bottom_right" onclick="toggleBottom();" >&times;</span>  
+            <span class="closebtn bottom_right" onclick="toggleBottom();" >&bigotimes;</span>
+
+            <!-- Open Button Spanner -->
+            <span class="openbtn" onclick="toggleBottom();" >&bigoplus;</span>
         </section>
 
         <!-- Shadow Layer Division -->

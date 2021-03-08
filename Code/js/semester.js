@@ -538,5 +538,6 @@ function get24HrsFrm12Hrs(timeString) {
 }
 
 function toggleBottom() {
-    $("section#bottom").toggle({bottom: '0'}, 1000);
+    $("section#bottom").toggle();
+    $(".openbtn").toggle();
 }
