@@ -375,6 +375,9 @@ function dragTest() {
         dropZone.addEventListener("dragleave", e => {
             e.preventDefault();
             dropZone.classList.remove("drop-zone--over");
+            dropZone.addEventListener("drop", e => { 
+                return;
+            });
             //console.log("dasdasdasd");
            // dragLeaveStopper+=1;
             /*if(dragLeaveStopper==1)
@@ -446,9 +449,6 @@ function dragTest() {
             dropZone.appendChild(droppedElement);
             dropZone.classList.remove("drop-zone--over");
 
-            dropZone.addEventListener("drop", e => { 
-                return;
-            });
         });
     }
 
