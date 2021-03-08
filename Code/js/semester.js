@@ -10,7 +10,7 @@ if (!firefoxAgent) {
 //Calendar init
 var calendarEl = document.getElementById('calendar');
 var calendar = new FullCalendar.Calendar(calendarEl, {
-    initialView: 'dayGridMonth',
+    initialView: 'timeGridWeek',
     initialDate: new Date(),
     slotMinTime: '07:00:00',
     slotMaxTime: '22:00:00',
