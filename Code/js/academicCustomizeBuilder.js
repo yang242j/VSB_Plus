@@ -372,8 +372,9 @@ function dragTest() {
         });
 
         dropZone.addEventListener("dragleave", e => {
-            //e.preventDefault();
-            creditsEarned = creditsEarned -getCredits;
+            e.preventDefault();
+            dropZone.classList.remove("drop-zone--over");
+            creditsEarned -= getCredits;
             
         });
         dropZone.addEventListener("drop", e => {
