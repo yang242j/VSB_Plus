@@ -187,7 +187,7 @@ body .terms .term1 #course_cards_builder p{
     }
     body .tags_courses .course_list .course_not_completed{
         /*border: 2px solid red;*/
-        margin-top: -250px;
+        margin-top: -290px;
         margin-left: -20px;
     }
     body .tags_courses .course_list .course_tag_not_completed{
