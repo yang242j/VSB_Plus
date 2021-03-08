@@ -63,6 +63,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         
         $(document).ready(function() {
             $(".openbtn").hide();
+            $(".menu-icon").click();
         });
     </script>
 </head>
