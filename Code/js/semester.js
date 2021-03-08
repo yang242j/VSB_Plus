@@ -537,6 +537,6 @@ function get24HrsFrm12Hrs(timeString) {
     return sHours + ":" + sMinutes;;
 }
 
-function menuFunc3() {
+function toggleBottom() {
     $("section#bottom").toggle({bottom: '0'}, 1000);
 }

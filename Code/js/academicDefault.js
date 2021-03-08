@@ -229,7 +229,7 @@ function showTerm(pageNumber) {
         if (term >= termNumber){
         if (term != "Approved") {
             /*if (i <= 4) {*/
-            if (i <= 4) {
+            if (i <= 9) {
                 if(pageNumber < 7) {
                 document.getElementById("term" + i).innerHTML =
                     "<div class = 'tittle'>" + "<h2>" + term + ":" + "</h2></div>" +

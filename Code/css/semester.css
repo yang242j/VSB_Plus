@@ -131,6 +131,21 @@ body .container section#right .Date {
 }
 
 /*Bottom Section*/
+.closebtn {
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 70px;
+    cursor: pointer;
+    transition: 0.3s;
+    z-index: 3;
+    position: relative;
+}
+
+.closebtn:hover {
+    color: black;
+}
+
 body .container section#bottom {
     position: fixed;
     z-index: 2;
