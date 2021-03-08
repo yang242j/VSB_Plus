@@ -265,12 +265,8 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 
             <!-- Bottom Right Division -->
             <div class="bottom_right" id="course_recommended">
-                <span class="closebtn bottomRight">&times;</span>  
                 Courses To Take: <br>
                 <script>
-                    $(".closebtn.bottomRight").click(function() {
-                        toggleBottom();
-                    });
 
                     function loadRecCourseTags() {
                         // Remove all previously displayed tags
@@ -318,6 +314,9 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                 <div class="courseTag noDrop" id="ENEL 417" draggable="true" ondragstart="drag(event)">ENEL 417</div>
                 -->
             </div>
+
+            <!-- Close Button Spanner -->
+            <span class="closebtn bottom_right" onclick="toggleBottom();" >&times;</span>  
         </section>
 
         <!-- Shadow Layer Division -->
