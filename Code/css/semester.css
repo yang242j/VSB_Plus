@@ -138,6 +138,7 @@ body .container section#right .Date {
     background-color: #a9a9a9;
     text-align: center;
     font-weight: bold;
+    font-size: xx-large;
     cursor: pointer;
     transition: 0.3s;
     z-index: 3;
@@ -147,7 +148,7 @@ body .container section#right .Date {
     color: white;
     font-weight: bold;
     float: right;
-    font-size: xx-large;
+    font-size: xxx-large;
     cursor: pointer;
     transition: 0.3s;
     z-index: 3;
