@@ -167,7 +167,7 @@ body .container section#bottom {
     z-index: 2;
     border: 2px solid black;
     bottom: 0;
-    width: 95%;
+    width: 90%;
     display: flex;
     /* equal height of the children */
     background-color: white;
@@ -226,7 +226,7 @@ body .container .bottom_right .courseTag {
 
     body .container section#middle .courseInfo,
     body .container section#right .Date {
-        width: 85%;
+        width: 90%;
     }
 
     body .container section#right {
