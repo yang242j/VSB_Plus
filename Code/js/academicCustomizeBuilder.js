@@ -374,6 +374,7 @@ function dragTest() {
         dropZone.addEventListener("dragleave", e => {
             e.preventDefault();
             dropZone.classList.remove("drop-zone--over");
+            console.log("dasdasdasd");
             creditsEarned -= getCredits;
             
         });
@@ -394,10 +395,11 @@ function dragTest() {
             var terminfo = getTermInfo(y);
 
             document.getElementById(newForAlern).innerHTML = terminfo[0];//terminfo[0] is term
+            getCredits = parseInt(terminfo[1]);
 
             //update cerdits
             if (totalCredits < 136 && terminfo[1] != null) {
-                creditsEarned += parseInt(terminfo[1]);
+                creditsEarned += getCredits;
                 document.getElementById("show_credits").innerHTML = "Credits: " +creditsEarned;//terminfo[1] is credits
             }
 
