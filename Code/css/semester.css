@@ -131,7 +131,7 @@ body .container section#right .Date {
 }
 
 /*Bottom Section*/
-.plus-button {
+.plus_button {
     border: 2px solid black;
     background-color: #a9a9a9;
     font-weight: bold;
