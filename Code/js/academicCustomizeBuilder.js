@@ -373,7 +373,7 @@ function dragTest() {
         });
 
         dropZone.addEventListener("dragleave", e => {
-            e.preventDefault();
+            //e.preventDefault();
             dropZone.classList.remove("drop-zone--over");
             i=i+1;
             if(i <= 1000)
