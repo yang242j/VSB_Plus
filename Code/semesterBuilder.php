@@ -82,7 +82,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                 <a href="Model/logout.php">Logout</a>
             </div>
         </div>
-        <div class="menu-icon" onclick="menuFunc1(this); menuFunc2('menu-list'); toggleBottom();">
+        <div class="menu-icon" onclick="menuFunc1(this); menuFunc2('menu-list');">
             <div class="bar1"></div>
             <div class="bar2"></div>
             <div class="bar3"></div>
@@ -106,7 +106,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         <section id="top">
             <div style="width: 50%; float: left;">
                 <label for="term">Choose a term:</label>
-                <select id="termSelector" onfocus="toggleBottom()" onblur="toggleBottom()">
+                <select id="termSelector" onfocus="hideBottom()" onblur="showBottom()">
                     <option value="202030" selected>Fall 2020</option>
                     <option value="202110">Winter 2021</option>
                 </select>
@@ -123,7 +123,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             <div style="width: 50%; float: right;">
                 <form onsubmit="return ajaxpost()">
                     <label>Search Class:</label>
-                    <input type="text" id="search_courseid" placeholder="ENGL 100" onfocus="toggleBottom()" onblur="toggleBottom()" required />
+                    <input type="text" id="search_courseid" placeholder="ENGL 100" onfocus="hideBottom()" onblur="showBottom()" required />
                     <input type="submit" value="Submit"/>
                 </form>
                 <p id="msg_p"></p>
@@ -320,11 +320,11 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             </div>
 
             <!-- Close Button Spanner -->
-            <span class="closebtn bottom_right" onclick="toggleBottom();" >&bigotimes;</span>
+            <span class="closebtn bottom_right" onclick="hideBottom();" >&bigotimes;</span>
         </section>
 
         <!-- Open Button Spanner -->
-        <span class="openbtn" onclick="toggleBottom();" >&bigoplus;</span>
+        <span class="openbtn" onclick="showBottom();" >&bigoplus;</span>
 
         <!-- Shadow Layer Division -->
         <div id="shadowLayer" ondrop="dragEnd()" ondragover="allowDrop(event)">

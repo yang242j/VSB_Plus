@@ -537,7 +537,12 @@ function get24HrsFrm12Hrs(timeString) {
     return sHours + ":" + sMinutes;;
 }
 
-function toggleBottom() {
-    $("section#bottom").toggle();
-    $(".openbtn").toggle();
+function hideBottom() {
+    $("section#bottom").hide();
+    $(".openbtn").show();
+}
+
+function showBottom() {
+    $("section#bottom").show();
+    $(".openbtn").hide();
 }
