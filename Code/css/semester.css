@@ -167,7 +167,7 @@ body .container section#bottom {
     z-index: 2;
     border: 2px solid black;
     bottom: 0;
-    width: 90%;
+    width: 95%;
     display: flex;
     /* equal height of the children */
     background-color: white;
