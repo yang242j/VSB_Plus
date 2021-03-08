@@ -20,12 +20,12 @@ getAllCourse();
 window.onload = function init() {
     fetchCourseJSON(sid, pas);
 }
-function getCreditsEarned(data){
+function getCreditsEarned(data) {
     var dataJSON = JSON.parse(data);
-     for (i = 0; i < dataJSON.length; i++) {
-        creditsEarned +=  parseInt(dataJSON[i].credit_earned);
+    for (i = 0; i < dataJSON.length; i++) {
+        creditsEarned += parseInt(dataJSON[i].credit_earned);
     }
-    document.getElementById("show_credits").innerHTML += creditsEarned;    
+    document.getElementById("show_credits").innerHTML += creditsEarned;
 }
 console.log(creditsEarned);
 // get student ID form academac_builder
@@ -301,7 +301,7 @@ function getTermInfo(courseName) {
             credit = data.credit;
             if (data.term != "No class for the term") {
                 term += "Winter" + " ";
-                
+
             }
         }
     }
@@ -340,7 +340,7 @@ function getTermInfo(courseName) {
     myRequest2.send();
 
 
-    return [term ,credit,prerequisite];
+    return [term, credit, prerequisite];
 }
 //console.log(courseNeededArray());
 //console.log(getTermInfo("ENGG 140"));
@@ -354,7 +354,7 @@ function getAllCourse() {
     myRequest.send();
 }
 
-function dragStart(elementId){
+function dragStart(elementId) {
     const draggableElement = document.querySelector(elementId);
     draggableElement.addEventListener("dragstart", e => {
         e.dataTransfer.setData("text/plain", draggableElement.id);
@@ -365,7 +365,7 @@ function dragStart(elementId){
 //console.log(allCourseData);
 function dragTest() {
     //const draggableElement = document.querySelector("#nct0");
-    
+
 
     for (const dropZone of document.querySelectorAll(".course_cards")) {
         dropZone.addEventListener("dragover", e => {
@@ -375,6 +375,14 @@ function dragTest() {
 
         dropZone.addEventListener("dragleave", e => {
             dropZone.classList.remove("drop-zone--over");
+
+
+            var credits = parseInt(document.getElementById("show_credits").innerHTML);
+            var newCredits = credits - parseInt(terminfo[1]);
+            document.getElementById("show_credits").innerHTML = newCredits;//terminfo[1] is credits
+
+
+
         });
         dropZone.addEventListener("drop", e => {
             e.preventDefault();
@@ -391,9 +399,9 @@ function dragTest() {
             var terminfo = getTermInfo(y);
 
             document.getElementById(newForAlern).innerHTML = terminfo[0];//terminfo[0] is term
-           
+
             //update cerdits
-            if(totalCredits < 136 && terminfo[1] != null){
+            if (totalCredits < 136 && terminfo[1] != null) {
                 var credits = parseInt(document.getElementById("show_credits").innerHTML);
                 var newCredits = credits + parseInt(terminfo[1]);
                 document.getElementById("show_credits").innerHTML = newCredits;//terminfo[1] is credits
@@ -401,9 +409,9 @@ function dragTest() {
             document.getElementById(newForAlern).style.visibility = "visible";
             document.getElementById(newForAlern).style.fontSize = "10px";
             document.getElementById(newForAlern).style.lineHeight = "110%";
-              
 
-            
+
+
             if (document.getElementById(newForAlern).innerHTML.length <= 80) {
                 document.getElementById(newForAlern).style.fontSize = "20px";
             }
