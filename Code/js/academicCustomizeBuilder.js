@@ -436,6 +436,7 @@ function dragTest() {
             const droppedElement = document.getElementById(droppedElementId);
             //show less info in course tag
             var newForAlern = "n" + droppedElementId;
+            var newForAlern2 = "nn" + droppedElementId;
             document.getElementById(newForAlern).innerHTML = " ";
             document.getElementById(newForAlern).style.visibility = "hidden";
 
@@ -444,13 +445,15 @@ function dragTest() {
 
             var terminfo = getTermInfo(y);
 
-            document.getElementById(newForAlern).innerHTML = terminfo[0];//terminfo[0] is term
+            document.getElementById(newForAlern).innerHTML = terminfo[0];
 
             //update cerdits
+            //terminfo[0] is term
+            //terminfo[1] is credits
             if (totalCredits < 136 && terminfo[1] != null) {
                 getCredits = parseInt(document.getElementById("show_credits").innerHTML);
                 var newCredits = getCredits - parseInt(terminfo[1]);
-                document.getElementById("show_credits").innerHTML = newCredits;//terminfo[1] is credits
+                document.getElementById("show_credits").innerHTML = newCredits;
             }
 
 
