@@ -375,9 +375,6 @@ function dragTest() {
         dropZone.addEventListener("dragleave", e => {
             e.preventDefault();
             dropZone.classList.remove("drop-zone--over");
-            dropZone.addEventListener("drop", e => { 
-                return;
-            });
             //console.log("dasdasdasd");
            // dragLeaveStopper+=1;
             /*if(dragLeaveStopper==1)
@@ -398,6 +395,7 @@ function dragTest() {
 
         dropZone.addEventListener("drop", e => {
             e.preventDefault();
+            console.log(dropZone.isDefaultNamespace());
             dragLeaveStopper = 0
             const droppedElementId = e.dataTransfer.getData("text/plain");
             const droppedElement = document.getElementById(droppedElementId);
