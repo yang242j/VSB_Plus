@@ -269,7 +269,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 
             <!-- Bottom Right Division -->
             <div class="bottom_right" id="course_recommended">
-                Courses To Take: <br>
+                Courses Recommended: <br>
                 <script>
 
                     function loadRecCourseTags() {
