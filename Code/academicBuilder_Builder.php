@@ -86,16 +86,18 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             <div class="bar2"></div>
             <div class="bar3"></div>
         </div>
-        <div class="session-required menu-list nav-active dropdown">
-            <button class="dropbtn" onclick="toogleDisplay('dropdown-content')">Academic Schedule Builder</button>
-            <div id="dropdown-content" class="dropdown-content hidden">
-                <a class="academicList" href="academicBuilder_Main.php">General Student Status</a>
-                <a class="academicList" href="academicBuilder_Default.php">Default Schedule</a>
-                <a class="academicList" href="academicBuilder_Builder.php">Customized Schedule</a>
+        <div class="menu-list">
+            <div class="session-required nav-active dropdown">
+                <button class="dropbtn" onclick="toogleDisplay('dropdown-content')">Academic Schedule Builder</button>
+                <div id="dropdown-content" class="dropdown-content hidden">
+                    <a class="academicList" href="academicBuilder_Main.php">General Student Status</a>
+                    <a class="academicList" href="academicBuilder_Default.php">Default Schedule</a>
+                    <a class="academicList" href="academicBuilder_Builder.php">Customized Schedule</a>
+                </div>
             </div>
+            <a class="session-required" href="semesterBuilder.php">Semester Schedule Builder</a>
+            <a class="" href="courseDB.php">Course List Database</a>
         </div>
-        <a class="session-required menu-list" href="semesterBuilder.php">Semester Schedule Builder</a>
-        <a class="menu-list" href="courseDB.php">Course List Database</a>
     </nav>
     <div class="welcome_tag" id = "welcome">
             <h1 id = "show_credits">Credits:</h1>

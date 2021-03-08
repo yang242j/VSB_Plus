@@ -247,8 +247,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <div class="bar2"></div>
             <div class="bar3"></div>
         </div>
-        <a class="menu-list hidden" href="semesterBuilder.php">Semester Schedule Builder</a>
-        <a class="menu-list hidden" href="courseDB.php">Course List Database</a>
     </nav>
 
     <section class="container">
