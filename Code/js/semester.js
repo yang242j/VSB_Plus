@@ -544,7 +544,7 @@ function get24HrsFrm12Hrs(timeString) {
 
 function hideBottom() {
     $("section#bottom").hide();
-    $(".plus_button.open").show();
+    $("button.plus_button.open").show();
 }
 
 function showBottom() {
