@@ -265,8 +265,13 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 
             <!-- Bottom Right Division -->
             <div class="bottom_right" id="course_recommended">
+                <span class="closebtn BR">&times;</span>  
                 Courses To Take: <br>
                 <script>
+                    $(".closebtn.BR").click(function() {
+                        this.parentElement.parentElement.style.display = "none";
+                    });
+
                     function loadRecCourseTags() {
                         // Remove all previously displayed tags
                         $(".bottom_right .courseTag").remove();
@@ -317,11 +322,11 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 
         <!-- Shadow Layer Division -->
         <div id="shadowLayer" ondrop="dragEnd()" ondragover="allowDrop(event)">
-            <span class="closebtn">&times;</span>  
+            <span class="closebtn shadowLayer">&times;</span>  
             <div class="dropZone L" ondrop="dropL(event, term); dragEnd();" ondragover="allowDrop(event)"></div>
             <div class="dropZone BR" ondrop="dropBR(event); dragEnd();" ondragover="allowDrop(event)"></div>
             <script>
-                $(".closebtn").click(function() {
+                $(".closebtn.shadowLayer").click(function() {
                     this.parentElement.style.display = "none";
                 });
 
