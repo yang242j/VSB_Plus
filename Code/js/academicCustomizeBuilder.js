@@ -376,11 +376,11 @@ function dragTest() {
             e.preventDefault();
             dropZone.classList.remove("drop-zone--over");
             //console.log("dasdasdasd");
-            /*dragLeaveStopper+=1;
+            dragLeaveStopper+=1;
             if(dragLeaveStopper==1)
             {
             creditsEarned -= getCredits;
-            }*/
+            }
 
         });
         dropZone.addEventListener("drop", e => {
@@ -406,7 +406,10 @@ function dragTest() {
                 getCredits = parseInt(terminfo[1]);
             }
             else
+            {
             getCredits = 0;
+            document.getElementById(newForAlern).innerHTML = "this course not applied for now";
+            }
 
 
             //update cerdits
