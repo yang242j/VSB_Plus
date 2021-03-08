@@ -376,10 +376,10 @@ function dragTest() {
             e.preventDefault();
             dropZone.classList.remove("drop-zone--over");
             //console.log("dasdasdasd");
-            /*dragLeaveStopper+=1;
-            if(dragLeaveStopper==1)
+            dragLeaveStopper+=1;
+            /*if(dragLeaveStopper==1)
             {
-            creditsEarned -= getCredits;
+            creditsEarned = getCredits;
             document.getElementById("show_credits").innerHTML = "Credits: " + creditsEarned;
             }*/
 
@@ -389,14 +389,6 @@ function dragTest() {
             dropZone.classList.remove("drop-zone--over");
             //console.log("dasdasdasd");
             creditsEarned -= getCredits;
-            document.getElementById("show_credits").innerHTML = "Credits: " + creditsEarned;
-
-        });
-        dropZone.addEventListener("dragenter", e => {
-            //e.preventDefault();
-            dropZone.classList.remove("drop-zone--over");
-            //console.log("dasdasdasd");
-            creditsEarned += getCredits;
             document.getElementById("show_credits").innerHTML = "Credits: " + creditsEarned;
 
         });
