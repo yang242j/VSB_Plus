@@ -161,7 +161,7 @@ body .container section#right .Date {
     width: 0.2em;
 }
 
-.plus-button::after {
+.plus_button::after {
     height: 0.2em;
     width: 1em;
 }
