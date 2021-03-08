@@ -376,7 +376,11 @@ function dragTest() {
             e.preventDefault();
             dropZone.classList.remove("drop-zone--over");
             i=i+1;
+            if(i<=1)
+            {
             console.log(i);
+            i = i-1;
+            }
 
         });
         dropZone.addEventListener("drop", e => {
