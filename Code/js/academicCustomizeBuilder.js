@@ -393,7 +393,7 @@ function dragTest() {
             document.getElementById(newForAlern).innerHTML = terminfo[0];//terminfo[0] is term
            
             //update cerdits
-            if(totalCredits < 136 && erminfo[1] != null){
+            if(totalCredits < 136 && terminfo[1] != null){
                 var credits = parseInt(document.getElementById("show_credits").innerHTML);
                 var newCredits = credits + parseInt(terminfo[1]);
                 document.getElementById("show_credits").innerHTML = newCredits;//terminfo[1] is credits
