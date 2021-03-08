@@ -451,7 +451,7 @@ function dragTest() {
             document.getElementById(newForAlern).style.visibility = "hidden";
 
             // renew html
-            document.getElementById("show_credits").innerHTML = "Credits: " + creditsEarned;
+           // document.getElementById("show_credits").innerHTML = "Credits: " + creditsEarned;
 
 
 
