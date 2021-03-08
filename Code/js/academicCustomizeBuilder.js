@@ -376,7 +376,7 @@ function dragTest() {
             e.preventDefault();
             dropZone.classList.remove("drop-zone--over");
             i=i+1;
-            if(i <= 5)
+            if(i <= 100)
             {
             console.log(i);
             i = i-1;
