@@ -548,8 +548,8 @@ function hideBottom() {
 }
 
 function showBottom() {
-    $("section#bottom").show();
-    $(".plus_button.open").hide();
+    $("div#course_completed").style.display = "block";
+    $("div#course_recommended").show();
 }
 
 function hideParent(x) {

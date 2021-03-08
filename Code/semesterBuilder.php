@@ -246,6 +246,9 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 
         <!-- Bottom Section -->
         <section id="bottom" ondrop="dragEnd()" ondragover="allowDrop(event)">
+
+            <!-- Open Button Spanner -->
+            <button class="plus_button open" onclick="showBottom();"></button>
                 
             <!-- Bottom Left Division -->
             <div class="bottom_left" id="course_completed">
@@ -338,9 +341,6 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                 -->
             </div>
         </section>
-
-        <!-- Open Button Spanner -->
-        <button class="plus_button open" onclick="showBottom();"></button>
 
         <!-- Shadow Layer Division -->
         <div id="shadowLayer" ondrop="dragEnd()" ondragover="allowDrop(event)">
