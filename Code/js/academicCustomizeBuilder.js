@@ -376,11 +376,11 @@ function dragTest() {
             e.preventDefault();
             dropZone.classList.remove("drop-zone--over");
             //console.log("dasdasdasd");
-            dragLeaveStopper+=1;
+            /*dragLeaveStopper+=1;
             if(dragLeaveStopper==1)
             {
             creditsEarned -= getCredits;
-            }
+            }*/
             
         });
         dropZone.addEventListener("drop", e => {
@@ -445,7 +445,7 @@ function dragTest() {
             const droppedElement = document.getElementById(droppedElementId);
            // get some html ids
             var newForAlern = "n" + droppedElementId;
-            var newForAlern2 = "nn" + droppedElementId;
+            //var newForAlern2 = "nn" + droppedElementId;
             document.getElementById(newForAlern).innerHTML = " ";
             document.getElementById(newForAlern).style.visibility = "hidden";
 
