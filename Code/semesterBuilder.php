@@ -348,10 +348,6 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             <div class="dropZone L" ondrop="dropL(event, term); dragEnd();" ondragover="allowDrop(event)"></div>
             <div class="dropZone BR" ondrop="dropBR(event); dragEnd();" ondragover="allowDrop(event)"></div>
             <script>
-                // $(".plus_button.close.shadowLayer").click(function() {
-                //     this.parentElement.style.display = "none";
-                // });
-
                 $(".dropZone.L").on("drop", function(event) {
                     var courseName = event.originalEvent.dataTransfer.getData('Text');
                     console.log(courseName + ' Selected');

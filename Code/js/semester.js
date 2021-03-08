@@ -548,6 +548,7 @@ function hideBottom() {
 }
 
 function showBottom() {
+    $("section#bottom").show();
     $("div#course_completed").show();
     $("div#course_recommended").show();
 }
