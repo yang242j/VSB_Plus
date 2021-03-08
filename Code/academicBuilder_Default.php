@@ -254,20 +254,20 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         <div class = "course_not_completed"><h3 style='font-size:24px;'>Courses</h3></div>
 
         <div class = "course_tag_not_completed" id = "not_completed_tag">
-            <p id = "nct0" onclick="course_info()">ENSE 271</p>
-            <p id = "nct1" onclick="course_info()">ENSE 271</p>
-            <p id = "nct2" onclick="course_info()">ENSE 271</p>
-            <p id = "nct3" onclick="course_info()">ENSE 271</p>
+            <p id = "nct0" onclick="alert(course_info())">ENSE 271</p>
+            <p id = "nct1" onclick="alert(course_info())">ENSE 271</p>
+            <p id = "nct2" onclick="alert(course_info())">ENSE 271</p>
+            <p id = "nct3" onclick="alert(course_info())">ENSE 271</p>
 
-            <p id = "nct4" onclick="course_info()">ENSE 271</p>
-            <p id = "nct5" onclick="course_info()">ENSE 271</p>
-            <p id = "nct6" onclick="course_info()">ENSE 271</p>
-            <p id = "nct7" onclick="course_info()">ENSE 271</p>
+            <p id = "nct4" onclick="alert(course_info())">ENSE 271</p>
+            <p id = "nct5" onclick="alert(course_info())">ENSE 271</p>
+            <p id = "nct6" onclick="alert(course_info())">ENSE 271</p>
+            <p id = "nct7" onclick="alert(course_info())">ENSE 271</p>
             
-            <p id = "nct8" onclick="course_info()">ENSE 271</p>
-            <p id = "nct9" onclick="course_info()">ENSE 271</p>
-            <p id = "nct10" onclick="course_info()">ENSE 271</p>
-            <p id = "nct11" onclick="course_info()">ENSE 271</p>
+            <p id = "nct8" onclick="alert(course_info())">ENSE 271</p>
+            <p id = "nct9" onclick="alert(course_info())">ENSE 271</p>
+            <p id = "nct10" onclick="alert(course_info())">ENSE 271</p>
+            <p id = "nct11" onclick="alert(course_info())">ENSE 271</p>
             <div><button class="left_arrow" id ="notCompletedLeft" onclick = "nctLeft()"><i class='fas fa-angle-left'></i></button>
                 <button class="right_arrow" id ="notCompletedRight" onclick = "nctRight()"><i class='fas fa-angle-right'></i></button>
             </div>
