@@ -405,10 +405,9 @@ function dragTest() {
             getCredits = parseInt(terminfo[1]);
 
             //update cerdits
-            if (creditsEarned < 136 && terminfo[1] != null) {
-                creditsEarned += getCredits;
-                document.getElementById("show_credits").innerHTML = "Credits: " +creditsEarned;//terminfo[1] is credits
-            }
+            creditsEarned += getCredits;
+            document.getElementById("show_credits").innerHTML = "Credits: " +creditsEarned;//terminfo[1] is credits
+
 
             document.getElementById(newForAlern).style.visibility = "visible";
             document.getElementById(newForAlern).style.fontSize = "10px";
