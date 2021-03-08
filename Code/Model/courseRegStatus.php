@@ -72,7 +72,7 @@ if (preg_match_all("/([a-z]+\s[0-9]+)/i", $courseid) == 1){
         $status["Prerequisites"] = false;
         $status["Notes"] .= "Prerequisites are NOT matched.\n";
     }
-    $status["Notes"] .= "\n$strArr[0]\n";
+    $status["Notes"] .= "Prerequisites:\n$strArr[0]\n";
 
     // 3.4 Final status decision.
     if (!$status["Completion"] && $status["Availability"] && $status["Prerequisites"]) {
