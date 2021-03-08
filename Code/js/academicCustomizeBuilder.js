@@ -392,6 +392,14 @@ function dragTest() {
             document.getElementById("show_credits").innerHTML = "Credits: " + creditsEarned;
 
         });
+        dropZone.addEventListener("dragenter", e => {
+            //e.preventDefault();
+            dropZone.classList.remove("drop-zone--over");
+            //console.log("dasdasdasd");
+            creditsEarned += getCredits;
+            document.getElementById("show_credits").innerHTML = "Credits: " + creditsEarned;
+
+        });
         dropZone.addEventListener("drop", e => {
             e.preventDefault();
             dragLeaveStopper = 0
