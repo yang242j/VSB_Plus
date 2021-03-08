@@ -76,7 +76,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 
     <nav>
         <div class="nav-right">
-            <a id="usertext" onclick="toogleDisplay('addon-menu')"><?php echo htmlspecialchars($_SESSION["name"]); ?></a>
+            <a id="usertext" onfocus="toogleDisplay('addon-menu')" onblur="toogleDisplay('addon-menu')"><?php echo htmlspecialchars($_SESSION["name"]); ?></a>
             <div class="hidden" id="addon-menu">
                 <a><?php echo htmlspecialchars($_SESSION["sid"]); ?></a>
                 <a href="Model/logout.php">Logout</a>
@@ -89,7 +89,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         </div>
         <div class="menu-list">
             <div class="session-required dropdown">
-                <button class="dropbtn" onclick="toogleDisplay('dropdown-content')">Academic Schedule Builder</button>
+                <button class="dropbtn" onfocus="toogleDisplay('dropdown-content')" onblur="toogleDisplay('dropdown-content')">Academic Schedule Builder</button>
                 <div id="dropdown-content" class="dropdown-content hidden">
                     <a class="academicList" href="academicBuilder_Main.php">General Student Status</a>
                     <a class="academicList" href="academicBuilder_Default.php">Default Schedule</a>
@@ -105,7 +105,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         <!-- Top Section -->
         <section id="top">
             <div style="width: 50%; float: left;">
-                <label for="term">Choose a term:</label>
+                <label for="term">Step 1: Choose Semester</label>
                 <select id="termSelector" onfocus="hideBottom()" onblur="showBottom()">
                     <option value="202030" selected>Fall 2020</option>
                     <option value="202110">Winter 2021</option>
@@ -122,7 +122,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 
             <div style="width: 50%; float: right;">
                 <form onsubmit="return ajaxpost()">
-                    <label>Search Class:</label>
+                    <label>Step 2: Search Class</label>
                     <input type="text" id="search_courseid" placeholder="ENGL 100" onfocus="hideBottom()" onblur="showBottom()" required />
                     <input type="submit" value="Submit"/>
                 </form>
