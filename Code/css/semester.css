@@ -133,15 +133,11 @@ body .container section#right .Date {
 /*Bottom Section*/
 .openbtn {
     position: fixed;
-    z-index: 2;
     border: 2px solid black;
     bottom: 0;
-    width: 95%;
     background-color: #a9a9a9;
     text-align: center;
-    font-size: xx-large;
     font-weight: bold;
-    font-size: xxx-large;
     cursor: pointer;
     transition: 0.3s;
     z-index: 3;
@@ -151,7 +147,7 @@ body .container section#right .Date {
     color: white;
     font-weight: bold;
     float: right;
-    font-size: xxx-large;
+    font-size: xx-large;
     cursor: pointer;
     transition: 0.3s;
     z-index: 3;
