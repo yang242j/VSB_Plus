@@ -265,11 +265,11 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 
             <!-- Bottom Right Division -->
             <div class="bottom_right" id="course_recommended">
-                <span class="closebtn BR">&times;</span>  
+                <span class="closebtn bottomRight">&times;</span>  
                 Courses To Take: <br>
                 <script>
-                    $(".closebtn.BR").click(function() {
-                        this.parentElement.parentElement.style.display = "none";
+                    $(".closebtn.bottomRight").click(function() {
+                        toggleBottom();
                     });
 
                     function loadRecCourseTags() {
