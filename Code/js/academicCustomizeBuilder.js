@@ -388,12 +388,8 @@ function dragTest() {
             e.preventDefault();
             dropZone.classList.remove("drop-zone--over");
             //console.log("dasdasdasd");
-            dragLeaveStopper+=1;
-            if(dragLeaveStopper==1)
-            {
             creditsEarned -= getCredits;
             document.getElementById("show_credits").innerHTML = "Credits: " + creditsEarned;
-            }
 
         });
         dropZone.addEventListener("drop", e => {
