@@ -362,6 +362,7 @@ function dragStart(elementId) {
 }
 
 var getCredits = 0;
+var dragLeaveStopper = 0;
 //recored prev drop item course name
 function dragTest() {
     //const draggableElement = document.querySelector("#nct0");
@@ -375,14 +376,20 @@ function dragTest() {
             e.preventDefault();
             dropZone.classList.remove("drop-zone--over");
             //console.log("dasdasdasd");
-           // creditsEarned -= getCredits;
+            dragLeaveStopper+=1;
+            if(dragLeaveStopper==1)
+            {
+            creditsEarned -= getCredits;
+            }
             
         });
         dropZone.addEventListener("drop", e => {
             e.preventDefault();
+            dragLeaveStopper = 0
             const droppedElementId = e.dataTransfer.getData("text/plain");
             const droppedElement = document.getElementById(droppedElementId);
             //show moreinfo in course card
+           
             
             var newForAlern = "n" + droppedElementId;
             var newForAlern2 = "nn" + droppedElementId;
