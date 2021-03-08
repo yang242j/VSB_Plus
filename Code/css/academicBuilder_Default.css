@@ -170,7 +170,7 @@ body .terms .term1 #course_cards_builder p{
     body .tags_courses .course_list .course_tag_completed{
         /*border: 2px solid red;*/
         display: grid;;
-        grid-template-columns: 22% 22% 22% 22%;
+        grid-template-columns: 15% 15% 15% 15%;
         grid-template-rows:15% 15% 15% 10%;
         row-gap: 0px;
         column-gap: 10px;
