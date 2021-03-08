@@ -214,6 +214,12 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                         changeCalendarAndExam(oldCombo, newCombo, cardId, cardStyle, term);
                     selected = newCombo
                 });
+
+                $(".closebtn.courseCard").click(function() {
+                    let short_name = $(this).closest('div').attr('id').split('_Card')[0];
+                    // Remove course 
+                    removeCourse(short_name);
+                });
             </script>
         </section>
         
