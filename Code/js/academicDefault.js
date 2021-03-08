@@ -270,6 +270,9 @@ function showTerm(pageNumber) {
                     "<i class='fas fa-circle' style='font-size:24px;color:red'></i>"+
                     "<i class='fas fa-circle' style='font-size:24px;color:yellow'></i>*/ "</div>";
                     
+                    "<div class = 'course_cards'>" + "<h3>" + termData[term][5] + "</h3>"+
+                    "<p>"+ getTitle(termData[term][5])+ "</p>"+ "</div>";
+                    
                 i = i + 1;
                 }
             }
