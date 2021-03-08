@@ -231,7 +231,7 @@ function showTerm(pageNumber) {
             /*if (i <= 4) {*/
             if (i <= 10) {
                 /*if(pageNumber < 7) {*/
-                if(pageNumber < 11) {
+                if(pageNumber < 10) {
                 document.getElementById("term" + i).innerHTML =
                     "<div class = 'tittle'>" + "<h2>" + term + ":" + "</h2></div>" +
                     "<div class = 'course_cards'>" + "<h3>" + termData[term][0] + "</h3>" +
