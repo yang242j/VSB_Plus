@@ -450,20 +450,10 @@ function dragTest() {
             document.getElementById(newForAlern).innerHTML = " ";
             document.getElementById(newForAlern).style.visibility = "hidden";
 
-            var y = document.getElementById(newForAlern2).innerHTML;
             // set the course id to prev dropped
 
-            var terminfo = getTermInfo(y);
 
-            document.getElementById(newForAlern).innerHTML = terminfo[0];
 
-            //update cerdits
-            //terminfo[0] is term
-            //terminfo[1] is credits
-            if (totalCredits < 136 && terminfo[1] != null) {
-                creditsEarned -= parseInt(terminfo[1]);
-                document.getElementById("show_credits").innerHTML = "Credits: " + creditsEarned;
-            }
 
 
             dropZone.appendChild(droppedElement);
