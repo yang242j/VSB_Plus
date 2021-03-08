@@ -228,9 +228,9 @@ function showTerm(pageNumber) {
         termNumber = "term" + pageNumber;
         if (term >= termNumber){
         if (term != "Approved") {
-            /*if (i <= 4) {*/
-            if (i <= 9) {
-                if(pageNumber < 7) {
+            if (i <= 4) {
+                /*if(pageNumber < 7) {*/
+                if(pageNumber < 11) {
                 document.getElementById("term" + i).innerHTML =
                     "<div class = 'tittle'>" + "<h2>" + term + ":" + "</h2></div>" +
                     "<div class = 'course_cards'>" + "<h3>" + termData[term][0] + "</h3>" +
