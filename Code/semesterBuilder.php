@@ -227,7 +227,6 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                         courseList.splice(index, 1);
                     }
                     appendExampleCard();
-                    });
                 });
             </script>
         </section>
