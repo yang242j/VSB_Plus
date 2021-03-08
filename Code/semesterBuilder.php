@@ -215,8 +215,16 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                     selected = newCombo
                 });
 
+                $(document).on('click', 'span.closebtn.courseCard', function() {
+                    let short_name = $(this).closest('div').attr('id').split('_Card')[0];
+                    console.log("1: ", short_name);
+                    // Remove course 
+                    removeCourse(short_name);
+                });
+
                 $(".closebtn.courseCard").click(function() {
                     let short_name = $(this).closest('div').attr('id').split('_Card')[0];
+                    console.log("2: ", short_name);
                     // Remove course 
                     removeCourse(short_name);
                 });
