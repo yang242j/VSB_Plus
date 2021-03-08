@@ -178,7 +178,7 @@ body .container section#right .Date {
     position: relative;
 }
 
-.closebtn.bottom_right {
+.close.bottom_right {
     color: black;
     flex: 0 !important;
     padding-top: 10px;
