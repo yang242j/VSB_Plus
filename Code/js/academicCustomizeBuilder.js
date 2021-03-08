@@ -376,11 +376,11 @@ function dragTest() {
             e.preventDefault();
             dropZone.classList.remove("drop-zone--over");
             //console.log("dasdasdasd");
-            dragLeaveStopper+=1;
+            /*dragLeaveStopper+=1;
             if(dragLeaveStopper==1)
             {
             creditsEarned -= getCredits;
-            }
+            }*/
 
         });
         dropZone.addEventListener("drop", e => {
