@@ -552,6 +552,6 @@ function showBottom() {
     $(".plus_button.open").hide();
 }
 
-function hideParent() {
-    this.parentElement.style.display = "none";
+function hideParent(x) {
+    x.parentElement.style.display = "none";
 }
