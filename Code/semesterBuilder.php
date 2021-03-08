@@ -62,7 +62,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         courseCompletedList = courseCompletedList.concat(presetCourses);
         
         $(document).ready(function() {
-            $("button.plus_button.open").hide();
+            // $("button.plus_button.open").hide();
             $(".menu-icon").click();
         });
     </script>
