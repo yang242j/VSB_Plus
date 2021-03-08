@@ -135,15 +135,17 @@ body .container section#right .Date {
     color: white;
     font-weight: bold;
     float: right;
-    font-size: 70px;
+    font-size: xxx-large;
     cursor: pointer;
     transition: 0.3s;
     z-index: 3;
     position: relative;
 }
 
-.closebtn:hover {
-    color: black;
+.closebtn.bottomRight {
+    flex: 0;
+    background-color: #a9a9a9;
+    padding-top: 20px;
 }
 
 body .container section#bottom {
