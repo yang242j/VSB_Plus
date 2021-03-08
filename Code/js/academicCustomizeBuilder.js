@@ -361,12 +361,10 @@ function dragStart(elementId) {
     });
 }
 
-
+var getCredits = 0;
 //console.log(allCourseData);
 function dragTest() {
     //const draggableElement = document.querySelector("#nct0");
-
-
     for (const dropZone of document.querySelectorAll(".course_cards")) {
         dropZone.addEventListener("dragover", e => {
             e.preventDefault();
@@ -375,9 +373,6 @@ function dragTest() {
 
         dropZone.addEventListener("dragleave", e => {
             dropZone.classList.remove("drop-zone--over");
-            const droppedElementId = e.dataTransfer.getData("text/plain");
-            const droppedElement = document.getElementById(droppedElementId);
-            console.log(droppedElementId);
             var credits = document.getElementById("show_credits").innerHTML; 
 
 
@@ -402,9 +397,9 @@ function dragTest() {
 
             //update cerdits
             if (totalCredits < 136 && terminfo[1] != null) {
-                var credits = parseInt(document.getElementById("show_credits").innerHTML);
+                getCredits = parseInt(document.getElementById("show_credits").innerHTML);
                 var newCredits = credits + parseInt(terminfo[1]);
-                document.getElementById("show_credits").innerHTML = newCredits;//terminfo[1] is credits
+                document.getElementById("show_credits").innerHTML = getCredits;//terminfo[1] is credits
             }
             document.getElementById(newForAlern).style.visibility = "visible";
             document.getElementById(newForAlern).style.fontSize = "10px";
