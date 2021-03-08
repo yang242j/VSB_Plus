@@ -374,6 +374,8 @@ function dragTest() {
         dropZone.addEventListener("dragleave", e => {
             dropZone.classList.remove("drop-zone--over");
             var credits = document.getElementById("show_credits").innerHTML; 
+            var newCredits = credits - getCredits;
+            document.getElementById("show_credits").innerHTML = newCredits;
 
 
 
@@ -398,8 +400,8 @@ function dragTest() {
             //update cerdits
             if (totalCredits < 136 && terminfo[1] != null) {
                 getCredits = parseInt(document.getElementById("show_credits").innerHTML);
-                var newCredits = credits + parseInt(terminfo[1]);
-                document.getElementById("show_credits").innerHTML = getCredits;//terminfo[1] is credits
+                var newCredits = getCredits + parseInt(terminfo[1]);
+                document.getElementById("show_credits").innerHTML = newCredits;//terminfo[1] is credits
             }
             document.getElementById(newForAlern).style.visibility = "visible";
             document.getElementById(newForAlern).style.fontSize = "10px";
