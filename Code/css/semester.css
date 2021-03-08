@@ -149,7 +149,7 @@ body .container section#right .Date {
 .plus_button::before {
     content: "";
     display: block;
-    background-color: #a9a9a9;
+    background-color: black;
     position: absolute;
     top: 50%;
     left: 50%;
