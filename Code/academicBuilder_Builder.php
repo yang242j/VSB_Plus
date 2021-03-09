@@ -122,7 +122,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             <div class = "tittle">
                 <h2>Spring/Summer</h2>
             </div>
-            <div class = "course_cards" id = "Spring/Summer"></div>
+            <div class = "course_cards" id = "Winter"></div>
             <div class = "course_cards" id = "Spring/Summer"></div>
             <div class = "course_cards" id = "Spring/Summer"></div>
             <div class = "course_cards" id = "Spring/Summer"></div>

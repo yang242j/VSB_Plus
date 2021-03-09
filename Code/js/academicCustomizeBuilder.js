@@ -412,7 +412,8 @@ function dragTest() {
             var terminfo = getTermInfo(y);
             //console.log(terminfo);
             if( terminfo[1] != null){
-                document.getElementById(newForAlern).innerHTML = terminfo[0];//terminfo[0] is term
+                document.getElementById(newForAlern).innerHTML = "Applied Term: </br>" +
+                terminfo[0][0]+"</br>"+terminfo[0][1]+"</br>"+terminfo[0][2];//terminfo[0] is term
                 getCredits = parseInt(terminfo[1]);
             }
             else
