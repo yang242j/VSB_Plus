@@ -462,7 +462,7 @@ function dragTest() {
             }
             if(check == true && dragFrom == "course_cards"){
                 //delete first then push
-                deleteForm2DArray(doneList,courseName);
+                deleteFrom2DArray(doneList,courseName);
                 /*index = dropZone.getAttribute("name");
                 doneList[index].push(courseName);*/
                 console.log(doneList);
@@ -501,7 +501,7 @@ function dragTest() {
                 creditsEarned -= getCredits;
                 document.getElementById("show_credits").innerHTML = "Credits: " + creditsEarned;
                 //pop from donelist
-                deleteFormArray(doneList[index], courseName);
+                deleteFromArray(doneList[index], courseName);
                 console.log(doneList);
             }
             dropZone.appendChild(droppedElement);
@@ -512,7 +512,7 @@ function dragTest() {
     }
 }
 //find a item and delete it 
-function deleteFormArray(array, item) {
+function deleteFromArray(array, item) {
     for (i = 0; i < array.length; i++) {
         if (array[i] == item) {
             array[i] = array[array.length - 1];
@@ -521,9 +521,9 @@ function deleteFormArray(array, item) {
     }
 
 }
-function deleteForm2DArray(array, item) {
-    for (j = 0; j < array.length; j++) {
-        for (i = 0; i < array[i].length; i++) {
+function deleteFrom2DArray(array, item) {
+    for (i = 0; i < array.length; i++) {
+        for (j = 0; j < array[i].length; j++) {
             if (array[i][j] == item) {
                 array[i][j] = array[i][array[i].length - 1];
                 array[i].pop();
