@@ -433,14 +433,14 @@ function dragTest() {
             //getCredits = 0;
             //document.getElementById(newForAlern).innerHTML = "this course not applied for now";
             }
-            console.log(dropZone.className[0]);
+            console.log(dropZone.className);
             //update cerdits
             if (creditsEarned > 136) {
                 alert("totoal greater than 136");
                 return;
             }
             else {
-                if(dropZone.className[0] != "course_cards")
+                if(dropZone.className != "course_cards")
                 {
                 creditsEarned += getCredits;
                 document.getElementById("show_credits").innerHTML = "Credits: " + creditsEarned;//terminfo[1] is credits
@@ -483,6 +483,7 @@ function dragTest() {
             document.getElementById(newForAlern).style.visibility = "hidden";
 
             // renew html
+            console.log(dropZone.className);
             if(dropZone.className != "courseTags")
             {
              creditsEarned -= getCredits;
