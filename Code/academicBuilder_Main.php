@@ -129,7 +129,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                 </div>
                 <button class="right arrow" onclick="pageUp()"><i class='fas fa-angle-right'></i></button>
             </div>
-            <h3 class="center textCenter"><label for="lineChart"> Average in semesters </label></h1>
+            <h3 class="center textCenter"><label for="lineChart"> Term Average </label></h1>
             <div id="lineChart"></div>
         </div>
         
