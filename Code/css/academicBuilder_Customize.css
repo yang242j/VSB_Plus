@@ -35,10 +35,10 @@ body .terms {
    /* border: 2px solid red;*/
     display: inline-grid;
     grid-template-columns: 100%;
-    grid-template-rows: 4% repeat(20,23%);
+    grid-template-rows: 4% repeat(20,35%);
     margin-left: -1%;
-    column-gap: 45px;
-    row-gap: 15px;
+    column-gap: 5px;
+    row-gap: -15px;
 }
 body .terms h1{
     /*border: 2px solid blue;*/
@@ -51,7 +51,7 @@ body .terms .term1{
     grid-template-rows: 40% ;
     column-gap: 10px;
     margin-left: -30px;
-    row-gap:-10px;
+    row-gap:-100px;
 }
 body .terms .term1 .arrows{
     /*border: 2px solid blue;*/
