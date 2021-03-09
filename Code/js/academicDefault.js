@@ -288,7 +288,7 @@ function course_Info(){
         selected_course = document.getElementById("nct" + i);
         var course_info = courseData[i].short_name;
         
-        if(selected_course.length == course_info)
+        if(selected_course.length == course_info.length)
         {
             return "work";
         }else {
