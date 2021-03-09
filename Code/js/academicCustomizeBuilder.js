@@ -353,7 +353,8 @@ function getAllCourse() {
     }
     myRequest.send();
 }
-var draagFrom;
+//record which field is this dragelement from
+var draagFrom; 
 function dragStart(elementId) {
     const draggableElement = document.querySelector(elementId);
     draggableElement.addEventListener("dragstart", e => {
@@ -444,7 +445,7 @@ function dragTest() {
                 return;
             }
             else {
-                if(dropZone.className != "course_cards")
+                if(dragFrom != "course_cards")
                 {
                 creditsEarned += getCredits;
                 document.getElementById("show_credits").innerHTML = "Credits: " + creditsEarned;//terminfo[1] is credits
@@ -488,7 +489,7 @@ function dragTest() {
             // update html
             dropZone.classList.remove("drop-zone--over");
             //console.log(dropZone.className);
-            if(dropZone.className != "courseTags")
+            if(dragFrom != "courseTags")
             {
              creditsEarned -= getCredits;
              document.getElementById("show_credits").innerHTML = "Credits: " + creditsEarned;
