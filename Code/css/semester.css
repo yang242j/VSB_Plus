@@ -43,8 +43,8 @@
 }
 
 /* Body container */
-body .container {
-    /* background-color: #f1f1f1; */
+body .container .section-title {
+    text-align: center;
 }
 
 /*Top Section*/
@@ -60,10 +60,6 @@ body .container section#left {
     box-sizing: border-box;
     padding-bottom: 10px;
     /*outline: 3px solid green;*/
-}
-
-body .container section#left .section-title {
-    text-align: center;
 }
 
 body .container section#left #courseList_Containor {
@@ -87,12 +83,6 @@ body .container section#middle {
     /*outline: 3px solid green;*/
 }
 
-body .container section#middle .section-title {
-    width: 85%;
-    margin-left: auto;
-    margin-right: auto;
-}
-
 body .container section#middle .courseInfo {
     margin: 10px auto 10px;
     width: 90%;
@@ -110,10 +100,6 @@ body .container section#right {
     float: right;
     box-sizing: border-box;
     /*outline: 3px solid green;*/
-}
-
-body .container section#right .section-title {
-    text-align: center;
 }
 
 body .container section#right .Calendar {
