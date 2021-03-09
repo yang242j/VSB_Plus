@@ -464,8 +464,8 @@ function dragTest() {
                 //delete first then push
                 deleteForm2DArray(doneList,courseName);
                 /*index = dropZone.getAttribute("name");
-                doneList[index].push(courseName);
-                console.log(doneList);*/
+                doneList[index].push(courseName);*/
+                console.log(doneList);
             }
             dropZone.appendChild(droppedElement);
 
