@@ -142,7 +142,7 @@ function showCourses(data) {
     for (i = 0; i < 12; i++) {
         if (i < dataJSON.length) {
             //<br/>
-            document.getElementById("ct" + i).innerHTML = dataJSON[i].course_ID + "<br/> " + dataJSON[i].term;
+            document.getElementById("ct" + i).innerHTML = dataJSON[i].course_ID + "<br/> " + dataJSON[i].term + getColor(i, dataJSON);
             document.getElementById("ct" + i).style.color = getColor(i, dataJSON);
 
         }
