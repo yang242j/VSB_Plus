@@ -4,7 +4,7 @@ var allCourseData;
 var totalCredits = 0;
 var creditsEarned = 0;
 //store the completed class
-var doneList = [[],[],[],[]];
+var doneList = [[], [], [], []];
 //fetch JSON data from takenClass database
 function fetchCourseJSON(sid, password) {
     // alert(sid);
@@ -456,10 +456,10 @@ function dragTest() {
 
             //add to donelist
 
-            if (dragFrom != "course_cards" && check == true ){
-            index = dropZone.getAttribute("name");
-            doneList[index].push(courseName);
-            console.log(doneList);
+            if (findExist(doneList[index], courseName)==true) {
+                index = dropZone.getAttribute("name");
+                doneList[index].push(courseName);
+                console.log(doneList);
             }
 
             dropZone.appendChild(droppedElement);
@@ -497,7 +497,7 @@ function dragTest() {
                 creditsEarned -= getCredits;
                 document.getElementById("show_credits").innerHTML = "Credits: " + creditsEarned;
                 //pop from donelist
-                deleteFormArray(doneList[index],courseName);
+                deleteFormArray(doneList[index], courseName);
                 console.log(doneList);
             }
             dropZone.appendChild(droppedElement);
@@ -508,13 +508,20 @@ function dragTest() {
     }
 }
 //find a item and delete it 
-function deleteFormArray(array,item){
-    for(i=0;i<array.length;i++){
-        if(array[i] == item)
-        {
-             array[i] = array[array.length-1];
-             array.pop();
+function deleteFormArray(array, item) {
+    for (i = 0; i < array.length; i++) {
+        if (array[i] == item) {
+            array[i] = array[array.length - 1];
+            array.pop();
         }
     }
 
+}
+function findExist(array, item) {
+    for (i = 0; i < array.length; i++) {
+        if (array[i] == item) {
+            return true;
+        }
+    }
+    return false;
 }
