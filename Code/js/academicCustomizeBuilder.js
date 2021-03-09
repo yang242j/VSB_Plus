@@ -413,14 +413,14 @@ function dragTest() {
             //console.log(terminfo);
             for (term in terminfo[0]){
                 if (term == null) term = " ";
-                if(term ==dropZone.id){
+                /*if(term == dropZone.id){
                     break;
                 }
                 else{
                     alert("term not match");
                     return;
                     //dropZone.style.color = "red";
-                }
+                }*/
             }
 
             if( terminfo[1] != null){
