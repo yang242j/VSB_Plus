@@ -33,7 +33,7 @@ body .terms {
     width: 62%;
     margin-top: 1%;
    /* border: 2px solid red;*/
-    display: inline-grid;
+    display: grid;
     grid-template-columns: 100%;
     grid-template-rows: 4% repeat(20,35%);
     margin-left: -1%;
