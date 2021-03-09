@@ -33,7 +33,7 @@ body .terms {
     height:100%;
     margin-top: 1%;
     /*border: 2px solid red;*/
-    border-bottom: 3px  grey;
+    border-bottom: 3px solid grey;
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: 4% repeat(20,20%);
