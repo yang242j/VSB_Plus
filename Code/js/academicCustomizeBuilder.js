@@ -424,9 +424,9 @@ function dragTest() {
                 }
             }
             if(check == false){
-                document.getElementsByClassName();
-                alert("Term info not match");
-                return;
+                document.getElementById(newForAlern).style.color = "red";
+                //alert("Term info not match");
+               // return;
             }
 
             if( terminfo[1] != null){
@@ -436,8 +436,8 @@ function dragTest() {
             }
             else
             {
-                document.getElementById(newForAlern).style.color = "red";
                 alert("this course not applied");
+                return;
             //getCredits = 0;
             //document.getElementById(newForAlern).innerHTML = "this course not applied for now";
             }
