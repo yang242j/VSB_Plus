@@ -397,7 +397,7 @@ function dragTest() {
             const droppedElement = document.getElementById(droppedElementId);
             //show moreinfo in course card
 
-            console.log(dropZone.id);
+            //console.log(dropZone.id);
             
             var newForAlern = "n" + droppedElementId;
             var newForAlern2 = "nn" + droppedElementId;
