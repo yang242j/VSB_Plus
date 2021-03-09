@@ -440,7 +440,7 @@ function dragTest() {
             }
 
             else {
-                if(dropZone.className == courseTags)
+                if(dropZone.className == "courseTags")
                 {
                 creditsEarned += getCredits;
                 document.getElementById("show_credits").innerHTML = "Credits: " + creditsEarned;//terminfo[1] is credits
