@@ -460,12 +460,12 @@ function dragTest() {
                 doneList[index].push(courseName);
                 console.log(doneList);
             }
-            if(dragFrom == "course_cards"){
+            if(check == true && dragFrom == "course_cards"){
                 //delete first then push
                 deleteForm2DArray(doneList,courseName);
-                index = dropZone.getAttribute("name");
+                /*index = dropZone.getAttribute("name");
                 doneList[index].push(courseName);
-                console.log(doneList);
+                console.log(doneList);*/
             }
             dropZone.appendChild(droppedElement);
 
