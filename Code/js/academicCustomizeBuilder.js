@@ -105,7 +105,7 @@ function getColor(index, dataJSON) {
         color = "grey";
     }
     else if (dataJSON[index].final_grade > 60) {
-        color = "#008000";
+        color = "#green";
     }
     else if (dataJSON[index].final_grade > 75) {
         color = "#AD1457";
