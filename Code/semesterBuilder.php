@@ -274,14 +274,6 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                         ?>
                     });
                 </script>
-
-                <!--
-                // Test tags
-                <div class="courseTag noDrag" id="CS 405" draggable="false">CS 405</div>
-                <div class="courseTag noDrag" id="ENEL 380" draggable="false">ENEL 380</div>
-                <div class="courseTag noDrag" id="ENGG 401" draggable="false">ENGG 401</div>
-                <div class="courseTag noDrag" id="ENEL 417" draggable="false">ENEL 417</div>
-                -->
             </div>
 
             <!-- Bottom Right Division -->
