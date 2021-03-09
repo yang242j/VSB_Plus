@@ -351,7 +351,7 @@ function dragStart(elementId) {
         dragFrom = "courseTags";
     });
 }
-
+var prevDropedName;
 var getCredits = 0;
 var dragLeaveStopper = 0;
 var index = 0;
@@ -456,12 +456,11 @@ function dragTest() {
 
             //add to donelist
 
-            if (findExist(doneList[index], courseName)==true) {
+            if (check == true && findExist(doneList[index], courseName)== false) {
                 index = dropZone.getAttribute("name");
                 doneList[index].push(courseName);
                 console.log(doneList);
             }
-
             dropZone.appendChild(droppedElement);
 
 
