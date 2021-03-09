@@ -413,6 +413,7 @@ function dragTest() {
             //show moreinfo in course card
 
             //console.log(dropZone.id);
+            console.log(dropZone.tagName);
             
             var newForAlern = "n" + droppedElementId;
             var newForAlern2 = "nn" + droppedElementId;
