@@ -501,6 +501,7 @@ function dragTest() {
             if (dragFrom != "courseTags") {
                 creditsEarned -= getCredits;
                 document.getElementById("show_credits").innerHTML = "Credits: " + creditsEarned;
+                
                 //pop from donelist
                 deleteFrom2DArray(doneList, courseName);
                 console.log(doneList);
