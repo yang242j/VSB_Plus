@@ -395,7 +395,8 @@ function dragTest() {
 
         dropZone.addEventListener("drop", e => {
             e.preventDefault();
-            console.log(dragFrom);
+            dropZone.classList.remove("drop-zone--over");
+            //console.log(dragFrom);
            // dragLeaveStopper = 0;
             const droppedElementId = e.dataTransfer.getData("text/plain");
             const droppedElement = document.getElementById(droppedElementId);
@@ -432,7 +433,6 @@ function dragTest() {
             }
             else
             {
-                dropZone.classList.remove("drop-zone--over");
                 alert("this course not applied");
                 return;
             //getCredits = 0;
