@@ -37,7 +37,7 @@ body .terms {
     grid-template-rows: 4% repeat(20,35%);
     margin-left: -1%;
     column-gap: 5px;
-    row-gap: -35px;
+    row-gap: -85px;
 }
 body .terms h1{
     /*border: 2px solid blue;*/
@@ -169,6 +169,7 @@ body .terms .term1 #course_cards_builder p{
         border-radius: 25px;
         box-shadow: -2px 4px 7px 0px #555555;
         text-align: center;
+        margin-top: -30px;
     }
     body .tags_courses .course_list .course_not_completed{
         /*border: 2px solid red;*/
