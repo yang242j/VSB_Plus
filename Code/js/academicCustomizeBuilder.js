@@ -4,7 +4,7 @@ var allCourseData;
 var totalCredits = 0;
 var creditsEarned = 0;
 //store the completed class
-var doneList =[];
+var doneList =[[]];
 //fetch JSON data from takenClass database
 function fetchCourseJSON(sid, password) {
     // alert(sid);
@@ -12,6 +12,7 @@ function fetchCourseJSON(sid, password) {
         btnForCourse(data);
         showCourses(data);
         getCreditsEarned(data);
+        storePassedCourse(data)
         //console.log(data);
     });
 }
@@ -22,6 +23,7 @@ getAllCourse();
 window.onload = function init() {
     fetchCourseJSON(sid, pas);
 }
+
 function getCreditsEarned(data) {
     var dataJSON = JSON.parse(data);
     for (i = 0; i < dataJSON.length; i++) {
@@ -29,16 +31,10 @@ function getCreditsEarned(data) {
     }
     document.getElementById("show_credits").innerHTML = "Credits: " + creditsEarned;
 }
-//console.log(creditsEarned);
-// get student ID form academac_builder
-/*function getSid() {
-    var sid = document.getElementById("userId").innerHTML;
-    return sid;
+function storePassedCourse(data){
+       var dataJSON=JSON.parse(data);
+       
 }
-function getPassword() {
-    var password = document.getElementById("password").innerHTML;
-    return password;
-}*/
 // get faculty needed course
 function getTermData(faculty) {
     var myRequest = new XMLHttpRequest;
@@ -118,27 +114,6 @@ function getColor(index, dataJSON) {
 function showCourses(data) {
     var dataJSON = JSON.parse(data);
     var notCompletedData = findCourseToTake(dataJSON);
-    /*for (i = 0; i < dataJSON.length; i++) {
-        if (dataJSON[i].final_grade == "NP" || dataJSON[i].final_grade == "W") {
-            delete dataJSON[i];
-        }
-    }
-    //dataJSON.sort();
-    //console.log(dataJSON);
-    dataJSON.sort();*/
-    //console.log(dataJSON);
-    //console.log(notCompletedData);
-    /*console.log(dataJSON);
-    console.log(courseReqData);
-    console.log(notCompletedData);*/
-
-
-
-    /*for (i = 0; i < 12; i++) {
-        document.getElementById("ct" + i).innerHTML = " ";
-        // document.getElementById("nct" + i).innerHTML = " ";
-    }*/
-    //console.log(dataJSON);
     for (i = 0; i < 12; i++) {
         if (i < dataJSON.length) {
             //<br/>
