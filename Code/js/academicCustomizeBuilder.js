@@ -455,14 +455,20 @@ function dragTest() {
 
             //add to donelist
 
-            if (check == true && findExist(doneList[index], courseName)== false) {
+            if (check == true && dragFrom != "course_cards" &&findExist(doneList[index], courseName) == false) {
+                index = dropZone.getAttribute("name");
+                doneList[index].push(courseName);
+                console.log(doneList);
+            }
+            if(dragFrom == "course_cards"){
+                //delete first then push
+                deleteForm2DArray(doneList,courseName);
                 index = dropZone.getAttribute("name");
                 doneList[index].push(courseName);
                 console.log(doneList);
             }
             dropZone.appendChild(droppedElement);
 
-            console.log(doneList);
         });
     }
 
@@ -511,6 +517,17 @@ function deleteFormArray(array, item) {
         if (array[i] == item) {
             array[i] = array[array.length - 1];
             array.pop();
+        }
+    }
+
+}
+function deleteForm2DArray(array, item) {
+    for (j = 0; j < array.length; j++) {
+        for (i = 0; i < array[i].length; i++) {
+            if (array[i][j] == item) {
+                array[i][j] = array[array[i].length - 1];
+                array.pop();
+            }
         }
     }
 
