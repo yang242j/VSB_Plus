@@ -39,6 +39,5 @@ function hideAndShow4() {
   } else {
     x.style.display = "none";
   }
- 
 }
 

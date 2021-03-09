@@ -295,6 +295,7 @@ function getTermInfo(courseName) {
 
     //check does the file exit in the path
     // See if the file exists
+    
     myRequest3.open("GET", url1, false);
     myRequest3.onload = function () {
         if (myRequest3.status == 200 && myRequest3.responseText != null) {
@@ -307,10 +308,11 @@ function getTermInfo(courseName) {
             }
         }
     }
-    myRequest3.send();
-    /*if(myRequest3.status == 404){
+    if(myRequest3.status == 404){
         return null;
-    }*/
+    }
+    myRequest3.send();
+    
 
 
 
