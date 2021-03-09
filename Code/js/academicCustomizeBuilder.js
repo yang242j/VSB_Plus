@@ -497,13 +497,9 @@ function dragTest() {
                 creditsEarned -= getCredits;
                 document.getElementById("show_credits").innerHTML = "Credits: " + creditsEarned;
                 //pop from donelist
-                doneList[index].pop(courseName);
+                deleteFormArray(doneList[index],courseName);
                 console.log(doneList);
             }
-
-
-
-
             dropZone.appendChild(droppedElement);
 
 
@@ -511,10 +507,14 @@ function dragTest() {
 
     }
 }
-/*y=0;
-var x = "#nct" + y;
-dragTest(x);
-dragTest("#nct1");
-dragTest("#nct2");
-dragTest("#nct3");*/
+//find a item and delete it 
+function deleteFormArray(array,item){
+    for(i=0;i<array.length;i++){
+        if(array[i] == item)
+        {
+             array[i] = array[array.length-1];
+             array.pop();
+        }
+    }
 
+}
