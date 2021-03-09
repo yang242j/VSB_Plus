@@ -435,7 +435,7 @@ function dragTest() {
             }
             //console.log(dropZone.className);
             //update cerdits
-            console.log(droppedElement);
+            console.log(dropZone.className);
             dropZone.classList.remove("drop-zone--over");
             if (creditsEarned > 136) {
                 alert("totoal greater than 136");
