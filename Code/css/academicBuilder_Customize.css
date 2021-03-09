@@ -28,7 +28,7 @@ body .terms .term1 .course_cards p{
     font-size: 16px;
 }
 body .terms { 
-    /*position:relative;*/
+    position:relative;
     width: 62%;
     height:100%;
     margin-top: 1%;
@@ -51,7 +51,7 @@ body .terms .term1{
     column-gap: 10px;
     margin-left: -30px;
     row-gap:0px;
-    
+
 }
 body .terms .term1 .arrows{
     /*border: 2px solid blue;*/
