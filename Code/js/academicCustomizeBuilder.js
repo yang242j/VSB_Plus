@@ -36,7 +36,7 @@ function storePassedCourse(data){
        for(i=0;i<dataJSON.length;i++)
        {
            if(dataJSON[i].final_grade != "NP" && dataJSON[i] != "W"){
-               doneList[0].push();
+               doneList[0].push(dataJSON[i].course_ID);
            }
        }
 }
