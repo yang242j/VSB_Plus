@@ -394,7 +394,7 @@ function dragTest() {
 
         dropZone.addEventListener("drop", e => {
             e.preventDefault();
-            dragLeaveStopper = 0
+           // dragLeaveStopper = 0;
             const droppedElementId = e.dataTransfer.getData("text/plain");
             const droppedElement = document.getElementById(droppedElementId);
             //show moreinfo in course card
