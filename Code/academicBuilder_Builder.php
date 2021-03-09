@@ -144,51 +144,51 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             <div class = "tittle">
                 <h2>Winter</h2>
             </div>
-            <div class = "course_cards" id = "Winter" name ="5"></div>
-            <div class = "course_cards" id = "Winter" name ="5"></div>
-            <div class = "course_cards" id = "Winter" name ="5"></div>
-            <div class = "course_cards" id = "Winter" name ="5"></div>
-            <div class = "course_cards" id = "Winter" name ="5"></div>
+            <div class = "course_cards" id = "Winter" name ="4"></div>
+            <div class = "course_cards" id = "Winter" name ="4"></div>
+            <div class = "course_cards" id = "Winter" name ="4"></div>
+            <div class = "course_cards" id = "Winter" name ="4"></div>
+            <div class = "course_cards" id = "Winter" name ="4"></div>
             </div>
             <div class = "term1" id = "term5">
             <div class = "tittle">
                 <h2>Spring/Summer</h2>
             </div>
-            <div class = "course_cards" id = "Spring/Summer" name ="6"></div>
-            <div class = "course_cards" id = "Spring/Summer" name ="6"></div>
-            <div class = "course_cards" id = "Spring/Summer" name ="6"></div>
-            <div class = "course_cards" id = "Spring/Summer" name ="6"></div>
-            <div class = "course_cards" id = "Spring/Summer" name ="6"></div>
+            <div class = "course_cards" id = "Spring/Summer" name ="5"></div>
+            <div class = "course_cards" id = "Spring/Summer" name ="5"></div>
+            <div class = "course_cards" id = "Spring/Summer" name ="5"></div>
+            <div class = "course_cards" id = "Spring/Summer" name ="5"></div>
+            <div class = "course_cards" id = "Spring/Summer" name ="5"></div>
             </div>
             <div class = "term1" id = "term6">
             <div class = "tittle">
                 <h2>Fall</h2>
             </div>
-            <div class = "course_cards" id = "Fall" name ="7"></div>
-            <div class = "course_cards" id = "Fall" name ="7"></div>
-            <div class = "course_cards" id = "Fall" name ="7"></div>
-            <div class = "course_cards" id = "Fall" name ="7"></div>
-            <div class = "course_cards" id = "Fall" name ="7"></div>
+            <div class = "course_cards" id = "Fall" name ="6"></div>
+            <div class = "course_cards" id = "Fall" name ="6"></div>
+            <div class = "course_cards" id = "Fall" name ="6"></div>
+            <div class = "course_cards" id = "Fall" name ="6"></div>
+            <div class = "course_cards" id = "Fall" name ="6"></div>
             </div>
             <div class = "term1" id = "term7">
             <div class = "tittle">
                 <h2>Winter</h2>
             </div>
-            <div class = "course_cards" id = "Winter" name ="8"></div>
-            <div class = "course_cards" id = "Winter" name ="8"></div>
-            <div class = "course_cards" id = "Winter" name ="8"></div>
-            <div class = "course_cards" id = "Winter" name ="8"></div>
-            <div class = "course_cards" id = "Winter" name ="8"></div>
+            <div class = "course_cards" id = "Winter" name ="7"></div>
+            <div class = "course_cards" id = "Winter" name ="7"></div>
+            <div class = "course_cards" id = "Winter" name ="7"></div>
+            <div class = "course_cards" id = "Winter" name ="7"></div>
+            <div class = "course_cards" id = "Winter" name ="7"></div>
             </div>
             <div class = "term1" id = "term8">
             <div class = "tittle">
                 <h2>Spring/Summer</h2>
             </div>
-            <div class = "course_cards" id = "Spring/Summer" name ="4"></div>
-            <div class = "course_cards" id = "Spring/Summer" name ="4"></div>
-            <div class = "course_cards" id = "Spring/Summer" name ="4"></div>
-            <div class = "course_cards" id = "Spring/Summer" name ="4"></div>
-            <div class = "course_cards" id = "Spring/Summer" name ="4"></div>
+            <div class = "course_cards" id = "Spring/Summer" name ="8"></div>
+            <div class = "course_cards" id = "Spring/Summer" name ="8"></div>
+            <div class = "course_cards" id = "Spring/Summer" name ="8"></div>
+            <div class = "course_cards" id = "Spring/Summer" name ="8"></div>
+            <div class = "course_cards" id = "Spring/Summer" name ="8"></div>
             </div>
             <div class = "term1" id = "term9">
             <div class = "tittle">
