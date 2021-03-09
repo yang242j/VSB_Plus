@@ -502,7 +502,7 @@ function dragTest() {
                 creditsEarned -= getCredits;
                 document.getElementById("show_credits").innerHTML = "Credits: " + creditsEarned;
                 //pop from donelist
-                deleteFromArray(doneList[index], courseName);
+                deleteFrom2DArray(doneList, courseName);
                 console.log(doneList);
             }
             dropZone.appendChild(droppedElement);
