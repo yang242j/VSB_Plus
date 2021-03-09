@@ -96,7 +96,7 @@ body .terms .course_cards{
         box-shadow: -2px 4px 7px 0px #555555;
         text-align: center;
         margin-left: 20px;
-        margin-top: 30px;
+        margin-top: 0px;
         border-style: dashed;
     }
     body .terms .course_cards h3{
