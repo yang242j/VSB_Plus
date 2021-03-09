@@ -33,8 +33,14 @@ function getCreditsEarned(data) {
 }
 function storePassedCourse(data){
        var dataJSON=JSON.parse(data);
-       
+       for(i=0;i<dataJSON.length;i++)
+       {
+           if(dataJSON[i].final_grade != "NP" && dataJSON[i] != "W"){
+               doneList[0].push();
+           }
+       }
 }
+console.log(doneList);
 // get faculty needed course
 function getTermData(faculty) {
     var myRequest = new XMLHttpRequest;
