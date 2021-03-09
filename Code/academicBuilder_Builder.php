@@ -173,11 +173,11 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 <section class = "tags_courses" id ="block" style="float:right;">  
 
     <div class = "icons_annotation" id ="builder_icon">
-        <div class ="icons" style='font-size:16px;color:#b8860b;font-weight: bold'>---- W</div>
+        <div class ="icons" style='font-size:16px;color:yellow;font-weight: bold'>---- W</div>
         <div class ="icons" style='font-size:16px;color:blue;font-weight: bold'>---- NP</div>
         <div class ="icons" style='font-size:16px;color:grey;font-weight: bold'>---- Passed</div>
         <div class ="icons" style='font-size:16px;color:green;font-weight: bold'>---- Good</div>
-        <div class ="icons" style='font-size:16px;color:#AD1457;font-weight: bold'>---- Great</div>
+        <div class ="icons" style='font-size:16px;color:orange;font-weight: bold'>---- Great</div>
         <div class ="icons" style='font-size:16px;color:red;font-weight: bold'>---- Excellent</div>
     </div>
 
