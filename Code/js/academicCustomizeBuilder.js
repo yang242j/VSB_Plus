@@ -411,6 +411,18 @@ function dragTest() {
 
             var terminfo = getTermInfo(y);
             //console.log(terminfo);
+            for (term in terminfo[0]){
+                if (term == null) term = " ";
+                if(term ==dropZone.id){
+                    break;
+                }
+                else{
+                    alert("term not match");
+                    return;
+                    //dropZone.style.color = "red";
+                }
+            }
+
             if( terminfo[1] != null){
                 document.getElementById(newForAlern).innerHTML = "Applied Term: </br>" +
                 terminfo[0][0]+"</br>"+terminfo[0][1]+"</br>"+terminfo[0][2];//terminfo[0] is term
@@ -438,7 +450,7 @@ function dragTest() {
             document.getElementById(newForAlern).style.lineHeight = "110%";
 
             if (document.getElementById(newForAlern).innerHTML.length <= 80) {
-                document.getElementById(newForAlern).style.fontSize = "16px";
+                document.getElementById(newForAlern).style.fontSize = "12px";
             }
             if (document.getElementById(newForAlern).innerHTML.length <= 100 && document.getElementById(newForAlern).innerHTML.length > 80) {
                 document.getElementById(newForAlern).style.fontSize = "12px";
