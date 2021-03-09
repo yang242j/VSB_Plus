@@ -4,7 +4,7 @@ var allCourseData;
 var totalCredits = 0;
 var creditsEarned = 0;
 //store the completed class
-var doneList =[[]];
+var doneList = [[]];
 //fetch JSON data from takenClass database
 function fetchCourseJSON(sid, password) {
     // alert(sid);
@@ -31,14 +31,13 @@ function getCreditsEarned(data) {
     }
     document.getElementById("show_credits").innerHTML = "Credits: " + creditsEarned;
 }
-function storePassedCourse(data){
-       var dataJSON=JSON.parse(data);
-       for(i=0;i<dataJSON.length;i++)
-       {
-           if(dataJSON[i].credit_earned != 0){
-               doneList[0].push(dataJSON[i].course_ID);
-           }
-       }
+function storePassedCourse(data) {
+    var dataJSON = JSON.parse(data);
+    for (i = 0; i < dataJSON.length; i++) {
+        if (dataJSON[i].credit_earned != 0) {
+            doneList[0].push(dataJSON[i].course_ID);
+        }
+    }
 }
 console.log(doneList);
 // get faculty needed course
@@ -123,7 +122,7 @@ function showCourses(data) {
     for (i = 0; i < 12; i++) {
         if (i < dataJSON.length) {
             //<br/>
-            document.getElementById("ct" + i).innerHTML = dataJSON[i].course_ID + "<br/> " + dataJSON[i].term ;
+            document.getElementById("ct" + i).innerHTML = dataJSON[i].course_ID + "<br/> " + dataJSON[i].term;
             document.getElementById("ct" + i).style.color = getColor(i, dataJSON);
 
         }
@@ -267,7 +266,7 @@ function getTermInfo(courseName) {
     var myRequest = new XMLHttpRequest;
     var myRequest2 = new XMLHttpRequest;
     var myRequest3 = new XMLHttpRequest;
-    var term =[];
+    var term = [];
     var prerequisite = "Prerequisite: </br>";
     var credit;
     url2 = "JSON/202020/" + courseName + ".json";
@@ -276,7 +275,7 @@ function getTermInfo(courseName) {
 
     //check does the file exit in the path
     // See if the file exists
-    
+
     myRequest3.open("GET", url1, false);
     myRequest3.onload = function () {
         if (myRequest3.status == 200 && myRequest3.responseText != null) {
@@ -290,17 +289,16 @@ function getTermInfo(courseName) {
         }
     }
 
-    try{
+    try {
         myRequest3.send();
         //return "asdsa";
     }
     catch {
-        if(myRequest3.status == 404)
-        {
+        if (myRequest3.status == 404) {
             return;
         }
     }
-    
+
 
 
     myRequest.open("GET", url2, false);
@@ -322,7 +320,7 @@ function getTermInfo(courseName) {
         if (myRequest2.status == 200 && myRequest2.responseText != null) {
             var data = JSON.parse(myRequest2.responseText);
             if (data.term != "No class for the term") {
-                term.push("Fall") ;
+                term.push("Fall");
 
             }
         }
@@ -345,7 +343,7 @@ function getAllCourse() {
     myRequest.send();
 }
 //record which field is this dragelement from
-var draagFrom; 
+var draagFrom;
 function dragStart(elementId) {
     const draggableElement = document.querySelector(elementId);
     draggableElement.addEventListener("dragstart", e => {
@@ -356,6 +354,7 @@ function dragStart(elementId) {
 
 var getCredits = 0;
 var dragLeaveStopper = 0;
+var index = 0;
 //recored prev drop item course name
 function dragTest() {
     //const draggableElement = document.querySelector("#nct0");
@@ -368,7 +367,7 @@ function dragTest() {
             e.preventDefault();
             dropZone.classList.remove("drop-zone--over");
             //console.log("dasdasdasd");
-           // dragLeaveStopper+=1;
+            // dragLeaveStopper+=1;
             /*if(dragLeaveStopper==1)
             {
             creditsEarned = getCredits;
@@ -382,55 +381,54 @@ function dragTest() {
             //console.log("dasdasdasd");
             dragFrom = "course_cards";
         });
-        
+
 
         dropZone.addEventListener("drop", e => {
             e.preventDefault();
             dropZone.classList.remove("drop-zone--over");
             //console.log(dragFrom);
-           // dragLeaveStopper = 0;
+            // dragLeaveStopper = 0;
             const droppedElementId = e.dataTransfer.getData("text/plain");
             const droppedElement = document.getElementById(droppedElementId);
             //show moreinfo in course card
 
             //console.log(dropZone.id);
             console.log(dropZone.getAttribute("name"));
-            
+
             var newForAlern = "n" + droppedElementId;
             var newForAlern2 = "nn" + droppedElementId;
             //var content = document.getElementById(newForAlern).innerHTML;
             //get the course name form innerHTML
             //ipdate term info 
-            var y = document.getElementById(newForAlern2).innerHTML;
+            var courseName = document.getElementById(newForAlern2).innerHTML;
             // set the course id to prev dropped
 
-            var terminfo = getTermInfo(y);
+            var terminfo = getTermInfo(courseName);
             //console.log(terminfo);
             var check = false;
-            for (i=0;i<terminfo[0].length;i++){
-                if (terminfo[0][i] == "undefined") {term = "0";}
-                if(terminfo[0][i] == dropZone.id){
+            for (i = 0; i < terminfo[0].length; i++) {
+                if (terminfo[0][i] == "undefined") { term = "0"; }
+                if (terminfo[0][i] == dropZone.id) {
                     check = true;
                     document.getElementById(newForAlern).style.color = "black";
                 }
             }
-            if(check == false){
+            if (check == false) {
                 document.getElementById(newForAlern).style.color = "red";
                 alert("Term info not match");
-               // return;
+                // return;
             }
 
-            if( terminfo[1] != null){
+            if (terminfo[1] != null) {
                 document.getElementById(newForAlern).innerHTML = "Applied Term: </br>" +
-                terminfo[0][0]+"</br>"+terminfo[0][1]+"</br>"+terminfo[0][2];//terminfo[0] is term
+                    terminfo[0][0] + "</br>" + terminfo[0][1] + "</br>" + terminfo[0][2];//terminfo[0] is term
                 getCredits = parseInt(terminfo[1]);
             }
-            else
-            {
+            else {
                 alert("this course not applied");
                 return;
-            //getCredits = 0;
-            //document.getElementById(newForAlern).innerHTML = "this course not applied for now";
+                //getCredits = 0;
+                //document.getElementById(newForAlern).innerHTML = "this course not applied for now";
             }
             //console.log(dropZone.className);
             //update cerdits
@@ -440,10 +438,13 @@ function dragTest() {
                 return;
             }
             else {
-                if(dragFrom != "course_cards")
-                {
-                creditsEarned += getCredits;
-                document.getElementById("show_credits").innerHTML = "Credits: " + creditsEarned;//terminfo[1] is credits
+                if (dragFrom != "course_cards") {
+                    creditsEarned += getCredits;
+                    document.getElementById("show_credits").innerHTML = "Credits: " + creditsEarned;//terminfo[1] is credits
+                    //add to donelist
+                    index = dropZone.getAttribute("name");
+                    doneList[index].push(courseName);
+                    console.log(doneList);
                 }
             }
             document.getElementById(newForAlern).style.visibility = "visible";
@@ -457,8 +458,10 @@ function dragTest() {
                 document.getElementById(newForAlern).style.fontSize = "12px";
             }
 
+            //add to donelist
+
             dropZone.appendChild(droppedElement);
-           
+
 
         });
     }
@@ -479,23 +482,27 @@ function dragTest() {
             const droppedElement = document.getElementById(droppedElementId);
             // get some html ids
             var newForAlern = "n" + droppedElementId;
+            //get course name
+            var courseName = document.getElementById(newForAlern2).innerHTML;
             //var newForAlern2 = "nn" + droppedElementId;
             document.getElementById(newForAlern).innerHTML = " ";
             document.getElementById(newForAlern).style.visibility = "hidden";
             // update html
-            
+
             //console.log(dropZone.className);
-            if(dragFrom != "courseTags")
-            {
-             creditsEarned -= getCredits;
-             document.getElementById("show_credits").innerHTML = "Credits: " + creditsEarned;
+            if (dragFrom != "courseTags") {
+                creditsEarned -= getCredits;
+                document.getElementById("show_credits").innerHTML = "Credits: " + creditsEarned;
+                //pop from donelist
+                doneList[index].pop(courseName);
+                console.log(doneList);
             }
 
 
 
 
             dropZone.appendChild(droppedElement);
-            
+
 
         });
 
