@@ -497,9 +497,9 @@ function dragTest() {
             document.getElementById(newForAlern).style.visibility = "hidden";
             // update html
             var terminfo = getTermInfo(courseName);
-            if (terminfo[1] != null) {
+            /*if (terminfo[1] != null) {
                 getCredits = parseInt(terminfo[1]);
-            }
+            }*/
             //console.log(dropZone.className);
             if (dragFrom != "courseTags") {
                 creditsEarned -= getCredits;
