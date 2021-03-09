@@ -37,8 +37,8 @@ body .terms {
     grid-template-columns: 100%;
     grid-template-rows: 4% repeat(20,25%);
     margin-left: -1%;
-    column-gap: 35px;
-    row-gap: 0px;
+    column-gap: 25px;
+    row-gap: 15px;
 }
 body .terms h1{
     /*border: 2px solid blue;*/
