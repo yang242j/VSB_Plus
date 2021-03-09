@@ -112,32 +112,32 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             <div class = "tittle">
                 <h2>Winter</h2>
             </div>
-            <div class = "course_cards" id = "course_cards_builder"></div>
-            <div class = "course_cards" id = "course_cards_builder"> </div>
-            <div class = "course_cards" id = "course_cards_builder"></div>
-             <div class = "course_cards" id = "course_cards_builder"></div>
-             <div class = "course_cards" id = "course_cards_builder"></div>  
+            <div class = "course_cards" id = "Winter"></div>
+            <div class = "course_cards" id = "Winter"> </div>
+            <div class = "course_cards" id = "Winter"></div>
+             <div class = "course_cards" id = "Winter"></div>
+             <div class = "course_cards" id = "Winter"></div>  
             </div>
         <div class = "term1" id = "term2">
             <div class = "tittle">
                 <h2>Spring/Summer</h2>
             </div>
-            <div class = "course_cards" ></div>
-            <div class = "course_cards" ></div>
-            <div class = "course_cards" ></div>
-            <div class = "course_cards" ></div>
-            <div class = "course_cards" ></div>
+            <div class = "course_cards" id = "Spring/Summer"></div>
+            <div class = "course_cards" id = "Spring/Summer"></div>
+            <div class = "course_cards" id = "Spring/Summer"></div>
+            <div class = "course_cards" id = "Spring/Summer"></div>
+            <div class = "course_cards" id = "Spring/Summer"></div>
         </div>
     
         <div class = "term1" id = "term3">
             <div class = "tittle">
                 <h2>Fall</h2>
             </div>
-            <div class = "course_cards" id = "course_cards_builder"></div>
-            <div class = "course_cards" id = "course_cards_builder"></div>
-            <div class = "course_cards" id = "course_cards_builder"></div>
-            <div class = "course_cards" id = "course_cards_builder"></div>
-            <div class = "course_cards" id = "course_cards_builder"></div>
+            <div class = "course_cards"  id = "Fall"></div>
+            <div class = "course_cards" id = "Fall"></div>
+            <div class = "course_cards" id = "Fall"></div>
+            <div class = "course_cards" id = "Fall"></div>
+            <div class = "course_cards" id = "Fall"></div>
         </div>
 
         <div class = "term1" id = "term4">

@@ -95,8 +95,8 @@ body .terms .course_cards{
         border-radius: 5px;
         box-shadow: -2px 4px 7px 0px #555555;
         text-align: center;
-        margin-left: 0;
-        margin-top: 10px;
+        margin-left: 20px;
+        margin-top: -30px;
         border-style: dashed;
     }
     body .terms .course_cards h3{
