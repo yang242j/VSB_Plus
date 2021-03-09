@@ -99,16 +99,16 @@ function getColor(index, dataJSON) {
         color = "blue";
     }
     else if (dataJSON[index].final_grade == "W") {
-        color = "yellow";
+        color = "#b8860b";
     }
     else if (dataJSON[index].final_grade <= 60) {
         color = "grey";
     }
     else if (dataJSON[index].final_grade > 60) {
-        color = "orange";
+        color = "#008000";
     }
     else if (dataJSON[index].final_grade > 75) {
-        color = "pink";
+        color = "#AD1457";
     }
     else if (dataJSON[index].final_grade > 90) {
         color = "red";
