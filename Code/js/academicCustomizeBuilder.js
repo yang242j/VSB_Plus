@@ -432,8 +432,9 @@ function dragTest() {
             }
             else
             {
+                dropZone.classList.remove("drop-zone--over");
                 alert("this course not applied");
-                return 0;
+                return;
             //getCredits = 0;
             //document.getElementById(newForAlern).innerHTML = "this course not applied for now";
             }
@@ -479,6 +480,7 @@ function dragTest() {
         });
         dropZone.addEventListener("drop", e => {
             e.preventDefault();
+            dropZone.classList.remove("drop-zone--over");
             const droppedElementId = e.dataTransfer.getData("text/plain");
             const droppedElement = document.getElementById(droppedElementId);
             // get some html ids
@@ -487,7 +489,7 @@ function dragTest() {
             document.getElementById(newForAlern).innerHTML = " ";
             document.getElementById(newForAlern).style.visibility = "hidden";
             // update html
-            dropZone.classList.remove("drop-zone--over");
+            
             //console.log(dropZone.className);
             if(dragFrom != "courseTags")
             {
