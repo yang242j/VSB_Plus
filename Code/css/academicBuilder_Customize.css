@@ -35,9 +35,9 @@ body .terms {
    /* border: 2px solid red;*/
     display: inline-grid;
     grid-template-columns: 100%;
-    grid-template-rows: 4% repeat(20,25%);
+    grid-template-rows: 4% repeat(20,23%);
     margin-left: -1%;
-    column-gap: 25px;
+    column-gap: 45px;
     row-gap: 15px;
 }
 body .terms h1{
@@ -51,7 +51,7 @@ body .terms .term1{
     grid-template-rows: 40% ;
     column-gap: 10px;
     margin-left: -30px;
-    row-gap:-100px;
+    row-gap:-10px;
 }
 body .terms .term1 .arrows{
     /*border: 2px solid blue;*/
