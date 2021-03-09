@@ -435,6 +435,7 @@ function dragTest() {
             }
             //console.log(dropZone.className);
             //update cerdits
+            console.log(droppedElement);
             dropZone.classList.remove("drop-zone--over");
             if (creditsEarned > 136) {
                 alert("totoal greater than 136");
@@ -484,7 +485,7 @@ function dragTest() {
             document.getElementById(newForAlern).style.visibility = "hidden";
             // update html
             dropZone.classList.remove("drop-zone--over");
-            console.log(dropZone.className);
+            //console.log(dropZone.className);
             if(dropZone.className != "courseTags")
             {
              creditsEarned -= getCredits;
