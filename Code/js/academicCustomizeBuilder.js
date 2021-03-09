@@ -4,7 +4,7 @@ var allCourseData;
 var totalCredits = 0;
 var creditsEarned = 0;
 //store the completed class
-var doneList = [[]];
+var doneList = [[],[],[],[]];
 //fetch JSON data from takenClass database
 function fetchCourseJSON(sid, password) {
     // alert(sid);
