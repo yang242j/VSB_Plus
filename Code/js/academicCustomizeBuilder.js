@@ -371,7 +371,6 @@ function dragTest() {
             e.preventDefault();
             dropZone.classList.add("drop-zone--over");
         });
-
         dropZone.addEventListener("dragleave", e => {
             e.preventDefault();
             dropZone.classList.remove("drop-zone--over");
@@ -400,7 +399,7 @@ function dragTest() {
             const droppedElement = document.getElementById(droppedElementId);
             //show moreinfo in course card
 
-
+            console.log(dropZone.id());
             var newForAlern = "n" + droppedElementId;
             var newForAlern2 = "nn" + droppedElementId;
             //var content = document.getElementById(newForAlern).innerHTML;
