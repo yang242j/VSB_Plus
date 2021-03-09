@@ -281,7 +281,21 @@ function showTerm(pageNumber) {
     }
 }
 
-
+function course_Info(){
+    var selected_course;
+    
+    for (i = 0; i < 12; i++) {
+        selected_course = document.getElementById("nct" + i);
+        var course_info = courseData[i].short_name;
+        
+        if(selected_course.length == course_info)
+        {
+            return "work";
+        }else {
+            return "No Record!!";
+        }
+    }
+}
 
 var termPageCounter = 1 ;
 function termDown(){
