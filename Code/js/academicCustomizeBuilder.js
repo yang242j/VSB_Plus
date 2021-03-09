@@ -435,6 +435,7 @@ function dragTest() {
             }
             //console.log(dropZone.className);
             //update cerdits
+            dropZone.classList.remove("drop-zone--over");
             if (creditsEarned > 136) {
                 alert("totoal greater than 136");
                 return;
@@ -458,7 +459,7 @@ function dragTest() {
             }
 
             dropZone.appendChild(droppedElement);
-            dropZone.classList.remove("drop-zone--over");
+           
 
         });
     }
@@ -482,6 +483,7 @@ function dragTest() {
             document.getElementById(newForAlern).innerHTML = " ";
             document.getElementById(newForAlern).style.visibility = "hidden";
             // update html
+            dropZone.classList.remove("drop-zone--over");
             console.log(dropZone.className);
             if(dropZone.className != "courseTags")
             {
@@ -493,7 +495,7 @@ function dragTest() {
 
 
             dropZone.appendChild(droppedElement);
-            dropZone.classList.remove("drop-zone--over");
+            
 
         });
 
