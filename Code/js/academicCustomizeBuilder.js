@@ -387,8 +387,6 @@ function dragTest() {
             //e.preventDefault();
             dropZone.classList.remove("drop-zone--over");
             //console.log("dasdasdasd");
-            creditsEarned -= getCredits;
-            document.getElementById("show_credits").innerHTML = "Credits: " + creditsEarned;
         });
         
 
@@ -442,8 +440,11 @@ function dragTest() {
             }
 
             else {
+                if(dropZone.className == courseTags)
+                {
                 creditsEarned += getCredits;
                 document.getElementById("show_credits").innerHTML = "Credits: " + creditsEarned;//terminfo[1] is credits
+                }
             }
             document.getElementById(newForAlern).style.visibility = "visible";
             document.getElementById(newForAlern).style.fontSize = "10px";
@@ -482,8 +483,11 @@ function dragTest() {
             document.getElementById(newForAlern).style.visibility = "hidden";
 
             // renew html
-            /*creditsEarned -= getCredits;
-             document.getElementById("show_credits").innerHTML = "Credits: " + creditsEarned;*/
+            if(dropZone.className == "course_cards")
+            {
+            creditsEarned -= getCredits;
+             document.getElementById("show_credits").innerHTML = "Credits: " + creditsEarned;
+            }
 
 
 
