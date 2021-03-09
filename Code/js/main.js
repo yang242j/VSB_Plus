@@ -1,4 +1,7 @@
-/* When the user clicks on the nav-right buttons, 
+var isMobile = window.matchMedia('(max-width: 1080px)').matches
+if (isMobile) $(".menu-icon").click();
+
+/* When the user clicks on the nav-right buttons,
 toggle between hiding and showing the content with id */
 function toogleDisplay(id) {
   document.getElementById(id).classList.toggle("hidden");

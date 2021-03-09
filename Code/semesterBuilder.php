@@ -55,7 +55,6 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.5.1/main.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
     <script>
-        var isMobile = window.matchMedia('(max-width: 1080px)').matches
         var term = '';
         var courseList = [];
         let presetCourses = ['Precalculus 30', 'Calculus 30', 'CHEM 30', 'Mathematics B30', 'Mathematics C30', 'AMTH 092', 'MATH 102', 'MATH 103'];
@@ -64,7 +63,6 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         
         $(document).ready(function() {
             $("button.plus_button.open").hide();
-            if (isMobile) $(".menu-icon").click();
         });
     </script>
 </head>
