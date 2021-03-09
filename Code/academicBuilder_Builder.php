@@ -133,22 +133,22 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             <div class = "tittle">
                 <h2>Fall</h2>
             </div>
-            <div class = "course_cards"  id = "Fall"></div>
-            <div class = "course_cards" id = "Fall"></div>
-            <div class = "course_cards" id = "Fall"></div>
-            <div class = "course_cards" id = "Fall"></div>
-            <div class = "course_cards" id = "Fall"></div>
+            <div class = "course_cards" id = "Fall" name ="3"></div>
+            <div class = "course_cards" id = "Fall" name ="3"></div>
+            <div class = "course_cards" id = "Fall" name ="3"></div>
+            <div class = "course_cards" id = "Fall" name ="3"></div>
+            <div class = "course_cards" id = "Fall" name ="3"></div>
         </div>
 
         <div class = "term1" id = "term4">
             <div class = "tittle">
                 <h2>Winter</h2>
             </div>
-            <div class = "course_cards" ></div>
-            <div class = "course_cards" ></div>
-            <div class = "course_cards" ></div>
-            <div class = "course_cards" ></div>
-            <div class = "course_cards" ></div>
+            <div class = "course_cards" id = "Winter" name ="4"></div>
+            <div class = "course_cards" id = "Winter" name ="4"></div>
+            <div class = "course_cards" id = "Winter" name ="4"></div>
+            <div class = "course_cards" id = "Winter" name ="4"></div>
+            <div class = "course_cards" id = "Winter" name ="4"></div>
             </div>
             <!--<div class = "arrows">
                 <button class="right_arrow">
