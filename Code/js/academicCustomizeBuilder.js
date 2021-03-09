@@ -309,12 +309,17 @@ function getTermInfo(courseName) {
         }
     }
 
-    if(myRequest3.status != 404){
+    try{
         myRequest3.send();
         //return "asdsa";
     }
+    catch {
+        if(myRequest3.status == 404)
+        {
+            return;
+        }
+    }
     
-
 
 
     myRequest.open("GET", url2, false);
