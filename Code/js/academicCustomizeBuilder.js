@@ -353,11 +353,12 @@ function getAllCourse() {
     }
     myRequest.send();
 }
-
+var draagFrom;
 function dragStart(elementId) {
     const draggableElement = document.querySelector(elementId);
     draggableElement.addEventListener("dragstart", e => {
         e.dataTransfer.setData("text/plain", draggableElement.id);
+        dragFrom = "courseTags";
     });
 }
 
@@ -387,11 +388,13 @@ function dragTest() {
             //e.preventDefault();
             dropZone.classList.remove("drop-zone--over");
             //console.log("dasdasdasd");
+            dragFrom = "course_cards";
         });
         
 
         dropZone.addEventListener("drop", e => {
             e.preventDefault();
+            console.log(dragFrom);
            // dragLeaveStopper = 0;
             const droppedElementId = e.dataTransfer.getData("text/plain");
             const droppedElement = document.getElementById(droppedElementId);
@@ -435,7 +438,6 @@ function dragTest() {
             }
             //console.log(dropZone.className);
             //update cerdits
-            console.log(dropZone.className);
             dropZone.classList.remove("drop-zone--over");
             if (creditsEarned > 136) {
                 alert("totoal greater than 136");
