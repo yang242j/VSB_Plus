@@ -35,7 +35,7 @@ body .terms {
    /* border: 2px solid red;*/
     display: inline-grid;
     grid-template-columns: 100%;
-    grid-template-rows: 4% repeat(20,35%);
+    grid-template-rows: 4% repeat(20,25%);
     margin-left: -1%;
     column-gap: 35px;
     row-gap: 0px;
