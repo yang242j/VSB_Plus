@@ -351,7 +351,6 @@ function dragStart(elementId) {
         dragFrom = "courseTags";
     });
 }
-var prevDropedName;
 var getCredits = 0;
 var dragLeaveStopper = 0;
 var index = 0;
@@ -393,7 +392,7 @@ function dragTest() {
             //show moreinfo in course card
 
             //console.log(dropZone.id);
-            console.log(dropZone.getAttribute("name"));
+            //console.log(dropZone.getAttribute("name"));
 
             var newForAlern = "n" + droppedElementId;//course info stored div id
             var newForAlern2 = "nn" + droppedElementId;//course name stored div id
@@ -463,7 +462,7 @@ function dragTest() {
             }
             dropZone.appendChild(droppedElement);
 
-
+            console.log(doneList);
         });
     }
 
