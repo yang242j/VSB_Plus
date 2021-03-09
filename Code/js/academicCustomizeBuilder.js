@@ -3,6 +3,8 @@ var courseReqData;
 var allCourseData;
 var totalCredits = 0;
 var creditsEarned = 0;
+//store the completed class
+var doneList =[];
 //fetch JSON data from takenClass database
 function fetchCourseJSON(sid, password) {
     // alert(sid);
@@ -422,6 +424,7 @@ function dragTest() {
                 }
             }
             if(check == false){
+                document.getElementsByClassName();
                 alert("Term info not match");
                 return;
             }
@@ -433,8 +436,8 @@ function dragTest() {
             }
             else
             {
+                document.getElementById(newForAlern).style.color = "red";
                 alert("this course not applied");
-                return;
             //getCredits = 0;
             //document.getElementById(newForAlern).innerHTML = "this course not applied for now";
             }
