@@ -399,7 +399,7 @@ function dragTest() {
             const droppedElement = document.getElementById(droppedElementId);
             //show moreinfo in course card
 
-            console.log(dropZone.id());
+            console.log(dropZone.id);
             var newForAlern = "n" + droppedElementId;
             var newForAlern2 = "nn" + droppedElementId;
             //var content = document.getElementById(newForAlern).innerHTML;
@@ -409,7 +409,7 @@ function dragTest() {
             // set the course id to prev dropped
 
             var terminfo = getTermInfo(y);
-            console.log(terminfo);
+            //console.log(terminfo);
             if( terminfo[1] != null){
                 document.getElementById(newForAlern).innerHTML = terminfo[0];//terminfo[0] is term
                 getCredits = parseInt(terminfo[1]);
