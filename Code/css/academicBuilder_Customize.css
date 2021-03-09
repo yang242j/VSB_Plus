@@ -169,7 +169,6 @@ body .terms .term1 #course_cards_builder p{
         border-radius: 25px;
         box-shadow: -2px 4px 7px 0px #555555;
         text-align: center;
-        margin-top: -30px;
     }
     body .tags_courses .course_list .course_not_completed{
         /*border: 2px solid red;*/
@@ -194,6 +193,7 @@ body .terms .term1 #course_cards_builder p{
         border-radius: 25px;
         box-shadow: -2px 4px 7px 0px #555555;
         text-align: center;
+        margin-top: -20px;
   
     }
     body .tags_courses .course_list .course_tag_not_completed .courseTag{
