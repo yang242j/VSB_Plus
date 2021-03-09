@@ -421,11 +421,12 @@ function dragTest() {
                 if (terminfo[0][i] == "undefined") {term = "0";}
                 if(terminfo[0][i] == dropZone.id){
                     check = true;
+                    document.getElementById(newForAlern).style.color = "black";
                 }
             }
             if(check == false){
                 document.getElementById(newForAlern).style.color = "red";
-                //alert("Term info not match");
+                alert("Term info not match");
                // return;
             }
 
