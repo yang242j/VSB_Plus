@@ -433,7 +433,7 @@ function dragTest() {
             //getCredits = 0;
             //document.getElementById(newForAlern).innerHTML = "this course not applied for now";
             }
-            console.log(dropZone.className);
+            //console.log(dropZone.className);
             //update cerdits
             if (creditsEarned > 136) {
                 alert("totoal greater than 136");
@@ -481,8 +481,7 @@ function dragTest() {
             //var newForAlern2 = "nn" + droppedElementId;
             document.getElementById(newForAlern).innerHTML = " ";
             document.getElementById(newForAlern).style.visibility = "hidden";
-
-            // renew html
+            // update html
             console.log(dropZone.className);
             if(dropZone.className != "courseTags")
             {
