@@ -411,16 +411,16 @@ function dragTest() {
 
             var terminfo = getTermInfo(y);
             //console.log(terminfo);
-            for (term in terminfo[0]){
-                if (term == null) term = " ";
-                /*if(term == dropZone.id){
-                    break;
+            var check = false;
+            for (i=0;i<terminfo[0].length;i++){
+                if (terminfo[0][i] == "undefined") {term = "0";}
+                if(terminfo[0][i] == dropZone.id){
+                    check = true;
                 }
-                else{
-                    alert("term not match");
-                    return;
-                    //dropZone.style.color = "red";
-                }*/
+            }
+            if(check == false){
+                alert("Term info not match");
+                return;
             }
 
             if( terminfo[1] != null){
