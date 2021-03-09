@@ -104,13 +104,13 @@ function getColor(index, dataJSON) {
     else if (dataJSON[index].final_grade <= 60) {
         color = "grey";
     }
-    else if (dataJSON[index].final_grade > 60) {
+    else if (dataJSON[index].final_grade > 60 && dataJSON[index].final_grade < 75) {
         color = "green";
     }
-    else if (dataJSON[index].final_grade > 75) {
+    else if (dataJSON[index].final_grade >= 75 && dataJSON[index].final_grade < 90) {
         color = "orange";
     }
-    else if (dataJSON[index].final_grade > 90) {
+    else if (dataJSON[index].final_grade >= 90) {
         color = "red";
     }
     return color;
@@ -142,7 +142,7 @@ function showCourses(data) {
     for (i = 0; i < 12; i++) {
         if (i < dataJSON.length) {
             //<br/>
-            document.getElementById("ct" + i).innerHTML = dataJSON[i].course_ID + "<br/> " + dataJSON[i].term + getColor(i, dataJSON);
+            document.getElementById("ct" + i).innerHTML = dataJSON[i].course_ID + "<br/> " + dataJSON[i].term ;
             document.getElementById("ct" + i).style.color = getColor(i, dataJSON);
 
         }
