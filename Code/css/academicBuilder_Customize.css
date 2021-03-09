@@ -32,8 +32,8 @@ body .terms {
     width: 62%;
     height:100%;
     margin-top: 1%;
-    border: 2px solid red;
-    border-bottom: 2px solid grey;
+    /*border: 2px solid red;*/
+    border-bottom: 3px  grey;
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: 4% repeat(20,20%);
@@ -45,7 +45,7 @@ body .terms h1{
     margin-top: -2%;
 }
 body .terms .term1{
-    border: 2px solid blue;
+    /*border: 2px solid blue;*/
     display: grid;
     grid-template-columns: 8% 16% 16% 16% 16% 16% ; 
     grid-template-rows: 80% ;
@@ -178,6 +178,7 @@ body .terms .term1 #course_cards_builder p{
     }
     body .tags_courses .course_list .course_tag_not_completed{
         /*border: 2px solid red;*/
+        border-bottom: 3px solid grey;
         display: grid;
         width:102%;
         height:120%;
