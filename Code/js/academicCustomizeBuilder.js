@@ -525,7 +525,7 @@ function deleteForm2DArray(array, item) {
     for (j = 0; j < array.length; j++) {
         for (i = 0; i < array[i].length; i++) {
             if (array[i][j] == item) {
-                array[i][j] = array[array[i].length - 1];
+                array[i][j] = array[i][array[i].length - 1];
                 array[i].pop();
             }
         }
