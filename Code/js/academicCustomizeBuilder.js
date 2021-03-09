@@ -284,7 +284,7 @@ function getTermInfo(courseName) {
     var myRequest = new XMLHttpRequest;
     var myRequest2 = new XMLHttpRequest;
     var myRequest3 = new XMLHttpRequest;
-    var term = "Applied Term: ";
+    var term =[];
     var prerequisite = "Prerequisite: </br>";
     var credit;
     url2 = "JSON/202020/" + courseName + ".json";
@@ -300,7 +300,7 @@ function getTermInfo(courseName) {
             prerequisite += data.prerequisite;
             credit = data.credit;
             if (data.term != "No class for the term") {
-                term += "Winter" + " ";
+                term.push("Winter");
 
             }
         }
@@ -317,7 +317,7 @@ function getTermInfo(courseName) {
         if (myRequest.status == 200 && myRequest.responseText != null) {
             var data = JSON.parse(myRequest.responseText);
             if (data.term != "No class for the term") {
-                term += "Spring/Summer" + " ";
+                term.push("Spring/Summer");
 
             }
         }
@@ -331,7 +331,7 @@ function getTermInfo(courseName) {
         if (myRequest2.status == 200 && myRequest2.responseText != null) {
             var data = JSON.parse(myRequest2.responseText);
             if (data.term != "No class for the term") {
-                term += "Fall" + " ";
+                term.push("Fall") ;
 
             }
         }
