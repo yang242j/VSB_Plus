@@ -395,8 +395,8 @@ function dragTest() {
             //console.log(dropZone.id);
             console.log(dropZone.getAttribute("name"));
 
-            var newForAlern = "n" + droppedElementId;
-            var newForAlern2 = "nn" + droppedElementId;
+            var newForAlern = "n" + droppedElementId;//course info stored div id
+            var newForAlern2 = "nn" + droppedElementId;//course name stored div id
             //var content = document.getElementById(newForAlern).innerHTML;
             //get the course name form innerHTML
             //ipdate term info 
@@ -416,7 +416,6 @@ function dragTest() {
             if (check == false) {
                 document.getElementById(newForAlern).style.color = "red";
                 alert("Term info not match");
-                // return;
             }
 
             if (terminfo[1] != null) {
@@ -442,9 +441,6 @@ function dragTest() {
                     creditsEarned += getCredits;
                     document.getElementById("show_credits").innerHTML = "Credits: " + creditsEarned;//terminfo[1] is credits
                     //add to donelist
-                    index = dropZone.getAttribute("name");
-                    doneList[index].push(courseName);
-                    console.log(doneList);
                 }
             }
             document.getElementById(newForAlern).style.visibility = "visible";
@@ -459,6 +455,12 @@ function dragTest() {
             }
 
             //add to donelist
+
+            if (dragFrom != "course_cards" && check == true ){
+            index = dropZone.getAttribute("name");
+            doneList[index].push(courseName);
+            console.log(doneList);
+            }
 
             dropZone.appendChild(droppedElement);
 
@@ -481,7 +483,8 @@ function dragTest() {
             const droppedElementId = e.dataTransfer.getData("text/plain");
             const droppedElement = document.getElementById(droppedElementId);
             // get some html ids
-            var newForAlern = "n" + droppedElementId;
+            var newForAlern = "n" + droppedElementId;//info stored div id
+            var newForAlern2 = "nn" + droppedElementId;//course name stored div id
             //get course name
             var courseName = document.getElementById(newForAlern2).innerHTML;
             //var newForAlern2 = "nn" + droppedElementId;
