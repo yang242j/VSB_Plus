@@ -128,7 +128,6 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                     <input type="text" id="search_courseid" placeholder="ENGL 100" onfocus="hideBottom()" onblur="showBottom()" required />
                     <input type="submit" value="Submit"/>
                 </form>
-                <p id="msg_p"></p>
                 <script>
                     function ajaxpost() {
                         // (A) GET FORM DATA
