@@ -181,7 +181,7 @@ body .terms .term1 #course_cards_builder p{
         height:120%;
         grid-template-columns: 23% 23% 23% 23%;
         grid-template-rows:repeat(20,35%);
-        row-gap: 0px;
+        row-gap: -30px;
         column-gap: 10px;
         margin-top: -360px;
         font-size: 18px;
@@ -193,7 +193,6 @@ body .terms .term1 #course_cards_builder p{
         border-radius: 25px;
         box-shadow: -2px 4px 7px 0px #555555;
         text-align: center;
-        margin-top: -20px;
   
     }
     body .tags_courses .course_list .course_tag_not_completed .courseTag{
