@@ -447,7 +447,7 @@ function dragTest() {
             document.getElementById(newForAlern).style.lineHeight = "110%";
 
             if (document.getElementById(newForAlern).innerHTML.length <= 80) {
-                document.getElementById(newForAlern).style.fontSize = "14px";
+                document.getElementById(newForAlern).style.fontSize = "16px";
             }
             if (document.getElementById(newForAlern).innerHTML.length <= 100 && document.getElementById(newForAlern).innerHTML.length > 80) {
                 document.getElementById(newForAlern).style.fontSize = "12px";
