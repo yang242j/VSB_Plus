@@ -308,10 +308,10 @@ function getTermInfo(courseName) {
             }
         }
     }
+    myRequest3.send();
     if(myRequest3.status == 404){
         return "asdsa";
     }
-    myRequest3.send();
     
 
 
