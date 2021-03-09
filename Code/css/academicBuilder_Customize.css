@@ -30,7 +30,7 @@ body .terms .term1 .course_cards p{
 body .terms { 
     /*position:relative;*/
     width: 62%;
-    margin-top: 1%;
+    margin-top: 3%;
    /* border: 2px solid red;*/
     display: grid;
     grid-template-columns: 100%;
