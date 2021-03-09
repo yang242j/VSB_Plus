@@ -32,7 +32,7 @@ body .terms {
     width: 62%;
     height:100%;
     margin-top: 1%;
-   /* border: 2px solid red;*/
+    border: 2px solid red;
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: 4% repeat(20,35%);
@@ -44,7 +44,7 @@ body .terms h1{
     margin-top: -2%;
 }
 body .terms .term1{
-    /*border: 2px solid blue;*/
+    border: 2px solid blue;
     display: grid;
     grid-template-columns: 8% 17% 17% 17% 17% 17% ; 
     grid-template-rows: 40% ;
