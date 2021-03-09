@@ -406,7 +406,7 @@ function dragTest() {
             //console.log(terminfo);
             var check = false;
             for (i = 0; i < terminfo[0].length; i++) {
-                if (terminfo[0][i] == "undefined") { term = "0"; }
+                if (terminfo[0][i] == "undefined") { terminfo[0][i] = ""; }
                 if (terminfo[0][i] == dropZone.id) {
                     check = true;
                     document.getElementById(newForAlern).style.color = "black";
@@ -501,7 +501,7 @@ function dragTest() {
             if (dragFrom != "courseTags") {
                 creditsEarned -= getCredits;
                 document.getElementById("show_credits").innerHTML = "Credits: " + creditsEarned;
-                
+
                 //pop from donelist
                 deleteFrom2DArray(doneList, courseName);
                 console.log(doneList);
