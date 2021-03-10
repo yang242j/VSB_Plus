@@ -421,19 +421,17 @@ function dragTest() {
             var check = false;
 
             var termCode = termTransfer(terminfo[0][1]);
-            var container =[];
+            var container = [];
             //y.push(doneList[0][12]);        
             //chekc prerequisite
             //console.log(ajaxpost(courseName, "202020", y));
             //console.log(ajaxpost("ENEL 280", "202020", x));
             console.log(dropZone.getAttribute("name"));
-            for (i=0;i<=dropZone.getAttribute("name");i++)
-            {
-               for(j=0;j<doneList[i].length;i++)
-               {
-                console.log(doneList[i][j]);
-                   container.push(doneList[i][j]);
-               }
+            for (i = 0; i <= dropZone.getAttribute("name"); i++) {
+                for (j = 0; j < doneList[i].length; j++) {
+                    console.log(doneList[i][j]);
+                    container.push(doneList[i][j]);
+                }
             }
             console.log(ajaxpost(courseName, "202020", container));
 
