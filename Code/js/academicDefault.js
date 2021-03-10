@@ -299,11 +299,11 @@ function showTerm(pageNumber) {
 
 function courseInfo() {
     
-   
-      
+    for (x = 0; x < 12; x++) {
+        var courseName = document.getElementById("nct" + x).value;
+     
     for (i = 0; i < allCourseData.length; i++) {
-        for (x = 0; x < 12; x++) {
-        var courseName = document.getElementById("enct" + x).value;
+        
         if (courseName == allCourseData[i].short_name)
             return ("<h3>" + allCourseData[i].short_name + "</h3>" + 
             "<p>" + "Title: </br>" + allCourseData[i].title + "</p>" +
