@@ -291,7 +291,9 @@ function getTermInfo(courseName) {
             credit = data.credit;
             if (data.term != "No class for the term") {
                 term.push("Winter");
-
+            }
+            else{
+                term.push(" ");
             }
         }
     }
@@ -314,6 +316,9 @@ function getTermInfo(courseName) {
                 term.push("Spring/Summer");
 
             }
+            else{
+                term.push(" ");
+            }
         }
 
     }
@@ -327,6 +332,9 @@ function getTermInfo(courseName) {
             if (data.term != "No class for the term") {
                 term.push("Fall");
 
+            }
+            else{
+                term.push(" ");
             }
         }
 
