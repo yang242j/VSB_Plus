@@ -598,7 +598,6 @@ function ajaxpost(courseid, term, done) {
         if (rsp.Prerequisites == true) {
             // Generate course tag
             //courseid = rsp.CourseID;
-            alert("asd");
             return true;
 
         } else {
@@ -610,5 +609,5 @@ function ajaxpost(courseid, term, done) {
     xhr.send(data);
 
     // (C) PREVENT HTML FORM SUBMIT
-    return false;
+    //return false;
 }
