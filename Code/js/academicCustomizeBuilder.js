@@ -573,7 +573,7 @@ function termTransfer(term) {
 
 var y = ["MATH 111", "asd", "asdsa"];
 
-
+console.log(doneList[0][1]);
 function changeToOneD() {
     var temp = [];
     for (i = 0; i <= doneList[0].length; i++) {
@@ -582,7 +582,12 @@ function changeToOneD() {
     }
     return temp;
 }
+
+
 console.log(changeToOneD());
+
+
+
 function ajaxpost(courseid, term, done) {
     // (A) GET FORM DATA
     var data = new FormData();
