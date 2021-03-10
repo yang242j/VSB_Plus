@@ -428,7 +428,7 @@ function dragTest() {
                 }
             }
             //ajaxpost(courseName, "202020", container);
-           ajaxpost(courseName, "202020", container);
+           console.log(ajaxpost(courseName, "202020", container));
 
 
 
@@ -600,11 +600,12 @@ function ajaxpost(courseid, term, done) {
         if (rsp.Prerequisites == true) {
             // Generate course tag
             //courseid = rsp.CourseID;
+            return true;
 
         } else {
             // Do nothing and alert the returned Notes
             alert(rsp.Notes);
-            return;
+            return false;
         }
     };
     xhr.send(data);
