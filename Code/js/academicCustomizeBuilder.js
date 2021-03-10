@@ -554,7 +554,6 @@ function deleteFrom2DArray(array, item) {
             }
         }
     }
-
 }
 //does the item already exists in this line
 function findExist(array, item) {
@@ -575,6 +574,7 @@ var y = ["MATH 111", "asd", "asdsa","MATH 111", "asd", "asdsa","MATH 111", "asd"
 var z = [];
 console.log(doneList);
 console.log(y);
+console.log(findExist(doneList[0], "MATH 111"));
 function ajaxpost(courseid, term, done) {
     // (A) GET FORM DATA
     var data = new FormData();
