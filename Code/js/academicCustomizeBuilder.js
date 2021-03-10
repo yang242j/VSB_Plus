@@ -474,7 +474,8 @@ function dragTest() {
                     }
 
                 }
-                var term = [terminfo1,terminfo2,terminfo3 = "F"];
+
+                var term = [terminfo1,terminfo2,terminfo3];
                 deleteFromArray(term, null)
 
 
