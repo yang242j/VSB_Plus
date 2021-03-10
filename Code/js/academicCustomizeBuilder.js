@@ -425,6 +425,7 @@ function dragTest() {
             y.push(doneList[0][12]);        
             //chekc prerequisite
             console.log(ajaxpost(courseName, "202020", y));
+            console.log(decidePreTrueOrFalse);
             //console.log(ajaxpost("ENEL 280", "202020", x));
 
 
@@ -581,6 +582,7 @@ function termTransfer(term) {
     if (term == "Spring/Summer") return 202020;
     if (term == "Fall") return 202030;
 }
+var decidePreTrueOrFalse = true;
 function ajaxpost(courseid, term, done) {
     // (A) GET FORM DATA
     var data = new FormData();
@@ -598,16 +600,16 @@ function ajaxpost(courseid, term, done) {
         if (rsp.Prerequisites == true) {
             // Generate course tag
             //courseid = rsp.CourseID;
-            return true;
+            decidePreTrueOrFalse = true;
 
         } else {
             // Do nothing and alert the returned Notes
             alert(rsp.Notes);
-            return false;
+            decidePreTrueOrFalse = false;
         }
     };
     xhr.send(data);
 
     // (C) PREVENT HTML FORM SUBMIT
-    //return false;
+    return false;
 }
