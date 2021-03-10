@@ -10,6 +10,7 @@ window.onload = function () {
 getCourseData();
 getTermData();
 getAllCourse();
+
 function getAllCourse() {
     var myRequest = new XMLHttpRequest;
     myRequest.open("GET", "JSON/ALL.json", false);
@@ -19,8 +20,9 @@ function getAllCourse() {
     }
     myRequest.send();
 }
+
 function getTitle(courseName) {
-    var pre = "Title: </br>" ;
+    var pre = "Title: </br>";
     for (i = 0; i < allCourseData.length; i++) {
         if (allCourseData[i].short_name == courseName && allCourseData[i].title != null)
             return (pre + allCourseData[i].title);
@@ -28,6 +30,7 @@ function getTitle(courseName) {
     return (pre + "no such course or no prerequisite");
 }
 console.log(getTitle("CHEM 140"));
+
 function getCourseData() {
     var myRequest = new XMLHttpRequest;
     //myRequest.open("GET", "JSON/ESE.json", false);
@@ -38,6 +41,7 @@ function getCourseData() {
     }
     myRequest.send();
 }
+
 function getTermData() {
     var myRequest = new XMLHttpRequest;
     //myRequest.open("GET", "JSON/reqCourse/ESE_req.json", false);
@@ -49,6 +53,7 @@ function getTermData() {
     }
     myRequest.send();
 }
+
 function showNotCompletedCourse() {
     for (i = 0; i < 12; i++) {
         document.getElementById("nct" + i).innerHTML = courseData[i].short_name;
@@ -72,9 +77,10 @@ function showApprovedCourse() {
 
 }
 var counterForApproved = 0;
+
 function aRight() {
-    if(termData[term][i+12*counterForApproved] != null){
-    counterForApproved += 1;
+    if (termData[term][i + 12 * counterForApproved] != null) {
+        counterForApproved += 1;
     }
     if (counterForApproved >= 0) {
         for (i = 0; i < 12; i++) {
@@ -83,21 +89,20 @@ function aRight() {
         for (term in termData) {
             if (term = "Approved") {
                 for (i = 0; i < 12; i++) {
-                    if(termData[term][i+12*counterForApproved] != null){
-                    document.getElementById("ct" + i).innerHTML = termData[term][i+12*counterForApproved];
-                    }
-                    else{
+                    if (termData[term][i + 12 * counterForApproved] != null) {
+                        document.getElementById("ct" + i).innerHTML = termData[term][i + 12 * counterForApproved];
+                    } else {
                         return;
-                    }                  
+                    }
                 }
             }
 
         }
-    }
-    else {
+    } else {
         counterForApproved = 1;
     }
 }
+
 function aLeft() {
     counterForApproved -= 1
     if (counterForApproved >= 0) {
@@ -107,21 +112,20 @@ function aLeft() {
         for (term in termData) {
             if (term = "Approved") {
                 for (i = 0; i < 12; i++) {
-                    if(termData[term][i+12*counterForApproved] != null){
-                    document.getElementById("ct" + i).innerHTML = termData[term][i+12*counterForApproved];
-                    }
-                    else{
+                    if (termData[term][i + 12 * counterForApproved] != null) {
+                        document.getElementById("ct" + i).innerHTML = termData[term][i + 12 * counterForApproved];
+                    } else {
                         return;
-                    }                  
+                    }
                 }
             }
         }
-    }
-    else {
+    } else {
         counterForApproved = 1;
     }
 }
 var counter = 0;
+
 function nctLeft() {
     counter = counter - 1;
     k = 0;
@@ -133,22 +137,21 @@ function nctLeft() {
 
         for (i = 12 * counter; i < 12 * (counter + 1); i++) {
             if (i > courseData.length) {
-                document.getElementById("nct" + k).innerHTML = " "; 
-            }
-            else {
+                document.getElementById("nct" + k).innerHTML = " ";
+            } else {
                 document.getElementById("nct" + k).innerHTML = courseData[i].short_name;
             }
             k = k + 1;
         }
-    }
-    else {
+    } else {
         counter = 1;
     }
 }
+
 function nctRight() {
     j = 0;
-    if (courseData[i].short_name != null){
-    counter +=1;
+    if (courseData[i].short_name != null) {
+        counter += 1;
     }
     /*document.getElementById("notCompletedRight").innerHTML = counter;*/
     if (counter >= 0) {
@@ -156,22 +159,21 @@ function nctRight() {
             document.getElementById("nct" + i).innerHTML = "";
         }
         for (i = 12 * counter; i < 12 * (counter + 1); i++) {
-            if(courseData[i] == null)return;
+            if (courseData[i] == null) return;
             if (i > courseData.length) {
                 document.getElementById("nct" + j).innerHTML = " ";
-            }
-            else {
+            } else {
                 document.getElementById("nct" + j).innerHTML = courseData[i].short_name;
             }
             j = j + 1;
         }
-    }
-    else {
+    } else {
         counter = 1;
     }
 }
 
 var ecounter = 0;
+
 function enctLeft() {
     ecounter = ecounter - 1;
     z = 0;
@@ -183,22 +185,21 @@ function enctLeft() {
 
         for (x = 12 * ecounter; x < 12 * (ecounter + 1); x++) {
             if (x > courseData.length) {
-                document.getElementById("enct" + z).innerHTML = " "; 
-            }
-            else {
+                document.getElementById("enct" + z).innerHTML = " ";
+            } else {
                 document.getElementById("enct" + z).innerHTML = courseData[x].short_name;
             }
             z = z + 1;
         }
-    }
-    else {
+    } else {
         ecounter = 1;
     }
 }
+
 function enctRight() {
     y = 0;
-    if (courseData[x].short_name != null){
-    ecounter +=1;
+    if (courseData[x].short_name != null) {
+        ecounter += 1;
     }
     /*document.getElementById("notCompletedRight").innerHTML = counter;*/
     if (ecounter >= 0) {
@@ -206,17 +207,15 @@ function enctRight() {
             document.getElementById("enct" + x).innerHTML = "";
         }
         for (x = 12 * ecounter; x < 12 * (ecounter + 1); x++) {
-            if(courseData[x] == null)return;
+            if (courseData[x] == null) return;
             if (x > courseData.length) {
                 document.getElementById("enct" + y).innerHTML = " ";
-            }
-            else {
+            } else {
                 document.getElementById("enct" + y).innerHTML = courseData[x].short_name;
             }
             y = y + 1;
         }
-    }
-    else {
+    } else {
         ecounter = 1;
     }
 }
@@ -226,131 +225,135 @@ function showTerm(pageNumber) {
     for (term in termData) {
         /*console.log(termData[term][0]);*/
         termNumber = "term" + pageNumber;
-        if (term >= termNumber){
-        if (term != "Approved") {
-            /*if (i <= 4) {*/
-            if (i <= 12) {
-                /*if(pageNumber < 7) {*/
-                if(pageNumber < 12) {
-                document.getElementById("term" + i).innerHTML =
-                    "<div class = 'tittle'>" + "<h2>" + term + ":" + "</h2></div>" +
-                    "<div class = 'course_cards'>" + "<h3>" + termData[term][0] + "</h3>" +
-                    "<p'>"+ getTitle(termData[term][0])+ "</p>"+
-                    /*"<i class='fas fa-circle' id = 'circle1' style='font-size:24px;'></i>"+
-                    "<i class='fas fa-circle' style='font-size:24px;color:red'></i>"+
-                    "<i class='fas fa-circle' style='font-size:24px;color:red'></i>"+
-                    "<i class='fas fa-circle' style='font-size:24px;color:red'></i>*/ "</div>"+
-                    
+        if (term >= termNumber) {
+            if (term != "Approved") {
+                /*if (i <= 4) {*/
+                if (i <= 12) {
+                    /*if(pageNumber < 7) {*/
+                    if (pageNumber < 12) {
+                        document.getElementById("term" + i).innerHTML =
+                            "<div class = 'tittle'>" + "<h2>" + term + ":" + "</h2></div>" +
+                            "<div class = 'course_cards'>" + "<h3>" + termData[term][0] + "</h3>" +
+                            "<p'>" + getTitle(termData[term][0]) + "</p>" +
+                            /*"<i class='fas fa-circle' id = 'circle1' style='font-size:24px;'></i>"+
+                            "<i class='fas fa-circle' style='font-size:24px;color:red'></i>"+
+                            "<i class='fas fa-circle' style='font-size:24px;color:red'></i>"+
+                            "<i class='fas fa-circle' style='font-size:24px;color:red'></i>*/
+                            "</div>" +
 
-                   "<div class = 'course_cards'>" + "<h3>" + termData[term][1] + "</h3>" +
-                   "<p>"+ getTitle(termData[term][1])+"</p>"+
-                   /* "<i class='fas fa-circle' style='font-size:24px;color:red'></i>"+
-                    "<i class='fas fa-circle' style='font-size:24px;color:red'></i>"+
-                    "<i class='fas fa-circle' style='font-size:24px;color:red'></i>"+
-                    "<i class='fas fa-circle' style='font-size:24px;color:red'></i>*/ "</div>"+
 
-                    "<div class = 'course_cards'>" + "<h3>" + termData[term][2] + "</h3>" +
-                    "<p>"+ getTitle(termData[term][2])+ "</p>"+
-                   /* "<i class='fas fa-circle' style='font-size:24px;color:red'></i>"+
-                    "<i class='fas fa-circle' style='font-size:24px;color:red'></i>"+
-                    "<i class='fas fa-circle' style='font-size:24px;color:red'></i>"+
-                    "<i class='fas fa-circle' style='font-size:24px;color:red'></i>*/ "</div>"+
+                            "<div class = 'course_cards'>" + "<h3>" + termData[term][1] + "</h3>" +
+                            "<p>" + getTitle(termData[term][1]) + "</p>" +
+                            /* "<i class='fas fa-circle' style='font-size:24px;color:red'></i>"+
+                             "<i class='fas fa-circle' style='font-size:24px;color:red'></i>"+
+                             "<i class='fas fa-circle' style='font-size:24px;color:red'></i>"+
+                             "<i class='fas fa-circle' style='font-size:24px;color:red'></i>*/
+                            "</div>" +
 
-                    "<div class = 'course_cards'>" + "<h3>" + termData[term][3] + "</h3>" +
-                    "<p>"+ getTitle(termData[term][3])+ "</p>"+
-                   /* "<i class='fas fa-circle' style='font-size:24px;color:red'></i>"+
-                    "<i class='fas fa-circle' style='font-size:24px;color:red'></i>"+
-                    "<i class='fas fa-circle' style='font-size:24px;color:red'></i>"+
-                    "<i class='fas fa-circle' style='font-size:24px;color:red'></i>*/ "</div>"+
+                            "<div class = 'course_cards'>" + "<h3>" + termData[term][2] + "</h3>" +
+                            "<p>" + getTitle(termData[term][2]) + "</p>" +
+                            /* "<i class='fas fa-circle' style='font-size:24px;color:red'></i>"+
+                             "<i class='fas fa-circle' style='font-size:24px;color:red'></i>"+
+                             "<i class='fas fa-circle' style='font-size:24px;color:red'></i>"+
+                             "<i class='fas fa-circle' style='font-size:24px;color:red'></i>*/
+                            "</div>" +
 
-                    "<div class = 'course_cards'>" + "<h3>" + termData[term][4] + "</h3>"+
-                    "<p>"+ getTitle(termData[term][4])+ "</p>"+
-                 /*  "<i class='fas fa-circle' style='font-size:24px;color:red'></i>"+
-                    "<i class='fas fa-circle' style='font-size:24px;color:red'></i>"+
-                    "<i class='fas fa-circle' style='font-size:24px;color:red'></i>"+
-                    "<i class='fas fa-circle' style='font-size:24px;color:yellow'></i>*/ "</div>";
-                    
-                    "<div class = 'course_cards'>" + "<h3>" + termData[term][5] + "</h3>"+
-                    "<p>"+ getTitle(termData[term][5])+ "</p>"+ "</div>";
-                    
-                i = i + 1;
+                            "<div class = 'course_cards'>" + "<h3>" + termData[term][3] + "</h3>" +
+                            "<p>" + getTitle(termData[term][3]) + "</p>" +
+                            /* "<i class='fas fa-circle' style='font-size:24px;color:red'></i>"+
+                             "<i class='fas fa-circle' style='font-size:24px;color:red'></i>"+
+                             "<i class='fas fa-circle' style='font-size:24px;color:red'></i>"+
+                             "<i class='fas fa-circle' style='font-size:24px;color:red'></i>*/
+                            "</div>" +
+
+                            "<div class = 'course_cards'>" + "<h3>" + termData[term][4] + "</h3>" +
+                            "<p>" + getTitle(termData[term][4]) + "</p>" +
+                            /*  "<i class='fas fa-circle' style='font-size:24px;color:red'></i>"+
+                               "<i class='fas fa-circle' style='font-size:24px;color:red'></i>"+
+                               "<i class='fas fa-circle' style='font-size:24px;color:red'></i>"+
+                               "<i class='fas fa-circle' style='font-size:24px;color:yellow'></i>*/
+                            "</div>";
+
+                        "<div class = 'course_cards'>" + "<h3>" + termData[term][5] + "</h3>" +
+                            "<p>" + getTitle(termData[term][5]) + "</p>" + "</div>";
+
+                        i = i + 1;
+                    }
                 }
             }
         }
     }
-    }
 }
 
-function course_Info(){
+function course_Info() {
     var selected_course;
-    
+
     for (i = 0; i < 12; i++) {
         selected_course = document.getElementById("nct" + i).value;
         courseID = courseData[i].short_name;
-        
-        if(selected_course.length == courseID.length)
-        {
+
+        if (selected_course.length == courseID.length) {
             return "";
-        }else {
+        } else {
             return "No Record!!";
         }
     }
 }
 
-function courseSelect(event){
+function courseSelect(event) {
     var short_name = event.getAttribute("value");
     selected(short_name);
 }
 
-function selected(short_name){
+function selected(short_name) {
     console.log("get set course funciton");
     var xmlhttp = new XMLHttpRequest();
-    xmlhttp.onreadystatechange = function(){
-        if (this.status == 404){
+    xmlhttp.onreadystatechange = function () {
+        if (this.status == 404) {
             for (i = 0; i < 12; i++) {
-            /*document.getElementById("nct" + i).innerHTML = short_name + " has no record";*/
+                /*document.getElementById("nct" + i).innerHTML = short_name + " has no record";*/
             }
         }
-        if (this.readyState == 4 && this.status == 200){
+        if (this.readyState == 4 && this.status == 200) {
             var jsonRsp = JSON.parse(this.responseText);
             setCourse(jsonRsp);
         }
     };
-   
-    xmlhttp.open("GET", "getCourseInfo.php?short_name=" + short_name, false); 
+
+    xmlhttp.open("GET", "getCourseInfo.php?short_name=" + short_name, false);
     xmlhttp.send();
 }
 
-function setCourse(jsonRsp){
+function setCourse(jsonRsp) {
     for (i = 0; i < 12; i++) {
-    var detail = "<h2 id='title'>" + jsonRsp.short_name +"</h2>" + 
-    "<ul>" +
-        "<li><span class='bold'>Course Name</span>: <span id='fullName'>" + jsonRsp.title + "</span> </li>" +
-        "<li>***<span class='bold'>Prerequisites</span>: <span id='preReqClass'>" + jsonRsp.prerequisite + "</span> ***</li>" +
-        "<li><span class='bold'>Course Description</span>: " + jsonRsp.description + "</li>" + "</ul>" + 
-        "<h2 class='inline' id='graph_label'>Num of course in semesters</h2> " + 
-        "<div id='graph' class='graph_size'></div>"; 
-    /*document.getElementById("nct" + i).innerHTML = detail;*/
+        var detail = "<h2 id='title'>" + jsonRsp.short_name + "</h2>" +
+            "<ul>" +
+            "<li><span class='bold'>Course Name</span>: <span id='fullName'>" + jsonRsp.title + "</span> </li>" +
+            "<li>***<span class='bold'>Prerequisites</span>: <span id='preReqClass'>" + jsonRsp.prerequisite + "</span> ***</li>" +
+            "<li><span class='bold'>Course Description</span>: " + jsonRsp.description + "</li>" + "</ul>" +
+            "<h2 class='inline' id='graph_label'>Num of course in semesters</h2> " +
+            "<div id='graph' class='graph_size'></div>";
+        /*document.getElementById("nct" + i).innerHTML = detail;*/
     }
 }
 
-var termPageCounter = 1 ;
-function termDown(){
-    termPageCounter +=1;
-    if (termPageCounter <= 6){
-    showTerm(termPageCounter);
-    }
-    else {
-        termPageCounter = 6 ;
+var termPageCounter = 1;
+
+function termDown() {
+    termPageCounter += 1;
+    if (termPageCounter <= 6) {
+        showTerm(termPageCounter);
+    } else {
+        termPageCounter = 6;
     }
 
 }
-function termUp(){
-    termPageCounter -=1;
-    if(termPageCounter >= 1){
-    showTerm(termPageCounter);
-    }
-    else{
-        termPageCounter = 1 ;
+
+function termUp() {
+    termPageCounter -= 1;
+    if (termPageCounter >= 1) {
+        showTerm(termPageCounter);
+    } else {
+        termPageCounter = 1;
     }
 }
