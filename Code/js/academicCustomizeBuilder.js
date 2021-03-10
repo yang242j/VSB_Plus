@@ -354,6 +354,7 @@ function dragStart(elementId) {
 var getCredits = 0;
 var dragLeaveStopper = 0;
 var index = 0;
+var outputDonelist = [];
 //recored prev drop item course name
 function dragTest() {
     //const draggableElement = document.querySelector("#nct0");
@@ -458,7 +459,12 @@ function dragTest() {
             if (check == true && dragFrom != "course_cards" &&findExist(doneList[index], courseName) == false) {
                 index = dropZone.getAttribute("name");
                 doneList[index].push(courseName);
+
+                var order = index; //now which level is this chooen coures located
+                outputDonelist = [twoToOnedArray(donelist),order];
+                
                 console.log(doneList);
+                console.log(outputDonelist);
             }
             if(check == true && dragFrom == "course_cards"){
                 //delete first then push
@@ -466,7 +472,12 @@ function dragTest() {
                 index = dropZone.getAttribute("name");
                 console.log(index);
                 doneList[index].push(courseName);
+
+                var order = index; //now which level is this chooen coures located
+                outputDonelist = [twoToOnedArray(donelist),order];
+
                 console.log(doneList);
+                console.log(outputDonelist);
             }
             dropZone.appendChild(droppedElement);
 
@@ -546,3 +557,14 @@ function findExist(array, item) {
     }
     return false;
 }
+function twoToOnedArray(twodArray){
+var resultArray = [];
+    for (i = 0; i < array.length; i++) {
+        for (j = 0; j < array[i].length; j++) {
+            resultArray.push(array[i][j]);
+        }
+    }
+return resultArray;
+}
+
+
