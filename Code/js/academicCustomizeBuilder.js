@@ -549,7 +549,6 @@ function deleteFrom2DArray(array, item) {
     for (i = 0; i < array.length; i++) {
         for (j = 0; j < array[i].length; j++) {
             if (array[i][j] == item) {
-                console.log(array[i][j]);
                 array[i][j] = array[i][array[i].length - 1];
                 array[i].pop();
             }
@@ -574,7 +573,7 @@ function termTransfer(term) {
 
 var y = ["MATH 111", "asd", "asdsa","MATH 111", "asd", "asdsa","MATH 111", "asd", "asdsa","MATH 111", "asd", "asdsa"];
 var z = [];
-z = doneList[0];
+z = doneList[0][2];
 console.log(doneList[0]);
 console.log(y);
 console.log(z);
