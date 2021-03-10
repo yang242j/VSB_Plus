@@ -573,12 +573,12 @@ function termTransfer(term) {
 
 var y = ["MATH 111", "asd", "asdsa"];
 
-console.log(doneList[0]);
 
 function changeToOneD() {
     var temp = [];
     for (i = 0; i <= doneList[0].length; i++) {
         temp.push(doneList[0][i]);
+        console.log(doneList[0][i]);
     }
     return temp;
 }
