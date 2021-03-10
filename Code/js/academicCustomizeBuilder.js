@@ -91,6 +91,11 @@ function findCourseToTake(data) {
     var courseNotCompleted = [];
     //console.log(data);
     //console.log(data[2]);
+
+
+
+
+
     for (i = 0; i < data.length; i++) {
         if (data[i] == null) {
             return;
