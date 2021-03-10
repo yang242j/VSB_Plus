@@ -86,7 +86,6 @@ function getAllCourse() {
 //minus taken class from all course list
 function findCourseToTake(data) {
     /*console.log(data);*/
-    console.log(courseReqData);
     var courseCompleted = [];
     var courseToTake = [];
     var courseNotCompleted = [];
@@ -112,7 +111,6 @@ function findCourseToTake(data) {
         return courseCompleted.indexOf(n) === -1;
     });
     //console.log(courseNotCompleted);
-    console.log(courseNotCompleted);
     return courseNotCompleted;
 }
 
@@ -423,9 +421,9 @@ function dragTest() {
 
             var termCode = termTransfer(terminfo[0][2]);
             console.log(doneList[0]);
-            //y[0]=doneList[0][4];        
+            y[0]=doneList[0][12];        
             //chekc prerequisite
-            //console.log(ajaxpost("dropZone.id", termCode, y));
+            console.log(ajaxpost("dropZone.id", termCode, y));
             //console.log(ajaxpost("ENEL 280", "202020", x));
 
 
