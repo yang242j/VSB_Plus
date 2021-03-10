@@ -484,6 +484,7 @@ function dragTest() {
                 index = dropZone.getAttribute("name");
                 //console.log(index);
                 doneList[index].push(courseName);
+                console.log(findExist(doneList[0], "MATH 111"));
                 //console.log(doneList);
             }
             dropZone.appendChild(droppedElement);
@@ -572,9 +573,7 @@ function termTransfer(term) {
 
 var y = ["MATH 111", "asd", "asdsa","MATH 111", "asd", "asdsa","MATH 111", "asd", "asdsa","MATH 111", "asd", "asdsa"];
 var z = [];
-console.log(doneList);
-console.log(y);
-console.log(findExist(doneList[0], "MATH 111"));
+
 function ajaxpost(courseid, term, done) {
     // (A) GET FORM DATA
     var data = new FormData();
