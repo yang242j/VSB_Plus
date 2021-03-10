@@ -572,9 +572,18 @@ function termTransfer(term) {
 }
 
 var y = ["MATH 111","asd","asdsa"];
-var x =ajaxpost("ENEL 280",202020,y);
-console.log(doneList[0]);
+var x = ajaxpost("ENEL 280",202020,changeToOneD(doneList[0]));
 
+
+function changeToOneD(doneList){
+      var temp = [];
+      for(i=0;i<doneList.length;i++)
+      {
+          temp.push(doneList[i]);
+      }
+    return temp;
+}
+console.log(changeToOneD(doneList[0]));
 
 function ajaxpost(courseid, term, done) {
     // (A) GET FORM DATA
