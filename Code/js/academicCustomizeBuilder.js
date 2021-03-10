@@ -60,7 +60,7 @@ function storePassedCourse(data) {
         }
     }
 }
-console.log(doneList);
+
 // get faculty needed course
 function getTermData(faculty) {
     var myRequest = new XMLHttpRequest;
@@ -572,7 +572,7 @@ function termTransfer(term) {
 }
 
 
-var x =ajaxpost("ENEL 280",202020,JSON.parse(doneList[0]));
+var x =ajaxpost("ENEL 280",202020,JSON.stringify(doneList[0]));
 
 
 function ajaxpost(courseid, term, done) {
@@ -580,7 +580,6 @@ function ajaxpost(courseid, term, done) {
     var data = new FormData();
     data.append("courseid", courseid);
     data.append("term", term);
-    console.log(doneList[0]);
     data.append("doneList", done);
     console.log(JSON.stringify(done));
 
