@@ -573,10 +573,7 @@ function termTransfer(term) {
 
 var y = ["MATH 111", "asd", "asdsa","MATH 111", "asd", "asdsa","MATH 111", "asd", "asdsa","MATH 111", "asd", "asdsa"];
 var z = [];
-z = doneList[0][2];
-console.log(doneList[0]);
-console.log(y);
-console.log(z);
+console.log(doneList);
 
 function ajaxpost(courseid, term, done) {
     // (A) GET FORM DATA
