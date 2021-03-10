@@ -575,11 +575,12 @@ var y = ["MATH 111","asd","asdsa"];
 var x = ajaxpost("ENEL 280",202020,changeToOneD(doneList[0]));
 
 
-function changeToOneD(doneList){
+function changeToOneD(done){
       var temp = [];
-      for(i=0;i<doneList.length;i++)
+      for(i=0;i<done.length;i++)
       {
-          temp.push(doneList[i]);
+          temp.push(done[i]);
+          console.log(done[i]);
       }
     return temp;
 }
