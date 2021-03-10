@@ -407,7 +407,7 @@ function dragTest() {
             //console.log(terminfo);
             var check = false;
             for (i = 0; i < terminfo[0].length; i++) {
-                if (terminfo[0][i] == "undefined") { terminfo[0][i] = ""; }
+                if (terminfo[0][i] == null) { terminfo[0][i] = "space"; }
                 if (terminfo[0][i] == dropZone.id) {
                     check = true;
                     document.getElementById(newForAlern).style.color = "black";
@@ -418,7 +418,7 @@ function dragTest() {
                 alert("Term info not match");
             }
 
-            if (terminfo[1] != null) {
+            if (terminfo[0] != null) {
                 document.getElementById(newForAlern).innerHTML = "Applied Term: </br>" +
                     terminfo[0][0] + "</br>" + terminfo[0][1] + "</br>" + terminfo[0][2];//terminfo[0] is term
                 getCredits = parseInt(terminfo[1]);
@@ -429,7 +429,9 @@ function dragTest() {
                 //getCredits = 0;
                 //document.getElementById(newForAlern).innerHTML = "this course not applied for now";
             }
+            //transfer term to number 
             var termCode = termTransfer(terminfo[0][2]);
+            console.log(terminfo[0][2]);
             console.log(termCode);
             //console.log(dropZone.className);
             //update cerdits
@@ -450,7 +452,7 @@ function dragTest() {
             document.getElementById(newForAlern).style.lineHeight = "110%";
 
             if (document.getElementById(newForAlern).innerHTML.length <= 80) {
-                document.getElementById(newForAlern).style.fontSize = "16px";
+                document.getElementById(newForAlern).style.fontSize = "14px";
             }
             if (document.getElementById(newForAlern).innerHTML.length <= 100 && document.getElementById(newForAlern).innerHTML.length > 80) {
                 document.getElementById(newForAlern).style.fontSize = "12px";
