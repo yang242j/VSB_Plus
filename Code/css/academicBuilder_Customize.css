@@ -181,7 +181,7 @@ body .terms .term1 #course_cards_builder p{
         border-bottom: 3px solid grey;
         display: grid;
         width:102%;
-        height:120%;
+        height:125%;
         grid-template-columns: 22% 22% 22% 22%;
         grid-template-rows:repeat(20,17%);
         column-gap: 10px;
