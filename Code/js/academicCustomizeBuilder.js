@@ -464,7 +464,7 @@ function dragTest() {
                     terminfo1 = "W";
                 }
                 if (terminfo[0][1] == "Spring/Summer") {
-                    terminfo2 = "S/S";
+                    terminfo2 = "S";
 
                 } if (terminfo[0][2] == "Fall") {
                     terminfo3 = "F";
