@@ -285,34 +285,13 @@ function showTerm(pageNumber) {
     }
 }
 
-function course_Info() {
-    var selected_course;
 
-    for (i = 0; i < 12; i++) {
-        selected_course = document.getElementById("nct" + i).value;
-        courseID = courseData[i].short_name;
-
-        if (selected_course.length == courseID.length) {
-            return "";
-        } else {
-            return "No Record!!";
-        }
-    }
-}
-
-function courseSelect(event) {
-    var short_name = event.getAttribute("value");
-    selected(short_name);
-}
-
-function selected(short_name) {
-    console.log("get set course funciton");
+function courseSelect() {
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {
-        if (this.status == 404) {
-            for (i = 0; i < 12; i++) {
-                /*document.getElementById("nct" + i).innerHTML = short_name + " has no record";*/
-            }
+        if (this.status == 404){
+            document.getElementById("not_completed_tag").innerHTML = "No Record!!";
+        }
         }
         if (this.readyState == 4 && this.status == 200) {
             var jsonRsp = JSON.parse(this.responseText);
@@ -333,7 +312,7 @@ function setCourse(jsonRsp) {
             "<li><span class='bold'>Course Description</span>: " + jsonRsp.description + "</li>" + "</ul>" +
             "<h2 class='inline' id='graph_label'>Num of course in semesters</h2> " +
             "<div id='graph' class='graph_size'></div>";
-        /*document.getElementById("nct" + i).innerHTML = detail;*/
+        document.getElementById("not_completed_tag").innerHTML = detail;
     }
 }
 
