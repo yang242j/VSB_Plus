@@ -422,8 +422,8 @@ function dragTest() {
             var check = false;
 
             var termCode = termTransfer(terminfo[0][2]);
-
-           // y[0]=doneList[0][4];        
+            console.log(doneList[0]);
+            //y[0]=doneList[0][4];        
             //chekc prerequisite
             //console.log(ajaxpost("dropZone.id", termCode, y));
             //console.log(ajaxpost("ENEL 280", "202020", x));
