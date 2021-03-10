@@ -174,7 +174,7 @@ body .terms .term1 #course_cards_builder p{
     }
     body .tags_courses .course_list .course_not_completed{
         /*border: 2px solid red;*/
-        margin-top: -350px;
+        margin-top: -340px;
     }
     body .tags_courses .course_list .course_tag_not_completed{
         /*border: 2px solid red;*/
@@ -185,7 +185,7 @@ body .terms .term1 #course_cards_builder p{
         grid-template-columns: 22% 22% 22% 22%;
         grid-template-rows:repeat(20,17%);
         column-gap: 10px;
-        margin-top: -360px;
+        margin-top: -350px;
         margin-left: -20px;
         font-size: 18px;
     }
