@@ -191,6 +191,7 @@ body .terms .term1 #course_cards_builder p{
     }
     body .tags_courses .course_list .course_tag_not_completed p{
         /*border: 2px solid red;*/
+        height:120%;
         margin-left: 8px;
         background-color: #D4F19F;
         border-radius: 25px;
