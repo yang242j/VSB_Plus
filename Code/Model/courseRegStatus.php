@@ -97,6 +97,7 @@ if ($validFormat) {
             if (exp_matched($strArr[1], $doneList)) {
                 $status["Prerequisites"] = true;
                 $status["Notes"] .= "\nPrerequisites [Matched]:\n$strArr[0]\n";
+                
             } else {
                 // Course prerequisites not matched
                 $status["Prerequisites"] = false;

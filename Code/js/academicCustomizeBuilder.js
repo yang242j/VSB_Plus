@@ -633,7 +633,7 @@ function ajaxpost(courseid, term, done) {
 
         } else {
             // Do nothing and alert the returned Notes
-            console.log(JSON.parse(rsp.Notes));
+            //console.log(rsp.Notes);
             alert(rsp.Notes);
             return false;
         }
