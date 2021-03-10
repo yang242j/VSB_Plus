@@ -518,6 +518,7 @@ function dragTest() {
 
                 //pop from donelist
                 deleteFrom2DArray(doneList, courseName);
+                deleteFromArray(outputDonelist[0]);
                 console.log(doneList);
             }
             dropZone.appendChild(droppedElement);
