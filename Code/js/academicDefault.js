@@ -290,7 +290,7 @@ function course_Info(){
         
         if(selected_course.length == courseID.length)
         {
-            return "getTitle(termData[term][1])";
+            return "";
         }else {
             return "No Record!!";
         }
