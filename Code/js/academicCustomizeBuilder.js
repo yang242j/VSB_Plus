@@ -367,6 +367,7 @@ var getCredits = 0;
 var dragLeaveStopper = 0;
 var index = 0;
 var outputDonelist = [];
+var decidePreTrueOrFalse = false;
 //recored prev drop item course name
 function dragTest() {
     //const draggableElement = document.querySelector("#nct0");
@@ -582,7 +583,6 @@ function termTransfer(term) {
     if (term == "Spring/Summer") return 202020;
     if (term == "Fall") return 202030;
 }
-var decidePreTrueOrFalse = true;
 function ajaxpost(courseid, term, done) {
     // (A) GET FORM DATA
     var data = new FormData();
