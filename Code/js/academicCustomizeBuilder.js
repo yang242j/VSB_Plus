@@ -595,7 +595,7 @@ function ajaxpost(courseid, term, done) {
     xhr.onload = function () {
         let rsp = JSON.parse(this.response);
         //console.log(rsp)
-        console.log(rsp);
+        console.log(rsp.Prerequisites);
         if (rsp.Prerequisites == true) {
             // Generate course tag
             //courseid = rsp.CourseID;
