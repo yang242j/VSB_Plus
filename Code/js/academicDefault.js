@@ -299,9 +299,10 @@ function showTerm(pageNumber) {
 
 function courseInfo() {
     
-    for (x = 0; x < 12; x++) {
+   
       
     for (i = 0; i < allCourseData.length; i++) {
+        for (x = 0; x < 12; x++) {
         var courseName = document.getElementById("enct" + x).value;
         if (allCourseData[i].short_name == courseName && allCourseData[i].title != null)
             return ("<h3>" + allCourseData[i].short_name + "</h3>" + 
