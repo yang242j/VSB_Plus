@@ -575,15 +575,14 @@ var y = ["MATH 111", "asd", "asdsa"];
 
 
 
-function changeToOneD(done, index) {
+function changeToOneD() {
     var temp = [];
-    for (i = 0; i <= done[index].length; i++) {
-        temp.push(done[index][i]);
+    for (i = 0; i <= doneList[0].length; i++) {
+        temp.push(doneList[0][i]);
     }
     return temp;
 }
-var x = changeToOneD(doneList,0);
-console.log(x);
+x=changeToOneD();
 
 function ajaxpost(courseid, term, done) {
     // (A) GET FORM DATA
