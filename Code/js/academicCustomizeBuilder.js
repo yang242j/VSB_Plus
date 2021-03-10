@@ -423,8 +423,7 @@ function dragTest() {
 
 
             //chekc prerequisite
-            y = ["MATH 100","CHEM 104","CS 110","ENGG 100","MATH 111","ENGG 123","MATH 122","PHYS 109","STAT 160","PHYS 119","CS 115","MATH 217","ENEL 280","MATH 213"];
-            console.log(ajaxpost("ENEL 280", "202020", y));
+            console.log(ajaxpost("ENEL 280", "202020", doneList[0][0]));
 
 
 
