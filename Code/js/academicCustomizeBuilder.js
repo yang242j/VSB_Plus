@@ -571,16 +571,15 @@ function termTransfer(term) {
     if (term == "Fall") return 202030;
 }
 
-var y = ["MATH 111","asd","asdsa"];
+var y = ["MATH 111", "asd", "asdsa"];
 
 
 
-function changeToOneD(done){
-      var temp = [];
-      for(i=0;i<done.length;i++)
-      {
-          temp.push(done[i]);
-      }
+function changeToOneD(done, index) {
+    var temp = [];
+    for (i = 0; i <= done[index].length; i++) {
+        temp.push(done[index][i]);
+    }
     return temp;
 }
 var x = changeToOneD(doneList[0]);
@@ -606,7 +605,7 @@ function ajaxpost(courseid, term, done) {
             // Generate course tag
             courseid = rsp.CourseID;
             return true;
-           
+
         } else {
             // Do nothing and alert the returned Notes
             alert(rsp.Notes);
