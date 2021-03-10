@@ -297,6 +297,13 @@ function showTerm(pageNumber) {
 }
 
 function courseSelect() {
+    /*for (i = 0; i < allCourseData.length; i++) {
+        if (allCourseData[i].short_name == courseName && allCourseData[i].title != null)
+            return ("<h3>" + allCourseData[i].short_name + "</h3>" + 
+            "<p>" + "Title: </br>" + allCourseData[i].title + "</p>" +
+            "<p>" + "Prerequisite: </br>" + allCourseData[i].prerequisite + "</p>");
+    }
+    return ("No Record!!");
 }
 
 
