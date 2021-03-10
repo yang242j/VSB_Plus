@@ -286,7 +286,7 @@ function showTerm(pageNumber) {
 }
 
 
-function courseSelect() {
+/*function courseSelect() {
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {
         if (this.status == 404){
@@ -301,7 +301,7 @@ function courseSelect() {
 
     xmlhttp.open("GET", "getCourseInfo.php?short_name=" + short_name, false);
     xmlhttp.send();
-}
+}*/
 
 function setCourse(jsonRsp) {
     for (i = 0; i < 12; i++) {
