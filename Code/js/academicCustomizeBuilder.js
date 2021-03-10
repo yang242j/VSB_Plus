@@ -534,7 +534,7 @@ function dragTest() {
 
     }
 }
-console.log(doneList[0][0]);
+console.log(doneList[0]);
 //find a item and delete it 
 function deleteFromArray(array, item) {
     for (i = 0; i < array.length; i++) {
