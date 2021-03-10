@@ -429,6 +429,8 @@ function dragTest() {
                 //getCredits = 0;
                 //document.getElementById(newForAlern).innerHTML = "this course not applied for now";
             }
+            var termCode = termTransfer(terminfo[0][2]);
+            console.log(termCode);
             //console.log(dropZone.className);
             //update cerdits
             dropZone.classList.remove("drop-zone--over");
@@ -453,31 +455,21 @@ function dragTest() {
             if (document.getElementById(newForAlern).innerHTML.length <= 100 && document.getElementById(newForAlern).innerHTML.length > 80) {
                 document.getElementById(newForAlern).style.fontSize = "12px";
             }
-
             //add to donelist
 
             if (check == true && dragFrom != "course_cards" &&findExist(doneList[index], courseName) == false) {
                 index = dropZone.getAttribute("name");
-                doneList[index].push(courseName);
-
-                var order = index; //now which level is this chooen coures located
-                outputDonelist = [twoToOnedArray(doneList),order];
-                
+                doneList[index].push(courseName);            
                 console.log(doneList);
-                console.log(outputDonelist);
+            
             }
             if(check == true && dragFrom == "course_cards"){
                 //delete first then push
                 deleteFrom2DArray(doneList,courseName);
                 index = dropZone.getAttribute("name");
                 console.log(index);
-                doneList[index].push(courseName);
-
-                var order = index; //now which level is this chooen coures located
-                outputDonelist = [twoToOnedArray(doneList),order];
-
+                doneList[index].push(courseName);             
                 console.log(doneList);
-                console.log(outputDonelist);
             }
             dropZone.appendChild(droppedElement);
 
@@ -518,7 +510,6 @@ function dragTest() {
 
                 //pop from donelist
                 deleteFrom2DArray(doneList, courseName);
-                deleteFromArray(outputDonelist[0]);
                 console.log(doneList);
             }
             dropZone.appendChild(droppedElement);
@@ -557,15 +548,10 @@ function findExist(array, item) {
         }
     }
     return false;
+}//transfer term name to number
+function termTransfer(term){
+    if(term == "Winter") return 202110;
+    if(term == "Spring/Summer") return 202020;
+    if(term == "Fall") return 202030;
 }
-function twoToOnedArray(twodArray){
-var resultArray = [];
-    for (i = 0; i < twodArray.length; i++) {
-        for (j = 0; j < twodArray.length; j++) {
-            resultArray.push(twodArray[i][j]);
-        }
-    }
-return resultArray;
-}
-
 
