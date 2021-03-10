@@ -584,7 +584,7 @@ function changeToOneD(done){
       }
     return temp;
 }
-console.log(changeToOneD(doneList[0]));
+changeToOneD(doneList[0]);
 
 function ajaxpost(courseid, term, done) {
     // (A) GET FORM DATA
