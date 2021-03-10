@@ -571,8 +571,8 @@ function termTransfer(term) {
     if (term == "Fall") return 202030;
 }
 
-
-var x =ajaxpost("ENEL 280",202020,JSON.stringify(doneList[0]));
+var y = ["MATH 111"];
+var x =ajaxpost("ENEL 280",202020,y);
 
 
 function ajaxpost(courseid, term, done) {
@@ -580,7 +580,7 @@ function ajaxpost(courseid, term, done) {
     var data = new FormData();
     data.append("courseid", courseid);
     data.append("term", term);
-    data.append("doneList", done);
+    data.append("doneList", JSON.stringify(done));
     console.log(done);
 
     // (B) AJAX
