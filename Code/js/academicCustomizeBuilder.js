@@ -469,8 +469,12 @@ function dragTest() {
                 } if (terminfo[0][2] == "Fall") {
                     terminfo3 = "F";
                 }
+                var term = [terminfo1,terminfo2,terminfo3 = "F"];
+                deleteFromArray(term, null)
+
+
                 document.getElementById(newForAlern).innerHTML = "Applied Term: </br>" +
-                    terminfo1 + "," + terminfo1 + "," + terminfo2; //terminfo[0] is term
+                    term; //terminfo[0] is term
                 getCredits = parseInt(terminfo[1]);
             } else {
                 alert("this course not applied");
