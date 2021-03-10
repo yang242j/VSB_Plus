@@ -33,13 +33,13 @@ function fetchCourseJSON(sid, password) {
         showCourses(data);
         getCreditsEarned(data);
         storePassedCourse(data)
-        //console.log(data);
+       
     });
 }
 
 getTermData(major);
 getAllCourse();
-//console.log(getTermInfo("CHEM 140"));
+
 window.onload = function init() {
     fetchCourseJSON(sid, pas);
 }
@@ -85,20 +85,17 @@ function getAllCourse() {
 }
 //minus taken class from all course list
 function findCourseToTake(data) {
-    /*console.log(data);*/
     var courseCompleted = [];
     var courseToTake = [];
     var courseNotCompleted = [];
-    //console.log(data);
-    //console.log(data[2]);
+   
     for (i = 0; i < data.length; i++) {
         if (data[i] == null )  {
         } else if(data[i].credit_earned>0)
         courseCompleted[i] = data[i].course_ID;;
     }
     
-    //console.log(courseCompleted);
-    //console.log(courseReqData);
+   
     for (term in courseReqData) {
         for (i = 0; i < courseReqData[term].length; i++) {
             if (courseReqData[term][i] != "Approved") {
@@ -106,14 +103,12 @@ function findCourseToTake(data) {
             }
         }
     }
-    //console.log(courseToTake);
+
     // minus taken class from all course list
     var courseNotCompleted = courseToTake.filter(function (n) {
         return courseCompleted.indexOf(n) === -1;
     });
-    //console.log(courseNotCompleted);
-    console.log(courseCompleted);
-    console.log(courseNotCompleted);
+
     return courseNotCompleted;
 }
 
@@ -137,7 +132,7 @@ function getColor(index, dataJSON) {
 
 function showCourses(data) {
     var dataJSON = JSON.parse(data);
-    console.log(dataJSON);
+    //console.log(dataJSON);
     var notCompletedData = findCourseToTake(dataJSON);
     for (i = 0; i < 12; i++) {
         if (i < dataJSON.length) {
@@ -430,15 +425,12 @@ function dragTest() {
             //chekc prerequisite
             //console.log(ajaxpost(courseName, "202020", y));
             //console.log(ajaxpost("ENEL 280", "202020", x));
-            console.log(doneList[0]);
-            console.log(dropZone.getAttribute("name"));
             for (i = 0; i <= dropZone.getAttribute("name"); i++) {
                 for (j = 0; j < doneList[i].length; j++) {
-                    console.log(doneList[i][j]);
+
                     container.push(doneList[i][j]);
                 }
             }
-            console.log(ajaxpost(courseName, "202020", container));
 
 
 
@@ -500,7 +492,7 @@ function dragTest() {
             if (check == true && dragFrom != "course_cards" && findExist(doneList[index], courseName) == false) {
                 index = dropZone.getAttribute("name");
                 doneList[index].push(courseName);
-                console.log(doneList);
+                //console.log(doneList);
 
             }
             if (check == true && dragFrom == "course_cards") {
@@ -550,7 +542,7 @@ function dragTest() {
 
                 //pop from donelist
                 deleteFrom2DArray(doneList, courseName);
-                console.log(doneList);
+                //console.log(doneList);
             }
             dropZone.appendChild(droppedElement);
 
@@ -607,7 +599,6 @@ function ajaxpost(courseid, term, done) {
     // When server responds
     xhr.onload = function () {
         let rsp = JSON.parse(this.response);
-        //console.log(rsp)
         if (rsp.Prerequisites == true) {
             // Generate course tag
             //courseid = rsp.CourseID;
