@@ -285,15 +285,52 @@ function course_Info(){
     var selected_course;
     
     for (i = 0; i < 12; i++) {
-        selected_course = document.getElementById("nct" + i);
-        var course_info = courseData[i].short_name;
+        selected_course = document.getElementById("nct" + i).value;
+        courseID = courseData[i].short_name;
         
-        if(selected_course.length == course_info.length)
+        if(selected_course.length == courseID.length)
         {
-            return "work";
+            return "";
         }else {
             return "No Record!!";
         }
+    }
+}
+
+function courseSelect(event){
+    var short_name = event.getAttribute("value");
+    selected(short_name);
+}
+
+function selected(short_name){
+    console.log("get set course funciton");
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function(){
+        if (this.status == 404){
+            for (i = 0; i < 12; i++) {
+            /*document.getElementById("nct" + i).innerHTML = short_name + " has no record";*/
+            }
+        }
+        if (this.readyState == 4 && this.status == 200){
+            var jsonRsp = JSON.parse(this.responseText);
+            setCourse(jsonRsp);
+        }
+    };
+   
+    xmlhttp.open("GET", "getCourseInfo.php?short_name=" + short_name, false); 
+    xmlhttp.send();
+}
+
+function setCourse(jsonRsp){
+    for (i = 0; i < 12; i++) {
+    var detail = "<h2 id='title'>" + jsonRsp.short_name +"</h2>" + 
+    "<ul>" +
+        "<li><span class='bold'>Course Name</span>: <span id='fullName'>" + jsonRsp.title + "</span> </li>" +
+        "<li>***<span class='bold'>Prerequisites</span>: <span id='preReqClass'>" + jsonRsp.prerequisite + "</span> ***</li>" +
+        "<li><span class='bold'>Course Description</span>: " + jsonRsp.description + "</li>" + "</ul>" + 
+        "<h2 class='inline' id='graph_label'>Num of course in semesters</h2> " + 
+        "<div id='graph' class='graph_size'></div>"; 
+    /*document.getElementById("nct" + i).innerHTML = detail;*/
     }
 }
 
