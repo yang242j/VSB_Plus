@@ -1,5 +1,6 @@
 const colors = ["red", "yellow", "blue", "purple", "plum", "black"];
 var courseData;
+var ecourseData;
 var termData;
 var allCourse;
 window.onload = function () {
