@@ -428,7 +428,7 @@ function dragTest() {
                 }
             }
             //ajaxpost(courseName, "202020", container);
-            console.log(ajaxpost(courseName, "202020", container));
+           ajaxpost(courseName, "202020", container);
 
 
 
