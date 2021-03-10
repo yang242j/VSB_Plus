@@ -423,7 +423,8 @@ function dragTest() {
 
 
             //chekc prerequisite
-            console.log(ajaxpost("ENEL 280", "202020", doneList[0]));
+            y = ["MATH 111"]
+            console.log(ajaxpost("ENEL 280", "202020", y));
 
 
 
@@ -586,7 +587,6 @@ function ajaxpost(courseid, term, done) {
     data.append("courseid", courseid);
     data.append("term", term);
     data.append("doneList", JSON.stringify(done));
-    console.log(done);
 
     // (B) AJAX
     var xhr = new XMLHttpRequest();
