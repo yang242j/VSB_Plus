@@ -304,7 +304,7 @@ function courseSelect() {
             "<p>" + "Prerequisite: </br>" + allCourseData[i].prerequisite + "</p>");
     }
     return ("No Record!!");
-}
+}*/
 
 
 var termPageCounter = 1;
