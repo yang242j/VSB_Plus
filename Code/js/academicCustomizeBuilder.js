@@ -580,11 +580,11 @@ function changeToOneD(done){
       for(i=0;i<done.length;i++)
       {
           temp.push(done[i]);
-          console.log(done[i]);
       }
     return temp;
 }
-changeToOneD(doneList[0]);
+var x = changeToOneD(doneList[0]);
+console.log(x);
 
 function ajaxpost(courseid, term, done) {
     // (A) GET FORM DATA
