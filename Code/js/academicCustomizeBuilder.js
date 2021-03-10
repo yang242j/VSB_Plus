@@ -425,12 +425,15 @@ function dragTest() {
             //chekc prerequisite
             //console.log(ajaxpost(courseName, "202020", y));
             //console.log(ajaxpost("ENEL 280", "202020", x));
+          
             for (i = 0; i <= dropZone.getAttribute("name"); i++) {
                 for (j = 0; j < doneList[i].length; j++) {
-
+                    //console.log(doneList[i][j]);
                     container.push(doneList[i][j]);
                 }
             }
+            //ajaxpost(courseName, "202020", container);
+            console.log(ajaxpost(courseName, "202020", container));
 
 
 
