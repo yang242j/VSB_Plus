@@ -116,7 +116,7 @@ session_start();
                     <td id="message"></td>
                 </tr>
             </table>
-            <button id="selectToggle">Hidden courses list</button>
+            <button id="selectToggle">Toggle Courses List</button>
             <!-- <input type="submit" value="Submit" onclick="setFilter(event)" />
             <p id="filter_cond"></p> -->
         </form>

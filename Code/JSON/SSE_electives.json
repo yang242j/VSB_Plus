@@ -1,0 +1,132 @@
+[
+    {
+        "short_name": "ENSE 474",
+        "title": "Software Process Management",
+        "faculty": "ENSE",
+        "credit": "3",
+        "description": "Software processes: standards, implementation, and assurance. Project management with a focus on requirements management and long-term evolution: Eliciting and prioritizing requirements, cost estimation, planning and tracking projects, risk analysis, project control, change management.",
+        "prerequisite": "ENSE 374"
+    },
+    {
+        "short_name": "ENSE 479",
+        "title": "Engineering Concepts in Sound Art",
+        "faculty": "ENSE",
+        "credit": "3",
+        "description": "This course introduces the artistic practice and engineering design concepts within sound art. It covers a range of sound art practices including avant-garde sound, Musique Concrete, sound and 1960s art movements, electroacoustic music, sound sculpture, radio art, Acoustic Ecology, community-engaged sound art, sound art in performance, and engineering design concepts of new media.",
+        "prerequisite": " Successful completion of 30 credit hours or permission of Program Chair"
+    },
+    {
+        "short_name": "ENSE 480",
+        "title": "Knowledge Base and Information Systems",
+        "faculty": "ENSE",
+        "credit": "3",
+        "description": "This course analyzes the fundamentals of industrial knowledge management. Students will learn how to analyze a company and how to produce an information system.  Topics include the fundamentals of Knowledge Base Management Information Systems and their impact on the business process, engineering an information system, Workflow Management Design, and reengineering for change management.",
+        "prerequisite": " ENSE 353 or completion of 81 SSE program related credit hours or permission of Program Chair"
+    },
+    {
+        "short_name": "ENSE 481",
+        "title": "Embedded Systems and Co-design",
+        "faculty": "ENSE",
+        "credit": "3",
+        "description": "Embedded systems are increasingly common in modern systems design.  This course will teach students how to take advantage of embedded systems technology in their system designs.  Topics include: advanced microcontroller real-time design, co-design, embedded systems design issues, power considerations, and wireless considerations.",
+        "prerequisite": "ENEL 387 and ENEL 487"
+    },
+    {
+        "short_name": "ENSE 482",
+        "title": "New Media Technology",
+        "faculty": "ENSE",
+        "credit": "3",
+        "description": "This course aims to provide a basic level of understanding to make it possible for engineers to work with designers and understand some of the constraints within New Media design.  Topics include: definition of New Media, New Media narratives, Multimedia, integration, intermedia, the basic tools, and New Media design.",
+        "prerequisite": "ENSE 374"
+    },
+    {
+        "short_name": "ENSE 483",
+        "title": "Digital Wireless Systems",
+        "faculty": "ENSE",
+        "credit": "3",
+        "description": "This course provides the skills necessary to understand and use systems from the point of view of protocol, bandwidth, and spectrum allocation.  Topics include spectrum allocation, digital modulation, spread-spectrum communications fundamentals, digital radio protocols for modern wireless systems, working with CDPD, Bluetooth, and IEE 802.11a/b, interference and collision.",
+        "prerequisite": "ENSE 374"
+    },
+    {
+        "short_name": "CS 205",
+        "title": "Introduction to Multimedia Systems",
+        "faculty": "CS",
+        "credit": "3",
+        "description": "Multimedia is the use of computers to integrate texts, graphics, video, animation, and sound in an interactive experience. The course introduces these elements of multimedia and their associated technologies. Students will gain an appreciation of each element and be able to combine them into a finished work.",
+        "prerequisite": "CS 110"
+    },
+    {
+        "short_name": "CS 315",
+        "title": "Introduction to Computer Graphics",
+        "faculty": "CS",
+        "credit": "3",
+        "description": "Introduction to graphics hardware and software. Two-dimensional graphics rendering algorithms. Basic three-dimensional modeling, transformations, viewing geometry, lighting and shading,  hidden surface removel, and texture mapping.",
+        "prerequisite": "CS210 and MATH 122"
+    },
+    {
+        "short_name": "CS 330",
+        "title": "Introduction to Operating Systems",
+        "faculty": "CS",
+        "credit": "3",
+        "description": "Overview of operating systems: functionality, and design issues. Operating system principles: structures, abstractions, APIs, resource allocation, proximity, virtualization. Concurrency: process state, context switches, process communication, synchronization. Scheduling: preemption, schedulers, processes, and threads. Memory management. Security and protection. File systems. User interface. Distributed algorithms: consensus, termination, and fault tolerance.",
+        "prerequisite": "CS 210"
+    },
+    {
+        "short_name": "CS 375",
+        "title": "Database and Information Retrieval",
+        "faculty": "CS",
+        "credit": "3",
+        "description": "Information management: concepts and applications. Motivation for database systems. Components of database systems. Data modeling: conceptual, spreadsheet, relational, object-oriented, and semi-structured models. Querying and database query languages. Caching and transaction processing. Other topics include distributed databases, physical database design, and information retrieval systems.",
+        "prerequisite": "CS 215"
+    },
+    {
+        "short_name": "CS 405",
+        "title": "Computer Graphics",
+        "faculty": "CS",
+        "credit": "3",
+        "description": "Advanced topics in computer graphics, including special modeling techniques for natural phenomenon, advanced illumination models and rendering algorithms.",
+        "prerequisite": "CS 315"
+    },
+    {
+        "short_name": "CS 425",
+        "title": "Image Processing",
+        "faculty": "CS",
+        "credit": "3",
+        "description": "Introduction to image processing systems.  Image transformation.  Image enhancement.  Image coding and compression.  Feature extraction and image segmentation.",
+        "prerequisite": "CS 340, MATH 111 and 122"
+    },
+    {
+        "short_name": "CS 427",
+        "title": "Introduction to Computer Audio",
+        "faculty": "CS",
+        "credit": "3",
+        "description": "The purpose of this course is to provide a broad overview of many areas of computer audio, including: Digital representation and compression; Psychoacoustics; Surround Sound; Speech recognition and Music Information Retrieval; MIDI and New interfaces for music; and video game sound. We will also explore modular interactive software environments such as Max/MSP and PD.",
+        "prerequisite": "CS 315, or CS 320, or CS 340"
+    },
+    {
+        "short_name": "ENEL 487",
+        "title": "Embedded and Real-Time Software Systems",
+        "faculty": "ENEL",
+        "credit": "3",
+        "description": "Software design practises for resource-constrained targets. Students will design and implement a number of embedded components, culminating by integrating them into a full embedded system involving aspects of feedback control, signal processing, or communications. Topics: Architectures for real-time systems. Fundamentals of real-time operating systems. Software design. Interfacing and communications. Speed, memory, and power performance tradeoffs. Testing. Dependability.",
+        "prerequisite": "ENEL 387 and CS 210"
+    },
+    {
+        "short_name": "ENEL 489",
+        "title": "FPGA Design Using VHDL",
+        "faculty": "ENEL",
+        "credit": "3",
+        "description": "Introduction to FPGA digital system design. Students will learn a high-level hardware design language (VHDL), the concurrent and sequential statements of VHDL, the principle and practice of combinational circuit design, the principle and practice of sequential circuit design, Finite State Machine, Register Transfer Methodology, the synthesis and implementation of digital design on a FPGA device. Advanced synchronous digital design 3 techniques such as pipelining, parallelism, and caching. Students will develop a design and test it on an FPGA development board.",
+        "prerequisite": "ENEL 384"
+    }
+  ]
+  
+  
+    
+  
+  
+  
+  
+  
+ 
+   

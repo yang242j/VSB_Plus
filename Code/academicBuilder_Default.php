@@ -259,19 +259,19 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 
         <div class = "course_tag_not_completed" id = "not_completed_tag">
             <p id = "nct0" onclick="alert(courseSelect(this))">ENSE 271</p>
-            <p id = "nct1" onclick="alert(courseSelect(this))">ENSE 271</p>
-            <p id = "nct2" onclick="alert(courseSelect(this))">ENSE 271</p>
-            <p id = "nct3" onclick="alert(courseSelect(this))">ENSE 271</p>
+            <p id = "nct1">ENSE 271</p>
+            <p id = "nct2">ENSE 271</p>
+            <p id = "nct3">ENSE 271</p>
 
-            <p id = "nct4" onclick="alert(courseSelect(this))">ENSE 271</p>
-            <p id = "nct5" onclick="alert(courseSelect(this))">ENSE 271</p>
-            <p id = "nct6" onclick="alert(courseSelect(this))">ENSE 271</p>
-            <p id = "nct7" onclick="alert(courseSelect(this))">ENSE 271</p>
+            <p id = "nct4">ENSE 271</p>
+            <p id = "nct5">ENSE 271</p>
+            <p id = "nct6">ENSE 271</p>
+            <p id = "nct7">ENSE 271</p>
             
-            <p id = "nct8" onclick="alert(courseSelect(this))">ENSE 271</p>
-            <p id = "nct9" onclick="alert(courseSelect(this))">ENSE 271</p>
-            <p id = "nct10" onclick="alert(courseSelect(this))">ENSE 271</p>
-            <p id = "nct11" onclick="alert(courseSelect(this))">ENSE 271</p>
+            <p id = "nct8" onclick="alert(courseSelect())">ENSE 271</p>
+            <p id = "nct9" onclick="alert(courseSelect())">ENSE 271</p>
+            <p id = "nct10" onclick="alert(courseSelect())">ENSE 271</p>
+            <p id = "nct11" onclick="alert(courseSelect())">ENSE 271</p>
             <div><button class="left_arrow" id ="notCompletedLeft" onclick = "nctLeft()"><i class='fas fa-angle-left'></i></button>
                 <button class="right_arrow" id ="notCompletedRight" onclick = "nctRight()"><i class='fas fa-angle-right'></i></button>
             </div>

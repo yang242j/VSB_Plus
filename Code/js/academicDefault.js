@@ -42,6 +42,17 @@ function getCourseData() {
     myRequest.send();
 }
 
+function getElectiveCourseData() {
+    var myRequest = new XMLHttpRequest;
+    //myRequest.open("GET", "JSON/ESE.json", false);
+    myRequest.open("GET", "JSON/SSE_electives.json", false);
+    myRequest.onload = function () {
+        var data = JSON.parse(myRequest.responseText);
+        ecourseData = data;
+    }
+    myRequest.send();
+}
+
 function getTermData() {
     var myRequest = new XMLHttpRequest;
     //myRequest.open("GET", "JSON/reqCourse/ESE_req.json", false);
@@ -62,7 +73,7 @@ function showNotCompletedCourse() {
 
 function showNotCompletedElectivesCourse() {
     for (i = 0; i < 12; i++) {
-        document.getElementById("enct" + i).innerHTML = courseData[i].short_name;
+        document.getElementById("enct" + i).innerHTML = ecourseData[i].short_name;
     }
 }
 
@@ -184,10 +195,10 @@ function enctLeft() {
         }
 
         for (x = 12 * ecounter; x < 12 * (ecounter + 1); x++) {
-            if (x > courseData.length) {
+            if (x > ecourseData.length) {
                 document.getElementById("enct" + z).innerHTML = " ";
             } else {
-                document.getElementById("enct" + z).innerHTML = courseData[x].short_name;
+                document.getElementById("enct" + z).innerHTML = ecourseData[x].short_name;
             }
             z = z + 1;
         }
@@ -198,7 +209,7 @@ function enctLeft() {
 
 function enctRight() {
     y = 0;
-    if (courseData[x].short_name != null) {
+    if (ecourseData[x].short_name != null) {
         ecounter += 1;
     }
     /*document.getElementById("notCompletedRight").innerHTML = counter;*/
@@ -207,11 +218,11 @@ function enctRight() {
             document.getElementById("enct" + x).innerHTML = "";
         }
         for (x = 12 * ecounter; x < 12 * (ecounter + 1); x++) {
-            if (courseData[x] == null) return;
-            if (x > courseData.length) {
+            if (ecourseData[x] == null) return;
+            if (x > ecourseData.length) {
                 document.getElementById("enct" + y).innerHTML = " ";
             } else {
-                document.getElementById("enct" + y).innerHTML = courseData[x].short_name;
+                document.getElementById("enct" + y).innerHTML = ecourseData[x].short_name;
             }
             y = y + 1;
         }
@@ -285,57 +296,16 @@ function showTerm(pageNumber) {
     }
 }
 
-function course_Info() {
-    var selected_course;
-
-    for (i = 0; i < 12; i++) {
-        selected_course = document.getElementById("nct" + i).value;
-        courseID = courseData[i].short_name;
-
-        if (selected_course.length == courseID.length) {
-            return "";
-        } else {
-            return "No Record!!";
-        }
+function courseSelect() {
+    /*for (i = 0; i < allCourseData.length; i++) {
+        if (allCourseData[i].short_name == courseName && allCourseData[i].title != null)
+            return ("<h3>" + allCourseData[i].short_name + "</h3>" + 
+            "<p>" + "Title: </br>" + allCourseData[i].title + "</p>" +
+            "<p>" + "Prerequisite: </br>" + allCourseData[i].prerequisite + "</p>");
     }
+    return ("No Record!!");
 }
 
-function courseSelect(event) {
-    var short_name = event.getAttribute("value");
-    selected(short_name);
-}
-
-function selected(short_name) {
-    console.log("get set course funciton");
-    var xmlhttp = new XMLHttpRequest();
-    xmlhttp.onreadystatechange = function () {
-        if (this.status == 404) {
-            for (i = 0; i < 12; i++) {
-                /*document.getElementById("nct" + i).innerHTML = short_name + " has no record";*/
-            }
-        }
-        if (this.readyState == 4 && this.status == 200) {
-            var jsonRsp = JSON.parse(this.responseText);
-            setCourse(jsonRsp);
-        }
-    };
-
-    xmlhttp.open("GET", "getCourseInfo.php?short_name=" + short_name, false);
-    xmlhttp.send();
-}
-
-function setCourse(jsonRsp) {
-    for (i = 0; i < 12; i++) {
-        var detail = "<h2 id='title'>" + jsonRsp.short_name + "</h2>" +
-            "<ul>" +
-            "<li><span class='bold'>Course Name</span>: <span id='fullName'>" + jsonRsp.title + "</span> </li>" +
-            "<li>***<span class='bold'>Prerequisites</span>: <span id='preReqClass'>" + jsonRsp.prerequisite + "</span> ***</li>" +
-            "<li><span class='bold'>Course Description</span>: " + jsonRsp.description + "</li>" + "</ul>" +
-            "<h2 class='inline' id='graph_label'>Num of course in semesters</h2> " +
-            "<div id='graph' class='graph_size'></div>";
-        /*document.getElementById("nct" + i).innerHTML = detail;*/
-    }
-}
 
 var termPageCounter = 1;
 
