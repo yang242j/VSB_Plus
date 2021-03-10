@@ -42,6 +42,17 @@ function getCourseData() {
     myRequest.send();
 }
 
+function getElectiveCourseData() {
+    var myRequest = new XMLHttpRequest;
+    //myRequest.open("GET", "JSON/ESE.json", false);
+    myRequest.open("GET", "JSON/SSE_electives.json", false);
+    myRequest.onload = function () {
+        var data = JSON.parse(myRequest.responseText);
+        ecourseData = data;
+    }
+    myRequest.send();
+}
+
 function getTermData() {
     var myRequest = new XMLHttpRequest;
     //myRequest.open("GET", "JSON/reqCourse/ESE_req.json", false);
@@ -62,7 +73,7 @@ function showNotCompletedCourse() {
 
 function showNotCompletedElectivesCourse() {
     for (i = 0; i < 12; i++) {
-        document.getElementById("enct" + i).innerHTML = courseData[i].short_name;
+        document.getElementById("enct" + i).innerHTML = ecourseData[i].short_name;
     }
 }
 
@@ -187,7 +198,7 @@ function enctLeft() {
             if (x > courseData.length) {
                 document.getElementById("enct" + z).innerHTML = " ";
             } else {
-                document.getElementById("enct" + z).innerHTML = courseData[x].short_name;
+                document.getElementById("enct" + z).innerHTML = ecourseData[x].short_name;
             }
             z = z + 1;
         }
@@ -211,7 +222,7 @@ function enctRight() {
             if (x > courseData.length) {
                 document.getElementById("enct" + y).innerHTML = " ";
             } else {
-                document.getElementById("enct" + y).innerHTML = courseData[x].short_name;
+                document.getElementById("enct" + y).innerHTML = ecourseData[x].short_name;
             }
             y = y + 1;
         }
