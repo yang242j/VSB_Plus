@@ -1,1 +1,120 @@
-{"term": "2020 Fall", "short_name": "GEOL 102", "title": "Environmental Geology", "faculty": "GEOL", "credit": "3", "description": "The nature of the earth.  Plate tectonics and the geological time scale.  Earthquakes, volcanism and surface processes with reference to their effect on the human environment. Earth resources, waste disposal, and pollution in a geological context.", "prerequisite": "", "section": [{"course_ID": "31563", "section_num": "001", "instructors": "Janis E.  Dale (P)", "days": "MWF", "time": "11:30 am - 12:20 pm", "loc": "Remote", "course_type": "Lecture", "exam_days": "M", "exam_date": "Dec 21, 2020 - Dec 21, 2020", "exam_time": "9:00 am - 12:00 pm"}, {"course_ID": "31564", "section_num": "060", "instructors": "Jason Isaac  Cosford (P)", "days": "S", "time": "9:00 am - 11:20 am", "loc": "Remote", "course_type": "Lecture", "exam_days": "S", "exam_date": "Dec 19, 2020 - Dec 19, 2020", "exam_time": "9:00 am - 12:00 pm"}, {"course_ID": "31565", "section_num": "061", "instructors": "Michael Andrew  Cloutier (P)", "days": "S", "time": "1:00 pm - 3:20 pm", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "31566", "section_num": "091", "instructors": "Monica Julieta  Cliveti (P)", "days": "T", "time": "8:30 am - 11:15 am", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "31567", "section_num": "092", "instructors": "Monica Julieta  Cliveti (P)", "days": "T", "time": "2:30 pm - 5:15 pm", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "31568", "section_num": "093", "instructors": "Monica Julieta  Cliveti (P)", "days": "W", "time": "8:30 am - 11:15 am", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "31569", "section_num": "094", "instructors": "Monica Julieta  Cliveti (P)", "days": "W", "time": "2:30 pm - 5:15 pm", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "31570", "section_num": "095", "instructors": "Monica Julieta  Cliveti (P)", "days": "R", "time": "8:30 am - 11:15 am", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "31571", "section_num": "096", "instructors": "Monica Julieta  Cliveti (P)", "days": "R", "time": "11:30 am - 2:15 pm", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "31572", "section_num": "098", "instructors": "Monica Julieta  Cliveti (P)", "days": "F", "time": "8:30 am - 11:15 am", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}]}
+{
+    "term": "2020 Fall",
+    "short_name": "GEOL 102",
+    "title": "Environmental Geology",
+    "faculty": "GEOL",
+    "credit": "3",
+    "description": "The nature of the earth.  Plate tectonics and the geological time scale.  Earthquakes, volcanism and surface processes with reference to their effect on the human environment. Earth resources, waste disposal, and pollution in a geological context.",
+    "prerequisite": "",
+    "section": [{
+        "course_ID": "31563",
+        "section_num": "001",
+        "instructors": "Janis E.  Dale (P)",
+        "days": "MWF",
+        "time": "11:30 am - 12:20 pm",
+        "loc": "Remote",
+        "course_type": "Lecture",
+        "exam_days": "M",
+        "exam_date": "Dec 21, 2020 - Dec 21, 2020",
+        "exam_time": "9:00 am - 12:00 pm"
+    }, {
+        "course_ID": "31564",
+        "section_num": "060",
+        "instructors": "Jason Isaac  Cosford (P)",
+        "days": "S",
+        "time": "9:00 am - 11:20 am",
+        "loc": "Remote",
+        "course_type": "Lecture",
+        "exam_days": "S",
+        "exam_date": "Dec 19, 2020 - Dec 19, 2020",
+        "exam_time": "9:00 am - 12:00 pm"
+    }, {
+        "course_ID": "31565",
+        "section_num": "061",
+        "instructors": "Michael Andrew  Cloutier (P)",
+        "days": "S",
+        "time": "1:00 pm - 3:20 pm",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "31566",
+        "section_num": "091",
+        "instructors": "Monica Julieta  Cliveti (P)",
+        "days": "T",
+        "time": "8:30 am - 11:15 am",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "31567",
+        "section_num": "092",
+        "instructors": "Monica Julieta  Cliveti (P)",
+        "days": "T",
+        "time": "2:30 pm - 5:15 pm",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "31568",
+        "section_num": "093",
+        "instructors": "Monica Julieta  Cliveti (P)",
+        "days": "W",
+        "time": "8:30 am - 11:15 am",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "31569",
+        "section_num": "094",
+        "instructors": "Monica Julieta  Cliveti (P)",
+        "days": "W",
+        "time": "2:30 pm - 5:15 pm",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "31570",
+        "section_num": "095",
+        "instructors": "Monica Julieta  Cliveti (P)",
+        "days": "R",
+        "time": "8:30 am - 11:15 am",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "31571",
+        "section_num": "096",
+        "instructors": "Monica Julieta  Cliveti (P)",
+        "days": "R",
+        "time": "11:30 am - 2:15 pm",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "31572",
+        "section_num": "098",
+        "instructors": "Monica Julieta  Cliveti (P)",
+        "days": "F",
+        "time": "8:30 am - 11:15 am",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }]
+}

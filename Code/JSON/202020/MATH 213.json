@@ -1,1 +1,21 @@
-{"term": "2020 Spring/Summer", "short_name": "MATH 213", "title": "Vector Calculus", "faculty": "MATH", "credit": "3", "description": "A study of vector functions and functions of several variables and their derivatives; Applied maximum and minimum problems, Lagrange multipliers, multiple integration, integration in polar, cylindrical and spherical coordinates; Green's, Stokes' and the Divergence Theorem.", "prerequisite": "MATH 111 and 122", "section": [{"course_ID": "22130", "section_num": "070", "instructors": "Abdel Rahman   Al-Abdallah (P)", "days": "MTWR", "time": "11:00 am - 12:15 pm", "loc": "Remote", "course_type": "Lecture", "exam_days": "W", "exam_date": "Aug 26, 2020 - Aug 26, 2020", "exam_time": "8:00 am - 11:00 am"}]}
+{
+    "term": "2020 Spring/Summer",
+    "short_name": "MATH 213",
+    "title": "Vector Calculus",
+    "faculty": "MATH",
+    "credit": "3",
+    "description": "A study of vector functions and functions of several variables and their derivatives; Applied maximum and minimum problems, Lagrange multipliers, multiple integration, integration in polar, cylindrical and spherical coordinates; Green's, Stokes' and the Divergence Theorem.",
+    "prerequisite": "MATH 111 and 122",
+    "section": [{
+        "course_ID": "22130",
+        "section_num": "070",
+        "instructors": "Abdel Rahman   Al-Abdallah (P)",
+        "days": "MTWR",
+        "time": "11:00 am - 12:15 pm",
+        "loc": "Remote",
+        "course_type": "Lecture",
+        "exam_days": "W",
+        "exam_date": "Aug 26, 2020 - Aug 26, 2020",
+        "exam_time": "8:00 am - 11:00 am"
+    }]
+}

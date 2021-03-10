@@ -1,1 +1,43 @@
-{"term": "2020 Spring/Summer", "short_name": "ENGG 100", "title": "Engineering Graphics", "faculty": "ENGG", "credit": "3", "description": "Fundamentals of graphical communication and analysis. Manual and computer-aided sketching and drawing techniques; orthographic and pictorial projections; multi-view, isometric and oblique drawings; basic descriptive geometry; introduction to working drawings.", "prerequisite": "", "section": [{"course_ID": "21898", "section_num": "040", "instructors": "Wei   Peng (P)", "days": "MW", "time": "9:30 am - 12:20 pm", "loc": "Remote", "course_type": "Lecture", "exam_days": "T", "exam_date": "Jun 23, 2020 - Jun 23, 2020", "exam_time": "8:00 am - 11:00 am"}, {"course_ID": "21899", "section_num": "041", "instructors": "Robert Deryck  Jones (P)", "days": "TR", "time": "8:30 am - 11:20 am", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "21900", "section_num": "042", "instructors": "TBA", "days": "F", "time": "9:30 am - 10:20 am", "loc": "Remote", "course_type": "Seminar", "exam_days": null, "exam_date": null, "exam_time": null}]}
+{
+    "term": "2020 Spring/Summer",
+    "short_name": "ENGG 100",
+    "title": "Engineering Graphics",
+    "faculty": "ENGG",
+    "credit": "3",
+    "description": "Fundamentals of graphical communication and analysis. Manual and computer-aided sketching and drawing techniques; orthographic and pictorial projections; multi-view, isometric and oblique drawings; basic descriptive geometry; introduction to working drawings.",
+    "prerequisite": "",
+    "section": [{
+        "course_ID": "21898",
+        "section_num": "040",
+        "instructors": "Wei   Peng (P)",
+        "days": "MW",
+        "time": "9:30 am - 12:20 pm",
+        "loc": "Remote",
+        "course_type": "Lecture",
+        "exam_days": "T",
+        "exam_date": "Jun 23, 2020 - Jun 23, 2020",
+        "exam_time": "8:00 am - 11:00 am"
+    }, {
+        "course_ID": "21899",
+        "section_num": "041",
+        "instructors": "Robert Deryck  Jones (P)",
+        "days": "TR",
+        "time": "8:30 am - 11:20 am",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "21900",
+        "section_num": "042",
+        "instructors": "TBA",
+        "days": "F",
+        "time": "9:30 am - 10:20 am",
+        "loc": "Remote",
+        "course_type": "Seminar",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }]
+}

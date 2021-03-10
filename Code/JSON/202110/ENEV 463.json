@@ -1,1 +1,21 @@
-{"term": "2021 Winter", "short_name": "ENEV 463", "title": "Water Resources Systems", "faculty": "ENEV", "credit": "3", "description": "Water resources planning and management. Topics include planning for hydroelectric, flood control, water supply and irrigation projects; stochastic processes; synthetic streamflow generation; simulation and optimization of water resource systems.", "prerequisite": "ENEV 462", "section": [{"course_ID": "10938", "section_num": "001", "instructors": "Amgad Salama Ahmed  Salama (P)", "days": "MW", "time": "4:30 pm - 5:45 pm", "loc": "Remote", "course_type": "Lecture", "exam_days": "F", "exam_date": "Apr 30, 2021 - Apr 30, 2021", "exam_time": "2:00 pm - 5:00 pm"}]}
+{
+    "term": "2021 Winter",
+    "short_name": "ENEV 463",
+    "title": "Water Resources Systems",
+    "faculty": "ENEV",
+    "credit": "3",
+    "description": "Water resources planning and management. Topics include planning for hydroelectric, flood control, water supply and irrigation projects; stochastic processes; synthetic streamflow generation; simulation and optimization of water resource systems.",
+    "prerequisite": "ENEV 462",
+    "section": [{
+        "course_ID": "10938",
+        "section_num": "001",
+        "instructors": "Amgad Salama Ahmed  Salama (P)",
+        "days": "MW",
+        "time": "4:30 pm - 5:45 pm",
+        "loc": "Remote",
+        "course_type": "Lecture",
+        "exam_days": "F",
+        "exam_date": "Apr 30, 2021 - Apr 30, 2021",
+        "exam_time": "2:00 pm - 5:00 pm"
+    }]
+}

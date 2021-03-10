@@ -1,1 +1,32 @@
-{"term": "2021 Winter", "short_name": "ENIN 448", "title": "Facilities Planning and Design", "faculty": "ENIN", "credit": "3", "description": "Approaches to establishing location and layout of space, equipment, and services for industrial facilities.  Criteria and data for generating alternatives.  Material handling, flow, and balance.  Environmental, human, and cost consideration.", "prerequisite": "ENIN 343", "section": [{"course_ID": "11207", "section_num": "001", "instructors": "Golam   Kabir (P)", "days": "MWF", "time": "5:30 pm - 6:20 pm", "loc": "Remote", "course_type": "Lecture", "exam_days": "F", "exam_date": "Apr 30, 2021 - Apr 30, 2021", "exam_time": "7:00 pm - 10:00 pm"}, {"course_ID": "11208", "section_num": "091", "instructors": "Syed Adeel Haneef   Zaidi (P)", "days": "R", "time": "2:30 pm - 5:15 pm", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}]}
+{
+    "term": "2021 Winter",
+    "short_name": "ENIN 448",
+    "title": "Facilities Planning and Design",
+    "faculty": "ENIN",
+    "credit": "3",
+    "description": "Approaches to establishing location and layout of space, equipment, and services for industrial facilities.  Criteria and data for generating alternatives.  Material handling, flow, and balance.  Environmental, human, and cost consideration.",
+    "prerequisite": "ENIN 343",
+    "section": [{
+        "course_ID": "11207",
+        "section_num": "001",
+        "instructors": "Golam   Kabir (P)",
+        "days": "MWF",
+        "time": "5:30 pm - 6:20 pm",
+        "loc": "Remote",
+        "course_type": "Lecture",
+        "exam_days": "F",
+        "exam_date": "Apr 30, 2021 - Apr 30, 2021",
+        "exam_time": "7:00 pm - 10:00 pm"
+    }, {
+        "course_ID": "11208",
+        "section_num": "091",
+        "instructors": "Syed Adeel Haneef   Zaidi (P)",
+        "days": "R",
+        "time": "2:30 pm - 5:15 pm",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }]
+}

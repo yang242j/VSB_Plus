@@ -1,1 +1,65 @@
-{"term": "2021 Winter", "short_name": "MATH 122", "title": "Linear Algebra I", "faculty": "MATH", "credit": "3", "description": "A course intended to introduce students to elementary linear algebra, particularly at a computational and applied level. Topics include matrices and systems of equations, inversion, determinants, vectors, inner products, eigenvectors and eigenvalues.", "prerequisite": "Precalculus 30, Mathematics B30 and C30, or Math 102.", "section": [{"course_ID": "12022", "section_num": "001", "instructors": "Chun-Hua   Guo (P)", "days": "MWF", "time": "1:30 pm - 2:20 pm", "loc": "Remote", "course_type": "Lecture", "exam_days": "T", "exam_date": "Apr 27, 2021 - Apr 27, 2021", "exam_time": "7:00 pm - 10:00 pm"}, {"course_ID": "12023", "section_num": "010", "instructors": "TBA", "days": "M", "time": "3:30 pm - 4:20 pm", "loc": "Classroom Building 128", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "12024", "section_num": "C01", "instructors": "Robert George  Petry (P)", "days": "TRF", "time": "3:30 pm - 4:20 pm", "loc": "Remote", "course_type": "Lecture", "exam_days": "T", "exam_date": "Apr 27, 2021 - Apr 27, 2021", "exam_time": "7:00 pm - 10:00 pm"}, {"course_ID": "12025", "section_num": "C02", "instructors": "Robert George  Petry (P)", "days": "TRF", "time": "3:30 pm - 4:20 pm", "loc": "Remote", "course_type": "Lecture", "exam_days": "T", "exam_date": "Apr 27, 2021 - Apr 27, 2021", "exam_time": "7:00 pm - 10:00 pm"}, {"course_ID": "12026", "section_num": "C10", "instructors": "Robert George  Petry (P)", "days": "W", "time": "1:30 pm - 2:20 pm", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}]}
+{
+    "term": "2021 Winter",
+    "short_name": "MATH 122",
+    "title": "Linear Algebra I",
+    "faculty": "MATH",
+    "credit": "3",
+    "description": "A course intended to introduce students to elementary linear algebra, particularly at a computational and applied level. Topics include matrices and systems of equations, inversion, determinants, vectors, inner products, eigenvectors and eigenvalues.",
+    "prerequisite": "Precalculus 30, Mathematics B30 and C30, or Math 102.",
+    "section": [{
+        "course_ID": "12022",
+        "section_num": "001",
+        "instructors": "Chun-Hua   Guo (P)",
+        "days": "MWF",
+        "time": "1:30 pm - 2:20 pm",
+        "loc": "Remote",
+        "course_type": "Lecture",
+        "exam_days": "T",
+        "exam_date": "Apr 27, 2021 - Apr 27, 2021",
+        "exam_time": "7:00 pm - 10:00 pm"
+    }, {
+        "course_ID": "12023",
+        "section_num": "010",
+        "instructors": "TBA",
+        "days": "M",
+        "time": "3:30 pm - 4:20 pm",
+        "loc": "Classroom Building 128",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "12024",
+        "section_num": "C01",
+        "instructors": "Robert George  Petry (P)",
+        "days": "TRF",
+        "time": "3:30 pm - 4:20 pm",
+        "loc": "Remote",
+        "course_type": "Lecture",
+        "exam_days": "T",
+        "exam_date": "Apr 27, 2021 - Apr 27, 2021",
+        "exam_time": "7:00 pm - 10:00 pm"
+    }, {
+        "course_ID": "12025",
+        "section_num": "C02",
+        "instructors": "Robert George  Petry (P)",
+        "days": "TRF",
+        "time": "3:30 pm - 4:20 pm",
+        "loc": "Remote",
+        "course_type": "Lecture",
+        "exam_days": "T",
+        "exam_date": "Apr 27, 2021 - Apr 27, 2021",
+        "exam_time": "7:00 pm - 10:00 pm"
+    }, {
+        "course_ID": "12026",
+        "section_num": "C10",
+        "instructors": "Robert George  Petry (P)",
+        "days": "W",
+        "time": "1:30 pm - 2:20 pm",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }]
+}

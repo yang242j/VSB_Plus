@@ -1,1 +1,10 @@
-{"term": "No class for the term", "short_name": "ENEV 281", "title": "Surveying, Mapping and Information Systems", "faculty": "ENEV", "credit": "3", "description": "Fundamental principles and methods of surveying fieldwork and computations. Concurrent lectures, fieldwork, and office work. Spatial information systems.", "prerequisite": " ENGG 123", "section": []}
+{
+    "term": "No class for the term",
+    "short_name": "ENEV 281",
+    "title": "Surveying, Mapping and Information Systems",
+    "faculty": "ENEV",
+    "credit": "3",
+    "description": "Fundamental principles and methods of surveying fieldwork and computations. Concurrent lectures, fieldwork, and office work. Spatial information systems.",
+    "prerequisite": " ENGG 123",
+    "section": []
+}

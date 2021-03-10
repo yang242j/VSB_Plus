@@ -1,1 +1,43 @@
-{"term": "2021 Winter", "short_name": "ENIN 233", "title": "System Dynamics", "faculty": "ENIN", "credit": "3", "description": "Lumped parameter linear analysis methods for mechanical, electrical, fluid and thermal systems.  Linear differential equations to analyze system response to step and sinusoidal forcing functions.  Analogous nature of these systems.", "prerequisite": " MATH 217", "section": [{"course_ID": "11184", "section_num": "001", "instructors": "Amgad Salama Ahmed  Salama (P)", "days": "MW", "time": "1:00 pm - 2:15 pm", "loc": "Remote", "course_type": "Lecture", "exam_days": "W", "exam_date": "Apr 28, 2021 - Apr 28, 2021", "exam_time": "9:00 am - 12:00 pm"}, {"course_ID": "11185", "section_num": "091", "instructors": "Syed Adeel Haneef   Zaidi (P)", "days": "W", "time": "2:30 pm - 5:15 pm", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "11186", "section_num": "092", "instructors": "Syed Adeel Haneef   Zaidi (P)", "days": "M", "time": "8:30 am - 11:15 am", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}]}
+{
+    "term": "2021 Winter",
+    "short_name": "ENIN 233",
+    "title": "System Dynamics",
+    "faculty": "ENIN",
+    "credit": "3",
+    "description": "Lumped parameter linear analysis methods for mechanical, electrical, fluid and thermal systems.  Linear differential equations to analyze system response to step and sinusoidal forcing functions.  Analogous nature of these systems.",
+    "prerequisite": " MATH 217",
+    "section": [{
+        "course_ID": "11184",
+        "section_num": "001",
+        "instructors": "Amgad Salama Ahmed  Salama (P)",
+        "days": "MW",
+        "time": "1:00 pm - 2:15 pm",
+        "loc": "Remote",
+        "course_type": "Lecture",
+        "exam_days": "W",
+        "exam_date": "Apr 28, 2021 - Apr 28, 2021",
+        "exam_time": "9:00 am - 12:00 pm"
+    }, {
+        "course_ID": "11185",
+        "section_num": "091",
+        "instructors": "Syed Adeel Haneef   Zaidi (P)",
+        "days": "W",
+        "time": "2:30 pm - 5:15 pm",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "11186",
+        "section_num": "092",
+        "instructors": "Syed Adeel Haneef   Zaidi (P)",
+        "days": "M",
+        "time": "8:30 am - 11:15 am",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }]
+}

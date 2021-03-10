@@ -1,1 +1,10 @@
-{"term": "No class for the term", "short_name": "ENPE 448", "title": "Reservoir Characterization", "faculty": "ENPE", "credit": "3", "description": "Review petroleum reservoir geology, geological depositional environments, petrophysical and geostatistical analysis, and reserves estimation based on static and dynamic reservoir information.  Emphasis on data analysis and integration for a model suitable for reservoir simulation.", "prerequisite": "ENPE 440 (may be taken concurrently)", "section": []}
+{
+    "term": "No class for the term",
+    "short_name": "ENPE 448",
+    "title": "Reservoir Characterization",
+    "faculty": "ENPE",
+    "credit": "3",
+    "description": "Review petroleum reservoir geology, geological depositional environments, petrophysical and geostatistical analysis, and reserves estimation based on static and dynamic reservoir information.  Emphasis on data analysis and integration for a model suitable for reservoir simulation.",
+    "prerequisite": "ENPE 440 (may be taken concurrently)",
+    "section": []
+}

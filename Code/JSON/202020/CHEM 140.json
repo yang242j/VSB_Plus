@@ -1,1 +1,10 @@
-{"term": "No class for the term", "short_name": "CHEM 140", "title": "Organic Chemistry I", "faculty": "CHEM", "credit": "3", "description": "An introduction to organic chemistry. Organic functional groups, nomenclature, reactions and mechanisms. Lab component: Introduction to organic laboratory techniques.", "prerequisite": "CHEM 104", "section": []}
+{
+    "term": "No class for the term",
+    "short_name": "CHEM 140",
+    "title": "Organic Chemistry I",
+    "faculty": "CHEM",
+    "credit": "3",
+    "description": "An introduction to organic chemistry. Organic functional groups, nomenclature, reactions and mechanisms. Lab component: Introduction to organic laboratory techniques.",
+    "prerequisite": "CHEM 104",
+    "section": []
+}

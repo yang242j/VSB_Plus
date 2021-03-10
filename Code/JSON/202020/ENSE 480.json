@@ -1,1 +1,10 @@
-{"term": "No class for the term", "short_name": "ENSE 480", "title": "Knowledge Base and Information Systems", "faculty": "ENSE", "credit": "3", "description": "This course analyzes the fundamentals of industrial knowledge management. Students will learn how to analyze a company and how to produce an information system.  Topics include the fundamentals of Knowledge Base Management Information Systems and their impact on the business process, engineering an information system, Workflow Management Design, and reengineering for change management.", "prerequisite": " ENSE 353 or completion of 81 SSE program related credit hours or permission of Program Chair", "section": []}
+{
+    "term": "No class for the term",
+    "short_name": "ENSE 480",
+    "title": "Knowledge Base and Information Systems",
+    "faculty": "ENSE",
+    "credit": "3",
+    "description": "This course analyzes the fundamentals of industrial knowledge management. Students will learn how to analyze a company and how to produce an information system.  Topics include the fundamentals of Knowledge Base Management Information Systems and their impact on the business process, engineering an information system, Workflow Management Design, and reengineering for change management.",
+    "prerequisite": " ENSE 353 or completion of 81 SSE program related credit hours or permission of Program Chair",
+    "section": []
+}

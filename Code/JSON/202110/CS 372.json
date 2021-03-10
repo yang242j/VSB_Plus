@@ -1,1 +1,21 @@
-{"term": "2021 Winter", "short_name": "CS 372", "title": "Software Engineering Methodology", "faculty": "CS", "credit": "3", "description": "Fundamental principles of designing programs and developing large software systems that meet specifications and that are safe, secure, reliable and maintainable. Software process models, software project management, requirements engineering, software design, software construction, software verification and validation, software tools and environments, software evolution, software reliability.", "prerequisite": "CS 215", "section": [{"course_ID": "10580", "section_num": "001", "instructors": "Samira   Sadaoui-Mouhoub (P)", "days": "TR", "time": "10:00 am - 11:15 am", "loc": "Remote", "course_type": "Lecture", "exam_days": "R", "exam_date": "Apr 22, 2021 - Apr 22, 2021", "exam_time": "9:00 am - 12:00 pm"}]}
+{
+    "term": "2021 Winter",
+    "short_name": "CS 372",
+    "title": "Software Engineering Methodology",
+    "faculty": "CS",
+    "credit": "3",
+    "description": "Fundamental principles of designing programs and developing large software systems that meet specifications and that are safe, secure, reliable and maintainable. Software process models, software project management, requirements engineering, software design, software construction, software verification and validation, software tools and environments, software evolution, software reliability.",
+    "prerequisite": "CS 215",
+    "section": [{
+        "course_ID": "10580",
+        "section_num": "001",
+        "instructors": "Samira   Sadaoui-Mouhoub (P)",
+        "days": "TR",
+        "time": "10:00 am - 11:15 am",
+        "loc": "Remote",
+        "course_type": "Lecture",
+        "exam_days": "R",
+        "exam_date": "Apr 22, 2021 - Apr 22, 2021",
+        "exam_time": "9:00 am - 12:00 pm"
+    }]
+}

@@ -1,1 +1,32 @@
-{"term": "2021 Winter", "short_name": "MATH 213", "title": "Vector Calculus", "faculty": "MATH", "credit": "3", "description": "A study of vector functions and functions of several variables and their derivatives; Applied maximum and minimum problems, Lagrange multipliers, multiple integration, integration in polar, cylindrical and spherical coordinates; Green's, Stokes' and the Divergence Theorem.", "prerequisite": "MATH 111 and 122", "section": [{"course_ID": "12028", "section_num": "001", "instructors": "Donald West Garth  Stanley (P)", "days": "TR", "time": "10:00 am - 11:15 am", "loc": "Classroom Building 127", "course_type": "Lecture", "exam_days": "S", "exam_date": "Apr 17, 2021 - Apr 17, 2021", "exam_time": "9:00 am - 12:00 pm"}, {"course_ID": "12029", "section_num": "991", "instructors": "Moumita   Shau (P)", "days": "TR", "time": "5:30 pm - 6:45 pm", "loc": "Remote", "course_type": "Lecture", "exam_days": "S", "exam_date": "Apr 17, 2021 - Apr 17, 2021", "exam_time": "9:00 am - 12:00 pm"}]}
+{
+    "term": "2021 Winter",
+    "short_name": "MATH 213",
+    "title": "Vector Calculus",
+    "faculty": "MATH",
+    "credit": "3",
+    "description": "A study of vector functions and functions of several variables and their derivatives; Applied maximum and minimum problems, Lagrange multipliers, multiple integration, integration in polar, cylindrical and spherical coordinates; Green's, Stokes' and the Divergence Theorem.",
+    "prerequisite": "MATH 111 and 122",
+    "section": [{
+        "course_ID": "12028",
+        "section_num": "001",
+        "instructors": "Donald West Garth  Stanley (P)",
+        "days": "TR",
+        "time": "10:00 am - 11:15 am",
+        "loc": "Classroom Building 127",
+        "course_type": "Lecture",
+        "exam_days": "S",
+        "exam_date": "Apr 17, 2021 - Apr 17, 2021",
+        "exam_time": "9:00 am - 12:00 pm"
+    }, {
+        "course_ID": "12029",
+        "section_num": "991",
+        "instructors": "Moumita   Shau (P)",
+        "days": "TR",
+        "time": "5:30 pm - 6:45 pm",
+        "loc": "Remote",
+        "course_type": "Lecture",
+        "exam_days": "S",
+        "exam_date": "Apr 17, 2021 - Apr 17, 2021",
+        "exam_time": "9:00 am - 12:00 pm"
+    }]
+}

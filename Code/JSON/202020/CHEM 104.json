@@ -1,1 +1,43 @@
-{"term": "2020 Spring/Summer", "short_name": "CHEM 104", "title": "General Chemistry I", "faculty": "CHEM", "credit": "3", "description": "An introduction to the fundamental principles of chemistry. Topics discussed will include atomic structure, bonding, stoichiometry, enthalpy, solutions, organic compounds. Lab component: Introduction to standard chemistry laboratory techniques.", "prerequisite": "CHEM 30 or CHEM 100 (minimum 65%); and Precalculus 30 or Mathematics C30 with a grade of at least 65%, or AMTH 092 with a grade of at least 80%, or MATH 102.", "section": [{"course_ID": "22606", "section_num": "070", "instructors": "Thomas Bernard  Biss (P)", "days": "TR", "time": "12:00 pm - 2:45 pm", "loc": "Remote", "course_type": "Lecture", "exam_days": "W", "exam_date": "Aug 26, 2020 - Aug 26, 2020", "exam_time": "8:00 am - 11:00 am"}, {"course_ID": "22609", "section_num": "071", "instructors": "Erika   Smith (P)", "days": "W", "time": "2:00 pm - 5:00 pm", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "22609", "section_num": "071", "instructors": "Erika   Smith (P)", "days": "M", "time": "10:00 am - 1:00 pm", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}]}
+{
+    "term": "2020 Spring/Summer",
+    "short_name": "CHEM 104",
+    "title": "General Chemistry I",
+    "faculty": "CHEM",
+    "credit": "3",
+    "description": "An introduction to the fundamental principles of chemistry. Topics discussed will include atomic structure, bonding, stoichiometry, enthalpy, solutions, organic compounds. Lab component: Introduction to standard chemistry laboratory techniques.",
+    "prerequisite": "CHEM 30 or CHEM 100 (minimum 65%); and Precalculus 30 or Mathematics C30 with a grade of at least 65%, or AMTH 092 with a grade of at least 80%, or MATH 102.",
+    "section": [{
+        "course_ID": "22606",
+        "section_num": "070",
+        "instructors": "Thomas Bernard  Biss (P)",
+        "days": "TR",
+        "time": "12:00 pm - 2:45 pm",
+        "loc": "Remote",
+        "course_type": "Lecture",
+        "exam_days": "W",
+        "exam_date": "Aug 26, 2020 - Aug 26, 2020",
+        "exam_time": "8:00 am - 11:00 am"
+    }, {
+        "course_ID": "22609",
+        "section_num": "071",
+        "instructors": "Erika   Smith (P)",
+        "days": "W",
+        "time": "2:00 pm - 5:00 pm",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "22609",
+        "section_num": "071",
+        "instructors": "Erika   Smith (P)",
+        "days": "M",
+        "time": "10:00 am - 1:00 pm",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }]
+}

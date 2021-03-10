@@ -1,1 +1,10 @@
-{"term": "No class for the term", "short_name": "STAT 289", "title": "Statistics for Engineers", "faculty": "STAT", "credit": "3", "description": "Topics include probability, discrete and continuous distributions, the central limit theorem, confidence intervals and hypothesis tests for one and two samples, linear regression and correlation.", "prerequisite": "MATH 111", "section": []}
+{
+    "term": "No class for the term",
+    "short_name": "STAT 289",
+    "title": "Statistics for Engineers",
+    "faculty": "STAT",
+    "credit": "3",
+    "description": "Topics include probability, discrete and continuous distributions, the central limit theorem, confidence intervals and hypothesis tests for one and two samples, linear regression and correlation.",
+    "prerequisite": "MATH 111",
+    "section": []
+}

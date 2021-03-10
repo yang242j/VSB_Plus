@@ -1,1 +1,109 @@
-{"term": "2020 Spring/Summer", "short_name": "CS 210", "title": "Data Structures and Abstractions", "faculty": "CS", "credit": "3", "description": "This course introduces data abstraction, data structures and their implementations, the basics of algorithmic analysis, and the fundamental computing algorithms. Topics include stacks, queues, heaps, recursion, Master Theorem, asymptotic notation, computational complexity, empirical performance measurement, recursion based sorting algorithms, hashing, and trees (including binary trees, B-trees, and AVL trees).", "prerequisite": "CS 115 and MATH 110", "section": [{"course_ID": "21861", "section_num": "040", "instructors": "Maher   Elshakankiri (P)", "days": "MTWR", "time": "11:00 am - 12:15 pm", "loc": "Remote", "course_type": "Lecture", "exam_days": "W", "exam_date": "Jun 24, 2020 - Jun 24, 2020", "exam_time": "8:00 am - 11:00 am"}, {"course_ID": "21862", "section_num": "096", "instructors": "Catherine Pei  Song (P)", "days": "T", "time": "12:30 pm - 3:50 pm", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "21863", "section_num": "097", "instructors": "Catherine Pei  Song (P)", "days": "W", "time": "12:30 pm - 3:50 pm", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "21864", "section_num": "098", "instructors": "Catherine Pei  Song (P)", "days": "R", "time": "12:30 pm - 3:50 pm", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "21865", "section_num": "099", "instructors": "Catherine Pei  Song (P)", "days": "F", "time": "12:30 pm - 3:50 pm", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "22638", "section_num": "A96", "instructors": "Andr\u00e9 Evaristo  dos Santos (P)", "days": "T", "time": "12:30 pm - 3:50 pm", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "22639", "section_num": "A97", "instructors": "Andr\u00e9 Evaristo  dos Santos (P)", "days": "W", "time": "12:30 pm - 3:50 pm", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "22640", "section_num": "A98", "instructors": "Andr\u00e9 Evaristo  dos Santos (P)", "days": "R", "time": "12:30 pm - 3:50 pm", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "22641", "section_num": "A99", "instructors": "Andr\u00e9 Evaristo  dos Santos (P)", "days": "F", "time": "12:30 pm - 3:50 pm", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}]}
+{
+    "term": "2020 Spring/Summer",
+    "short_name": "CS 210",
+    "title": "Data Structures and Abstractions",
+    "faculty": "CS",
+    "credit": "3",
+    "description": "This course introduces data abstraction, data structures and their implementations, the basics of algorithmic analysis, and the fundamental computing algorithms. Topics include stacks, queues, heaps, recursion, Master Theorem, asymptotic notation, computational complexity, empirical performance measurement, recursion based sorting algorithms, hashing, and trees (including binary trees, B-trees, and AVL trees).",
+    "prerequisite": "CS 115 and MATH 110",
+    "section": [{
+        "course_ID": "21861",
+        "section_num": "040",
+        "instructors": "Maher   Elshakankiri (P)",
+        "days": "MTWR",
+        "time": "11:00 am - 12:15 pm",
+        "loc": "Remote",
+        "course_type": "Lecture",
+        "exam_days": "W",
+        "exam_date": "Jun 24, 2020 - Jun 24, 2020",
+        "exam_time": "8:00 am - 11:00 am"
+    }, {
+        "course_ID": "21862",
+        "section_num": "096",
+        "instructors": "Catherine Pei  Song (P)",
+        "days": "T",
+        "time": "12:30 pm - 3:50 pm",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "21863",
+        "section_num": "097",
+        "instructors": "Catherine Pei  Song (P)",
+        "days": "W",
+        "time": "12:30 pm - 3:50 pm",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "21864",
+        "section_num": "098",
+        "instructors": "Catherine Pei  Song (P)",
+        "days": "R",
+        "time": "12:30 pm - 3:50 pm",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "21865",
+        "section_num": "099",
+        "instructors": "Catherine Pei  Song (P)",
+        "days": "F",
+        "time": "12:30 pm - 3:50 pm",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "22638",
+        "section_num": "A96",
+        "instructors": "Andr\u00e9 Evaristo  dos Santos (P)",
+        "days": "T",
+        "time": "12:30 pm - 3:50 pm",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "22639",
+        "section_num": "A97",
+        "instructors": "Andr\u00e9 Evaristo  dos Santos (P)",
+        "days": "W",
+        "time": "12:30 pm - 3:50 pm",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "22640",
+        "section_num": "A98",
+        "instructors": "Andr\u00e9 Evaristo  dos Santos (P)",
+        "days": "R",
+        "time": "12:30 pm - 3:50 pm",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "22641",
+        "section_num": "A99",
+        "instructors": "Andr\u00e9 Evaristo  dos Santos (P)",
+        "days": "F",
+        "time": "12:30 pm - 3:50 pm",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }]
+}

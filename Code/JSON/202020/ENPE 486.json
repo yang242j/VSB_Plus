@@ -1,1 +1,10 @@
-{"term": "No class for the term", "short_name": "ENPE 486", "title": "Heavy Oil Recovery", "faculty": "ENPE", "credit": "3", "description": "Thermal Recovery Methods, theory and practice of thermal recovery methods; steam drive, cyclic steam injections, and insitu combustion.  Models of combined mass energy transport.  Estimates of heated reservoir volume and oil recovery performance.  Wellbore heat losses and recovery production.", "prerequisite": "ENPE 302, 370 and ENIN 355", "section": []}
+{
+    "term": "No class for the term",
+    "short_name": "ENPE 486",
+    "title": "Heavy Oil Recovery",
+    "faculty": "ENPE",
+    "credit": "3",
+    "description": "Thermal Recovery Methods, theory and practice of thermal recovery methods; steam drive, cyclic steam injections, and insitu combustion.  Models of combined mass energy transport.  Estimates of heated reservoir volume and oil recovery performance.  Wellbore heat losses and recovery production.",
+    "prerequisite": "ENPE 302, 370 and ENIN 355",
+    "section": []
+}

@@ -1,1 +1,32 @@
-{"term": "2021 Winter", "short_name": "ENGG 401", "title": "Engineering Law and Professionalism", "faculty": "ENGG", "credit": "3", "description": "Canadian law and professional engineering legislation topics include:  environmental law, tort liability, contracts, tenders, corporations partnerships, patents, industrial design, copyright, trademarks and code of ethics.", "prerequisite": " One of ENEL 400, ENEV 400, ENIN 400, ENPE 400, or ENSE 400", "section": [{"course_ID": "10972", "section_num": "001", "instructors": "George William  Sherk (P)", "days": "TR", "time": "7:00 pm - 8:15 pm", "loc": "Remote", "course_type": "Lecture", "exam_days": "T", "exam_date": "Apr 20, 2021 - Apr 20, 2021", "exam_time": "7:00 pm - 10:00 pm"}, {"course_ID": "10973", "section_num": "002", "instructors": "George William  Sherk (P)", "days": "TR", "time": "7:00 pm - 8:15 pm", "loc": "Remote", "course_type": "Lecture", "exam_days": "T", "exam_date": "Apr 20, 2021 - Apr 20, 2021", "exam_time": "7:00 pm - 10:00 pm"}]}
+{
+    "term": "2021 Winter",
+    "short_name": "ENGG 401",
+    "title": "Engineering Law and Professionalism",
+    "faculty": "ENGG",
+    "credit": "3",
+    "description": "Canadian law and professional engineering legislation topics include:  environmental law, tort liability, contracts, tenders, corporations partnerships, patents, industrial design, copyright, trademarks and code of ethics.",
+    "prerequisite": " One of ENEL 400, ENEV 400, ENIN 400, ENPE 400, or ENSE 400",
+    "section": [{
+        "course_ID": "10972",
+        "section_num": "001",
+        "instructors": "George William  Sherk (P)",
+        "days": "TR",
+        "time": "7:00 pm - 8:15 pm",
+        "loc": "Remote",
+        "course_type": "Lecture",
+        "exam_days": "T",
+        "exam_date": "Apr 20, 2021 - Apr 20, 2021",
+        "exam_time": "7:00 pm - 10:00 pm"
+    }, {
+        "course_ID": "10973",
+        "section_num": "002",
+        "instructors": "George William  Sherk (P)",
+        "days": "TR",
+        "time": "7:00 pm - 8:15 pm",
+        "loc": "Remote",
+        "course_type": "Lecture",
+        "exam_days": "T",
+        "exam_date": "Apr 20, 2021 - Apr 20, 2021",
+        "exam_time": "7:00 pm - 10:00 pm"
+    }]
+}

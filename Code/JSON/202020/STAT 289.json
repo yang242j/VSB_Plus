@@ -1,1 +1,21 @@
-{"term": "2020 Spring/Summer", "short_name": "STAT 289", "title": "Statistics for Engineers", "faculty": "STAT", "credit": "3", "description": "Topics include probability, discrete and continuous distributions, the central limit theorem, confidence intervals and hypothesis tests for one and two samples, linear regression and correlation.", "prerequisite": "MATH 111", "section": [{"course_ID": "22158", "section_num": "070", "instructors": "Suporna   Das (P)", "days": "MTWR", "time": "12:30 pm - 1:45 pm", "loc": "Remote", "course_type": "Lecture", "exam_days": "M", "exam_date": "Aug 24, 2020 - Aug 24, 2020", "exam_time": "2:00 pm - 5:00 pm"}]}
+{
+    "term": "2020 Spring/Summer",
+    "short_name": "STAT 289",
+    "title": "Statistics for Engineers",
+    "faculty": "STAT",
+    "credit": "3",
+    "description": "Topics include probability, discrete and continuous distributions, the central limit theorem, confidence intervals and hypothesis tests for one and two samples, linear regression and correlation.",
+    "prerequisite": "MATH 111",
+    "section": [{
+        "course_ID": "22158",
+        "section_num": "070",
+        "instructors": "Suporna   Das (P)",
+        "days": "MTWR",
+        "time": "12:30 pm - 1:45 pm",
+        "loc": "Remote",
+        "course_type": "Lecture",
+        "exam_days": "M",
+        "exam_date": "Aug 24, 2020 - Aug 24, 2020",
+        "exam_time": "2:00 pm - 5:00 pm"
+    }]
+}

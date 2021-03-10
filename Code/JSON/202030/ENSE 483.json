@@ -1,1 +1,32 @@
-{"term": "2020 Fall", "short_name": "ENSE 483", "title": "Digital Wireless Systems", "faculty": "ENSE", "credit": "3", "description": "This course provides the skills necessary to understand and use systems from the point of view of protocol, bandwidth, and spectrum allocation.  Topics include spectrum allocation, digital modulation, spread-spectrum communications fundamentals, digital radio protocols for modern wireless systems, working with CDPD, Bluetooth, and IEE 802.11a/b, interference and collision.", "prerequisite": "ENSE 374", "section": [{"course_ID": "31374", "section_num": "001", "instructors": "Mohamed   El-Darieby (P)", "days": "TR", "time": "4:00 pm - 5:15 pm", "loc": "Remote", "course_type": "Lecture", "exam_days": "R", "exam_date": "Dec 10, 2020 - Dec 10, 2020", "exam_time": "2:00 pm - 5:00 pm"}, {"course_ID": "31375", "section_num": "081", "instructors": "Mohamed   El-Darieby (P)", "days": "R", "time": "10:30 am - 11:20 am", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}]}
+{
+    "term": "2020 Fall",
+    "short_name": "ENSE 483",
+    "title": "Digital Wireless Systems",
+    "faculty": "ENSE",
+    "credit": "3",
+    "description": "This course provides the skills necessary to understand and use systems from the point of view of protocol, bandwidth, and spectrum allocation.  Topics include spectrum allocation, digital modulation, spread-spectrum communications fundamentals, digital radio protocols for modern wireless systems, working with CDPD, Bluetooth, and IEE 802.11a/b, interference and collision.",
+    "prerequisite": "ENSE 374",
+    "section": [{
+        "course_ID": "31374",
+        "section_num": "001",
+        "instructors": "Mohamed   El-Darieby (P)",
+        "days": "TR",
+        "time": "4:00 pm - 5:15 pm",
+        "loc": "Remote",
+        "course_type": "Lecture",
+        "exam_days": "R",
+        "exam_date": "Dec 10, 2020 - Dec 10, 2020",
+        "exam_time": "2:00 pm - 5:00 pm"
+    }, {
+        "course_ID": "31375",
+        "section_num": "081",
+        "instructors": "Mohamed   El-Darieby (P)",
+        "days": "R",
+        "time": "10:30 am - 11:20 am",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }]
+}

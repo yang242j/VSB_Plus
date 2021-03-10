@@ -1,1 +1,10 @@
-{"term": "No class for the term", "short_name": "ENIN 433", "title": "Risk Assessment and Decision Analysis", "faculty": "ENIN", "credit": "3", "description": "Probability of failure, hazards analysis, human reliability, reliability assessment, event tree and fault tree analysis and risk-based decision-making; decision consideration, inspection, testing and maintenance for critical components.", "prerequisite": "STAT 160 or STAT 289 and MATH 217", "section": []}
+{
+    "term": "No class for the term",
+    "short_name": "ENIN 433",
+    "title": "Risk Assessment and Decision Analysis",
+    "faculty": "ENIN",
+    "credit": "3",
+    "description": "Probability of failure, hazards analysis, human reliability, reliability assessment, event tree and fault tree analysis and risk-based decision-making; decision consideration, inspection, testing and maintenance for critical components.",
+    "prerequisite": "STAT 160 or STAT 289 and MATH 217",
+    "section": []
+}

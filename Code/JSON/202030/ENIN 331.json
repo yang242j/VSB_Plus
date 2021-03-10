@@ -1,1 +1,43 @@
-{"term": "2020 Fall", "short_name": "ENIN 331", "title": "Simulation of Industrial Systems", "faculty": "ENIN", "credit": "3", "description": "Engineering approaches to model building and simulation of continuous and discrete systems.  Simulation languages.  Numerical methods in continuous systems modeling.  Case studies in discrete systems simulation.", "prerequisite": "STAT 160 or STAT 289", "section": [{"course_ID": "31268", "section_num": "001", "instructors": "Wei   Peng (P)", "days": "TR", "time": "11:30 am - 12:45 pm", "loc": "Remote", "course_type": "Lecture", "exam_days": "T", "exam_date": "Dec 22, 2020 - Dec 22, 2020", "exam_time": "2:00 pm - 5:00 pm"}, {"course_ID": "31269", "section_num": "091", "instructors": "Syed Adeel Haneef   Zaidi (P)", "days": "T", "time": "8:30 am - 11:15 am", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "31270", "section_num": "092", "instructors": "Syed Adeel Haneef   Zaidi (P)", "days": "F", "time": "11:30 am - 2:15 pm", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}]}
+{
+    "term": "2020 Fall",
+    "short_name": "ENIN 331",
+    "title": "Simulation of Industrial Systems",
+    "faculty": "ENIN",
+    "credit": "3",
+    "description": "Engineering approaches to model building and simulation of continuous and discrete systems.  Simulation languages.  Numerical methods in continuous systems modeling.  Case studies in discrete systems simulation.",
+    "prerequisite": "STAT 160 or STAT 289",
+    "section": [{
+        "course_ID": "31268",
+        "section_num": "001",
+        "instructors": "Wei   Peng (P)",
+        "days": "TR",
+        "time": "11:30 am - 12:45 pm",
+        "loc": "Remote",
+        "course_type": "Lecture",
+        "exam_days": "T",
+        "exam_date": "Dec 22, 2020 - Dec 22, 2020",
+        "exam_time": "2:00 pm - 5:00 pm"
+    }, {
+        "course_ID": "31269",
+        "section_num": "091",
+        "instructors": "Syed Adeel Haneef   Zaidi (P)",
+        "days": "T",
+        "time": "8:30 am - 11:15 am",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "31270",
+        "section_num": "092",
+        "instructors": "Syed Adeel Haneef   Zaidi (P)",
+        "days": "F",
+        "time": "11:30 am - 2:15 pm",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }]
+}

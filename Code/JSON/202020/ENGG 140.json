@@ -1,1 +1,32 @@
-{"term": "2020 Spring/Summer", "short_name": "ENGG 140", "title": "Mechanics for EngineersStatics", "faculty": "ENGG", "credit": "3", "description": "Introduction to engineering mechanics including: force vectors , statics of particles and rigid bodies, centroids, mass centres, construction of free-body diagrams, analysis of structure, internal loads of structures and cables, distributed forces, moments of intertia and friction.", "prerequisite": "MATH 110 (May be take concurrently)", "section": [{"course_ID": "21749", "section_num": "001", "instructors": "Amgad Salama Ahmed  Salama (P)", "days": "MW", "time": "2:00 pm - 3:15 pm", "loc": "Remote", "course_type": "Lecture", "exam_days": "F", "exam_date": "Aug 07, 2020 - Aug 07, 2020", "exam_time": "2:00 pm - 5:00 pm"}, {"course_ID": "21750", "section_num": "081", "instructors": "TBA", "days": "R", "time": "2:00 pm - 4:50 pm", "loc": "Remote", "course_type": "Seminar", "exam_days": null, "exam_date": null, "exam_time": null}]}
+{
+    "term": "2020 Spring/Summer",
+    "short_name": "ENGG 140",
+    "title": "Mechanics for EngineersStatics",
+    "faculty": "ENGG",
+    "credit": "3",
+    "description": "Introduction to engineering mechanics including: force vectors , statics of particles and rigid bodies, centroids, mass centres, construction of free-body diagrams, analysis of structure, internal loads of structures and cables, distributed forces, moments of intertia and friction.",
+    "prerequisite": "MATH 110 (May be take concurrently)",
+    "section": [{
+        "course_ID": "21749",
+        "section_num": "001",
+        "instructors": "Amgad Salama Ahmed  Salama (P)",
+        "days": "MW",
+        "time": "2:00 pm - 3:15 pm",
+        "loc": "Remote",
+        "course_type": "Lecture",
+        "exam_days": "F",
+        "exam_date": "Aug 07, 2020 - Aug 07, 2020",
+        "exam_time": "2:00 pm - 5:00 pm"
+    }, {
+        "course_ID": "21750",
+        "section_num": "081",
+        "instructors": "TBA",
+        "days": "R",
+        "time": "2:00 pm - 4:50 pm",
+        "loc": "Remote",
+        "course_type": "Seminar",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }]
+}

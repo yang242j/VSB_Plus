@@ -1,1 +1,10 @@
-{"term": "No class for the term", "short_name": "CS 427", "title": "Introduction to Computer Audio", "faculty": "CS", "credit": "3", "description": "The purpose of this course is to provide a broad overview of many areas of computer audio, including: Digital representation and compression; Psychoacoustics; Surround Sound; Speech recognition and Music Information Retrieval; MIDI and New interfaces for music; and video game sound. We will also explore modular interactive software environments such as Max/MSP and PD.", "prerequisite": "CS 315, or CS 320, or CS 340", "section": []}
+{
+    "term": "No class for the term",
+    "short_name": "CS 427",
+    "title": "Introduction to Computer Audio",
+    "faculty": "CS",
+    "credit": "3",
+    "description": "The purpose of this course is to provide a broad overview of many areas of computer audio, including: Digital representation and compression; Psychoacoustics; Surround Sound; Speech recognition and Music Information Retrieval; MIDI and New interfaces for music; and video game sound. We will also explore modular interactive software environments such as Max/MSP and PD.",
+    "prerequisite": "CS 315, or CS 320, or CS 340",
+    "section": []
+}

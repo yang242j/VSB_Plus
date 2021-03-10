@@ -1,1 +1,76 @@
-{"term": "2020 Fall", "short_name": "MATH 122", "title": "Linear Algebra I", "faculty": "MATH", "credit": "3", "description": "A course intended to introduce students to elementary linear algebra, particularly at a computational and applied level. Topics include matrices and systems of equations, inversion, determinants, vectors, inner products, eigenvectors and eigenvalues.", "prerequisite": "Precalculus 30, Mathematics B30 and C30, or Math 102.", "section": [{"course_ID": "32089", "section_num": "001", "instructors": "Abdel Rahman   Al-Abdallah (P)", "days": "MTR", "time": "11:30 am - 12:20 pm", "loc": "Remote", "course_type": "Lecture", "exam_days": "F", "exam_date": "Dec 18, 2020 - Dec 18, 2020", "exam_time": "9:00 am - 12:00 pm"}, {"course_ID": "32090", "section_num": "002", "instructors": "Martin   Argerami (P)", "days": "TR", "time": "10:00 am - 11:15 am", "loc": "Remote", "course_type": "Lecture", "exam_days": "M", "exam_date": "Sep 02, 2020 - Dec 08, 2020", "exam_time": "9:30 am - 10:20 am"}, {"course_ID": "32091", "section_num": "010", "instructors": "TBA", "days": "M", "time": "9:30 am - 10:20 am", "loc": "Classroom Building 130", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "32092", "section_num": "020", "instructors": "TBA", "days": "W", "time": "9:30 am - 10:20 am", "loc": "Classroom Building 130", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "32093", "section_num": "L01", "instructors": "Iqbal   Husain (P)", "days": "MW", "time": "11:30 am - 12:45 pm", "loc": "Remote", "course_type": "Lecture", "exam_days": "F", "exam_date": "Dec 18, 2020 - Dec 18, 2020", "exam_time": "9:00 am - 12:00 pm"}, {"course_ID": "32094", "section_num": "L10", "instructors": "Iqbal   Husain (P)", "days": "M", "time": "9:30 am - 10:20 am", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}]}
+{
+    "term": "2020 Fall",
+    "short_name": "MATH 122",
+    "title": "Linear Algebra I",
+    "faculty": "MATH",
+    "credit": "3",
+    "description": "A course intended to introduce students to elementary linear algebra, particularly at a computational and applied level. Topics include matrices and systems of equations, inversion, determinants, vectors, inner products, eigenvectors and eigenvalues.",
+    "prerequisite": "Precalculus 30, Mathematics B30 and C30, or Math 102.",
+    "section": [{
+        "course_ID": "32089",
+        "section_num": "001",
+        "instructors": "Abdel Rahman   Al-Abdallah (P)",
+        "days": "MTR",
+        "time": "11:30 am - 12:20 pm",
+        "loc": "Remote",
+        "course_type": "Lecture",
+        "exam_days": "F",
+        "exam_date": "Dec 18, 2020 - Dec 18, 2020",
+        "exam_time": "9:00 am - 12:00 pm"
+    }, {
+        "course_ID": "32090",
+        "section_num": "002",
+        "instructors": "Martin   Argerami (P)",
+        "days": "TR",
+        "time": "10:00 am - 11:15 am",
+        "loc": "Remote",
+        "course_type": "Lecture",
+        "exam_days": "M",
+        "exam_date": "Sep 02, 2020 - Dec 08, 2020",
+        "exam_time": "9:30 am - 10:20 am"
+    }, {
+        "course_ID": "32091",
+        "section_num": "010",
+        "instructors": "TBA",
+        "days": "M",
+        "time": "9:30 am - 10:20 am",
+        "loc": "Classroom Building 130",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "32092",
+        "section_num": "020",
+        "instructors": "TBA",
+        "days": "W",
+        "time": "9:30 am - 10:20 am",
+        "loc": "Classroom Building 130",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "32093",
+        "section_num": "L01",
+        "instructors": "Iqbal   Husain (P)",
+        "days": "MW",
+        "time": "11:30 am - 12:45 pm",
+        "loc": "Remote",
+        "course_type": "Lecture",
+        "exam_days": "F",
+        "exam_date": "Dec 18, 2020 - Dec 18, 2020",
+        "exam_time": "9:00 am - 12:00 pm"
+    }, {
+        "course_ID": "32094",
+        "section_num": "L10",
+        "instructors": "Iqbal   Husain (P)",
+        "days": "M",
+        "time": "9:30 am - 10:20 am",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }]
+}

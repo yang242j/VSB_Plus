@@ -1,1 +1,65 @@
-{"term": "2020 Spring/Summer", "short_name": "ENIN 253", "title": "Engineering Thermodynamics", "faculty": "ENIN", "credit": "3", "description": "Fundamental laws of thermodynamics and their application to various engineering systems. Ideal and actual processes, power and refrigeration cycles.", "prerequisite": "PHYS 119", "section": [{"course_ID": "21761", "section_num": "001", "instructors": "Amgad Salama Ahmed  Salama (P)", "days": "TR", "time": "11:30 am - 12:45 pm", "loc": "Remote", "course_type": "Lecture", "exam_days": "R", "exam_date": "Aug 06, 2020 - Aug 06, 2020", "exam_time": "9:00 am - 12:00 pm"}, {"course_ID": "21762", "section_num": "091", "instructors": "Syed Adeel Haneef   Zaidi (P)", "days": "M", "time": "8:30 am - 10:20 am", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "21763", "section_num": "092", "instructors": "Syed Adeel Haneef   Zaidi (P)", "days": "M", "time": "11:30 am - 1:20 pm", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "21764", "section_num": "093", "instructors": "Syed Adeel Haneef   Zaidi (P)", "days": "W", "time": "11:30 am - 1:15 pm", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "21765", "section_num": "094", "instructors": "Syed Adeel Haneef   Zaidi (P)", "days": "W", "time": "2:30 pm - 4:20 pm", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}]}
+{
+    "term": "2020 Spring/Summer",
+    "short_name": "ENIN 253",
+    "title": "Engineering Thermodynamics",
+    "faculty": "ENIN",
+    "credit": "3",
+    "description": "Fundamental laws of thermodynamics and their application to various engineering systems. Ideal and actual processes, power and refrigeration cycles.",
+    "prerequisite": "PHYS 119",
+    "section": [{
+        "course_ID": "21761",
+        "section_num": "001",
+        "instructors": "Amgad Salama Ahmed  Salama (P)",
+        "days": "TR",
+        "time": "11:30 am - 12:45 pm",
+        "loc": "Remote",
+        "course_type": "Lecture",
+        "exam_days": "R",
+        "exam_date": "Aug 06, 2020 - Aug 06, 2020",
+        "exam_time": "9:00 am - 12:00 pm"
+    }, {
+        "course_ID": "21762",
+        "section_num": "091",
+        "instructors": "Syed Adeel Haneef   Zaidi (P)",
+        "days": "M",
+        "time": "8:30 am - 10:20 am",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "21763",
+        "section_num": "092",
+        "instructors": "Syed Adeel Haneef   Zaidi (P)",
+        "days": "M",
+        "time": "11:30 am - 1:20 pm",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "21764",
+        "section_num": "093",
+        "instructors": "Syed Adeel Haneef   Zaidi (P)",
+        "days": "W",
+        "time": "11:30 am - 1:15 pm",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "21765",
+        "section_num": "094",
+        "instructors": "Syed Adeel Haneef   Zaidi (P)",
+        "days": "W",
+        "time": "2:30 pm - 4:20 pm",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }]
+}

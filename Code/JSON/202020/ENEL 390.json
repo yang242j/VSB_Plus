@@ -1,1 +1,43 @@
-{"term": "2020 Spring/Summer", "short_name": "ENEL 390", "title": "Communication Theory", "faculty": "ENEL", "credit": "3", "description": "An introduction to information theory and telecommunication signals and methods.  Definition of information, time to frequency relations, application of Fourier series and the Fourier transform, types of modulation, theory of discrete sampling and the Nyquist sampling rate.", "prerequisite": "ENEL 281 and MATH 217", "section": [{"course_ID": "21731", "section_num": "001", "instructors": "Gaurav   Walia (P)", "days": "WF", "time": "10:30 am - 11:45 am", "loc": "Remote", "course_type": "Lecture", "exam_days": "F", "exam_date": "Aug 07, 2020 - Aug 07, 2020", "exam_time": "2:00 pm - 5:00 pm"}, {"course_ID": "21732", "section_num": "091", "instructors": "David B.  Duguid (P)", "days": "T", "time": "8:30 am - 11:20 am", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "21733", "section_num": "092", "instructors": "David B.  Duguid (P)", "days": "R", "time": "8:30 am - 11:20 am", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}]}
+{
+    "term": "2020 Spring/Summer",
+    "short_name": "ENEL 390",
+    "title": "Communication Theory",
+    "faculty": "ENEL",
+    "credit": "3",
+    "description": "An introduction to information theory and telecommunication signals and methods.  Definition of information, time to frequency relations, application of Fourier series and the Fourier transform, types of modulation, theory of discrete sampling and the Nyquist sampling rate.",
+    "prerequisite": "ENEL 281 and MATH 217",
+    "section": [{
+        "course_ID": "21731",
+        "section_num": "001",
+        "instructors": "Gaurav   Walia (P)",
+        "days": "WF",
+        "time": "10:30 am - 11:45 am",
+        "loc": "Remote",
+        "course_type": "Lecture",
+        "exam_days": "F",
+        "exam_date": "Aug 07, 2020 - Aug 07, 2020",
+        "exam_time": "2:00 pm - 5:00 pm"
+    }, {
+        "course_ID": "21732",
+        "section_num": "091",
+        "instructors": "David B.  Duguid (P)",
+        "days": "T",
+        "time": "8:30 am - 11:20 am",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "21733",
+        "section_num": "092",
+        "instructors": "David B.  Duguid (P)",
+        "days": "R",
+        "time": "8:30 am - 11:20 am",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }]
+}

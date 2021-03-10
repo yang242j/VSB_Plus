@@ -1,1 +1,54 @@
-{"term": "2020 Fall", "short_name": "ENEV 383", "title": "Geotechnical Engineering", "faculty": "ENEV", "credit": "3", "description": "Soil properties, water movement and seepage, stress distribution in soil masses, consolidation and settlement, lateral shear stress, slope stability analysis, shallow foundation design and retaining wall design.  Emphasis will be on the environmental problems with the soil.", "prerequisite": "ENIN 241 and ENEV 384", "section": [{"course_ID": "31027", "section_num": "001", "instructors": "Yee-Chung   Jin (P)", "days": "WF", "time": "2:30 pm - 3:45 pm", "loc": "Remote", "course_type": "Lecture", "exam_days": "M", "exam_date": "Dec 14, 2020 - Dec 14, 2020", "exam_time": "2:00 pm - 5:00 pm"}, {"course_ID": "31028", "section_num": "091", "instructors": "Benjamin Lee  Lichtenwald (P)", "days": "T", "time": "2:30 pm - 5:15 pm", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "31029", "section_num": "092", "instructors": "Benjamin Lee  Lichtenwald (P)", "days": "W", "time": "8:30 am - 11:15 am", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "31031", "section_num": "094", "instructors": "Benjamin Lee  Lichtenwald (P)", "days": "T", "time": "8:30 am - 11:15 am", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}]}
+{
+    "term": "2020 Fall",
+    "short_name": "ENEV 383",
+    "title": "Geotechnical Engineering",
+    "faculty": "ENEV",
+    "credit": "3",
+    "description": "Soil properties, water movement and seepage, stress distribution in soil masses, consolidation and settlement, lateral shear stress, slope stability analysis, shallow foundation design and retaining wall design.  Emphasis will be on the environmental problems with the soil.",
+    "prerequisite": "ENIN 241 and ENEV 384",
+    "section": [{
+        "course_ID": "31027",
+        "section_num": "001",
+        "instructors": "Yee-Chung   Jin (P)",
+        "days": "WF",
+        "time": "2:30 pm - 3:45 pm",
+        "loc": "Remote",
+        "course_type": "Lecture",
+        "exam_days": "M",
+        "exam_date": "Dec 14, 2020 - Dec 14, 2020",
+        "exam_time": "2:00 pm - 5:00 pm"
+    }, {
+        "course_ID": "31028",
+        "section_num": "091",
+        "instructors": "Benjamin Lee  Lichtenwald (P)",
+        "days": "T",
+        "time": "2:30 pm - 5:15 pm",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "31029",
+        "section_num": "092",
+        "instructors": "Benjamin Lee  Lichtenwald (P)",
+        "days": "W",
+        "time": "8:30 am - 11:15 am",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "31031",
+        "section_num": "094",
+        "instructors": "Benjamin Lee  Lichtenwald (P)",
+        "days": "T",
+        "time": "8:30 am - 11:15 am",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }]
+}

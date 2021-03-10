@@ -1,1 +1,109 @@
-{"term": "2021 Winter", "short_name": "CHEM 105", "title": "General Chemistry II", "faculty": "CHEM", "credit": "3", "description": "A continuation of CHEM 104. Topics discussed will include kinetics, equilibrium, acids and bases, buffers, plastics, entropy and free energy, electrochemistry, nuclear chemistry. Lab component: Basic experiments demonstrating principles of equilibrium, thermodynamics, electrochemistry, and acids and bases.", "prerequisite": "CHEM 104", "section": [{"course_ID": "10374", "section_num": "001", "instructors": "Allan L.  East (P)", "days": "MWF", "time": "11:30 am - 12:20 pm", "loc": "Remote", "course_type": "Lecture", "exam_days": "M", "exam_date": "Apr 26, 2021 - Apr 26, 2021", "exam_time": "9:00 am - 12:00 pm"}, {"course_ID": "10375", "section_num": "002", "instructors": "Allan L.  East (P)", "days": "MWF", "time": "11:30 am - 12:20 pm", "loc": "Remote", "course_type": "Lecture", "exam_days": "M", "exam_date": "Apr 26, 2021 - Apr 26, 2021", "exam_time": "9:00 am - 12:00 pm"}, {"course_ID": "10376", "section_num": "093", "instructors": "Andrew   Chan (P)", "days": "F", "time": "8:30 am - 11:15 am", "loc": "Laboratory Building 321", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "10377", "section_num": "094", "instructors": "Xiaoxuan   Guo (P), Andrew   Chan ", "days": "R", "time": "2:30 pm - 5:15 pm", "loc": "Laboratory Building 321", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "10378", "section_num": "095", "instructors": "Andrew   Chan (P)", "days": "M", "time": "2:30 pm - 5:15 pm", "loc": "Laboratory Building 321", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "10379", "section_num": "096", "instructors": "Xiaoxuan   Guo (P), Andrew   Chan ", "days": "W", "time": "2:30 pm - 5:15 pm", "loc": "Laboratory Building 321", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "10380", "section_num": "097", "instructors": "Andrew   Chan (P)", "days": "T", "time": "8:30 am - 11:15 am", "loc": "Laboratory Building 321", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "10381", "section_num": "098", "instructors": "Xiaoxuan   Guo (P), Andrew   Chan ", "days": "R", "time": "8:30 am - 11:15 am", "loc": "Laboratory Building 321", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "10382", "section_num": "099", "instructors": "Andrew   Chan (P)", "days": "T", "time": "2:30 pm - 5:15 pm", "loc": "Laboratory Building 321", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}]}
+{
+    "term": "2021 Winter",
+    "short_name": "CHEM 105",
+    "title": "General Chemistry II",
+    "faculty": "CHEM",
+    "credit": "3",
+    "description": "A continuation of CHEM 104. Topics discussed will include kinetics, equilibrium, acids and bases, buffers, plastics, entropy and free energy, electrochemistry, nuclear chemistry. Lab component: Basic experiments demonstrating principles of equilibrium, thermodynamics, electrochemistry, and acids and bases.",
+    "prerequisite": "CHEM 104",
+    "section": [{
+        "course_ID": "10374",
+        "section_num": "001",
+        "instructors": "Allan L.  East (P)",
+        "days": "MWF",
+        "time": "11:30 am - 12:20 pm",
+        "loc": "Remote",
+        "course_type": "Lecture",
+        "exam_days": "M",
+        "exam_date": "Apr 26, 2021 - Apr 26, 2021",
+        "exam_time": "9:00 am - 12:00 pm"
+    }, {
+        "course_ID": "10375",
+        "section_num": "002",
+        "instructors": "Allan L.  East (P)",
+        "days": "MWF",
+        "time": "11:30 am - 12:20 pm",
+        "loc": "Remote",
+        "course_type": "Lecture",
+        "exam_days": "M",
+        "exam_date": "Apr 26, 2021 - Apr 26, 2021",
+        "exam_time": "9:00 am - 12:00 pm"
+    }, {
+        "course_ID": "10376",
+        "section_num": "093",
+        "instructors": "Andrew   Chan (P)",
+        "days": "F",
+        "time": "8:30 am - 11:15 am",
+        "loc": "Laboratory Building 321",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "10377",
+        "section_num": "094",
+        "instructors": "Xiaoxuan   Guo (P), Andrew   Chan ",
+        "days": "R",
+        "time": "2:30 pm - 5:15 pm",
+        "loc": "Laboratory Building 321",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "10378",
+        "section_num": "095",
+        "instructors": "Andrew   Chan (P)",
+        "days": "M",
+        "time": "2:30 pm - 5:15 pm",
+        "loc": "Laboratory Building 321",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "10379",
+        "section_num": "096",
+        "instructors": "Xiaoxuan   Guo (P), Andrew   Chan ",
+        "days": "W",
+        "time": "2:30 pm - 5:15 pm",
+        "loc": "Laboratory Building 321",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "10380",
+        "section_num": "097",
+        "instructors": "Andrew   Chan (P)",
+        "days": "T",
+        "time": "8:30 am - 11:15 am",
+        "loc": "Laboratory Building 321",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "10381",
+        "section_num": "098",
+        "instructors": "Xiaoxuan   Guo (P), Andrew   Chan ",
+        "days": "R",
+        "time": "8:30 am - 11:15 am",
+        "loc": "Laboratory Building 321",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "10382",
+        "section_num": "099",
+        "instructors": "Andrew   Chan (P)",
+        "days": "T",
+        "time": "2:30 pm - 5:15 pm",
+        "loc": "Laboratory Building 321",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }]
+}

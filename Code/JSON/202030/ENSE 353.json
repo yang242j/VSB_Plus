@@ -1,1 +1,10 @@
-{"term": "No class for the term", "short_name": "ENSE 353", "title": "Software Design and Architecture", "faculty": "ENSE", "credit": "3", "description": "Modeling and design of flexible software at the architectural level. Basics of model-driven architecture. Architectural styles and patterns. Middleware and application frameworks. Configurations and configuration management. Product lines. Design using Commercial Off-The-Shelf (COTS) software.", "prerequisite": "CS 215", "section": []}
+{
+    "term": "No class for the term",
+    "short_name": "ENSE 353",
+    "title": "Software Design and Architecture",
+    "faculty": "ENSE",
+    "credit": "3",
+    "description": "Modeling and design of flexible software at the architectural level. Basics of model-driven architecture. Architectural styles and patterns. Middleware and application frameworks. Configurations and configuration management. Product lines. Design using Commercial Off-The-Shelf (COTS) software.",
+    "prerequisite": "CS 215",
+    "section": []
+}

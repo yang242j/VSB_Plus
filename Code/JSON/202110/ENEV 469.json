@@ -1,1 +1,65 @@
-{"term": "2021 Winter", "short_name": "ENEV 469", "title": "Groundwater Development & Contaminant Transport", "faculty": "ENEV", "credit": "3", "description": "Basic principles of fluid flow in saturated and unsaturated materials, well problems, groundwater quality, discussion of salt water intrusion, and modeling of groundwater flow and contaminant transport.", "prerequisite": " ENEV 462 and ENEV 383.  Concurrent enrolment allowed in ENEV 462", "section": [{"course_ID": "10940", "section_num": "001", "instructors": "Tsun Wai Kelvin   Ng (P)", "days": "MWF", "time": "2:30 pm - 3:20 pm", "loc": "Remote", "course_type": "Lecture", "exam_days": "M", "exam_date": "Apr 26, 2021 - Apr 26, 2021", "exam_time": "2:00 pm - 5:00 pm"}, {"course_ID": "10941", "section_num": "091", "instructors": "Benjamin Lee  Lichtenwald (P)", "days": "W", "time": "8:30 am - 11:15 am", "loc": "Education Building 116.2", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "10941", "section_num": "091", "instructors": "Benjamin Lee  Lichtenwald (P)", "days": "W", "time": "8:30 am - 11:15 am", "loc": "Education Building 135", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "10942", "section_num": "092", "instructors": "Benjamin Lee  Lichtenwald (P)", "days": "M", "time": "11:30 am - 2:15 pm", "loc": "Education Building 135", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "10942", "section_num": "092", "instructors": "Benjamin Lee  Lichtenwald (P)", "days": "M", "time": "11:30 am - 2:15 pm", "loc": "Education Building 139", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}]}
+{
+    "term": "2021 Winter",
+    "short_name": "ENEV 469",
+    "title": "Groundwater Development & Contaminant Transport",
+    "faculty": "ENEV",
+    "credit": "3",
+    "description": "Basic principles of fluid flow in saturated and unsaturated materials, well problems, groundwater quality, discussion of salt water intrusion, and modeling of groundwater flow and contaminant transport.",
+    "prerequisite": " ENEV 462 and ENEV 383.  Concurrent enrolment allowed in ENEV 462",
+    "section": [{
+        "course_ID": "10940",
+        "section_num": "001",
+        "instructors": "Tsun Wai Kelvin   Ng (P)",
+        "days": "MWF",
+        "time": "2:30 pm - 3:20 pm",
+        "loc": "Remote",
+        "course_type": "Lecture",
+        "exam_days": "M",
+        "exam_date": "Apr 26, 2021 - Apr 26, 2021",
+        "exam_time": "2:00 pm - 5:00 pm"
+    }, {
+        "course_ID": "10941",
+        "section_num": "091",
+        "instructors": "Benjamin Lee  Lichtenwald (P)",
+        "days": "W",
+        "time": "8:30 am - 11:15 am",
+        "loc": "Education Building 116.2",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "10941",
+        "section_num": "091",
+        "instructors": "Benjamin Lee  Lichtenwald (P)",
+        "days": "W",
+        "time": "8:30 am - 11:15 am",
+        "loc": "Education Building 135",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "10942",
+        "section_num": "092",
+        "instructors": "Benjamin Lee  Lichtenwald (P)",
+        "days": "M",
+        "time": "11:30 am - 2:15 pm",
+        "loc": "Education Building 135",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "10942",
+        "section_num": "092",
+        "instructors": "Benjamin Lee  Lichtenwald (P)",
+        "days": "M",
+        "time": "11:30 am - 2:15 pm",
+        "loc": "Education Building 139",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }]
+}

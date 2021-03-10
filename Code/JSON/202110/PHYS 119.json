@@ -1,1 +1,142 @@
-{"term": "2021 Winter", "short_name": "PHYS 119", "title": "General Physics II", "faculty": "PHYS", "credit": "3", "description": "A continuation of PHYS 109: Fluid mechanics, heat and thermodynamics, waves, sound, radiation, electrostatics and electric current.", "prerequisite": "PHYS 109 or ENGG 140", "section": [{"course_ID": "12188", "section_num": "001", "instructors": "Gergana Atanasova  Koleva (P)", "days": "TR", "time": "2:30 pm - 3:45 pm", "loc": "Research and Innovation Centre 119", "course_type": "Lecture", "exam_days": "F", "exam_date": "Apr 23, 2021 - Apr 23, 2021", "exam_time": "7:00 pm - 10:00 pm"}, {"course_ID": "12189", "section_num": "002", "instructors": "Dilli Raj  Paudyal (P)", "days": "TR", "time": "5:30 pm - 6:45 pm", "loc": "Research and Innovation Centre 119", "course_type": "Lecture", "exam_days": "F", "exam_date": "Apr 23, 2021 - Apr 23, 2021", "exam_time": "7:00 pm - 10:00 pm"}, {"course_ID": "12190", "section_num": "121", "instructors": "TBA", "days": "T", "time": "8:30 am - 11:15 am", "loc": "Laboratory Building 132", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "12191", "section_num": "122", "instructors": "TBA", "days": "T", "time": "2:30 pm - 5:15 pm", "loc": "Laboratory Building 132", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "12192", "section_num": "123", "instructors": "TBA", "days": "T", "time": "8:30 am - 11:15 am", "loc": "Laboratory Building 132", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "12193", "section_num": "124", "instructors": "TBA", "days": "T", "time": "2:30 pm - 5:15 pm", "loc": "Laboratory Building 132", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "12194", "section_num": "131", "instructors": "TBA", "days": "W", "time": "8:30 am - 11:15 am", "loc": "Laboratory Building 132", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "12195", "section_num": "133", "instructors": "TBA", "days": "W", "time": "8:30 am - 11:15 am", "loc": "Laboratory Building 132", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "12196", "section_num": "141", "instructors": "TBA", "days": "R", "time": "8:30 am - 11:15 am", "loc": "Laboratory Building 132", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "12197", "section_num": "142", "instructors": "TBA", "days": "R", "time": "2:30 pm - 5:15 pm", "loc": "Laboratory Building 132", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "12198", "section_num": "143", "instructors": "TBA", "days": "R", "time": "8:30 am - 11:15 am", "loc": "Laboratory Building 132", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "12199", "section_num": "144", "instructors": "TBA", "days": "R", "time": "2:30 pm - 5:15 pm", "loc": "Laboratory Building 132", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}]}
+{
+    "term": "2021 Winter",
+    "short_name": "PHYS 119",
+    "title": "General Physics II",
+    "faculty": "PHYS",
+    "credit": "3",
+    "description": "A continuation of PHYS 109: Fluid mechanics, heat and thermodynamics, waves, sound, radiation, electrostatics and electric current.",
+    "prerequisite": "PHYS 109 or ENGG 140",
+    "section": [{
+        "course_ID": "12188",
+        "section_num": "001",
+        "instructors": "Gergana Atanasova  Koleva (P)",
+        "days": "TR",
+        "time": "2:30 pm - 3:45 pm",
+        "loc": "Research and Innovation Centre 119",
+        "course_type": "Lecture",
+        "exam_days": "F",
+        "exam_date": "Apr 23, 2021 - Apr 23, 2021",
+        "exam_time": "7:00 pm - 10:00 pm"
+    }, {
+        "course_ID": "12189",
+        "section_num": "002",
+        "instructors": "Dilli Raj  Paudyal (P)",
+        "days": "TR",
+        "time": "5:30 pm - 6:45 pm",
+        "loc": "Research and Innovation Centre 119",
+        "course_type": "Lecture",
+        "exam_days": "F",
+        "exam_date": "Apr 23, 2021 - Apr 23, 2021",
+        "exam_time": "7:00 pm - 10:00 pm"
+    }, {
+        "course_ID": "12190",
+        "section_num": "121",
+        "instructors": "TBA",
+        "days": "T",
+        "time": "8:30 am - 11:15 am",
+        "loc": "Laboratory Building 132",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "12191",
+        "section_num": "122",
+        "instructors": "TBA",
+        "days": "T",
+        "time": "2:30 pm - 5:15 pm",
+        "loc": "Laboratory Building 132",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "12192",
+        "section_num": "123",
+        "instructors": "TBA",
+        "days": "T",
+        "time": "8:30 am - 11:15 am",
+        "loc": "Laboratory Building 132",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "12193",
+        "section_num": "124",
+        "instructors": "TBA",
+        "days": "T",
+        "time": "2:30 pm - 5:15 pm",
+        "loc": "Laboratory Building 132",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "12194",
+        "section_num": "131",
+        "instructors": "TBA",
+        "days": "W",
+        "time": "8:30 am - 11:15 am",
+        "loc": "Laboratory Building 132",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "12195",
+        "section_num": "133",
+        "instructors": "TBA",
+        "days": "W",
+        "time": "8:30 am - 11:15 am",
+        "loc": "Laboratory Building 132",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "12196",
+        "section_num": "141",
+        "instructors": "TBA",
+        "days": "R",
+        "time": "8:30 am - 11:15 am",
+        "loc": "Laboratory Building 132",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "12197",
+        "section_num": "142",
+        "instructors": "TBA",
+        "days": "R",
+        "time": "2:30 pm - 5:15 pm",
+        "loc": "Laboratory Building 132",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "12198",
+        "section_num": "143",
+        "instructors": "TBA",
+        "days": "R",
+        "time": "8:30 am - 11:15 am",
+        "loc": "Laboratory Building 132",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "12199",
+        "section_num": "144",
+        "instructors": "TBA",
+        "days": "R",
+        "time": "2:30 pm - 5:15 pm",
+        "loc": "Laboratory Building 132",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }]
+}

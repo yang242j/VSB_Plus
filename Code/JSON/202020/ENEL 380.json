@@ -1,1 +1,98 @@
-{"term": "2020 Spring/Summer", "short_name": "ENEL 380", "title": "Automation and Control", "faculty": "ENEL", "credit": "3", "description": "Programmable logic controllers, ladder logic, latches, timers, counters, flow control, and data handling instructions, sensors and actuators, state based design. Open & closed loop systems, mathematical modeling, Laplace transform, block diagrams and signal flow graphs, design and analysis of feedback systems, stability analysis, root locus, PID controllers, frequency domain technique.", "prerequisite": "ENIN 233 or ENEL 281 and ENEL 280", "section": [{"course_ID": "21723", "section_num": "001", "instructors": "Zhanle   Wang (P)", "days": "WF", "time": "8:30 am - 9:45 am", "loc": "Remote", "course_type": "Lecture", "exam_days": "T", "exam_date": "Aug 04, 2020 - Aug 04, 2020", "exam_time": "8:00 am - 11:00 am"}, {"course_ID": "21724", "section_num": "081", "instructors": "Zhanle   Wang (P)", "days": "M", "time": "9:30 am - 10:45 am", "loc": "Remote", "course_type": "Seminar", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "21725", "section_num": "091", "instructors": "Keegan Keith  Downie (P)", "days": "T", "time": "1:30 pm - 4:15 pm", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "21726", "section_num": "092", "instructors": "Keegan Keith  Downie (P)", "days": "R", "time": "1:30 pm - 4:15 pm", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "21727", "section_num": "093", "instructors": "Keegan Keith  Downie (P)", "days": "W", "time": "1:30 pm - 4:15 pm", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "21728", "section_num": "094", "instructors": "Keegan Keith  Downie (P)", "days": "T", "time": "8:30 am - 11:20 am", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "21729", "section_num": "095", "instructors": "Keegan Keith  Downie (P)", "days": "R", "time": "8:30 am - 11:20 am", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "21730", "section_num": "096", "instructors": "Keegan Keith  Downie (P)", "days": "M", "time": "2:30 pm - 5:20 pm", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}]}
+{
+    "term": "2020 Spring/Summer",
+    "short_name": "ENEL 380",
+    "title": "Automation and Control",
+    "faculty": "ENEL",
+    "credit": "3",
+    "description": "Programmable logic controllers, ladder logic, latches, timers, counters, flow control, and data handling instructions, sensors and actuators, state based design. Open & closed loop systems, mathematical modeling, Laplace transform, block diagrams and signal flow graphs, design and analysis of feedback systems, stability analysis, root locus, PID controllers, frequency domain technique.",
+    "prerequisite": "ENIN 233 or ENEL 281 and ENEL 280",
+    "section": [{
+        "course_ID": "21723",
+        "section_num": "001",
+        "instructors": "Zhanle   Wang (P)",
+        "days": "WF",
+        "time": "8:30 am - 9:45 am",
+        "loc": "Remote",
+        "course_type": "Lecture",
+        "exam_days": "T",
+        "exam_date": "Aug 04, 2020 - Aug 04, 2020",
+        "exam_time": "8:00 am - 11:00 am"
+    }, {
+        "course_ID": "21724",
+        "section_num": "081",
+        "instructors": "Zhanle   Wang (P)",
+        "days": "M",
+        "time": "9:30 am - 10:45 am",
+        "loc": "Remote",
+        "course_type": "Seminar",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "21725",
+        "section_num": "091",
+        "instructors": "Keegan Keith  Downie (P)",
+        "days": "T",
+        "time": "1:30 pm - 4:15 pm",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "21726",
+        "section_num": "092",
+        "instructors": "Keegan Keith  Downie (P)",
+        "days": "R",
+        "time": "1:30 pm - 4:15 pm",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "21727",
+        "section_num": "093",
+        "instructors": "Keegan Keith  Downie (P)",
+        "days": "W",
+        "time": "1:30 pm - 4:15 pm",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "21728",
+        "section_num": "094",
+        "instructors": "Keegan Keith  Downie (P)",
+        "days": "T",
+        "time": "8:30 am - 11:20 am",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "21729",
+        "section_num": "095",
+        "instructors": "Keegan Keith  Downie (P)",
+        "days": "R",
+        "time": "8:30 am - 11:20 am",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "21730",
+        "section_num": "096",
+        "instructors": "Keegan Keith  Downie (P)",
+        "days": "M",
+        "time": "2:30 pm - 5:20 pm",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }]
+}

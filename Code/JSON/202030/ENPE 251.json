@@ -1,1 +1,10 @@
-{"term": "No class for the term", "short_name": "ENPE 251", "title": "Reservoir Fluid Properties", "faculty": "ENPE", "credit": "3", "description": "Qualitative and quantitative phase behavior of petroleum reservoir fluids through the algebraic and numerical application of thermodynamic theory, equations of state, and empirical correlations; determination of engineering PVT parameters; and, phase behaviour of hydrocarbon systems.", "prerequisite": "MATH 217 (concurrent enrolment allowed)", "section": []}
+{
+    "term": "No class for the term",
+    "short_name": "ENPE 251",
+    "title": "Reservoir Fluid Properties",
+    "faculty": "ENPE",
+    "credit": "3",
+    "description": "Qualitative and quantitative phase behavior of petroleum reservoir fluids through the algebraic and numerical application of thermodynamic theory, equations of state, and empirical correlations; determination of engineering PVT parameters; and, phase behaviour of hydrocarbon systems.",
+    "prerequisite": "MATH 217 (concurrent enrolment allowed)",
+    "section": []
+}

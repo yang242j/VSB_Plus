@@ -1,1 +1,43 @@
-{"term": "2021 Winter", "short_name": "CS 315", "title": "Introduction to Computer Graphics", "faculty": "CS", "credit": "3", "description": "Introduction to graphics hardware and software. Two-dimensional graphics rendering algorithms. Basic three-dimensional modeling, transformations, viewing geometry, lighting and shading,  hidden surface removel, and texture mapping.", "prerequisite": "CS210 and MATH 122", "section": [{"course_ID": "10567", "section_num": "001", "instructors": "Xue-Dong   Yang (P)", "days": "MWF", "time": "11:30 am - 12:20 pm", "loc": "Remote", "course_type": "Lecture", "exam_days": "M", "exam_date": "Apr 26, 2021 - Apr 26, 2021", "exam_time": "9:00 am - 12:00 pm"}, {"course_ID": "10568", "section_num": "090", "instructors": "James Alex  Clarke (P)", "days": "T", "time": "12:30 pm - 2:20 pm", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "10569", "section_num": "091", "instructors": "James Alex  Clarke (P)", "days": "M", "time": "2:30 pm - 4:20 pm", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}]}
+{
+    "term": "2021 Winter",
+    "short_name": "CS 315",
+    "title": "Introduction to Computer Graphics",
+    "faculty": "CS",
+    "credit": "3",
+    "description": "Introduction to graphics hardware and software. Two-dimensional graphics rendering algorithms. Basic three-dimensional modeling, transformations, viewing geometry, lighting and shading,  hidden surface removel, and texture mapping.",
+    "prerequisite": "CS210 and MATH 122",
+    "section": [{
+        "course_ID": "10567",
+        "section_num": "001",
+        "instructors": "Xue-Dong   Yang (P)",
+        "days": "MWF",
+        "time": "11:30 am - 12:20 pm",
+        "loc": "Remote",
+        "course_type": "Lecture",
+        "exam_days": "M",
+        "exam_date": "Apr 26, 2021 - Apr 26, 2021",
+        "exam_time": "9:00 am - 12:00 pm"
+    }, {
+        "course_ID": "10568",
+        "section_num": "090",
+        "instructors": "James Alex  Clarke (P)",
+        "days": "T",
+        "time": "12:30 pm - 2:20 pm",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "10569",
+        "section_num": "091",
+        "instructors": "James Alex  Clarke (P)",
+        "days": "M",
+        "time": "2:30 pm - 4:20 pm",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }]
+}

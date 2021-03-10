@@ -1,1 +1,109 @@
-{"term": "2021 Winter", "short_name": "CHEM 140", "title": "Organic Chemistry I", "faculty": "CHEM", "credit": "3", "description": "An introduction to organic chemistry. Organic functional groups, nomenclature, reactions and mechanisms. Lab component: Introduction to organic laboratory techniques.", "prerequisite": "CHEM 104", "section": [{"course_ID": "10383", "section_num": "001", "instructors": "Brian   Sterenberg (P)", "days": "MWF", "time": "12:30 pm - 1:20 pm", "loc": "Remote", "course_type": "Lecture", "exam_days": "W", "exam_date": "Apr 28, 2021 - Apr 28, 2021", "exam_time": "9:00 am - 12:00 pm"}, {"course_ID": "10384", "section_num": "097", "instructors": "Xiaoxuan   Guo (P)", "days": "W", "time": "8:30 am - 11:15 am", "loc": "Laboratory Building 309", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "10385", "section_num": "098", "instructors": "Henry Moon  Yee (P)", "days": "T", "time": "2:30 pm - 5:15 pm", "loc": "Laboratory Building 309", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "10386", "section_num": "099", "instructors": "Henry Moon  Yee (P)", "days": "R", "time": "2:30 pm - 5:15 pm", "loc": "Laboratory Building 309", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "13292", "section_num": "302", "instructors": "SM Humayun   Kabir (P)", "days": "T", "time": "1:00 pm - 3:45 pm", "loc": "Off-Campus Locations SWIFT CURR", "course_type": "Lecture", "exam_days": "R", "exam_date": "Apr 29, 2021 - Apr 29, 2021", "exam_time": "2:00 pm - 5:00 pm"}, {"course_ID": "13239", "section_num": "303", "instructors": "Sarah L.  Lipoth (P)", "days": "T", "time": "10:30 am - 11:45 am", "loc": "Off-Campus Locations YORKTON", "course_type": "Lecture", "exam_days": "R", "exam_date": "Jan 11, 2021 - Apr 15, 2021", "exam_time": "4:00 pm - 5:15 pm"}, {"course_ID": "13239", "section_num": "303", "instructors": "Sarah L.  Lipoth (P)", "days": "R", "time": "4:00 pm - 5:15 pm", "loc": "Off-Campus Locations YORKTON", "course_type": "Lecture", "exam_days": "R", "exam_date": "Apr 22, 2021 - Apr 22, 2021", "exam_time": "9:00 am - 12:00 pm"}, {"course_ID": "13293", "section_num": "312", "instructors": "SM Humayun   Kabir (P)", "days": "R", "time": "4:00 pm - 6:45 pm", "loc": "Off-Campus Locations SWIFT CURR", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "13241", "section_num": "313", "instructors": "Dean Michael  Depape (P)", "days": "T", "time": "4:00 pm - 6:45 pm", "loc": "Off-Campus Locations YORKTON", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}]}
+{
+    "term": "2021 Winter",
+    "short_name": "CHEM 140",
+    "title": "Organic Chemistry I",
+    "faculty": "CHEM",
+    "credit": "3",
+    "description": "An introduction to organic chemistry. Organic functional groups, nomenclature, reactions and mechanisms. Lab component: Introduction to organic laboratory techniques.",
+    "prerequisite": "CHEM 104",
+    "section": [{
+        "course_ID": "10383",
+        "section_num": "001",
+        "instructors": "Brian   Sterenberg (P)",
+        "days": "MWF",
+        "time": "12:30 pm - 1:20 pm",
+        "loc": "Remote",
+        "course_type": "Lecture",
+        "exam_days": "W",
+        "exam_date": "Apr 28, 2021 - Apr 28, 2021",
+        "exam_time": "9:00 am - 12:00 pm"
+    }, {
+        "course_ID": "10384",
+        "section_num": "097",
+        "instructors": "Xiaoxuan   Guo (P)",
+        "days": "W",
+        "time": "8:30 am - 11:15 am",
+        "loc": "Laboratory Building 309",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "10385",
+        "section_num": "098",
+        "instructors": "Henry Moon  Yee (P)",
+        "days": "T",
+        "time": "2:30 pm - 5:15 pm",
+        "loc": "Laboratory Building 309",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "10386",
+        "section_num": "099",
+        "instructors": "Henry Moon  Yee (P)",
+        "days": "R",
+        "time": "2:30 pm - 5:15 pm",
+        "loc": "Laboratory Building 309",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "13292",
+        "section_num": "302",
+        "instructors": "SM Humayun   Kabir (P)",
+        "days": "T",
+        "time": "1:00 pm - 3:45 pm",
+        "loc": "Off-Campus Locations SWIFT CURR",
+        "course_type": "Lecture",
+        "exam_days": "R",
+        "exam_date": "Apr 29, 2021 - Apr 29, 2021",
+        "exam_time": "2:00 pm - 5:00 pm"
+    }, {
+        "course_ID": "13239",
+        "section_num": "303",
+        "instructors": "Sarah L.  Lipoth (P)",
+        "days": "T",
+        "time": "10:30 am - 11:45 am",
+        "loc": "Off-Campus Locations YORKTON",
+        "course_type": "Lecture",
+        "exam_days": "R",
+        "exam_date": "Jan 11, 2021 - Apr 15, 2021",
+        "exam_time": "4:00 pm - 5:15 pm"
+    }, {
+        "course_ID": "13239",
+        "section_num": "303",
+        "instructors": "Sarah L.  Lipoth (P)",
+        "days": "R",
+        "time": "4:00 pm - 5:15 pm",
+        "loc": "Off-Campus Locations YORKTON",
+        "course_type": "Lecture",
+        "exam_days": "R",
+        "exam_date": "Apr 22, 2021 - Apr 22, 2021",
+        "exam_time": "9:00 am - 12:00 pm"
+    }, {
+        "course_ID": "13293",
+        "section_num": "312",
+        "instructors": "SM Humayun   Kabir (P)",
+        "days": "R",
+        "time": "4:00 pm - 6:45 pm",
+        "loc": "Off-Campus Locations SWIFT CURR",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "13241",
+        "section_num": "313",
+        "instructors": "Dean Michael  Depape (P)",
+        "days": "T",
+        "time": "4:00 pm - 6:45 pm",
+        "loc": "Off-Campus Locations YORKTON",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }]
+}
