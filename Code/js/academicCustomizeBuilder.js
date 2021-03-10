@@ -556,7 +556,7 @@ function termTransfer(term){
     if(term == "Fall") return 202030;
 }
 
-var x =ajaxpost("ENSE 281",202020,doneList[0]);
+var x =ajaxpost("ENSE 280",202020,doneList[0]);
 console.log(x);
 function ajaxpost(courseid,term,doneList) {
     // (A) GET FORM DATA
