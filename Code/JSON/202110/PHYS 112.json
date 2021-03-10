@@ -1,1 +1,32 @@
-{"term": "2021 Winter", "short_name": "PHYS 112", "title": "Waves and Optics", "faculty": "PHYS", "credit": "3", "description": "A course dealing with oscillations, wave motion, sound and geometrical and physical optics.", "prerequisite": "PHYS 111 (recommended) or 109 or 119, and MATH 110 (may be taken concurrently)", "section": [{"course_ID": "12186", "section_num": "001", "instructors": "Zisis   Papandreou (P)", "days": "TR", "time": "10:00 am - 11:15 am", "loc": "Laboratory Building 235", "course_type": "Lecture", "exam_days": "R", "exam_date": "Apr 22, 2021 - Apr 22, 2021", "exam_time": "9:00 am - 12:00 pm"}, {"course_ID": "12187", "section_num": "151", "instructors": "TBA", "days": "F", "time": "8:30 am - 11:15 am", "loc": "Laboratory Building 125", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}]}
+{
+    "term": "2021 Winter",
+    "short_name": "PHYS 112",
+    "title": "Waves and Optics",
+    "faculty": "PHYS",
+    "credit": "3",
+    "description": "A course dealing with oscillations, wave motion, sound and geometrical and physical optics.",
+    "prerequisite": "PHYS 111 (recommended) or 109 or 119, and MATH 110 (may be taken concurrently)",
+    "section": [{
+        "course_ID": "12186",
+        "section_num": "001",
+        "instructors": "Zisis   Papandreou (P)",
+        "days": "TR",
+        "time": "10:00 am - 11:15 am",
+        "loc": "Laboratory Building 235",
+        "course_type": "Lecture",
+        "exam_days": "R",
+        "exam_date": "Apr 22, 2021 - Apr 22, 2021",
+        "exam_time": "9:00 am - 12:00 pm"
+    }, {
+        "course_ID": "12187",
+        "section_num": "151",
+        "instructors": "TBA",
+        "days": "F",
+        "time": "8:30 am - 11:15 am",
+        "loc": "Laboratory Building 125",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }]
+}

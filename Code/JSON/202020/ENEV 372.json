@@ -1,1 +1,10 @@
-{"term": "No class for the term", "short_name": "ENEV 372", "title": "Transportation Systems", "faculty": "ENEV", "credit": "3", "description": "Introduction to transportation as a system; roles of transportation in society; the technology of transportation; the transportation system and its environment; introduction to planning and management of regional transportation facilities.", "prerequisite": "CS 110 and ENGG 240 or ENGG 141 (concurrent enrolment is allowed)", "section": []}
+{
+    "term": "No class for the term",
+    "short_name": "ENEV 372",
+    "title": "Transportation Systems",
+    "faculty": "ENEV",
+    "credit": "3",
+    "description": "Introduction to transportation as a system; roles of transportation in society; the technology of transportation; the transportation system and its environment; introduction to planning and management of regional transportation facilities.",
+    "prerequisite": "CS 110 and ENGG 240 or ENGG 141 (concurrent enrolment is allowed)",
+    "section": []
+}

@@ -1,1 +1,10 @@
-{"term": "No class for the term", "short_name": "ENEV 408", "title": "Basic Structural Design", "faculty": "ENEV", "credit": "3", "description": "Design concepts and practices for simple beams, columns, connectors and structures in wood, steel and reinforced concrete. Basic types and problems in design of foundations.", "prerequisite": "ENIN 241, ENGG 240 or ENGG 141 and ENEV 384", "section": []}
+{
+    "term": "No class for the term",
+    "short_name": "ENEV 408",
+    "title": "Basic Structural Design",
+    "faculty": "ENEV",
+    "credit": "3",
+    "description": "Design concepts and practices for simple beams, columns, connectors and structures in wood, steel and reinforced concrete. Basic types and problems in design of foundations.",
+    "prerequisite": "ENIN 241, ENGG 240 or ENGG 141 and ENEV 384",
+    "section": []
+}

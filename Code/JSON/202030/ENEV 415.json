@@ -1,1 +1,10 @@
-{"term": "No class for the term", "short_name": "ENEV 415", "title": "Environmental Systems Engineering Design Project and Communications", "faculty": "ENEV", "credit": "3", "description": "Preparation and presentation of a report on an approved systems engineering design project.  Basics of preparing and presenting engineering reports.", "prerequisite": "ENEV 400", "section": []}
+{
+    "term": "No class for the term",
+    "short_name": "ENEV 415",
+    "title": "Environmental Systems Engineering Design Project and Communications",
+    "faculty": "ENEV",
+    "credit": "3",
+    "description": "Preparation and presentation of a report on an approved systems engineering design project.  Basics of preparing and presenting engineering reports.",
+    "prerequisite": "ENEV 400",
+    "section": []
+}

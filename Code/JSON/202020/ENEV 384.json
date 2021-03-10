@@ -1,1 +1,65 @@
-{"term": "2020 Spring/Summer", "short_name": "ENEV 384", "title": "Engineering Materials", "faculty": "ENEV", "credit": "3", "description": "Structure and properties of engineering materials, particularly steel, aggregate, and asphalt and Portland cement concretes. Introduction to soils. Environmental aspects of materials.", "prerequisite": "CHEM 104", "section": [{"course_ID": "21742", "section_num": "001", "instructors": "Amgad Salama Ahmed  Salama (P)", "days": "WF", "time": "9:30 am - 10:45 am", "loc": "Remote", "course_type": "Lecture", "exam_days": "W", "exam_date": "Aug 05, 2020 - Aug 05, 2020", "exam_time": "2:00 pm - 5:00 pm"}, {"course_ID": "21743", "section_num": "091", "instructors": "Dean Alan  Milton (P)", "days": "T", "time": "2:00 pm - 3:00 pm", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "21743", "section_num": "091", "instructors": "Dean Alan  Milton (P)", "days": "T", "time": "2:30 pm - 5:20 pm", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "21744", "section_num": "092", "instructors": "Dean Alan  Milton (P)", "days": "W", "time": "2:00 pm - 3:00 pm", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "21744", "section_num": "092", "instructors": "Dean Alan  Milton (P)", "days": "W", "time": "2:30 pm - 5:20 pm", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}]}
+{
+    "term": "2020 Spring/Summer",
+    "short_name": "ENEV 384",
+    "title": "Engineering Materials",
+    "faculty": "ENEV",
+    "credit": "3",
+    "description": "Structure and properties of engineering materials, particularly steel, aggregate, and asphalt and Portland cement concretes. Introduction to soils. Environmental aspects of materials.",
+    "prerequisite": "CHEM 104",
+    "section": [{
+        "course_ID": "21742",
+        "section_num": "001",
+        "instructors": "Amgad Salama Ahmed  Salama (P)",
+        "days": "WF",
+        "time": "9:30 am - 10:45 am",
+        "loc": "Remote",
+        "course_type": "Lecture",
+        "exam_days": "W",
+        "exam_date": "Aug 05, 2020 - Aug 05, 2020",
+        "exam_time": "2:00 pm - 5:00 pm"
+    }, {
+        "course_ID": "21743",
+        "section_num": "091",
+        "instructors": "Dean Alan  Milton (P)",
+        "days": "T",
+        "time": "2:00 pm - 3:00 pm",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "21743",
+        "section_num": "091",
+        "instructors": "Dean Alan  Milton (P)",
+        "days": "T",
+        "time": "2:30 pm - 5:20 pm",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "21744",
+        "section_num": "092",
+        "instructors": "Dean Alan  Milton (P)",
+        "days": "W",
+        "time": "2:00 pm - 3:00 pm",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "21744",
+        "section_num": "092",
+        "instructors": "Dean Alan  Milton (P)",
+        "days": "W",
+        "time": "2:30 pm - 5:20 pm",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }]
+}

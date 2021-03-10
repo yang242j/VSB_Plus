@@ -1,1 +1,10 @@
-{"term": "No class for the term", "short_name": "ENEL 489", "title": "FPGA Design Using VHDL", "faculty": "ENEL", "credit": "3", "description": "Introduction to FPGA digital system design. Students will learn a high-level hardware design language (VHDL), the concurrent and sequential statements of VHDL, the principle and practice of combinational circuit design, the principle and practice of sequential circuit design, Finite State Machine, Register Transfer Methodology, the synthesis and implementation of digital design on a FPGA device. Advanced synchronous digital design 3 techniques such as pipelining, parallelism, and caching. Students will develop a design and test it on an FPGA development board.", "prerequisite": "ENEL 384", "section": []}
+{
+    "term": "No class for the term",
+    "short_name": "ENEL 489",
+    "title": "FPGA Design Using VHDL",
+    "faculty": "ENEL",
+    "credit": "3",
+    "description": "Introduction to FPGA digital system design. Students will learn a high-level hardware design language (VHDL), the concurrent and sequential statements of VHDL, the principle and practice of combinational circuit design, the principle and practice of sequential circuit design, Finite State Machine, Register Transfer Methodology, the synthesis and implementation of digital design on a FPGA device. Advanced synchronous digital design 3 techniques such as pipelining, parallelism, and caching. Students will develop a design and test it on an FPGA development board.",
+    "prerequisite": "ENEL 384",
+    "section": []
+}

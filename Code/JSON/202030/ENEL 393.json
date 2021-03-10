@@ -1,1 +1,43 @@
-{"term": "2020 Fall", "short_name": "ENEL 393", "title": "Digital Communications", "faculty": "ENEL", "credit": "3", "description": "Error rates, optimum decision levels, statistical decision theory, matched filters, narrowband noise, system performance, optimum binary transmission, M-ary orthogonal signals, Shannon capacity expression, coding for error detection and correction, repeater systems.", "prerequisite": "ENEL 390", "section": [{"course_ID": "30992", "section_num": "001", "instructors": "Irfan   Al-Anbagi (P)", "days": "MW", "time": "10:00 am - 11:15 am", "loc": "Remote", "course_type": "Lecture", "exam_days": "W", "exam_date": "Dec 16, 2020 - Dec 16, 2020", "exam_time": "9:00 am - 12:00 pm"}, {"course_ID": "30993", "section_num": "091", "instructors": "David B.  Duguid (P)", "days": "W", "time": "8:30 am - 11:15 am", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "30994", "section_num": "092", "instructors": "David B.  Duguid (P)", "days": "M", "time": "11:30 am - 2:15 pm", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}]}
+{
+    "term": "2020 Fall",
+    "short_name": "ENEL 393",
+    "title": "Digital Communications",
+    "faculty": "ENEL",
+    "credit": "3",
+    "description": "Error rates, optimum decision levels, statistical decision theory, matched filters, narrowband noise, system performance, optimum binary transmission, M-ary orthogonal signals, Shannon capacity expression, coding for error detection and correction, repeater systems.",
+    "prerequisite": "ENEL 390",
+    "section": [{
+        "course_ID": "30992",
+        "section_num": "001",
+        "instructors": "Irfan   Al-Anbagi (P)",
+        "days": "MW",
+        "time": "10:00 am - 11:15 am",
+        "loc": "Remote",
+        "course_type": "Lecture",
+        "exam_days": "W",
+        "exam_date": "Dec 16, 2020 - Dec 16, 2020",
+        "exam_time": "9:00 am - 12:00 pm"
+    }, {
+        "course_ID": "30993",
+        "section_num": "091",
+        "instructors": "David B.  Duguid (P)",
+        "days": "W",
+        "time": "8:30 am - 11:15 am",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "30994",
+        "section_num": "092",
+        "instructors": "David B.  Duguid (P)",
+        "days": "M",
+        "time": "11:30 am - 2:15 pm",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }]
+}

@@ -1,1 +1,32 @@
-{"term": "2020 Spring/Summer", "short_name": "MATH 111", "title": "Calculus II", "faculty": "MATH", "credit": "3", "description": "Differentiation and integration of exponential and logarithmic functions; methods of integration and applications; indeterminate forms, L'Hospital's rule and improper integrals; sequences, series, power series and Taylor series.", "prerequisite": "MATH 110, or MATH 103 with a grade of at least 80%", "section": [{"course_ID": "22128", "section_num": "070", "instructors": "Tse Leung   So (P)", "days": "MTWR", "time": "8:00 am - 9:15 am", "loc": "Remote", "course_type": "Lecture", "exam_days": "M", "exam_date": "Aug 24, 2020 - Aug 24, 2020", "exam_time": "8:00 am - 11:00 am"}, {"course_ID": "22129", "section_num": "071", "instructors": "Maral   Mazjini (P)", "days": "R", "time": "2:00 pm - 2:50 pm", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}]}
+{
+    "term": "2020 Spring/Summer",
+    "short_name": "MATH 111",
+    "title": "Calculus II",
+    "faculty": "MATH",
+    "credit": "3",
+    "description": "Differentiation and integration of exponential and logarithmic functions; methods of integration and applications; indeterminate forms, L'Hospital's rule and improper integrals; sequences, series, power series and Taylor series.",
+    "prerequisite": "MATH 110, or MATH 103 with a grade of at least 80%",
+    "section": [{
+        "course_ID": "22128",
+        "section_num": "070",
+        "instructors": "Tse Leung   So (P)",
+        "days": "MTWR",
+        "time": "8:00 am - 9:15 am",
+        "loc": "Remote",
+        "course_type": "Lecture",
+        "exam_days": "M",
+        "exam_date": "Aug 24, 2020 - Aug 24, 2020",
+        "exam_time": "8:00 am - 11:00 am"
+    }, {
+        "course_ID": "22129",
+        "section_num": "071",
+        "instructors": "Maral   Mazjini (P)",
+        "days": "R",
+        "time": "2:00 pm - 2:50 pm",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }]
+}

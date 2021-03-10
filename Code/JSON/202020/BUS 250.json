@@ -1,1 +1,54 @@
-{"term": "2020 Spring/Summer", "short_name": "BUS 250", "title": "Introduction to Human Resource Management and Industrial Relations", "faculty": "BUS", "credit": "3", "description": "This introductory course addresses basic concepts and processes of the field of human resource management. Topics include: human resource planning, job analysis, recruitment, selection, orientation, training and development, performance management, compensation management, workplace health and safety, and employee and labour relations.", "prerequisite": "BUS 100 (or ADMN 100) and BUS 260 (or ADMN 260).", "section": [{"course_ID": "21817", "section_num": "040", "instructors": "Sandra   Steen (P)", "days": "\u00a0", "time": "TBA", "loc": "WEB WEB", "course_type": "Lecture", "exam_days": "S", "exam_date": "Jun 20, 2020 - Jun 20, 2020", "exam_time": "8:00 am - 11:00 am"}, {"course_ID": "21818", "section_num": "041", "instructors": "Sandra   Steen (P)", "days": "\u00a0", "time": "TBA", "loc": "WEB WEB", "course_type": "Lecture", "exam_days": "S", "exam_date": "Jun 20, 2020 - Jun 20, 2020", "exam_time": "8:00 am - 11:00 am"}, {"course_ID": "22055", "section_num": "070", "instructors": "Caroline Grace  Graves (P)", "days": "MW", "time": "5:30 pm - 8:15 pm", "loc": "Remote", "course_type": "Lecture", "exam_days": "S", "exam_date": "Aug 22, 2020 - Aug 22, 2020", "exam_time": "2:00 pm - 5:00 pm"}, {"course_ID": "22056", "section_num": "071", "instructors": "Caroline Grace  Graves (P)", "days": "MW", "time": "5:30 pm - 8:15 pm", "loc": "Remote", "course_type": "Lecture", "exam_days": "S", "exam_date": "Aug 22, 2020 - Aug 22, 2020", "exam_time": "2:00 pm - 5:00 pm"}]}
+{
+    "term": "2020 Spring/Summer",
+    "short_name": "BUS 250",
+    "title": "Introduction to Human Resource Management and Industrial Relations",
+    "faculty": "BUS",
+    "credit": "3",
+    "description": "This introductory course addresses basic concepts and processes of the field of human resource management. Topics include: human resource planning, job analysis, recruitment, selection, orientation, training and development, performance management, compensation management, workplace health and safety, and employee and labour relations.",
+    "prerequisite": "BUS 100 (or ADMN 100) and BUS 260 (or ADMN 260).",
+    "section": [{
+        "course_ID": "21817",
+        "section_num": "040",
+        "instructors": "Sandra   Steen (P)",
+        "days": "\u00a0",
+        "time": "TBA",
+        "loc": "WEB WEB",
+        "course_type": "Lecture",
+        "exam_days": "S",
+        "exam_date": "Jun 20, 2020 - Jun 20, 2020",
+        "exam_time": "8:00 am - 11:00 am"
+    }, {
+        "course_ID": "21818",
+        "section_num": "041",
+        "instructors": "Sandra   Steen (P)",
+        "days": "\u00a0",
+        "time": "TBA",
+        "loc": "WEB WEB",
+        "course_type": "Lecture",
+        "exam_days": "S",
+        "exam_date": "Jun 20, 2020 - Jun 20, 2020",
+        "exam_time": "8:00 am - 11:00 am"
+    }, {
+        "course_ID": "22055",
+        "section_num": "070",
+        "instructors": "Caroline Grace  Graves (P)",
+        "days": "MW",
+        "time": "5:30 pm - 8:15 pm",
+        "loc": "Remote",
+        "course_type": "Lecture",
+        "exam_days": "S",
+        "exam_date": "Aug 22, 2020 - Aug 22, 2020",
+        "exam_time": "2:00 pm - 5:00 pm"
+    }, {
+        "course_ID": "22056",
+        "section_num": "071",
+        "instructors": "Caroline Grace  Graves (P)",
+        "days": "MW",
+        "time": "5:30 pm - 8:15 pm",
+        "loc": "Remote",
+        "course_type": "Lecture",
+        "exam_days": "S",
+        "exam_date": "Aug 22, 2020 - Aug 22, 2020",
+        "exam_time": "2:00 pm - 5:00 pm"
+    }]
+}

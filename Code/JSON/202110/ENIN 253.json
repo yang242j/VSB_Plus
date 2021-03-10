@@ -1,1 +1,10 @@
-{"term": "No class for the term", "short_name": "ENIN 253", "title": "Engineering Thermodynamics", "faculty": "ENIN", "credit": "3", "description": "Fundamental laws of thermodynamics and their application to various engineering systems. Ideal and actual processes, power and refrigeration cycles.", "prerequisite": "PHYS 119", "section": []}
+{
+    "term": "No class for the term",
+    "short_name": "ENIN 253",
+    "title": "Engineering Thermodynamics",
+    "faculty": "ENIN",
+    "credit": "3",
+    "description": "Fundamental laws of thermodynamics and their application to various engineering systems. Ideal and actual processes, power and refrigeration cycles.",
+    "prerequisite": "PHYS 119",
+    "section": []
+}

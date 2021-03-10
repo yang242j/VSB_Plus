@@ -1,1 +1,10 @@
-{"term": "No class for the term", "short_name": "ENPE 492", "title": "Introduction to Petroleum Refinery", "faculty": "ENPE", "credit": "3", "description": "In this course students will become familiar with the basic principles of petroleum refinary operations. Composition of crude oils, related laboratory tests and refinery feedstocks and products will be discussed. Evaluation of crude oil properties and design of distillation columns, furnace, thermal and catalytic cracking, catalytic reforming, hydrotreating, hydrocracking, isomerization, alkylation and polymerization will be introduced.", "prerequisite": "ENIN 355", "section": []}
+{
+    "term": "No class for the term",
+    "short_name": "ENPE 492",
+    "title": "Introduction to Petroleum Refinery",
+    "faculty": "ENPE",
+    "credit": "3",
+    "description": "In this course students will become familiar with the basic principles of petroleum refinary operations. Composition of crude oils, related laboratory tests and refinery feedstocks and products will be discussed. Evaluation of crude oil properties and design of distillation columns, furnace, thermal and catalytic cracking, catalytic reforming, hydrotreating, hydrocracking, isomerization, alkylation and polymerization will be introduced.",
+    "prerequisite": "ENIN 355",
+    "section": []
+}

@@ -1,1 +1,10 @@
-{"term": "No class for the term", "short_name": "ENPE 490", "title": "Petroleum Waste Management", "faculty": "ENPE", "credit": "3", "description": "Prevention and mitigation techniques in pipeline and oil field spills.  Downhole disposal of waste fluids, surface disposal of oil field wastes, fire and other hazards, H2S and other toxic gases, and safety standards.", "prerequisite": " ENPE 300 or ENEV 320 or ENEV 223", "section": []}
+{
+    "term": "No class for the term",
+    "short_name": "ENPE 490",
+    "title": "Petroleum Waste Management",
+    "faculty": "ENPE",
+    "credit": "3",
+    "description": "Prevention and mitigation techniques in pipeline and oil field spills.  Downhole disposal of waste fluids, surface disposal of oil field wastes, fire and other hazards, H2S and other toxic gases, and safety standards.",
+    "prerequisite": " ENPE 300 or ENEV 320 or ENEV 223",
+    "section": []
+}

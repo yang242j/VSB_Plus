@@ -1,1 +1,32 @@
-{"term": "2021 Winter", "short_name": "ENEL 489", "title": "FPGA Design Using VHDL", "faculty": "ENEL", "credit": "3", "description": "Introduction to FPGA digital system design. Students will learn a high-level hardware design language (VHDL), the concurrent and sequential statements of VHDL, the principle and practice of combinational circuit design, the principle and practice of sequential circuit design, Finite State Machine, Register Transfer Methodology, the synthesis and implementation of digital design on a FPGA device. Advanced synchronous digital design 3 techniques such as pipelining, parallelism, and caching. Students will develop a design and test it on an FPGA development board.", "prerequisite": "ENEL 384", "section": [{"course_ID": "10903", "section_num": "001", "instructors": "Lei   Zhang (P)", "days": "WF", "time": "10:00 am - 11:15 am", "loc": "Remote", "course_type": "Lecture", "exam_days": "W", "exam_date": "Apr 21, 2021 - Apr 21, 2021", "exam_time": "9:00 am - 12:00 pm"}, {"course_ID": "10904", "section_num": "091", "instructors": "TBA", "days": "M", "time": "8:30 am - 11:15 am", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}]}
+{
+    "term": "2021 Winter",
+    "short_name": "ENEL 489",
+    "title": "FPGA Design Using VHDL",
+    "faculty": "ENEL",
+    "credit": "3",
+    "description": "Introduction to FPGA digital system design. Students will learn a high-level hardware design language (VHDL), the concurrent and sequential statements of VHDL, the principle and practice of combinational circuit design, the principle and practice of sequential circuit design, Finite State Machine, Register Transfer Methodology, the synthesis and implementation of digital design on a FPGA device. Advanced synchronous digital design 3 techniques such as pipelining, parallelism, and caching. Students will develop a design and test it on an FPGA development board.",
+    "prerequisite": "ENEL 384",
+    "section": [{
+        "course_ID": "10903",
+        "section_num": "001",
+        "instructors": "Lei   Zhang (P)",
+        "days": "WF",
+        "time": "10:00 am - 11:15 am",
+        "loc": "Remote",
+        "course_type": "Lecture",
+        "exam_days": "W",
+        "exam_date": "Apr 21, 2021 - Apr 21, 2021",
+        "exam_time": "9:00 am - 12:00 pm"
+    }, {
+        "course_ID": "10904",
+        "section_num": "091",
+        "instructors": "TBA",
+        "days": "M",
+        "time": "8:30 am - 11:15 am",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }]
+}

@@ -1,1 +1,10 @@
-{"term": "No class for the term", "short_name": "ENIN 413", "title": "ISE Team Design Project and Communications", "faculty": "ENIN", "credit": "3", "description": "Student's team design project is to be completed, written in acceptable report form and presented.  Instruction will be given on the preparation and presentation of engineering reports in various audio/visual media.", "prerequisite": " ENIN 400 (taken within same academic year)", "section": []}
+{
+    "term": "No class for the term",
+    "short_name": "ENIN 413",
+    "title": "ISE Team Design Project and Communications",
+    "faculty": "ENIN",
+    "credit": "3",
+    "description": "Student's team design project is to be completed, written in acceptable report form and presented.  Instruction will be given on the preparation and presentation of engineering reports in various audio/visual media.",
+    "prerequisite": " ENIN 400 (taken within same academic year)",
+    "section": []
+}

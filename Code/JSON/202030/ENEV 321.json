@@ -1,1 +1,43 @@
-{"term": "2020 Fall", "short_name": "ENEV 321", "title": "Applied Environmental Science", "faculty": "ENEV", "credit": "3", "description": "Study of biochemical effects of human activities on the environment; ecology and environmental pollution; materials and energy balances; chemical systems; basic concepts of aquatic and soil chemistry; water resources; transport phenomena; water pollution; human health risk assessment; water quality and treatment; wastewater treatment; public health aspects.", "prerequisite": "CHEM 104", "section": [{"course_ID": "31019", "section_num": "001", "instructors": "Stephanie   Young (P)", "days": "MW", "time": "10:00 am - 11:15 am", "loc": "Remote", "course_type": "Lecture", "exam_days": "W", "exam_date": "Dec 16, 2020 - Dec 16, 2020", "exam_time": "9:00 am - 12:00 pm"}, {"course_ID": "31020", "section_num": "091", "instructors": "Dean Alan  Milton (P)", "days": "R", "time": "2:30 pm - 5:15 pm", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "31021", "section_num": "092", "instructors": "Dean Alan  Milton (P)", "days": "T", "time": "2:30 pm - 5:15 pm", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}]}
+{
+    "term": "2020 Fall",
+    "short_name": "ENEV 321",
+    "title": "Applied Environmental Science",
+    "faculty": "ENEV",
+    "credit": "3",
+    "description": "Study of biochemical effects of human activities on the environment; ecology and environmental pollution; materials and energy balances; chemical systems; basic concepts of aquatic and soil chemistry; water resources; transport phenomena; water pollution; human health risk assessment; water quality and treatment; wastewater treatment; public health aspects.",
+    "prerequisite": "CHEM 104",
+    "section": [{
+        "course_ID": "31019",
+        "section_num": "001",
+        "instructors": "Stephanie   Young (P)",
+        "days": "MW",
+        "time": "10:00 am - 11:15 am",
+        "loc": "Remote",
+        "course_type": "Lecture",
+        "exam_days": "W",
+        "exam_date": "Dec 16, 2020 - Dec 16, 2020",
+        "exam_time": "9:00 am - 12:00 pm"
+    }, {
+        "course_ID": "31020",
+        "section_num": "091",
+        "instructors": "Dean Alan  Milton (P)",
+        "days": "R",
+        "time": "2:30 pm - 5:15 pm",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "31021",
+        "section_num": "092",
+        "instructors": "Dean Alan  Milton (P)",
+        "days": "T",
+        "time": "2:30 pm - 5:15 pm",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }]
+}

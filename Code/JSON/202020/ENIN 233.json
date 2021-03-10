@@ -1,1 +1,32 @@
-{"term": "2020 Spring/Summer", "short_name": "ENIN 233", "title": "System Dynamics", "faculty": "ENIN", "credit": "3", "description": "Lumped parameter linear analysis methods for mechanical, electrical, fluid and thermal systems.  Linear differential equations to analyze system response to step and sinusoidal forcing functions.  Analogous nature of these systems.", "prerequisite": " MATH 217", "section": [{"course_ID": "21755", "section_num": "001", "instructors": "Rene V.  Mayorga (P)", "days": "WF", "time": "2:30 pm - 3:45 pm", "loc": "Remote", "course_type": "Lecture", "exam_days": "R", "exam_date": "Aug 06, 2020 - Aug 06, 2020", "exam_time": "9:00 am - 12:00 pm"}, {"course_ID": "21756", "section_num": "091", "instructors": "Syed Adeel Haneef   Zaidi (P)", "days": "T", "time": "2:30 pm - 5:20 pm", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}]}
+{
+    "term": "2020 Spring/Summer",
+    "short_name": "ENIN 233",
+    "title": "System Dynamics",
+    "faculty": "ENIN",
+    "credit": "3",
+    "description": "Lumped parameter linear analysis methods for mechanical, electrical, fluid and thermal systems.  Linear differential equations to analyze system response to step and sinusoidal forcing functions.  Analogous nature of these systems.",
+    "prerequisite": " MATH 217",
+    "section": [{
+        "course_ID": "21755",
+        "section_num": "001",
+        "instructors": "Rene V.  Mayorga (P)",
+        "days": "WF",
+        "time": "2:30 pm - 3:45 pm",
+        "loc": "Remote",
+        "course_type": "Lecture",
+        "exam_days": "R",
+        "exam_date": "Aug 06, 2020 - Aug 06, 2020",
+        "exam_time": "9:00 am - 12:00 pm"
+    }, {
+        "course_ID": "21756",
+        "section_num": "091",
+        "instructors": "Syed Adeel Haneef   Zaidi (P)",
+        "days": "T",
+        "time": "2:30 pm - 5:20 pm",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }]
+}

@@ -1,1 +1,10 @@
-{"term": "No class for the term", "short_name": "ENEV 440", "title": "Air Pollution Engineering", "faculty": "ENEV", "credit": "3", "description": "Air pollution effects and control regulations, atmospheric chemistry, air quality detection, pollution meteorology, air quality, modeling, air pollution control, techniques, and global atmospheric problems.", "prerequisite": "ENEV 321", "section": []}
+{
+    "term": "No class for the term",
+    "short_name": "ENEV 440",
+    "title": "Air Pollution Engineering",
+    "faculty": "ENEV",
+    "credit": "3",
+    "description": "Air pollution effects and control regulations, atmospheric chemistry, air quality detection, pollution meteorology, air quality, modeling, air pollution control, techniques, and global atmospheric problems.",
+    "prerequisite": "ENEV 321",
+    "section": []
+}

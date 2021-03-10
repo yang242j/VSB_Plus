@@ -1,1 +1,10 @@
-{"term": "No class for the term", "short_name": "ENSE 482", "title": "New Media Technology", "faculty": "ENSE", "credit": "3", "description": "This course aims to provide a basic level of understanding to make it possible for engineers to work with designers and understand some of the constraints within New Media design.  Topics include: definition of New Media, New Media narratives, Multimedia, integration, intermedia, the basic tools, and New Media design.", "prerequisite": "ENSE 374", "section": []}
+{
+    "term": "No class for the term",
+    "short_name": "ENSE 482",
+    "title": "New Media Technology",
+    "faculty": "ENSE",
+    "credit": "3",
+    "description": "This course aims to provide a basic level of understanding to make it possible for engineers to work with designers and understand some of the constraints within New Media design.  Topics include: definition of New Media, New Media narratives, Multimedia, integration, intermedia, the basic tools, and New Media design.",
+    "prerequisite": "ENSE 374",
+    "section": []
+}

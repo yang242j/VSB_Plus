@@ -1,1 +1,197 @@
-{"term": "2020 Spring/Summer", "short_name": "ENGL 100", "title": "Critical Reading and Writing I", "faculty": "ENGL", "credit": "3", "description": "This course develops students' proficiency in critical reading and writing through the study of a wide range of non-literary and literary texts, and the study of composition, with emphasis on connections between modes of reading and writing.", "prerequisite": "", "section": [{"course_ID": "21901", "section_num": "040", "instructors": "Justine Elizabeth Maeve  Gieni (P)", "days": "MTWR", "time": "1:00 pm - 2:15 pm", "loc": "Remote", "course_type": "Lecture", "exam_days": "M", "exam_date": "Jun 22, 2020 - Jun 22, 2020", "exam_time": "2:00 pm - 5:00 pm"}, {"course_ID": "21902", "section_num": "041", "instructors": "Matthew Jack  Wincherauk (P)", "days": "TR", "time": "9:00 am - 11:45 am", "loc": "Remote", "course_type": "Lecture", "exam_days": "M", "exam_date": "Jun 22, 2020 - Jun 22, 2020", "exam_time": "8:00 am - 11:00 am"}, {"course_ID": "22618", "section_num": "042", "instructors": "Alexis   McQuigge (P)", "days": "\u00a0", "time": "TBA", "loc": "WEB WEB", "course_type": "Lecture", "exam_days": "W", "exam_date": "Jun 24, 2020 - Jun 24, 2020", "exam_time": "2:00 pm - 5:00 pm"}, {"course_ID": "22303", "section_num": "060", "instructors": "Michael Joshua  Horacki (P)", "days": "MTWRF", "time": "8:30 am - 11:15 am", "loc": "Remote", "course_type": "Lecture", "exam_days": "R", "exam_date": "Aug 27, 2020 - Aug 27, 2020", "exam_time": "8:30 am - 11:30 am"}, {"course_ID": "22304", "section_num": "061", "instructors": "Michael Joshua  Horacki (P)", "days": "MTWRF", "time": "12:30 pm - 3:15 pm", "loc": "Remote", "course_type": "Lecture", "exam_days": "R", "exam_date": "Aug 27, 2020 - Aug 27, 2020", "exam_time": "12:30 pm - 3:30 pm"}, {"course_ID": "22097", "section_num": "070", "instructors": "Susan R.  Bauman (P)", "days": "MTWR", "time": "1:00 pm - 2:15 pm", "loc": "Remote", "course_type": "Lecture", "exam_days": "M", "exam_date": "Aug 24, 2020 - Aug 24, 2020", "exam_time": "2:00 pm - 5:00 pm"}, {"course_ID": "22646", "section_num": "071", "instructors": "Justine Elizabeth Maeve  Gieni (P)", "days": "\u00a0", "time": "TBA", "loc": "WEB WEB", "course_type": "Lecture", "exam_days": "T", "exam_date": "Aug 25, 2020 - Aug 25, 2020", "exam_time": "2:00 pm - 5:00 pm"}, {"course_ID": "22647", "section_num": "072", "instructors": "Sabujkoli   Bandopadhyay (P)", "days": "\u00a0", "time": "TBA", "loc": "WEB WEB", "course_type": "Lecture", "exam_days": "W", "exam_date": "Aug 26, 2020 - Aug 26, 2020", "exam_time": "2:00 pm - 5:00 pm"}, {"course_ID": "21903", "section_num": "396", "instructors": "Justine Elizabeth Maeve  Gieni (P)", "days": "\u00a0", "time": "TBA", "loc": "WEB WEB", "course_type": "Lecture", "exam_days": "T", "exam_date": "Jun 23, 2020 - Jun 23, 2020", "exam_time": "2:00 pm - 5:00 pm"}, {"course_ID": "21904", "section_num": "397", "instructors": "Christopher Linus Kofi  Gbekorbu-Matters (P)", "days": "\u00a0", "time": "TBA", "loc": "WEB WEB", "course_type": "Lecture", "exam_days": "T", "exam_date": "Jun 23, 2020 - Jun 23, 2020", "exam_time": "2:00 pm - 5:00 pm"}, {"course_ID": "22098", "section_num": "398", "instructors": "Christopher Linus Kofi  Gbekorbu-Matters (P)", "days": "\u00a0", "time": "TBA", "loc": "WEB WEB", "course_type": "Lecture", "exam_days": "M", "exam_date": "Aug 24, 2020 - Aug 24, 2020", "exam_time": "2:00 pm - 5:00 pm"}, {"course_ID": "21905", "section_num": "C40", "instructors": "Deborah Lee  Hoffmann (P)", "days": "\u00a0", "time": "TBA", "loc": "WEB WEB", "course_type": "Lecture", "exam_days": "T", "exam_date": "Jun 23, 2020 - Jun 23, 2020", "exam_time": "8:00 am - 11:00 am"}, {"course_ID": "22099", "section_num": "C70", "instructors": "Susan R.  Bauman (P)", "days": "MTWR", "time": "9:30 am - 10:45 am", "loc": "Remote", "course_type": "Lecture", "exam_days": "T", "exam_date": "Aug 25, 2020 - Aug 25, 2020", "exam_time": "8:00 am - 11:00 am"}, {"course_ID": "21906", "section_num": "L40", "instructors": "Kathryn Rose  MacLennan (P)", "days": "MTWR", "time": "11:00 am - 12:15 pm", "loc": "Remote", "course_type": "Lecture", "exam_days": "W", "exam_date": "Jun 24, 2020 - Jun 24, 2020", "exam_time": "8:00 am - 11:00 am"}, {"course_ID": "22100", "section_num": "L70", "instructors": "Alexandra Michelle  Fenson (P)", "days": "MTWR", "time": "11:00 am - 12:15 pm", "loc": "Remote", "course_type": "Lecture", "exam_days": "W", "exam_date": "Aug 26, 2020 - Aug 26, 2020", "exam_time": "8:00 am - 11:00 am"}, {"course_ID": "21907", "section_num": "S01", "instructors": "Lloyd Alexander  Dubois (P)", "days": "MTWR", "time": "1:00 pm - 2:15 pm", "loc": "Remote", "course_type": "Lecture", "exam_days": "M", "exam_date": "Jun 22, 2020 - Jun 22, 2020", "exam_time": "2:00 pm - 5:00 pm"}, {"course_ID": "22101", "section_num": "S02", "instructors": "Lloyd Alexander  Dubois (P)", "days": "MTWR", "time": "1:00 pm - 2:15 pm", "loc": "Remote", "course_type": "Lecture", "exam_days": "M", "exam_date": "Aug 24, 2020 - Aug 24, 2020", "exam_time": "2:00 pm - 5:00 pm"}]}
+{
+    "term": "2020 Spring/Summer",
+    "short_name": "ENGL 100",
+    "title": "Critical Reading and Writing I",
+    "faculty": "ENGL",
+    "credit": "3",
+    "description": "This course develops students' proficiency in critical reading and writing through the study of a wide range of non-literary and literary texts, and the study of composition, with emphasis on connections between modes of reading and writing.",
+    "prerequisite": "",
+    "section": [{
+        "course_ID": "21901",
+        "section_num": "040",
+        "instructors": "Justine Elizabeth Maeve  Gieni (P)",
+        "days": "MTWR",
+        "time": "1:00 pm - 2:15 pm",
+        "loc": "Remote",
+        "course_type": "Lecture",
+        "exam_days": "M",
+        "exam_date": "Jun 22, 2020 - Jun 22, 2020",
+        "exam_time": "2:00 pm - 5:00 pm"
+    }, {
+        "course_ID": "21902",
+        "section_num": "041",
+        "instructors": "Matthew Jack  Wincherauk (P)",
+        "days": "TR",
+        "time": "9:00 am - 11:45 am",
+        "loc": "Remote",
+        "course_type": "Lecture",
+        "exam_days": "M",
+        "exam_date": "Jun 22, 2020 - Jun 22, 2020",
+        "exam_time": "8:00 am - 11:00 am"
+    }, {
+        "course_ID": "22618",
+        "section_num": "042",
+        "instructors": "Alexis   McQuigge (P)",
+        "days": "\u00a0",
+        "time": "TBA",
+        "loc": "WEB WEB",
+        "course_type": "Lecture",
+        "exam_days": "W",
+        "exam_date": "Jun 24, 2020 - Jun 24, 2020",
+        "exam_time": "2:00 pm - 5:00 pm"
+    }, {
+        "course_ID": "22303",
+        "section_num": "060",
+        "instructors": "Michael Joshua  Horacki (P)",
+        "days": "MTWRF",
+        "time": "8:30 am - 11:15 am",
+        "loc": "Remote",
+        "course_type": "Lecture",
+        "exam_days": "R",
+        "exam_date": "Aug 27, 2020 - Aug 27, 2020",
+        "exam_time": "8:30 am - 11:30 am"
+    }, {
+        "course_ID": "22304",
+        "section_num": "061",
+        "instructors": "Michael Joshua  Horacki (P)",
+        "days": "MTWRF",
+        "time": "12:30 pm - 3:15 pm",
+        "loc": "Remote",
+        "course_type": "Lecture",
+        "exam_days": "R",
+        "exam_date": "Aug 27, 2020 - Aug 27, 2020",
+        "exam_time": "12:30 pm - 3:30 pm"
+    }, {
+        "course_ID": "22097",
+        "section_num": "070",
+        "instructors": "Susan R.  Bauman (P)",
+        "days": "MTWR",
+        "time": "1:00 pm - 2:15 pm",
+        "loc": "Remote",
+        "course_type": "Lecture",
+        "exam_days": "M",
+        "exam_date": "Aug 24, 2020 - Aug 24, 2020",
+        "exam_time": "2:00 pm - 5:00 pm"
+    }, {
+        "course_ID": "22646",
+        "section_num": "071",
+        "instructors": "Justine Elizabeth Maeve  Gieni (P)",
+        "days": "\u00a0",
+        "time": "TBA",
+        "loc": "WEB WEB",
+        "course_type": "Lecture",
+        "exam_days": "T",
+        "exam_date": "Aug 25, 2020 - Aug 25, 2020",
+        "exam_time": "2:00 pm - 5:00 pm"
+    }, {
+        "course_ID": "22647",
+        "section_num": "072",
+        "instructors": "Sabujkoli   Bandopadhyay (P)",
+        "days": "\u00a0",
+        "time": "TBA",
+        "loc": "WEB WEB",
+        "course_type": "Lecture",
+        "exam_days": "W",
+        "exam_date": "Aug 26, 2020 - Aug 26, 2020",
+        "exam_time": "2:00 pm - 5:00 pm"
+    }, {
+        "course_ID": "21903",
+        "section_num": "396",
+        "instructors": "Justine Elizabeth Maeve  Gieni (P)",
+        "days": "\u00a0",
+        "time": "TBA",
+        "loc": "WEB WEB",
+        "course_type": "Lecture",
+        "exam_days": "T",
+        "exam_date": "Jun 23, 2020 - Jun 23, 2020",
+        "exam_time": "2:00 pm - 5:00 pm"
+    }, {
+        "course_ID": "21904",
+        "section_num": "397",
+        "instructors": "Christopher Linus Kofi  Gbekorbu-Matters (P)",
+        "days": "\u00a0",
+        "time": "TBA",
+        "loc": "WEB WEB",
+        "course_type": "Lecture",
+        "exam_days": "T",
+        "exam_date": "Jun 23, 2020 - Jun 23, 2020",
+        "exam_time": "2:00 pm - 5:00 pm"
+    }, {
+        "course_ID": "22098",
+        "section_num": "398",
+        "instructors": "Christopher Linus Kofi  Gbekorbu-Matters (P)",
+        "days": "\u00a0",
+        "time": "TBA",
+        "loc": "WEB WEB",
+        "course_type": "Lecture",
+        "exam_days": "M",
+        "exam_date": "Aug 24, 2020 - Aug 24, 2020",
+        "exam_time": "2:00 pm - 5:00 pm"
+    }, {
+        "course_ID": "21905",
+        "section_num": "C40",
+        "instructors": "Deborah Lee  Hoffmann (P)",
+        "days": "\u00a0",
+        "time": "TBA",
+        "loc": "WEB WEB",
+        "course_type": "Lecture",
+        "exam_days": "T",
+        "exam_date": "Jun 23, 2020 - Jun 23, 2020",
+        "exam_time": "8:00 am - 11:00 am"
+    }, {
+        "course_ID": "22099",
+        "section_num": "C70",
+        "instructors": "Susan R.  Bauman (P)",
+        "days": "MTWR",
+        "time": "9:30 am - 10:45 am",
+        "loc": "Remote",
+        "course_type": "Lecture",
+        "exam_days": "T",
+        "exam_date": "Aug 25, 2020 - Aug 25, 2020",
+        "exam_time": "8:00 am - 11:00 am"
+    }, {
+        "course_ID": "21906",
+        "section_num": "L40",
+        "instructors": "Kathryn Rose  MacLennan (P)",
+        "days": "MTWR",
+        "time": "11:00 am - 12:15 pm",
+        "loc": "Remote",
+        "course_type": "Lecture",
+        "exam_days": "W",
+        "exam_date": "Jun 24, 2020 - Jun 24, 2020",
+        "exam_time": "8:00 am - 11:00 am"
+    }, {
+        "course_ID": "22100",
+        "section_num": "L70",
+        "instructors": "Alexandra Michelle  Fenson (P)",
+        "days": "MTWR",
+        "time": "11:00 am - 12:15 pm",
+        "loc": "Remote",
+        "course_type": "Lecture",
+        "exam_days": "W",
+        "exam_date": "Aug 26, 2020 - Aug 26, 2020",
+        "exam_time": "8:00 am - 11:00 am"
+    }, {
+        "course_ID": "21907",
+        "section_num": "S01",
+        "instructors": "Lloyd Alexander  Dubois (P)",
+        "days": "MTWR",
+        "time": "1:00 pm - 2:15 pm",
+        "loc": "Remote",
+        "course_type": "Lecture",
+        "exam_days": "M",
+        "exam_date": "Jun 22, 2020 - Jun 22, 2020",
+        "exam_time": "2:00 pm - 5:00 pm"
+    }, {
+        "course_ID": "22101",
+        "section_num": "S02",
+        "instructors": "Lloyd Alexander  Dubois (P)",
+        "days": "MTWR",
+        "time": "1:00 pm - 2:15 pm",
+        "loc": "Remote",
+        "course_type": "Lecture",
+        "exam_days": "M",
+        "exam_date": "Aug 24, 2020 - Aug 24, 2020",
+        "exam_time": "2:00 pm - 5:00 pm"
+    }]
+}

@@ -1,1 +1,10 @@
-{"term": "No class for the term", "short_name": "ENIN 343", "title": "Manufacturing Processes and Machinery", "faculty": "ENIN", "credit": "3", "description": "Manufacturing processes, methods, and related equipment.  Foundry, heat treatment, and welding.  Operational characteristics of manufacturing and manufacturing support machinery and equipment.  Basic structure and properties of metals.", "prerequisite": "ENIN 241", "section": []}
+{
+    "term": "No class for the term",
+    "short_name": "ENIN 343",
+    "title": "Manufacturing Processes and Machinery",
+    "faculty": "ENIN",
+    "credit": "3",
+    "description": "Manufacturing processes, methods, and related equipment.  Foundry, heat treatment, and welding.  Operational characteristics of manufacturing and manufacturing support machinery and equipment.  Basic structure and properties of metals.",
+    "prerequisite": "ENIN 241",
+    "section": []
+}

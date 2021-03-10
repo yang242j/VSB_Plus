@@ -1,1 +1,76 @@
-{"term": "2021 Winter", "short_name": "BUS 210", "title": "Introduction to Marketing", "faculty": "BUS", "credit": "3", "description": "This course presents the fundamentals of marketing theory and application. Starting at a societal level, it works through environmental scanning, explores the differences between consumer and business customer groups, followed with a strategic focus on segmentation, targeting and positioning. Tactical applications of the marketing mix are then addressed \u2013 product, price, place and promotion. Attention is also directed to ethical and legal considerations.", "prerequisite": "BUS 100 (or ADMN 100) and BUS 260 (or ADMN 260). Concurrent enrolment is allowed in BUS 260.", "section": [{"course_ID": "10260", "section_num": "001", "instructors": "Dwight Richard  Heinrichs (P)", "days": "MW", "time": "11:30 am - 12:45 pm", "loc": "Remote", "course_type": "Lecture", "exam_days": "M", "exam_date": "Apr 19, 2021 - Apr 19, 2021", "exam_time": "7:00 pm - 10:00 pm"}, {"course_ID": "10261", "section_num": "002", "instructors": "Dwight Richard  Heinrichs (P)", "days": "MW", "time": "10:00 am - 11:15 am", "loc": "Remote", "course_type": "Lecture", "exam_days": "M", "exam_date": "Apr 19, 2021 - Apr 19, 2021", "exam_time": "7:00 pm - 10:00 pm"}, {"course_ID": "10262", "section_num": "003", "instructors": "Dwight Richard  Heinrichs (P)", "days": "M", "time": "7:00 pm - 9:45 pm", "loc": "Remote", "course_type": "Lecture", "exam_days": "M", "exam_date": "Apr 19, 2021 - Apr 19, 2021", "exam_time": "7:00 pm - 10:00 pm"}, {"course_ID": "10264", "section_num": "031", "instructors": "Dwight Richard  Heinrichs (P)", "days": "MW", "time": "11:30 am - 12:45 pm", "loc": "Remote", "course_type": "Lecture", "exam_days": "M", "exam_date": "Apr 19, 2021 - Apr 19, 2021", "exam_time": "7:00 pm - 10:00 pm"}, {"course_ID": "10265", "section_num": "032", "instructors": "Dwight Richard  Heinrichs (P)", "days": "MW", "time": "10:00 am - 11:15 am", "loc": "Remote", "course_type": "Lecture", "exam_days": "M", "exam_date": "Apr 19, 2021 - Apr 19, 2021", "exam_time": "7:00 pm - 10:00 pm"}, {"course_ID": "10266", "section_num": "033", "instructors": "Dwight Richard  Heinrichs (P)", "days": "M", "time": "7:00 pm - 9:45 pm", "loc": "Remote", "course_type": "Lecture", "exam_days": "M", "exam_date": "Apr 19, 2021 - Apr 19, 2021", "exam_time": "7:00 pm - 10:00 pm"}]}
+{
+    "term": "2021 Winter",
+    "short_name": "BUS 210",
+    "title": "Introduction to Marketing",
+    "faculty": "BUS",
+    "credit": "3",
+    "description": "This course presents the fundamentals of marketing theory and application. Starting at a societal level, it works through environmental scanning, explores the differences between consumer and business customer groups, followed with a strategic focus on segmentation, targeting and positioning. Tactical applications of the marketing mix are then addressed \u2013 product, price, place and promotion. Attention is also directed to ethical and legal considerations.",
+    "prerequisite": "BUS 100 (or ADMN 100) and BUS 260 (or ADMN 260). Concurrent enrolment is allowed in BUS 260.",
+    "section": [{
+        "course_ID": "10260",
+        "section_num": "001",
+        "instructors": "Dwight Richard  Heinrichs (P)",
+        "days": "MW",
+        "time": "11:30 am - 12:45 pm",
+        "loc": "Remote",
+        "course_type": "Lecture",
+        "exam_days": "M",
+        "exam_date": "Apr 19, 2021 - Apr 19, 2021",
+        "exam_time": "7:00 pm - 10:00 pm"
+    }, {
+        "course_ID": "10261",
+        "section_num": "002",
+        "instructors": "Dwight Richard  Heinrichs (P)",
+        "days": "MW",
+        "time": "10:00 am - 11:15 am",
+        "loc": "Remote",
+        "course_type": "Lecture",
+        "exam_days": "M",
+        "exam_date": "Apr 19, 2021 - Apr 19, 2021",
+        "exam_time": "7:00 pm - 10:00 pm"
+    }, {
+        "course_ID": "10262",
+        "section_num": "003",
+        "instructors": "Dwight Richard  Heinrichs (P)",
+        "days": "M",
+        "time": "7:00 pm - 9:45 pm",
+        "loc": "Remote",
+        "course_type": "Lecture",
+        "exam_days": "M",
+        "exam_date": "Apr 19, 2021 - Apr 19, 2021",
+        "exam_time": "7:00 pm - 10:00 pm"
+    }, {
+        "course_ID": "10264",
+        "section_num": "031",
+        "instructors": "Dwight Richard  Heinrichs (P)",
+        "days": "MW",
+        "time": "11:30 am - 12:45 pm",
+        "loc": "Remote",
+        "course_type": "Lecture",
+        "exam_days": "M",
+        "exam_date": "Apr 19, 2021 - Apr 19, 2021",
+        "exam_time": "7:00 pm - 10:00 pm"
+    }, {
+        "course_ID": "10265",
+        "section_num": "032",
+        "instructors": "Dwight Richard  Heinrichs (P)",
+        "days": "MW",
+        "time": "10:00 am - 11:15 am",
+        "loc": "Remote",
+        "course_type": "Lecture",
+        "exam_days": "M",
+        "exam_date": "Apr 19, 2021 - Apr 19, 2021",
+        "exam_time": "7:00 pm - 10:00 pm"
+    }, {
+        "course_ID": "10266",
+        "section_num": "033",
+        "instructors": "Dwight Richard  Heinrichs (P)",
+        "days": "M",
+        "time": "7:00 pm - 9:45 pm",
+        "loc": "Remote",
+        "course_type": "Lecture",
+        "exam_days": "M",
+        "exam_date": "Apr 19, 2021 - Apr 19, 2021",
+        "exam_time": "7:00 pm - 10:00 pm"
+    }]
+}

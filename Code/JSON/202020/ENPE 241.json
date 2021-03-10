@@ -1,1 +1,10 @@
-{"term": "No class for the term", "short_name": "ENPE 241", "title": "Introduction to Petroleum Engineering", "faculty": "ENPE", "credit": "3", "description": "Exposure to various disciplines within petroleum engineering including drilling, production, and reservoir engineering; professionalism and ethics in petroleum engineering.", "prerequisite": " GEOL 102", "section": []}
+{
+    "term": "No class for the term",
+    "short_name": "ENPE 241",
+    "title": "Introduction to Petroleum Engineering",
+    "faculty": "ENPE",
+    "credit": "3",
+    "description": "Exposure to various disciplines within petroleum engineering including drilling, production, and reservoir engineering; professionalism and ethics in petroleum engineering.",
+    "prerequisite": " GEOL 102",
+    "section": []
+}

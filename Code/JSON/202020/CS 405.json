@@ -1,1 +1,10 @@
-{"term": "No class for the term", "short_name": "CS 405", "title": "Computer Graphics", "faculty": "CS", "credit": "3", "description": "Advanced topics in computer graphics, including special modeling techniques for natural phenomenon, advanced illumination models and rendering algorithms.", "prerequisite": "CS 315", "section": []}
+{
+    "term": "No class for the term",
+    "short_name": "CS 405",
+    "title": "Computer Graphics",
+    "faculty": "CS",
+    "credit": "3",
+    "description": "Advanced topics in computer graphics, including special modeling techniques for natural phenomenon, advanced illumination models and rendering algorithms.",
+    "prerequisite": "CS 315",
+    "section": []
+}

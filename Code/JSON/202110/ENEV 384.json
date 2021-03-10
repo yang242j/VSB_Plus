@@ -1,1 +1,10 @@
-{"term": "No class for the term", "short_name": "ENEV 384", "title": "Engineering Materials", "faculty": "ENEV", "credit": "3", "description": "Structure and properties of engineering materials, particularly steel, aggregate, and asphalt and Portland cement concretes. Introduction to soils. Environmental aspects of materials.", "prerequisite": "CHEM 104", "section": []}
+{
+    "term": "No class for the term",
+    "short_name": "ENEV 384",
+    "title": "Engineering Materials",
+    "faculty": "ENEV",
+    "credit": "3",
+    "description": "Structure and properties of engineering materials, particularly steel, aggregate, and asphalt and Portland cement concretes. Introduction to soils. Environmental aspects of materials.",
+    "prerequisite": "CHEM 104",
+    "section": []
+}

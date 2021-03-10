@@ -1,1 +1,21 @@
-{"term": "2020 Fall", "short_name": "ENEV 484", "title": "Highway Design", "faculty": "ENEV", "credit": "3", "description": "Detailed geometric design of highways; functional and detailed geometric design of at-grade and grade separated intersections; and, introduction to design of flexible and rigid pavements.", "prerequisite": "ENEV 281, 372, and 384", "section": [{"course_ID": "31035", "section_num": "001", "instructors": "Guo Xin  Liu (P)", "days": "T", "time": "7:00 pm - 9:45 pm", "loc": "Education Building 438", "course_type": "Lecture", "exam_days": "T", "exam_date": "Dec 15, 2020 - Dec 15, 2020", "exam_time": "7:00 pm - 10:00 pm"}]}
+{
+    "term": "2020 Fall",
+    "short_name": "ENEV 484",
+    "title": "Highway Design",
+    "faculty": "ENEV",
+    "credit": "3",
+    "description": "Detailed geometric design of highways; functional and detailed geometric design of at-grade and grade separated intersections; and, introduction to design of flexible and rigid pavements.",
+    "prerequisite": "ENEV 281, 372, and 384",
+    "section": [{
+        "course_ID": "31035",
+        "section_num": "001",
+        "instructors": "Guo Xin  Liu (P)",
+        "days": "T",
+        "time": "7:00 pm - 9:45 pm",
+        "loc": "Education Building 438",
+        "course_type": "Lecture",
+        "exam_days": "T",
+        "exam_date": "Dec 15, 2020 - Dec 15, 2020",
+        "exam_time": "7:00 pm - 10:00 pm"
+    }]
+}

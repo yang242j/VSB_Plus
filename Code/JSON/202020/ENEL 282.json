@@ -1,1 +1,32 @@
-{"term": "2020 Spring/Summer", "short_name": "ENEL 282", "title": "Semiconductor Devices", "faculty": "ENEL", "credit": "3", "description": "Semiconductor materials and conduction principles.  The characteristics of common semiconductor devices, including: PN junction diodes, bipolar and field effect transistors, thyristors and photodiodes.  Linear models, circuit analysis and application examples.", "prerequisite": "ENEL 280", "section": [{"course_ID": "22604", "section_num": "001", "instructors": "Reena   Shrestha (P)", "days": "TR", "time": "8:00 am - 9:15 am", "loc": "Remote", "course_type": "Lecture", "exam_days": "W", "exam_date": "Aug 05, 2020 - Aug 05, 2020", "exam_time": "2:00 pm - 5:00 pm"}, {"course_ID": "22605", "section_num": "091", "instructors": "David B.  Duguid (P)", "days": "F", "time": "8:30 am - 11:20 am", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}]}
+{
+    "term": "2020 Spring/Summer",
+    "short_name": "ENEL 282",
+    "title": "Semiconductor Devices",
+    "faculty": "ENEL",
+    "credit": "3",
+    "description": "Semiconductor materials and conduction principles.  The characteristics of common semiconductor devices, including: PN junction diodes, bipolar and field effect transistors, thyristors and photodiodes.  Linear models, circuit analysis and application examples.",
+    "prerequisite": "ENEL 280",
+    "section": [{
+        "course_ID": "22604",
+        "section_num": "001",
+        "instructors": "Reena   Shrestha (P)",
+        "days": "TR",
+        "time": "8:00 am - 9:15 am",
+        "loc": "Remote",
+        "course_type": "Lecture",
+        "exam_days": "W",
+        "exam_date": "Aug 05, 2020 - Aug 05, 2020",
+        "exam_time": "2:00 pm - 5:00 pm"
+    }, {
+        "course_ID": "22605",
+        "section_num": "091",
+        "instructors": "David B.  Duguid (P)",
+        "days": "F",
+        "time": "8:30 am - 11:20 am",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }]
+}

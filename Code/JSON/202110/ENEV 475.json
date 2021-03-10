@@ -1,1 +1,10 @@
-{"term": "No class for the term", "short_name": "ENEV 475", "title": "Traffic Engineering", "faculty": "ENEV", "credit": "3", "description": "Study of the characteristics of traffic flow and methods of traffic control; introduction to traffic flow and queuing theory; roadway capacity and level of service analysis; speed and volume studies; traffic signs and signalization; computer control systems; and, accident analysis.", "prerequisite": "ENEV 372", "section": []}
+{
+    "term": "No class for the term",
+    "short_name": "ENEV 475",
+    "title": "Traffic Engineering",
+    "faculty": "ENEV",
+    "credit": "3",
+    "description": "Study of the characteristics of traffic flow and methods of traffic control; introduction to traffic flow and queuing theory; roadway capacity and level of service analysis; speed and volume studies; traffic signs and signalization; computer control systems; and, accident analysis.",
+    "prerequisite": "ENEV 372",
+    "section": []
+}

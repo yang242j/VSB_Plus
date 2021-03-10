@@ -1,1 +1,10 @@
-{"term": "No class for the term", "short_name": "ENEV 261", "title": "Engineering Fluid Mechanics", "faculty": "ENEV", "credit": "3", "description": "Properties of fluids, pressure and fluid statics, mass, energy and momentum principles, Bernoulli and energy equations, steady state internal flow in pipe systems, flow measurement, external flow drag and lift, dimensional analysis.", "prerequisite": " ENGG 141 (or ENGG 240) and PHYS 199 (or PHYS 109) and completion of 45 Credit Hours.", "section": []}
+{
+    "term": "No class for the term",
+    "short_name": "ENEV 261",
+    "title": "Engineering Fluid Mechanics",
+    "faculty": "ENEV",
+    "credit": "3",
+    "description": "Properties of fluids, pressure and fluid statics, mass, energy and momentum principles, Bernoulli and energy equations, steady state internal flow in pipe systems, flow measurement, external flow drag and lift, dimensional analysis.",
+    "prerequisite": " ENGG 141 (or ENGG 240) and PHYS 199 (or PHYS 109) and completion of 45 Credit Hours.",
+    "section": []
+}

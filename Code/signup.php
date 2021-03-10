@@ -1,9 +1,9 @@
 <?php
 /**
  * A form to let user to signup an account.
- * 
+ *
  * Requirments:
- *  1) Required using student ID to login. 
+ *  1) Required using student ID to login.
  *  2) Required student name.
  *  3) Campus default to "University of Regina".
  *  4) Faculty default to "Engineering and Applied Science".
@@ -15,15 +15,15 @@
  * 10) Required GPA with unit %
  * 11) Required password
  * 12) Required confirm password
- * 
+ *
  * php Steps:
  *  1) Required once vsbp_db_config.php
  *  2) Define all variables.
  *  3) If getting POST request, check each field legitimate.
  *  4) For each field, if match validation, store, else print error message.
- *  5) If no error messages, store new account info into db and create personal grade table. 
+ *  5) If no error messages, store new account info into db and create personal grade table.
  *  6) After 5 seconds, redirect to login page.
- * 
+ *
  * @version     1.0
  * @link        http://15.223.123.122/vsbp/Code/signup.php
  * @author      Jingkang Yang (sid: 200362586) <yang242j@uregina.ca>
@@ -35,13 +35,14 @@ require_once "Model/vsbp_db_config.php";
 // Define variables and initialize with empty values
 $message = "";
 
-$sid = $name = $campus = $faculty = $program = $major = $minor = $concentration = $credit_hour = $gpa = $password = $confirm_password = "";
+$sid = $name = $campus = $faculty = $program = $major = $minor = $concentration = $credit_hour = $gpa = $password = $confirm_password =
+    "";
 
-$sid_err = $name_err = $campus_err = $faculty_err = $program_err = $major_err = $minor_err = $concentration_err = $credit_hour_err = $gpa_err = $password_err = $confirm_password_err = "";
+$sid_err = $name_err = $campus_err = $faculty_err = $program_err = $major_err = $minor_err = $concentration_err = $credit_hour_err = $gpa_err = $password_err = $confirm_password_err =
+    "";
 
 // Processing form data when form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-
     // Validate student ID
     if (empty(trim($_POST["sid"]))) {
         $sid_err = "Please enter student_id. NOT 0";
@@ -125,7 +126,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $credit_hour_err = "Credit hour must be a number.";
     } elseif (trim($_POST["credit_hour"]) < 0) {
         $credit_hour_err = "Credit hour must be great than 0.";
-    } elseif (!is_int(filter_input(INPUT_POST, "credit_hour", FILTER_VALIDATE_INT))) {
+    } elseif (
+        !is_int(filter_input(INPUT_POST, "credit_hour", FILTER_VALIDATE_INT))
+    ) {
         $credit_hour_err = "Credit hour must be an integer.";
     } else {
         $credit_hour = trim($_POST["credit_hour"]);
@@ -156,21 +159,47 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $confirm_password_err = "Please confirm password.";
     } else {
         $confirm_password = trim($_POST["confirm_password"]);
-        if (empty($password_err) && ($password != $confirm_password)) {
+        if (empty($password_err) && $password != $confirm_password) {
             $confirm_password_err = "Password did not match.";
         }
     }
 
     // Check input errors before inserting in database
-    if (empty($sid_err) && empty($name_err) && empty($campus_err) && empty($faculty_err) && empty($program_err) && empty($major_err) && empty($minor_err) && empty($concentration_err) && empty($credit_hour_err) && empty($gpa_err) && empty($password_err) && empty($confirm_password_err)) {
-
+    if (
+        empty($sid_err) &&
+        empty($name_err) &&
+        empty($campus_err) &&
+        empty($faculty_err) &&
+        empty($program_err) &&
+        empty($major_err) &&
+        empty($minor_err) &&
+        empty($concentration_err) &&
+        empty($credit_hour_err) &&
+        empty($gpa_err) &&
+        empty($password_err) &&
+        empty($confirm_password_err)
+    ) {
         // Prepare an insert statement
-        $sql = "INSERT INTO students (student_id, name, campus, faculty, program, major, minor, concentration, totalCredit, GPA, password) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        $sql =
+            "INSERT INTO students (student_id, name, campus, faculty, program, major, minor, concentration, totalCredit, GPA, password) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
         if ($stmt = mysqli_prepare($conn, $sql)) {
-
             // Bind variables to the prepared statement sql as parameters
-            mysqli_stmt_bind_param($stmt, "isssssssiis", $param_sid, $param_name, $param_campus, $param_faculty, $param_program, $param_major, $param_minor, $param_concentration, $param_credit_hour, $param_gpa, $param_password);
+            mysqli_stmt_bind_param(
+                $stmt,
+                "isssssssiis",
+                $param_sid,
+                $param_name,
+                $param_campus,
+                $param_faculty,
+                $param_program,
+                $param_major,
+                $param_minor,
+                $param_concentration,
+                $param_credit_hour,
+                $param_gpa,
+                $param_password
+            );
 
             // Set parameters
             $param_sid = $sid;
@@ -187,11 +216,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             // Attempt to execute the prepared statement (add new student)
             if (mysqli_stmt_execute($stmt)) {
-
                 $new_tablename = "S" . $sid;
                 $sql_table = "CREATE TABLE $new_tablename (courseIndex INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY, term VARCHAR(255) NOT NULL, course_ID VARCHAR(255) NOT NULL, section_num VARCHAR(255) NOT NULL, course_title VARCHAR(255) NOT NULL, final_grade VARCHAR(255) NOT NULL, credit_hour INT(11) NOT NULL DEFAULT 3, credit_earned INT(11) NOT NULL, class_size INT(11) NOT NULL, class_average INT(11) NOT NULL)";
 
-                if ($conn->query($sql_table) === TRUE) {
+                if ($conn->query($sql_table) === true) {
                     echo "Welcome $name!\nYour table ( $new_tablename ) has been created.";
                     echo "Redirect to LogIn page in 5s.";
                     // Redirect to login page
@@ -252,8 +280,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <section class="container">
         <div class="form-div">
             <h2>User SignUp</h1>
-                <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-                    <div class="form-group <?php echo (!empty($sid_err)) ? 'has-error' : ''; ?>">
+                <form action="<?php echo htmlspecialchars(
+                    $_SERVER["PHP_SELF"]
+                ); ?>" method="post">
+                    <div class="form-group <?php echo !empty($sid_err)
+                        ? 'has-error'
+                        : ''; ?>">
                         <label>*** Student ID:</label>
                         <input class="form-input" type="text" name="sid" placeholder="200312345" value="<?php echo $sid; ?>" required>
                         <span class="help-block">
@@ -261,7 +293,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         </span>
                     </div>
 
-                    <div class="form-group <?php echo (!empty($name_err)) ? 'has-error' : ''; ?>">
+                    <div class="form-group <?php echo !empty($name_err)
+                        ? 'has-error'
+                        : ''; ?>">
                         <label>*** Student Name:</label>
                         <input class="form-input" type="text" name="name" placeholder="LastName, FirstName" value="<?php echo $name; ?>" required>
                         <span class="help-block">
@@ -269,7 +303,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         </span>
                     </div>
 
-                    <div class="form-group <?php echo (!empty($campus_err)) ? 'has-error' : ''; ?>">
+                    <div class="form-group <?php echo !empty($campus_err)
+                        ? 'has-error'
+                        : ''; ?>">
                         <label>Campus:</label>
                         <select class="form-input" name="campus">
                             <option value="University of Regina" selected>University of Regina</option>
@@ -282,7 +318,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         </span>
                     </div>
 
-                    <div class="form-group <?php echo (!empty($faculty_err)) ? 'has-error' : ''; ?>">
+                    <div class="form-group <?php echo !empty($faculty_err)
+                        ? 'has-error'
+                        : ''; ?>">
                         <label>Faculty:</label>
                         <select class="form-input" name="faculty">
                             <option value="Arts">Arts</option>
@@ -302,7 +340,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         </span>
                     </div>
 
-                    <div class="form-group <?php echo (!empty($program_err)) ? 'has-error' : ''; ?>">
+                    <div class="form-group <?php echo !empty($program_err)
+                        ? 'has-error'
+                        : ''; ?>">
                         <label>Program:</label>
                         <select class="form-input" name="program">
                             <option value="BASc" selected>Bachelor of Applied Science</option>
@@ -312,7 +352,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         </span>
                     </div>
 
-                    <div class="form-group <?php echo (!empty($major_err)) ? 'has-error' : ''; ?>">
+                    <div class="form-group <?php echo !empty($major_err)
+                        ? 'has-error'
+                        : ''; ?>">
                         <label>Major:</label>
                         <select class="form-input" name="major">
                             <option value="ESE">Electronic Systems Engineering</option>
@@ -326,7 +368,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         </span>
                     </div>
 
-                    <div class="form-group <?php echo (!empty($minor_err)) ? 'has-error' : ''; ?>">
+                    <div class="form-group <?php echo !empty($minor_err)
+                        ? 'has-error'
+                        : ''; ?>">
                         <label>Minor:</label>
                         <input class="form-input" type="text" name="minor" placeholder="" value="<?php echo $minor; ?>">
                         <span class="help-block">
@@ -335,7 +379,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     </div>
 
 
-                    <div class="form-group <?php echo (!empty($concentration_err)) ? 'has-error' : ''; ?>">
+                    <div class="form-group <?php echo !empty($concentration_err)
+                        ? 'has-error'
+                        : ''; ?>">
                         <label>Concentration:</label>
                         <input class="form-input" type="text" name="concentration" placeholder="" value="<?php echo $concentration; ?>">
                         <span class="help-block">
@@ -343,7 +389,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         </span>
                     </div>
 
-                    <div class="form-group <?php echo (!empty($credit_hour_err)) ? 'has-error' : ''; ?>">
+                    <div class="form-group <?php echo !empty($credit_hour_err)
+                        ? 'has-error'
+                        : ''; ?>">
                         <label>*** Total Credit Hours:</label>
                         <input class="form-input" type="text" name="credit_hour" placeholder="" value="<?php echo $credit_hour; ?>" required>
                         <span style="margin-left:-20px;">h</span>
@@ -352,7 +400,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         </span>
                     </div>
 
-                    <div class="form-group <?php echo (!empty($gpa_err)) ? 'has-error' : ''; ?>">
+                    <div class="form-group <?php echo !empty($gpa_err)
+                        ? 'has-error'
+                        : ''; ?>">
                         <label>*** Grade Point Average:</label>
                         <input class="form-input" type="text" name="gpa" placeholder="60" value="<?php echo $gpa; ?>" required>
                         <span style="margin-left:-20px;">%</span>
@@ -361,7 +411,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         </span>
                     </div>
 
-                    <div class="form-group <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>">
+                    <div class="form-group <?php echo !empty($password_err)
+                        ? 'has-error'
+                        : ''; ?>">
                         <label>*** Password:</label>
                         <input class="form-input" type="password" name="password" value="<?php echo $password; ?>" required>
                         <span class="help-block">
@@ -369,7 +421,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         </span>
                     </div>
 
-                    <div class="form-group <?php echo (!empty($confirm_password_err)) ? 'has-error' : ''; ?>">
+                    <div class="form-group <?php echo !empty(
+                        $confirm_password_err
+                    )
+                        ? 'has-error'
+                        : ''; ?>">
                         <label>*** Confirm Password:</label>
                         <input class="form-input" type="password" name="confirm_password" value="<?php echo $confirm_password; ?>" required>
                         <span class="help-block">

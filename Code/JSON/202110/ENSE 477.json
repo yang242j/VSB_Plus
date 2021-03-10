@@ -1,1 +1,21 @@
-{"term": "2021 Winter", "short_name": "ENSE 477", "title": "Software Systems Engineering Design Project", "faculty": "ENSE", "credit": "3", "description": "Development of significant software system, employing knowledge gained from courses throughout the program. This includes development of requirements, design, implementation, and quality assurance. Students follow a suitable process model and manage the project themselves, following appropriate project management techniques.", "prerequisite": "ENSE 400 and ENSE 470", "section": [{"course_ID": "11312", "section_num": "001", "instructors": "Timothy Joseph  Maciag (P)", "days": "R", "time": "2:30 pm - 5:15 pm", "loc": "Remote", "course_type": "Project", "exam_days": null, "exam_date": null, "exam_time": null}]}
+{
+    "term": "2021 Winter",
+    "short_name": "ENSE 477",
+    "title": "Software Systems Engineering Design Project",
+    "faculty": "ENSE",
+    "credit": "3",
+    "description": "Development of significant software system, employing knowledge gained from courses throughout the program. This includes development of requirements, design, implementation, and quality assurance. Students follow a suitable process model and manage the project themselves, following appropriate project management techniques.",
+    "prerequisite": "ENSE 400 and ENSE 470",
+    "section": [{
+        "course_ID": "11312",
+        "section_num": "001",
+        "instructors": "Timothy Joseph  Maciag (P)",
+        "days": "R",
+        "time": "2:30 pm - 5:15 pm",
+        "loc": "Remote",
+        "course_type": "Project",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }]
+}

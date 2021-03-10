@@ -1,1 +1,10 @@
-{"term": "No class for the term", "short_name": "ENPE 435", "title": "Reservoir Stimulation", "faculty": "ENPE", "credit": "3", "description": "Formation damage mechanisms, introduction to reservoir stimulation techniques, matrix acidizing operation design, sandstone acidizing, carbonate acidizing, placement and diversion methods, introduction to rock mechanics, acid fracturing operations, hydraulic fracturing operations, fracture treatment design, treatment analysis and post-treatment evaluation.", "prerequisite": "ENPE 370", "section": []}
+{
+    "term": "No class for the term",
+    "short_name": "ENPE 435",
+    "title": "Reservoir Stimulation",
+    "faculty": "ENPE",
+    "credit": "3",
+    "description": "Formation damage mechanisms, introduction to reservoir stimulation techniques, matrix acidizing operation design, sandstone acidizing, carbonate acidizing, placement and diversion methods, introduction to rock mechanics, acid fracturing operations, hydraulic fracturing operations, fracture treatment design, treatment analysis and post-treatment evaluation.",
+    "prerequisite": "ENPE 370",
+    "section": []
+}

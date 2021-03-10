@@ -1,8 +1,9 @@
-body{
+body {
     margin: 0;
     padding: 0;
 }
-.table-responsive{
+
+.table-responsive {
     /* height: 80vw; */
     max-width: 95vw;
     overflow: auto;
@@ -10,7 +11,7 @@ body{
     border: solid 1px rgb(0, 0, 0);
 }
 
-table{
+table {
     width: 100%;
     border-collapse: collapse;
     border-spacing: 0;
@@ -19,13 +20,14 @@ table{
     /* text-align:center; */
 }
 
-th,td{
+th,
+td {
     border: 1px solid #999;
     height: 20vh;
     /* overflow: scroll; */
-    
 }
-td{
+
+td {
     /* overflow: hidden; */
     height: 33vh;
     padding: 7px 7px;
@@ -33,93 +35,92 @@ td{
     /* text-overflow: ellipsis;  */
 }
 
-th{
-    white-space: nowrap; 
+th {
+    white-space: nowrap;
     overflow: hidden;
-    text-overflow: ellipsis; 
+    text-overflow: ellipsis;
 }
 
-#dashLine{
+#dashLine {
     height: 90%;
     width: 90%;
     margin-left: 5%;
     border: dashed 1px #111;
 }
 
-#addCol{
+#addCol {
     margin-top: 25%;
 }
 
-.cell{
+.cell {
     height: 33vh;
     overflow-y: scroll;
 }
 
-.block{
+.block {
     margin-top: 8px;
     border: solid 1px rgb(56, 55, 55);
     height: 4vh;
     font-size: 3vh;
-    line-height:140%;
+    line-height: 140%;
     overflow: hidden;
     /* overflow-y: hidden; */
     /* background-color: rgb(241, 193, 166); */
 }
 
-.short_name{
+.short_name {
     border: solid 1px #111;
 }
 
-.showDetail{
+.showDetail {
     height: auto;
 }
 
-ul li{
+ul li {
     padding: 1%;
     font-size: 70%;
     line-height: 100%;
 }
 
-ul{
+ul {
     margin-top: 3%;
 }
 
-li{
+li {
     margin-left: -10%;
 }
 
-.scroll{
+.scroll {
     overflow: scroll;
     scrollbar-width: thin;
 }
 
-.toLeft{
+.toLeft {
     margin-right: 15%;
     padding: 0px 3%;
 }
 
-.toRight{
+.toRight {
     float: right;
     margin-right: 4%;
 }
 
-.dot{
-    width:15px;
-    height:15px;
-    border-radius:50%;
-    background-color:rgb(150, 233, 81);
+.dot {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: rgb(150, 233, 81);
     display: block;
     margin-top: 3%;
 }
 
-.text_center{
+.text_center {
     margin: auto;
     top: 0;
     bottom: 0;
-    text-align:center;
+    text-align: center;
 }
 
-.inline{
+.inline {
     display: inline;
 }
-

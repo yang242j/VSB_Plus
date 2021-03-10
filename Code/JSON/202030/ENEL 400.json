@@ -1,1 +1,32 @@
-{"term": "2020 Fall", "short_name": "ENEL 400", "title": "ESE Project Start-up", "faculty": "ENEL", "credit": "1", "description": "The main purpose of this course is to prepare students for their project design course, ENEL 417. Students form design teams. The teams will propose, develop, & present engineering design projects that they will pursue in ENEL 417. In addition, each project group will orally present their proposal to their colleagues. Issues of safety, feasibility, & engineering responsibility, will be considered in this course.", "prerequisite": "ENEL 371, ENEL 390, ENEL 380 and ENEL 387 and successful completion of 99 credit hours or permission of ESE Program Chair", "section": [{"course_ID": "30995", "section_num": "001", "instructors": "Paul Douglas  Laforge (P)", "days": "T", "time": "1:00 pm - 2:15 pm", "loc": "Remote", "course_type": "Lecture", "exam_days": "F", "exam_date": "Sep 02, 2020 - Dec 08, 2020", "exam_time": "9:30 am - 11:15 am"}, {"course_ID": "30996", "section_num": "091", "instructors": "Paul Douglas  Laforge (P)", "days": "F", "time": "9:30 am - 11:15 am", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}]}
+{
+    "term": "2020 Fall",
+    "short_name": "ENEL 400",
+    "title": "ESE Project Start-up",
+    "faculty": "ENEL",
+    "credit": "1",
+    "description": "The main purpose of this course is to prepare students for their project design course, ENEL 417. Students form design teams. The teams will propose, develop, & present engineering design projects that they will pursue in ENEL 417. In addition, each project group will orally present their proposal to their colleagues. Issues of safety, feasibility, & engineering responsibility, will be considered in this course.",
+    "prerequisite": "ENEL 371, ENEL 390, ENEL 380 and ENEL 387 and successful completion of 99 credit hours or permission of ESE Program Chair",
+    "section": [{
+        "course_ID": "30995",
+        "section_num": "001",
+        "instructors": "Paul Douglas  Laforge (P)",
+        "days": "T",
+        "time": "1:00 pm - 2:15 pm",
+        "loc": "Remote",
+        "course_type": "Lecture",
+        "exam_days": "F",
+        "exam_date": "Sep 02, 2020 - Dec 08, 2020",
+        "exam_time": "9:30 am - 11:15 am"
+    }, {
+        "course_ID": "30996",
+        "section_num": "091",
+        "instructors": "Paul Douglas  Laforge (P)",
+        "days": "F",
+        "time": "9:30 am - 11:15 am",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }]
+}

@@ -1,1 +1,10 @@
-{"term": "No class for the term", "short_name": "ENEL 417", "title": "ESE Design Project", "faculty": "ENEL", "credit": "3", "description": "Typically, a functional device or system, incorporating electronic hardware and/or software in a team design, is to be designed, implemented, and tested.  A formal written report, a demonstration of the project and an oral presentation of the work are required.", "prerequisite": "ENEL 400 and ENEL 387", "section": []}
+{
+    "term": "No class for the term",
+    "short_name": "ENEL 417",
+    "title": "ESE Design Project",
+    "faculty": "ENEL",
+    "credit": "3",
+    "description": "Typically, a functional device or system, incorporating electronic hardware and/or software in a team design, is to be designed, implemented, and tested.  A formal written report, a demonstration of the project and an oral presentation of the work are required.",
+    "prerequisite": "ENEL 400 and ENEL 387",
+    "section": []
+}

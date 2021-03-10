@@ -1,1 +1,54 @@
-{"term": "2020 Fall", "short_name": "ENEV 261", "title": "Engineering Fluid Mechanics", "faculty": "ENEV", "credit": "3", "description": "Properties of fluids, pressure and fluid statics, mass, energy and momentum principles, Bernoulli and energy equations, steady state internal flow in pipe systems, flow measurement, external flow drag and lift, dimensional analysis.", "prerequisite": " ENGG 141 (or ENGG 240) and PHYS 199 (or PHYS 109) and completion of 45 Credit Hours.", "section": [{"course_ID": "31014", "section_num": "001", "instructors": "Amornvadee   Veawab (P)", "days": "MW", "time": "2:30 pm - 3:45 pm", "loc": "Remote", "course_type": "Lecture", "exam_days": "M", "exam_date": "Dec 14, 2020 - Dec 14, 2020", "exam_time": "2:00 pm - 5:00 pm"}, {"course_ID": "31015", "section_num": "081", "instructors": "Dean Alan  Milton (P)", "days": "M", "time": "4:30 pm - 5:20 pm", "loc": "Remote", "course_type": "Seminar", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "31016", "section_num": "091", "instructors": "Dean Alan  Milton (P)", "days": "T", "time": "8:30 am - 11:15 am", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "31017", "section_num": "092", "instructors": "Dean Alan  Milton (P)", "days": "R", "time": "8:30 am - 11:15 am", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}]}
+{
+    "term": "2020 Fall",
+    "short_name": "ENEV 261",
+    "title": "Engineering Fluid Mechanics",
+    "faculty": "ENEV",
+    "credit": "3",
+    "description": "Properties of fluids, pressure and fluid statics, mass, energy and momentum principles, Bernoulli and energy equations, steady state internal flow in pipe systems, flow measurement, external flow drag and lift, dimensional analysis.",
+    "prerequisite": " ENGG 141 (or ENGG 240) and PHYS 199 (or PHYS 109) and completion of 45 Credit Hours.",
+    "section": [{
+        "course_ID": "31014",
+        "section_num": "001",
+        "instructors": "Amornvadee   Veawab (P)",
+        "days": "MW",
+        "time": "2:30 pm - 3:45 pm",
+        "loc": "Remote",
+        "course_type": "Lecture",
+        "exam_days": "M",
+        "exam_date": "Dec 14, 2020 - Dec 14, 2020",
+        "exam_time": "2:00 pm - 5:00 pm"
+    }, {
+        "course_ID": "31015",
+        "section_num": "081",
+        "instructors": "Dean Alan  Milton (P)",
+        "days": "M",
+        "time": "4:30 pm - 5:20 pm",
+        "loc": "Remote",
+        "course_type": "Seminar",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "31016",
+        "section_num": "091",
+        "instructors": "Dean Alan  Milton (P)",
+        "days": "T",
+        "time": "8:30 am - 11:15 am",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "31017",
+        "section_num": "092",
+        "instructors": "Dean Alan  Milton (P)",
+        "days": "R",
+        "time": "8:30 am - 11:15 am",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }]
+}

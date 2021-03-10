@@ -1,1 +1,43 @@
-{"term": "2020 Fall", "short_name": "ENEV 363", "title": "Water and Wastewater Engineering", "faculty": "ENEV", "credit": "3", "description": "The theory and design of systems and system components used in water treatment and distribution and in wastewater collection and treatment.", "prerequisite": "ENEV 321", "section": [{"course_ID": "31022", "section_num": "001", "instructors": "Stephanie   Young (P)", "days": "MW", "time": "1:00 pm - 2:15 pm", "loc": "Remote", "course_type": "Lecture", "exam_days": "W", "exam_date": "Dec 23, 2020 - Dec 23, 2020", "exam_time": "9:00 am - 12:00 pm"}, {"course_ID": "31023", "section_num": "091", "instructors": "Dean Alan  Milton (P)", "days": "R", "time": "2:30 pm - 5:15 pm", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "31024", "section_num": "092", "instructors": "Dean Alan  Milton (P)", "days": "T", "time": "2:30 pm - 5:15 pm", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}]}
+{
+    "term": "2020 Fall",
+    "short_name": "ENEV 363",
+    "title": "Water and Wastewater Engineering",
+    "faculty": "ENEV",
+    "credit": "3",
+    "description": "The theory and design of systems and system components used in water treatment and distribution and in wastewater collection and treatment.",
+    "prerequisite": "ENEV 321",
+    "section": [{
+        "course_ID": "31022",
+        "section_num": "001",
+        "instructors": "Stephanie   Young (P)",
+        "days": "MW",
+        "time": "1:00 pm - 2:15 pm",
+        "loc": "Remote",
+        "course_type": "Lecture",
+        "exam_days": "W",
+        "exam_date": "Dec 23, 2020 - Dec 23, 2020",
+        "exam_time": "9:00 am - 12:00 pm"
+    }, {
+        "course_ID": "31023",
+        "section_num": "091",
+        "instructors": "Dean Alan  Milton (P)",
+        "days": "R",
+        "time": "2:30 pm - 5:15 pm",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "31024",
+        "section_num": "092",
+        "instructors": "Dean Alan  Milton (P)",
+        "days": "T",
+        "time": "2:30 pm - 5:15 pm",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }]
+}

@@ -1,1 +1,10 @@
-{"term": "No class for the term", "short_name": "ENIN 233", "title": "System Dynamics", "faculty": "ENIN", "credit": "3", "description": "Lumped parameter linear analysis methods for mechanical, electrical, fluid and thermal systems.  Linear differential equations to analyze system response to step and sinusoidal forcing functions.  Analogous nature of these systems.", "prerequisite": " MATH 217", "section": []}
+{
+    "term": "No class for the term",
+    "short_name": "ENIN 233",
+    "title": "System Dynamics",
+    "faculty": "ENIN",
+    "credit": "3",
+    "description": "Lumped parameter linear analysis methods for mechanical, electrical, fluid and thermal systems.  Linear differential equations to analyze system response to step and sinusoidal forcing functions.  Analogous nature of these systems.",
+    "prerequisite": " MATH 217",
+    "section": []
+}
