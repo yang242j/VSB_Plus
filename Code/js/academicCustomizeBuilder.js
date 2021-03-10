@@ -600,12 +600,11 @@ function ajaxpost(courseid, term, done) {
         if (rsp.Prerequisites == true) {
             // Generate course tag
             //courseid = rsp.CourseID;
-            decidePreTrueOrFalse = true;
 
         } else {
             // Do nothing and alert the returned Notes
-            decidePreTrueOrFalse = false;
             alert(rsp.Notes);
+            return;
         }
     };
     xhr.send(data);
