@@ -285,15 +285,13 @@ function course_Info(){
     var selected_course;
     
     for (i = 0; i < 12; i++) {
-        selected_course = document.getElementById("nct" + i);
-        var course_info = courseData[i].short_name;
+        selected_course = document.getElementById("nct" + i).value;
         
-        if(selected_course.length == course_info.length)
-        {
-            return "work";
-        }else {
-            return "No Record!!";
-        }
+        var xmlhttp = new XMLHttpRequest();
+        
+        xmlhttp.open("POST", "show_courseInfo.php", true);
+        
+        xmlhttp.send();
     }
 }
 
