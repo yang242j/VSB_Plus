@@ -571,11 +571,8 @@ function termTransfer(term) {
     if (term == "Fall") return 202030;
 }
 
-<<<<<<< HEAD
+
 var x =ajaxpost("ENSE 280",202020,doneList[0]);
-=======
-var x = ajaxpost("ENSE 281", 202020, doneList[0]);
->>>>>>> 81ad234a96dadabce9ccfec8dc7346b2be45c2c5
 console.log(x);
 
 function ajaxpost(courseid, term, doneList) {
