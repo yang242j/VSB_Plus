@@ -582,8 +582,7 @@ function changeToOneD() {
     }
     return temp;
 }
-x=changeToOneD();
-
+console.log(changeToOneD());
 function ajaxpost(courseid, term, done) {
     // (A) GET FORM DATA
     var data = new FormData();
