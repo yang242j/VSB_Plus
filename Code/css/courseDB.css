@@ -112,6 +112,7 @@ body .course{
 
 #course_search{
     width: 50%;
+    display: inline;
 }
 
 .tab-header {
@@ -211,10 +212,25 @@ body .course{
     color: red;
 }
 
+#selectToggle{
+    float: right;
+    height: 5vh;
+}
+
+.hidden{
+    display: none !important;
+    visibility: hidden;
+}
+
+.fullScreen{
+    width: auto !important;
+}
+
 @media screen and (max-device-width: 600px) {
     #search_area{
         width: 100%;
     }
+
     #popView{
         width: 100%;
         /* overflow:scroll; */
@@ -222,5 +238,12 @@ body .course{
     .graph_size{
         width: 50vw;
         height: 40vh;
+    }
+
+    #selectToggle{
+        display: inherit;
+        visibility: inherit;
+        /* float: right;
+        height: 5vh; */
     }
 }
