@@ -421,6 +421,7 @@ function dragTest() {
 
             var termCode = termTransfer(terminfo[0][2]);
             console.log(doneList[0]);
+            var y =[];
             y[0]=doneList[0][12];        
             //chekc prerequisite
             console.log(ajaxpost("dropZone.id", termCode, y));
