@@ -461,7 +461,7 @@ function dragTest() {
                 doneList[index].push(courseName);
 
                 var order = index; //now which level is this chooen coures located
-                outputDonelist = [twoToOnedArray(donelist),order];
+                outputDonelist = [twoToOnedArray(doneList),order];
                 
                 console.log(doneList);
                 console.log(outputDonelist);
@@ -474,7 +474,7 @@ function dragTest() {
                 doneList[index].push(courseName);
 
                 var order = index; //now which level is this chooen coures located
-                outputDonelist = [twoToOnedArray(donelist),order];
+                outputDonelist = [twoToOnedArray(doneList),order];
 
                 console.log(doneList);
                 console.log(outputDonelist);
