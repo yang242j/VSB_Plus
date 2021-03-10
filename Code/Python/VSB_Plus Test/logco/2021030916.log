@@ -1,0 +1,20 @@
+2021-03-09 16:08:42,786 - Test - INFO - Input Data: short_name:CHEM 104,suc:1,assert:General Chemistry I
+2021-03-09 16:09:04,952 - Test - INFO - Input Data: short_name:CHEM 103,suc:0,assert:CHEM 103 cannot be found
+2021-03-09 16:16:47,476 - Test - INFO - Input Data: ENSE,suc:1,assert:ENSE
+2021-03-09 16:17:01,192 - Test - INFO - Input Data: ENEL,suc:1,assert:ENEL
+2021-03-09 16:17:12,833 - Test - INFO - Input Data: short_name:CHEM 104,suc:1,assert:General Chemistry I
+2021-03-09 16:17:35,452 - Test - INFO - Input Data: short_name:CHEM 103,suc:0,assert:CHEM 103 cannot be found
+2021-03-09 16:17:57,407 - Test - INFO - Input Data: short_name:CS 210,suc:1,assert:Data Structures and Abstractions
+2021-03-09 16:38:38,904 - Test - INFO - Input Data: ENSE,suc:1,assert:ENSE
+2021-03-09 16:38:52,492 - Test - INFO - Input Data: ENEL,suc:1,assert:ENEL
+2021-03-09 16:39:03,890 - Test - INFO - Input Data: short_name:CHEM 104,suc:1,assert:General Chemistry I
+2021-03-09 16:39:25,723 - Test - INFO - Input Data: short_name:CHEM 103,suc:0,assert:CHEM 103 cannot be found
+2021-03-09 16:39:47,585 - Test - INFO - Input Data: short_name:CS 210,suc:1,assert:Data Structures and Abstractions
+2021-03-09 16:50:33,885 - Test - INFO - Input Data: ENSE,suc:1,assert:ENSE
+2021-03-09 16:50:47,065 - Test - INFO - Input Data: ENEL,suc:1,assert:ENEL
+2021-03-09 16:50:58,168 - Test - INFO - Input Data: short_name:CHEM 104,suc:1,assert:General Chemistry I
+2021-03-09 16:51:12,961 - Test - INFO - Input Data: short_name:CHEM 103,suc:0,assert:CHEM 103 cannot be found
+2021-03-09 16:51:26,555 - Test - INFO - Input Data: short_name:CS 210,suc:1,assert:Data Structures and Abstractions
+2021-03-09 16:51:36,760 - Test - ERROR - Fail to run the test£¬reason£ºMessage: no such element: Unable to locate element: {"method":"css selector","selector":"[id="chart"]"}
+  (Session info: chrome=88.0.4324.190)
+

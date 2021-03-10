@@ -150,9 +150,9 @@ function showOutput(id, name) {
 <div class="container">
     <div class='heading'>
 <h1>Test report</h1>
-<p><strong>Start Time:</strong> 2021-03-08 18:01:17</p>
-<p><strong>Duration:</strong> 0:00:29.556769</p>
-<p><strong>Status:</strong> <span class="text text-success">Pass <strong>2</strong></span></p>
+<p><strong>Start Time:</strong> 2021-03-09 17:58:49</p>
+<p><strong>Duration:</strong> 0:01:20.288025</p>
+<p><strong>Status:</strong> <span class="text text-success">Pass <strong>4</strong></span> <span class="text text-danger">Failure <strong>1</strong></span></p>
 
 <p class='description'>Test Result</p>
 </div>
@@ -177,17 +177,17 @@ function showOutput(id, name) {
     </thead>
     <tbody>
         
-<tr class='text text-success'>
-    <td>login_test.Testlogin</td>
-    <td>2</td>
-    <td>2</td>
+<tr class='text text-danger'>
+    <td>courseDB_test.TestCourseSearch</td>
+    <td>5</td>
+    <td>4</td>
+    <td>1</td>
     <td>0</td>
-    <td>0</td>
-    <td><a class="btn btn-xs btn-primary"href="javascript:showClassDetail('c1',2)">Detail</a></td>
+    <td><a class="btn btn-xs btn-primary"href="javascript:showClassDetail('c1',5)">Detail</a></td>
 </tr>
 
 <tr id='pt1.1' class='hiddenRow'>
-    <td class='text text-success'><div class='case'>test_login1_1</div></td>
+    <td class='text text-success'><div class='case'>test_faultyFilter_1</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
@@ -201,9 +201,9 @@ function showOutput(id, name) {
         </div>
         <pre>
         
-pt1.1: c:\Users\xinyuliu\Desktop\VSB_Plus Test\bussinses\funnicgong.py:9: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+pt1.1: d:\Github\VSB_Plus\Code\Python\VSB_Plus Test\common\funCourseDB.py:9: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
   self.data=yaml.load(self.file)
-2021-03-08 18:01:21,941 - 注册测试 - INFO - input data:short_name:CHEM 104,suc:1,assert:CHEM 104
+2021-03-09 17:58:55,053 - Test - INFO - Input Data: ENSE,suc:1,assert:ENSE
 
 
         </pre>
@@ -214,7 +214,7 @@ pt1.1: c:\Users\xinyuliu\Desktop\VSB_Plus Test\bussinses\funnicgong.py:9: YAMLLo
 </tr>
 
 <tr id='pt1.2' class='hiddenRow'>
-    <td class='text text-success'><div class='case'>test_login1_2</div></td>
+    <td class='text text-success'><div class='case'>test_faultyFilter_2</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
@@ -228,7 +228,88 @@ pt1.1: c:\Users\xinyuliu\Desktop\VSB_Plus Test\bussinses\funnicgong.py:9: YAMLLo
         </div>
         <pre>
         
-pt1.2: 2021-03-08 18:01:36,617 - 注册测试 - INFO - input data:short_name:CHEM 103,suc:0,assert:CHEM 103 cannot be found
+pt1.2: 2021-03-09 17:59:08,850 - Test - INFO - Input Data: ENEL,suc:1,assert:ENEL
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.3' class='hiddenRow'>
+    <td class='text text-success'><div class='case'>test_searchCourse_1</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link btn btn-xs btn-default" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.3')" >
+        pass</a>
+
+    <div id='div_pt1.3' class="popup_window">
+        <div style='text-align: right;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.3: 2021-03-09 17:59:20,391 - Test - INFO - Input Data: short_name:CHEM 104,suc:1,assert:General Chemistry I
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.4' class='hiddenRow'>
+    <td class='text text-success'><div class='case'>test_searchCourse_2</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link btn btn-xs btn-default" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.4')" >
+        pass</a>
+
+    <div id='div_pt1.4' class="popup_window">
+        <div style='text-align: right;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.4').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.4: 2021-03-09 17:59:34,248 - Test - INFO - Input Data: short_name:CHEM 103,suc:0,assert:CHEM 103 cannot be found
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft1.5' class='none'>
+    <td class='text text-danger'><div class='case'>test_searchCourse_3</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link btn btn-xs btn-default" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.5')" >
+        fail</a>
+
+    <div id='div_ft1.5' class="popup_window">
+        <div style='text-align: right;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.5').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.5: 2021-03-09 17:59:48,743 - Test - INFO - Input Data: short_name:CS 210,suc:1,assert:Data Structures and Abstractions
+Traceback (most recent call last):
+  File "C:\Users\xinyuliu\AppData\Roaming\Python\Python39\site-packages\ddt.py", line 182, in wrapper
+    return func(self, *args, **kwargs)
+  File "D:\Github\VSB_Plus\Code\Python\VSB_Plus Test\case\courseDB_test.py", line 27, in test_searchCourse
+    self.assertTrue(chartExist) if self.suc == '1' else self.assertFalse(chartExist)
+AssertionError: False is not true
 
 
         </pre>
@@ -242,9 +323,9 @@ pt1.2: 2021-03-08 18:01:36,617 - 注册测试 - INFO - input data:short_name:CHE
     <tfoot>
         <tr id='total_row'>
             <td>Total</td>
-            <td>2</td>
-            <td class="text text-success">2</td>
-            <td class="text text-danger">0</td>
+            <td>5</td>
+            <td class="text text-success">4</td>
+            <td class="text text-danger">1</td>
             <td class="text text-warning">0</td>
             <td>&nbsp;</td>
         </tr>

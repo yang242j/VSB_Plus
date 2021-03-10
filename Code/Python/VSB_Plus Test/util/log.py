@@ -2,7 +2,7 @@ import os,time,logging
 path=os.getcwd()
 class log_message():
 	def __init__(self):
-		title = u'注册测试'
+		title = 'Test'
 		day = time.strftime("%Y%m%d%H", time.localtime(time.time()))
 		pad = os.getcwd()
 		file_dir = pad + '\\logco'
