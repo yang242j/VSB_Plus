@@ -33,7 +33,7 @@ function fetchCourseJSON(sid, password) {
         showCourses(data);
         getCreditsEarned(data);
         storePassedCourse(data)
-       
+
     });
 }
 
@@ -88,14 +88,14 @@ function findCourseToTake(data) {
     var courseCompleted = [];
     var courseToTake = [];
     var courseNotCompleted = [];
-   
+
     for (i = 0; i < data.length; i++) {
-        if (data[i] == null )  {
-        } else if(data[i].credit_earned>0)
-        courseCompleted[i] = data[i].course_ID;;
+        if (data[i] == null) {
+        } else if (data[i].credit_earned > 0)
+            courseCompleted[i] = data[i].course_ID;;
     }
-    
-   
+
+
     for (term in courseReqData) {
         for (i = 0; i < courseReqData[term].length; i++) {
             if (courseReqData[term][i] != "Approved") {
@@ -191,7 +191,7 @@ function btnForCourse(data) {
         } else return;
 
 
-        if (i + 12 * counterForCompleted <= (completedData.length+12)) {
+        if (i + 12 * counterForCompleted <= (completedData.length + 12)) {
             for (i = 0; i < 12; i++) {
                 document.getElementById("ct" + i).innerHTML = " ";
             }
@@ -292,7 +292,7 @@ function getTermInfo(courseName) {
             if (data.term != "No class for the term") {
                 term.push("Winter");
             }
-            else{
+            else {
                 term.push(" ");
             }
         }
@@ -316,7 +316,7 @@ function getTermInfo(courseName) {
                 term.push("Spring/Summer");
 
             }
-            else{
+            else {
                 term.push(" ");
             }
         }
@@ -333,7 +333,7 @@ function getTermInfo(courseName) {
                 term.push("Fall");
 
             }
-            else{
+            else {
                 term.push(" ");
             }
         }
@@ -428,7 +428,7 @@ function dragTest() {
             //chekc prerequisite
             //console.log(ajaxpost(courseName, "202020", y));
             //console.log(ajaxpost("ENEL 280", "202020", x));
-          
+
             for (i = 0; i <= dropZone.getAttribute("name"); i++) {
                 for (j = 0; j < doneList[i].length; j++) {
                     //console.log(doneList[i][j]);
@@ -436,7 +436,7 @@ function dragTest() {
                 }
             }
             //ajaxpost(courseName, "202020", container);
-           console.log(ajaxpost(courseName, "202020", container));
+            console.log(ajaxpost(courseName, "202020", container));
 
 
 
@@ -459,8 +459,18 @@ function dragTest() {
 
 
             if (terminfo[0] != null) {
+                var terminfo1,terminfo2,terminfo3 = "";
+                if (terminfo[0][0] == "Winter") {
+                    terminfo1 = "W";
+                }
+                if (terminfo[0][1] == "Spring/Summer") {
+                    terminfo2 = "S/S";
+
+                } if (terminfo[0][2] == "Fall") {
+                    terminfo3 = "F";
+                }
                 document.getElementById(newForAlern).innerHTML = "Applied Term: </br>" +
-                    terminfo[0][0] + "</br>" + terminfo[0][1] + "</br>" + terminfo[0][2]; //terminfo[0] is term
+                    terminfo1 + "," + terminfo1 + "," + terminfo2; //terminfo[0] is term
                 getCredits = parseInt(terminfo[1]);
             } else {
                 alert("this course not applied");
@@ -616,7 +626,7 @@ function ajaxpost(courseid, term, done) {
             return false;
         }
     };
-    
+
 
     // (C) PREVENT HTML FORM SUBMIT
     xhr.send(data);
