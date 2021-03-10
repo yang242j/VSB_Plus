@@ -582,7 +582,7 @@ function changeToOneD(done, index) {
     }
     return temp;
 }
-var x = changeToOneD(doneList);
+var x = changeToOneD(doneList,0);
 console.log(x);
 
 function ajaxpost(courseid, term, done) {
