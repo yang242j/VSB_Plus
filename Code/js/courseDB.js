@@ -21,6 +21,14 @@ window.onload = function init() {
     if (defaultShow) {
         showGraph(defaultCourse);
     }
+    $('#selectToggle').click(function(){
+        let text = $(this).text();
+        $(this).text(
+            text == "Hidden courses list" ? "Show course list" : "Hidden courses list"
+        );
+        $('#search_area').toggleClass('hidden');
+        $('#popView').toggleClass('fullScreen');
+    });
 }
 
 function loadCourses() {
