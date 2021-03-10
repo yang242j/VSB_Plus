@@ -34,6 +34,7 @@ $term = isset($_REQUEST["term"]) ? $_REQUEST["term"] : '';
 // 2. Generate the status number
 $status = array(
     "Status" => false,  // {bool} whether this course can be registered.
+    "Found" => false, // {bool} whether this course can be found.
     "Completion" => false,  // {bool} whether this course has already completed.
     "Availability" => false, // {bool} whether this course is available at the given term.
     "Prerequisites" => false, // {bool} whether this course has matched all prerequisites.
@@ -41,54 +42,72 @@ $status = array(
 );
 
 // 3. Check courseid is in correct format
-if (preg_match_all("/([a-z]+\s[0-9]+)/i", $courseid) == 1){
-    
-    // 3.1 Check if the course is in doneList
-    if ( in_array($courseid, $doneList) ) {
-        $status["Completion"] = true;
-        $status["Notes"] .= "Already Completed.\n";
-    } else {
+$pattern_1 = "/([a-z]{2,}\s[0-9]{3,})/i"; // "ABC 123"
+$pattern_2 = "/([a-z]{2,}[0-9]{3,})/i"; // No space: "ABC123"
+
+if (preg_match_all($pattern_1, $courseid) == 1){ 
+    $validFormat = true;
+} elseif (preg_match_all($pattern_2, $courseid) == 1) {   // Add a space
+    $courseid = trim(join(" ", preg_split("/([a-z]+)/i", $courseid, -1, PREG_SPLIT_DELIM_CAPTURE)));
+    $validFormat = true;
+} else {    // Invalid firmat
+    $validFormat = false;
+}
+
+// 4. If correct input.
+if ($validFormat) { 
+
+    // 4.1 Check if the course is already completed
+    if ( !in_array($courseid, $doneList) ) {
         $status["Completion"] = false;
-        $status["Notes"] .= "NOT Completed yet.\n";
+        $status["Notes"] .= "NOT Completed.\n";
+
+        // 4.2 Check if the course can be found in the database.
+        $file_path = "../JSON/$term/$courseid.json";
+        if ( file_exists($file_path) ) {
+            $status["Found"] = true;
+            $status["Notes"] .= "Course Found.\n";
+
+            // 4.3 Check if the course is available in the given term
+            $termStr = termNum2Str($term);
+            if ( !section_empty($file_path) ) {
+                $status["Availability"] = true;
+                $status["Notes"] .= "Available at $termStr.\n";
+            } else {    // Course not available
+                $status["Availability"] = false;
+                $status["Notes"] .= "NOT available at $termStr.\n";
+            }
+
+            // 4.4 Check if the prerequisites of the course has matched.
+            $strArr = get_PregExp_PreString($courseid);
+            if ( exp_matched($strArr[1], $doneList) ) {
+                $status["Prerequisites"] = true;
+                $status["Notes"] .= "\nPrerequisites [Matched]:\n$strArr[0]\n";
+            } else {    // Course prerequisites not matched
+                $status["Prerequisites"] = false;
+                $status["Notes"] .= "\nPrerequisites [Not Matched]:\n$strArr[0]\n";
+            }
+            
+        } else {    // Course file not found
+            $status["Found"] = false;
+            $status["Notes"] .= "Course NOT Found";
+        }
+    } else {    // Course completed
+        $status["Completion"] = true;
+        $status["Notes"] .= "Course is Completed.\n";
     }
 
-    // 3.2 Check if the course is available in the given term
-    $termStr = termNum2Str($term);
-    $file_path = "../JSON/$term/$courseid.json";
-    if ( file_exists($file_path) && !section_empty($file_path) ) {
-        $status["Availability"] = true;
-        $status["Notes"] .= "Available at $termStr.\n";
-    } else {
-        $status["Availability"] = false;
-        $status["Notes"] .= "NOT available at $termStr.\n";
-    }
-
-    // 3.3 Check if the prerequisites of the course has matched.
-    $strArr = get_PregExp_PreString($courseid);
-    if ( file_exists($file_path) && exp_matched($strArr[1], $doneList) ) {
-        $status["Prerequisites"] = true;
-        $status["Notes"] .= "All the prerequisites are matched.\n";
-    } else {
-        $status["Prerequisites"] = false;
-        $status["Notes"] .= "Prerequisites are NOT matched.\n";
-    }
-    $status["Notes"] .= "\nPrerequisites:\n$strArr[0]\n";
-
-    // 3.4 Final status decision.
-    if (!$status["Completion"] && $status["Availability"] && $status["Prerequisites"]) {
-        $status["Status"] = true;
-    }
-
-    // 3.5 Course not found
-    if ( !$status["Status"] && !$status["Completion"] && !$status["Availability"] && !$status["Prerequisites"] ) {
-        $status["Notes"] = "$courseid:\nCourse Not Found";
-    }
-
-} else {
+} else {    // Input invalid
     $status["Notes"] .= "Input Format Iinvalid";
 }
 
-// 4. Encode & Return the status number as JSON format
+// 5. Final status decision.
+// Valide input, Course found, Not completed, Available, pre-matched
+if ($validFormat && $status["Found"] && !$status["Completion"] && $status["Availability"] && $status["Prerequisites"]) {
+    $status["Status"] = true;
+}
+
+// 6. Encode & Return the status number as JSON format
 echo json_encode($status, JSON_PRETTY_PRINT);
 
 /**
