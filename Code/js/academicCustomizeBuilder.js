@@ -421,9 +421,10 @@ function dragTest() {
             //console.log(terminfo);
             var check = false;
 
-
+            var y = [];
+            y.push(doneList[0][0]))
             //chekc prerequisite
-            console.log(ajaxpost("ENEL 280", "202020", doneList[0][0]));
+            console.log(ajaxpost("ENEL 280", "202020", y));
 
 
 
