@@ -424,7 +424,7 @@ function dragTest() {
             var y =[];
             y[0]=doneList[0][12];        
             //chekc prerequisite
-            console.log(ajaxpost("dropZone.id", termCode, y));
+            console.log(ajaxpost(dropZone.id, termCode, y));
             //console.log(ajaxpost("ENEL 280", "202020", x));
 
 
