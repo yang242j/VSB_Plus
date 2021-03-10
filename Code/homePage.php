@@ -1,18 +1,18 @@
 <?php
 /**
  * The about_us or team_info page.
- * 
+ *
  * Requirments:
- *  1) Display the project general info. 
+ *  1) Display the project general info.
  *  2) Display the team member info.
- * 
+ *
  * php Steps:
  *  1) Start session.
  *  2) If logged in, display logged in user info at navigation right.
  *  3) If not logged in, display login and signup button at navigation right.
  *  4) Guest can only use course list datebase.
  *  5) Other links are either hidden or disabled.
- * 
+ *
  * @version     1.0
  * @link        http://15.223.123.122/vsbp/Code/homePage.php
  * @author      Priscilla Chua (sid: 200363504) <****@uregina.ca>
@@ -21,7 +21,8 @@
  * @param       {string}        $_SESSION["name"]           Student name
  */
 
-session_start(); // Initialize the session
+session_start();
+// Initialize the session
 ?>
 
 <!doctype html>
@@ -50,10 +51,8 @@ session_start(); // Initialize the session
 
 <body>
 
-  <?php
-  // Check if the user is logged in, if not then hide nav-right div
-  if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
-  ?>
+  <?php // Check if the user is logged in, if not then hide nav-right div
+  if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) { ?>
     <script>
       $(document).ready(function() {
         $(".nav-right").hide();
@@ -70,7 +69,9 @@ session_start(); // Initialize the session
 
   <nav>
     <div class="nav-right">
-      <a id="usertext" onclick="toogleDisplay('addon-menu')"><?php echo htmlspecialchars($_SESSION["name"]); ?></a>
+      <a id="usertext" onclick="toogleDisplay('addon-menu')"><?php echo htmlspecialchars(
+          $_SESSION["name"]
+      ); ?></a>
       <div class="hidden" id="addon-menu">
         <a><?php echo htmlspecialchars($_SESSION["sid"]); ?></a>
         <a href="Model/logout.php">Logout</a>

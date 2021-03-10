@@ -1,24 +1,24 @@
 <?php
 /**
  * Collect one user taken class detail.
- * 
+ *
  * Requirments:
  *  1) Required student id.
  *  2) Required the acount password.
- * 
+ *
  * Steps:
  *  1) Collect inputs.( $sid, $password)
  *  2) Check the if there is a student id in the database.
  *  3) Check the password with specific acount.
- *  4) Covert to the data array with taken class 
+ *  4) Covert to the data array with taken class
  *  5) Encode & Return as JSON format
- * 
+ *
  * @version 1.0
  * @link      http://15.223.123.122/vsbp/Code/courseDB.php
  * @author    Xinyu Liu (sid: 200362878) <liu725@uregina.ca>
  * @param   {array}     $sid "Student id"
  * @param   {array}     $password "password of account"
- * 
+ *
  * @return  {json}      $toTakeList "Recommended courses to take in the selected term"
  */
 
@@ -42,7 +42,7 @@ if (isset($_REQUEST["password"]) and $_REQUEST["password"] != '') {
 require_once "vsbp_db_config.php";
 
 // 2) Check the if there is a student id in the database.
-$count_sql =  "SELECT COUNT(*) FROM students where student_id = '" . $sid . "'";
+$count_sql = "SELECT COUNT(*) FROM students where student_id = '" . $sid . "'";
 $count_res = mysqli_query($conn, $count_sql);
 $count = mysqli_fetch_array($count_res)[0];
 
@@ -62,10 +62,10 @@ if ($count > 0) {
             printf("Error: %s\n", mysqli_error($conn));
             exit();
         }
-        $data = array();
-        // 4) Covert to the data array with taken class 
+        $data = [];
+        // 4) Covert to the data array with taken class
         while ($row = mysqli_fetch_array($result)) {
-            $oneTaken = array(
+            $oneTaken = [
                 "courseIndex" => $row['courseIndex'],
                 "term" => $row['term'],
                 "course_ID" => $row['course_ID'],
@@ -75,8 +75,8 @@ if ($count > 0) {
                 "credit_hour" => $row['credit_hour'],
                 "credit_earned" => $row['credit_earned'],
                 "class_size" => $row['class_size'],
-                "class_average" => $row['class_average']
-            );
+                "class_average" => $row['class_average'],
+            ];
             array_push($data, $oneTaken);
         }
         // 5) Encode & Return as JSON format
