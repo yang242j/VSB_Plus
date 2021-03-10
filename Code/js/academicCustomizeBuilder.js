@@ -534,7 +534,6 @@ function dragTest() {
 
     }
 }
-console.log(doneList[0]);
 //find a item and delete it 
 function deleteFromArray(array, item) {
     for (i = 0; i < array.length; i++) {
@@ -572,7 +571,9 @@ function termTransfer(term) {
     if (term == "Fall") return 202030;
 }
 
-var y = ["MATH 111", "asd", "asdsa"];
+var y = ["MATH 111", "asd", "asdsa","MATH 111", "asd", "asdsa","MATH 111", "asd", "asdsa","MATH 111", "asd", "asdsa";
+console.log(doneList[0]);
+console.log(y);
 
 function ajaxpost(courseid, term, done) {
     // (A) GET FORM DATA
