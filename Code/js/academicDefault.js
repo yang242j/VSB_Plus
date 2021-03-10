@@ -304,7 +304,7 @@ function courseInfo() {
     for (i = 0; i < allCourseData.length; i++) {
         for (x = 0; x < 12; x++) {
         var courseName = document.getElementById("enct" + x).value;
-        if (allCourseData[i].short_name == courseName && allCourseData[i].title != null)
+        if (courseName == allCourseData[i].short_name)
             return ("<h3>" + allCourseData[i].short_name + "</h3>" + 
             "<p>" + "Title: </br>" + allCourseData[i].title + "</p>" +
             "<p>" + "Prerequisite: </br>" + allCourseData[i].prerequisite + "</p>");
