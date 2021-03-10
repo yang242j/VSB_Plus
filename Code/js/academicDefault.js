@@ -286,12 +286,14 @@ function course_Info(){
     
     for (i = 0; i < 12; i++) {
         selected_course = document.getElementById("nct" + i).value;
+        courseID = courseData[i].short_name;
         
-        var xmlhttp = new XMLHttpRequest();
-        
-        xmlhttp.open("POST", "show_courseInfo.php", true);
-        
-        xmlhttp.send();
+        if(selected_course.length == courseID.length)
+        {
+            return "getTitle(termData[term][1])";
+        }else {
+            return "No Record!!";
+        }
     }
 }
 
