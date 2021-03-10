@@ -296,7 +296,8 @@ function showTerm(pageNumber) {
     }
 }
 
-
+function courseSelect() {
+}
 
 
 var termPageCounter = 1;
