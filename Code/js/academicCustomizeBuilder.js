@@ -83,11 +83,10 @@ function getAllCourse() {
     }
     myRequest.send();
 }
-
 //minus taken class from all course list
 function findCourseToTake(data) {
-    /*console.log(data);
-    console.log(courseReqData);*/
+    /*console.log(data);*/
+    console.log(courseReqData);
     var courseCompleted = [];
     var courseToTake = [];
     var courseNotCompleted = [];
@@ -113,6 +112,7 @@ function findCourseToTake(data) {
         return courseCompleted.indexOf(n) === -1;
     });
     //console.log(courseNotCompleted);
+    console.log(courseNotCompleted);
     return courseNotCompleted;
 }
 
@@ -421,12 +421,12 @@ function dragTest() {
             //console.log(terminfo);
             var check = false;
 
-            var y = [];
-            y[0]=doneList[0][4];
-            var x = ["MATH 111", "CS 210"];
+            var termCode = termTransfer(terminfo[0][2]);
+
+           // y[0]=doneList[0][4];        
             //chekc prerequisite
-            console.log(ajaxpost("ENEL 280", "202020", y));
-            console.log(ajaxpost("ENEL 280", "202020", x));
+            //console.log(ajaxpost("dropZone.id", termCode, y));
+            //console.log(ajaxpost("ENEL 280", "202020", x));
 
 
 
@@ -459,7 +459,6 @@ function dragTest() {
                 //document.getElementById(newForAlern).innerHTML = "this course not applied for now";
             }
             //transfer term to number 
-            var termCode = termTransfer(terminfo[0][2]);
 
             //console.log(dropZone.className);
             //update cerdits
