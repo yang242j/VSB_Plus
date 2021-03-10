@@ -572,7 +572,8 @@ function termTransfer(term) {
 }
 
 
-var x =ajaxpost("ENSE 280",202020,doneList[0]);
+var x =ajaxpost("ENEL 280",202020,doneList[0]);
+console.log(doneList[0]);
 console.log(x);
 
 function ajaxpost(courseid, term, doneList) {
@@ -589,7 +590,7 @@ function ajaxpost(courseid, term, doneList) {
     xhr.onload = function () {
         let rsp = JSON.parse(this.response);
         //console.log(rsp)
-        
+
         if (rsp.Status == true) {
             // Generate course tag
             courseid = rsp.CourseID;
