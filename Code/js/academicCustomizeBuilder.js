@@ -96,7 +96,7 @@ function findCourseToTake(data) {
         } else if(data[i].credit_earned>0)
         courseCompleted[i] = data[i].course_ID;;
     }
-    console.log(courseCompleted);
+    
     //console.log(courseCompleted);
     //console.log(courseReqData);
     for (term in courseReqData) {
@@ -113,6 +113,7 @@ function findCourseToTake(data) {
     });
     //console.log(courseNotCompleted);
     console.log(courseCompleted);
+    console.log(courseNotCompleted);
     return courseNotCompleted;
 }
 
@@ -136,6 +137,7 @@ function getColor(index, dataJSON) {
 
 function showCourses(data) {
     var dataJSON = JSON.parse(data);
+    console.log(dataJSON);
     var notCompletedData = findCourseToTake(dataJSON);
     for (i = 0; i < 12; i++) {
         if (i < dataJSON.length) {
