@@ -426,6 +426,7 @@ function dragTest() {
             //chekc prerequisite
             //console.log(ajaxpost(courseName, "202020", y));
             //console.log(ajaxpost("ENEL 280", "202020", x));
+            console.log(doneList[0]);
             console.log(dropZone.getAttribute("name"));
             for (i = 0; i <= dropZone.getAttribute("name"); i++) {
                 for (j = 0; j < doneList[i].length; j++) {
