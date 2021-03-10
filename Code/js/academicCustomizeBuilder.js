@@ -571,7 +571,7 @@ function termTransfer(term) {
     if (term == "Fall") return 202030;
 }
 
-var y = ["MATH 111"];
+var y = ["MATH 111","asd","asdsa"];
 var x =ajaxpost("ENEL 280",202020,y);
 
 
