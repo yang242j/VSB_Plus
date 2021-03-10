@@ -594,6 +594,7 @@ function ajaxpost(courseid, term, done) {
     // (B) AJAX
     var xhr = new XMLHttpRequest();
     xhr.open("POST", "http://15.223.123.122/vsbp/Code/Model/courseRegStatus.php");
+    xhr.send(data);
     // When server responds
     xhr.onload = function () {
         let rsp = JSON.parse(this.response);
@@ -608,7 +609,7 @@ function ajaxpost(courseid, term, done) {
             return false;
         }
     };
-    xhr.send(data);
+    
 
     // (C) PREVENT HTML FORM SUBMIT
     //return false;
