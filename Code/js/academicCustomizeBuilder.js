@@ -176,14 +176,12 @@ function btnForCourse(data) {
     var ctRight = document.getElementById("ctRight");
     var ctLeft = document.getElementById("ctLeft");
 
-    var nctRight = document.getElementById("nctRight");
-    var nctLeft = document.getElementById("nctLeft");
 
     var completedData = JSON.parse(data);
     var dataJSON = JSON.parse(data);
+    console.log(completedData);
     //var notCompletedData = findCourseToTake(dataJSON);
     var counterForCompleted = 0;
-    var counterForNotCompleted = 0;
     //console.log(notCompletedData);
     // delete NP and W data
 
@@ -240,9 +238,6 @@ function btnForCourse(data) {
 
 /*
 Drag and drop courses to add box
-
-
-
 
 
 */
