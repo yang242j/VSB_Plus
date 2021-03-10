@@ -423,8 +423,10 @@ function dragTest() {
 
             var y = [];
             y[0]=(doneList[0][0]);
+            var x = ["MATH 111", "CS 210"];
             //chekc prerequisite
             console.log(ajaxpost("ENEL 280", "202020", y));
+            console.log(ajaxpost("ENEL 280", "202020", x));
 
 
 
