@@ -574,24 +574,6 @@ function termTransfer(term) {
 
 var y = ["MATH 111", "asd", "asdsa"];
 
-
-function deleteFrom2DArray(array, item) {
-    for (i = 0; i < array.length; i++) {
-        for (j = 0; j < array[i].length; j++) {
-            if (array[i][j] == item) {
-                array[i][j] = array[i][array[i].length - 1];
-                array[i].pop();
-            }
-        }
-    }
-
-}
-
-
-
-
-
-
 function ajaxpost(courseid, term, done) {
     // (A) GET FORM DATA
     var data = new FormData();
