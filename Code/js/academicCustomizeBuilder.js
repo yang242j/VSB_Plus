@@ -482,9 +482,9 @@ function dragTest() {
                 //delete first then push
                 deleteFrom2DArray(doneList, courseName);
                 index = dropZone.getAttribute("name");
-                console.log(index);
+                //console.log(index);
                 doneList[index].push(courseName);
-                console.log(doneList);
+                //console.log(doneList);
             }
             dropZone.appendChild(droppedElement);
 
@@ -573,7 +573,7 @@ function termTransfer(term) {
 
 var y = ["MATH 111", "asd", "asdsa"];
 
-console.log(doneList[0][1]);
+console.log(doneList[0]);
 function changeToOneD() {
     var temp = [];
     for (i = 0; i <= doneList[0].length; i++) {
@@ -584,7 +584,7 @@ function changeToOneD() {
 }
 
 
-console.log(changeToOneD());
+
 
 
 
