@@ -184,7 +184,7 @@ function btnForCourse(data) {
 
     var completedData = JSON.parse(data);
     var dataJSON = JSON.parse(data);
-    var notCompletedData = findCourseToTake(dataJSON);
+    //var notCompletedData = findCourseToTake(dataJSON);
     var counterForCompleted = 0;
     var counterForNotCompleted = 0;
     //console.log(notCompletedData);
