@@ -431,8 +431,7 @@ function dragTest() {
             }
             //transfer term to number 
             var termCode = termTransfer(terminfo[0][2]);
-            console.log(terminfo[0][2]);
-            console.log(termCode);
+
             //console.log(dropZone.className);
             //update cerdits
             dropZone.classList.remove("drop-zone--over");
@@ -555,5 +554,53 @@ function termTransfer(term){
     if(term == "Winter") return 202110;
     if(term == "Spring/Summer") return 202020;
     if(term == "Fall") return 202030;
+}
+
+var x =ajaxpost("ENSE 281",202020,doneList[0]);
+console.log(x);
+function ajaxpost(courseid,term,doneList) {
+    // (A) GET FORM DATA
+    var data = new FormData();
+    data.append("courseid", courseid);
+    data.append("term", term);
+    data.append("doneList", JSON.stringify(doneList));
+    
+    // (B) AJAX
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", "http://15.223.123.122/vsbp/Code/Model/courseRegStatus.php");
+    // When server responds
+    xhr.onload = function(){ 
+        let rsp = JSON.parse(this.response);
+        //console.log(rsp);
+
+        if (rsp.Status == true) {
+            // Generate course tag
+            courseid = rsp.CourseID;
+            let course_tag = tagGenerator(courseid, true);
+
+            // Try to remove any existing course tags with same id.
+            if($("#" + courseid).length != 0) {
+                $( "#" + courseid ).remove();
+            }
+           
+            // Appendd new course tag
+            registerCourse(courseid, term);
+            
+            // If this course Name is NOT in the courseList, push
+            if ($.inArray(courseid, courseList) === -1) {
+                courseList.push(courseid);
+            } else {
+                console.log(courseid + " already exist in courseList { " + courseList + " }");
+            }
+
+        } else {
+            // Do nothing and alert the returned Notes
+            alert(rsp.Notes);
+        }
+    };
+    xhr.send(data);
+    
+    // (C) PREVENT HTML FORM SUBMIT
+    return false;
 }
 
