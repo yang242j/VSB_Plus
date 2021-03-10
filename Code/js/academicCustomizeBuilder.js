@@ -581,6 +581,7 @@ function ajaxpost(courseid, term, done) {
     var data = new FormData();
     data.append("courseid", courseid);
     data.append("term", term);
+    console.log(done);
     data.append("doneList", JSON.stringify(done));
 
     // (B) AJAX
