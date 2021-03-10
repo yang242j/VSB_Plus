@@ -434,6 +434,13 @@ function dragTest() {
                 alert("Term info not match");
             }
 
+             //chekc prerequisite
+             ajaxpost("ENEL 280", "202020", doneList[0]);
+
+
+
+
+
             if (terminfo[0] != null) {
                 document.getElementById(newForAlern).innerHTML = "Applied Term: </br>" +
                     terminfo[0][0] + "</br>" + terminfo[0][1] + "</br>" + terminfo[0][2]; //terminfo[0] is term
@@ -484,7 +491,6 @@ function dragTest() {
                 index = dropZone.getAttribute("name");
                 //console.log(index);
                 doneList[index].push(courseName);
-                console.log(findExist(doneList[0], "MATH 111"));
                 //console.log(doneList);
             }
             dropZone.appendChild(droppedElement);
@@ -570,10 +576,6 @@ function termTransfer(term) {
     if (term == "Spring/Summer") return 202020;
     if (term == "Fall") return 202030;
 }
-
-var y = ["MATH 111", "asd", "asdsa","MATH 111", "asd", "asdsa","MATH 111", "asd", "asdsa","MATH 111", "asd", "asdsa"];
-var z = [];
-
 function ajaxpost(courseid, term, done) {
     // (A) GET FORM DATA
     var data = new FormData();
