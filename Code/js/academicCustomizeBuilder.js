@@ -571,7 +571,7 @@ function termTransfer(term) {
     if (term == "Fall") return 202030;
 }
 
-var y = ["MATH 111", "asd", "asdsa","MATH 111", "asd", "asdsa","MATH 111", "asd", "asdsa","MATH 111", "asd", "asdsa";
+var y = ["MATH 111", "asd", "asdsa","MATH 111", "asd", "asdsa","MATH 111", "asd", "asdsa","MATH 111", "asd", "asdsa"];
 console.log(doneList[0]);
 console.log(y);
 
