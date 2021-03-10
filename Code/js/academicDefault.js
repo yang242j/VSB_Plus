@@ -195,7 +195,7 @@ function enctLeft() {
         }
 
         for (x = 12 * ecounter; x < 12 * (ecounter + 1); x++) {
-            if (x > courseData.length) {
+            if (x > ecourseData.length) {
                 document.getElementById("enct" + z).innerHTML = " ";
             } else {
                 document.getElementById("enct" + z).innerHTML = ecourseData[x].short_name;
@@ -209,7 +209,7 @@ function enctLeft() {
 
 function enctRight() {
     y = 0;
-    if (courseData[x].short_name != null) {
+    if (ecourseData[x].short_name != null) {
         ecounter += 1;
     }
     /*document.getElementById("notCompletedRight").innerHTML = counter;*/
@@ -218,8 +218,8 @@ function enctRight() {
             document.getElementById("enct" + x).innerHTML = "";
         }
         for (x = 12 * ecounter; x < 12 * (ecounter + 1); x++) {
-            if (courseData[x] == null) return;
-            if (x > courseData.length) {
+            if (ecourseData[x] == null) return;
+            if (x > ecourseData.length) {
                 document.getElementById("enct" + y).innerHTML = " ";
             } else {
                 document.getElementById("enct" + y).innerHTML = ecourseData[x].short_name;
