@@ -91,15 +91,11 @@ function findCourseToTake(data) {
     var courseNotCompleted = [];
     //console.log(data);
     //console.log(data[2]);
-
-
-
-
-
     for (i = 0; i < data.length; i++) {
-        if (data[i] == null) {
+        if (data[i] == null )  {
             return;
-        } else courseCompleted[i] = data[i].course_ID;;
+        } else if(data[i].final_grade != "NP" && data[i].final_grade != "W")
+        courseCompleted[i] = data[i].course_ID;;
     }
     //console.log(courseCompleted);
     //console.log(courseReqData);
