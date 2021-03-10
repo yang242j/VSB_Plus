@@ -420,6 +420,14 @@ function dragTest() {
             var terminfo = getTermInfo(courseName);
             //console.log(terminfo);
             var check = false;
+
+
+            //chekc prerequisite
+            console.log(ajaxpost("ENEL 280", "202020", doneList[0]));
+
+
+
+
             for (i = 0; i < terminfo[0].length; i++) {
                 if (terminfo[0][i] == null) {
                     terminfo[0][i] = "space";
@@ -433,10 +441,6 @@ function dragTest() {
                 document.getElementById(newForAlern).style.color = "red";
                 alert("Term info not match");
             }
-
-             //chekc prerequisite
-             ajaxpost("ENEL 280", "202020", doneList[0]);
-
 
 
 
