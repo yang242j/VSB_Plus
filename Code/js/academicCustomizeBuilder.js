@@ -534,6 +534,7 @@ function dragTest() {
 
     }
 }
+console.log(doneList[0][0]);
 //find a item and delete it 
 function deleteFromArray(array, item) {
     for (i = 0; i < array.length; i++) {
@@ -573,14 +574,17 @@ function termTransfer(term) {
 
 var y = ["MATH 111", "asd", "asdsa"];
 
-console.log(doneList[0][0]);
-function changeToOneD() {
-    var temp = [];
-    for (i = 0; i <= doneList[0].length; i++) {
-        temp.push(doneList[0][i]);
-        console.log(doneList[0][i]);
+
+function deleteFrom2DArray(array, item) {
+    for (i = 0; i < array.length; i++) {
+        for (j = 0; j < array[i].length; j++) {
+            if (array[i][j] == item) {
+                array[i][j] = array[i][array[i].length - 1];
+                array[i].pop();
+            }
+        }
     }
-    return temp;
+
 }
 
 
