@@ -461,7 +461,7 @@ function dragTest() {
             if (terminfo[0] != null) {
                 var terminfo1,terminfo2,terminfo3 = "";
                 
-                for (i=0;i<terminfo[0].length)
+                for (i=0;i<terminfo[0].length;i++)
                 {
                     if (terminfo[0][i] == "Winter") {
                         terminfo1 = "W";
