@@ -112,43 +112,93 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             <div class = "tittle">
                 <h2>Winter</h2>
             </div>
-            <div class = "course_cards" id = "course_cards_builder"></div>
-            <div class = "course_cards" id = "course_cards_builder"> </div>
-            <div class = "course_cards" id = "course_cards_builder"></div>
-             <div class = "course_cards" id = "course_cards_builder"></div>
-             <div class = "course_cards" id = "course_cards_builder"></div>  
+            <div class = "course_cards" id = "Winter" name ="1"></div>
+            <div class = "course_cards" id = "Winter" name ="1"></div>
+            <div class = "course_cards" id = "Winter" name ="1"></div>
+             <div class = "course_cards" id = "Winter" name ="1"></div>
+             <div class = "course_cards" id = "Winter" name ="1"></div>  
             </div>
         <div class = "term1" id = "term2">
             <div class = "tittle">
                 <h2>Spring/Summer</h2>
             </div>
-            <div class = "course_cards" ></div>
-            <div class = "course_cards" ></div>
-            <div class = "course_cards" ></div>
-            <div class = "course_cards" ></div>
-            <div class = "course_cards" ></div>
+            <div class = "course_cards" id = "Spring/Summer" name ="2"></div>
+            <div class = "course_cards" id = "Spring/Summer" name ="2"></div>
+            <div class = "course_cards" id = "Spring/Summer" name ="2"></div>
+            <div class = "course_cards" id = "Spring/Summer" name ="2"></div>
+            <div class = "course_cards" id = "Spring/Summer" name ="2"></div>
         </div>
     
         <div class = "term1" id = "term3">
             <div class = "tittle">
                 <h2>Fall</h2>
             </div>
-            <div class = "course_cards" id = "course_cards_builder"></div>
-            <div class = "course_cards" id = "course_cards_builder"></div>
-            <div class = "course_cards" id = "course_cards_builder"></div>
-            <div class = "course_cards" id = "course_cards_builder"></div>
-            <div class = "course_cards" id = "course_cards_builder"></div>
+            <div class = "course_cards" id = "Fall" name ="3"></div>
+            <div class = "course_cards" id = "Fall" name ="3"></div>
+            <div class = "course_cards" id = "Fall" name ="3"></div>
+            <div class = "course_cards" id = "Fall" name ="3"></div>
+            <div class = "course_cards" id = "Fall" name ="3"></div>
         </div>
 
         <div class = "term1" id = "term4">
             <div class = "tittle">
                 <h2>Winter</h2>
             </div>
-            <div class = "course_cards" ></div>
-            <div class = "course_cards" ></div>
-            <div class = "course_cards" ></div>
-            <div class = "course_cards" ></div>
-            <div class = "course_cards" ></div>
+            <div class = "course_cards" id = "Winter" name ="4"></div>
+            <div class = "course_cards" id = "Winter" name ="4"></div>
+            <div class = "course_cards" id = "Winter" name ="4"></div>
+            <div class = "course_cards" id = "Winter" name ="4"></div>
+            <div class = "course_cards" id = "Winter" name ="4"></div>
+            </div>
+            <div class = "term1" id = "term5">
+            <div class = "tittle">
+                <h2>Spring/Summer</h2>
+            </div>
+            <div class = "course_cards" id = "Spring/Summer" name ="5"></div>
+            <div class = "course_cards" id = "Spring/Summer" name ="5"></div>
+            <div class = "course_cards" id = "Spring/Summer" name ="5"></div>
+            <div class = "course_cards" id = "Spring/Summer" name ="5"></div>
+            <div class = "course_cards" id = "Spring/Summer" name ="5"></div>
+            </div>
+            <div class = "term1" id = "term6">
+            <div class = "tittle">
+                <h2>Fall</h2>
+            </div>
+            <div class = "course_cards" id = "Fall" name ="6"></div>
+            <div class = "course_cards" id = "Fall" name ="6"></div>
+            <div class = "course_cards" id = "Fall" name ="6"></div>
+            <div class = "course_cards" id = "Fall" name ="6"></div>
+            <div class = "course_cards" id = "Fall" name ="6"></div>
+            </div>
+            <div class = "term1" id = "term7">
+            <div class = "tittle">
+                <h2>Winter</h2>
+            </div>
+            <div class = "course_cards" id = "Winter" name ="7"></div>
+            <div class = "course_cards" id = "Winter" name ="7"></div>
+            <div class = "course_cards" id = "Winter" name ="7"></div>
+            <div class = "course_cards" id = "Winter" name ="7"></div>
+            <div class = "course_cards" id = "Winter" name ="7"></div>
+            </div>
+            <div class = "term1" id = "term8">
+            <div class = "tittle">
+                <h2>Spring/Summer</h2>
+            </div>
+            <div class = "course_cards" id = "Spring/Summer" name ="8"></div>
+            <div class = "course_cards" id = "Spring/Summer" name ="8"></div>
+            <div class = "course_cards" id = "Spring/Summer" name ="8"></div>
+            <div class = "course_cards" id = "Spring/Summer" name ="8"></div>
+            <div class = "course_cards" id = "Spring/Summer" name ="8"></div>
+            </div>
+            <div class = "term1" id = "term9">
+            <div class = "tittle">
+                <h2>Fall</h2>
+            </div>
+            <div class = "course_cards" id = "Fall" name ="9"></div>
+            <div class = "course_cards" id = "Fall" name ="9"></div>
+            <div class = "course_cards" id = "Fall" name ="9"></div>
+            <div class = "course_cards" id = "Fall" name ="9"></div>
+            <div class = "course_cards" id = "Fall" name ="9"></div>
             </div>
             <!--<div class = "arrows">
                 <button class="right_arrow">
@@ -173,11 +223,11 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 <section class = "tags_courses" id ="block" style="float:right;">  
 
     <div class = "icons_annotation" id ="builder_icon">
-        <div class ="icons" style='font-size:16px;color:#b8860b;font-weight: bold'>---- W</div>
+        <div class ="icons" style='font-size:16px;color:yellow;font-weight: bold'>---- W</div>
         <div class ="icons" style='font-size:16px;color:blue;font-weight: bold'>---- NP</div>
         <div class ="icons" style='font-size:16px;color:grey;font-weight: bold'>---- Passed</div>
-        <div class ="icons" style='font-size:16px;color:#008000;font-weight: bold'>---- Good</div>
-        <div class ="icons" style='font-size:16px;color:#AD1457;font-weight: bold'>---- Great</div>
+        <div class ="icons" style='font-size:16px;color:green;font-weight: bold'>---- Good</div>
+        <div class ="icons" style='font-size:16px;color:orange;font-weight: bold'>---- Great</div>
         <div class ="icons" style='font-size:16px;color:red;font-weight: bold'>---- Excellent</div>
     </div>
 

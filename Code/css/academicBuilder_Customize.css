@@ -27,18 +27,18 @@ body .terms .term1 .course_cards p{
     /*border: 2px solid red;*/
     font-size: 16px;
 }
-body .terms {
-    
+body .terms { 
     position:relative;
     width: 62%;
+    height:100%;
     margin-top: 1%;
-   /* border: 2px solid red;*/
-    display: inline-grid;
+    /*border: 2px solid red;*/
+    border-bottom: 3px solid grey;
+    display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 4% repeat(20,35%);
+    grid-template-rows: 4% repeat(20,20%);
     margin-left: -1%;
-    column-gap: 35px;
-    row-gap: 0px;
+    column-gap: 5px;
 }
 body .terms h1{
     /*border: 2px solid blue;*/
@@ -47,11 +47,12 @@ body .terms h1{
 body .terms .term1{
     /*border: 2px solid blue;*/
     display: grid;
-    grid-template-columns: 8% 17% 17% 17% 17% 17% ; 
-    grid-template-rows: 40% 10%;
+    grid-template-columns: 8% 16% 16% 16% 16% 16% ; 
+    grid-template-rows: 80% ;
     column-gap: 10px;
     margin-left: -30px;
-    row-gap:30px;
+    row-gap:5px;
+
 }
 body .terms .term1 .arrows{
     /*border: 2px solid blue;*/
@@ -95,8 +96,8 @@ body .terms .course_cards{
         border-radius: 5px;
         box-shadow: -2px 4px 7px 0px #555555;
         text-align: center;
-        margin-left: 0;
-        margin-top: 10px;
+        margin-left: 20px;
+        margin-top: 50px;
         border-style: dashed;
     }
     body .terms .course_cards h3{
@@ -176,15 +177,16 @@ body .terms .term1 #course_cards_builder p{
         margin-top: -350px;
     }
     body .tags_courses .course_list .course_tag_not_completed{
-       /* border: 2px solid red;*/
+        /*border: 2px solid red;*/
+        border-bottom: 3px solid grey;
         display: grid;
         width:102%;
         height:120%;
         grid-template-columns: 23% 23% 23% 23%;
-        grid-template-rows:repeat(20,35%);
-        row-gap: 0px;
+        grid-template-rows:repeat(20,20%);
         column-gap: 10px;
         margin-top: -360px;
+        margin-left: -20px;
         font-size: 18px;
     }
     body .tags_courses .course_list .course_tag_not_completed p{
