@@ -588,31 +588,17 @@ function ajaxpost(courseid, term, doneList) {
     // When server responds
     xhr.onload = function () {
         let rsp = JSON.parse(this.response);
-        //console.log(rsp);
-
+        //console.log(rsp)
+        
         if (rsp.Status == true) {
             // Generate course tag
             courseid = rsp.CourseID;
-            let course_tag = tagGenerator(courseid, true);
-
-            // Try to remove any existing course tags with same id.
-            if ($("#" + courseid).length != 0) {
-                $("#" + courseid).remove();
-            }
-
-            // Appendd new course tag
-            registerCourse(courseid, term);
-
-            // If this course Name is NOT in the courseList, push
-            if ($.inArray(courseid, courseList) === -1) {
-                courseList.push(courseid);
-            } else {
-                console.log(courseid + " already exist in courseList { " + courseList + " }");
-            }
-
+            return true;
+           
         } else {
             // Do nothing and alert the returned Notes
             alert(rsp.Notes);
+            return false;
         }
     };
     xhr.send(data);
