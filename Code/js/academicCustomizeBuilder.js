@@ -611,5 +611,5 @@ function ajaxpost(courseid, term, done) {
     xhr.send(data);
 
     // (C) PREVENT HTML FORM SUBMIT
-    return false;
+    //return false;
 }
