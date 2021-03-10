@@ -94,7 +94,7 @@ function findCourseToTake(data) {
     for (i = 0; i < data.length; i++) {
         if (data[i] == null )  {
             return;
-        } else if(data[i].final_grade != "NP" && data[i].final_grade != "W")
+        } else if(data[i].credit_earned>0)
         courseCompleted[i] = data[i].course_ID;;
     }
     //console.log(courseCompleted);
