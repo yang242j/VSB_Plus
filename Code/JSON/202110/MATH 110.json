@@ -1,1 +1,76 @@
-{"term": "2021 Winter", "short_name": "MATH 110", "title": "Calculus I", "faculty": "MATH", "credit": "3", "description": "An introductory class in the theory and techniques of differentiation and integration of algebraic and trigonometric functions. Topics include limits, optimization, curve sketching, and areas.", "prerequisite": "Precalculus 30 with at least 75%, or Calculus 30 or Mathematics B30 and C30 with a grade of at least 65% in each or Math 102", "section": [{"course_ID": "12000", "section_num": "001", "instructors": "Richard J.  McIntosh (P)", "days": "TR", "time": "1:00 pm - 2:15 pm", "loc": "Classroom Building 128", "course_type": "Lecture", "exam_days": "S", "exam_date": "Apr 24, 2021 - Apr 24, 2021", "exam_time": "2:00 pm - 5:00 pm"}, {"course_ID": "12001", "section_num": "010", "instructors": "TBA", "days": "R", "time": "9:30 am - 10:20 am", "loc": "Classroom Building 128", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "13481", "section_num": "390", "instructors": "TBA", "days": "MW", "time": "9:00 am - 11:40 am", "loc": "Off-Campus Locations PRINCE ALB", "course_type": "Lecture", "exam_days": "MW", "exam_date": "Mar 08, 2021 - Apr 30, 2021", "exam_time": "12:40 pm - 3:20 pm"}, {"course_ID": "13322", "section_num": "391", "instructors": "TBA", "days": "MW", "time": "12:40 pm - 3:20 pm", "loc": "Off-Campus Locations PRINCE ALB", "course_type": "Lecture", "exam_days": "TR", "exam_date": "Jan 11, 2021 - Apr 15, 2021", "exam_time": "1:00 pm - 2:15 pm"}, {"course_ID": "12002", "section_num": "L01", "instructors": "Shuchita   Sharma (P)", "days": "TR", "time": "1:00 pm - 2:15 pm", "loc": "Remote", "course_type": "Lecture", "exam_days": "S", "exam_date": "Apr 24, 2021 - Apr 24, 2021", "exam_time": "2:00 pm - 5:00 pm"}, {"course_ID": "12003", "section_num": "L10", "instructors": "Shuchita   Sharma (P)", "days": "F", "time": "9:30 am - 10:20 am", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}]}
+{
+    "term": "2021 Winter",
+    "short_name": "MATH 110",
+    "title": "Calculus I",
+    "faculty": "MATH",
+    "credit": "3",
+    "description": "An introductory class in the theory and techniques of differentiation and integration of algebraic and trigonometric functions. Topics include limits, optimization, curve sketching, and areas.",
+    "prerequisite": "Precalculus 30 with at least 75%, or Calculus 30 or Mathematics B30 and C30 with a grade of at least 65% in each or Math 102",
+    "section": [{
+        "course_ID": "12000",
+        "section_num": "001",
+        "instructors": "Richard J.  McIntosh (P)",
+        "days": "TR",
+        "time": "1:00 pm - 2:15 pm",
+        "loc": "Classroom Building 128",
+        "course_type": "Lecture",
+        "exam_days": "S",
+        "exam_date": "Apr 24, 2021 - Apr 24, 2021",
+        "exam_time": "2:00 pm - 5:00 pm"
+    }, {
+        "course_ID": "12001",
+        "section_num": "010",
+        "instructors": "TBA",
+        "days": "R",
+        "time": "9:30 am - 10:20 am",
+        "loc": "Classroom Building 128",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "13481",
+        "section_num": "390",
+        "instructors": "TBA",
+        "days": "MW",
+        "time": "9:00 am - 11:40 am",
+        "loc": "Off-Campus Locations PRINCE ALB",
+        "course_type": "Lecture",
+        "exam_days": "MW",
+        "exam_date": "Mar 08, 2021 - Apr 30, 2021",
+        "exam_time": "12:40 pm - 3:20 pm"
+    }, {
+        "course_ID": "13322",
+        "section_num": "391",
+        "instructors": "TBA",
+        "days": "MW",
+        "time": "12:40 pm - 3:20 pm",
+        "loc": "Off-Campus Locations PRINCE ALB",
+        "course_type": "Lecture",
+        "exam_days": "TR",
+        "exam_date": "Jan 11, 2021 - Apr 15, 2021",
+        "exam_time": "1:00 pm - 2:15 pm"
+    }, {
+        "course_ID": "12002",
+        "section_num": "L01",
+        "instructors": "Shuchita   Sharma (P)",
+        "days": "TR",
+        "time": "1:00 pm - 2:15 pm",
+        "loc": "Remote",
+        "course_type": "Lecture",
+        "exam_days": "S",
+        "exam_date": "Apr 24, 2021 - Apr 24, 2021",
+        "exam_time": "2:00 pm - 5:00 pm"
+    }, {
+        "course_ID": "12003",
+        "section_num": "L10",
+        "instructors": "Shuchita   Sharma (P)",
+        "days": "F",
+        "time": "9:30 am - 10:20 am",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }]
+}

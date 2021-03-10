@@ -1,1 +1,32 @@
-{"term": "2020 Fall", "short_name": "ENGG 123", "title": "Engineering Design and Communications", "faculty": "ENGG", "credit": "3", "description": "Students will be introduced to the concepts of engineering design and communications.  In addition, the consequences of engineering projects on society will be explored.", "prerequisite": "", "section": [{"course_ID": "31058", "section_num": "001", "instructors": "David Daniel  deMontigny (P), Andrew   Munro ", "days": "MW", "time": "4:00 pm - 5:15 pm", "loc": "Remote", "course_type": "Lecture", "exam_days": "W", "exam_date": "Dec 23, 2020 - Dec 23, 2020", "exam_time": "2:00 pm - 5:00 pm"}, {"course_ID": "31059", "section_num": "091", "instructors": "TBA", "days": "W", "time": "8:30 am - 10:20 am", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}]}
+{
+    "term": "2020 Fall",
+    "short_name": "ENGG 123",
+    "title": "Engineering Design and Communications",
+    "faculty": "ENGG",
+    "credit": "3",
+    "description": "Students will be introduced to the concepts of engineering design and communications.  In addition, the consequences of engineering projects on society will be explored.",
+    "prerequisite": "",
+    "section": [{
+        "course_ID": "31058",
+        "section_num": "001",
+        "instructors": "David Daniel  deMontigny (P), Andrew   Munro ",
+        "days": "MW",
+        "time": "4:00 pm - 5:15 pm",
+        "loc": "Remote",
+        "course_type": "Lecture",
+        "exam_days": "W",
+        "exam_date": "Dec 23, 2020 - Dec 23, 2020",
+        "exam_time": "2:00 pm - 5:00 pm"
+    }, {
+        "course_ID": "31059",
+        "section_num": "091",
+        "instructors": "TBA",
+        "days": "W",
+        "time": "8:30 am - 10:20 am",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }]
+}

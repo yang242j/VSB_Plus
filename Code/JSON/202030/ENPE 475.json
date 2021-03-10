@@ -1,1 +1,10 @@
-{"term": "No class for the term", "short_name": "ENPE 475", "title": "Evaluation of Oil and Gas Properties", "faculty": "ENPE", "credit": "3", "description": "General business skills related to the understanding of oil field cash flow projections, rate of return, royalties, taxes and other factors in measuring value creation as it relates to the petroleum industry.", "prerequisite": " ENPE 302, ENPE 440 and ENGG 303", "section": []}
+{
+    "term": "No class for the term",
+    "short_name": "ENPE 475",
+    "title": "Evaluation of Oil and Gas Properties",
+    "faculty": "ENPE",
+    "credit": "3",
+    "description": "General business skills related to the understanding of oil field cash flow projections, rate of return, royalties, taxes and other factors in measuring value creation as it relates to the petroleum industry.",
+    "prerequisite": " ENPE 302, ENPE 440 and ENGG 303",
+    "section": []
+}

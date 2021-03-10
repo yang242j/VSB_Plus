@@ -1,1 +1,10 @@
-{"term": "No class for the term", "short_name": "ENPE 300", "title": "Fundamentals of Reservoir Engineering", "faculty": "ENPE", "credit": "3", "description": "Relationship of geology, basic reservoir properties, surface and interfacial phenomena, and the flow of fluids through porous media; general material balance, steady state, and transient models; classification of petroleum reservoirs, displacement of oil and gas, and reservoir estimation principles.", "prerequisite": "ENPE 241 and 251", "section": []}
+{
+    "term": "No class for the term",
+    "short_name": "ENPE 300",
+    "title": "Fundamentals of Reservoir Engineering",
+    "faculty": "ENPE",
+    "credit": "3",
+    "description": "Relationship of geology, basic reservoir properties, surface and interfacial phenomena, and the flow of fluids through porous media; general material balance, steady state, and transient models; classification of petroleum reservoirs, displacement of oil and gas, and reservoir estimation principles.",
+    "prerequisite": "ENPE 241 and 251",
+    "section": []
+}

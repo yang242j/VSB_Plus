@@ -1,1 +1,197 @@
-{"term": "2020 Fall", "short_name": "CS 115", "title": "Object-Oriented Design", "faculty": "CS", "credit": "3", "description": "This course focuses on the concepts of object-oriented programming. Topics include data abstraction, classes, composition and inheritance, subtyping, dynamic binding, polymorphism and dynamic memory management. Other topics include type systems, two-dimensional arrays, records, references, searching and sorting algorithms, language translation. Software engineering: comprehensibility, correctness, efficiency, refactoring.", "prerequisite": "CS 110 with a minimum grade of 65% and one of MATH 110 (may be taken concurrently) or MATH 103 with a minimum grade of 80%.", "section": [{"course_ID": "30619", "section_num": "001", "instructors": "Mikhail   Shchukin (P)", "days": "MWF", "time": "2:30 pm - 3:20 pm", "loc": "Remote", "course_type": "Lecture", "exam_days": "S", "exam_date": "Dec 19, 2020 - Dec 19, 2020", "exam_time": "2:00 pm - 5:00 pm"}, {"course_ID": "30620", "section_num": "002", "instructors": "Mikhail   Shchukin (P)", "days": "MWF", "time": "2:30 pm - 3:20 pm", "loc": "Remote", "course_type": "Lecture", "exam_days": "S", "exam_date": "Dec 19, 2020 - Dec 19, 2020", "exam_time": "2:00 pm - 5:00 pm"}, {"course_ID": "30621", "section_num": "003", "instructors": "Gurmail   Singh (P)", "days": "MWF", "time": "7:00 pm - 7:50 pm", "loc": "Remote", "course_type": "Lecture", "exam_days": "S", "exam_date": "Dec 19, 2020 - Dec 19, 2020", "exam_time": "2:00 pm - 5:00 pm"}, {"course_ID": "30622", "section_num": "071", "instructors": "TBA", "days": "T", "time": "6:00 pm - 7:50 pm", "loc": "Classroom Building 115", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "30623", "section_num": "072", "instructors": "TBA", "days": "R", "time": "12:30 pm - 2:20 pm", "loc": "Classroom Building 115", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "30624", "section_num": "073", "instructors": "TBA", "days": "R", "time": "6:30 pm - 8:20 pm", "loc": "Classroom Building 115", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "30625", "section_num": "074", "instructors": "TBA", "days": "R", "time": "4:30 pm - 6:20 pm", "loc": "Classroom Building 115", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "33579", "section_num": "075", "instructors": "TBA", "days": "W", "time": "10:30 am - 12:20 pm", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "33580", "section_num": "076", "instructors": "TBA", "days": "F", "time": "2:30 pm - 4:20 pm", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "33581", "section_num": "077", "instructors": "TBA", "days": "F", "time": "4:30 pm - 6:20 pm", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "30626", "section_num": "081", "instructors": "TBA", "days": "W", "time": "10:30 am - 12:20 pm", "loc": "Classroom Building 115", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "30627", "section_num": "082", "instructors": "TBA", "days": "T", "time": "1:30 pm - 3:20 pm", "loc": "Classroom Building 115", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "30628", "section_num": "083", "instructors": "TBA", "days": "F", "time": "8:30 am - 10:20 am", "loc": "Classroom Building 115", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "30629", "section_num": "084", "instructors": "TBA", "days": "W", "time": "6:30 pm - 8:20 pm", "loc": "Classroom Building 115", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "30630", "section_num": "091", "instructors": "November Janet  Scheidt (P)", "days": "R", "time": "8:30 am - 10:20 am", "loc": "Classroom Building 115", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "30631", "section_num": "092", "instructors": "November Janet  Scheidt (P)", "days": "T", "time": "11:30 am - 1:20 pm", "loc": "Classroom Building 115", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "30632", "section_num": "093", "instructors": "November Janet  Scheidt (P)", "days": "W", "time": "4:30 pm - 6:20 pm", "loc": "Classroom Building 115", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}]}
+{
+    "term": "2020 Fall",
+    "short_name": "CS 115",
+    "title": "Object-Oriented Design",
+    "faculty": "CS",
+    "credit": "3",
+    "description": "This course focuses on the concepts of object-oriented programming. Topics include data abstraction, classes, composition and inheritance, subtyping, dynamic binding, polymorphism and dynamic memory management. Other topics include type systems, two-dimensional arrays, records, references, searching and sorting algorithms, language translation. Software engineering: comprehensibility, correctness, efficiency, refactoring.",
+    "prerequisite": "CS 110 with a minimum grade of 65% and one of MATH 110 (may be taken concurrently) or MATH 103 with a minimum grade of 80%.",
+    "section": [{
+        "course_ID": "30619",
+        "section_num": "001",
+        "instructors": "Mikhail   Shchukin (P)",
+        "days": "MWF",
+        "time": "2:30 pm - 3:20 pm",
+        "loc": "Remote",
+        "course_type": "Lecture",
+        "exam_days": "S",
+        "exam_date": "Dec 19, 2020 - Dec 19, 2020",
+        "exam_time": "2:00 pm - 5:00 pm"
+    }, {
+        "course_ID": "30620",
+        "section_num": "002",
+        "instructors": "Mikhail   Shchukin (P)",
+        "days": "MWF",
+        "time": "2:30 pm - 3:20 pm",
+        "loc": "Remote",
+        "course_type": "Lecture",
+        "exam_days": "S",
+        "exam_date": "Dec 19, 2020 - Dec 19, 2020",
+        "exam_time": "2:00 pm - 5:00 pm"
+    }, {
+        "course_ID": "30621",
+        "section_num": "003",
+        "instructors": "Gurmail   Singh (P)",
+        "days": "MWF",
+        "time": "7:00 pm - 7:50 pm",
+        "loc": "Remote",
+        "course_type": "Lecture",
+        "exam_days": "S",
+        "exam_date": "Dec 19, 2020 - Dec 19, 2020",
+        "exam_time": "2:00 pm - 5:00 pm"
+    }, {
+        "course_ID": "30622",
+        "section_num": "071",
+        "instructors": "TBA",
+        "days": "T",
+        "time": "6:00 pm - 7:50 pm",
+        "loc": "Classroom Building 115",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "30623",
+        "section_num": "072",
+        "instructors": "TBA",
+        "days": "R",
+        "time": "12:30 pm - 2:20 pm",
+        "loc": "Classroom Building 115",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "30624",
+        "section_num": "073",
+        "instructors": "TBA",
+        "days": "R",
+        "time": "6:30 pm - 8:20 pm",
+        "loc": "Classroom Building 115",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "30625",
+        "section_num": "074",
+        "instructors": "TBA",
+        "days": "R",
+        "time": "4:30 pm - 6:20 pm",
+        "loc": "Classroom Building 115",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "33579",
+        "section_num": "075",
+        "instructors": "TBA",
+        "days": "W",
+        "time": "10:30 am - 12:20 pm",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "33580",
+        "section_num": "076",
+        "instructors": "TBA",
+        "days": "F",
+        "time": "2:30 pm - 4:20 pm",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "33581",
+        "section_num": "077",
+        "instructors": "TBA",
+        "days": "F",
+        "time": "4:30 pm - 6:20 pm",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "30626",
+        "section_num": "081",
+        "instructors": "TBA",
+        "days": "W",
+        "time": "10:30 am - 12:20 pm",
+        "loc": "Classroom Building 115",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "30627",
+        "section_num": "082",
+        "instructors": "TBA",
+        "days": "T",
+        "time": "1:30 pm - 3:20 pm",
+        "loc": "Classroom Building 115",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "30628",
+        "section_num": "083",
+        "instructors": "TBA",
+        "days": "F",
+        "time": "8:30 am - 10:20 am",
+        "loc": "Classroom Building 115",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "30629",
+        "section_num": "084",
+        "instructors": "TBA",
+        "days": "W",
+        "time": "6:30 pm - 8:20 pm",
+        "loc": "Classroom Building 115",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "30630",
+        "section_num": "091",
+        "instructors": "November Janet  Scheidt (P)",
+        "days": "R",
+        "time": "8:30 am - 10:20 am",
+        "loc": "Classroom Building 115",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "30631",
+        "section_num": "092",
+        "instructors": "November Janet  Scheidt (P)",
+        "days": "T",
+        "time": "11:30 am - 1:20 pm",
+        "loc": "Classroom Building 115",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "30632",
+        "section_num": "093",
+        "instructors": "November Janet  Scheidt (P)",
+        "days": "W",
+        "time": "4:30 pm - 6:20 pm",
+        "loc": "Classroom Building 115",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }]
+}

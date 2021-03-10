@@ -1,1 +1,10 @@
-{"term": "No class for the term", "short_name": "ENEV 480", "title": "Terrain and Site Analysis", "faculty": "ENEV", "credit": "3", "description": "The application of airphoto, satellite imagery and geomorphological interpretation to regional engineering problems, to management of resources, and to monitoring of the environment. On-site investigation techniques.", "prerequisite": "GEOL 102", "section": []}
+{
+    "term": "No class for the term",
+    "short_name": "ENEV 480",
+    "title": "Terrain and Site Analysis",
+    "faculty": "ENEV",
+    "credit": "3",
+    "description": "The application of airphoto, satellite imagery and geomorphological interpretation to regional engineering problems, to management of resources, and to monitoring of the environment. On-site investigation techniques.",
+    "prerequisite": "GEOL 102",
+    "section": []
+}

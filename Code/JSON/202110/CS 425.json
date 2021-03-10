@@ -1,1 +1,10 @@
-{"term": "No class for the term", "short_name": "CS 425", "title": "Image Processing", "faculty": "CS", "credit": "3", "description": "Introduction to image processing systems.  Image transformation.  Image enhancement.  Image coding and compression.  Feature extraction and image segmentation.", "prerequisite": "CS 340, MATH 111 and 122", "section": []}
+{
+    "term": "No class for the term",
+    "short_name": "CS 425",
+    "title": "Image Processing",
+    "faculty": "CS",
+    "credit": "3",
+    "description": "Introduction to image processing systems.  Image transformation.  Image enhancement.  Image coding and compression.  Feature extraction and image segmentation.",
+    "prerequisite": "CS 340, MATH 111 and 122",
+    "section": []
+}

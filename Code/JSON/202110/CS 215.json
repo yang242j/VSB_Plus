@@ -1,1 +1,153 @@
-{"term": "2021 Winter", "short_name": "CS 215", "title": "Web and Database Programming", "faculty": "CS", "credit": "3", "description": "This course shows how interactive database-driven web applications are designed and implemented. Appropriate protocols and languages for web and database programming will be discussed, with a focus on client-server architectures, interface design, graphics and visualization, event-driven programming, information management, data modeling, and database systems.", "prerequisite": "CS 210", "section": [{"course_ID": "13467", "section_num": "084", "instructors": "TBA", "days": "R", "time": "4:30 pm - 6:20 pm", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "13468", "section_num": "085", "instructors": "TBA", "days": "T", "time": "12:30 pm - 2:20 pm", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "13469", "section_num": "086", "instructors": "TBA", "days": "W", "time": "12:30 pm - 2:20 pm", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "13470", "section_num": "087", "instructors": "TBA", "days": "M", "time": "10:30 am - 12:20 pm", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "10550", "section_num": "094", "instructors": "TBA", "days": "W", "time": "10:30 am - 12:20 pm", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "10551", "section_num": "095", "instructors": "TBA", "days": "T", "time": "2:30 pm - 4:20 pm", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "10552", "section_num": "096", "instructors": "TBA", "days": "M", "time": "12:30 pm - 2:20 pm", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "10553", "section_num": "097", "instructors": "TBA", "days": "R", "time": "12:30 pm - 2:20 pm", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "10554", "section_num": "098", "instructors": "TBA", "days": "T", "time": "4:30 pm - 6:20 pm", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "10549", "section_num": "397", "instructors": "Orland Harold  Hoeber (P)", "days": "T", "time": "10:00 am - 11:15 am", "loc": "Remote", "course_type": "Lecture", "exam_days": "\u00a0", "exam_date": "Jan 11, 2021 - Apr 15, 2021", "exam_time": "TBA"}, {"course_ID": "10549", "section_num": "397", "instructors": "Orland Harold  Hoeber (P)", "days": "\u00a0", "time": "TBA", "loc": "WEB WEB", "course_type": "Lecture", "exam_days": "M", "exam_date": "Apr 19, 2021 - Apr 19, 2021", "exam_time": "2:00 pm - 5:00 pm"}, {"course_ID": "13466", "section_num": "398", "instructors": "Sebastian Romy  Gomes (P)", "days": "T", "time": "10:00 am - 11:15 am", "loc": "Remote", "course_type": "Lecture", "exam_days": "\u00a0", "exam_date": "Jan 11, 2021 - Apr 15, 2021", "exam_time": "TBA"}, {"course_ID": "13466", "section_num": "398", "instructors": "Sebastian Romy  Gomes (P)", "days": "\u00a0", "time": "TBA", "loc": "WEB WEB", "course_type": "Lecture", "exam_days": "M", "exam_date": "Apr 19, 2021 - Apr 19, 2021", "exam_time": "2:00 pm - 5:00 pm"}]}
+{
+    "term": "2021 Winter",
+    "short_name": "CS 215",
+    "title": "Web and Database Programming",
+    "faculty": "CS",
+    "credit": "3",
+    "description": "This course shows how interactive database-driven web applications are designed and implemented. Appropriate protocols and languages for web and database programming will be discussed, with a focus on client-server architectures, interface design, graphics and visualization, event-driven programming, information management, data modeling, and database systems.",
+    "prerequisite": "CS 210",
+    "section": [{
+        "course_ID": "13467",
+        "section_num": "084",
+        "instructors": "TBA",
+        "days": "R",
+        "time": "4:30 pm - 6:20 pm",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "13468",
+        "section_num": "085",
+        "instructors": "TBA",
+        "days": "T",
+        "time": "12:30 pm - 2:20 pm",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "13469",
+        "section_num": "086",
+        "instructors": "TBA",
+        "days": "W",
+        "time": "12:30 pm - 2:20 pm",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "13470",
+        "section_num": "087",
+        "instructors": "TBA",
+        "days": "M",
+        "time": "10:30 am - 12:20 pm",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "10550",
+        "section_num": "094",
+        "instructors": "TBA",
+        "days": "W",
+        "time": "10:30 am - 12:20 pm",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "10551",
+        "section_num": "095",
+        "instructors": "TBA",
+        "days": "T",
+        "time": "2:30 pm - 4:20 pm",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "10552",
+        "section_num": "096",
+        "instructors": "TBA",
+        "days": "M",
+        "time": "12:30 pm - 2:20 pm",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "10553",
+        "section_num": "097",
+        "instructors": "TBA",
+        "days": "R",
+        "time": "12:30 pm - 2:20 pm",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "10554",
+        "section_num": "098",
+        "instructors": "TBA",
+        "days": "T",
+        "time": "4:30 pm - 6:20 pm",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "10549",
+        "section_num": "397",
+        "instructors": "Orland Harold  Hoeber (P)",
+        "days": "T",
+        "time": "10:00 am - 11:15 am",
+        "loc": "Remote",
+        "course_type": "Lecture",
+        "exam_days": "\u00a0",
+        "exam_date": "Jan 11, 2021 - Apr 15, 2021",
+        "exam_time": "TBA"
+    }, {
+        "course_ID": "10549",
+        "section_num": "397",
+        "instructors": "Orland Harold  Hoeber (P)",
+        "days": "\u00a0",
+        "time": "TBA",
+        "loc": "WEB WEB",
+        "course_type": "Lecture",
+        "exam_days": "M",
+        "exam_date": "Apr 19, 2021 - Apr 19, 2021",
+        "exam_time": "2:00 pm - 5:00 pm"
+    }, {
+        "course_ID": "13466",
+        "section_num": "398",
+        "instructors": "Sebastian Romy  Gomes (P)",
+        "days": "T",
+        "time": "10:00 am - 11:15 am",
+        "loc": "Remote",
+        "course_type": "Lecture",
+        "exam_days": "\u00a0",
+        "exam_date": "Jan 11, 2021 - Apr 15, 2021",
+        "exam_time": "TBA"
+    }, {
+        "course_ID": "13466",
+        "section_num": "398",
+        "instructors": "Sebastian Romy  Gomes (P)",
+        "days": "\u00a0",
+        "time": "TBA",
+        "loc": "WEB WEB",
+        "course_type": "Lecture",
+        "exam_days": "M",
+        "exam_date": "Apr 19, 2021 - Apr 19, 2021",
+        "exam_time": "2:00 pm - 5:00 pm"
+    }]
+}

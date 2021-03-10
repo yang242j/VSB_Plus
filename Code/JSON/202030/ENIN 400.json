@@ -1,1 +1,32 @@
-{"term": "2020 Fall", "short_name": "ENIN 400", "title": "ISE Project Start-up", "faculty": "ENIN", "credit": "1", "description": "Students form design teams and select a project topic and faculty supervisor.  Each team develops a project proposal, which is presented both orally and in written form.", "prerequisite": "ENIN 453, ENIN 349 (concurrent enrolment allowed) and successful completion of 99 credit hours or permission of the Program Chair", "section": [{"course_ID": "31280", "section_num": "001", "instructors": "Adisorn   Aroonwilas (P)", "days": "F", "time": "1:00 pm - 2:15 pm", "loc": "Remote", "course_type": "Lecture", "exam_days": "M", "exam_date": "Sep 02, 2020 - Dec 08, 2020", "exam_time": "12:30 pm - 1:45 pm"}, {"course_ID": "31281", "section_num": "091", "instructors": "Adisorn   Aroonwilas (P)", "days": "M", "time": "12:30 pm - 1:45 pm", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}]}
+{
+    "term": "2020 Fall",
+    "short_name": "ENIN 400",
+    "title": "ISE Project Start-up",
+    "faculty": "ENIN",
+    "credit": "1",
+    "description": "Students form design teams and select a project topic and faculty supervisor.  Each team develops a project proposal, which is presented both orally and in written form.",
+    "prerequisite": "ENIN 453, ENIN 349 (concurrent enrolment allowed) and successful completion of 99 credit hours or permission of the Program Chair",
+    "section": [{
+        "course_ID": "31280",
+        "section_num": "001",
+        "instructors": "Adisorn   Aroonwilas (P)",
+        "days": "F",
+        "time": "1:00 pm - 2:15 pm",
+        "loc": "Remote",
+        "course_type": "Lecture",
+        "exam_days": "M",
+        "exam_date": "Sep 02, 2020 - Dec 08, 2020",
+        "exam_time": "12:30 pm - 1:45 pm"
+    }, {
+        "course_ID": "31281",
+        "section_num": "091",
+        "instructors": "Adisorn   Aroonwilas (P)",
+        "days": "M",
+        "time": "12:30 pm - 1:45 pm",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }]
+}

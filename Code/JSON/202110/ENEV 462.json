@@ -1,1 +1,32 @@
-{"term": "2021 Winter", "short_name": "ENEV 462", "title": "Engineering Hydrology", "faculty": "ENEV", "credit": "3", "description": "Introductory engineering hydrology course. Topics include rainfall, snowmelt, infiltration, evaporation, streamflow, flood frequency analysis, flood routing, and runoff modeling.", "prerequisite": " ENEV 261 and CS 110", "section": [{"course_ID": "10936", "section_num": "001", "instructors": "Shahid   Azam (P)", "days": "MW", "time": "11:30 am - 12:45 pm", "loc": "Remote", "course_type": "Lecture", "exam_days": "M", "exam_date": "Apr 26, 2021 - Apr 26, 2021", "exam_time": "9:00 am - 12:00 pm"}, {"course_ID": "10937", "section_num": "091", "instructors": "Benjamin Lee  Lichtenwald (P)", "days": "W", "time": "2:30 pm - 5:15 pm", "loc": "Education Building 135", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}]}
+{
+    "term": "2021 Winter",
+    "short_name": "ENEV 462",
+    "title": "Engineering Hydrology",
+    "faculty": "ENEV",
+    "credit": "3",
+    "description": "Introductory engineering hydrology course. Topics include rainfall, snowmelt, infiltration, evaporation, streamflow, flood frequency analysis, flood routing, and runoff modeling.",
+    "prerequisite": " ENEV 261 and CS 110",
+    "section": [{
+        "course_ID": "10936",
+        "section_num": "001",
+        "instructors": "Shahid   Azam (P)",
+        "days": "MW",
+        "time": "11:30 am - 12:45 pm",
+        "loc": "Remote",
+        "course_type": "Lecture",
+        "exam_days": "M",
+        "exam_date": "Apr 26, 2021 - Apr 26, 2021",
+        "exam_time": "9:00 am - 12:00 pm"
+    }, {
+        "course_ID": "10937",
+        "section_num": "091",
+        "instructors": "Benjamin Lee  Lichtenwald (P)",
+        "days": "W",
+        "time": "2:30 pm - 5:15 pm",
+        "loc": "Education Building 135",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }]
+}

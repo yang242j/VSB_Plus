@@ -1,1 +1,21 @@
-{"term": "2020 Fall", "short_name": "CS 335", "title": "Computer Networks", "faculty": "CS", "credit": "3", "description": "Network architectures and protocols, networked applications, reliable data delivery, routing and forwarding, local area networks, resource allocation, mobility, reliability through redundancy. Security: secure design, defensive programming, threats and attacks, network security, cryptography.", "prerequisite": "CS 210, and STAT 160 or 200", "section": [{"course_ID": "33365", "section_num": "001", "instructors": "Jingtao   Yao (P)", "days": "TR", "time": "10:00 am - 11:15 am", "loc": "Remote", "course_type": "Lecture", "exam_days": "R", "exam_date": "Dec 10, 2020 - Dec 10, 2020", "exam_time": "9:00 am - 12:00 pm"}]}
+{
+    "term": "2020 Fall",
+    "short_name": "CS 335",
+    "title": "Computer Networks",
+    "faculty": "CS",
+    "credit": "3",
+    "description": "Network architectures and protocols, networked applications, reliable data delivery, routing and forwarding, local area networks, resource allocation, mobility, reliability through redundancy. Security: secure design, defensive programming, threats and attacks, network security, cryptography.",
+    "prerequisite": "CS 210, and STAT 160 or 200",
+    "section": [{
+        "course_ID": "33365",
+        "section_num": "001",
+        "instructors": "Jingtao   Yao (P)",
+        "days": "TR",
+        "time": "10:00 am - 11:15 am",
+        "loc": "Remote",
+        "course_type": "Lecture",
+        "exam_days": "R",
+        "exam_date": "Dec 10, 2020 - Dec 10, 2020",
+        "exam_time": "9:00 am - 12:00 pm"
+    }]
+}

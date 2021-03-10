@@ -1,1 +1,10 @@
-{"term": "No class for the term", "short_name": "GEOL 102", "title": "Environmental Geology", "faculty": "GEOL", "credit": "3", "description": "The nature of the earth.  Plate tectonics and the geological time scale.  Earthquakes, volcanism and surface processes with reference to their effect on the human environment. Earth resources, waste disposal, and pollution in a geological context.", "prerequisite": "", "section": []}
+{
+    "term": "No class for the term",
+    "short_name": "GEOL 102",
+    "title": "Environmental Geology",
+    "faculty": "GEOL",
+    "credit": "3",
+    "description": "The nature of the earth.  Plate tectonics and the geological time scale.  Earthquakes, volcanism and surface processes with reference to their effect on the human environment. Earth resources, waste disposal, and pollution in a geological context.",
+    "prerequisite": "",
+    "section": []
+}

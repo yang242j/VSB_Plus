@@ -1,1 +1,21 @@
-{"term": "2021 Winter", "short_name": "CS 335", "title": "Computer Networks", "faculty": "CS", "credit": "3", "description": "Network architectures and protocols, networked applications, reliable data delivery, routing and forwarding, local area networks, resource allocation, mobility, reliability through redundancy. Security: secure design, defensive programming, threats and attacks, network security, cryptography.", "prerequisite": "CS 210, and STAT 160 or 200", "section": [{"course_ID": "10577", "section_num": "001", "instructors": "Sultan Uddin  Ahmed (P)", "days": "MWF", "time": "1:30 pm - 2:20 pm", "loc": "Remote", "course_type": "Lecture", "exam_days": "F", "exam_date": "Apr 23, 2021 - Apr 23, 2021", "exam_time": "2:00 pm - 5:00 pm"}]}
+{
+    "term": "2021 Winter",
+    "short_name": "CS 335",
+    "title": "Computer Networks",
+    "faculty": "CS",
+    "credit": "3",
+    "description": "Network architectures and protocols, networked applications, reliable data delivery, routing and forwarding, local area networks, resource allocation, mobility, reliability through redundancy. Security: secure design, defensive programming, threats and attacks, network security, cryptography.",
+    "prerequisite": "CS 210, and STAT 160 or 200",
+    "section": [{
+        "course_ID": "10577",
+        "section_num": "001",
+        "instructors": "Sultan Uddin  Ahmed (P)",
+        "days": "MWF",
+        "time": "1:30 pm - 2:20 pm",
+        "loc": "Remote",
+        "course_type": "Lecture",
+        "exam_days": "F",
+        "exam_date": "Apr 23, 2021 - Apr 23, 2021",
+        "exam_time": "2:00 pm - 5:00 pm"
+    }]
+}

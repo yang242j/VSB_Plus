@@ -1,1 +1,10 @@
-{"term": "No class for the term", "short_name": "ENEV 422", "title": "Solid and Hazardous Waste Management", "faculty": "ENEV", "credit": "3", "description": "Legislative trends; sources and characteristics of municipal solid waste; Recycling waste materials; Collection, transfer and transport; Disposal options; Sanitary landfill, incineration, composting and bioconversion; Management and Planning; Hazardous Waste-Problems, impacts and treatment/ disposal.", "prerequisite": "ENEV 223", "section": []}
+{
+    "term": "No class for the term",
+    "short_name": "ENEV 422",
+    "title": "Solid and Hazardous Waste Management",
+    "faculty": "ENEV",
+    "credit": "3",
+    "description": "Legislative trends; sources and characteristics of municipal solid waste; Recycling waste materials; Collection, transfer and transport; Disposal options; Sanitary landfill, incineration, composting and bioconversion; Management and Planning; Hazardous Waste-Problems, impacts and treatment/ disposal.",
+    "prerequisite": "ENEV 223",
+    "section": []
+}

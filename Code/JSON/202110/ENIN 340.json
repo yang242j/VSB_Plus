@@ -1,1 +1,10 @@
-{"term": "No class for the term", "short_name": "ENIN 340", "title": "Human Factors Engineering", "faculty": "ENIN", "credit": "3", "description": "Anatomical, physiological, and psychological aspects of people in their work environment.  Sensory processes and motor function, health, and morale.  Social factors, stress, and psychosomatic effects.  Work standards, safety, and schedules.", "prerequisite": " ENIN 233 and ENIN 241", "section": []}
+{
+    "term": "No class for the term",
+    "short_name": "ENIN 340",
+    "title": "Human Factors Engineering",
+    "faculty": "ENIN",
+    "credit": "3",
+    "description": "Anatomical, physiological, and psychological aspects of people in their work environment.  Sensory processes and motor function, health, and morale.  Social factors, stress, and psychosomatic effects.  Work standards, safety, and schedules.",
+    "prerequisite": " ENIN 233 and ENIN 241",
+    "section": []
+}

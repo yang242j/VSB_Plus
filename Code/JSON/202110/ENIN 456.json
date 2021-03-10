@@ -1,1 +1,32 @@
-{"term": "2021 Winter", "short_name": "ENIN 456", "title": "Process Unit Operations and Design", "faculty": "ENIN", "credit": "3", "description": "Principles and equipment design for momentum, heat, and mass transfer operations in industries such as petrochemical and refining, mining and mineral processing, pulp and paper, and food processing.", "prerequisite": " ENIN 355", "section": [{"course_ID": "11215", "section_num": "001", "instructors": "Paitoon   Tontiwachwuthikul (P)", "days": "TR", "time": "4:00 pm - 5:15 pm", "loc": "Remote", "course_type": "Lecture", "exam_days": "R", "exam_date": "Apr 22, 2021 - Apr 22, 2021", "exam_time": "2:00 pm - 5:00 pm"}, {"course_ID": "11216", "section_num": "091", "instructors": "Isam   Al Zubaidi (P)", "days": "W", "time": "8:30 am - 11:15 am", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}]}
+{
+    "term": "2021 Winter",
+    "short_name": "ENIN 456",
+    "title": "Process Unit Operations and Design",
+    "faculty": "ENIN",
+    "credit": "3",
+    "description": "Principles and equipment design for momentum, heat, and mass transfer operations in industries such as petrochemical and refining, mining and mineral processing, pulp and paper, and food processing.",
+    "prerequisite": " ENIN 355",
+    "section": [{
+        "course_ID": "11215",
+        "section_num": "001",
+        "instructors": "Paitoon   Tontiwachwuthikul (P)",
+        "days": "TR",
+        "time": "4:00 pm - 5:15 pm",
+        "loc": "Remote",
+        "course_type": "Lecture",
+        "exam_days": "R",
+        "exam_date": "Apr 22, 2021 - Apr 22, 2021",
+        "exam_time": "2:00 pm - 5:00 pm"
+    }, {
+        "course_ID": "11216",
+        "section_num": "091",
+        "instructors": "Isam   Al Zubaidi (P)",
+        "days": "W",
+        "time": "8:30 am - 11:15 am",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }]
+}

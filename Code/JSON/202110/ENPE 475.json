@@ -1,1 +1,32 @@
-{"term": "2021 Winter", "short_name": "ENPE 475", "title": "Evaluation of Oil and Gas Properties", "faculty": "ENPE", "credit": "3", "description": "General business skills related to the understanding of oil field cash flow projections, rate of return, royalties, taxes and other factors in measuring value creation as it relates to the petroleum industry.", "prerequisite": " ENPE 302, ENPE 440 and ENGG 303", "section": [{"course_ID": "11271", "section_num": "001", "instructors": "Saman   Azadbakht (P)", "days": "TR", "time": "11:30 am - 12:45 pm", "loc": "Remote", "course_type": "Lecture", "exam_days": "T", "exam_date": "Apr 20, 2021 - Apr 20, 2021", "exam_time": "2:00 pm - 5:00 pm"}, {"course_ID": "11272", "section_num": "091", "instructors": "Zhongwei   Du (P)", "days": "W", "time": "8:30 am - 11:15 am", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}]}
+{
+    "term": "2021 Winter",
+    "short_name": "ENPE 475",
+    "title": "Evaluation of Oil and Gas Properties",
+    "faculty": "ENPE",
+    "credit": "3",
+    "description": "General business skills related to the understanding of oil field cash flow projections, rate of return, royalties, taxes and other factors in measuring value creation as it relates to the petroleum industry.",
+    "prerequisite": " ENPE 302, ENPE 440 and ENGG 303",
+    "section": [{
+        "course_ID": "11271",
+        "section_num": "001",
+        "instructors": "Saman   Azadbakht (P)",
+        "days": "TR",
+        "time": "11:30 am - 12:45 pm",
+        "loc": "Remote",
+        "course_type": "Lecture",
+        "exam_days": "T",
+        "exam_date": "Apr 20, 2021 - Apr 20, 2021",
+        "exam_time": "2:00 pm - 5:00 pm"
+    }, {
+        "course_ID": "11272",
+        "section_num": "091",
+        "instructors": "Zhongwei   Du (P)",
+        "days": "W",
+        "time": "8:30 am - 11:15 am",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }]
+}

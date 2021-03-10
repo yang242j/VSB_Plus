@@ -1,1 +1,43 @@
-{"term": "2021 Winter", "short_name": "ENPE 370", "title": "Petroleum Production Operations", "faculty": "ENPE", "credit": "3", "description": "Principles of oil and gas production. Artificial lift, inflow performance relationships, introduction to well stimulation, and production system design.", "prerequisite": "ENPE 300 and ENEV 261", "section": [{"course_ID": "11266", "section_num": "001", "instructors": "Farshid   Torabi (P)", "days": "TR", "time": "8:30 am - 9:45 am", "loc": "Remote", "course_type": "Lecture", "exam_days": "T", "exam_date": "Apr 27, 2021 - Apr 27, 2021", "exam_time": "9:00 am - 12:00 pm"}, {"course_ID": "11267", "section_num": "091", "instructors": "Sam Yeol   Hong (P)", "days": "F", "time": "11:30 am - 2:15 pm", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "11268", "section_num": "092", "instructors": "Sam Yeol   Hong (P)", "days": "T", "time": "11:30 am - 2:15 pm", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}]}
+{
+    "term": "2021 Winter",
+    "short_name": "ENPE 370",
+    "title": "Petroleum Production Operations",
+    "faculty": "ENPE",
+    "credit": "3",
+    "description": "Principles of oil and gas production. Artificial lift, inflow performance relationships, introduction to well stimulation, and production system design.",
+    "prerequisite": "ENPE 300 and ENEV 261",
+    "section": [{
+        "course_ID": "11266",
+        "section_num": "001",
+        "instructors": "Farshid   Torabi (P)",
+        "days": "TR",
+        "time": "8:30 am - 9:45 am",
+        "loc": "Remote",
+        "course_type": "Lecture",
+        "exam_days": "T",
+        "exam_date": "Apr 27, 2021 - Apr 27, 2021",
+        "exam_time": "9:00 am - 12:00 pm"
+    }, {
+        "course_ID": "11267",
+        "section_num": "091",
+        "instructors": "Sam Yeol   Hong (P)",
+        "days": "F",
+        "time": "11:30 am - 2:15 pm",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "11268",
+        "section_num": "092",
+        "instructors": "Sam Yeol   Hong (P)",
+        "days": "T",
+        "time": "11:30 am - 2:15 pm",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }]
+}

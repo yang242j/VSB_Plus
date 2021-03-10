@@ -1,1 +1,54 @@
-{"term": "2021 Winter", "short_name": "ENSE 350", "title": "Mathematical Programming for Software Engineers", "faculty": "ENSE", "credit": "3", "description": "Fundamental concepts of discrete mathematics (definitions, proofs, sets), discrete structures (graphs, state machines, modular arithmetic), algorithm complexity models, and numerical methods in engineering.", "prerequisite": "Math 110, 122 and CS 210", "section": [{"course_ID": "11298", "section_num": "001", "instructors": "Abdul   Bais (P)", "days": "TR", "time": "8:30 am - 9:45 am", "loc": "Remote", "course_type": "Lecture", "exam_days": "T", "exam_date": "Apr 27, 2021 - Apr 27, 2021", "exam_time": "9:00 am - 12:00 pm"}, {"course_ID": "11299", "section_num": "081", "instructors": "Abdul   Bais (P)", "days": "F", "time": "2:30 pm - 3:45 pm", "loc": "Remote", "course_type": "Seminar", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "11300", "section_num": "091", "instructors": "Adam Richard  Tilson (P)", "days": "F", "time": "8:30 am - 11:15 am", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "11301", "section_num": "092", "instructors": "Adam Richard  Tilson (P)", "days": "T", "time": "11:30 am - 2:15 pm", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}]}
+{
+    "term": "2021 Winter",
+    "short_name": "ENSE 350",
+    "title": "Mathematical Programming for Software Engineers",
+    "faculty": "ENSE",
+    "credit": "3",
+    "description": "Fundamental concepts of discrete mathematics (definitions, proofs, sets), discrete structures (graphs, state machines, modular arithmetic), algorithm complexity models, and numerical methods in engineering.",
+    "prerequisite": "Math 110, 122 and CS 210",
+    "section": [{
+        "course_ID": "11298",
+        "section_num": "001",
+        "instructors": "Abdul   Bais (P)",
+        "days": "TR",
+        "time": "8:30 am - 9:45 am",
+        "loc": "Remote",
+        "course_type": "Lecture",
+        "exam_days": "T",
+        "exam_date": "Apr 27, 2021 - Apr 27, 2021",
+        "exam_time": "9:00 am - 12:00 pm"
+    }, {
+        "course_ID": "11299",
+        "section_num": "081",
+        "instructors": "Abdul   Bais (P)",
+        "days": "F",
+        "time": "2:30 pm - 3:45 pm",
+        "loc": "Remote",
+        "course_type": "Seminar",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "11300",
+        "section_num": "091",
+        "instructors": "Adam Richard  Tilson (P)",
+        "days": "F",
+        "time": "8:30 am - 11:15 am",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "11301",
+        "section_num": "092",
+        "instructors": "Adam Richard  Tilson (P)",
+        "days": "T",
+        "time": "11:30 am - 2:15 pm",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }]
+}

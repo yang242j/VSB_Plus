@@ -1,1 +1,21 @@
-{"term": "2020 Fall", "short_name": "ENEV 408", "title": "Basic Structural Design", "faculty": "ENEV", "credit": "3", "description": "Design concepts and practices for simple beams, columns, connectors and structures in wood, steel and reinforced concrete. Basic types and problems in design of foundations.", "prerequisite": "ENIN 241, ENGG 240 or ENGG 141 and ENEV 384", "section": [{"course_ID": "31033", "section_num": "001", "instructors": "Tsun Wai Kelvin   Ng (P)", "days": "MWF", "time": "9:30 am - 10:20 am", "loc": "Remote", "course_type": "Lecture", "exam_days": "MW", "exam_date": "Sep 02, 2020 - Dec 08, 2020", "exam_time": "10:00 am - 11:15 am"}]}
+{
+    "term": "2020 Fall",
+    "short_name": "ENEV 408",
+    "title": "Basic Structural Design",
+    "faculty": "ENEV",
+    "credit": "3",
+    "description": "Design concepts and practices for simple beams, columns, connectors and structures in wood, steel and reinforced concrete. Basic types and problems in design of foundations.",
+    "prerequisite": "ENIN 241, ENGG 240 or ENGG 141 and ENEV 384",
+    "section": [{
+        "course_ID": "31033",
+        "section_num": "001",
+        "instructors": "Tsun Wai Kelvin   Ng (P)",
+        "days": "MWF",
+        "time": "9:30 am - 10:20 am",
+        "loc": "Remote",
+        "course_type": "Lecture",
+        "exam_days": "MW",
+        "exam_date": "Sep 02, 2020 - Dec 08, 2020",
+        "exam_time": "10:00 am - 11:15 am"
+    }]
+}

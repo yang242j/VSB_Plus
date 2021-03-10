@@ -1,1 +1,186 @@
-{"term": "2021 Winter", "short_name": "CHEM 104", "title": "General Chemistry I", "faculty": "CHEM", "credit": "3", "description": "An introduction to the fundamental principles of chemistry. Topics discussed will include atomic structure, bonding, stoichiometry, enthalpy, solutions, organic compounds. Lab component: Introduction to standard chemistry laboratory techniques.", "prerequisite": "CHEM 30 or CHEM 100 (minimum 65%); and Precalculus 30 or Mathematics C30 with a grade of at least 65%, or AMTH 092 with a grade of at least 80%, or MATH 102.", "section": [{"course_ID": "10359", "section_num": "001", "instructors": "Stephen   Cheng (P)", "days": "MW", "time": "10:00 am - 11:15 am", "loc": "Remote", "course_type": "Lecture", "exam_days": "W", "exam_date": "Apr 21, 2021 - Apr 21, 2021", "exam_time": "9:00 am - 12:00 pm"}, {"course_ID": "10360", "section_num": "095", "instructors": "Andrew   Chan (P), Alla   Gagarinova ", "days": "T", "time": "2:30 pm - 5:15 pm", "loc": "Laboratory Building 321", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "10360", "section_num": "095", "instructors": "TBA", "days": "T", "time": "2:30 pm - 5:15 pm", "loc": "Classroom Building 345", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "10361", "section_num": "096", "instructors": "Andrew   Chan (P), Alla   Gagarinova ", "days": "M", "time": "2:30 pm - 5:15 pm", "loc": "Laboratory Building 321", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "10361", "section_num": "096", "instructors": "TBA", "days": "M", "time": "2:30 pm - 5:15 pm", "loc": "Classroom Building 345", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "10362", "section_num": "097", "instructors": "Xiaoxuan   Guo (P), Andrew   Chan , Alla   Gagarinova ", "days": "W", "time": "2:30 pm - 5:15 pm", "loc": "Laboratory Building 321", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "10362", "section_num": "097", "instructors": "TBA", "days": "W", "time": "2:30 pm - 5:15 pm", "loc": "Classroom Building 345", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "10363", "section_num": "098", "instructors": "Andrew   Chan (P), Alla   Gagarinova ", "days": "T", "time": "8:30 am - 11:15 am", "loc": "Laboratory Building 321", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "10363", "section_num": "098", "instructors": "TBA", "days": "T", "time": "8:30 am - 11:15 am", "loc": "Classroom Building 345", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "10364", "section_num": "099", "instructors": "Xiaoxuan   Guo (P), Andrew   Chan , Alla   Gagarinova ", "days": "R", "time": "8:30 am - 11:15 am", "loc": "Laboratory Building 321", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "10364", "section_num": "099", "instructors": "TBA", "days": "R", "time": "8:30 am - 11:15 am", "loc": "Classroom Building 345", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "13235", "section_num": "303", "instructors": "Sarah L.  Lipoth (P)", "days": "TR", "time": "2:30 pm - 3:45 pm", "loc": "Off-Campus Locations YORKTON", "course_type": "Lecture", "exam_days": "T", "exam_date": "Apr 27, 2021 - Apr 27, 2021", "exam_time": "2:00 pm - 5:00 pm"}, {"course_ID": "13554", "section_num": "312", "instructors": "Sarah L.  Lipoth (P)", "days": "W", "time": "9:00 am - 12:00 pm", "loc": "Off-Campus Locations YORKTON", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "13237", "section_num": "313", "instructors": "Sarah L.  Lipoth (P)", "days": "R", "time": "9:00 am - 11:45 am", "loc": "Off-Campus Locations YORKTON", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "13233", "section_num": "314", "instructors": "Indermohan S.  Rawal (P)", "days": "TF", "time": "9:00 am - 10:15 am", "loc": "Off-Campus Locations LA RONGE", "course_type": "Lecture", "exam_days": "F", "exam_date": "Apr 30, 2021 - Apr 30, 2021", "exam_time": "9:00 am - 12:00 pm"}, {"course_ID": "13234", "section_num": "315", "instructors": "Kristy   Todd (P)", "days": "M", "time": "1:00 pm - 3:45 pm", "loc": "Off-Campus Locations LA RONGE", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}]}
+{
+    "term": "2021 Winter",
+    "short_name": "CHEM 104",
+    "title": "General Chemistry I",
+    "faculty": "CHEM",
+    "credit": "3",
+    "description": "An introduction to the fundamental principles of chemistry. Topics discussed will include atomic structure, bonding, stoichiometry, enthalpy, solutions, organic compounds. Lab component: Introduction to standard chemistry laboratory techniques.",
+    "prerequisite": "CHEM 30 or CHEM 100 (minimum 65%); and Precalculus 30 or Mathematics C30 with a grade of at least 65%, or AMTH 092 with a grade of at least 80%, or MATH 102.",
+    "section": [{
+        "course_ID": "10359",
+        "section_num": "001",
+        "instructors": "Stephen   Cheng (P)",
+        "days": "MW",
+        "time": "10:00 am - 11:15 am",
+        "loc": "Remote",
+        "course_type": "Lecture",
+        "exam_days": "W",
+        "exam_date": "Apr 21, 2021 - Apr 21, 2021",
+        "exam_time": "9:00 am - 12:00 pm"
+    }, {
+        "course_ID": "10360",
+        "section_num": "095",
+        "instructors": "Andrew   Chan (P), Alla   Gagarinova ",
+        "days": "T",
+        "time": "2:30 pm - 5:15 pm",
+        "loc": "Laboratory Building 321",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "10360",
+        "section_num": "095",
+        "instructors": "TBA",
+        "days": "T",
+        "time": "2:30 pm - 5:15 pm",
+        "loc": "Classroom Building 345",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "10361",
+        "section_num": "096",
+        "instructors": "Andrew   Chan (P), Alla   Gagarinova ",
+        "days": "M",
+        "time": "2:30 pm - 5:15 pm",
+        "loc": "Laboratory Building 321",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "10361",
+        "section_num": "096",
+        "instructors": "TBA",
+        "days": "M",
+        "time": "2:30 pm - 5:15 pm",
+        "loc": "Classroom Building 345",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "10362",
+        "section_num": "097",
+        "instructors": "Xiaoxuan   Guo (P), Andrew   Chan , Alla   Gagarinova ",
+        "days": "W",
+        "time": "2:30 pm - 5:15 pm",
+        "loc": "Laboratory Building 321",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "10362",
+        "section_num": "097",
+        "instructors": "TBA",
+        "days": "W",
+        "time": "2:30 pm - 5:15 pm",
+        "loc": "Classroom Building 345",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "10363",
+        "section_num": "098",
+        "instructors": "Andrew   Chan (P), Alla   Gagarinova ",
+        "days": "T",
+        "time": "8:30 am - 11:15 am",
+        "loc": "Laboratory Building 321",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "10363",
+        "section_num": "098",
+        "instructors": "TBA",
+        "days": "T",
+        "time": "8:30 am - 11:15 am",
+        "loc": "Classroom Building 345",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "10364",
+        "section_num": "099",
+        "instructors": "Xiaoxuan   Guo (P), Andrew   Chan , Alla   Gagarinova ",
+        "days": "R",
+        "time": "8:30 am - 11:15 am",
+        "loc": "Laboratory Building 321",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "10364",
+        "section_num": "099",
+        "instructors": "TBA",
+        "days": "R",
+        "time": "8:30 am - 11:15 am",
+        "loc": "Classroom Building 345",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "13235",
+        "section_num": "303",
+        "instructors": "Sarah L.  Lipoth (P)",
+        "days": "TR",
+        "time": "2:30 pm - 3:45 pm",
+        "loc": "Off-Campus Locations YORKTON",
+        "course_type": "Lecture",
+        "exam_days": "T",
+        "exam_date": "Apr 27, 2021 - Apr 27, 2021",
+        "exam_time": "2:00 pm - 5:00 pm"
+    }, {
+        "course_ID": "13554",
+        "section_num": "312",
+        "instructors": "Sarah L.  Lipoth (P)",
+        "days": "W",
+        "time": "9:00 am - 12:00 pm",
+        "loc": "Off-Campus Locations YORKTON",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "13237",
+        "section_num": "313",
+        "instructors": "Sarah L.  Lipoth (P)",
+        "days": "R",
+        "time": "9:00 am - 11:45 am",
+        "loc": "Off-Campus Locations YORKTON",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "13233",
+        "section_num": "314",
+        "instructors": "Indermohan S.  Rawal (P)",
+        "days": "TF",
+        "time": "9:00 am - 10:15 am",
+        "loc": "Off-Campus Locations LA RONGE",
+        "course_type": "Lecture",
+        "exam_days": "F",
+        "exam_date": "Apr 30, 2021 - Apr 30, 2021",
+        "exam_time": "9:00 am - 12:00 pm"
+    }, {
+        "course_ID": "13234",
+        "section_num": "315",
+        "instructors": "Kristy   Todd (P)",
+        "days": "M",
+        "time": "1:00 pm - 3:45 pm",
+        "loc": "Off-Campus Locations LA RONGE",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }]
+}

@@ -1,1 +1,43 @@
-{"term": "2020 Fall", "short_name": "ENPE 300", "title": "Fundamentals of Reservoir Engineering", "faculty": "ENPE", "credit": "3", "description": "Relationship of geology, basic reservoir properties, surface and interfacial phenomena, and the flow of fluids through porous media; general material balance, steady state, and transient models; classification of petroleum reservoirs, displacement of oil and gas, and reservoir estimation principles.", "prerequisite": "ENPE 241 and 251", "section": [{"course_ID": "31326", "section_num": "001", "instructors": "Daoyong   Yang (P)", "days": "TR", "time": "1:00 pm - 2:15 pm", "loc": "Remote", "course_type": "Lecture", "exam_days": "R", "exam_date": "Dec 17, 2020 - Dec 17, 2020", "exam_time": "2:00 pm - 5:00 pm"}, {"course_ID": "31327", "section_num": "091", "instructors": "Sam Yeol   Hong (P)", "days": "R", "time": "8:30 am - 11:15 am", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "31327", "section_num": "091", "instructors": "Sam Yeol   Hong (P)", "days": "R", "time": "8:30 am - 11:15 am", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}]}
+{
+    "term": "2020 Fall",
+    "short_name": "ENPE 300",
+    "title": "Fundamentals of Reservoir Engineering",
+    "faculty": "ENPE",
+    "credit": "3",
+    "description": "Relationship of geology, basic reservoir properties, surface and interfacial phenomena, and the flow of fluids through porous media; general material balance, steady state, and transient models; classification of petroleum reservoirs, displacement of oil and gas, and reservoir estimation principles.",
+    "prerequisite": "ENPE 241 and 251",
+    "section": [{
+        "course_ID": "31326",
+        "section_num": "001",
+        "instructors": "Daoyong   Yang (P)",
+        "days": "TR",
+        "time": "1:00 pm - 2:15 pm",
+        "loc": "Remote",
+        "course_type": "Lecture",
+        "exam_days": "R",
+        "exam_date": "Dec 17, 2020 - Dec 17, 2020",
+        "exam_time": "2:00 pm - 5:00 pm"
+    }, {
+        "course_ID": "31327",
+        "section_num": "091",
+        "instructors": "Sam Yeol   Hong (P)",
+        "days": "R",
+        "time": "8:30 am - 11:15 am",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "31327",
+        "section_num": "091",
+        "instructors": "Sam Yeol   Hong (P)",
+        "days": "R",
+        "time": "8:30 am - 11:15 am",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }]
+}

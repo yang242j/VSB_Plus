@@ -1,1 +1,10 @@
-{"term": "No class for the term", "short_name": "ENSE 474", "title": "Software Process Management", "faculty": "ENSE", "credit": "3", "description": "Software processes: standards, implementation, and assurance. Project management with a focus on requirements management and long-term evolution: Eliciting and prioritizing requirements, cost estimation, planning and tracking projects, risk analysis, project control, change management.", "prerequisite": "ENSE 374", "section": []}
+{
+    "term": "No class for the term",
+    "short_name": "ENSE 474",
+    "title": "Software Process Management",
+    "faculty": "ENSE",
+    "credit": "3",
+    "description": "Software processes: standards, implementation, and assurance. Project management with a focus on requirements management and long-term evolution: Eliciting and prioritizing requirements, cost estimation, planning and tracking projects, risk analysis, project control, change management.",
+    "prerequisite": "ENSE 374",
+    "section": []
+}

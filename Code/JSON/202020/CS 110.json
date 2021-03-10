@@ -1,1 +1,87 @@
-{"term": "2020 Spring/Summer", "short_name": "CS 110", "title": "Programming and Problem Solving", "faculty": "CS", "credit": "3", "description": "An introduction to problem-solving techniques, the fundamental concepts of programming, and the software design process. Topics will include: data types, control structures, scope rules, functions, files, and the mechanics of running, testing and debugging. Problems will be drawn from various science disciplines.", "prerequisite": "Precalculus 30, Calculus 30, or Math 102", "section": [{"course_ID": "21846", "section_num": "040", "instructors": "Richard Wayne  Dosselmann (P)", "days": "MTWR", "time": "9:30 am - 10:45 am", "loc": "Remote", "course_type": "Lecture", "exam_days": "T", "exam_date": "Jun 23, 2020 - Jun 23, 2020", "exam_time": "8:00 am - 11:00 am"}, {"course_ID": "21847", "section_num": "093", "instructors": "Guili   Liu (P)", "days": "T", "time": "11:30 am - 2:50 pm", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "21848", "section_num": "094", "instructors": "Guili   Liu (P)", "days": "W", "time": "11:30 am - 2:50 pm", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "21849", "section_num": "095", "instructors": "Guili   Liu (P)", "days": "R", "time": "11:30 am - 2:50 pm", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "21850", "section_num": "096", "instructors": "Guili   Liu (P)", "days": "F", "time": "9:30 am - 12:50 pm", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "21851", "section_num": "097", "instructors": "Guili   Liu (P)", "days": "F", "time": "2:00 pm - 5:20 pm", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "21852", "section_num": "098", "instructors": "Guili   Liu (P)", "days": "W", "time": "3:30 pm - 6:50 pm", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}]}
+{
+    "term": "2020 Spring/Summer",
+    "short_name": "CS 110",
+    "title": "Programming and Problem Solving",
+    "faculty": "CS",
+    "credit": "3",
+    "description": "An introduction to problem-solving techniques, the fundamental concepts of programming, and the software design process. Topics will include: data types, control structures, scope rules, functions, files, and the mechanics of running, testing and debugging. Problems will be drawn from various science disciplines.",
+    "prerequisite": "Precalculus 30, Calculus 30, or Math 102",
+    "section": [{
+        "course_ID": "21846",
+        "section_num": "040",
+        "instructors": "Richard Wayne  Dosselmann (P)",
+        "days": "MTWR",
+        "time": "9:30 am - 10:45 am",
+        "loc": "Remote",
+        "course_type": "Lecture",
+        "exam_days": "T",
+        "exam_date": "Jun 23, 2020 - Jun 23, 2020",
+        "exam_time": "8:00 am - 11:00 am"
+    }, {
+        "course_ID": "21847",
+        "section_num": "093",
+        "instructors": "Guili   Liu (P)",
+        "days": "T",
+        "time": "11:30 am - 2:50 pm",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "21848",
+        "section_num": "094",
+        "instructors": "Guili   Liu (P)",
+        "days": "W",
+        "time": "11:30 am - 2:50 pm",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "21849",
+        "section_num": "095",
+        "instructors": "Guili   Liu (P)",
+        "days": "R",
+        "time": "11:30 am - 2:50 pm",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "21850",
+        "section_num": "096",
+        "instructors": "Guili   Liu (P)",
+        "days": "F",
+        "time": "9:30 am - 12:50 pm",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "21851",
+        "section_num": "097",
+        "instructors": "Guili   Liu (P)",
+        "days": "F",
+        "time": "2:00 pm - 5:20 pm",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "21852",
+        "section_num": "098",
+        "instructors": "Guili   Liu (P)",
+        "days": "W",
+        "time": "3:30 pm - 6:50 pm",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }]
+}

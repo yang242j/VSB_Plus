@@ -1,1 +1,76 @@
-{"term": "2020 Fall", "short_name": "PHYS 119", "title": "General Physics II", "faculty": "PHYS", "credit": "3", "description": "A continuation of PHYS 109: Fluid mechanics, heat and thermodynamics, waves, sound, radiation, electrostatics and electric current.", "prerequisite": "PHYS 109 or ENGG 140", "section": [{"course_ID": "32287", "section_num": "001", "instructors": "Pierre-Philippe Alphonse  Ouimet (P)", "days": "TR", "time": "8:30 am - 9:45 am", "loc": "Remote", "course_type": "Lecture", "exam_days": "T", "exam_date": "Dec 22, 2020 - Dec 22, 2020", "exam_time": "9:00 am - 12:00 pm"}, {"course_ID": "32288", "section_num": "131", "instructors": "TBA", "days": "W", "time": "8:30 am - 11:15 am", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "32289", "section_num": "132", "instructors": "TBA", "days": "W", "time": "2:30 pm - 5:15 pm", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "32291", "section_num": "142", "instructors": "TBA", "days": "R", "time": "2:30 pm - 5:15 pm", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "32290", "section_num": "144", "instructors": "TBA", "days": "R", "time": "2:30 pm - 5:15 pm", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "32292", "section_num": "S90", "instructors": "Arzu   Sardarli (P)", "days": "\u00a0", "time": "TBA", "loc": "WEB WEB", "course_type": "Lecture", "exam_days": "S", "exam_date": "Dec 12, 2020 - Dec 12, 2020", "exam_time": "2:00 pm - 5:00 pm"}]}
+{
+    "term": "2020 Fall",
+    "short_name": "PHYS 119",
+    "title": "General Physics II",
+    "faculty": "PHYS",
+    "credit": "3",
+    "description": "A continuation of PHYS 109: Fluid mechanics, heat and thermodynamics, waves, sound, radiation, electrostatics and electric current.",
+    "prerequisite": "PHYS 109 or ENGG 140",
+    "section": [{
+        "course_ID": "32287",
+        "section_num": "001",
+        "instructors": "Pierre-Philippe Alphonse  Ouimet (P)",
+        "days": "TR",
+        "time": "8:30 am - 9:45 am",
+        "loc": "Remote",
+        "course_type": "Lecture",
+        "exam_days": "T",
+        "exam_date": "Dec 22, 2020 - Dec 22, 2020",
+        "exam_time": "9:00 am - 12:00 pm"
+    }, {
+        "course_ID": "32288",
+        "section_num": "131",
+        "instructors": "TBA",
+        "days": "W",
+        "time": "8:30 am - 11:15 am",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "32289",
+        "section_num": "132",
+        "instructors": "TBA",
+        "days": "W",
+        "time": "2:30 pm - 5:15 pm",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "32291",
+        "section_num": "142",
+        "instructors": "TBA",
+        "days": "R",
+        "time": "2:30 pm - 5:15 pm",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "32290",
+        "section_num": "144",
+        "instructors": "TBA",
+        "days": "R",
+        "time": "2:30 pm - 5:15 pm",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "32292",
+        "section_num": "S90",
+        "instructors": "Arzu   Sardarli (P)",
+        "days": "\u00a0",
+        "time": "TBA",
+        "loc": "WEB WEB",
+        "course_type": "Lecture",
+        "exam_days": "S",
+        "exam_date": "Dec 12, 2020 - Dec 12, 2020",
+        "exam_time": "2:00 pm - 5:00 pm"
+    }]
+}

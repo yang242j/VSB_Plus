@@ -1,1 +1,10 @@
-{"term": "No class for the term", "short_name": "ENPE 340", "title": "Rock Mechanics", "faculty": "ENPE", "credit": "3", "description": "Stress and strain tensors, rock elasticity, mechanical properties of rocks, effective stress concept, anisotropy, time-dependent effects, constitutive modeling of rocks, failure mechanics, rock properties from laboratory experiments, rock properties from from field data.", "prerequisite": "ENGG 240 and ENPE 300", "section": []}
+{
+    "term": "No class for the term",
+    "short_name": "ENPE 340",
+    "title": "Rock Mechanics",
+    "faculty": "ENPE",
+    "credit": "3",
+    "description": "Stress and strain tensors, rock elasticity, mechanical properties of rocks, effective stress concept, anisotropy, time-dependent effects, constitutive modeling of rocks, failure mechanics, rock properties from laboratory experiments, rock properties from from field data.",
+    "prerequisite": "ENGG 240 and ENPE 300",
+    "section": []
+}

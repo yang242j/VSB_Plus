@@ -1,1 +1,10 @@
-{"term": "No class for the term", "short_name": "CHEM 105", "title": "General Chemistry II", "faculty": "CHEM", "credit": "3", "description": "A continuation of CHEM 104. Topics discussed will include kinetics, equilibrium, acids and bases, buffers, plastics, entropy and free energy, electrochemistry, nuclear chemistry. Lab component: Basic experiments demonstrating principles of equilibrium, thermodynamics, electrochemistry, and acids and bases.", "prerequisite": "CHEM 104", "section": []}
+{
+    "term": "No class for the term",
+    "short_name": "CHEM 105",
+    "title": "General Chemistry II",
+    "faculty": "CHEM",
+    "credit": "3",
+    "description": "A continuation of CHEM 104. Topics discussed will include kinetics, equilibrium, acids and bases, buffers, plastics, entropy and free energy, electrochemistry, nuclear chemistry. Lab component: Basic experiments demonstrating principles of equilibrium, thermodynamics, electrochemistry, and acids and bases.",
+    "prerequisite": "CHEM 104",
+    "section": []
+}

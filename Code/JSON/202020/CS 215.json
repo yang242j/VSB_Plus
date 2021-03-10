@@ -1,1 +1,120 @@
-{"term": "2020 Spring/Summer", "short_name": "CS 215", "title": "Web and Database Programming", "faculty": "CS", "credit": "3", "description": "This course shows how interactive database-driven web applications are designed and implemented. Appropriate protocols and languages for web and database programming will be discussed, with a focus on client-server architectures, interface design, graphics and visualization, event-driven programming, information management, data modeling, and database systems.", "prerequisite": "CS 210", "section": [{"course_ID": "22081", "section_num": "070", "instructors": "Dolinkumar Rajendrabhai  Patel (P)", "days": "\u00a0", "time": "TBA", "loc": "WEB WEB", "course_type": "Lecture", "exam_days": "W", "exam_date": "Aug 26, 2020 - Aug 26, 2020", "exam_time": "7:00 pm - 10:00 pm"}, {"course_ID": "22745", "section_num": "072", "instructors": "Orland Harold  Hoeber (P)", "days": "MW", "time": "12:30 pm - 1:45 pm", "loc": "Remote", "course_type": "Lecture", "exam_days": "W", "exam_date": "Aug 26, 2020 - Aug 26, 2020", "exam_time": "7:00 pm - 10:00 pm"}, {"course_ID": "22746", "section_num": "092", "instructors": "Catherine Pei  Song (P)", "days": "F", "time": "9:00 am - 12:20 pm", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "22747", "section_num": "093", "instructors": "Catherine Pei  Song (P)", "days": "R", "time": "1:00 pm - 4:20 pm", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "22748", "section_num": "094", "instructors": "Catherine Pei  Song (P)", "days": "W", "time": "2:30 pm - 5:50 pm", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "22082", "section_num": "095", "instructors": "Catherine Pei  Song (P)", "days": "F", "time": "1:00 pm - 4:20 pm", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "22083", "section_num": "096", "instructors": "Catherine Pei  Song (P)", "days": "T", "time": "9:00 am - 12:20 pm", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "22084", "section_num": "097", "instructors": "Catherine Pei  Song (P)", "days": "W", "time": "9:00 am - 12:20 pm", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "22085", "section_num": "098", "instructors": "Catherine Pei  Song (P)", "days": "R", "time": "9:00 am - 12:20 pm", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "22086", "section_num": "099", "instructors": "Catherine Pei  Song (P)", "days": "T", "time": "4:00 pm - 7:20 pm", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}]}
+{
+    "term": "2020 Spring/Summer",
+    "short_name": "CS 215",
+    "title": "Web and Database Programming",
+    "faculty": "CS",
+    "credit": "3",
+    "description": "This course shows how interactive database-driven web applications are designed and implemented. Appropriate protocols and languages for web and database programming will be discussed, with a focus on client-server architectures, interface design, graphics and visualization, event-driven programming, information management, data modeling, and database systems.",
+    "prerequisite": "CS 210",
+    "section": [{
+        "course_ID": "22081",
+        "section_num": "070",
+        "instructors": "Dolinkumar Rajendrabhai  Patel (P)",
+        "days": "\u00a0",
+        "time": "TBA",
+        "loc": "WEB WEB",
+        "course_type": "Lecture",
+        "exam_days": "W",
+        "exam_date": "Aug 26, 2020 - Aug 26, 2020",
+        "exam_time": "7:00 pm - 10:00 pm"
+    }, {
+        "course_ID": "22745",
+        "section_num": "072",
+        "instructors": "Orland Harold  Hoeber (P)",
+        "days": "MW",
+        "time": "12:30 pm - 1:45 pm",
+        "loc": "Remote",
+        "course_type": "Lecture",
+        "exam_days": "W",
+        "exam_date": "Aug 26, 2020 - Aug 26, 2020",
+        "exam_time": "7:00 pm - 10:00 pm"
+    }, {
+        "course_ID": "22746",
+        "section_num": "092",
+        "instructors": "Catherine Pei  Song (P)",
+        "days": "F",
+        "time": "9:00 am - 12:20 pm",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "22747",
+        "section_num": "093",
+        "instructors": "Catherine Pei  Song (P)",
+        "days": "R",
+        "time": "1:00 pm - 4:20 pm",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "22748",
+        "section_num": "094",
+        "instructors": "Catherine Pei  Song (P)",
+        "days": "W",
+        "time": "2:30 pm - 5:50 pm",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "22082",
+        "section_num": "095",
+        "instructors": "Catherine Pei  Song (P)",
+        "days": "F",
+        "time": "1:00 pm - 4:20 pm",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "22083",
+        "section_num": "096",
+        "instructors": "Catherine Pei  Song (P)",
+        "days": "T",
+        "time": "9:00 am - 12:20 pm",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "22084",
+        "section_num": "097",
+        "instructors": "Catherine Pei  Song (P)",
+        "days": "W",
+        "time": "9:00 am - 12:20 pm",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "22085",
+        "section_num": "098",
+        "instructors": "Catherine Pei  Song (P)",
+        "days": "R",
+        "time": "9:00 am - 12:20 pm",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "22086",
+        "section_num": "099",
+        "instructors": "Catherine Pei  Song (P)",
+        "days": "T",
+        "time": "4:00 pm - 7:20 pm",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }]
+}
