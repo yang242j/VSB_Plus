@@ -549,6 +549,7 @@ function deleteFrom2DArray(array, item) {
     for (i = 0; i < array.length; i++) {
         for (j = 0; j < array[i].length; j++) {
             if (array[i][j] == item) {
+                console.log(array[i][j]);
                 array[i][j] = array[i][array[i].length - 1];
                 array[i].pop();
             }
