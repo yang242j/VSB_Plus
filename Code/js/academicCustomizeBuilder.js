@@ -480,6 +480,7 @@ function dragTest() {
 
                 document.getElementById(newForAlern).innerHTML = "Applied Term: </br>" +
                     term; //terminfo[0] is term
+                console.log(terminfo[0][0],terminfo[0][1],terminfo[0][2]);
                 getCredits = parseInt(terminfo[1]);
             } else {
                 alert("this course not applied");
