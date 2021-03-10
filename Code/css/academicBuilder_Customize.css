@@ -152,7 +152,7 @@ body .terms .term1 #course_cards_builder p{
     body .tags_courses .course_list .course_completed{
         /*border: 2px solid red;*/
         margin-top: -350px;
-        margin-left: -20px;
+        margin-left: -10px;
     }
     body .tags_courses .course_list .course_tag_completed{
         /*border: 2px solid red;*/
