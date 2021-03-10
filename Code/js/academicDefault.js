@@ -308,7 +308,7 @@ function selected(short_name){
     xmlhttp.onreadystatechange = function(){
         if (this.status == 404){
             for (i = 0; i < 12; i++) {
-            document.getElementById("nct" + i).innerHTML = short_name + " has no record";
+            /*document.getElementById("nct" + i).innerHTML = short_name + " has no record";*/
             }
         }
         if (this.readyState == 4 && this.status == 200){
@@ -330,7 +330,7 @@ function setCourse(jsonRsp){
         "<li><span class='bold'>Course Description</span>: " + jsonRsp.description + "</li>" + "</ul>" + 
         "<h2 class='inline' id='graph_label'>Num of course in semesters</h2> " + 
         "<div id='graph' class='graph_size'></div>"; 
-    document.getElementById("nct" + i).innerHTML = detail;
+    /*document.getElementById("nct" + i).innerHTML = detail;*/
     }
 }
 
