@@ -574,7 +574,7 @@ function termTransfer(term) {
 var y = ["MATH 111", "asd", "asdsa","MATH 111", "asd", "asdsa","MATH 111", "asd", "asdsa","MATH 111", "asd", "asdsa"];
 var z = [];
 console.log(doneList);
-
+console.log(z);
 function ajaxpost(courseid, term, done) {
     // (A) GET FORM DATA
     var data = new FormData();
