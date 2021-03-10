@@ -431,7 +431,7 @@ function dragTest() {
             {
                for(j=0;j<doneList[i].length;i++)
                {
-                console(doneList[i][j]);
+                console.log(doneList[i][j]);
                    container.push(doneList[i][j]);
                }
             }
