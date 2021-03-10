@@ -419,7 +419,7 @@ function dragTest() {
             //console.log(terminfo);
             var check = false;
 
-            var termCode = termTransfer(terminfo[0][2]);
+            var termCode = termTransfer(terminfo[0][1]);
             console.log(doneList[0]);
             var y =[];
             y[0]=doneList[0][12];        
