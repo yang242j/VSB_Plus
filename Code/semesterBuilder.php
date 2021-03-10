@@ -145,6 +145,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 
                             if (rsp.Status == true) {
                                 // Generate course tag
+                                courseid = rsp.CourseID;
                                 let course_tag = tagGenerator(courseid, true);
     
                                 // Try to remove any existing course tags with same id.
