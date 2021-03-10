@@ -33,6 +33,7 @@ $term = isset($_REQUEST["term"]) ? $_REQUEST["term"] : '';
 
 // 2. Generate the status number
 $status = array(
+    "CourseID" => $courseid,    // {String} course id
     "Status" => false,  // {bool} whether this course can be registered.
     "Found" => false, // {bool} whether this course can be found.
     "Completion" => false,  // {bool} whether this course has already completed.
@@ -55,7 +56,9 @@ if (preg_match_all($pattern_1, $courseid) == 1){
 }
 
 // 4. If correct input.
-if ($validFormat) { 
+if ($validFormat) {
+    
+    $status["CourseID"] = $courseid;
 
     // 4.1 Check if the course is already completed
     if ( !in_array($courseid, $doneList) ) {
