@@ -302,13 +302,14 @@ function courseInfo() {
     for (x = 0; x < 12; x++) {
         var courseName = document.getElementById("nct" + x).value;
      
-    /*for (i = 0; i < allCourseData.length; i++) {*/
+    for (i = 0; i < allCourseData.length; i++) {
         
-        if (courseName == allCourseData[i].short_name)
+        if (courseName == allCourseData[i].short_name){
             return ("<h3>" + allCourseData[i].short_name + "</h3>" + 
             "<p>" + "Title: </br>" + allCourseData[i].title + "</p>" +
             "<p>" + "Prerequisite: </br>" + allCourseData[i].prerequisite + "</p>");
-    
+        }
+    }
     }
     return ("No Record!!");
     
