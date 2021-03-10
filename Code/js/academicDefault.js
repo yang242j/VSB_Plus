@@ -297,7 +297,9 @@ function showTerm(pageNumber) {
     }
 }
 
-/*function courseSelect() {
+function courseInfo() {
+    var courseName; 
+    
     for (i = 0; i < allCourseData.length; i++) {
         if (allCourseData[i].short_name == courseName && allCourseData[i].title != null)
             return ("<h3>" + allCourseData[i].short_name + "</h3>" + 
@@ -305,7 +307,15 @@ function showTerm(pageNumber) {
             "<p>" + "Prerequisite: </br>" + allCourseData[i].prerequisite + "</p>");
     }
     return ("No Record!!");
-}*/
+    
+    /*for (i = 0; i < allCourseData.length; i++) {
+        if (allCourseData[i].short_name == courseName && allCourseData[i].title != null)
+            return ("<h3>" + allCourseData[i].short_name + "</h3>" + 
+            "<p>" + "Title: </br>" + allCourseData[i].title + "</p>" +
+            "<p>" + "Prerequisite: </br>" + allCourseData[i].prerequisite + "</p>");
+    }
+    return ("No Record!!");*/
+}
 
 
 var termPageCounter = 1;
