@@ -560,9 +560,9 @@ function findExist(array, item) {
 }
 function twoToOnedArray(twodArray){
 var resultArray = [];
-    for (i = 0; i < array.length; i++) {
-        for (j = 0; j < array[i].length; j++) {
-            resultArray.push(array[i][j]);
+    for (i = 0; i < twodArray.length; i++) {
+        for (j = 0; j < twodArray.length; j++) {
+            resultArray.push(twodArray[i][j]);
         }
     }
 return resultArray;
