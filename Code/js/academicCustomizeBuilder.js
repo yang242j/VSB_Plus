@@ -585,7 +585,6 @@ function changeToOneD(done){
     return temp;
 }
 changeToOneD(doneList[0]);
-var x = ajaxpost("ENEL 280",202020,changeToOneD(doneList[0]));
 
 function ajaxpost(courseid, term, done) {
     // (A) GET FORM DATA
