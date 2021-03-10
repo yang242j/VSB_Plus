@@ -537,6 +537,7 @@ function deleteFrom2DArray(array, item) {
     }
 
 }
+//does the item already exists in this line
 function findExist(array, item) {
     for (i = 0; i < array.length; i++) {
         if (array[i] == item) {
