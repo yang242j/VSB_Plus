@@ -93,10 +93,10 @@ function findCourseToTake(data) {
     //console.log(data[2]);
     for (i = 0; i < data.length; i++) {
         if (data[i] == null )  {
-            return;
         } else if(data[i].credit_earned>0)
         courseCompleted[i] = data[i].course_ID;;
     }
+    console.log(courseCompleted);
     //console.log(courseCompleted);
     //console.log(courseReqData);
     for (term in courseReqData) {
@@ -112,6 +112,7 @@ function findCourseToTake(data) {
         return courseCompleted.indexOf(n) === -1;
     });
     //console.log(courseNotCompleted);
+    console.log(courseCompleted);
     return courseNotCompleted;
 }
 
