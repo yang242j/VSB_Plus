@@ -286,35 +286,7 @@ function showTerm(pageNumber) {
 }
 
 
-/*function courseSelect() {
-    var xmlhttp = new XMLHttpRequest();
-    xmlhttp.onreadystatechange = function () {
-        if (this.status == 404){
-            document.getElementById("").innerHTML = "No Record!!";
-        }
-        }
-        if (this.readyState == 4 && this.status == 200) {
-            var jsonRsp = JSON.parse(this.responseText);
-            setCourse(jsonRsp);
-        }
-    };
 
-    xmlhttp.open("GET", "getCourseInfo.php?short_name=" + short_name, false);
-    xmlhttp.send();
-}*/
-
-function setCourse(jsonRsp) {
-    for (i = 0; i < 12; i++) {
-        var detail = "<h2 id='title'>" + jsonRsp.short_name + "</h2>" +
-            "<ul>" +
-            "<li><span class='bold'>Course Name</span>: <span id='fullName'>" + jsonRsp.title + "</span> </li>" +
-            "<li>***<span class='bold'>Prerequisites</span>: <span id='preReqClass'>" + jsonRsp.prerequisite + "</span> ***</li>" +
-            "<li><span class='bold'>Course Description</span>: " + jsonRsp.description + "</li>" + "</ul>" +
-            "<h2 class='inline' id='graph_label'>Num of course in semesters</h2> " +
-            "<div id='graph' class='graph_size'></div>";
-        document.getElementById("").innerHTML = detail;
-    }
-}
 
 var termPageCounter = 1;
 
