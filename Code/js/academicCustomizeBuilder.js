@@ -572,7 +572,7 @@ function termTransfer(term) {
 }
 
 
-var x =ajaxpost("ENEL 280",202020,doneList[0]);
+var x =ajaxpost("ENEL 280",202020,JSON.parse(doneList[0]));
 
 
 function ajaxpost(courseid, term, done) {
@@ -581,7 +581,7 @@ function ajaxpost(courseid, term, done) {
     data.append("courseid", courseid);
     data.append("term", term);
     console.log(doneList[0]);
-    data.append("doneList", JSON.parse(done));
+    data.append("doneList", done);
     console.log(JSON.stringify(done));
 
     // (B) AJAX
