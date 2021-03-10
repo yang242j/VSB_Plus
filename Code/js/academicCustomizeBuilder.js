@@ -604,8 +604,8 @@ function ajaxpost(courseid, term, done) {
 
         } else {
             // Do nothing and alert the returned Notes
-            alert(rsp.Notes);
             decidePreTrueOrFalse = false;
+            alert(rsp.Notes);
         }
     };
     xhr.send(data);
