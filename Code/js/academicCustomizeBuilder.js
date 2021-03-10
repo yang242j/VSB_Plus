@@ -443,7 +443,7 @@ function dragTest() {
 
             for (i = 0; i < terminfo[0].length; i++) {
                 if (terminfo[0][i] == null) {
-                    terminfo[0][i] = "space";
+                    terminfo[0][i] = "";
                 }
                 if (terminfo[0][i] == dropZone.id) {
                     check = true;
@@ -460,14 +460,19 @@ function dragTest() {
 
             if (terminfo[0] != null) {
                 var terminfo1,terminfo2,terminfo3 = "";
-                if (terminfo[0][0] == "Winter") {
-                    terminfo1 = "W";
-                }
-                if (terminfo[0][1] == "Spring/Summer") {
-                    terminfo2 = "S";
+                
+                for (i=0;i<terminfo[0].length)
+                {
+                    if (terminfo[0][i] == "Winter") {
+                        terminfo1 = "W";
+                    }
+                    else if (terminfo[0][i] == "Spring/Summer") {
+                        terminfo2 = "S";
+                    } 
+                    else if (terminfo[0][i] == "Fall") {
+                        terminfo3 = "F";
+                    }
 
-                } if (terminfo[0][2] == "Fall") {
-                    terminfo3 = "F";
                 }
                 var term = [terminfo1,terminfo2,terminfo3 = "F"];
                 deleteFromArray(term, null)
