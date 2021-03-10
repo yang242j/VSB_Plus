@@ -122,7 +122,7 @@ function getColor(index, dataJSON) {
     if (dataJSON[index].final_grade == "NP") {
         color = "blue";
     } else if (dataJSON[index].final_grade == "W") {
-        color = "cyan";
+        color = "darkgoldenrod";
     } else if (dataJSON[index].final_grade <= 60) {
         color = "grey";
     } else if (dataJSON[index].final_grade > 60 && dataJSON[index].final_grade < 75) {
