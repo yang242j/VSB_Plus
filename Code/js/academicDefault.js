@@ -290,7 +290,7 @@ function courseSelect() {
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {
         if (this.status == 404){
-            document.getElementById("not_completed_tag").innerHTML = "No Record!!";
+            document.getElementById("").innerHTML = "No Record!!";
         }
         }
         if (this.readyState == 4 && this.status == 200) {
@@ -312,7 +312,7 @@ function setCourse(jsonRsp) {
             "<li><span class='bold'>Course Description</span>: " + jsonRsp.description + "</li>" + "</ul>" +
             "<h2 class='inline' id='graph_label'>Num of course in semesters</h2> " +
             "<div id='graph' class='graph_size'></div>";
-        document.getElementById("not_completed_tag").innerHTML = detail;
+        document.getElementById("").innerHTML = detail;
     }
 }
 
