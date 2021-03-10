@@ -422,9 +422,9 @@ function dragTest() {
             var termCode = termTransfer(terminfo[0][1]);
             console.log(doneList[0]);
             var y =[];
-            y[0]=doneList[0][12];        
+            y.push(doneList[0][12]);        
             //chekc prerequisite
-            console.log(ajaxpost(courseName, termCode, y));
+            console.log(ajaxpost(courseName, "202020", y));
             //console.log(ajaxpost("ENEL 280", "202020", x));
 
 
@@ -596,9 +596,9 @@ function ajaxpost(courseid, term, done) {
         let rsp = JSON.parse(this.response);
         //console.log(rsp)
 
-        if (rsp.Status == true) {
+        if (rsp.Prerequisites == true) {
             // Generate course tag
-            courseid = rsp.CourseID;
+            //courseid = rsp.CourseID;
             return true;
 
         } else {
