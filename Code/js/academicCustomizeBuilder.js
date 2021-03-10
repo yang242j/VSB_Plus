@@ -576,12 +576,12 @@ var x =ajaxpost("ENEL 280",202020,doneList[0]);
 console.log(doneList[0]);
 console.log(x);
 
-function ajaxpost(courseid, term, doneList) {
+function ajaxpost(courseid, term, done) {
     // (A) GET FORM DATA
     var data = new FormData();
     data.append("courseid", courseid);
     data.append("term", term);
-    data.append("doneList", JSON.stringify(doneList));
+    data.append("doneList", JSON.stringify(done));
 
     // (B) AJAX
     var xhr = new XMLHttpRequest();
