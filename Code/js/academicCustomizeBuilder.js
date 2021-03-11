@@ -396,14 +396,6 @@ function dragTest() {
             //console.log("dasdasdasd");
             dragFrom = "course_cards";
         });
-        dropZone.addEventListener("dblclick", e =>{
-            e.preventDefault();
-            const droppedElementId = e.dataTransfer.getData("text/plain");
-            const droppedElement = document.getElementById(droppedElementId);
-            console.log(droppedElementId);
-            if(droppedElementId == null) return;
-             alert("asdsa");
-        });
 
         dropZone.addEventListener("drop", e => {
             e.preventDefault();
@@ -533,6 +525,14 @@ function dragTest() {
             }
             dropZone.appendChild(droppedElement);
 
+
+
+
+
+            dropZone.addEventListener("dblclick", e =>{
+                e.preventDefault();
+                 alert("asdsa");
+            });
         });
     }
 
