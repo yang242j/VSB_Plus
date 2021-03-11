@@ -168,14 +168,14 @@ function showCourses(data) {
         e.preventDefault();
         const terminfo1 = getTermInfo(notCompletedData[i]);
         info1 = notCompletedData[i] + ":\n" + "Term Applied :" + terminfo1[0] + "\n" + "Credits:" + terminfo1[1] + "\n" + terminfo1[2];
-        alert(info1);
+        console.log(info1);
     });
     i = 1;
     document.getElementById("nct" + i).addEventListener("dblclick", e1=> {
         e1.preventDefault();
         const terminfo2 = getTermInfo(notCompletedData[i]);
         info2 = notCompletedData[i] + ":\n" + "Term Applied :" + terminfo2[0] + "\n" + "Credits:" + terminfo2[1] + "\n" + terminfo2[2];
-        alert(info2);
+        console.log(info2);
     });
 
     /*for (i = 0; i < notCompletedData.length; i++) {
