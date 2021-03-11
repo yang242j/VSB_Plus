@@ -72,16 +72,18 @@ if ($validFormat) {
     $status["CourseID"] = $courseid;
 
     $strArr = get_PregExp_PreString($courseid);
+<<<<<<< HEAD
     $status[
         "PrereqNotes"
     ] .= "\nPrerequisites [Not Matched]:\n$strArr[0]\n";
 
+=======
+    $status["PrereqNotes"] .= "\nPrerequisites [Not Matched]:\n$strArr[0]\n";
+>>>>>>> fd5f2295e0a54f75706f005f19cd4f9ba93aa881
     // 4.1 Check if the course is already completed
     if (!in_array($courseid, $doneList)) {
         $status["Completion"] = false;
         $status["Notes"] .= "NOT Completed.\n";
-        
-       
 
         // 4.2 Check if the course can be found in the database.
         $file_path = "../JSON/$term/$courseid.json";
@@ -101,16 +103,17 @@ if ($validFormat) {
             }
 
             // 4.4 Check if the prerequisites of the course has matched.
-            $strArr = get_PregExp_PreString($courseid);
             if (exp_matched($strArr[1], $doneList)) {
                 $status["Prerequisites"] = true;
                 $status["Notes"] .= "\nPrerequisites [Matched]:\n$strArr[0]\n";
-                
             } else {
                 // Course prerequisites not matched
                 $status["Prerequisites"] = false;
                 $status["Notes"] .= "\nPrerequisites [Not Matched]:\n$strArr[0]\n";
+<<<<<<< HEAD
                
+=======
+>>>>>>> fd5f2295e0a54f75706f005f19cd4f9ba93aa881
             }
         } else {
             // Course file not found
