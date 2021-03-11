@@ -60,6 +60,11 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         var sid = "<?php echo $_SESSION["sid"]; ?>";
         var pas = "<?php echo $_SESSION["password"]; ?>";
         var major = "<?php echo $_SESSION["major"]; ?>"
+
+        var isMobile = window.matchMedia('(max-width: 1080px)').matches;
+        $(document).ready(function() {
+            if (isMobile) $(".menu-icon").click();
+        });
     </script>
     <style>
         .drop-zone--over{ opacity:0.5}

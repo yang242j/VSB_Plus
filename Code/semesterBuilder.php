@@ -61,8 +61,10 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         var courseCompletedList = [];
         courseCompletedList = courseCompletedList.concat(presetCourses);
         
+        var isMobile = window.matchMedia('(max-width: 1080px)').matches;
         $(document).ready(function() {
             $("button.plus_button.open").hide();
+            if (isMobile) $(".menu-icon").click();
         });
     </script>
 </head>

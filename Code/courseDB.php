@@ -48,8 +48,10 @@ session_start();
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
+        var isMobile = window.matchMedia('(max-width: 1080px)').matches;
         $(document).ready(function() {
             $(".nav-right-2").hide();
+            if (isMobile) $(".menu-icon").click();
         });
     </script>
 </head>
