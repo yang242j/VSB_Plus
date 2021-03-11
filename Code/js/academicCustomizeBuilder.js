@@ -462,7 +462,6 @@ function dragTest() {
                     container.push(doneList[i][j]);
                 }
             }
-            ajaxpost(courseName, "202020", container);
 
             //console.log(terminfo[0]);
             if (terminfo[0].length > 0) {
@@ -480,7 +479,7 @@ function dragTest() {
                     }
 
                 }
-
+                ajaxpost(courseName, "202020", container);
                 var term = [terminfo1, terminfo2, terminfo3];
                 deleteFromArray(term, null)
 
