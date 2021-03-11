@@ -197,6 +197,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <p>*Login as <a id="quickLink" href="courseDB.php">GUEST</a> will not have full access to this website*</p>
             </form>
         </div>
+        <div class="disclaimer">
+            <h2>Note:</h2>
+            <span class="paragraghs">
+                <p>1</p></br>
+                <p>2</p></br>
+                <p>3</p></br>
+            </span>
+        </div>
     </section>
 
     <footer>

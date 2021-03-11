@@ -67,3 +67,17 @@ body section.container div.form-div #quickLink {
     text-decoration: underline;
     font-weight: bold;
 }
+
+/*** Ddisclaimer ***/
+body section.container div.disclaimer {
+    width: 50%;
+    float: right;
+}
+
+body section.container div.disclaimer span.paragraghs {
+    margin: 10px;
+}
+
+body section.container div.disclaimer span.paragraghs p {
+    font-size: 10px;
+}
