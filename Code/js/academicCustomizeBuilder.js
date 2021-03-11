@@ -176,11 +176,12 @@ function showCourses(data) {
 }
 clickGetInfo();
 function clickGetInfo(){
+    alert("asdasd");
     for(i=2;i<5;i++){
 
         document.getElementById("nct0").addEventListener("dblclick", e => {
             e.preventDefault();
-            alert("asdasd");
+            
             var courseName = document.getElementById("nnnct0").innerHTML;
             const terminfo= getTermInfo(courseName);
     
