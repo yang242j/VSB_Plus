@@ -103,10 +103,6 @@ if ($validFormat) {
                 // Course prerequisites not matched
                 $status["Prerequisites"] = false;
                 $status["Notes"] .= "\nPrerequisites [Not Matched]:\n$strArr[0]\n";
-<<<<<<< HEAD
-               
-=======
->>>>>>> fd5f2295e0a54f75706f005f19cd4f9ba93aa881
             }
         } else {
             // Course file not found
