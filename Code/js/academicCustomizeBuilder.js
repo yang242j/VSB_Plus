@@ -182,12 +182,11 @@ function clickGetInfo(){
         if(clickZone < 50)
         {
         console.log(clickZone);
-        }
-        
-        /*document.getElementById("nct"+i).addEventListener("dblclick", e => {
+
+        document.getElementById("nct"+clickZone).addEventListener("dblclick", e => {
             e.preventDefault();
             
-            var courseName = document.getElementById("nnnct"+i).innerHTML;
+            var courseName = document.getElementById("nnnct"+clickZone).innerHTML;
             const terminfo= getTermInfo(courseName);
     
             if(terminfo[0].length == 0){
@@ -197,8 +196,11 @@ function clickGetInfo(){
             info1 = courseName + ":\n" + "Term Applied :" + terminfo[0] + "\n" + "Credits:" + terminfo[1] + "\n" + terminfo[2];
             console.log(info1);
             }
-        });*/
+        });
 
+        }
+        
+        
 
     }
 }
