@@ -634,7 +634,7 @@ function ajaxpost(courseid, term, done) {
         } else {
             // Do nothing and alert the returned Notes
             //console.log(rsp.Notes);
-            alert(rsp.courseid+" :" + "</br>"+ rsp.PrereqNotes);
+            alert(rsp.CourseID+" :" + "</br>"+ rsp.PrereqNotes);
             return false;
         }
     };
