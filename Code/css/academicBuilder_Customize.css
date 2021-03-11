@@ -317,7 +317,7 @@ body .terms {
     /*border: 2px solid red;*/
     border-bottom: 3px solid grey;
     display: grid;
-    grid-template-columns: 100%;
+    grid-template-columns: 80%;
     grid-template-rows: 4% repeat(20,15%);
     margin-left: -1%;
     column-gap: 5px;
@@ -330,7 +330,7 @@ body .terms .term1{
     border: 2px solid blue;
     display: grid;
     grid-template-columns: 8% 15% 15% 15% 15% 15% ; 
-    grid-template-rows: 63% ;
+    grid-template-rows: 65% ;
     column-gap: 10px;
     margin-left: -20px;
     row-gap:5px;
