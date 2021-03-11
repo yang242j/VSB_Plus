@@ -33,6 +33,7 @@ function fetchCourseJSON(sid, password) {
         showCourses(data);
         getCreditsEarned(data);
         storePassedCourse(data);
+        clickGetInfo();
         
         
     });
@@ -43,10 +44,6 @@ getAllCourse();
 
 window.onload = function init() {
     fetchCourseJSON(sid, pas);
-    document.getElementById("nct0").addEventListener("dblclick", e => {
-        e.preventDefault();  
-        alert("asd");
-    });
     clickGetInfo();
    
 }
@@ -542,6 +539,21 @@ function dragTest() {
     }
 
     for (const dropZone of document.querySelectorAll(".courseTags")) {
+        dropZone.addEventListener("dblclick", e => {
+            e.preventDefault();  
+            var newForAlern = "n" + droppedElementId; //info stored div id
+            var newForAlern2 = "nn" + droppedElementId;
+            var courseName = document.getElementById(newForAlern2).innerHTML;
+
+             terminfo= getTermInfo(courseName);
+    
+            if(terminfo[0].length == 0){
+                console.log("not applied");
+            }
+            else{
+            info1 = courseName + ":\n" + "Term Applied :" + terminfo[0] + "\n" + "Credits:" + terminfo[1] + "\n" + terminfo[2];
+            console.log(info1);
+       }});
 
         dropZone.addEventListener("dragover", e => {
             e.preventDefault();
@@ -658,7 +670,7 @@ function clickGetInfo(){
        clickZone.addEventListener("dblclick", e => {
             e.preventDefault();  
             var courseName = clickZone.innerHTML;
-            const terminfo= getTermInfo(courseName);
+            terminfo= getTermInfo(courseName);
     
             if(terminfo[0].length == 0){
                 console.log("not applied");
@@ -666,18 +678,7 @@ function clickGetInfo(){
             else{
             info1 = courseName + ":\n" + "Term Applied :" + terminfo[0] + "\n" + "Credits:" + terminfo[1] + "\n" + terminfo[2];
             console.log(info1);
-            }
-        });
+       }});
 
         }
-        
-        
-
-    }
-    
-    function clickTest(){
-        document.getElementById("nct0").addEventListener("dblclick", e => {
-            e.preventDefault();  
-            alert("asd");
-        });
     }
