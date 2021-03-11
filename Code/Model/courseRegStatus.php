@@ -104,18 +104,12 @@ if ($validFormat) {
             } else {
                 // Course prerequisites not matched
                 $status["Prerequisites"] = false;
-                $status[
-                    "Notes"
-                ] .= "\nPrerequisites [Not Matched]:\n$strArr[0]\n";
                 
             }
         } else {
             // Course file not found
             $status["Found"] = false;
             $status["Notes"] .= "Course NOT Found";
-            $status[
-                "PrereqNotes"
-            ] .= "\nPrerequisites [Not Matched]:\n$strArr[0]\n";
         }
     } else {
         // Course completed
@@ -125,6 +119,9 @@ if ($validFormat) {
 } else {
     // Input invalid
     $status["Notes"] .= "Input Format Iinvalid";
+    $status[
+        "PrereqNotes"
+    ] .= "\nPrerequisites [Not Matched]:\n$strArr[0]\n";
 }
 
 // 5. Final status decision.
