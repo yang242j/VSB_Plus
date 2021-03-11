@@ -398,9 +398,10 @@ function dragTest() {
         });
         dropZone.addEventListener("dblclick", e =>{
             e.preventDefault();
+            const droppedElementId = e.dataTransfer.getData("text/plain");
+            const droppedElement = document.getElementById(droppedElementId);
+            if(droppedElementId == null) return;
              alert("asdsa");
-
-
         });
 
         dropZone.addEventListener("drop", e => {
