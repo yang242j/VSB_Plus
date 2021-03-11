@@ -186,7 +186,6 @@ function btnForCourse(data) {
 
     var completedData = JSON.parse(data);
     var dataJSON = JSON.parse(data);
-    console.log(completedData);
     //var notCompletedData = findCourseToTake(dataJSON);
     var counterForCompleted = 0;
     //console.log(notCompletedData);
@@ -653,7 +652,7 @@ function clickGetInfo(){
         //console.log(clickZone.id);
        clickZone.addEventListener("dblclick", e => {
             e.preventDefault();  
-            var courseName = dclickZone.innerHTML;
+            var courseName = clickZone.innerHTML;
             const terminfo= getTermInfo(courseName);
     
             if(terminfo[0].length == 0){
