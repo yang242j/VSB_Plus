@@ -43,6 +43,7 @@ $status = [
     "Completion" => false, // {bool} whether this course has already completed.
     "Availability" => false, // {bool} whether this course is available at the given term.
     "Prerequisites" => false, // {bool} whether this course has matched all prerequisites.
+    "PrereqNotes" =>"information",// {string} nots for prerequisites information
     "Notes" => "$courseid:\n", // {string} Additional notes.
 ];
 
@@ -104,6 +105,10 @@ if ($validFormat) {
                 $status[
                     "Notes"
                 ] .= "\nPrerequisites [Not Matched]:\n$strArr[0]\n";
+                $status[
+                    "PrereqNotes"
+                ] .= "\nPrerequisites [Not Matched]:\n$strArr[0]\n";
+                
             }
         } else {
             // Course file not found
