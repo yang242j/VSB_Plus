@@ -42,7 +42,7 @@ function getCourseData() {
     myRequest.send();
 }
 
-function getElectiveCourseData() {
+/*function getElectiveCourseData() {
     var myRequest = new XMLHttpRequest;
     //myRequest.open("GET", "JSON/ESE.json", false);
     myRequest.open("GET", "JSON/SSE_electives.json", false);
@@ -51,7 +51,7 @@ function getElectiveCourseData() {
         ecourseData = data;
     }
     myRequest.send();
-}
+}*/
 
 function getTermData() {
     var myRequest = new XMLHttpRequest;
