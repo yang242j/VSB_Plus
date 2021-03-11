@@ -281,7 +281,7 @@ function getTermInfo(courseName) {
     var myRequest2 = new XMLHttpRequest;
     var myRequest3 = new XMLHttpRequest;
     var term = [];
-    var prerequisite = "Prerequisite: </br>";
+    var prerequisite = "Prerequisite: ";
     var credit;
     url2 = "JSON/202020/" + courseName + ".json";
     url3 = "JSON/202030/" + courseName + ".json";
