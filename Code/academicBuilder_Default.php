@@ -223,6 +223,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 			<div class = "course_not_completed">
 				<h3>Courses</h3>
 				<div class = "course_tag_not_completed" id = "not_completed_tag">
+					<!-- <p id = "nct0" onclick="alert(courseInfo())">ENSE 271</p>-->
 					<p id = "nct0" onclick="alert(courseInfo())">ENSE 271</p>
 					<p id = "nct1">ENSE 271</p>
 					<p id = "nct2">ENSE 271</p>
@@ -233,10 +234,10 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 					<p id = "nct6">ENSE 271</p>
 					<p id = "nct7">ENSE 271</p>
 					
-					<p id = "nct8" onclick="alert(courseSelect())">ENSE 271</p>
-					<p id = "nct9" onclick="alert(courseSelect())">ENSE 271</p>
-					<p id = "nct10" onclick="alert(courseSelect())">ENSE 271</p>
-					<p id = "nct11" onclick="alert(courseSelect())">ENSE 271</p>
+					<p id = "nct8">ENSE 271</p>
+					<p id = "nct9">ENSE 271</p>
+					<p id = "nct10">ENSE 271</p>
+					<p id = "nct11">ENSE 271</p>
 				</div>
 				<div>
 					<button class="left_arrow" id ="notCompletedLeft" onclick = "nctLeft()"><i class='fas fa-angle-left'></i></button>
