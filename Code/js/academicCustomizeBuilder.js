@@ -164,7 +164,7 @@ function showCourses(data) {
     }
     dragTest();
     console.log(notCompletedData);
-    document.getElementById("nct1").addEventListener("dblclick", e => {
+    document.getElementById("nct2").addEventListener("dblclick", e => {
         e.preventDefault();
         const terminfo= getTermInfo(notCompletedData[2]);
 
