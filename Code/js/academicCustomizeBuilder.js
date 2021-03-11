@@ -164,7 +164,7 @@ function showCourses(data) {
         document.getElementById("nct"+ i).addEventListener("dblclick",e=>{
             e.preventDefault();
             info = getTermInfo(notCompletedData[i]);
-            alert("info");
+            alert(info);
         });
     }
     dragTest();
