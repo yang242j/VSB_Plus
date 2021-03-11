@@ -144,7 +144,7 @@ function showCourses(data) {
     }
     for (i = 0; i < notCompletedData.length; i++) {
         document.getElementById("courseTagArea").innerHTML +=
-            "<div class = 'courseTags' >" +
+            "<div class = 'courseTags'   id ='"+ i + "'>" +  ">" +
             "<div  draggable = 'true' id ='nct" + i + "'>" +
             "<p id ='nnnct" + i + "'" + ">" + notCompletedData[i] + "</p>" +
             "<p id ='nnct" + i + "'" + ">" + " " + "</p>" +
@@ -166,7 +166,7 @@ function showCourses(data) {
     console.log(notCompletedData);
 
     for (const clickbleZone in document.querySelectorAll(".courseTags")) {
-        console.log(clickbleZone.indexOf());
+        console.log(clickbleZone.id);
         /*document.getElementById("nct" + clickbleZone.id).addEventListener("dblclick", e => {
             e.preventDefault();
             alert("ad");
