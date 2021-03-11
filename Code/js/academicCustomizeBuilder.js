@@ -183,7 +183,7 @@ function clickGetInfo(){
         document.getElementById("nct0").addEventListener("dblclick", e => {
             e.preventDefault();
             alert("asd");
-            /*
+            
             var courseName = document.getElementById("nnnct0").innerHTML;
             const terminfo= getTermInfo(courseName);
     
@@ -193,7 +193,7 @@ function clickGetInfo(){
             else{
             info1 = courseName + ":\n" + "Term Applied :" + terminfo[0] + "\n" + "Credits:" + terminfo[1] + "\n" + terminfo[2];
             console.log(info1);
-            }*/
+            }
         });
 
 
