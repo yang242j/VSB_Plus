@@ -24,7 +24,6 @@ var doneList = [
 ];
 //fetch JSON data from takenClass database
 function fetchCourseJSON(sid, password) {
-    // alert(sid);
     $.post('Model/takenClass.php', {
         sid: sid,
         password: password
@@ -165,13 +164,13 @@ function showCourses(data) {
     dragTest();
     console.log(notCompletedData);
 
-    for (const clickbleZone in document.querySelectorAll(".courseTags")) {
+   /* for (const clickbleZone in document.querySelectorAll(".courseTags")) {
         console.log(clickbleZone.id);
         /*document.getElementById("nct" + clickbleZone.id).addEventListener("dblclick", e => {
             e.preventDefault();
             alert("ad");
-        });*/
-    }
+        });
+    }*/
     /*document.getElementById("nct0").addEventListener("dblclick", e => {
         e.preventDefault();
         const terminfo= getTermInfo(notCompletedData[0]);
@@ -497,7 +496,6 @@ function dragTest() {
                 //document.getElementById(newForAlern).innerHTML = "this course not applied for now";
             }
             //chekc prerequisite
-            ajaxpost(courseName, "202020", container);
             // use short name to show course name
             // chekc if it is in right term
             for (i = 0; i < terminfo[0].length; i++) {
@@ -554,6 +552,7 @@ function dragTest() {
                 doneList[index].push(courseName);
                 //console.log(doneList);
             }
+            ajaxpost(courseName, "202020", container);
             dropZone.appendChild(droppedElement);
 
 
