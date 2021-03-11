@@ -671,3 +671,10 @@ function clickGetInfo(){
         
 
     }
+    clickTest();
+    function clickTest(){
+        document.getElementById("nct0").addEventListener("dblclick", e => {
+            e.preventDefault();  
+            alert("asd");
+        });
+    }
