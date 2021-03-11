@@ -156,15 +156,16 @@ function showCourses(data) {
         document.getElementById("nct" + i).style.color = "black";
         document.getElementById("nct" + i).style.marginTop = "-10px";
 
-        document.getElementById("nnnct0").addEventListener("dblclick",e=>{
-            e.preventDefault();
-            //info = getTermInfo(notCompletedData[i]);
-            alert("asdsad");
-        });
+        
         //console.log(getPrerequisite(notCompletedData[i]));
     }
     for (i = 0; i < notCompletedData.length; i++) {
         dragStart("#nct" + i);
+        document.getElementById("nnnct"+ i).addEventListener("dblclick",e=>{
+            e.preventDefault();
+            //info = getTermInfo(notCompletedData[i]);
+            alert("asdsad");
+        });
     }
     dragTest();
     /* for (i = 0; i < 12; i++) {
