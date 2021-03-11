@@ -400,6 +400,7 @@ function dragTest() {
             e.preventDefault();
             const droppedElementId = e.dataTransfer.getData("text/plain");
             const droppedElement = document.getElementById(droppedElementId);
+            console.log(droppedElementId);
             if(droppedElementId == null) return;
              alert("asdsa");
         });
