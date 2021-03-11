@@ -156,7 +156,7 @@ function showCourses(data) {
         document.getElementById("nct" + i).style.color = "black";
         document.getElementById("nct" + i).style.marginTop = "-10px";
 
-        document.getElementById("nnnct0").addEventListener("dbclick",e=>{
+        document.getElementById("nnnct0").addEventListener("click",e=>{
             e.preventDefault();
             //info = getTermInfo(notCompletedData[i]);
             alert("asdsad");
