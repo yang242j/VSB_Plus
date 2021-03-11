@@ -75,9 +75,9 @@ body .terms .termGrid .arrows button {
     border: none;
 }
 
-body .terms .termGrid .tittle {
-    /* margin-left: 30px; */
-}
+/* body .terms .termGrid .tittle {
+    margin-left: 30px;
+} */
 
 body .terms .add_to_term {
     /*border: 2px solid blue;*/
@@ -176,21 +176,21 @@ body .tags_courses .icons_annotation .icons {
     margin-top: 0px;
 }
 
-body .tags_courses .course_list {
-    /*border: 2px solid red;*/
-    /* display: grid; */
-    /* grid-template-columns: 100%; */
-    /* grid-template-rows: 40% 8% 40%; */
-    /* row-gap: 10px; */
-    /* margin-top: 0px; */
-    /* margin-left: -50px; */
-}
+/* body .tags_courses .course_list {
+    border: 2px solid red;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 40% 8% 40%;
+    row-gap: 10px;
+    margin-top: 0px;
+    margin-left: -50px;
+} */
 
-body .tags_courses .ense_course {
-    /*border: 2px solid red;*/
-    /* margin-top: -350px; */
-    /* margin-left: -20px; */
-}
+/* body .tags_courses .ense_course {
+    border: 2px solid red;
+    margin-top: -350px;
+    margin-left: -20px;
+} */
 
 body .tags_courses .ense_course_tag {
     /*border: 2px solid red;*/
@@ -212,11 +212,11 @@ body .tags_courses .ense_course_tag p {
     text-align: center;
 }
 
-body .tags_courses .cs_course {
-    /*border: 2px solid red;*/
-    /* margin-top: -200px; */
-    /* margin-left: -20px; */
-}
+/* body .tags_courses .cs_course {
+    border: 2px solid red;
+    margin-top: -200px;
+    margin-left: -20px;
+} */
 
 body .tags_courses .cs_course_tag {
     /*border: 2px solid red;*/
@@ -229,11 +229,11 @@ body .tags_courses .cs_course_tag {
     /* margin-left: -20px; */
 }
 
-body .tags_courses .enel_course {
-    /*border: 2px solid red;*/
-    /* margin-top: -1px; */
-    /* margin-left: -20px; */
-}
+/* body .tags_courses .enel_course {
+    border: 2px solid red;
+    margin-top: -1px;
+    margin-left: -20px;
+} */
 
 body .tags_courses .enel_course_tag {
     /*border: 2px solid red;*/
@@ -328,10 +328,10 @@ footer {
     border: none;
 }
 
-#autoscroll {
-    /* overflow: auto; */
-    /* height: 800px; */
-}
+/* #autoscroll {
+    overflow: auto;
+    height: 800px;
+} */
 
 .Term {
     /*border: 6px solid green;*/
