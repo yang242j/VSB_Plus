@@ -70,11 +70,12 @@ if (preg_match_all($pattern_1, $courseid) == 1) {
 // 4. If correct input.
 if ($validFormat) {
     $status["CourseID"] = $courseid;
-    
+
     $strArr = get_PregExp_PreString($courseid);
     $status[
         "PrereqNotes"
     ] .= "\nPrerequisites [Not Matched]:\n$strArr[0]\n";
+
     // 4.1 Check if the course is already completed
     if (!in_array($courseid, $doneList)) {
         $status["Completion"] = false;
@@ -108,6 +109,7 @@ if ($validFormat) {
             } else {
                 // Course prerequisites not matched
                 $status["Prerequisites"] = false;
+                $status["Notes"] .= "\nPrerequisites [Not Matched]:\n$strArr[0]\n";
                
             }
         } else {

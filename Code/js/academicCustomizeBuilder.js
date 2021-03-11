@@ -31,7 +31,8 @@ function fetchCourseJSON(sid, password) {
         btnForCourse(data);
         showCourses(data);
         getCreditsEarned(data);
-        storePassedCourse(data)
+        storePassedCourse(data);
+        clickGetInfo(data);
 
     });
 }
@@ -171,7 +172,13 @@ function showCourses(data) {
             alert("ad");
         });
     }*/
-    /*document.getElementById("nct0").addEventListener("dblclick", e => {
+   
+}
+function clickGetInfo(data){
+    var dataJSON = JSON.parse(data);
+    //console.log(dataJSON);
+    var notCompletedData = findCourseToTake(dataJSON);
+ document.getElementById("nct0").addEventListener("dblclick", e => {
         e.preventDefault();
         const terminfo= getTermInfo(notCompletedData[0]);
 
@@ -194,7 +201,11 @@ function showCourses(data) {
         info1 = notCompletedData[1] + ":\n" + "Term Applied :" + terminfo[0] + "\n" + "Credits:" + terminfo[1] + "\n" + terminfo[2];
         console.log(info1);
         }
-    });*/
+    });
+
+
+
+
 }
 
 function btnForCourse(data) {
