@@ -42,6 +42,7 @@ getAllCourse();
 
 window.onload = function init() {
     fetchCourseJSON(sid, pas);
+    clickGetInfo();
 }
 
 function getCreditsEarned(data) {
@@ -174,7 +175,7 @@ function showCourses(data) {
     }*/
    
 }
-clickGetInfo();
+
 function clickGetInfo(){
     alert(document.getElementById("nct0").innerHTML);
     for(i=2;i<5;i++){
