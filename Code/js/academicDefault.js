@@ -81,7 +81,7 @@ function showApprovedCourse() {
     for (term in termData) {
         if (term = "Approved") {
             for (i = 0; i < 12; i++) {
-                document.getElementById("ense" + i).innerHTML = termData[term][i];
+                document.getElementById("ct" + i).innerHTML = termData[term][i];
             }
         }
     }
