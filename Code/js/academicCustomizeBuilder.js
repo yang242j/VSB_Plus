@@ -148,7 +148,7 @@ function showCourses(data) {
         document.getElementById("courseTagArea").innerHTML +=
             "<div class = 'courseTags'   id ='"+ i + "'>" + 
             "<div  draggable = 'true' id ='nct" + i + "'>" +
-            "<p id ='nnnct" + i + "'" + ">" + notCompletedData[i] + "</p>" +
+            "<p class = 'clickable' id ='nnnct" + i + "'" + ">" + notCompletedData[i] + "</p>" +
             "<p id ='nnct" + i + "'" + ">" + " " + "</p>" +
             "</div> </div>";
         document.getElementById("nnct" + i).style.visibility = "hidden";
@@ -178,9 +178,10 @@ function showCourses(data) {
 }
 
 function clickGetInfo(){
-    for(i=2;i<5;i++){
+    for(clickZone in document.querySelectorAll(".clickable")){
+        console.log(clickZone.id);
         
-        document.getElementById("nct"+i).addEventListener("dblclick", e => {
+        /*document.getElementById("nct"+i).addEventListener("dblclick", e => {
             e.preventDefault();
             
             var courseName = document.getElementById("nnnct"+i).innerHTML;
@@ -193,7 +194,7 @@ function clickGetInfo(){
             info1 = courseName + ":\n" + "Term Applied :" + terminfo[0] + "\n" + "Credits:" + terminfo[1] + "\n" + terminfo[2];
             console.log(info1);
             }
-        });
+        });*/
 
 
     }
