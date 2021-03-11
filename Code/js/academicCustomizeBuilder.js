@@ -424,7 +424,6 @@ function dragTest() {
             //var termCode = termTransfer(terminfo[0][1]);
             var container = [];
             //y.push(doneList[0][12]);        
-            //chekc prerequisite
             //console.log(ajaxpost(courseName, "202020", y));
             //console.log(ajaxpost("ENEL 280", "202020", x));
 
@@ -434,28 +433,26 @@ function dragTest() {
                     container.push(doneList[i][j]);
                 }
             }
-            //ajaxpost(courseName, "202020", container);
-            console.log(ajaxpost(courseName, "202020", container));
+
 
             console.log(terminfo[0]);
             if (terminfo[0].length > 0) {
-                var terminfo1,terminfo2,terminfo3 = "";
-                
-                for (i=0;i<terminfo[0].length;i++)
-                {
+                var terminfo1, terminfo2, terminfo3 = "";
+
+                for (i = 0; i < terminfo[0].length; i++) {
                     if (terminfo[0][i] == "Winter") {
                         terminfo1 = "W";
                     }
                     else if (terminfo[0][i] == "Spring/Summer") {
                         terminfo2 = "S";
-                    } 
+                    }
                     else if (terminfo[0][i] == "Fall") {
                         terminfo3 = "F";
                     }
 
                 }
 
-                var term = [terminfo1,terminfo2,terminfo3];
+                var term = [terminfo1, terminfo2, terminfo3];
                 deleteFromArray(term, null)
 
 
@@ -469,8 +466,10 @@ function dragTest() {
                 //getCredits = 0;
                 //document.getElementById(newForAlern).innerHTML = "this course not applied for now";
             }
+            //chekc prerequisite
+            ajaxpost(courseName, "202020", container);
             // use short name to show course name
-
+            // chekc if it is in right term
             for (i = 0; i < terminfo[0].length; i++) {
                 if (terminfo[0][i] == null) {
                     terminfo[0][i] = "";
@@ -629,7 +628,7 @@ function ajaxpost(courseid, term, done) {
         } else {
             // Do nothing and alert the returned Notes
             //console.log(rsp.Notes);
-            alert(rsp.CourseID+" :" + rsp.PrereqNotes);
+            alert(rsp.CourseID + " :" + rsp.PrereqNotes);
             return false;
         }
     };
