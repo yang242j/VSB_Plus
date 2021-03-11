@@ -176,12 +176,12 @@ function showCourses(data) {
 }
 clickGetInfo();
 function clickGetInfo(){
-    alert("asdasd");
+    
     for(i=2;i<5;i++){
-
         document.getElementById("nct0").addEventListener("dblclick", e => {
+            alert("asdasd");
             e.preventDefault();
-            
+            /*
             var courseName = document.getElementById("nnnct0").innerHTML;
             const terminfo= getTermInfo(courseName);
     
@@ -191,7 +191,7 @@ function clickGetInfo(){
             else{
             info1 = courseName + ":\n" + "Term Applied :" + terminfo[0] + "\n" + "Credits:" + terminfo[1] + "\n" + terminfo[2];
             console.log(info1);
-            }
+            }*/
         });
 
 
