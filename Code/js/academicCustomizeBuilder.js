@@ -168,8 +168,13 @@ function showCourses(data) {
     document.getElementById("nct7").addEventListener("dblclick", e => {
         e.preventDefault();
         const terminfo1 = getTermInfo(notCompletedData[7]);
+        if(terminfo1 == null){
+            console.log("not applied");
+        }
+        else{
         info1 = notCompletedData[7] + ":\n" + "Term Applied :" + terminfo1[0] + "\n" + "Credits:" + terminfo1[1] + "\n" + terminfo1[2];
         console.log(info1);
+        }
     });
  
 
