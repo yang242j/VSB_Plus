@@ -33,6 +33,7 @@ function fetchCourseJSON(sid, password) {
         showCourses(data);
         getCreditsEarned(data);
         storePassedCourse(data);
+        clickGetInfo();
         
         
     });
@@ -646,7 +647,7 @@ function ajaxpost(courseid, term, done) {
     xhr.send(data);
     return false;
 }
-clickGetInfo();
+
 function clickGetInfo(){
     for(clickZone of document.querySelectorAll(".clickable")){  
         //console.log(clickZone.id);
