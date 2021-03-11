@@ -202,6 +202,23 @@ function clickGetInfo(data){
         console.log(info1);
         }
     });
+    for(i=2;i<5;i++){
+
+        document.getElementById("nct"+i).addEventListener("dblclick", e => {
+            e.preventDefault();
+            const terminfo= getTermInfo(notCompletedData[i]);
+    
+            if(terminfo[0].length == 0){
+                console.log("not applied");
+            }
+            else{
+            info1 = notCompletedData[i] + ":\n" + "Term Applied :" + terminfo[0] + "\n" + "Credits:" + terminfo[1] + "\n" + terminfo[2];
+            console.log(info1);
+            }
+        });
+
+
+    }
 }
 
 function btnForCourse(data) {
