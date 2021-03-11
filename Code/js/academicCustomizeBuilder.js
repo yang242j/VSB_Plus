@@ -163,13 +163,39 @@ function showCourses(data) {
         dragStart("#nct" + i);
     }
     dragTest();
-    for (i = 0; i < notCompletedData.length; i++) {
+    var i =0;
     document.getElementById("nct"+ i).addEventListener("dblclick",e=>{
         e.preventDefault();
         terminfo = getTermInfo(notCompletedData[i]);
         info = notCompletedData[i] + ":\n" + "Term Applied :" + terminfo[0]+"\n"+ "Credits:"+terminfo[1]+"\n"+terminfo[2];
         alert(info);
-    });
+
+        var i =1;
+        document.getElementById("nct"+ i).addEventListener("dblclick",e=>{
+            e.preventDefault();
+            terminfo = getTermInfo(notCompletedData[i]);
+            info = notCompletedData[i] + ":\n" + "Term Applied :" + terminfo[0]+"\n"+ "Credits:"+terminfo[1]+"\n"+terminfo[2];
+            alert(info);
+            var i =2;
+            document.getElementById("nct"+ i).addEventListener("dblclick",e=>{
+                e.preventDefault();
+                terminfo = getTermInfo(notCompletedData[i]);
+                info = notCompletedData[i] + ":\n" + "Term Applied :" + terminfo[0]+"\n"+ "Credits:"+terminfo[1]+"\n"+terminfo[2];
+                alert(info);
+                var i =3;
+                document.getElementById("nct"+ i).addEventListener("dblclick",e=>{
+                    e.preventDefault();
+                    terminfo = getTermInfo(notCompletedData[i]);
+                    info = notCompletedData[i] + ":\n" + "Term Applied :" + terminfo[0]+"\n"+ "Credits:"+terminfo[1]+"\n"+terminfo[2];
+                    alert(info);
+
+    /*for (i = 0; i < notCompletedData.length; i++) {
+    document.getElementById("nct"+ i).addEventListener("dblclick",e=>{
+        e.preventDefault();
+        terminfo = getTermInfo(notCompletedData[i]);
+        info = notCompletedData[i] + ":\n" + "Term Applied :" + terminfo[0]+"\n"+ "Credits:"+terminfo[1]+"\n"+terminfo[2];
+        alert(info);
+    });*/
 }
 }
 
