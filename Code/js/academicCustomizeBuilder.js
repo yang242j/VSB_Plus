@@ -157,6 +157,7 @@ function showCourses(data) {
         document.getElementById("nct" + i).style.marginTop = "-10px";
 
         document.getElementById("nct" + i).addEventListener("dbclick",e=>{
+            e.preventDefault();
             info = getTermInfo(notCompletedData[i]);;
             alert(info);
         })
