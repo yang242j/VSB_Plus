@@ -191,7 +191,7 @@ function showCourses(data) {
     for(i=0;i<2;i++)
     {
         document.getElementById("nct"+i).addEventListener("dblclick", e => {
-            e.preventDefault();
+            //e.preventDefault();
             const terminfo= getTermInfo(notCompletedData[i]);
     
             if(terminfo[0].length == 0){
