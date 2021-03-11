@@ -32,6 +32,7 @@ function fetchCourseJSON(sid, password) {
         btnForCourse(data);
         showCourses(data);
         getCreditsEarned(data);
+        storePassedCourse(data);
         
         
 
@@ -134,7 +135,6 @@ function showCourses(data) {
     var dataJSON = JSON.parse(data);
     //console.log(dataJSON);
     var notCompletedData = findCourseToTake(dataJSON);
-    tempData = notCompletedData;
     for (i = 0; i < 12; i++) {
         if (i < dataJSON.length) {
             //<br/>
@@ -175,7 +175,7 @@ function showCourses(data) {
     }*/
    
 }
-storePassedCourse(tempData);
+
 function clickGetInfo(data){
     var dataJSON = JSON.parse(data);
     console.log(dataJSON);
