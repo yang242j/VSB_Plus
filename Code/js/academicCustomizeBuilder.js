@@ -178,8 +178,9 @@ clickGetInfo();
 function clickGetInfo(){
     
     for(i=2;i<5;i++){
+        alert(document.getElementById("nct0").innerHTML);
         document.getElementById("nct0").addEventListener("dblclick", e => {
-            alert("asdasd");
+            
             e.preventDefault();
             /*
             var courseName = document.getElementById("nnnct0").innerHTML;
