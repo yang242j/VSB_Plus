@@ -167,10 +167,10 @@ function showCourses(data) {
 
     for (const clickbleZone in document.querySelectorAll(".courseTags")) {
         console.log(clickbleZone);
-        document.getElementById("nct" + clickbleZone.id).addEventListener("dblclick", e => {
+        /*document.getElementById("nct" + clickbleZone.id).addEventListener("dblclick", e => {
             e.preventDefault();
             alert("ad");
-        });
+        });*/
     }
     /*document.getElementById("nct0").addEventListener("dblclick", e => {
         e.preventDefault();
