@@ -60,6 +60,8 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         var sid = "<?php echo $_SESSION["sid"]; ?>";
         var pas = "<?php echo $_SESSION["password"]; ?>";
         var major = "<?php echo $_SESSION["major"]; ?>";
+        var isMobile = window.matchMedia('(max-width: 1080px)').matches;
+        if (isMobile) $(".menu-icon").click();
     </script>
     <script type="text/javascript" src="js/academicMain.js"></script>
 </head>
