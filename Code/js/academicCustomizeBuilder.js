@@ -181,7 +181,7 @@ function clickGetInfo(){
     for(clickZone in document.querySelectorAll(".clickable")){
         if(clickZone < 50)
         {
-        console.log(clickZone.getAttribute("name"));
+        console.log(clickZone.id);
         document.getElementById("nct"+clickZone).addEventListener("dblclick", e => {
             e.preventDefault();  
             var courseName = document.getElementById("nnnct"+clickZone).innerHTML;
