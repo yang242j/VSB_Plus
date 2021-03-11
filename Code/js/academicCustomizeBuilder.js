@@ -539,6 +539,8 @@ function dragTest() {
 
     for (const dropZone of document.querySelectorAll(".courseTags")) {
         dropZone.addEventListener("dblclick", e => {
+            const droppedElementId = e.dataTransfer.getData("text/plain");
+            const droppedElement = document.getElementById(droppedElementId);
             e.preventDefault();  
             var newForAlern = "n" + droppedElementId; //info stored div id
             var newForAlern2 = "nn" + droppedElementId;
