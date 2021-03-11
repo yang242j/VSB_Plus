@@ -163,13 +163,14 @@ function showCourses(data) {
         dragStart("#nct" + i);
     }
     dragTest();
-   var i = 0;
+    for (i = 0; i < notCompletedData.length; i++) {
     document.getElementById("nct"+ i).addEventListener("dblclick",e=>{
         e.preventDefault();
         terminfo = getTermInfo(notCompletedData[i]);
         info = notCompletedData[i] + ":\n" + "Term Applied :" + terminfo[0]+"\n"+ "Credits:"+terminfo[1]+"\n"+terminfo[2];
         alert(info);
     });
+}
 }
 
 function btnForCourse(data) {
