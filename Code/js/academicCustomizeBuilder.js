@@ -537,7 +537,7 @@ function dragTest() {
            
 
             dropZone.removeEventListener("dblclick",ev =>{
-                ev.preventDefault();
+                //ev.preventDefault();
             });
 
         });
