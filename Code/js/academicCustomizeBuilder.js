@@ -189,7 +189,7 @@ function showCourses(data) {
         }
     });*/
    for(const clickbleZone in document.querySelectorAll(".courseTags")){
-       console.log(clickbleZone.id);
+       console.log(clickbleZone);
    }
        
 
