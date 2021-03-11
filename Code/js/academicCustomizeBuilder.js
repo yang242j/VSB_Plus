@@ -189,7 +189,10 @@ function showCourses(data) {
         }
     });*/
    for(const clickbleZone in document.querySelectorAll(".courseTags")){
-       console.log(clickbleZone);
+       clickbleZone.addEventListener("dblclick",e =>{
+        e.preventDefault();
+           alert("asd");
+       })
    }
        
 
