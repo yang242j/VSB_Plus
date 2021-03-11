@@ -156,7 +156,7 @@ function showCourses(data) {
         document.getElementById("nct" + i).style.color = "black";
         document.getElementById("nct" + i).style.marginTop = "-10px";
 
-        document.getElementById("nnnct0").addEventListener("click",e=>{
+        document.getElementById("nnnct0").addEventListener("dbclick",e=>{
             e.preventDefault();
             //info = getTermInfo(notCompletedData[i]);
             alert("asdsad");
@@ -543,6 +543,7 @@ function dragTest() {
     }
 
     for (const dropZone of document.querySelectorAll(".courseTags")) {
+
         dropZone.addEventListener("dragover", e => {
             e.preventDefault();
             dropZone.classList.add("drop-zone--over");
