@@ -163,7 +163,7 @@ function showCourses(data) {
         dragStart("#nct" + i);
     }
     dragTest();
-    console.log(notCompletedData);
+    /*console.log(notCompletedData);
     document.getElementById("nct2").addEventListener("dblclick", e => {
         e.preventDefault();
         const terminfo= getTermInfo(notCompletedData[2]);
@@ -187,17 +187,23 @@ function showCourses(data) {
         info1 = notCompletedData[7] + ":\n" + "Term Applied :" + terminfo[0] + "\n" + "Credits:" + terminfo[1] + "\n" + terminfo[2];
         console.log(info1);
         }
-    });
- 
+    });*/
 
-    /*for (i = 0; i < notCompletedData.length; i++) {
-    document.getElementById("nct"+ i).addEventListener("dblclick",e=>{
-        e.preventDefault();
-        terminfo = getTermInfo(notCompletedData[i]);
-        info = notCompletedData[i] + ":\n" + "Term Applied :" + terminfo[0]+"\n"+ "Credits:"+terminfo[1]+"\n"+terminfo[2];
-        alert(info);
-    });
-}*/
+
+    for (i = 0; i < notCompletedData.length; i++) {
+        document.getElementById("nct" + i).addEventListener("dblclick", e => {
+            e.preventDefault();
+            const terminfo = getTermInfo(notCompletedData[i]);
+
+        if(terminfo[0].length == 0){
+            console.log("not applied");
+        }
+        else{
+        info = notCompletedData[i] + ":\n" + "Term Applied :" + terminfo[0] + "\n" + "Credits:" + terminfo[1] + "\n" + terminfo[2];
+        console.log(info);
+        }
+        });
+    }
 }
 
 function btnForCourse(data) {
