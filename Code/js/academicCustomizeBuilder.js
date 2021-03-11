@@ -166,7 +166,7 @@ function showCourses(data) {
     console.log(notCompletedData);
 
     for (const clickbleZone in document.querySelectorAll(".courseTags")) {
-        console.log(clickbleZone);
+        console.log(clickbleZone.clickId);
         /*document.getElementById("nct" + clickbleZone.id).addEventListener("dblclick", e => {
             e.preventDefault();
             alert("ad");
