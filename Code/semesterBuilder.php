@@ -128,6 +128,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                     <input type="text" id="search_courseid" placeholder="ENGL 100" onfocus="hideBottom()" onblur="showBottom()" size="8" required />
                     <input type="submit" value="Submit"/>
                 </form>
+                <p id="searchMsg"></p>
                 <script>
                     function ajaxpost() {
                         // (A) GET FORM DATA
@@ -163,9 +164,17 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                                     console.log(courseid + " already exist in courseList { " + courseList + " }");
                                 }
 
+                                // Print search messages
+                                $("#searchMsg").html(courseid + ' registration success.');
+                                $("#searchMsg").css('color', 'green');
+
                             } else {
                                 // Do nothing and alert the returned Notes
                                 alert(rsp.Notes);
+
+                                // Print search messages
+                                $("#searchMsg").html(courseid + ' registration failed.');
+                                $("#searchMsg").css('color', 'red');
                             }
                         };
                         xhr.send(data);
