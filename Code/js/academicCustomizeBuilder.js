@@ -188,13 +188,12 @@ function showCourses(data) {
         console.log(info1);
         }
     });*/
-   for(const clickbleZone in document.querySelectorAll(".courseTags")){
-    document.getElementById("nct"+clickbleZone).addEventListener("dblclick", e => {
-        e.preventDefault();
-        alert("ad");
-   }
+    for (const clickbleZone in document.querySelectorAll(".courseTags")) {
+        document.getElementById("nct" + clickbleZone).addEventListener("dblclick", e => {
+            e.preventDefault();
+            alert("ad");
+        });
        
-
 
 
 }
