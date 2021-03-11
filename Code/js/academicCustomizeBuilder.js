@@ -163,7 +163,8 @@ function showCourses(data) {
         dragStart("#nct" + i);
         document.getElementById("nct"+ i).addEventListener("dblclick",e=>{
             e.preventDefault();
-            info = getTermInfo(notCompletedData[i]);
+            terminfo = getTermInfo(notCompletedData[i]);
+            info = notCompletedData[i] + ":\n" + "Term Applied :" + terminfo[0]+"\n"+ "Credits:"+terminfo[1]+"\n"+terminfo[2];
             alert(info);
         });
     }
