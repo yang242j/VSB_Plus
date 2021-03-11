@@ -419,10 +419,9 @@ function dragTest() {
             // set the course id to prev dropped
 
             var terminfo = getTermInfo(courseName);
-            //console.log(terminfo);
             var check = false;
 
-            var termCode = termTransfer(terminfo[0][1]);
+            //var termCode = termTransfer(terminfo[0][1]);
             var container = [];
             //y.push(doneList[0][12]);        
             //chekc prerequisite
@@ -437,25 +436,6 @@ function dragTest() {
             }
             //ajaxpost(courseName, "202020", container);
             console.log(ajaxpost(courseName, "202020", container));
-
-
-
-
-            for (i = 0; i < terminfo[0].length; i++) {
-                if (terminfo[0][i] == null) {
-                    terminfo[0][i] = "";
-                }
-                if (terminfo[0][i] == dropZone.id) {
-                    check = true;
-                    document.getElementById(newForAlern).style.color = "black";
-                }
-            }
-            if (check == false) {
-                document.getElementById(newForAlern).style.color = "red";
-                alert("Term info not match");
-            }
-
-
 
 
             if (terminfo[0] != null) {
@@ -488,6 +468,21 @@ function dragTest() {
                 return;
                 //getCredits = 0;
                 //document.getElementById(newForAlern).innerHTML = "this course not applied for now";
+            }
+            // use short name to show course name
+
+            for (i = 0; i < terminfo[0].length; i++) {
+                if (terminfo[0][i] == null) {
+                    terminfo[0][i] = "";
+                }
+                if (terminfo[0][i] == dropZone.id) {
+                    check = true;
+                    document.getElementById(newForAlern).style.color = "black";
+                }
+            }
+            if (check == false) {
+                document.getElementById(newForAlern).style.color = "red";
+                alert("Term info not match");
             }
             //transfer term to number 
 
