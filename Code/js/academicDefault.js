@@ -23,12 +23,11 @@ function getAllCourse() {
 }
 
 function getTitle(courseName) {
-    var pre = "Title: </br>";
     for (i = 0; i < allCourseData.length; i++) {
         if (allCourseData[i].short_name == courseName && allCourseData[i].title != null)
-            return (pre + allCourseData[i].title);
+            return ("<i>" + allCourseData[i].title + "</i>");
     }
-    return (pre + "no such course or no prerequisite");
+    return ("Course Info not found");
 }
 console.log(getTitle("CHEM 140"));
 
