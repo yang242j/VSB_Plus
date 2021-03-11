@@ -206,13 +206,14 @@ function clickGetInfo(data){
 
         document.getElementById("nct"+i).addEventListener("dblclick", e => {
             e.preventDefault();
-            const terminfo= getTermInfo(notCompletedData[i]);
+            var courseName = document.getElementById("nnnct"+i).innerHTML;
+            const terminfo= getTermInfo(courseName);
     
             if(terminfo[0].length == 0){
                 console.log("not applied");
             }
             else{
-            info1 = notCompletedData[i] + ":\n" + "Term Applied :" + terminfo[0] + "\n" + "Credits:" + terminfo[1] + "\n" + terminfo[2];
+            info1 = courseName + ":\n" + "Term Applied :" + terminfo[0] + "\n" + "Credits:" + terminfo[1] + "\n" + terminfo[2];
             console.log(info1);
             }
         });
