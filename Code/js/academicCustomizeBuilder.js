@@ -168,6 +168,7 @@ function showCourses(data) {
     document.getElementById("nct7").addEventListener("dblclick", e => {
         e.preventDefault();
         const terminfo1 = getTermInfo(notCompletedData[7]);
+        console.log(getTermInfo(notCompletedData[7]));
         if(terminfo1 == null){
             console.log("not applied");
         }
