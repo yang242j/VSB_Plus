@@ -1,0 +1,10 @@
+2021-03-10 20:21:22,579 - Test - INFO - Input Data: ENSE,suc:1,assert:ENSE
+2021-03-10 20:25:34,871 - Test - INFO - Input Data: ENEL,suc:1,assert:ENEL
+2021-03-10 20:29:47,377 - Test - INFO - Input Data: ENEV,suc:1,assert:ENEV
+2021-03-10 20:33:59,717 - Test - INFO - Input Data: ENIN,suc:1,assert:ENIN
+2021-03-10 20:38:12,097 - Test - INFO - Input Data: CS,suc:1,assert:CS
+2021-03-10 20:42:22,375 - Test - INFO - Input Data: short_name:CHEM 104,suc:1,assert:General Chemistry I
+2021-03-10 20:46:35,243 - Test - INFO - Input Data: short_name:CHEM 103,suc:0,assert:CHEM 103 cannot be found
+2021-03-10 20:50:48,453 - Test - INFO - Input Data: short_name:CS 210,suc:1,assert:Data Structures and Abstractions
+2021-03-10 20:55:11,116 - Test - INFO - Input Data: short_name:CS 215,suc:1,assert:Web and Database Programming
+2021-03-10 20:57:26,221 - Test - INFO - Input Data: short_name:ENEL 487,suc:1,assert:Embedded and Real-Time Software Systems
