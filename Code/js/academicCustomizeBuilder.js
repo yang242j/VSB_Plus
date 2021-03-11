@@ -397,7 +397,7 @@ function dragTest() {
             dragFrom = "course_cards";
         });
         dropZone.addEventListener("dblclick"), e =>{
-
+            e.preventDefault();
              alert("asdsa");
 
 
