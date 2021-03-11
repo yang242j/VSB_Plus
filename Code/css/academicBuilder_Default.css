@@ -103,7 +103,7 @@ body .terms .add_to_term .arrows button {
 
 body .terms .course_cards {
     position: relative;
-    height: 85%;
+    /* height: 85%; */
     /* border: 2px black; */
     background-color: rgb(255, 251, 251);
     border-radius: 5px;
