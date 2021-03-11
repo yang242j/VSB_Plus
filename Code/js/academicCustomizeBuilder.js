@@ -33,7 +33,7 @@ function fetchCourseJSON(sid, password) {
         showCourses(data);
         getCreditsEarned(data);
         storePassedCourse(data);
-        
+        clickTest();
         
         
     });
@@ -671,7 +671,7 @@ function clickGetInfo(){
         
 
     }
-    clickTest();
+    
     function clickTest(){
         document.getElementById("nct0").addEventListener("dblclick", e => {
             e.preventDefault();  
