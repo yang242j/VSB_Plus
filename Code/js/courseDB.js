@@ -23,9 +23,9 @@ window.onload = function init() {
     }
     $('#selectToggle').click(function(){
         let text = $(this).text();
-        $(this).text(
-            text == "Hidden courses list" ? "Show course list" : "Hidden courses list"
-        );
+        // $(this).text(
+        //     text == "Hidden courses list" ? "Show course list" : "Hidden courses list"
+        // );
         $('#search_area').toggleClass('hidden');
         $('#popView').toggleClass('fullScreen');
     });
