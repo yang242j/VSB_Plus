@@ -176,9 +176,9 @@ function showCourses(data) {
 }
 clickGetInfo();
 function clickGetInfo(){
-    
+    alert(document.getElementById("nct0").innerHTML);
     for(i=2;i<5;i++){
-        alert(document.getElementById("nct0").innerHTML);
+        
         document.getElementById("nct0").addEventListener("dblclick", e => {
             
             e.preventDefault();
