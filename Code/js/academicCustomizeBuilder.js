@@ -530,6 +530,11 @@ function dragTest() {
 
 
 
+           
+
+            dropZone.removeEventListener("dblclick",ev =>{
+                ev.preventDefault();
+            });
             dropZone.addEventListener("dblclick", ev =>{
                 ev.preventDefault();
                  alert("asdsa");
