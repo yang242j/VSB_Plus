@@ -180,6 +180,7 @@ function clickGetInfo(){
 
         document.getElementById("nct0").addEventListener("dblclick", e => {
             e.preventDefault();
+            alert("asdasd");
             var courseName = document.getElementById("nnnct0").innerHTML;
             const terminfo= getTermInfo(courseName);
     
