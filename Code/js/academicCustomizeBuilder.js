@@ -33,7 +33,7 @@ function fetchCourseJSON(sid, password) {
         showCourses(data);
         getCreditsEarned(data);
         storePassedCourse(data);
-        
+        clickGetInfo();
         
     });
 }
@@ -43,7 +43,6 @@ getAllCourse();
 
 window.onload = function init() {
     fetchCourseJSON(sid, pas);
-    clickGetInfo();
    
 }
 
@@ -179,12 +178,12 @@ function showCourses(data) {
 }
 
 function clickGetInfo(){
-    alert(document.getElementById("nct0").innerHTML);
     for(i=2;i<5;i++){
         
         document.getElementById("nct0").addEventListener("dblclick", e => {
             
             e.preventDefault();
+            alert("asd");
             /*
             var courseName = document.getElementById("nnnct0").innerHTML;
             const terminfo= getTermInfo(courseName);
