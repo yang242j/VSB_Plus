@@ -178,7 +178,7 @@ function showCourses(data) {
 storePassedCourse(tempData);
 function clickGetInfo(data){
     var dataJSON = JSON.parse(data);
-    //console.log(dataJSON);
+    console.log(dataJSON);
     var notCompletedData = findCourseToTake(dataJSON);
  document.getElementById("nct0").addEventListener("dblclick", e => {
         e.preventDefault();
