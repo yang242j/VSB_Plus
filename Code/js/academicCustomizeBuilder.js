@@ -160,7 +160,7 @@ function showCourses(data) {
             e.preventDefault();
             //info = getTermInfo(notCompletedData[i]);
             alert("asdsad");
-        })
+        });
         //console.log(getPrerequisite(notCompletedData[i]));
     }
     for (i = 0; i < notCompletedData.length; i++) {
