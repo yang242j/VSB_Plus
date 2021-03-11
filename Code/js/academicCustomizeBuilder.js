@@ -190,7 +190,7 @@ function showCourses(data) {
     });*/
     for(i=0;i<2;i++)
     {
-        document.getElementById("nct").addEventListener("dblclick", e => {
+        document.getElementById("nct"+i).addEventListener("dblclick", e => {
             //e.preventDefault();
             const terminfo= getTermInfo(notCompletedData[i]);
     
