@@ -164,12 +164,11 @@ function showCourses(data) {
     }
     dragTest();
     console.log(notCompletedData);
-    console.log(notCompletedData[1]);
     document.getElementById("nct7").addEventListener("dblclick", e => {
         e.preventDefault();
         const terminfo= getTermInfo(notCompletedData[7]);
 
-        if(terminfo[0].length = 0){
+        if(terminfo[0].length == 0){
             console.log("not applied");
         }
         else{
