@@ -33,11 +33,12 @@ function fetchCourseJSON(sid, password) {
         showCourses(data);
         getCreditsEarned(data);
         storePassedCourse(data);
-        clickGetInfo(data);
+        
     });
 }
 getTermData(major);
 getAllCourse();
+
 
 window.onload = function init() {
     fetchCourseJSON(sid, pas);
@@ -173,35 +174,8 @@ function showCourses(data) {
     }*/
    
 }
-
-function clickGetInfo(data){
-    var dataJSON = JSON.parse(data);
-    console.log(dataJSON);
-    var notCompletedData = findCourseToTake(dataJSON);
- document.getElementById("nct0").addEventListener("dblclick", e => {
-        e.preventDefault();
-        const terminfo= getTermInfo(notCompletedData[0]);
-
-        if(terminfo[0].length == 0){
-            console.log("not applied");
-        }
-        else{
-        info1 = notCompletedData[0] + ":\n" + "Term Applied :" + terminfo[0] + "\n" + "Credits:" + terminfo[1] + "\n" + terminfo[2];
-        console.log(info1);
-        }
-    });
-    document.getElementById("nct1").addEventListener("dblclick", e => {
-        e.preventDefault();
-        const terminfo= getTermInfo(notCompletedData[1]);
-
-        if(terminfo[0].length == 0){
-            console.log("not applied");
-        }
-        else{
-        info1 = notCompletedData[1] + ":\n" + "Term Applied :" + terminfo[0] + "\n" + "Credits:" + terminfo[1] + "\n" + terminfo[2];
-        console.log(info1);
-        }
-    });
+clickGetInfo();
+function clickGetInfo(){
     for(i=2;i<5;i++){
 
         document.getElementById("nct"+i).addEventListener("dblclick", e => {
