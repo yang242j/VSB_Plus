@@ -171,8 +171,8 @@ function showCourses(data) {
         alert(info);
     });
     i = 1;
-    document.getElementById("nct" + i).addEventListener("dblclick", e=> {
-        e.preventDefault();
+    document.getElementById("nct" + i).addEventListener("dblclick", e1=> {
+        e1.preventDefault();
         terminfo = getTermInfo(notCompletedData[i]);
         info = notCompletedData[i] + ":\n" + "Term Applied :" + terminfo[0] + "\n" + "Credits:" + terminfo[1] + "\n" + terminfo[2];
         alert(info);
