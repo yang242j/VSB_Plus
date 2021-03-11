@@ -120,7 +120,7 @@ function registerCourse(short_name, term) {
             document.getElementById("courseList_Containor").appendChild(document.getElementById(short_name));
         } else {
             // Generate course tag
-            document.getElementById("courseList_Containor")..insertAdjacentHTML('beforeend', tagGenerator(short_name, true));
+            document.getElementById("courseList_Containor").insertAdjacentHTML('beforeend', tagGenerator(short_name, true));
         }
         
         document.getElementById(short_name).style.backgroundColor = BGC;
