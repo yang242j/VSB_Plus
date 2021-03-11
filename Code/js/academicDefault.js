@@ -167,14 +167,14 @@ function nctRight() {
     /*document.getElementById("notCompletedRight").innerHTML = counter;*/
     if (counter >= 0) {
         for (i = 0; i < 12; i++) {
-            document.getElementById("cs" + i).innerHTML = "";
+            document.getElementById("nct" + i).innerHTML = "";
         }
         for (i = 12 * counter; i < 12 * (counter + 1); i++) {
             if (courseData[i] == null) return;
             if (i > courseData.length) {
-                document.getElementById("cs" + j).innerHTML = " ";
+                document.getElementById("nct" + j).innerHTML = " ";
             } else {
-                document.getElementById("cs" + j).innerHTML = courseData[i].short_name;
+                document.getElementById("nct" + j).innerHTML = courseData[i].short_name;
             }
             j = j + 1;
         }
