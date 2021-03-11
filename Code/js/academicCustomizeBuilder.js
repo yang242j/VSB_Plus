@@ -202,10 +202,6 @@ function clickGetInfo(data){
         console.log(info1);
         }
     });
-
-
-
-
 }
 
 function btnForCourse(data) {
