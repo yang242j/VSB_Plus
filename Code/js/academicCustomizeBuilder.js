@@ -163,7 +163,7 @@ function showCourses(data) {
         dragStart("#nct" + i);
     }
     dragTest();
-    
+    console.log(notCompletedData);
     document.getElementById("nct0").addEventListener("dblclick", e => {
         e.preventDefault();
         const terminfo1 = getTermInfo(notCompletedData[0]);
