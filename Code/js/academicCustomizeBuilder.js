@@ -163,34 +163,34 @@ function showCourses(data) {
         dragStart("#nct" + i);
     }
     dragTest();
-    /*console.log(notCompletedData);
-    document.getElementById("nct2").addEventListener("dblclick", e => {
+    console.log(notCompletedData);
+    document.getElementById("nct0").addEventListener("dblclick", e => {
         e.preventDefault();
-        const terminfo= getTermInfo(notCompletedData[2]);
+        const terminfo= getTermInfo(notCompletedData[0]);
 
         if(terminfo[0].length == 0){
             console.log("not applied");
         }
         else{
-        info1 = notCompletedData[2] + ":\n" + "Term Applied :" + terminfo[0] + "\n" + "Credits:" + terminfo[1] + "\n" + terminfo[2];
+        info1 = notCompletedData[0] + ":\n" + "Term Applied :" + terminfo[0] + "\n" + "Credits:" + terminfo[1] + "\n" + terminfo[2];
         console.log(info1);
         }
     });
-    document.getElementById("nct7").addEventListener("dblclick", e => {
+    document.getElementById("nct1").addEventListener("dblclick", e => {
         e.preventDefault();
-        const terminfo= getTermInfo(notCompletedData[7]);
+        const terminfo= getTermInfo(notCompletedData[1]);
 
         if(terminfo[0].length == 0){
             console.log("not applied");
         }
         else{
-        info1 = notCompletedData[7] + ":\n" + "Term Applied :" + terminfo[0] + "\n" + "Credits:" + terminfo[1] + "\n" + terminfo[2];
+        info1 = notCompletedData[1] + ":\n" + "Term Applied :" + terminfo[0] + "\n" + "Credits:" + terminfo[1] + "\n" + terminfo[2];
         console.log(info1);
         }
-    });*/
+    });
 
 
-    for (i = 0; i < notCompletedData.length; i++) {
+    /*for (i = 0; i < notCompletedData.length; i++) {
         document.getElementById("nct" + i).addEventListener("dblclick", e => {
             e.preventDefault();
             const terminfo = getTermInfo(notCompletedData[i]);
@@ -203,7 +203,7 @@ function showCourses(data) {
         console.log(info);
         }
         });
-    }
+    }*/
 }
 
 function btnForCourse(data) {
