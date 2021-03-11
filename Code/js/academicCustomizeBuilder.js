@@ -166,8 +166,8 @@ function showCourses(data) {
     console.log(notCompletedData);
     document.getElementById("nct0").addEventListener("dblclick", e => {
         e.preventDefault();
-        const terminfo1 = getTermInfo(notCompletedData[0]);
-        info1 = notCompletedData[0] + ":\n" + "Term Applied :" + terminfo1[0] + "\n" + "Credits:" + terminfo1[1] + "\n" + terminfo1[2];
+        const terminfo1 = getTermInfo(notCompletedData[1]);
+        info1 = notCompletedData[1] + ":\n" + "Term Applied :" + terminfo1[0] + "\n" + "Credits:" + terminfo1[1] + "\n" + terminfo1[2];
         console.log(info1);
     });
  
