@@ -164,7 +164,7 @@ function showCourses(data) {
     }
     dragTest();
     console.log(notCompletedData);
-    document.getElementById("nct0").addEventListener("dblclick", e => {
+    /*document.getElementById("nct0").addEventListener("dblclick", e => {
         e.preventDefault();
         const terminfo= getTermInfo(notCompletedData[0]);
 
@@ -187,10 +187,10 @@ function showCourses(data) {
         info1 = notCompletedData[1] + ":\n" + "Term Applied :" + terminfo[0] + "\n" + "Credits:" + terminfo[1] + "\n" + terminfo[2];
         console.log(info1);
         }
-    });
+    });*/
     for(i=0;i<2;i++)
     {
-        document.getElementById("nct"+i).addEventListener("dblclick", e => {
+        document.getElementById("nct").addEventListener("dblclick", e => {
             //e.preventDefault();
             const terminfo= getTermInfo(notCompletedData[i]);
     
@@ -207,20 +207,6 @@ function showCourses(data) {
     }
 
 
-    /*for (i = 0; i < notCompletedData.length; i++) {
-        document.getElementById("nct" + i).addEventListener("dblclick", e => {
-            e.preventDefault();
-            const terminfo = getTermInfo(notCompletedData[i]);
-
-        if(terminfo[0].length == 0){
-            console.log("not applied");
-        }
-        else{
-        info = notCompletedData[i] + ":\n" + "Term Applied :" + terminfo[0] + "\n" + "Credits:" + terminfo[1] + "\n" + terminfo[2];
-        console.log(info);
-        }
-        });
-    }*/
 }
 
 function btnForCourse(data) {
