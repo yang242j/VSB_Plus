@@ -440,7 +440,7 @@ function dragTest() {
 
             if (terminfo[0] != null) {
                 var terminfo1,terminfo2,terminfo3 = "";
-                
+                console.log(terminfo[0]);
                 for (i=0;i<terminfo[0].length;i++)
                 {
                     if (terminfo[0][i] == "Winter") {
@@ -464,7 +464,7 @@ function dragTest() {
                 console.log(terminfo[0][0],terminfo[0][1],terminfo[0][2]);
                 getCredits = parseInt(terminfo[1]);
             } else {
-                alert("this course not applied");
+                alert("this course is not applied");
                 return;
                 //getCredits = 0;
                 //document.getElementById(newForAlern).innerHTML = "this course not applied for now";
