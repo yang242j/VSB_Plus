@@ -164,6 +164,13 @@ function showCourses(data) {
     }
     dragTest();
     console.log(notCompletedData);
+
+    for (const clickbleZone in document.querySelectorAll(".courseTags")) {
+        document.getElementById("nct" + clickbleZone).addEventListener("dblclick", e => {
+            e.preventDefault();
+            alert("ad");
+        });
+    }
     /*document.getElementById("nct0").addEventListener("dblclick", e => {
         e.preventDefault();
         const terminfo= getTermInfo(notCompletedData[0]);
@@ -188,14 +195,6 @@ function showCourses(data) {
         console.log(info1);
         }
     });*/
-    for (const clickbleZone in document.querySelectorAll(".courseTags")) {
-        document.getElementById("nct" + clickbleZone).addEventListener("dblclick", e => {
-            e.preventDefault();
-            alert("ad");
-        });
-       
-
-
 }
 
 function btnForCourse(data) {
