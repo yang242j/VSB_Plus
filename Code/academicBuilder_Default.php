@@ -224,7 +224,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 				<h3>Courses</h3>
 				<div class = "course_tag_not_completed" id = "not_completed_tag">
 					<!-- <p id = "nct0" onclick="alert(courseInfo())">ENSE 271</p>-->
-					<p id = "nct0" onclick="alert(courseInfo())">ENSE 271</p>
+					<p id = "nct0">ENSE 271</p>
 					<p id = "nct1">ENSE 271</p>
 					<p id = "nct2">ENSE 271</p>
 					<p id = "nct3">ENSE 271</p>
