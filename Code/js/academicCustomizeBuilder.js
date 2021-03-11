@@ -437,10 +437,10 @@ function dragTest() {
             //ajaxpost(courseName, "202020", container);
             console.log(ajaxpost(courseName, "202020", container));
 
-
+            console.log(terminfo[0]);
             if (terminfo[0] != null) {
                 var terminfo1,terminfo2,terminfo3 = "";
-                console.log(terminfo[0]);
+                
                 for (i=0;i<terminfo[0].length;i++)
                 {
                     if (terminfo[0][i] == "Winter") {
@@ -461,7 +461,7 @@ function dragTest() {
 
                 document.getElementById(newForAlern).innerHTML = "Applied Term: </br>" +
                     term; //terminfo[0] is term
-                console.log(terminfo[0][0],terminfo[0][1],terminfo[0][2]);
+                //console.log(terminfo[0][0],terminfo[0][1],terminfo[0][2]);
                 getCredits = parseInt(terminfo[1]);
             } else {
                 alert("this course is not applied");
