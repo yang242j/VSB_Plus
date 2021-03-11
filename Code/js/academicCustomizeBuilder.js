@@ -164,6 +164,18 @@ function showCourses(data) {
     }
     dragTest();
     console.log(notCompletedData);
+    document.getElementById("nct1").addEventListener("dblclick", e => {
+        e.preventDefault();
+        const terminfo= getTermInfo(notCompletedData[1]);
+
+        if(terminfo[0].length == 0){
+            console.log("not applied");
+        }
+        else{
+        info1 = notCompletedData[1] + ":\n" + "Term Applied :" + terminfo[0] + "\n" + "Credits:" + terminfo[1] + "\n" + terminfo[2];
+        console.log(info1);
+        }
+    });
     document.getElementById("nct7").addEventListener("dblclick", e => {
         e.preventDefault();
         const terminfo= getTermInfo(notCompletedData[7]);
