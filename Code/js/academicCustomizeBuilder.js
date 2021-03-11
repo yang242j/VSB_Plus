@@ -181,7 +181,6 @@ function clickGetInfo(){
     for(i=2;i<5;i++){
         
         document.getElementById("nct0").addEventListener("dblclick", e => {
-            
             e.preventDefault();
             alert("asd");
             /*
