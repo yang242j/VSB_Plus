@@ -438,7 +438,7 @@ function dragTest() {
             console.log(ajaxpost(courseName, "202020", container));
 
             console.log(terminfo[0]);
-            if (terminfo[0] != null) {
+            if (terminfo[0].length > 0) {
                 var terminfo1,terminfo2,terminfo3 = "";
                 
                 for (i=0;i<terminfo[0].length;i++)
