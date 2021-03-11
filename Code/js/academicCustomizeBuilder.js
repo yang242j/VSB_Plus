@@ -155,6 +155,11 @@ function showCourses(data) {
         document.getElementById("nnct" + i).style.marginTop = "-10px";
         document.getElementById("nct" + i).style.color = "black";
         document.getElementById("nct" + i).style.marginTop = "-10px";
+
+        document.getElementById("nct" + i).addEventListener("dbclick",e=>{
+            info = getTermInfo(notCompletedData[i]);;
+            alert(info);
+        })
         //console.log(getPrerequisite(notCompletedData[i]));
     }
     for (i = 0; i < notCompletedData.length; i++) {
@@ -399,11 +404,6 @@ function dragTest() {
             dropZone.removeEventListener("dblclick",ev =>{
                 ev.preventDefault();
             });
-        });
-        dropZone.addEventListener("dblclick", ev =>{
-            ev.preventDefault();
-            if(clickId != null)
-             alert("asdsa");
         });
 
         dropZone.addEventListener("drop", e => {
