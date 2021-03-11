@@ -205,10 +205,10 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 				<h3>ENSE:</h3>
 
 				<div class = "ense_course_tag" id = "approvedCourse">
-					<p id = "ense0">ENSE 271</p>
-					<p id = "ense1">ENSE 271</p>
-					<p id = "ense2">ENSE 271</p>
-					<p id = "ense3">ENSE 271</p>
+					<p id = "ct0">ENSE 271</p>
+					<p id = "ct1">ENSE 271</p>
+					<p id = "ct2">ENSE 271</p>
+					<p id = "ct3">ENSE 271</p>
 
 					<p id = "ense4">ENSE 271</p>
 					<p id = "ense5">ENSE 271</p>
