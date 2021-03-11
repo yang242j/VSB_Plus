@@ -165,19 +165,13 @@ function showCourses(data) {
     dragTest();
     console.log(notCompletedData);
     console.log(notCompletedData[1]);
-    document.getElementById("nct0").addEventListener("dblclick", e => {
+    document.getElementById("nct1").addEventListener("dblclick", e => {
         e.preventDefault();
         const terminfo1 = getTermInfo(notCompletedData[1]);
         info1 = notCompletedData[1] + ":\n" + "Term Applied :" + terminfo1[0] + "\n" + "Credits:" + terminfo1[1] + "\n" + terminfo1[2];
         console.log(info1);
     });
  
-    document.getElementById("nct1").addEventListener("dblclick", e1=> {
-        e1.preventDefault();
-        const terminfo2 = getTermInfo(notCompletedData[1]);
-        info2 = notCompletedData[i] + ":\n" + "Term Applied :" + terminfo2[0] + "\n" + "Credits:" + terminfo2[1] + "\n" + terminfo2[2];
-        console.log(info2);
-    });
 
     /*for (i = 0; i < notCompletedData.length; i++) {
     document.getElementById("nct"+ i).addEventListener("dblclick",e=>{
