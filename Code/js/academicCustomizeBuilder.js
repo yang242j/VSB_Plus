@@ -370,6 +370,7 @@ var dragLeaveStopper = 0;
 var index = 0;
 var outputDonelist = [];
 var decidePreTrueOrFalse = false;
+var clickId;
 //recored prev drop item course name
 function dragTest() {
     //const draggableElement = document.querySelector("#nct0");
@@ -401,6 +402,7 @@ function dragTest() {
         });
         dropZone.addEventListener("dblclick", ev =>{
             ev.preventDefault();
+            if(clickId != null)
              alert("asdsa");
         });
 
@@ -411,6 +413,7 @@ function dragTest() {
             // dragLeaveStopper = 0;
             const droppedElementId = e.dataTransfer.getData("text/plain");
             const droppedElement = document.getElementById(droppedElementId);
+            clickId = droppedElementId;
             //show moreinfo in course card
 
             //console.log(dropZone.id);
@@ -534,11 +537,6 @@ function dragTest() {
 
 
 
-           
-
-            dropZone.removeEventListener("dblclick",ev =>{
-                //ev.preventDefault();
-            });
 
         });
     }
