@@ -33,7 +33,6 @@ function fetchCourseJSON(sid, password) {
         showCourses(data);
         getCreditsEarned(data);
         storePassedCourse(data);
-        clickTest();
         
         
     });
@@ -44,6 +43,10 @@ getAllCourse();
 
 window.onload = function init() {
     fetchCourseJSON(sid, pas);
+    document.getElementById("nct0").addEventListener("dblclick", e => {
+        e.preventDefault();  
+        alert("asd");
+    });
     clickGetInfo();
    
 }
