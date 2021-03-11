@@ -33,7 +33,6 @@ function fetchCourseJSON(sid, password) {
         showCourses(data);
         getCreditsEarned(data);
         storePassedCourse(data);
-        clickGetInfo();
         
         
     });
@@ -545,7 +544,7 @@ function dragTest() {
             var newForAlern2 = "nn" + droppedElementId;
             var courseName = document.getElementById(newForAlern2).innerHTML;
 
-             terminfo= getTermInfo(courseName);
+            var terminfo = getTermInfo(courseName);
     
             if(terminfo[0].length == 0){
                 console.log("not applied");
