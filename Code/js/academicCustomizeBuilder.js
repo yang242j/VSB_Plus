@@ -161,7 +161,7 @@ function showCourses(data) {
     }
     for (i = 0; i < notCompletedData.length; i++) {
         dragStart("#nct" + i);
-        document.getElementById("nnnct"+ i).addEventListener("dblclick",e=>{
+        document.getElementById("nct"+ i).addEventListener("dblclick",e=>{
             e.preventDefault();
             //info = getTermInfo(notCompletedData[i]);
             alert("asdsad");
