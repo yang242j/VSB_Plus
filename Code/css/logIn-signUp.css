@@ -82,3 +82,14 @@ body section.container div.disclaimer div.paragraghs {
 body section.container div.disclaimer div.paragraghs p {
     margin-top: 5%;
 }
+
+/********************************/
+@media screen and (max-width: 1080px) {
+
+    body section.container div.form-div,
+    body section.container div.disclaimer {
+        width: 100%;
+        float: none;
+        margin: unset;
+    }
+}
