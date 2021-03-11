@@ -3,6 +3,7 @@ var courseReqData;
 var allCourseData;
 var totalCredits = 0;
 var creditsEarned = 0;
+var tempData;
 //store the completed class
 var doneList = [
     [],
@@ -31,12 +32,11 @@ function fetchCourseJSON(sid, password) {
         btnForCourse(data);
         showCourses(data);
         getCreditsEarned(data);
-        storePassedCourse(data);
-        clickGetInfo(data);
+        
+        
 
     });
 }
-
 getTermData(major);
 getAllCourse();
 
@@ -134,6 +134,7 @@ function showCourses(data) {
     var dataJSON = JSON.parse(data);
     //console.log(dataJSON);
     var notCompletedData = findCourseToTake(dataJSON);
+    tempData = notCompletedData;
     for (i = 0; i < 12; i++) {
         if (i < dataJSON.length) {
             //<br/>
@@ -174,6 +175,7 @@ function showCourses(data) {
     }*/
    
 }
+storePassedCourse(tempData);
 function clickGetInfo(data){
     var dataJSON = JSON.parse(data);
     //console.log(dataJSON);
