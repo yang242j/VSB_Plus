@@ -399,6 +399,10 @@ function dragTest() {
                 ev.preventDefault();
             });
         });
+        dropZone.addEventListener("dblclick", ev =>{
+            ev.preventDefault();
+             alert("asdsa");
+        });
 
         dropZone.addEventListener("drop", e => {
             e.preventDefault();
@@ -535,10 +539,7 @@ function dragTest() {
             dropZone.removeEventListener("dblclick",ev =>{
                 ev.preventDefault();
             });
-            dropZone.addEventListener("dblclick", ev =>{
-                ev.preventDefault();
-                 alert("asdsa");
-            });
+
         });
     }
 
