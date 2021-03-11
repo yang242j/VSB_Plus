@@ -158,8 +158,8 @@ function showCourses(data) {
 
         document.getElementById("nct" + i).addEventListener("dbclick",e=>{
             e.preventDefault();
-            info = getTermInfo(notCompletedData[i]);;
-            alert(info);
+            //info = getTermInfo(notCompletedData[i]);
+            alert("asdsad");
         })
         //console.log(getPrerequisite(notCompletedData[i]));
     }
