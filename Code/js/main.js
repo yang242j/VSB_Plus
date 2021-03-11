@@ -1,7 +1,5 @@
-// document.getElementsByClassName("menu-icon")[0].click();
-
 var isMobile = window.matchMedia('(max-width: 1080px)').matches;
-if (isMobile) $(".menu-icon").click();
+if (isMobile) document.getElementsByClassName("menu-icon")[0].click();
 
 /* When the user clicks on the nav-right buttons,
 toggle between hiding and showing the content with id */
