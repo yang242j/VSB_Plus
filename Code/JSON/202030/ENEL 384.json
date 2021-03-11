@@ -1,1 +1,65 @@
-{"term": "2020 Fall", "short_name": "ENEL 384", "title": "Digital Electronics", "faculty": "ENEL", "credit": "3", "description": "The introductory aspects of digital electronic circuits, including basic principles of digital systems, logic function and gates, boolean algebra and combinational logic,\nintroduction to VHDL, introduction to FPGAs, combinational logic functions,\ndigital arithmetic and arithmetic circuits, introduction to sequential logic, counters\nand shift registers, and state machine design.", "prerequisite": "ENEL 282", "section": [{"course_ID": "30984", "section_num": "001", "instructors": "Lei   Zhang (P)", "days": "TR", "time": "11:30 am - 12:45 pm", "loc": "Remote", "course_type": "Lecture", "exam_days": "T", "exam_date": "Dec 22, 2020 - Dec 22, 2020", "exam_time": "2:00 pm - 5:00 pm"}, {"course_ID": "30985", "section_num": "091", "instructors": "David B.  Duguid (P)", "days": "R", "time": "2:30 pm - 5:15 pm", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "30986", "section_num": "092", "instructors": "David B.  Duguid (P)", "days": "M", "time": "2:30 pm - 5:15 pm", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "30987", "section_num": "093", "instructors": "David B.  Duguid (P)", "days": "F", "time": "2:30 pm - 5:15 pm", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "30988", "section_num": "094", "instructors": "David B.  Duguid (P)", "days": "F", "time": "8:30 am - 11:15 am", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}]}
+{
+    "term": "2020 Fall",
+    "short_name": "ENEL 384",
+    "title": "Digital Electronics",
+    "faculty": "ENEL",
+    "credit": "3",
+    "description": "The introductory aspects of digital electronic circuits, including basic principles of digital systems, logic function and gates, boolean algebra and combinational logic,\nintroduction to VHDL, introduction to FPGAs, combinational logic functions,\ndigital arithmetic and arithmetic circuits, introduction to sequential logic, counters\nand shift registers, and state machine design.",
+    "prerequisite": "ENEL 282",
+    "section": [{
+        "course_ID": "30984",
+        "section_num": "001",
+        "instructors": "Lei   Zhang (P)",
+        "days": "TR",
+        "time": "11:30 am - 12:45 pm",
+        "loc": "Remote",
+        "course_type": "Lecture",
+        "exam_days": "T",
+        "exam_date": "Dec 22, 2020 - Dec 22, 2020",
+        "exam_time": "2:00 pm - 5:00 pm"
+    }, {
+        "course_ID": "30985",
+        "section_num": "091",
+        "instructors": "David B.  Duguid (P)",
+        "days": "R",
+        "time": "2:30 pm - 5:15 pm",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "30986",
+        "section_num": "092",
+        "instructors": "David B.  Duguid (P)",
+        "days": "M",
+        "time": "2:30 pm - 5:15 pm",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "30987",
+        "section_num": "093",
+        "instructors": "David B.  Duguid (P)",
+        "days": "F",
+        "time": "2:30 pm - 5:15 pm",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "30988",
+        "section_num": "094",
+        "instructors": "David B.  Duguid (P)",
+        "days": "F",
+        "time": "8:30 am - 11:15 am",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }]
+}

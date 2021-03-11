@@ -1,1 +1,32 @@
-{"term": "2020 Fall", "short_name": "ENPE 241", "title": "Introduction to Petroleum Engineering", "faculty": "ENPE", "credit": "3", "description": "Exposure to various disciplines within petroleum engineering including drilling, production, and reservoir engineering; professionalism and ethics in petroleum engineering.", "prerequisite": " GEOL 102", "section": [{"course_ID": "31324", "section_num": "001", "instructors": "Farshid   Torabi (P)", "days": "TR", "time": "4:00 pm - 5:15 pm", "loc": "Remote", "course_type": "Lecture", "exam_days": "R", "exam_date": "Dec 10, 2020 - Dec 10, 2020", "exam_time": "2:00 pm - 5:00 pm"}, {"course_ID": "31325", "section_num": "091", "instructors": "Farshid   Torabi (P)", "days": "M", "time": "3:30 pm - 5:20 pm", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}]}
+{
+    "term": "2020 Fall",
+    "short_name": "ENPE 241",
+    "title": "Introduction to Petroleum Engineering",
+    "faculty": "ENPE",
+    "credit": "3",
+    "description": "Exposure to various disciplines within petroleum engineering including drilling, production, and reservoir engineering; professionalism and ethics in petroleum engineering.",
+    "prerequisite": " GEOL 102",
+    "section": [{
+        "course_ID": "31324",
+        "section_num": "001",
+        "instructors": "Farshid   Torabi (P)",
+        "days": "TR",
+        "time": "4:00 pm - 5:15 pm",
+        "loc": "Remote",
+        "course_type": "Lecture",
+        "exam_days": "R",
+        "exam_date": "Dec 10, 2020 - Dec 10, 2020",
+        "exam_time": "2:00 pm - 5:00 pm"
+    }, {
+        "course_ID": "31325",
+        "section_num": "091",
+        "instructors": "Farshid   Torabi (P)",
+        "days": "M",
+        "time": "3:30 pm - 5:20 pm",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }]
+}

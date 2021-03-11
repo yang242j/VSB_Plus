@@ -1,1 +1,32 @@
-{"term": "2020 Fall", "short_name": "ENEV 223", "title": "Engineering, Environment, and Society", "faculty": "ENEV", "credit": "3", "description": "Introduction and application of environmental design in engineering practice, including public health and safety, environmental ethics, resource and energy systems, impacts of technology on society, sustainable development and environmental stewardship.", "prerequisite": "ENGG 123", "section": [{"course_ID": "31012", "section_num": "001", "instructors": "Jinkai   Xue (P)", "days": "MWF", "time": "1:30 pm - 2:20 pm", "loc": "Remote", "course_type": "Lecture", "exam_days": "F", "exam_date": "Dec 18, 2020 - Dec 18, 2020", "exam_time": "2:00 pm - 5:00 pm"}, {"course_ID": "31013", "section_num": "091", "instructors": "Jinkai   Xue (P)", "days": "T", "time": "8:30 am - 9:20 am", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}]}
+{
+    "term": "2020 Fall",
+    "short_name": "ENEV 223",
+    "title": "Engineering, Environment, and Society",
+    "faculty": "ENEV",
+    "credit": "3",
+    "description": "Introduction and application of environmental design in engineering practice, including public health and safety, environmental ethics, resource and energy systems, impacts of technology on society, sustainable development and environmental stewardship.",
+    "prerequisite": "ENGG 123",
+    "section": [{
+        "course_ID": "31012",
+        "section_num": "001",
+        "instructors": "Jinkai   Xue (P)",
+        "days": "MWF",
+        "time": "1:30 pm - 2:20 pm",
+        "loc": "Remote",
+        "course_type": "Lecture",
+        "exam_days": "F",
+        "exam_date": "Dec 18, 2020 - Dec 18, 2020",
+        "exam_time": "2:00 pm - 5:00 pm"
+    }, {
+        "course_ID": "31013",
+        "section_num": "091",
+        "instructors": "Jinkai   Xue (P)",
+        "days": "T",
+        "time": "8:30 am - 9:20 am",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }]
+}

@@ -1,1 +1,10 @@
-{"term": "No class for the term", "short_name": "ENPE 410", "title": "Enhanced Oil Recovery Methods", "faculty": "ENPE", "credit": "3", "description": "Displacement processes for recovering additional hydrocarbons.  Waterflooding, gas flooding, solvent flooding, and thermal recovery processes.  Development of design techniques.", "prerequisite": "ENPE 302", "section": []}
+{
+    "term": "No class for the term",
+    "short_name": "ENPE 410",
+    "title": "Enhanced Oil Recovery Methods",
+    "faculty": "ENPE",
+    "credit": "3",
+    "description": "Displacement processes for recovering additional hydrocarbons.  Waterflooding, gas flooding, solvent flooding, and thermal recovery processes.  Development of design techniques.",
+    "prerequisite": "ENPE 302",
+    "section": []
+}

@@ -1,1 +1,21 @@
-{"term": "2020 Fall", "short_name": "CS 372", "title": "Software Engineering Methodology", "faculty": "CS", "credit": "3", "description": "Fundamental principles of designing programs and developing large software systems that meet specifications and that are safe, secure, reliable and maintainable. Software process models, software project management, requirements engineering, software design, software construction, software verification and validation, software tools and environments, software evolution, software reliability.", "prerequisite": "CS 215", "section": [{"course_ID": "30681", "section_num": "001", "instructors": "Tanzina   Akter (P)", "days": "MW", "time": "5:30 pm - 6:45 pm", "loc": "Remote", "course_type": "Lecture", "exam_days": "M", "exam_date": "Dec 21, 2020 - Dec 21, 2020", "exam_time": "7:00 pm - 10:00 pm"}]}
+{
+    "term": "2020 Fall",
+    "short_name": "CS 372",
+    "title": "Software Engineering Methodology",
+    "faculty": "CS",
+    "credit": "3",
+    "description": "Fundamental principles of designing programs and developing large software systems that meet specifications and that are safe, secure, reliable and maintainable. Software process models, software project management, requirements engineering, software design, software construction, software verification and validation, software tools and environments, software evolution, software reliability.",
+    "prerequisite": "CS 215",
+    "section": [{
+        "course_ID": "30681",
+        "section_num": "001",
+        "instructors": "Tanzina   Akter (P)",
+        "days": "MW",
+        "time": "5:30 pm - 6:45 pm",
+        "loc": "Remote",
+        "course_type": "Lecture",
+        "exam_days": "M",
+        "exam_date": "Dec 21, 2020 - Dec 21, 2020",
+        "exam_time": "7:00 pm - 10:00 pm"
+    }]
+}

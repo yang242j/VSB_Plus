@@ -1,1 +1,12 @@
-{"term1": ["CHEM 104", "ENGG 123", "ENGG 140", "MATH 110", "MATH 122"], "term2": ["CS 110", "ENGG 100", "ENGL 100", "MATH 111", "PHYS 119"], "term3": ["CS 115", "ENEL 280", "ENEV 223", "MATH 217", "PHYS 119"], "term4": ["CS 210", "ENEL 281", "ENEL 282", "MATH 213", "STAT 289"], "term5": ["BUS 260", "ENEL 383", "ENEL 384", "ENSE 352", "PHYS 201"], "term6": ["BUS 210", "CS 335", "ECON 201", "ENEL 380", "ENEL 390"], "term7": ["ENEL 371", "ENEL 387", "ENSE 350", "Approved", "Approved"], "term8": ["ENEL 400", "ENGG 303", "Approved", "Approved", "Approved", "Approved"], "term9": ["ENEL 417", "ENGG 401", "Approved", "Approved", "Approved"], "Approved": ["ENEL 389", "ENEL 393", "ENEL 395", "ENEL 472", "ENEL 482", "ENEL 484", "ENEL 487", "ENEL 489", "ENEL 494", "ENEL 495", "ENEV 261", "ENIN 253", "ENSE 481", "CS 340", "CS 350", "CS 372", "CS 375", "ENEV 334", "ENGG 411", "ENIN 433", "ENIN 440"]}
+{
+    "term1": ["CHEM 104", "ENGG 123", "ENGG 140", "MATH 110", "MATH 122"],
+    "term2": ["CS 110", "ENGG 100", "ENGL 100", "MATH 111", "PHYS 119"],
+    "term3": ["CS 115", "ENEL 280", "ENEV 223", "MATH 217", "PHYS 119"],
+    "term4": ["CS 210", "ENEL 281", "ENEL 282", "MATH 213", "STAT 289"],
+    "term5": ["BUS 260", "ENEL 383", "ENEL 384", "ENSE 352", "PHYS 201"],
+    "term6": ["BUS 210", "CS 335", "ECON 201", "ENEL 380", "ENEL 390"],
+    "term7": ["ENEL 371", "ENEL 387", "ENSE 350", "Approved", "Approved"],
+    "term8": ["ENEL 400", "ENGG 303", "Approved", "Approved", "Approved", "Approved"],
+    "term9": ["ENEL 417", "ENGG 401", "Approved", "Approved", "Approved"],
+    "Approved": ["ENEL 389", "ENEL 393", "ENEL 395", "ENEL 472", "ENEL 482", "ENEL 484", "ENEL 487", "ENEL 489", "ENEL 494", "ENEL 495", "ENEV 261", "ENIN 253", "ENSE 481", "CS 340", "CS 350", "CS 372", "CS 375", "ENEV 334", "ENGG 411", "ENIN 433", "ENIN 440"]
+}

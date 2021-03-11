@@ -1,1 +1,109 @@
-{"term": "2020 Spring/Summer", "short_name": "CS 115", "title": "Object-Oriented Design", "faculty": "CS", "credit": "3", "description": "This course focuses on the concepts of object-oriented programming. Topics include data abstraction, classes, composition and inheritance, subtyping, dynamic binding, polymorphism and dynamic memory management. Other topics include type systems, two-dimensional arrays, records, references, searching and sorting algorithms, language translation. Software engineering: comprehensibility, correctness, efficiency, refactoring.", "prerequisite": "CS 110 with a minimum grade of 65% and one of MATH 110 (may be taken concurrently) or MATH 103 with a minimum grade of 80%.", "section": [{"course_ID": "22071", "section_num": "070", "instructors": "Richard Wayne  Dosselmann (P)", "days": "MTWR", "time": "9:30 am - 10:45 am", "loc": "Remote", "course_type": "Lecture", "exam_days": "T", "exam_date": "Aug 25, 2020 - Aug 25, 2020", "exam_time": "8:00 am - 11:00 am"}, {"course_ID": "22769", "section_num": "092", "instructors": "November Janet  Scheidt (P)", "days": "F", "time": "1:30 pm - 4:50 pm", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "22767", "section_num": "093", "instructors": "November Janet  Scheidt (P)", "days": "T", "time": "4:30 pm - 7:50 pm", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "22768", "section_num": "094", "instructors": "November Janet  Scheidt (P)", "days": "R", "time": "4:30 pm - 7:50 pm", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "22072", "section_num": "095", "instructors": "November Janet  Scheidt (P)", "days": "W", "time": "12:30 pm - 3:50 pm", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "22073", "section_num": "096", "instructors": "November Janet  Scheidt (P)", "days": "R", "time": "12:30 pm - 3:50 pm", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "22074", "section_num": "097", "instructors": "November Janet  Scheidt (P)", "days": "F", "time": "9:30 am - 12:50 pm", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "22075", "section_num": "098", "instructors": "November Janet  Scheidt (P)", "days": "T", "time": "12:30 pm - 3:50 pm", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "22076", "section_num": "099", "instructors": "November Janet  Scheidt (P)", "days": "W", "time": "4:00 pm - 7:20 pm", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}]}
+{
+    "term": "2020 Spring/Summer",
+    "short_name": "CS 115",
+    "title": "Object-Oriented Design",
+    "faculty": "CS",
+    "credit": "3",
+    "description": "This course focuses on the concepts of object-oriented programming. Topics include data abstraction, classes, composition and inheritance, subtyping, dynamic binding, polymorphism and dynamic memory management. Other topics include type systems, two-dimensional arrays, records, references, searching and sorting algorithms, language translation. Software engineering: comprehensibility, correctness, efficiency, refactoring.",
+    "prerequisite": "CS 110 with a minimum grade of 65% and one of MATH 110 (may be taken concurrently) or MATH 103 with a minimum grade of 80%.",
+    "section": [{
+        "course_ID": "22071",
+        "section_num": "070",
+        "instructors": "Richard Wayne  Dosselmann (P)",
+        "days": "MTWR",
+        "time": "9:30 am - 10:45 am",
+        "loc": "Remote",
+        "course_type": "Lecture",
+        "exam_days": "T",
+        "exam_date": "Aug 25, 2020 - Aug 25, 2020",
+        "exam_time": "8:00 am - 11:00 am"
+    }, {
+        "course_ID": "22769",
+        "section_num": "092",
+        "instructors": "November Janet  Scheidt (P)",
+        "days": "F",
+        "time": "1:30 pm - 4:50 pm",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "22767",
+        "section_num": "093",
+        "instructors": "November Janet  Scheidt (P)",
+        "days": "T",
+        "time": "4:30 pm - 7:50 pm",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "22768",
+        "section_num": "094",
+        "instructors": "November Janet  Scheidt (P)",
+        "days": "R",
+        "time": "4:30 pm - 7:50 pm",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "22072",
+        "section_num": "095",
+        "instructors": "November Janet  Scheidt (P)",
+        "days": "W",
+        "time": "12:30 pm - 3:50 pm",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "22073",
+        "section_num": "096",
+        "instructors": "November Janet  Scheidt (P)",
+        "days": "R",
+        "time": "12:30 pm - 3:50 pm",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "22074",
+        "section_num": "097",
+        "instructors": "November Janet  Scheidt (P)",
+        "days": "F",
+        "time": "9:30 am - 12:50 pm",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "22075",
+        "section_num": "098",
+        "instructors": "November Janet  Scheidt (P)",
+        "days": "T",
+        "time": "12:30 pm - 3:50 pm",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "22076",
+        "section_num": "099",
+        "instructors": "November Janet  Scheidt (P)",
+        "days": "W",
+        "time": "4:00 pm - 7:20 pm",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }]
+}

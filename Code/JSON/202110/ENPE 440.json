@@ -1,1 +1,10 @@
-{"term": "No class for the term", "short_name": "ENPE 440", "title": "Well Logging and Formation Evaluation", "faculty": "ENPE", "credit": "3", "description": "Fundamentals of well logging for the determination of petrophysical properties in the near bore region, types of well logging devices, and applications of well logs for petroleum system management.", "prerequisite": "ENPE 241 and ENPE 360 (may be taken concurrently)", "section": []}
+{
+    "term": "No class for the term",
+    "short_name": "ENPE 440",
+    "title": "Well Logging and Formation Evaluation",
+    "faculty": "ENPE",
+    "credit": "3",
+    "description": "Fundamentals of well logging for the determination of petrophysical properties in the near bore region, types of well logging devices, and applications of well logs for petroleum system management.",
+    "prerequisite": "ENPE 241 and ENPE 360 (may be taken concurrently)",
+    "section": []
+}

@@ -1,1 +1,54 @@
-{"term": "2020 Spring/Summer", "short_name": "BUS 260", "title": "Introduction to Organizational Behaviour", "faculty": "BUS", "credit": "3", "description": "This introductory course addresses the basic concepts and processes of organizational behaviour. Topics will include:  individual level variables, such as perception, personality, attitudes, and motivation; interpersonal and group processes, such as communication, teams, leadership, and power; and, organizational level factors such as organizational design, culture, and change.", "prerequisite": "ENGL 100, or ACAD 100, or KIN 101.", "section": [{"course_ID": "21819", "section_num": "040", "instructors": "Nadine Marie  Milne (P)", "days": "MW", "time": "2:00 pm - 4:45 pm", "loc": "Remote", "course_type": "Lecture", "exam_days": "W", "exam_date": "Jun 24, 2020 - Jun 24, 2020", "exam_time": "2:00 pm - 5:00 pm"}, {"course_ID": "21820", "section_num": "041", "instructors": "Nadine Marie  Milne (P)", "days": "MW", "time": "2:00 pm - 4:45 pm", "loc": "Remote", "course_type": "Lecture", "exam_days": "W", "exam_date": "Jun 24, 2020 - Jun 24, 2020", "exam_time": "2:00 pm - 5:00 pm"}, {"course_ID": "22057", "section_num": "070", "instructors": "Nadine Marie  Milne (P)", "days": "MW", "time": "11:00 am - 1:45 pm", "loc": "Remote", "course_type": "Lecture", "exam_days": "S", "exam_date": "Aug 22, 2020 - Aug 22, 2020", "exam_time": "8:00 am - 11:00 am"}, {"course_ID": "22058", "section_num": "071", "instructors": "Nadine Marie  Milne (P)", "days": "MW", "time": "11:00 am - 1:45 pm", "loc": "Remote", "course_type": "Lecture", "exam_days": "S", "exam_date": "Aug 22, 2020 - Aug 22, 2020", "exam_time": "8:00 am - 11:00 am"}]}
+{
+    "term": "2020 Spring/Summer",
+    "short_name": "BUS 260",
+    "title": "Introduction to Organizational Behaviour",
+    "faculty": "BUS",
+    "credit": "3",
+    "description": "This introductory course addresses the basic concepts and processes of organizational behaviour. Topics will include:  individual level variables, such as perception, personality, attitudes, and motivation; interpersonal and group processes, such as communication, teams, leadership, and power; and, organizational level factors such as organizational design, culture, and change.",
+    "prerequisite": "ENGL 100, or ACAD 100, or KIN 101.",
+    "section": [{
+        "course_ID": "21819",
+        "section_num": "040",
+        "instructors": "Nadine Marie  Milne (P)",
+        "days": "MW",
+        "time": "2:00 pm - 4:45 pm",
+        "loc": "Remote",
+        "course_type": "Lecture",
+        "exam_days": "W",
+        "exam_date": "Jun 24, 2020 - Jun 24, 2020",
+        "exam_time": "2:00 pm - 5:00 pm"
+    }, {
+        "course_ID": "21820",
+        "section_num": "041",
+        "instructors": "Nadine Marie  Milne (P)",
+        "days": "MW",
+        "time": "2:00 pm - 4:45 pm",
+        "loc": "Remote",
+        "course_type": "Lecture",
+        "exam_days": "W",
+        "exam_date": "Jun 24, 2020 - Jun 24, 2020",
+        "exam_time": "2:00 pm - 5:00 pm"
+    }, {
+        "course_ID": "22057",
+        "section_num": "070",
+        "instructors": "Nadine Marie  Milne (P)",
+        "days": "MW",
+        "time": "11:00 am - 1:45 pm",
+        "loc": "Remote",
+        "course_type": "Lecture",
+        "exam_days": "S",
+        "exam_date": "Aug 22, 2020 - Aug 22, 2020",
+        "exam_time": "8:00 am - 11:00 am"
+    }, {
+        "course_ID": "22058",
+        "section_num": "071",
+        "instructors": "Nadine Marie  Milne (P)",
+        "days": "MW",
+        "time": "11:00 am - 1:45 pm",
+        "loc": "Remote",
+        "course_type": "Lecture",
+        "exam_days": "S",
+        "exam_date": "Aug 22, 2020 - Aug 22, 2020",
+        "exam_time": "8:00 am - 11:00 am"
+    }]
+}

@@ -1,1 +1,32 @@
-{"term": "2020 Fall", "short_name": "MATH 213", "title": "Vector Calculus", "faculty": "MATH", "credit": "3", "description": "A study of vector functions and functions of several variables and their derivatives; Applied maximum and minimum problems, Lagrange multipliers, multiple integration, integration in polar, cylindrical and spherical coordinates; Green's, Stokes' and the Divergence Theorem.", "prerequisite": "MATH 111 and 122", "section": [{"course_ID": "32095", "section_num": "001", "instructors": "Bruce C.  Gilligan (P)", "days": "TR", "time": "11:30 am - 12:45 pm", "loc": "Remote", "course_type": "Lecture", "exam_days": "M", "exam_date": "Dec 21, 2020 - Dec 21, 2020", "exam_time": "2:00 pm - 5:00 pm"}, {"course_ID": "32096", "section_num": "991", "instructors": "Hugo   Rodriguez Ordonez (P)", "days": "TR", "time": "5:30 pm - 6:45 pm", "loc": "Classroom Building 130", "course_type": "Lecture", "exam_days": "M", "exam_date": "Dec 21, 2020 - Dec 21, 2020", "exam_time": "2:00 pm - 5:00 pm"}]}
+{
+    "term": "2020 Fall",
+    "short_name": "MATH 213",
+    "title": "Vector Calculus",
+    "faculty": "MATH",
+    "credit": "3",
+    "description": "A study of vector functions and functions of several variables and their derivatives; Applied maximum and minimum problems, Lagrange multipliers, multiple integration, integration in polar, cylindrical and spherical coordinates; Green's, Stokes' and the Divergence Theorem.",
+    "prerequisite": "MATH 111 and 122",
+    "section": [{
+        "course_ID": "32095",
+        "section_num": "001",
+        "instructors": "Bruce C.  Gilligan (P)",
+        "days": "TR",
+        "time": "11:30 am - 12:45 pm",
+        "loc": "Remote",
+        "course_type": "Lecture",
+        "exam_days": "M",
+        "exam_date": "Dec 21, 2020 - Dec 21, 2020",
+        "exam_time": "2:00 pm - 5:00 pm"
+    }, {
+        "course_ID": "32096",
+        "section_num": "991",
+        "instructors": "Hugo   Rodriguez Ordonez (P)",
+        "days": "TR",
+        "time": "5:30 pm - 6:45 pm",
+        "loc": "Classroom Building 130",
+        "course_type": "Lecture",
+        "exam_days": "M",
+        "exam_date": "Dec 21, 2020 - Dec 21, 2020",
+        "exam_time": "2:00 pm - 5:00 pm"
+    }]
+}

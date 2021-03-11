@@ -1,1 +1,54 @@
-{"term": "2020 Fall", "short_name": "MATH 111", "title": "Calculus II", "faculty": "MATH", "credit": "3", "description": "Differentiation and integration of exponential and logarithmic functions; methods of integration and applications; indeterminate forms, L'Hospital's rule and improper integrals; sequences, series, power series and Taylor series.", "prerequisite": "MATH 110, or MATH 103 with a grade of at least 80%", "section": [{"course_ID": "32082", "section_num": "001", "instructors": "Allen W.  Herman (P)", "days": "MWF", "time": "8:30 am - 9:20 am", "loc": "Classroom Building 127", "course_type": "Lecture", "exam_days": "R", "exam_date": "Dec 10, 2020 - Dec 10, 2020", "exam_time": "7:00 pm - 10:00 pm"}, {"course_ID": "32084", "section_num": "010", "instructors": "TBA", "days": "T", "time": "1:00 pm - 1:50 pm", "loc": "Classroom Building 130", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "32086", "section_num": "991", "instructors": "Suporna   Das (P)", "days": "MW", "time": "7:00 pm - 8:15 pm", "loc": "Remote", "course_type": "Lecture", "exam_days": "R", "exam_date": "Dec 10, 2020 - Dec 10, 2020", "exam_time": "7:00 pm - 10:00 pm"}, {"course_ID": "32087", "section_num": "992", "instructors": "TBA", "days": "T", "time": "5:30 pm - 6:20 pm", "loc": "Classroom Building 128", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}]}
+{
+    "term": "2020 Fall",
+    "short_name": "MATH 111",
+    "title": "Calculus II",
+    "faculty": "MATH",
+    "credit": "3",
+    "description": "Differentiation and integration of exponential and logarithmic functions; methods of integration and applications; indeterminate forms, L'Hospital's rule and improper integrals; sequences, series, power series and Taylor series.",
+    "prerequisite": "MATH 110, or MATH 103 with a grade of at least 80%",
+    "section": [{
+        "course_ID": "32082",
+        "section_num": "001",
+        "instructors": "Allen W.  Herman (P)",
+        "days": "MWF",
+        "time": "8:30 am - 9:20 am",
+        "loc": "Classroom Building 127",
+        "course_type": "Lecture",
+        "exam_days": "R",
+        "exam_date": "Dec 10, 2020 - Dec 10, 2020",
+        "exam_time": "7:00 pm - 10:00 pm"
+    }, {
+        "course_ID": "32084",
+        "section_num": "010",
+        "instructors": "TBA",
+        "days": "T",
+        "time": "1:00 pm - 1:50 pm",
+        "loc": "Classroom Building 130",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "32086",
+        "section_num": "991",
+        "instructors": "Suporna   Das (P)",
+        "days": "MW",
+        "time": "7:00 pm - 8:15 pm",
+        "loc": "Remote",
+        "course_type": "Lecture",
+        "exam_days": "R",
+        "exam_date": "Dec 10, 2020 - Dec 10, 2020",
+        "exam_time": "7:00 pm - 10:00 pm"
+    }, {
+        "course_ID": "32087",
+        "section_num": "992",
+        "instructors": "TBA",
+        "days": "T",
+        "time": "5:30 pm - 6:20 pm",
+        "loc": "Classroom Building 128",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }]
+}

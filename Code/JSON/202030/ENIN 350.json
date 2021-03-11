@@ -1,1 +1,43 @@
-{"term": "2020 Fall", "short_name": "ENIN 350", "title": "Chemical Manufacturing Process", "faculty": "ENIN", "credit": "3", "description": "Mass and energy balances in chemical process industries. Applications including the petrochemical, pulp and paper, and mining industries.  Environmental problems, thermodynamics, stoichiometry, chemical reactions, and computer applications.", "prerequisite": "CHEM 104 and ENIN 253 (concurrent enrolment is allowed)", "section": [{"course_ID": "31277", "section_num": "001", "instructors": "Hussameldin   Ibrahim (P)", "days": "TR", "time": "11:30 am - 12:45 pm", "loc": "Remote", "course_type": "Lecture", "exam_days": "T", "exam_date": "Dec 22, 2020 - Dec 22, 2020", "exam_time": "2:00 pm - 5:00 pm"}, {"course_ID": "31278", "section_num": "081", "instructors": "Hussameldin   Ibrahim (P)", "days": "M", "time": "10:30 am - 12:20 pm", "loc": "Remote", "course_type": "Seminar", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "31279", "section_num": "091", "instructors": "Isam   Al Zubaidi (P)", "days": "W", "time": "8:30 am - 11:15 am", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}]}
+{
+    "term": "2020 Fall",
+    "short_name": "ENIN 350",
+    "title": "Chemical Manufacturing Process",
+    "faculty": "ENIN",
+    "credit": "3",
+    "description": "Mass and energy balances in chemical process industries. Applications including the petrochemical, pulp and paper, and mining industries.  Environmental problems, thermodynamics, stoichiometry, chemical reactions, and computer applications.",
+    "prerequisite": "CHEM 104 and ENIN 253 (concurrent enrolment is allowed)",
+    "section": [{
+        "course_ID": "31277",
+        "section_num": "001",
+        "instructors": "Hussameldin   Ibrahim (P)",
+        "days": "TR",
+        "time": "11:30 am - 12:45 pm",
+        "loc": "Remote",
+        "course_type": "Lecture",
+        "exam_days": "T",
+        "exam_date": "Dec 22, 2020 - Dec 22, 2020",
+        "exam_time": "2:00 pm - 5:00 pm"
+    }, {
+        "course_ID": "31278",
+        "section_num": "081",
+        "instructors": "Hussameldin   Ibrahim (P)",
+        "days": "M",
+        "time": "10:30 am - 12:20 pm",
+        "loc": "Remote",
+        "course_type": "Seminar",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "31279",
+        "section_num": "091",
+        "instructors": "Isam   Al Zubaidi (P)",
+        "days": "W",
+        "time": "8:30 am - 11:15 am",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }]
+}

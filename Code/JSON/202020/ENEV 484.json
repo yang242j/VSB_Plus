@@ -1,1 +1,10 @@
-{"term": "No class for the term", "short_name": "ENEV 484", "title": "Highway Design", "faculty": "ENEV", "credit": "3", "description": "Detailed geometric design of highways; functional and detailed geometric design of at-grade and grade separated intersections; and, introduction to design of flexible and rigid pavements.", "prerequisite": "ENEV 281, 372, and 384", "section": []}
+{
+    "term": "No class for the term",
+    "short_name": "ENEV 484",
+    "title": "Highway Design",
+    "faculty": "ENEV",
+    "credit": "3",
+    "description": "Detailed geometric design of highways; functional and detailed geometric design of at-grade and grade separated intersections; and, introduction to design of flexible and rigid pavements.",
+    "prerequisite": "ENEV 281, 372, and 384",
+    "section": []
+}

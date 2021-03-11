@@ -1,1 +1,21 @@
-{"term": "2020 Fall", "short_name": "CS 350", "title": "Programming Language Concepts", "faculty": "CS", "credit": "3", "description": "Programming language genealogy and design. Imperative, functional, and object-oriented language paradigms. Context-free grammars and syntax trees. Data types, control structures, exception handling, data abstraction, information hiding, and non-determinism. Program representation, translation, and execution. Functional programming: advantages, constructs, closures, and higher-order operations. Parallel programming.", "prerequisite": "CS 210", "section": [{"course_ID": "30680", "section_num": "001", "instructors": "Mengjun   Hu (P)", "days": "TR", "time": "2:30 pm - 3:45 pm", "loc": "Remote", "course_type": "Lecture", "exam_days": "T", "exam_date": "Dec 15, 2020 - Dec 15, 2020", "exam_time": "2:00 pm - 5:00 pm"}]}
+{
+    "term": "2020 Fall",
+    "short_name": "CS 350",
+    "title": "Programming Language Concepts",
+    "faculty": "CS",
+    "credit": "3",
+    "description": "Programming language genealogy and design. Imperative, functional, and object-oriented language paradigms. Context-free grammars and syntax trees. Data types, control structures, exception handling, data abstraction, information hiding, and non-determinism. Program representation, translation, and execution. Functional programming: advantages, constructs, closures, and higher-order operations. Parallel programming.",
+    "prerequisite": "CS 210",
+    "section": [{
+        "course_ID": "30680",
+        "section_num": "001",
+        "instructors": "Mengjun   Hu (P)",
+        "days": "TR",
+        "time": "2:30 pm - 3:45 pm",
+        "loc": "Remote",
+        "course_type": "Lecture",
+        "exam_days": "T",
+        "exam_date": "Dec 15, 2020 - Dec 15, 2020",
+        "exam_time": "2:00 pm - 5:00 pm"
+    }]
+}

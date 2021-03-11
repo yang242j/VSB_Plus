@@ -1,1 +1,43 @@
-{"term": "2021 Winter", "short_name": "ENEL 281", "title": "Signals, Circuits, and Systems", "faculty": "ENEL", "credit": "3", "description": "The introductory aspects of signals, circuits and systems including: AC circuit analysis,frequency response, resonance, passive and active filters, second order transient analysis, conversion between time domain and frequency domain signals using the Laplace and Fourier Transforms.", "prerequisite": " MATH 217 (concurrent enrolment allowed) and ENEL 280", "section": [{"course_ID": "10879", "section_num": "001", "instructors": "Zhanle   Wang (P)", "days": "WF", "time": "1:00 pm - 2:15 pm", "loc": "Remote", "course_type": "Lecture", "exam_days": "F", "exam_date": "Apr 23, 2021 - Apr 23, 2021", "exam_time": "2:00 pm - 5:00 pm"}, {"course_ID": "10880", "section_num": "091", "instructors": "Keegan Keith  Downie (P)", "days": "W", "time": "8:30 am - 11:15 am", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "10881", "section_num": "092", "instructors": "Keegan Keith  Downie (P)", "days": "T", "time": "2:30 pm - 5:15 pm", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}]}
+{
+    "term": "2021 Winter",
+    "short_name": "ENEL 281",
+    "title": "Signals, Circuits, and Systems",
+    "faculty": "ENEL",
+    "credit": "3",
+    "description": "The introductory aspects of signals, circuits and systems including: AC circuit analysis,frequency response, resonance, passive and active filters, second order transient analysis, conversion between time domain and frequency domain signals using the Laplace and Fourier Transforms.",
+    "prerequisite": " MATH 217 (concurrent enrolment allowed) and ENEL 280",
+    "section": [{
+        "course_ID": "10879",
+        "section_num": "001",
+        "instructors": "Zhanle   Wang (P)",
+        "days": "WF",
+        "time": "1:00 pm - 2:15 pm",
+        "loc": "Remote",
+        "course_type": "Lecture",
+        "exam_days": "F",
+        "exam_date": "Apr 23, 2021 - Apr 23, 2021",
+        "exam_time": "2:00 pm - 5:00 pm"
+    }, {
+        "course_ID": "10880",
+        "section_num": "091",
+        "instructors": "Keegan Keith  Downie (P)",
+        "days": "W",
+        "time": "8:30 am - 11:15 am",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "10881",
+        "section_num": "092",
+        "instructors": "Keegan Keith  Downie (P)",
+        "days": "T",
+        "time": "2:30 pm - 5:15 pm",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }]
+}

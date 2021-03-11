@@ -1,1 +1,32 @@
-{"term": "2020 Spring/Summer", "short_name": "ENEV 480", "title": "Terrain and Site Analysis", "faculty": "ENEV", "credit": "3", "description": "The application of airphoto, satellite imagery and geomorphological interpretation to regional engineering problems, to management of resources, and to monitoring of the environment. On-site investigation techniques.", "prerequisite": "GEOL 102", "section": [{"course_ID": "22095", "section_num": "070", "instructors": "Jason Isaac  Cosford (P)", "days": "M", "time": "12:30 pm - 6:00 pm", "loc": "Remote", "course_type": "Lecture", "exam_days": "M", "exam_date": "Aug 24, 2020 - Aug 24, 2020", "exam_time": "2:00 pm - 5:00 pm"}, {"course_ID": "22096", "section_num": "071", "instructors": "TBA", "days": "R", "time": "4:30 pm - 7:20 pm", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}]}
+{
+    "term": "2020 Spring/Summer",
+    "short_name": "ENEV 480",
+    "title": "Terrain and Site Analysis",
+    "faculty": "ENEV",
+    "credit": "3",
+    "description": "The application of airphoto, satellite imagery and geomorphological interpretation to regional engineering problems, to management of resources, and to monitoring of the environment. On-site investigation techniques.",
+    "prerequisite": "GEOL 102",
+    "section": [{
+        "course_ID": "22095",
+        "section_num": "070",
+        "instructors": "Jason Isaac  Cosford (P)",
+        "days": "M",
+        "time": "12:30 pm - 6:00 pm",
+        "loc": "Remote",
+        "course_type": "Lecture",
+        "exam_days": "M",
+        "exam_date": "Aug 24, 2020 - Aug 24, 2020",
+        "exam_time": "2:00 pm - 5:00 pm"
+    }, {
+        "course_ID": "22096",
+        "section_num": "071",
+        "instructors": "TBA",
+        "days": "R",
+        "time": "4:30 pm - 7:20 pm",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }]
+}

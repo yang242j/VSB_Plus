@@ -1,1 +1,32 @@
-{"term": "2020 Fall", "short_name": "ENPE 470", "title": "Reservoir Modelling", "faculty": "ENPE", "credit": "3", "description": "Fundamentals of modeling in petroleum engineering.  Simulation methods as applied to specific problems in petroleum reservoir behavior; examples will be drawn from primary, secondary, and tertiary recovery phases of petroleum production.", "prerequisite": "ENPE 410 (concurrent enrolment is allowed) and ENGG 330", "section": [{"course_ID": "31340", "section_num": "001", "instructors": "Ezeddin Esaidi  Shirif (P)", "days": "MW", "time": "3:30 pm - 4:15 pm", "loc": "Remote", "course_type": "Lecture", "exam_days": "W", "exam_date": "Dec 23, 2020 - Dec 23, 2020", "exam_time": "2:00 pm - 5:00 pm"}, {"course_ID": "31341", "section_num": "081", "instructors": "Zhongwei   Du (P)", "days": "R", "time": "8:30 am - 11:15 am", "loc": "Remote", "course_type": "Seminar", "exam_days": null, "exam_date": null, "exam_time": null}]}
+{
+    "term": "2020 Fall",
+    "short_name": "ENPE 470",
+    "title": "Reservoir Modelling",
+    "faculty": "ENPE",
+    "credit": "3",
+    "description": "Fundamentals of modeling in petroleum engineering.  Simulation methods as applied to specific problems in petroleum reservoir behavior; examples will be drawn from primary, secondary, and tertiary recovery phases of petroleum production.",
+    "prerequisite": "ENPE 410 (concurrent enrolment is allowed) and ENGG 330",
+    "section": [{
+        "course_ID": "31340",
+        "section_num": "001",
+        "instructors": "Ezeddin Esaidi  Shirif (P)",
+        "days": "MW",
+        "time": "3:30 pm - 4:15 pm",
+        "loc": "Remote",
+        "course_type": "Lecture",
+        "exam_days": "W",
+        "exam_date": "Dec 23, 2020 - Dec 23, 2020",
+        "exam_time": "2:00 pm - 5:00 pm"
+    }, {
+        "course_ID": "31341",
+        "section_num": "081",
+        "instructors": "Zhongwei   Du (P)",
+        "days": "R",
+        "time": "8:30 am - 11:15 am",
+        "loc": "Remote",
+        "course_type": "Seminar",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }]
+}

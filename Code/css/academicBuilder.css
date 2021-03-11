@@ -1,18 +1,18 @@
-
 body .container .left-section {
    width: 55%;
    float: left;
    box-sizing: border-box;
    background-color: #f1f1f1;
-   margin-bottom : 20px;
+   margin-bottom: 20px;
 }
 
-body .container .term-container{
+body .container .term-container {
    box-sizing: border-box;
    border: none;
    background-color: #f1f1f1;
 }
-body .container .term-container .course-section{
+
+body .container .term-container .course-section {
    display: grid;
    grid-template-columns: repeat(5, 100px);
    grid-gap: 20px;
@@ -21,83 +21,66 @@ body .container .term-container .course-section{
    align-content: center;
 }
 
-body .container .term-container .course-section .courseTag{
+body .container .term-container .course-section .courseTag {
    line-height: 30px;
    height: 30px;
-   margin-left:10px;
+   margin-left: 10px;
    margin-top: 10px;
 }
 
-body .container .term-container .course-section .tag-section{
+body .container .term-container .course-section .tag-section {
    font-family: "Lucida Console", Courier, monospace;
    text-align: center;
    line-height: 20px;
    display: grid;
    grid-template-columns: repeat(5, 100px);
    grid-gap: 20px;
-   margin-left:10px;
+   margin-left: 10px;
    background-color: rgb(201, 252, 235);
 }
 
-body .container .right-section{
+body .container .right-section {
    width: 40%;
    float: right;
    box-sizing: border-box;
    background-color: #f1f1f1;
 }
 
-body .container .right-section .course-completed{
-   display:block;
+body .container .right-section .course-completed {
+   display: block;
    background-color: rgb(191, 241, 191);
    margin: 10px;
    padding-bottom: 25px;
 }
 
-body .container .right-section .course-completed .courseTag{
+body .container .right-section .course-completed .courseTag {
    display: grid;
    grid-template-columns: auto auto auto;
-   
 }
 
-body .container .right-section .course-not-completed{
+body .container .right-section .course-not-completed {
    background-color: rgb(158, 199, 224);
    margin: 10px;
    padding-bottom: 25px;
 }
-#hideButton{ 
-   border : none
- }
+
+#hideButton {
+   border: none;
+}
+
 h2 {
    display: inline-block;
- }
- h3 {
+}
+
+h3 {
    margin-top: 30px;
    display: inline-block;
- }
- .hide .hideTips{
-  visibility: hidden;
-  width: 40px;
-  background-color: rgba(123, 123, 230, 0.26);
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 5px 0;
-  /* Position the tooltip */
-  position: absolute;
-  z-index: 1;
 }
-.hide:hover .hideTips{
-   visibility: visible;
- }
 
-#viewButton{
-  border:none;
-  background-color: white;
- }
- .view .viewTips{
+.hide .hideTips {
    visibility: hidden;
    width: 40px;
-   background-color:black;
+   background-color: rgba(123, 123, 230, 0.26);
    color: #fff;
    text-align: center;
    border-radius: 6px;
@@ -105,21 +88,45 @@ h2 {
    /* Position the tooltip */
    position: absolute;
    z-index: 1;
- }
- .view:hover .viewTips{
-   visibility: visible;
- }
+}
 
- .generateDetail{
-  float : right;
-  border:none;
-  margin-top: 10px;
-  margin-right: 10px;
- }
- .generateDetail .generateDetailTips{
+.hide:hover .hideTips {
+   visibility: visible;
+}
+
+#viewButton {
+   border: none;
+   background-color: white;
+}
+
+.view .viewTips {
+   visibility: hidden;
+   width: 40px;
+   background-color: black;
+   color: #fff;
+   text-align: center;
+   border-radius: 6px;
+   padding: 5px 0;
+   /* Position the tooltip */
+   position: absolute;
+   z-index: 1;
+}
+
+.view:hover .viewTips {
+   visibility: visible;
+}
+
+.generateDetail {
+   float: right;
+   border: none;
+   margin-top: 10px;
+   margin-right: 10px;
+}
+
+.generateDetail .generateDetailTips {
    visibility: hidden;
    width: 60px;
-   background-color:black;
+   background-color: black;
    color: #fff;
    text-align: center;
    border-radius: 6px;
@@ -127,8 +134,8 @@ h2 {
    /* Position the tooltip */
    position: absolute;
    z-index: 1;
+}
 
- }
- .generateDetail:hover .generateDetailTips{
+.generateDetail:hover .generateDetailTips {
    visibility: visible;
- }
+}

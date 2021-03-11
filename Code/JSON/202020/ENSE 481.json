@@ -1,1 +1,10 @@
-{"term": "No class for the term", "short_name": "ENSE 481", "title": "Embedded Systems and Co-design", "faculty": "ENSE", "credit": "3", "description": "Embedded systems are increasingly common in modern systems design.  This course will teach students how to take advantage of embedded systems technology in their system designs.  Topics include: advanced microcontroller real-time design, co-design, embedded systems design issues, power considerations, and wireless considerations.", "prerequisite": "ENEL 387 and ENEL 487", "section": []}
+{
+    "term": "No class for the term",
+    "short_name": "ENSE 481",
+    "title": "Embedded Systems and Co-design",
+    "faculty": "ENSE",
+    "credit": "3",
+    "description": "Embedded systems are increasingly common in modern systems design.  This course will teach students how to take advantage of embedded systems technology in their system designs.  Topics include: advanced microcontroller real-time design, co-design, embedded systems design issues, power considerations, and wireless considerations.",
+    "prerequisite": "ENEL 387 and ENEL 487",
+    "section": []
+}

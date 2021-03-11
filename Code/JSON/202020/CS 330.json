@@ -1,1 +1,10 @@
-{"term": "No class for the term", "short_name": "CS 330", "title": "Introduction to Operating Systems", "faculty": "CS", "credit": "3", "description": "Overview of operating systems: functionality, and design issues. Operating system principles: structures, abstractions, APIs, resource allocation, proximity, virtualization. Concurrency: process state, context switches, process communication, synchronization. Scheduling: preemption, schedulers, processes, and threads. Memory management. Security and protection. File systems. User interface. Distributed algorithms: consensus, termination, and fault tolerance.", "prerequisite": "CS 210", "section": []}
+{
+    "term": "No class for the term",
+    "short_name": "CS 330",
+    "title": "Introduction to Operating Systems",
+    "faculty": "CS",
+    "credit": "3",
+    "description": "Overview of operating systems: functionality, and design issues. Operating system principles: structures, abstractions, APIs, resource allocation, proximity, virtualization. Concurrency: process state, context switches, process communication, synchronization. Scheduling: preemption, schedulers, processes, and threads. Memory management. Security and protection. File systems. User interface. Distributed algorithms: consensus, termination, and fault tolerance.",
+    "prerequisite": "CS 210",
+    "section": []
+}

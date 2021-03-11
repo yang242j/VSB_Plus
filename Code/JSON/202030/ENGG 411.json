@@ -1,1 +1,10 @@
-{"term": "No class for the term", "short_name": "ENGG 411", "title": "Safety Systems Engineering and Management\t\t", "faculty": "ENGG", "credit": "3", "description": "Professional engineering responsibility towards safety includes introduction to health and safety programs; workplace incident assessments; risk hazard identification (from various disciplines); risk management fundamentals; engineering-related legislation, regulations, and codes; studies of best practises and safety management. Content involves engineering design, case analysis, development and use various tools.", "prerequisite": "STAT 160 or STAT 289 and completion of 75 credit hours", "section": []}
+{
+    "term": "No class for the term",
+    "short_name": "ENGG 411",
+    "title": "Safety Systems Engineering and Management\t\t",
+    "faculty": "ENGG",
+    "credit": "3",
+    "description": "Professional engineering responsibility towards safety includes introduction to health and safety programs; workplace incident assessments; risk hazard identification (from various disciplines); risk management fundamentals; engineering-related legislation, regulations, and codes; studies of best practises and safety management. Content involves engineering design, case analysis, development and use various tools.",
+    "prerequisite": "STAT 160 or STAT 289 and completion of 75 credit hours",
+    "section": []
+}

@@ -1,1 +1,10 @@
-{"term": "No class for the term", "short_name": "ENPE 450", "title": "Well Testing", "faculty": "ENPE", "credit": "3", "description": "Basic principles of well testing and interpretation for oil and gas production, pressure transient theory, principles of superposition, and application of well testing to homogeneous and heterogeneous reservoirs.", "prerequisite": "ENPE 300 and ENPE 360 (may be taken concurrently)", "section": []}
+{
+    "term": "No class for the term",
+    "short_name": "ENPE 450",
+    "title": "Well Testing",
+    "faculty": "ENPE",
+    "credit": "3",
+    "description": "Basic principles of well testing and interpretation for oil and gas production, pressure transient theory, principles of superposition, and application of well testing to homogeneous and heterogeneous reservoirs.",
+    "prerequisite": "ENPE 300 and ENPE 360 (may be taken concurrently)",
+    "section": []
+}

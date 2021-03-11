@@ -1,1 +1,43 @@
-{"term": "2020 Fall", "short_name": "ENEL 389", "title": "Control Systems", "faculty": "ENEL", "credit": "3", "description": "This course extends student knowledge of continuous-time domain control systems. Topics include: a detailed examination of system response to various inputs, mechanisms to limit disturbance effects, use of root locus plotting to determine system gains for stability, system design to limit transient response (over-shoot, rise-time, settling-time), state-space representation of systems, multi-input/ multi-output system analysis, state-space based design.", "prerequisite": "ENEL 380", "section": [{"course_ID": "30989", "section_num": "001", "instructors": "Raman   Paranjape (P)", "days": "WF", "time": "1:00 pm - 2:15 pm", "loc": "Remote", "course_type": "Lecture", "exam_days": "F", "exam_date": "Dec 18, 2020 - Dec 18, 2020", "exam_time": "2:00 pm - 5:00 pm"}, {"course_ID": "30990", "section_num": "091", "instructors": "Keegan Keith  Downie (P)", "days": "T", "time": "8:30 am - 11:15 am", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "30991", "section_num": "092", "instructors": "Keegan Keith  Downie (P)", "days": "W", "time": "8:30 am - 11:15 am", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}]}
+{
+    "term": "2020 Fall",
+    "short_name": "ENEL 389",
+    "title": "Control Systems",
+    "faculty": "ENEL",
+    "credit": "3",
+    "description": "This course extends student knowledge of continuous-time domain control systems. Topics include: a detailed examination of system response to various inputs, mechanisms to limit disturbance effects, use of root locus plotting to determine system gains for stability, system design to limit transient response (over-shoot, rise-time, settling-time), state-space representation of systems, multi-input/ multi-output system analysis, state-space based design.",
+    "prerequisite": "ENEL 380",
+    "section": [{
+        "course_ID": "30989",
+        "section_num": "001",
+        "instructors": "Raman   Paranjape (P)",
+        "days": "WF",
+        "time": "1:00 pm - 2:15 pm",
+        "loc": "Remote",
+        "course_type": "Lecture",
+        "exam_days": "F",
+        "exam_date": "Dec 18, 2020 - Dec 18, 2020",
+        "exam_time": "2:00 pm - 5:00 pm"
+    }, {
+        "course_ID": "30990",
+        "section_num": "091",
+        "instructors": "Keegan Keith  Downie (P)",
+        "days": "T",
+        "time": "8:30 am - 11:15 am",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "30991",
+        "section_num": "092",
+        "instructors": "Keegan Keith  Downie (P)",
+        "days": "W",
+        "time": "8:30 am - 11:15 am",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }]
+}

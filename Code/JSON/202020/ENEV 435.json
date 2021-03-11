@@ -1,1 +1,10 @@
-{"term": "No class for the term", "short_name": "ENEV 435", "title": "Engineering Project Management", "faculty": "ENEV", "credit": "3", "description": "Fundamentals of project management in an engineering environment. Support functions of time management and conflict resolution. Performance management. Project planning, scheduling and cost control. Contracts, warranties and liabilities. Special topics.", "prerequisite": "ENEV 334", "section": []}
+{
+    "term": "No class for the term",
+    "short_name": "ENEV 435",
+    "title": "Engineering Project Management",
+    "faculty": "ENEV",
+    "credit": "3",
+    "description": "Fundamentals of project management in an engineering environment. Support functions of time management and conflict resolution. Performance management. Project planning, scheduling and cost control. Contracts, warranties and liabilities. Special topics.",
+    "prerequisite": "ENEV 334",
+    "section": []
+}

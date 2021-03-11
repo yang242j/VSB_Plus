@@ -1,21 +1,21 @@
 <?php
 /**
  * A form to let user to reset password.
- * 
+ *
  * Requirments:
- *  1) Required enter the student ID to reset password. 
+ *  1) Required enter the student ID to reset password.
  *  2) Required the new password.
  *  3) Required to confirm the new password.
- * 
+ *
  * php Steps:
  *  1) If logged in, redirect to main page.
  *  2) Required once vsbp_db_config.php
  *  3) Define all variables.
  *  4) If getting POST request, check each field legitimate.
  *  5) For each field, if match validation, store, else print error message.
- *  6) If no error messages, store new password into db. 
+ *  6) If no error messages, store new password into db.
  *  7) After 5 seconds, redirect to login page.
- * 
+ *
  * @version     1.0
  * @link        http://15.223.123.122/vsbp/Code/reset-password.php
  * @author      Jingkang Yang (sid: 200362586) <yang242j@uregina.ca>
@@ -26,7 +26,7 @@ session_start(); // Initialize the session
 // Check if the user is already logged in, if yes then redirect him to Academic home page
 if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
     header("location: academicBuilder_Main.php");
-    exit;
+    exit();
 }
 
 // Include the vsbp_db_config.php file
@@ -38,7 +38,6 @@ $sid_err = $new_password_err = $confirm_password_err = "";
 
 // Processing form data when form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-
     // Check if student_id is empty
     if (empty(trim($_POST["sid"]))) {
         $sid_err = "Please enter student_id.";
@@ -86,14 +85,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $confirm_password_err = "Please confirm the password.";
     } else {
         $confirm_password = trim($_POST["confirm_password"]);
-        if (empty($new_password_err) && ($new_password != $confirm_password)) {
+        if (empty($new_password_err) && $new_password != $confirm_password) {
             $confirm_password_err = "Password did not match.";
         }
     }
 
     // Validate credentials (format is correct)
-    if (empty($sid_err) && empty($new_password_err) && empty($confirm_password_err)) {
-
+    if (
+        empty($sid_err) &&
+        empty($new_password_err) &&
+        empty($confirm_password_err)
+    ) {
         // Prepare a select statement
         $sql = "UPDATE students SET password = ? WHERE student_id = ?";
 
@@ -163,9 +165,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <section class="container">
         <div class="form-div">
             <h2>Reset Password</h2>
-            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST">
+            <form action="<?php echo htmlspecialchars(
+                $_SERVER["PHP_SELF"]
+            ); ?>" method="POST">
                 <!-- Student ID -->
-                <div class="form-group <?php echo (!empty($sid_err)) ? 'has-error' : ''; ?>">
+                <div class="form-group <?php echo !empty($sid_err)
+                    ? 'has-error'
+                    : ''; ?>">
                     <label>Student ID:</label>
                     <input class="form-input" type="text" name="sid" value="<?php echo $sid; ?>">
                     <span class="help-block">
@@ -174,7 +180,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 </div>
 
                 <!-- New Password -->
-                <div class="form-group <?php echo (!empty($new_password_err)) ? 'has-error' : ''; ?>">
+                <div class="form-group <?php echo !empty($new_password_err)
+                    ? 'has-error'
+                    : ''; ?>">
                     <label>New Password:</label>
                     <input class="form-input" type="password" name="new_password" value="<?php echo $new_password; ?>">
                     <span class="help-block">
@@ -183,7 +191,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 </div>
 
                 <!-- Confirm New Password -->
-                <div class="form-group <?php echo (!empty($confirm_password_err)) ? 'has-error' : ''; ?>">
+                <div class="form-group <?php echo !empty($confirm_password_err)
+                    ? 'has-error'
+                    : ''; ?>">
                     <label>Confirm Password:</label>
                     <input class="form-input" type="password" name="confirm_password">
                     <span class="help-block">

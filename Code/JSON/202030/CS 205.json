@@ -1,1 +1,10 @@
-{"term": "No class for the term", "short_name": "CS 205", "title": "Introduction to Multimedia Systems", "faculty": "CS", "credit": "3", "description": "Multimedia is the use of computers to integrate texts, graphics, video, animation, and sound in an interactive experience. The course introduces these elements of multimedia and their associated technologies. Students will gain an appreciation of each element and be able to combine them into a finished work.", "prerequisite": "CS 110", "section": []}
+{
+    "term": "No class for the term",
+    "short_name": "CS 205",
+    "title": "Introduction to Multimedia Systems",
+    "faculty": "CS",
+    "credit": "3",
+    "description": "Multimedia is the use of computers to integrate texts, graphics, video, animation, and sound in an interactive experience. The course introduces these elements of multimedia and their associated technologies. Students will gain an appreciation of each element and be able to combine them into a finished work.",
+    "prerequisite": "CS 110",
+    "section": []
+}

@@ -30,14 +30,14 @@
 
 .L {
     /* The image used */
-    background-image: url('../img/drop-here.png');
+    background-image: url("../img/drop-here.png");
     top: 35%;
     left: 35%;
 }
 
 .BR {
     /* The image used */
-    background-image: url('../img/trashCan.jpg');
+    background-image: url("../img/trashCan.jpg");
     top: 35%;
     left: 35%;
 }
@@ -155,6 +155,7 @@ body .container section#right .Date {
 .open {
     position: fixed;
     bottom: 0;
+    z-index: 1;
 }
 
 .close {
@@ -210,6 +211,7 @@ body .container .bottom_right .courseTag {
 
 /********************************/
 @media screen and (max-width: 1080px) {
+
     body .container section#left,
     body .container .bottom_left {
         display: none !important;

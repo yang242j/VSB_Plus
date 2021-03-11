@@ -1,6 +1,6 @@
 body {
     background-repeat: no-repeat;
-    background-image: linear-gradient(#B2D9E7, white, white)
+    background-image: linear-gradient(#b2d9e7, white, white);
 }
 
 #welcome h1 {
@@ -20,7 +20,7 @@ p {
     /* text-indent: 40px; */
 }
 
-#main{
+#main {
     border: #2e39d6;
     background-color: antiquewhite;
     display: grid;
@@ -28,7 +28,7 @@ p {
     grid-template-rows: 50vh 50vh;
 }
 
-#main_area{
+#main_area {
     /* border: #ef342a;
     margin: 2.5%; */
     /* height: 100vh; */
@@ -37,7 +37,7 @@ p {
     /* grid-template-rows: 80vh; */
 }
 
-#summary{
+#summary {
     width: 80%;
     height: 36%;
     margin-left: 10%;
@@ -47,40 +47,39 @@ p {
     grid-template-rows: 50% 50%;
 }
 
-#test{
+#test {
     display: inline-grid;
 }
 
-.card{
+.card {
     margin: 10px;
-    background-color: #D4F19F;
+    background-color: #d4f19f;
     border-radius: 25px;
     box-shadow: -2px 4px 7px 0px #555555;
     text-align: center;
 }
 
-.center{
+.center {
     margin: auto;
     top: 0;
     bottom: 0;
     right: 0;
     left: 0;
-    
 }
 
-.inline{
+.inline {
     display: inline;
 }
 
-.textCenter{
+.textCenter {
     text-align: center;
 }
 
-.static{
+.static {
     position: relative;
 }
 
-.arrow{
+.arrow {
     position: absolute;
     margin-top: 9%;
     font-size: 36px;
@@ -88,22 +87,22 @@ p {
     background-color: transparent;
 }
 
-.right{
+.right {
     top: 22%;
     right: 5%;
 }
 
-.left{
+.left {
     top: 22%;
     left: 5%;
 }
 
-.round{
+.round {
     border-radius: 5px 5px;
-    border-width: 1px; 
+    border-width: 1px;
 }
 
-#pie{
+#pie {
     /* background-color: #65fa92; */
     margin: auto;
     left: 0;
@@ -114,14 +113,12 @@ p {
     grid-column-end: 2;   */
 }
 
-#line{
+#line {
     /* margin-right: 5vw; */
     background-color: #ef342a;
     /* grid-column-start: 1;
     grid-column-end: 2;   */
 }
-
-
 
 #pieChart {
     margin-left: 10%;
@@ -141,14 +138,14 @@ p {
 
 /********************************/
 @media screen and (max-width: 800px) {
-    #main_area{
+    #main_area {
         /* height: 150vh; */
         /* display: grid; */
         grid-template-columns: 100%;
         grid-template-rows: 80vh 80vh;
     }
-    
-    #summaryBoard{
+
+    #summaryBoard {
         height: 300vw;
     }
 }

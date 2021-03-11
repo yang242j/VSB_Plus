@@ -1,1 +1,87 @@
-{"term": "2020 Fall", "short_name": "ECON 201", "title": "Introductory Microeconomics", "faculty": "ECON", "credit": "3", "description": "Theory of how individual consumers and firms behave in a market economy. Emphasis is on evaluating how well markets deliver efficient and fair outcomes.", "prerequisite": "15 credit hours or ECON 100 or Pre-Calculus 20 (or equivalent)", "section": [{"course_ID": "30783", "section_num": "001", "instructors": "Jason   Childs (P)", "days": "MWF", "time": "12:30 pm - 1:20 pm", "loc": "Remote", "course_type": "Lecture", "exam_days": "W", "exam_date": "Dec 23, 2020 - Dec 23, 2020", "exam_time": "9:00 am - 12:00 pm"}, {"course_ID": "30784", "section_num": "002", "instructors": "Oscar   Zapata (P)", "days": "TR", "time": "10:00 am - 11:15 am", "loc": "Remote", "course_type": "Lecture", "exam_days": "R", "exam_date": "Dec 10, 2020 - Dec 10, 2020", "exam_time": "9:00 am - 12:00 pm"}, {"course_ID": "30785", "section_num": "397", "instructors": "Shaun Conrad  Augustin (P)", "days": "\u00a0", "time": "TBA", "loc": "WEB WEB", "course_type": "Lecture", "exam_days": "T", "exam_date": "Dec 15, 2020 - Dec 15, 2020", "exam_time": "9:00 am - 12:00 pm"}, {"course_ID": "30786", "section_num": "991", "instructors": "Abayomi Rasheed  Akintola (P)", "days": "MW", "time": "5:30 pm - 6:45 pm", "loc": "Remote", "course_type": "Lecture", "exam_days": "M", "exam_date": "Dec 21, 2020 - Dec 21, 2020", "exam_time": "7:00 pm - 10:00 pm"}, {"course_ID": "30787", "section_num": "S01", "instructors": "Faycal   Haggui (P)", "days": "M", "time": "6:00 pm - 8:45 pm", "loc": "Remote", "course_type": "Lecture", "exam_days": "M", "exam_date": "Dec 21, 2020 - Dec 21, 2020", "exam_time": "7:00 pm - 10:00 pm"}, {"course_ID": "30788", "section_num": "S02", "instructors": "Faycal   Haggui (P)", "days": "M", "time": "6:00 pm - 8:45 pm", "loc": "Remote", "course_type": "Lecture", "exam_days": "M", "exam_date": "Dec 21, 2020 - Dec 21, 2020", "exam_time": "7:00 pm - 10:00 pm"}, {"course_ID": "30789", "section_num": "S10", "instructors": "Faycal   Haggui (P)", "days": "M", "time": "6:00 pm - 8:45 pm", "loc": "FN Prince Albert Central Bldg 0101", "course_type": "Lecture", "exam_days": "M", "exam_date": "Dec 21, 2020 - Dec 21, 2020", "exam_time": "7:00 pm - 10:00 pm"}]}
+{
+    "term": "2020 Fall",
+    "short_name": "ECON 201",
+    "title": "Introductory Microeconomics",
+    "faculty": "ECON",
+    "credit": "3",
+    "description": "Theory of how individual consumers and firms behave in a market economy. Emphasis is on evaluating how well markets deliver efficient and fair outcomes.",
+    "prerequisite": "15 credit hours or ECON 100 or Pre-Calculus 20 (or equivalent)",
+    "section": [{
+        "course_ID": "30783",
+        "section_num": "001",
+        "instructors": "Jason   Childs (P)",
+        "days": "MWF",
+        "time": "12:30 pm - 1:20 pm",
+        "loc": "Remote",
+        "course_type": "Lecture",
+        "exam_days": "W",
+        "exam_date": "Dec 23, 2020 - Dec 23, 2020",
+        "exam_time": "9:00 am - 12:00 pm"
+    }, {
+        "course_ID": "30784",
+        "section_num": "002",
+        "instructors": "Oscar   Zapata (P)",
+        "days": "TR",
+        "time": "10:00 am - 11:15 am",
+        "loc": "Remote",
+        "course_type": "Lecture",
+        "exam_days": "R",
+        "exam_date": "Dec 10, 2020 - Dec 10, 2020",
+        "exam_time": "9:00 am - 12:00 pm"
+    }, {
+        "course_ID": "30785",
+        "section_num": "397",
+        "instructors": "Shaun Conrad  Augustin (P)",
+        "days": "\u00a0",
+        "time": "TBA",
+        "loc": "WEB WEB",
+        "course_type": "Lecture",
+        "exam_days": "T",
+        "exam_date": "Dec 15, 2020 - Dec 15, 2020",
+        "exam_time": "9:00 am - 12:00 pm"
+    }, {
+        "course_ID": "30786",
+        "section_num": "991",
+        "instructors": "Abayomi Rasheed  Akintola (P)",
+        "days": "MW",
+        "time": "5:30 pm - 6:45 pm",
+        "loc": "Remote",
+        "course_type": "Lecture",
+        "exam_days": "M",
+        "exam_date": "Dec 21, 2020 - Dec 21, 2020",
+        "exam_time": "7:00 pm - 10:00 pm"
+    }, {
+        "course_ID": "30787",
+        "section_num": "S01",
+        "instructors": "Faycal   Haggui (P)",
+        "days": "M",
+        "time": "6:00 pm - 8:45 pm",
+        "loc": "Remote",
+        "course_type": "Lecture",
+        "exam_days": "M",
+        "exam_date": "Dec 21, 2020 - Dec 21, 2020",
+        "exam_time": "7:00 pm - 10:00 pm"
+    }, {
+        "course_ID": "30788",
+        "section_num": "S02",
+        "instructors": "Faycal   Haggui (P)",
+        "days": "M",
+        "time": "6:00 pm - 8:45 pm",
+        "loc": "Remote",
+        "course_type": "Lecture",
+        "exam_days": "M",
+        "exam_date": "Dec 21, 2020 - Dec 21, 2020",
+        "exam_time": "7:00 pm - 10:00 pm"
+    }, {
+        "course_ID": "30789",
+        "section_num": "S10",
+        "instructors": "Faycal   Haggui (P)",
+        "days": "M",
+        "time": "6:00 pm - 8:45 pm",
+        "loc": "FN Prince Albert Central Bldg 0101",
+        "course_type": "Lecture",
+        "exam_days": "M",
+        "exam_date": "Dec 21, 2020 - Dec 21, 2020",
+        "exam_time": "7:00 pm - 10:00 pm"
+    }]
+}

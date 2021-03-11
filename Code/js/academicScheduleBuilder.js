@@ -17,6 +17,7 @@ function getCourseData() {
     }
     myRequest.send();
 }
+
 function getTermData() {
     var myRequest = new XMLHttpRequest;
     myRequest.open("GET", "JSON/reqCourse/ESE_req.json", false);
@@ -27,6 +28,7 @@ function getTermData() {
     }
     myRequest.send();
 }
+
 function showNotCompletedCourse() {
     for (i = 0; i < 12; i++) {
         document.getElementById("nct" + i).innerHTML = courseData[i].short_name;

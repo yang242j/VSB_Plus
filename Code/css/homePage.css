@@ -50,13 +50,13 @@ body .container .left-section .left-lower .team-desc {
 }
 
 /* Right Section */
-body .container .right-section{
+body .container .right-section {
     width: 25%;
     float: right;
     box-sizing: border-box;
 }
 
-body .container .right-section .update-log{
+body .container .right-section .update-log {
     margin: 10px;
     border: 2px outset grey;
     background-color: #ddd;
@@ -69,7 +69,7 @@ body .container .right-section .contact-us {
 }
 
 body .container .right-section h3 {
-    color: #DF7401;
+    color: #df7401;
     margin-left: 10%;
 }
 

@@ -1,1 +1,21 @@
-{"term": "2020 Spring/Summer", "short_name": "CS 335", "title": "Computer Networks", "faculty": "CS", "credit": "3", "description": "Network architectures and protocols, networked applications, reliable data delivery, routing and forwarding, local area networks, resource allocation, mobility, reliability through redundancy. Security: secure design, defensive programming, threats and attacks, network security, cryptography.", "prerequisite": "CS 210, and STAT 160 or 200", "section": [{"course_ID": "22087", "section_num": "070", "instructors": "Sultan Uddin  Ahmed (P)", "days": "MTWR", "time": "1:00 pm - 2:15 pm", "loc": "Remote", "course_type": "Lecture", "exam_days": "M", "exam_date": "Aug 24, 2020 - Aug 24, 2020", "exam_time": "2:00 pm - 5:00 pm"}]}
+{
+    "term": "2020 Spring/Summer",
+    "short_name": "CS 335",
+    "title": "Computer Networks",
+    "faculty": "CS",
+    "credit": "3",
+    "description": "Network architectures and protocols, networked applications, reliable data delivery, routing and forwarding, local area networks, resource allocation, mobility, reliability through redundancy. Security: secure design, defensive programming, threats and attacks, network security, cryptography.",
+    "prerequisite": "CS 210, and STAT 160 or 200",
+    "section": [{
+        "course_ID": "22087",
+        "section_num": "070",
+        "instructors": "Sultan Uddin  Ahmed (P)",
+        "days": "MTWR",
+        "time": "1:00 pm - 2:15 pm",
+        "loc": "Remote",
+        "course_type": "Lecture",
+        "exam_days": "M",
+        "exam_date": "Aug 24, 2020 - Aug 24, 2020",
+        "exam_time": "2:00 pm - 5:00 pm"
+    }]
+}

@@ -1,1 +1,32 @@
-{"term": "2021 Winter", "short_name": "ENPE 251", "title": "Reservoir Fluid Properties", "faculty": "ENPE", "credit": "3", "description": "Qualitative and quantitative phase behavior of petroleum reservoir fluids through the algebraic and numerical application of thermodynamic theory, equations of state, and empirical correlations; determination of engineering PVT parameters; and, phase behaviour of hydrocarbon systems.", "prerequisite": "MATH 217 (concurrent enrolment allowed)", "section": [{"course_ID": "11260", "section_num": "001", "instructors": "Gang   Zhao (P)", "days": "TR", "time": "2:30 pm - 3:45 pm", "loc": "Remote", "course_type": "Lecture", "exam_days": "T", "exam_date": "Apr 27, 2021 - Apr 27, 2021", "exam_time": "2:00 pm - 5:00 pm"}, {"course_ID": "11261", "section_num": "091", "instructors": "Zhongwei   Du (P)", "days": "T", "time": "11:30 am - 2:15 pm", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}]}
+{
+    "term": "2021 Winter",
+    "short_name": "ENPE 251",
+    "title": "Reservoir Fluid Properties",
+    "faculty": "ENPE",
+    "credit": "3",
+    "description": "Qualitative and quantitative phase behavior of petroleum reservoir fluids through the algebraic and numerical application of thermodynamic theory, equations of state, and empirical correlations; determination of engineering PVT parameters; and, phase behaviour of hydrocarbon systems.",
+    "prerequisite": "MATH 217 (concurrent enrolment allowed)",
+    "section": [{
+        "course_ID": "11260",
+        "section_num": "001",
+        "instructors": "Gang   Zhao (P)",
+        "days": "TR",
+        "time": "2:30 pm - 3:45 pm",
+        "loc": "Remote",
+        "course_type": "Lecture",
+        "exam_days": "T",
+        "exam_date": "Apr 27, 2021 - Apr 27, 2021",
+        "exam_time": "2:00 pm - 5:00 pm"
+    }, {
+        "course_ID": "11261",
+        "section_num": "091",
+        "instructors": "Zhongwei   Du (P)",
+        "days": "T",
+        "time": "11:30 am - 2:15 pm",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }]
+}

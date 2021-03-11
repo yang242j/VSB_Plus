@@ -1,1 +1,10 @@
-{"term": "No class for the term", "short_name": "CS 372", "title": "Software Engineering Methodology", "faculty": "CS", "credit": "3", "description": "Fundamental principles of designing programs and developing large software systems that meet specifications and that are safe, secure, reliable and maintainable. Software process models, software project management, requirements engineering, software design, software construction, software verification and validation, software tools and environments, software evolution, software reliability.", "prerequisite": "CS 215", "section": []}
+{
+    "term": "No class for the term",
+    "short_name": "CS 372",
+    "title": "Software Engineering Methodology",
+    "faculty": "CS",
+    "credit": "3",
+    "description": "Fundamental principles of designing programs and developing large software systems that meet specifications and that are safe, secure, reliable and maintainable. Software process models, software project management, requirements engineering, software design, software construction, software verification and validation, software tools and environments, software evolution, software reliability.",
+    "prerequisite": "CS 215",
+    "section": []
+}

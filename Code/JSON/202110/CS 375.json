@@ -1,1 +1,10 @@
-{"term": "No class for the term", "short_name": "CS 375", "title": "Database and Information Retrieval", "faculty": "CS", "credit": "3", "description": "Information management: concepts and applications. Motivation for database systems. Components of database systems. Data modeling: conceptual, spreadsheet, relational, object-oriented, and semi-structured models. Querying and database query languages. Caching and transaction processing. Other topics include distributed databases, physical database design, and information retrieval systems.", "prerequisite": "CS 215", "section": []}
+{
+    "term": "No class for the term",
+    "short_name": "CS 375",
+    "title": "Database and Information Retrieval",
+    "faculty": "CS",
+    "credit": "3",
+    "description": "Information management: concepts and applications. Motivation for database systems. Components of database systems. Data modeling: conceptual, spreadsheet, relational, object-oriented, and semi-structured models. Querying and database query languages. Caching and transaction processing. Other topics include distributed databases, physical database design, and information retrieval systems.",
+    "prerequisite": "CS 215",
+    "section": []
+}

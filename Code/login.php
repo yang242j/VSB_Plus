@@ -1,20 +1,20 @@
 <?php
 /**
  * A form to let user to login.
- * 
+ *
  * Requirments:
- *  1) Required enter the student ID to login. 
+ *  1) Required enter the student ID to login.
  *  2) Required the password.
- * 
+ *
  * php Steps:
  *  1) If logged in, redirect to main page.
  *  2) Required once vsbp_db_config.php
  *  3) Define all variables.
  *  4) If getting POST request, check each field legitimate.
  *  5) For each field, if match validation, store, else print error message.
- *  6) If no error messages, and password verified, start session. 
+ *  6) If no error messages, and password verified, start session.
  *  7) Redirect to main page.
- * 
+ *
  * @version     1.0
  * @link        http://15.223.123.122/vsbp/Code/login.php
  * @author      Jingkang Yang (sid: 200362586) <yang242j@uregina.ca>
@@ -31,7 +31,7 @@ session_start();
 // Check if the user is already logged in, if yes then redirect him to Academic home page
 if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
     header("location: academicBuilder_Main.php");
-    exit;
+    exit();
 }
 
 // Include the vsbp_db_config.php file
@@ -43,7 +43,6 @@ $studentid_err = $password_err = "";
 
 // Processing form data when form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-
     // Check if student_id is empty
     if (empty(trim($_POST["studentid"]))) {
         $studentid_err = "Please enter student_id.";
@@ -57,14 +56,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (empty(trim($_POST["password"]))) {
         $password_err = "Please enter your password.";
     } else {
-        $password = trim($_POST["password"]);  
+        $password = trim($_POST["password"]);
     }
 
     // Validate credentials (format is correct)
     if (empty($studentid_err) && empty($password_err)) {
-
         // Prepare a select statement
-        $sql = "SELECT student_id, name, major, password FROM students WHERE student_id = ?";
+        $sql =
+            "SELECT student_id, name, major, password FROM students WHERE student_id = ?";
 
         if ($stmt = mysqli_prepare($conn, $sql)) {
             // Bind variables to the prepared statement as parameters
@@ -81,7 +80,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 // Check if student_id exists, if yes then verify password
                 if (mysqli_stmt_num_rows($stmt) == 1) {
                     // Bind result variables
-                    mysqli_stmt_bind_result($stmt, $studentid, $name, $major, $hashed_password);
+                    mysqli_stmt_bind_result(
+                        $stmt,
+                        $studentid,
+                        $name,
+                        $major,
+                        $hashed_password
+                    );
                     if (mysqli_stmt_fetch($stmt)) {
                         if (password_verify($password, $hashed_password)) {
                             // Password is correct, so start a new session
@@ -117,7 +122,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Close connection
     mysqli_close($conn);
 }
-
 ?>
 
 <!doctype html>
@@ -158,9 +162,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <section class="container">
         <div class="form-div">
             <h2>User LogIn</h2>
-            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST">
+            <form action="<?php echo htmlspecialchars(
+                $_SERVER["PHP_SELF"]
+            ); ?>" method="POST">
                 <!-- Student ID -->
-                <div class="form-group <?php echo (!empty($studentid_err)) ? 'has-error' : ''; ?>">
+                <div class="form-group <?php echo !empty($studentid_err)
+                    ? 'has-error'
+                    : ''; ?>">
                     <label>Student ID:</label>
                     <input class="form-input" type="text" name="studentid" value="<?php echo $studentid; ?>">
                     <span class="help-block">
@@ -169,7 +177,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 </div>
 
                 <!-- Password -->
-                <div class="form-group <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>">
+                <div class="form-group <?php echo !empty($password_err)
+                    ? 'has-error'
+                    : ''; ?>">
                     <label>Password:</label>
                     <input class="form-input" type="password" name="password">
                     <span class="help-block">

@@ -1,1 +1,65 @@
-{"term": "2021 Winter", "short_name": "ENEL 371", "title": "Power and Energy I", "faculty": "ENEL", "credit": "3", "description": "Introduction to concepts of power systems including: single and three phase\nAC power, delta-wye transformations transformers, per-unit system, transmission lines, introduction to synchronous machines, induction motors and safety in electrical systems.", "prerequisite": "ENEL 281 and PHYS 201 or Permission of ESE Program Chair.", "section": [{"course_ID": "10885", "section_num": "001", "instructors": "Irfan   Al-Anbagi (P)", "days": "WF", "time": "1:00 pm - 2:15 pm", "loc": "Remote", "course_type": "Lecture", "exam_days": "F", "exam_date": "Apr 23, 2021 - Apr 23, 2021", "exam_time": "2:00 pm - 5:00 pm"}, {"course_ID": "10886", "section_num": "091", "instructors": "Lisa Kathleen  Vindevoghel (P)", "days": "W", "time": "2:30 pm - 5:15 pm", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "10887", "section_num": "092", "instructors": "Lisa Kathleen  Vindevoghel (P)", "days": "R", "time": "2:30 pm - 5:15 pm", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "10888", "section_num": "093", "instructors": "Lisa Kathleen  Vindevoghel (P)", "days": "F", "time": "8:30 am - 11:15 am", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "10889", "section_num": "094", "instructors": "Lisa Kathleen  Vindevoghel (P)", "days": "F", "time": "2:30 pm - 5:15 pm", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}]}
+{
+    "term": "2021 Winter",
+    "short_name": "ENEL 371",
+    "title": "Power and Energy I",
+    "faculty": "ENEL",
+    "credit": "3",
+    "description": "Introduction to concepts of power systems including: single and three phase\nAC power, delta-wye transformations transformers, per-unit system, transmission lines, introduction to synchronous machines, induction motors and safety in electrical systems.",
+    "prerequisite": "ENEL 281 and PHYS 201 or Permission of ESE Program Chair.",
+    "section": [{
+        "course_ID": "10885",
+        "section_num": "001",
+        "instructors": "Irfan   Al-Anbagi (P)",
+        "days": "WF",
+        "time": "1:00 pm - 2:15 pm",
+        "loc": "Remote",
+        "course_type": "Lecture",
+        "exam_days": "F",
+        "exam_date": "Apr 23, 2021 - Apr 23, 2021",
+        "exam_time": "2:00 pm - 5:00 pm"
+    }, {
+        "course_ID": "10886",
+        "section_num": "091",
+        "instructors": "Lisa Kathleen  Vindevoghel (P)",
+        "days": "W",
+        "time": "2:30 pm - 5:15 pm",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "10887",
+        "section_num": "092",
+        "instructors": "Lisa Kathleen  Vindevoghel (P)",
+        "days": "R",
+        "time": "2:30 pm - 5:15 pm",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "10888",
+        "section_num": "093",
+        "instructors": "Lisa Kathleen  Vindevoghel (P)",
+        "days": "F",
+        "time": "8:30 am - 11:15 am",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "10889",
+        "section_num": "094",
+        "instructors": "Lisa Kathleen  Vindevoghel (P)",
+        "days": "F",
+        "time": "2:30 pm - 5:15 pm",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }]
+}

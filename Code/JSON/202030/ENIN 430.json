@@ -1,1 +1,10 @@
-{"term": "No class for the term", "short_name": "ENIN 430", "title": "Systems Management", "faculty": "ENIN", "credit": "3", "description": "Approaches to management and optimization through problem identification, formulation, and qualitative and quantitative solutions.", "prerequisite": "ENIN 331 or completion of at least 66 credit hours or permission of the Program Chair", "section": []}
+{
+    "term": "No class for the term",
+    "short_name": "ENIN 430",
+    "title": "Systems Management",
+    "faculty": "ENIN",
+    "credit": "3",
+    "description": "Approaches to management and optimization through problem identification, formulation, and qualitative and quantitative solutions.",
+    "prerequisite": "ENIN 331 or completion of at least 66 credit hours or permission of the Program Chair",
+    "section": []
+}

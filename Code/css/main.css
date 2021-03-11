@@ -51,7 +51,7 @@ nav .dropdown:hover .dropbtn {
 }
 
 nav .nav-active {
-    background-color: #4CAF50;
+    background-color: #4caf50;
     color: white;
 }
 
@@ -141,6 +141,7 @@ nav .nav-right #addon-menu {
     z-index: 1;
     right: 0;
 }
+
 /********************************/
 
 body {
@@ -148,7 +149,7 @@ body {
     display: flex;
     flex-direction: column;
     background-repeat: no-repeat;
-    background-image: linear-gradient(#B2D9E7, white, white)
+    background-image: linear-gradient(#b2d9e7, white, white);
 }
 
 body .container {
@@ -199,7 +200,6 @@ footer .info-link a {
 .courseTag:active {
     cursor: grabbing;
 }
-
 
 /********************************/
 @media screen and (max-width: 1080px) {

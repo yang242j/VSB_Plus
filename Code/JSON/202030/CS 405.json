@@ -1,1 +1,21 @@
-{"term": "2020 Fall", "short_name": "CS 405", "title": "Computer Graphics", "faculty": "CS", "credit": "3", "description": "Advanced topics in computer graphics, including special modeling techniques for natural phenomenon, advanced illumination models and rendering algorithms.", "prerequisite": "CS 315", "section": [{"course_ID": "30683", "section_num": "001", "instructors": "Xue-Dong   Yang (P)", "days": "MWF", "time": "2:30 pm - 3:20 pm", "loc": "Classroom Building 345", "course_type": "Lecture", "exam_days": "M", "exam_date": "Dec 14, 2020 - Dec 14, 2020", "exam_time": "2:00 pm - 5:00 pm"}]}
+{
+    "term": "2020 Fall",
+    "short_name": "CS 405",
+    "title": "Computer Graphics",
+    "faculty": "CS",
+    "credit": "3",
+    "description": "Advanced topics in computer graphics, including special modeling techniques for natural phenomenon, advanced illumination models and rendering algorithms.",
+    "prerequisite": "CS 315",
+    "section": [{
+        "course_ID": "30683",
+        "section_num": "001",
+        "instructors": "Xue-Dong   Yang (P)",
+        "days": "MWF",
+        "time": "2:30 pm - 3:20 pm",
+        "loc": "Classroom Building 345",
+        "course_type": "Lecture",
+        "exam_days": "M",
+        "exam_date": "Dec 14, 2020 - Dec 14, 2020",
+        "exam_time": "2:00 pm - 5:00 pm"
+    }]
+}

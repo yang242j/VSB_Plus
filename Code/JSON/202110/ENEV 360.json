@@ -1,1 +1,43 @@
-{"term": "2021 Winter", "short_name": "ENEV 360", "title": "Environmental Hydraulics", "faculty": "ENEV", "credit": "3", "description": "Momentum, mass and energy balances in the design, synthesis and analysis of flow in pipes, open channels and porous media ; pumps; turbines; dams; spillways; culverts; diversion, conveyance and control structures.", "prerequisite": "ENEV 261", "section": [{"course_ID": "10927", "section_num": "001", "instructors": "Ondiveerapan Suruliraj  Thirunavukkarasu (P)", "days": "TR", "time": "8:30 am - 9:45 am", "loc": "Remote", "course_type": "Lecture", "exam_days": "T", "exam_date": "Apr 27, 2021 - Apr 27, 2021", "exam_time": "9:00 am - 12:00 pm"}, {"course_ID": "10928", "section_num": "091", "instructors": "Dean Alan  Milton (P)", "days": "M", "time": "2:30 pm - 5:15 pm", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "10929", "section_num": "092", "instructors": "Dean Alan  Milton (P)", "days": "M", "time": "2:30 pm - 5:15 pm", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}]}
+{
+    "term": "2021 Winter",
+    "short_name": "ENEV 360",
+    "title": "Environmental Hydraulics",
+    "faculty": "ENEV",
+    "credit": "3",
+    "description": "Momentum, mass and energy balances in the design, synthesis and analysis of flow in pipes, open channels and porous media ; pumps; turbines; dams; spillways; culverts; diversion, conveyance and control structures.",
+    "prerequisite": "ENEV 261",
+    "section": [{
+        "course_ID": "10927",
+        "section_num": "001",
+        "instructors": "Ondiveerapan Suruliraj  Thirunavukkarasu (P)",
+        "days": "TR",
+        "time": "8:30 am - 9:45 am",
+        "loc": "Remote",
+        "course_type": "Lecture",
+        "exam_days": "T",
+        "exam_date": "Apr 27, 2021 - Apr 27, 2021",
+        "exam_time": "9:00 am - 12:00 pm"
+    }, {
+        "course_ID": "10928",
+        "section_num": "091",
+        "instructors": "Dean Alan  Milton (P)",
+        "days": "M",
+        "time": "2:30 pm - 5:15 pm",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "10929",
+        "section_num": "092",
+        "instructors": "Dean Alan  Milton (P)",
+        "days": "M",
+        "time": "2:30 pm - 5:15 pm",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }]
+}

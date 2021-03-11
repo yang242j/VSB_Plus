@@ -1,1 +1,43 @@
-{"term": "2020 Fall", "short_name": "ENIN 444", "title": "Computer-Aided Engineering", "faculty": "ENIN", "credit": "3", "description": "Computerized design aids, finite element analysis, design verification, simulation and testing.  Control fundamentals as applied to numerical control machine systems. Specification, design, implementation and documentation of a design system.  Robotics.", "prerequisite": " CS 110 and ENIN 349.  Concurrent enrolment allowed in ENIN 349.", "section": [{"course_ID": "31282", "section_num": "001", "instructors": "Mahnaz   Olfatimalamiri (P)", "days": "R", "time": "7:00 pm - 9:45 pm", "loc": "Remote", "course_type": "Lecture", "exam_days": "R", "exam_date": "Dec 17, 2020 - Dec 17, 2020", "exam_time": "7:00 pm - 10:00 pm"}, {"course_ID": "31283", "section_num": "091", "instructors": "Robert Deryck  Jones (P)", "days": "W", "time": "2:30 pm - 5:15 pm", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "31284", "section_num": "092", "instructors": "Robert Deryck  Jones (P)", "days": "F", "time": "8:30 am - 11:15 am", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}]}
+{
+    "term": "2020 Fall",
+    "short_name": "ENIN 444",
+    "title": "Computer-Aided Engineering",
+    "faculty": "ENIN",
+    "credit": "3",
+    "description": "Computerized design aids, finite element analysis, design verification, simulation and testing.  Control fundamentals as applied to numerical control machine systems. Specification, design, implementation and documentation of a design system.  Robotics.",
+    "prerequisite": " CS 110 and ENIN 349.  Concurrent enrolment allowed in ENIN 349.",
+    "section": [{
+        "course_ID": "31282",
+        "section_num": "001",
+        "instructors": "Mahnaz   Olfatimalamiri (P)",
+        "days": "R",
+        "time": "7:00 pm - 9:45 pm",
+        "loc": "Remote",
+        "course_type": "Lecture",
+        "exam_days": "R",
+        "exam_date": "Dec 17, 2020 - Dec 17, 2020",
+        "exam_time": "7:00 pm - 10:00 pm"
+    }, {
+        "course_ID": "31283",
+        "section_num": "091",
+        "instructors": "Robert Deryck  Jones (P)",
+        "days": "W",
+        "time": "2:30 pm - 5:15 pm",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "31284",
+        "section_num": "092",
+        "instructors": "Robert Deryck  Jones (P)",
+        "days": "F",
+        "time": "8:30 am - 11:15 am",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }]
+}

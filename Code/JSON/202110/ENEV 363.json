@@ -1,1 +1,10 @@
-{"term": "No class for the term", "short_name": "ENEV 363", "title": "Water and Wastewater Engineering", "faculty": "ENEV", "credit": "3", "description": "The theory and design of systems and system components used in water treatment and distribution and in wastewater collection and treatment.", "prerequisite": "ENEV 321", "section": []}
+{
+    "term": "No class for the term",
+    "short_name": "ENEV 363",
+    "title": "Water and Wastewater Engineering",
+    "faculty": "ENEV",
+    "credit": "3",
+    "description": "The theory and design of systems and system components used in water treatment and distribution and in wastewater collection and treatment.",
+    "prerequisite": "ENEV 321",
+    "section": []
+}

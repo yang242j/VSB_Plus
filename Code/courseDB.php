@@ -1,22 +1,22 @@
 <?php
 /**
  * The database visualization page embeded with search and filter function.
- * 
+ *
  * Requirments:
  *  1) User should be able to search the course info by entering course short name (course id).
- *  2) User should be able to filter the desired courses by faculty and year of course. 
+ *  2) User should be able to filter the desired courses by faculty and year of course.
  *  3) User should be able to swap the display between large course card and small course card.
  *  4) For the most area of the screen right hand side, display the selected course detail information.
- *  5) Course details info should contains the name, prerequisites, description, course general opening status of each section. 
- *  6) May also contain the lab info. 
- * 
+ *  5) Course details info should contains the name, prerequisites, description, course general opening status of each section.
+ *  6) May also contain the lab info.
+ *
  * php Steps:
  *  1) Start session.
  *  2) If logged in, display logged in user info at navigation right.
  *  3) If not logged in, display login and signup button at navigation right.
  *  4) Guest can have full functionality of this page.
  *  5) Other pages are either hidden or disabled for guest.
- * 
+ *
  * @version     1.0
  * @link        http://15.223.123.122/vsbp/Code/courseDB.php
  * @author      Xinyu Liu (sid: 200362878) <liu725@uregina.ca>
@@ -25,7 +25,8 @@
  * @param       {string}        $_SESSION["name"]           Student name
  */
 
-session_start(); // Initialize the session
+session_start();
+// Initialize the session
 ?>
 
 <!doctype html>
@@ -55,10 +56,8 @@ session_start(); // Initialize the session
 
 <body>
 
-    <?php
-    // Check if the user is logged in, if not then hide nav-right div
-    if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
-    ?>
+    <?php // Check if the user is logged in, if not then hide nav-right div
+    if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) { ?>
         <script>
             $(document).ready(function() {
                 $(".nav-right").hide();
@@ -75,7 +74,9 @@ session_start(); // Initialize the session
 
     <nav>
         <div class="nav-right">
-            <a id="usertext" onclick="toogleDisplay('addon-menu')"><?php echo htmlspecialchars($_SESSION["name"]); ?></a>
+            <a id="usertext" onclick="toogleDisplay('addon-menu')"><?php echo htmlspecialchars(
+                $_SESSION["name"]
+            ); ?></a>
             <div class="hidden" id="addon-menu">
                 <a><?php echo htmlspecialchars($_SESSION["sid"]); ?></a>
                 <a href="Model/logout.php">Logout</a>
@@ -115,6 +116,7 @@ session_start(); // Initialize the session
                     <td id="message"></td>
                 </tr>
             </table>
+            <button id="selectToggle">Toggle Courses List</button>
             <!-- <input type="submit" value="Submit" onclick="setFilter(event)" />
             <p id="filter_cond"></p> -->
         </form>
@@ -216,13 +218,16 @@ session_start(); // Initialize the session
         <script src="js/genChart.js"></script>
 
         <!-- Change the default selected course by pass the data(courseId) in url -->
-        <?php 
-            if (isset($_REQUEST["courseId"]) and $_REQUEST["courseId"] != '') {
-                $short_name = $_REQUEST["courseId"];
-                echo "<script> var defaultShow = false;
-                selected('" . $short_name . "'); </script>";
-            }
-        ?>
+        <?php if (
+            isset($_REQUEST["courseId"]) and
+            $_REQUEST["courseId"] != ''
+        ) {
+            $short_name = $_REQUEST["courseId"];
+            echo "<script> var defaultShow = false;
+                selected('" .
+                $short_name .
+                "'); </script>";
+        } ?>
         <!-- <script src="js/genChart.js"></script> -->
 
         <p class="copyright">Copyright &copy; Sep. 2020 to

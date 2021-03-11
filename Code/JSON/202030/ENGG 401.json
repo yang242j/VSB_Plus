@@ -1,1 +1,10 @@
-{"term": "No class for the term", "short_name": "ENGG 401", "title": "Engineering Law and Professionalism", "faculty": "ENGG", "credit": "3", "description": "Canadian law and professional engineering legislation topics include:  environmental law, tort liability, contracts, tenders, corporations partnerships, patents, industrial design, copyright, trademarks and code of ethics.", "prerequisite": " One of ENEL 400, ENEV 400, ENIN 400, ENPE 400, or ENSE 400", "section": []}
+{
+    "term": "No class for the term",
+    "short_name": "ENGG 401",
+    "title": "Engineering Law and Professionalism",
+    "faculty": "ENGG",
+    "credit": "3",
+    "description": "Canadian law and professional engineering legislation topics include:  environmental law, tort liability, contracts, tenders, corporations partnerships, patents, industrial design, copyright, trademarks and code of ethics.",
+    "prerequisite": " One of ENEL 400, ENEV 400, ENIN 400, ENPE 400, or ENSE 400",
+    "section": []
+}

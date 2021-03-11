@@ -1,1 +1,98 @@
-{"term": "2020 Fall", "short_name": "BUS 260", "title": "Introduction to Organizational Behaviour", "faculty": "BUS", "credit": "3", "description": "This introductory course addresses the basic concepts and processes of organizational behaviour. Topics will include:  individual level variables, such as perception, personality, attitudes, and motivation; interpersonal and group processes, such as communication, teams, leadership, and power; and, organizational level factors such as organizational design, culture, and change.", "prerequisite": "ENGL 100, or ACAD 100, or KIN 101.", "section": [{"course_ID": "30291", "section_num": "001", "instructors": "Nadine Marie  Milne (P)", "days": "TR", "time": "11:30 am - 12:45 pm", "loc": "Remote", "course_type": "Lecture", "exam_days": "R", "exam_date": "Dec 17, 2020 - Dec 17, 2020", "exam_time": "9:00 am - 12:00 pm"}, {"course_ID": "30292", "section_num": "002", "instructors": "Allison   Goldman (P)", "days": "TR", "time": "1:00 pm - 2:15 pm", "loc": "Remote", "course_type": "Lecture", "exam_days": "R", "exam_date": "Dec 17, 2020 - Dec 17, 2020", "exam_time": "9:00 am - 12:00 pm"}, {"course_ID": "30293", "section_num": "003", "instructors": "Leah Cleone  Knibbs (P)", "days": "\u00a0", "time": "TBA", "loc": "TBA", "course_type": "Lecture", "exam_days": "R", "exam_date": "Dec 17, 2020 - Dec 17, 2020", "exam_time": "9:00 am - 12:00 pm"}, {"course_ID": "30296", "section_num": "031", "instructors": "Nadine Marie  Milne (P)", "days": "TR", "time": "11:30 am - 12:45 pm", "loc": "Remote", "course_type": "Lecture", "exam_days": "R", "exam_date": "Dec 17, 2020 - Dec 17, 2020", "exam_time": "9:00 am - 12:00 pm"}, {"course_ID": "30297", "section_num": "032", "instructors": "Allison   Goldman (P)", "days": "TR", "time": "1:00 pm - 2:15 pm", "loc": "Remote", "course_type": "Lecture", "exam_days": "R", "exam_date": "Dec 17, 2020 - Dec 17, 2020", "exam_time": "9:00 am - 12:00 pm"}, {"course_ID": "30298", "section_num": "033", "instructors": "Leah Cleone  Knibbs (P)", "days": "\u00a0", "time": "TBA", "loc": "TBA", "course_type": "Lecture", "exam_days": "R", "exam_date": "Dec 17, 2020 - Dec 17, 2020", "exam_time": "9:00 am - 12:00 pm"}, {"course_ID": "33159", "section_num": "397", "instructors": "Nadine Marie  Milne (P)", "days": "\u00a0", "time": "TBA", "loc": "WEB WEB", "course_type": "Lecture", "exam_days": "R", "exam_date": "Dec 17, 2020 - Dec 17, 2020", "exam_time": "9:00 am - 12:00 pm"}, {"course_ID": "33160", "section_num": "398", "instructors": "Nadine Marie  Milne (P)", "days": "\u00a0", "time": "TBA", "loc": "WEB WEB", "course_type": "Lecture", "exam_days": "R", "exam_date": "Dec 17, 2020 - Dec 17, 2020", "exam_time": "9:00 am - 12:00 pm"}]}
+{
+    "term": "2020 Fall",
+    "short_name": "BUS 260",
+    "title": "Introduction to Organizational Behaviour",
+    "faculty": "BUS",
+    "credit": "3",
+    "description": "This introductory course addresses the basic concepts and processes of organizational behaviour. Topics will include:  individual level variables, such as perception, personality, attitudes, and motivation; interpersonal and group processes, such as communication, teams, leadership, and power; and, organizational level factors such as organizational design, culture, and change.",
+    "prerequisite": "ENGL 100, or ACAD 100, or KIN 101.",
+    "section": [{
+        "course_ID": "30291",
+        "section_num": "001",
+        "instructors": "Nadine Marie  Milne (P)",
+        "days": "TR",
+        "time": "11:30 am - 12:45 pm",
+        "loc": "Remote",
+        "course_type": "Lecture",
+        "exam_days": "R",
+        "exam_date": "Dec 17, 2020 - Dec 17, 2020",
+        "exam_time": "9:00 am - 12:00 pm"
+    }, {
+        "course_ID": "30292",
+        "section_num": "002",
+        "instructors": "Allison   Goldman (P)",
+        "days": "TR",
+        "time": "1:00 pm - 2:15 pm",
+        "loc": "Remote",
+        "course_type": "Lecture",
+        "exam_days": "R",
+        "exam_date": "Dec 17, 2020 - Dec 17, 2020",
+        "exam_time": "9:00 am - 12:00 pm"
+    }, {
+        "course_ID": "30293",
+        "section_num": "003",
+        "instructors": "Leah Cleone  Knibbs (P)",
+        "days": "\u00a0",
+        "time": "TBA",
+        "loc": "TBA",
+        "course_type": "Lecture",
+        "exam_days": "R",
+        "exam_date": "Dec 17, 2020 - Dec 17, 2020",
+        "exam_time": "9:00 am - 12:00 pm"
+    }, {
+        "course_ID": "30296",
+        "section_num": "031",
+        "instructors": "Nadine Marie  Milne (P)",
+        "days": "TR",
+        "time": "11:30 am - 12:45 pm",
+        "loc": "Remote",
+        "course_type": "Lecture",
+        "exam_days": "R",
+        "exam_date": "Dec 17, 2020 - Dec 17, 2020",
+        "exam_time": "9:00 am - 12:00 pm"
+    }, {
+        "course_ID": "30297",
+        "section_num": "032",
+        "instructors": "Allison   Goldman (P)",
+        "days": "TR",
+        "time": "1:00 pm - 2:15 pm",
+        "loc": "Remote",
+        "course_type": "Lecture",
+        "exam_days": "R",
+        "exam_date": "Dec 17, 2020 - Dec 17, 2020",
+        "exam_time": "9:00 am - 12:00 pm"
+    }, {
+        "course_ID": "30298",
+        "section_num": "033",
+        "instructors": "Leah Cleone  Knibbs (P)",
+        "days": "\u00a0",
+        "time": "TBA",
+        "loc": "TBA",
+        "course_type": "Lecture",
+        "exam_days": "R",
+        "exam_date": "Dec 17, 2020 - Dec 17, 2020",
+        "exam_time": "9:00 am - 12:00 pm"
+    }, {
+        "course_ID": "33159",
+        "section_num": "397",
+        "instructors": "Nadine Marie  Milne (P)",
+        "days": "\u00a0",
+        "time": "TBA",
+        "loc": "WEB WEB",
+        "course_type": "Lecture",
+        "exam_days": "R",
+        "exam_date": "Dec 17, 2020 - Dec 17, 2020",
+        "exam_time": "9:00 am - 12:00 pm"
+    }, {
+        "course_ID": "33160",
+        "section_num": "398",
+        "instructors": "Nadine Marie  Milne (P)",
+        "days": "\u00a0",
+        "time": "TBA",
+        "loc": "WEB WEB",
+        "course_type": "Lecture",
+        "exam_days": "R",
+        "exam_date": "Dec 17, 2020 - Dec 17, 2020",
+        "exam_time": "9:00 am - 12:00 pm"
+    }]
+}

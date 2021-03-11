@@ -1,1 +1,43 @@
-{"term": "2021 Winter", "short_name": "ENIN 355", "title": "Heat Mass and Momentum Transfer", "faculty": "ENIN", "credit": "3", "description": "Differential equations of momentum, heat and mass transfer; dimensional analysis; heat conduction and convection; boiling and condensation; molecular diffusion; convective mass transfer; and, analogies between momentum, heat and mass transfer.", "prerequisite": " ENEV 261 and ENIN 350", "section": [{"course_ID": "11193", "section_num": "001", "instructors": "Paitoon   Tontiwachwuthikul (P)", "days": "MW", "time": "4:00 pm - 5:15 pm", "loc": "Remote", "course_type": "Lecture", "exam_days": "W", "exam_date": "Apr 21, 2021 - Apr 21, 2021", "exam_time": "2:00 pm - 5:00 pm"}, {"course_ID": "11194", "section_num": "091", "instructors": "Isam   Al Zubaidi (P)", "days": "W", "time": "1:00 pm - 3:45 pm", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}, {"course_ID": "11195", "section_num": "092", "instructors": "Isam   Al Zubaidi (P)", "days": "M", "time": "1:00 pm - 3:45 pm", "loc": "Remote", "course_type": "Lab", "exam_days": null, "exam_date": null, "exam_time": null}]}
+{
+    "term": "2021 Winter",
+    "short_name": "ENIN 355",
+    "title": "Heat Mass and Momentum Transfer",
+    "faculty": "ENIN",
+    "credit": "3",
+    "description": "Differential equations of momentum, heat and mass transfer; dimensional analysis; heat conduction and convection; boiling and condensation; molecular diffusion; convective mass transfer; and, analogies between momentum, heat and mass transfer.",
+    "prerequisite": " ENEV 261 and ENIN 350",
+    "section": [{
+        "course_ID": "11193",
+        "section_num": "001",
+        "instructors": "Paitoon   Tontiwachwuthikul (P)",
+        "days": "MW",
+        "time": "4:00 pm - 5:15 pm",
+        "loc": "Remote",
+        "course_type": "Lecture",
+        "exam_days": "W",
+        "exam_date": "Apr 21, 2021 - Apr 21, 2021",
+        "exam_time": "2:00 pm - 5:00 pm"
+    }, {
+        "course_ID": "11194",
+        "section_num": "091",
+        "instructors": "Isam   Al Zubaidi (P)",
+        "days": "W",
+        "time": "1:00 pm - 3:45 pm",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }, {
+        "course_ID": "11195",
+        "section_num": "092",
+        "instructors": "Isam   Al Zubaidi (P)",
+        "days": "M",
+        "time": "1:00 pm - 3:45 pm",
+        "loc": "Remote",
+        "course_type": "Lab",
+        "exam_days": null,
+        "exam_date": null,
+        "exam_time": null
+    }]
+}

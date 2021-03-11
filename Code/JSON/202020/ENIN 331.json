@@ -1,1 +1,10 @@
-{"term": "No class for the term", "short_name": "ENIN 331", "title": "Simulation of Industrial Systems", "faculty": "ENIN", "credit": "3", "description": "Engineering approaches to model building and simulation of continuous and discrete systems.  Simulation languages.  Numerical methods in continuous systems modeling.  Case studies in discrete systems simulation.", "prerequisite": "STAT 160 or STAT 289", "section": []}
+{
+    "term": "No class for the term",
+    "short_name": "ENIN 331",
+    "title": "Simulation of Industrial Systems",
+    "faculty": "ENIN",
+    "credit": "3",
+    "description": "Engineering approaches to model building and simulation of continuous and discrete systems.  Simulation languages.  Numerical methods in continuous systems modeling.  Case studies in discrete systems simulation.",
+    "prerequisite": "STAT 160 or STAT 289",
+    "section": []
+}
