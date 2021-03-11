@@ -179,7 +179,10 @@ function showCourses(data) {
 
 function clickGetInfo(){
     for(clickZone in document.querySelectorAll(".clickable")){
+        if(clickZone < 50)
+        {
         console.log(clickZone);
+        }
         
         /*document.getElementById("nct"+i).addEventListener("dblclick", e => {
             e.preventDefault();
