@@ -161,23 +161,15 @@ function showCourses(data) {
     }
     for (i = 0; i < notCompletedData.length; i++) {
         dragStart("#nct" + i);
-        document.getElementById("nct"+ i).addEventListener("dblclick",e=>{
-            e.preventDefault();
-            terminfo = getTermInfo(notCompletedData[i]);
-            info = notCompletedData[i] + ":\n" + "Term Applied :" + terminfo[0]+"\n"+ "Credits:"+terminfo[1]+"\n"+terminfo[2];
-            alert(info);
-        });
     }
     dragTest();
-    /* for (i = 0; i < 12; i++) {
-         if (i < notCompletedData.length) {
-             document.getElementById("nct" + i).innerHTML = notCompletedData[i];
- 
-         }
-         else {
-             return;
-         }
-     }*/
+   var i = 0;
+    document.getElementById("nct"+ i).addEventListener("dblclick",e=>{
+        e.preventDefault();
+        terminfo = getTermInfo(notCompletedData[i]);
+        info = notCompletedData[i] + ":\n" + "Term Applied :" + terminfo[0]+"\n"+ "Credits:"+terminfo[1]+"\n"+terminfo[2];
+        alert(info);
+    });
 }
 
 function btnForCourse(data) {
