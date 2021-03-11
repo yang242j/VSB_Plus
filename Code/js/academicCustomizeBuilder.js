@@ -33,7 +33,7 @@ function fetchCourseJSON(sid, password) {
         showCourses(data);
         getCreditsEarned(data);
         storePassedCourse(data);
-        clickGetInfo();
+        
         
     });
 }
@@ -165,7 +165,7 @@ function showCourses(data) {
         dragStart("#nct" + i);
     }
     dragTest();
-    console.log(notCompletedData);
+    clickGetInfo();
 
    /* for (const clickbleZone in document.querySelectorAll(".courseTags")) {
         console.log(clickbleZone.id);
