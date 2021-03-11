@@ -165,7 +165,7 @@ function showCourses(data) {
         dragStart("#nct" + i);
     }
     dragTest();
-    getClickAre();
+    clickGetInfo();
 
    /* for (const clickbleZone in document.querySelectorAll(".courseTags")) {
         console.log(clickbleZone.id);
@@ -176,6 +176,7 @@ function showCourses(data) {
     }*/
    
 }
+
 
 
 function btnForCourse(data) {
@@ -379,7 +380,7 @@ var decidePreTrueOrFalse = false;
 var clickId;
 //recored prev drop item course name
 function dragTest() {
-    //const draggableElement = document.querySelector("#nct0");  
+    //const draggableElement = document.querySelector("#nct0");
     for (const dropZone of document.querySelectorAll(".course_cards")) {
         dropZone.addEventListener("dragover", e => {
             e.preventDefault();
@@ -647,8 +648,27 @@ function ajaxpost(courseid, term, done) {
     xhr.send(data);
     return false;
 }
-function getClickAre(){
-    for (const clickzone of document.querySelectorAll(".clickable")) {
-        console.log(clickzone.id);
+function clickGetInfo(){
+    for(clickZone in document.querySelectorAll(".clickable")){
+       
+        console.log(clickZone.id);
+       /*document.getElementById("nct"+clickZone).addEventListener("dblclick", e => {
+            e.preventDefault();  
+            var courseName = document.getElementById("nnnct"+clickZone).innerHTML;
+            const terminfo= getTermInfo(courseName);
+    
+            if(terminfo[0].length == 0){
+                console.log("not applied");
+            }
+            else{
+            info1 = courseName + ":\n" + "Term Applied :" + terminfo[0] + "\n" + "Credits:" + terminfo[1] + "\n" + terminfo[2];
+            console.log(info1);
+            }
+        });*/
+
         }
+        
+        
+
+    }
 }
