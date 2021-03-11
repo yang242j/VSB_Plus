@@ -396,7 +396,12 @@ function dragTest() {
             //console.log("dasdasdasd");
             dragFrom = "course_cards";
         });
+        dropZone.addEventListener("dblclick"), e =>{
 
+             alert("asdsa");
+
+
+        }
 
         dropZone.addEventListener("drop", e => {
             e.preventDefault();
