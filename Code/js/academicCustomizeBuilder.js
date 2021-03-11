@@ -380,9 +380,6 @@ var decidePreTrueOrFalse = false;
 var clickId;
 //recored prev drop item course name
 function dragTest() {
-    for(clickZone in document.querySelectorAll(".clickable")){  
-        console.log(clickZone.id);
-    }
         //const draggableElement = document.querySelector("#nct0");
     for (const dropZone of document.querySelectorAll(".course_cards")) {
         dropZone.addEventListener("dragover", e => {
@@ -652,7 +649,7 @@ function ajaxpost(courseid, term, done) {
     return false;
 }
 function clickGetInfo(){
-    for(clickZone in document.querySelectorAll(".clickable")){  
+    for(clickZone of document.querySelectorAll(".clickable")){  
         console.log(clickZone.id);
        /*document.getElementById("nct"+clickZone).addEventListener("dblclick", e => {
             e.preventDefault();  
