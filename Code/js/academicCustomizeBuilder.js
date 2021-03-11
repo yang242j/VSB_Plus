@@ -33,6 +33,7 @@ function fetchCourseJSON(sid, password) {
         showCourses(data);
         getCreditsEarned(data);
         storePassedCourse(data);
+        clickGetInfo();
         
         
     });
@@ -538,23 +539,6 @@ function dragTest() {
     }
 
     for (const dropZone of document.querySelectorAll(".courseTags")) {
-        dropZone.addEventListener("dblclick", e => {
-            const droppedElementId = e.dataTransfer.getData("text/plain");
-            const droppedElement = document.getElementById(droppedElementId);
-            e.preventDefault();  
-            var newForAlern = "n" + droppedElementId; //info stored div id
-            var newForAlern2 = "nn" + droppedElementId;
-            var courseName = document.getElementById(newForAlern2).innerHTML;
-
-            var terminfo = getTermInfo(courseName);
-    
-            if(terminfo[0].length == 0){
-                console.log("not applied");
-            }
-            else{
-            info1 = courseName + ":\n" + "Term Applied :" + terminfo[0] + "\n" + "Credits:" + terminfo[1] + "\n" + terminfo[2];
-            console.log(info1);
-       }});
 
         dropZone.addEventListener("dragover", e => {
             e.preventDefault();
@@ -671,7 +655,7 @@ function clickGetInfo(){
        clickZone.addEventListener("dblclick", e => {
             e.preventDefault();  
             var courseName = clickZone.innerHTML;
-            terminfo= getTermInfo(courseName);
+            var terminfo= getTermInfo(courseName);
     
             if(terminfo[0].length == 0){
                 console.log("not applied");
