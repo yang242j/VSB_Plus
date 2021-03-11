@@ -42,6 +42,11 @@ getAllCourse();
 
 window.onload = function init() {
     fetchCourseJSON(sid, pas);
+    document.getElementById("nct0").addEventListener("dbclick",e=>{
+        e.preventDefault();
+        //info = getTermInfo(notCompletedData[i]);
+        alert("asdsad");
+    });
 }
 
 function getCreditsEarned(data) {
@@ -156,11 +161,6 @@ function showCourses(data) {
         document.getElementById("nct" + i).style.color = "black";
         document.getElementById("nct" + i).style.marginTop = "-10px";
 
-        document.getElementById("nct" + i).addEventListener("dbclick",e=>{
-            e.preventDefault();
-            //info = getTermInfo(notCompletedData[i]);
-            alert("asdsad");
-        });
         //console.log(getPrerequisite(notCompletedData[i]));
     }
     for (i = 0; i < notCompletedData.length; i++) {
