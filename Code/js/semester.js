@@ -115,7 +115,14 @@ function registerCourse(short_name, term) {
 
         //console.log($(".left-section[id='" + short_name + "']").length);
         //1.Append courseTag-list
-        document.getElementById("courseList_Containor").appendChild(document.getElementById(short_name));
+        if (document.getElementById(short_name)) {
+            // Tag exist
+            document.getElementById("courseList_Containor").appendChild(document.getElementById(short_name));
+        } else {
+            // Generate course tag
+            document.getElementById("courseList_Containor").appendChild(tagGenerator(short_name, true));
+        }
+        
         document.getElementById(short_name).style.backgroundColor = BGC;
         document.getElementById(short_name).classList.add("selected-course"); // Add selected-course class
 
