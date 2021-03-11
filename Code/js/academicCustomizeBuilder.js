@@ -165,6 +165,7 @@ function showCourses(data) {
         dragStart("#nct" + i);
     }
     dragTest();
+    getClickAre();
 
    /* for (const clickbleZone in document.querySelectorAll(".courseTags")) {
         console.log(clickbleZone.id);
@@ -176,9 +177,6 @@ function showCourses(data) {
    
 }
 
-function clickGetInfo(){
-  
-}
 
 function btnForCourse(data) {
     var ctRight = document.getElementById("ctRight");
@@ -381,14 +379,7 @@ var decidePreTrueOrFalse = false;
 var clickId;
 //recored prev drop item course name
 function dragTest() {
-    //const draggableElement = document.querySelector("#nct0");
-    for (const clickzone of document.querySelectorAll(".clickable")) {
-    console.log(clickzone.id);
-    }
- 
-
-
-    
+    //const draggableElement = document.querySelector("#nct0");  
     for (const dropZone of document.querySelectorAll(".course_cards")) {
         dropZone.addEventListener("dragover", e => {
             e.preventDefault();
@@ -655,4 +646,9 @@ function ajaxpost(courseid, term, done) {
     // (C) PREVENT HTML FORM SUBMIT
     xhr.send(data);
     return false;
+}
+function getClickAre(){
+    for (const clickzone of document.querySelectorAll(".clickable")) {
+        console.log(clickzone.id);
+        }
 }
