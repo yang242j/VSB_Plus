@@ -43,10 +43,8 @@ session_start();
 
   <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
   <script>
-    var isMobile = window.matchMedia('(max-width: 1080px)').matches;
     $(document).ready(function() {
       $(".nav-right-2").hide();
-      if (isMobile) $(".menu-icon").click();
     });
   </script>
 </head>
