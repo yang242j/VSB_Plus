@@ -330,9 +330,9 @@ body .terms .term1{
     /*border: 2px solid blue;*/
     display: grid;
     grid-template-columns: 8% 15% 15% 15% 15% 15% ; 
-    grid-template-rows: 65% ;
+    grid-template-rows: 72% ;
     column-gap: 10px;
-    margin-left: 30px;
+    margin-left: 35px;
     row-gap:5px;
 
 }
