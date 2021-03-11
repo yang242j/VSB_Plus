@@ -174,7 +174,7 @@ function showCourses(data) {
     document.getElementById("nct" + i).addEventListener("dblclick", e1=> {
         e1.preventDefault();
         const terminfo2 = getTermInfo(notCompletedData[i]);
-        info2 = notCompletedData[i] + ":\n" + "Term Applied :" + terminfo2[0] + "\n" + "Credits:" + terminfo2[1] + "\n" + terminfo[2];
+        info2 = notCompletedData[i] + ":\n" + "Term Applied :" + terminfo2[0] + "\n" + "Credits:" + terminfo2[1] + "\n" + terminfo2[2];
         alert(info2);
     });
 
