@@ -33,7 +33,7 @@ function fetchCourseJSON(sid, password) {
         showCourses(data);
         getCreditsEarned(data);
         storePassedCourse(data);
-        clickGetInfo();
+        
         
     });
 }
@@ -43,6 +43,7 @@ getAllCourse();
 
 window.onload = function init() {
     fetchCourseJSON(sid, pas);
+    clickGetInfo();
    
 }
 
