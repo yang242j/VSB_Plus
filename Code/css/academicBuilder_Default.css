@@ -186,13 +186,13 @@ body .tags_courses .course_list {
     /* margin-left: -50px; */
 }
 
-body .tags_courses .course_completed {
+body .tags_courses .ense_course {
     /*border: 2px solid red;*/
     /* margin-top: -350px; */
     /* margin-left: -20px; */
 }
 
-body .tags_courses .course_tag_completed {
+body .tags_courses .ense_course_tag {
     /*border: 2px solid red;*/
     display: grid;
     grid-template-columns: 20% 20% 20% 20%;
@@ -212,13 +212,13 @@ body .tags_courses .course_tag_completed p {
     text-align: center;
 }
 
-body .tags_courses .course_not_completed {
+body .tags_courses .cs_course {
     /*border: 2px solid red;*/
     /* margin-top: -200px; */
     /* margin-left: -20px; */
 }
 
-body .tags_courses .course_tag_not_completed {
+body .tags_courses .cs_course_tag {
     /*border: 2px solid red;*/
     display: grid;
     grid-template-columns: 20% 20% 20% 20%;
@@ -229,13 +229,13 @@ body .tags_courses .course_tag_not_completed {
     /* margin-left: -20px; */
 }
 
-body .tags_courses .electives_course {
+body .tags_courses .enel_course {
     /*border: 2px solid red;*/
     /* margin-top: -1px; */
     /* margin-left: -20px; */
 }
 
-body .tags_courses .course_tag_electives {
+body .tags_courses .enel_course_tag {
     /*border: 2px solid red;*/
     display: grid;
     grid-template-columns: 20% 20% 20% 20%;
