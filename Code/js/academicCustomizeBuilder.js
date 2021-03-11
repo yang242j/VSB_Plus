@@ -462,9 +462,9 @@ function dragTest() {
                     container.push(doneList[i][j]);
                 }
             }
+            ajaxpost(courseName, "202020", container);
 
-
-            console.log(terminfo[0]);
+            //console.log(terminfo[0]);
             if (terminfo[0].length > 0) {
                 var terminfo1, terminfo2, terminfo3 = "";
 
@@ -552,7 +552,6 @@ function dragTest() {
                 doneList[index].push(courseName);
                 //console.log(doneList);
             }
-            ajaxpost(courseName, "202020", container);
             dropZone.appendChild(droppedElement);
 
 
