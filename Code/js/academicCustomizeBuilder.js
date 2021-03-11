@@ -165,7 +165,6 @@ function showCourses(data) {
         dragStart("#nct" + i);
     }
     dragTest();
-    clickGetInfo();
 
    /* for (const clickbleZone in document.querySelectorAll(".courseTags")) {
         console.log(clickbleZone.id);
@@ -647,6 +646,7 @@ function ajaxpost(courseid, term, done) {
     xhr.send(data);
     return false;
 }
+clickGetInfo();
 function clickGetInfo(){
     for(clickZone of document.querySelectorAll(".clickable")){  
         //console.log(clickZone.id);
