@@ -33,9 +33,7 @@ function fetchCourseJSON(sid, password) {
         showCourses(data);
         getCreditsEarned(data);
         storePassedCourse(data);
-        
-        
-
+        clickGetInfo(data);
     });
 }
 getTermData(major);
