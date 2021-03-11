@@ -180,11 +180,10 @@ function showCourses(data) {
 function clickGetInfo(){
     for(i=2;i<5;i++){
         
-        document.getElementById("nct0").addEventListener("dblclick", e => {
+        document.getElementById("nct"+i).addEventListener("dblclick", e => {
             e.preventDefault();
-            alert("asd");
             
-            var courseName = document.getElementById("nnnct0").innerHTML;
+            var courseName = document.getElementById("nnnct"+i).innerHTML;
             const terminfo= getTermInfo(courseName);
     
             if(terminfo[0].length == 0){
