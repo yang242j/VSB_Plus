@@ -74,10 +74,11 @@ body section.container div.disclaimer {
     float: right;
 }
 
-body section.container div.disclaimer span.paragraghs {
-    margin: 10px;
+body section.container div.disclaimer div.paragraghs {
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
-body section.container div.disclaimer span.paragraghs p {
-    font-size: 10px;
+body section.container div.disclaimer div.paragraghs p {
+    margin-top: 5%;
 }
