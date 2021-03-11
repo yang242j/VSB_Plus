@@ -196,10 +196,10 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 
 		<section id ="block" class = "tags_courses">  
 			<h2>Approved Electives</h2>
-			<div class = "course_completed">
-				<h3>ENSE</h3>
+			<div class = "ense_course">
+				<h3>ENSE:</h3>
 
-				<div class = "course_tag_completed" id = "approvedCourse">
+				<div class = "ense_course_tag" id = "approvedCourse">
 					<p id = "ct0">ENSE 271</p>
 					<p id = "ct1">ENSE 271</p>
 					<p id = "ct2">ENSE 271</p>
@@ -215,15 +215,15 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 					<p id = "ct10">ENSE 271</p>
 					<p id = "ct11">ENSE 271</p>
 				</div>
-				<div>
+				<!--<div>
 					<button class="left_arrow" id ="approvedLeft"  onclick = "aLeft()"><i class='fas fa-angle-left'></i></button>
 					<button class="right_arrow" id ="approvedRight" onclick = "aRight()"><i class='fas fa-angle-right'></i></button>
-				</div>
+				</div>-->
 			</div>
 
-			<div class = "course_not_completed">
-				<h3>CS</h3>
-				<div class = "course_tag_not_completed" id = "not_completed_tag">
+			<div class = "cs_course">
+				<h3>CS:</h3>
+				<div class = "cs_course_tag" id = "not_completed_tag">
 					<!-- <p id = "nct0" onclick="alert(courseInfo())">ENSE 271</p>-->
 					<p id = "nct0">ENSE 271</p>
 					<p id = "nct1">ENSE 271</p>
@@ -240,15 +240,15 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 					<p id = "nct10">ENSE 271</p>
 					<p id = "nct11">ENSE 271</p>
 				</div>
-				<div>
+				<!--<div>
 					<button class="left_arrow" id ="notCompletedLeft" onclick = "nctLeft()"><i class='fas fa-angle-left'></i></button>
 					<button class="right_arrow" id ="notCompletedRight" onclick = "nctRight()"><i class='fas fa-angle-right'></i></button>
-				</div>
+				</div>-->
 			</div>
 			
-			<div class = "electives_course">
-				<h3>ENEL</h3>
-				<div class = "course_tag_electives" id = "electives_tag">
+			<div class = "enel_course">
+				<h3>ENEL:</h3>
+				<div class = "enel_course_tag" id = "electives_tag">
 					<p id = "enct0">ENSE 271</p>
 					<p id = "enct1">ENSE 271</p>
 					<p id = "enct2">ENSE 271</p>
@@ -264,10 +264,10 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 					<p id = "enct10">ENSE 271</p>
 					<p id = "enct11">ENSE 271</p>
 				</div>
-				<div>
+				<!--<div>
 					<button class="left_arrow" id ="notCompletedLeft" onclick = "enctLeft()"><i class='fas fa-angle-left'></i></button>
 					<button class="right_arrow" id ="notCompletedRight" onclick = "enctRight()"><i class='fas fa-angle-right'></i></button>
-				</div>
+				</div>-->
 			</div>
 		</section>
 	</div>
