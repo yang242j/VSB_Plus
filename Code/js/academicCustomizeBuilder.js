@@ -650,10 +650,10 @@ function ajaxpost(courseid, term, done) {
 }
 function clickGetInfo(){
     for(clickZone of document.querySelectorAll(".clickable")){  
-        console.log(clickZone.id);
-       /*document.getElementById("nct"+clickZone).addEventListener("dblclick", e => {
+        //console.log(clickZone.id);
+       clickZone.addEventListener("dblclick", e => {
             e.preventDefault();  
-            var courseName = document.getElementById("nnnct"+clickZone).innerHTML;
+            var courseName = dclickZone.innerHTML;
             const terminfo= getTermInfo(courseName);
     
             if(terminfo[0].length == 0){
@@ -663,7 +663,7 @@ function clickGetInfo(){
             info1 = courseName + ":\n" + "Term Applied :" + terminfo[0] + "\n" + "Credits:" + terminfo[1] + "\n" + terminfo[2];
             console.log(info1);
             }
-        });*/
+        });
 
         }
         
