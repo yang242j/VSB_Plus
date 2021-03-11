@@ -148,7 +148,7 @@ function showCourses(data) {
         document.getElementById("courseTagArea").innerHTML +=
             "<div class = 'courseTags'   id ='"+ i + "'>" + 
             "<div  draggable = 'true' id ='nct" + i + "'>" +
-            "<p class = 'clickable' id ='nnnct" + i + "'" + ">" + notCompletedData[i] + "</p>" +
+            "<p class = 'clickable' name ='nothing' id ='nnnct" + i + "'" + ">" + notCompletedData[i] + "</p>" +
             "<p id ='nnct" + i + "'" + ">" + " " + "</p>" +
             "</div> </div>";
         document.getElementById("nnct" + i).style.visibility = "hidden";
@@ -181,11 +181,9 @@ function clickGetInfo(){
     for(clickZone in document.querySelectorAll(".clickable")){
         if(clickZone < 50)
         {
-        console.log(clickZone);
-
+        console.log(clickZone.getAttribute("name"));
         document.getElementById("nct"+clickZone).addEventListener("dblclick", e => {
-            e.preventDefault();
-            
+            e.preventDefault();  
             var courseName = document.getElementById("nnnct"+clickZone).innerHTML;
             const terminfo= getTermInfo(courseName);
     
@@ -429,9 +427,6 @@ function dragTest() {
             dropZone.classList.remove("drop-zone--over");
             //console.log("dasdasdasd");
             dragFrom = "course_cards";
-            dropZone.removeEventListener("dblclick", ev => {
-                ev.preventDefault();
-            });
         });
 
         dropZone.addEventListener("drop", e => {
