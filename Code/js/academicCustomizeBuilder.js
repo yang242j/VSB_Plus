@@ -166,13 +166,13 @@ function showCourses(data) {
     console.log(notCompletedData);
     document.getElementById("nct1").addEventListener("dblclick", e => {
         e.preventDefault();
-        const terminfo= getTermInfo(notCompletedData[1]);
+        const terminfo= getTermInfo(notCompletedData[2]);
 
         if(terminfo[0].length == 0){
             console.log("not applied");
         }
         else{
-        info1 = notCompletedData[1] + ":\n" + "Term Applied :" + terminfo[0] + "\n" + "Credits:" + terminfo[1] + "\n" + terminfo[2];
+        info1 = notCompletedData[2] + ":\n" + "Term Applied :" + terminfo[0] + "\n" + "Credits:" + terminfo[1] + "\n" + terminfo[2];
         console.log(info1);
         }
     });
