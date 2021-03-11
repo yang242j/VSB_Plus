@@ -156,38 +156,41 @@ function showCourses(data) {
         document.getElementById("nct" + i).style.color = "black";
         document.getElementById("nct" + i).style.marginTop = "-10px";
 
-        
+
         //console.log(getPrerequisite(notCompletedData[i]));
     }
     for (i = 0; i < notCompletedData.length; i++) {
         dragStart("#nct" + i);
     }
     dragTest();
-    var i =0;
-    document.getElementById("nct"+ i).addEventListener("dblclick",e=>{
+    var i = 0;
+    document.getElementById("nct" + i).addEventListener("dblclick", e => {
         e.preventDefault();
         terminfo = getTermInfo(notCompletedData[i]);
-        info = notCompletedData[i] + ":\n" + "Term Applied :" + terminfo[0]+"\n"+ "Credits:"+terminfo[1]+"\n"+terminfo[2];
+        info = notCompletedData[i] + ":\n" + "Term Applied :" + terminfo[0] + "\n" + "Credits:" + terminfo[1] + "\n" + terminfo[2];
         alert(info);
-
-        var i =1;
-        document.getElementById("nct"+ i).addEventListener("dblclick",e=>{
-            e.preventDefault();
-            terminfo = getTermInfo(notCompletedData[i]);
-            info = notCompletedData[i] + ":\n" + "Term Applied :" + terminfo[0]+"\n"+ "Credits:"+terminfo[1]+"\n"+terminfo[2];
-            alert(info);
-            var i =2;
-            document.getElementById("nct"+ i).addEventListener("dblclick",e=>{
-                e.preventDefault();
-                terminfo = getTermInfo(notCompletedData[i]);
-                info = notCompletedData[i] + ":\n" + "Term Applied :" + terminfo[0]+"\n"+ "Credits:"+terminfo[1]+"\n"+terminfo[2];
-                alert(info);
-                var i =3;
-                document.getElementById("nct"+ i).addEventListener("dblclick",e=>{
-                    e.preventDefault();
-                    terminfo = getTermInfo(notCompletedData[i]);
-                    info = notCompletedData[i] + ":\n" + "Term Applied :" + terminfo[0]+"\n"+ "Credits:"+terminfo[1]+"\n"+terminfo[2];
-                    alert(info);
+    });
+    i = 1;
+    document.getElementById("nct" + i).addEventListener("dblclick", e => {
+        e.preventDefault();
+        terminfo = getTermInfo(notCompletedData[i]);
+        info = notCompletedData[i] + ":\n" + "Term Applied :" + terminfo[0] + "\n" + "Credits:" + terminfo[1] + "\n" + terminfo[2];
+        alert(info);
+    });
+    i = 2;
+    document.getElementById("nct" + i).addEventListener("dblclick", e => {
+        e.preventDefault();
+        terminfo = getTermInfo(notCompletedData[i]);
+        info = notCompletedData[i] + ":\n" + "Term Applied :" + terminfo[0] + "\n" + "Credits:" + terminfo[1] + "\n" + terminfo[2];
+        alert(info);
+    });
+        i = 3;
+    document.getElementById("nct" + i).addEventListener("dblclick", e => {
+        e.preventDefault();
+        terminfo = getTermInfo(notCompletedData[i]);
+        info = notCompletedData[i] + ":\n" + "Term Applied :" + terminfo[0] + "\n" + "Credits:" + terminfo[1] + "\n" + terminfo[2];
+        alert(info);
+    });
 
     /*for (i = 0; i < notCompletedData.length; i++) {
     document.getElementById("nct"+ i).addEventListener("dblclick",e=>{
@@ -195,8 +198,8 @@ function showCourses(data) {
         terminfo = getTermInfo(notCompletedData[i]);
         info = notCompletedData[i] + ":\n" + "Term Applied :" + terminfo[0]+"\n"+ "Credits:"+terminfo[1]+"\n"+terminfo[2];
         alert(info);
-    });*/
-}
+    });
+}*/
 }
 
 function btnForCourse(data) {
@@ -423,7 +426,7 @@ function dragTest() {
             dropZone.classList.remove("drop-zone--over");
             //console.log("dasdasdasd");
             dragFrom = "course_cards";
-            dropZone.removeEventListener("dblclick",ev =>{
+            dropZone.removeEventListener("dblclick", ev => {
                 ev.preventDefault();
             });
         });
