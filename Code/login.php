@@ -200,8 +200,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div class="disclaimer">
             <h2>Note:</h2>
             <span class="paragraghs">
-                <p>1</p></br>
-                <p>2</p></br>
+                <p>This web application is developed and test without the support of UofR ITsupport. Some of the courses' data may very  from the UofR official website. In the event of any conflict between this application and the University of Regina, the latter shall prevail.</p></br>
+                <p>The Simulateed courses schedules are only for reference, please make the official advice as the standard.</p></br>
                 <p>3</p></br>
             </span>
         </div>
