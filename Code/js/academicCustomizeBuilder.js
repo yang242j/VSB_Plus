@@ -395,6 +395,7 @@ function dragTest() {
             dropZone.classList.remove("drop-zone--over");
             //console.log("dasdasdasd");
             dragFrom = "course_cards";
+            dropZone.removeEventListener("dblclick");
         });
 
         dropZone.addEventListener("drop", e => {
@@ -524,8 +525,6 @@ function dragTest() {
                 //console.log(doneList);
             }
             dropZone.appendChild(droppedElement);
-
-
 
 
 
