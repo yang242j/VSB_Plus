@@ -126,7 +126,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 			
 			<div class = "termGrid" id = "term2">
 				<div class = "tittle">
-					<h3>Spring/Summer</h3>
+					<h3>Spr./Sum.</h3>
 				</div>
 				<div class = "course_cards" id = "Spring/Summer" name ="2"></div>
 				<div class = "course_cards" id = "Spring/Summer" name ="2"></div>
@@ -159,7 +159,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 			
 			<div class = "termGrid" id = "term5">
 				<div class = "tittle">
-					<h3>Spring/Summer</h3>
+					<h3>Spr./Sum.</h3>
 				</div>
 				<div class = "course_cards" id = "Spring/Summer" name ="5"></div>
 				<div class = "course_cards" id = "Spring/Summer" name ="5"></div>
@@ -192,7 +192,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 
 			<div class = "termGrid" id = "term8">
 				<div class = "tittle">
-					<h3>Spring/Summer</h3>
+					<h3>Spr./Sum.</h3>
 				</div>
 				<div class = "course_cards" id = "Spring/Summer" name ="8"></div>
 				<div class = "course_cards" id = "Spring/Summer" name ="8"></div>
