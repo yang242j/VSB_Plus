@@ -61,7 +61,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         var sid = "<?php echo $_SESSION["sid"]; ?>";
         var pas = "<?php echo $_SESSION["password"]; ?>";
         var major = "<?php echo $_SESSION["major"]; ?>"
-        
+
 		var isMobile = window.matchMedia('(max-width: 1080px)').matches;
         $(document).ready(function() {
             if (isMobile) $(".menu-icon").click();
@@ -240,21 +240,20 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 					<p id = "ct9"></p>
 					<p id = "ct10"></p>
 					<p id = "ct11"></p>
-					<div>
-						<button class="right_arrow" id ="ctLeft"><i class='fas fa-angle-left'></i></button>
-						<button class="right_arrow" id ="ctRight"><i class='fas fa-angle-right'></i></button>
-					</div>
 				</div>
-				
+				<div>
+					<button class="right_arrow" id ="ctLeft"><i class='fas fa-angle-left'></i></button>
+					<button class="right_arrow" id ="ctRight"><i class='fas fa-angle-right'></i></button>
+				</div>
 			</div>
 
 			<div class= "course_list">
 				<h3>Course to take</h3>
 				<div class = "course_tag_not_completed" id = "courseTagArea">
-				<div>
+				</div>
+                <div>
 					<button class="right_arrow" id ="nctLeft"><i class='fas fa-angle-left'></i></button>
 					<button class="left_arrow" id ="nctRight"><i class='fas fa-angle-right'></i></button>
-				</div>
 				</div>
 			</div>
 
