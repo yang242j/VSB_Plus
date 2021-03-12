@@ -170,7 +170,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 			
 			<div class = "termGrid" id = "term6">
 				<div class = "tittle">
-					<h2>Fall</h3>
+					<h3>Fall</h3>
 				</div>
 				<div class = "course_cards" id = "Fall" name ="6"></div>
 				<div class = "course_cards" id = "Fall" name ="6"></div>
