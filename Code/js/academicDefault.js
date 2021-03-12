@@ -68,16 +68,20 @@ function getTermData() {
 function showENSE_electives() {
     for (term in termData) {
         if (term = "Approved") {
-    for (i = 0; i <= 6; i++) {
-        document.getElementById("ense" + i).innerHTML = termData[term][i];
+            for (i = 0; i <= 6; i++) {
+                document.getElementById("ense" + i).innerHTML = termData[term][i];
+            }
+        }
     }
 }
 
 function showCS_electives() {
     for (term in termData) {
         if (term = "Approved") {
-    for (i = 7; i <= 13; i++) {
-        document.getElementById("cs" + i).innerHTML = termData[term][i];
+            for (i = 7; i <= 13; i++) {
+                document.getElementById("cs" + i).innerHTML = termData[term][i];
+            }
+        }
     }
 }
 
@@ -305,14 +309,14 @@ function courseInfo() {
     for (x = 0; x < 12; x++) {
         var courseName = document.getElementById("nct" + x).value;
      
-    for (i = 0; i < allCourseData.length; i++) {
-        
-        if (courseName == allCourseData[i].short_name){
-            return ("<h3>" + allCourseData[i].short_name + "</h3>" + 
-            "<p>" + "Title: </br>" + allCourseData[i].title + "</p>" +
-            "<p>" + "Prerequisite: </br>" + allCourseData[i].prerequisite + "</p>");
+        for (i = 0; i < allCourseData.length; i++) {
+            
+            if (courseName == allCourseData[i].short_name){
+                return ("<h3>" + allCourseData[i].short_name + "</h3>" + 
+                "<p>" + "Title: </br>" + allCourseData[i].title + "</p>" +
+                "<p>" + "Prerequisite: </br>" + allCourseData[i].prerequisite + "</p>");
+            }
         }
-    }
     }
     return ("No Record!!");
     
