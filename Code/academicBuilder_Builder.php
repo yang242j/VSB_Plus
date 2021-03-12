@@ -159,7 +159,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 			
 			<div class = "termGrid" id = "term5">
 				<div class = "tittle">
-					<h2>Spring/Summer</h2>
+					<h3>Spring/Summer</h3>
 				</div>
 				<div class = "course_cards" id = "Spring/Summer" name ="5"></div>
 				<div class = "course_cards" id = "Spring/Summer" name ="5"></div>
@@ -170,7 +170,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 			
 			<div class = "termGrid" id = "term6">
 				<div class = "tittle">
-					<h2>Fall</h2>
+					<h2>Fall</h3>
 				</div>
 				<div class = "course_cards" id = "Fall" name ="6"></div>
 				<div class = "course_cards" id = "Fall" name ="6"></div>
@@ -181,7 +181,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 
 			<div class = "termGrid" id = "term7">
 				<div class = "tittle">
-					<h2>Winter</h2>
+					<h3>Winter</h3>
 				</div>
 				<div class = "course_cards" id = "Winter" name ="7"></div>
 				<div class = "course_cards" id = "Winter" name ="7"></div>
@@ -192,7 +192,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 
 			<div class = "termGrid" id = "term8">
 				<div class = "tittle">
-					<h2>Spring/Summer</h2>
+					<h3>Spring/Summer</h3>
 				</div>
 				<div class = "course_cards" id = "Spring/Summer" name ="8"></div>
 				<div class = "course_cards" id = "Spring/Summer" name ="8"></div>
@@ -203,7 +203,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 
 			<div class = "termGrid" id = "term9">
 				<div class = "tittle">
-					<h2>Fall</h2>
+					<h3>Fall</h2>
 				</div>
 				<div class = "course_cards" id = "Fall" name ="9"></div>
 				<div class = "course_cards" id = "Fall" name ="9"></div>
@@ -213,7 +213,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 			</div>
 		</section>
 
-		<section class = "tags_courses" id ="block" style="float:right;">  
+		<section class = "tags_courses" id ="block">  
 			<div class = "icons_annotation" id ="builder_icon">
 				<div class ="icons" style='font-size:16px;color:darkgoldenrod;font-weight: bold'>---- W</div>
 				<div class ="icons" style='font-size:16px;color:blue;font-weight: bold'>---- NP</div>

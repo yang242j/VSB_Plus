@@ -17,7 +17,7 @@ body .container .wellcome_tag h2 {
 /*** Terms ***/
 body .container .terms {
 	position: relative;
-	width: 58%;
+	width: 65%;
 	float: left;
 }
 
@@ -42,7 +42,7 @@ body .container .terms .termGrid .course_cards {
 /*** Course Tags ***/
 body .container .tags_courses {
 	position: relative;
-	width: 40%;
+	width: 30%;
 	float: right;
 }
 
