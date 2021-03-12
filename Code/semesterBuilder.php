@@ -57,12 +57,14 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     <script>
         var term = '';
         var courseList = [];
+        var isMobile = window.matchMedia('(max-width: 1080px)').matches;
         let presetCourses = ['Precalculus 30', 'Calculus 30', 'CHEM 30', 'Mathematics B30', 'Mathematics C30', 'AMTH 092', 'MATH 102', 'MATH 103'];
         var courseCompletedList = [];
         courseCompletedList = courseCompletedList.concat(presetCourses);
         
         $(document).ready(function() {
             $("button.plus_button.open").hide();
+            if (isMobile) $(".menu-icon").click();
         });
     </script>
 </head>
@@ -128,6 +130,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                     <input type="text" id="search_courseid" placeholder="ENGL 100" onfocus="hideBottom()" onblur="showBottom()" size="8" required />
                     <input type="submit" value="Submit"/>
                 </form>
+                <p id="searchMsg"></p>
                 <script>
                     function ajaxpost() {
                         // (A) GET FORM DATA
@@ -163,9 +166,17 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                                     console.log(courseid + " already exist in courseList { " + courseList + " }");
                                 }
 
+                                // Print search messages
+                                $("#searchMsg").html(courseid + ' registration success.');
+                                $("#searchMsg").css('color', 'green');
+
                             } else {
                                 // Do nothing and alert the returned Notes
                                 alert(rsp.Notes);
+
+                                // Print search messages
+                                $("#searchMsg").html(courseid + ' registration failed.');
+                                $("#searchMsg").css('color', 'red');
                             }
                         };
                         xhr.send(data);

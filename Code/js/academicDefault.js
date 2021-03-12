@@ -42,7 +42,7 @@ function getCourseData() {
     myRequest.send();
 }
 
-function getElectiveCourseData() {
+/*function getElectiveCourseData() {
     var myRequest = new XMLHttpRequest;
     //myRequest.open("GET", "JSON/ESE.json", false);
     myRequest.open("GET", "JSON/SSE_electives.json", false);
@@ -51,7 +51,7 @@ function getElectiveCourseData() {
         ecourseData = data;
     }
     myRequest.send();
-}
+}*/
 
 function getTermData() {
     var myRequest = new XMLHttpRequest;
@@ -65,23 +65,27 @@ function getTermData() {
     myRequest.send();
 }
 
-function showNotCompletedCourse() {
-    for (i = 0; i < 12; i++) {
-        document.getElementById("nct" + i).innerHTML = courseData[i].short_name;
-    }
-}
-
-function showNotCompletedElectivesCourse() {
-    for (i = 0; i < 12; i++) {
-        document.getElementById("enct" + i).innerHTML = ecourseData[i].short_name;
-    }
-}
-
-function showApprovedCourse() {
+function showENSE_electives() {
     for (term in termData) {
         if (term = "Approved") {
-            for (i = 0; i < 12; i++) {
-                document.getElementById("ct" + i).innerHTML = termData[term][i];
+    for (i = 0; i <= 6; i++) {
+        document.getElementById("ense" + i).innerHTML = termData[term][i];
+    }
+}
+
+function showCS_electives() {
+    for (term in termData) {
+        if (term = "Approved") {
+    for (i = 7; i <= 13; i++) {
+        document.getElementById("cs" + i).innerHTML = termData[term][i];
+    }
+}
+
+function showENEL_electives() {
+    for (term in termData) {
+        if (term = "Approved") {
+            for (i = 14; i <= 15; i++) {
+                document.getElementById("enel" + i).innerHTML = termData[term][i];
             }
         }
     }

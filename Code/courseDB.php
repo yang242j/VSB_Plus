@@ -48,8 +48,10 @@ session_start();
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
+        var isMobile = window.matchMedia('(max-width: 1080px)').matches;
         $(document).ready(function() {
             $(".nav-right-2").hide();
+            if (isMobile) $(".menu-icon").click();
         });
     </script>
 </head>
@@ -208,7 +210,8 @@ session_start();
         <!-- For the popView to input the js file -->
         <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script> -->
         <!-- For the graph to input he js file -->
-        <script src="https://cdn.bootcdn.net/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+        <!-- <script src="https://cdn.bootcdn.net/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script> -->
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" integrity="sha256-t9UJPrESBeG2ojKTIcFLPGF7nHi2vEc7f5A2KpH/UBU=" crossorigin="anonymous"></script>
         
     </section>
 

@@ -34,7 +34,7 @@ function pageDown() {
 window.onload = function () {
     loadPieChart(sid, pas);
     loadLineChart(sid, pas);
-    console.log("init web");
+    //console.log("init web");
     setDefault(sid);
     setCmptedValue(sid);
 }
@@ -45,7 +45,7 @@ function loadPieChart(sid, pas) {
         "sid": sid,
         "password": pas
     }, function (data) {
-        console.log(data);
+        //console.log(data);
         var jsonData = JSON.parse(data);
         var divId = 'pieChart';
         genChart1(jsonData, divId);
@@ -57,7 +57,7 @@ function loadLineChart(sid, pas) {
         "sid": sid,
         "password": pas
     }, function (data) {
-        console.log(data);
+        //console.log(data);
         var jsonData = JSON.parse(data);
         var divId = 'lineChart';
         genChart2(jsonData, divId);

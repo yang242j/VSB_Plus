@@ -51,6 +51,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     <meta name="author" content="team_vsbp">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="shortcut icon" href="#">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/academicBuilder_Customize.css">
 
@@ -60,6 +61,11 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         var sid = "<?php echo $_SESSION["sid"]; ?>";
         var pas = "<?php echo $_SESSION["password"]; ?>";
         var major = "<?php echo $_SESSION["major"]; ?>"
+
+		var isMobile = window.matchMedia('(max-width: 1080px)').matches;
+        $(document).ready(function() {
+            if (isMobile) $(".menu-icon").click();
+        });
     </script>
     <style>
         .drop-zone--over{ opacity:0.5}
@@ -100,195 +106,158 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             <a class="" href="courseDB.php">Course List Database</a>
         </div>
     </nav>
-    <div class="welcome_tag" id = "welcome">
-            <h1 id = "show_credits">Credits:</h1>
-        </div>
+    <div class="container">
+		<div class="welcome_tag" id = "welcome">
+			<h1 id = "show_credits">Credits:</h1>
+			<h2>Customize Schedule Builder</h2>
+		</div>
 
-<section class = "terms" id = "block" style = "overflow:auto; height:800px " >
-        <div class="welcome_tag" id = "welcome">
-            <h1>Customize Schedule Builder</h1>
-        </div>
-    
-        <div class = "term1" id = "term1">
-            <div class = "tittle">
-                <h2>Winter</h2>
-            </div>
-            <div class = "course_cards" id = "Winter" name ="1"></div>
-            <div class = "course_cards" id = "Winter" name ="1"></div>
-            <div class = "course_cards" id = "Winter" name ="1"></div>
-             <div class = "course_cards" id = "Winter" name ="1"></div>
-             <div class = "course_cards" id = "Winter" name ="1"></div>  
-            </div>
-        <div class = "term1" id = "term2">
-            <div class = "tittle">
-                <h2>Spring/Summer</h2>
-            </div>
-            <div class = "course_cards" id = "Spring/Summer" name ="2"></div>
-            <div class = "course_cards" id = "Spring/Summer" name ="2"></div>
-            <div class = "course_cards" id = "Spring/Summer" name ="2"></div>
-            <div class = "course_cards" id = "Spring/Summer" name ="2"></div>
-            <div class = "course_cards" id = "Spring/Summer" name ="2"></div>
-        </div>
-    
-        <div class = "term1" id = "term3">
-            <div class = "tittle">
-                <h2>Fall</h2>
-            </div>
-            <div class = "course_cards" id = "Fall" name ="3"></div>
-            <div class = "course_cards" id = "Fall" name ="3"></div>
-            <div class = "course_cards" id = "Fall" name ="3"></div>
-            <div class = "course_cards" id = "Fall" name ="3"></div>
-            <div class = "course_cards" id = "Fall" name ="3"></div>
-        </div>
+		<section class = "terms" id = "block">
+			<div class = "termGrid" id = "term1">
+				<div class = "tittle">
+					<h3>Winter</h3>
+				</div>
+				<div class = "course_cards" id = "Winter" name ="1"></div>
+				<div class = "course_cards" id = "Winter" name ="1"></div>
+				<div class = "course_cards" id = "Winter" name ="1"></div>
+				<div class = "course_cards" id = "Winter" name ="1"></div>
+				<div class = "course_cards" id = "Winter" name ="1"></div>  
+			</div>
+			
+			<div class = "termGrid" id = "term2">
+				<div class = "tittle">
+					<h3>Spring/Summer</h3>
+				</div>
+				<div class = "course_cards" id = "Spring/Summer" name ="2"></div>
+				<div class = "course_cards" id = "Spring/Summer" name ="2"></div>
+				<div class = "course_cards" id = "Spring/Summer" name ="2"></div>
+				<div class = "course_cards" id = "Spring/Summer" name ="2"></div>
+				<div class = "course_cards" id = "Spring/Summer" name ="2"></div>
+			</div>
+		
+			<div class = "termGrid" id = "term3">
+				<div class = "tittle">
+					<h3>Fall</h3>
+				</div>
+				<div class = "course_cards" id = "Fall" name ="3"></div>
+				<div class = "course_cards" id = "Fall" name ="3"></div>
+				<div class = "course_cards" id = "Fall" name ="3"></div>
+				<div class = "course_cards" id = "Fall" name ="3"></div>
+				<div class = "course_cards" id = "Fall" name ="3"></div>
+			</div>
 
-        <div class = "term1" id = "term4">
-            <div class = "tittle">
-                <h2>Winter</h2>
-            </div>
-            <div class = "course_cards" id = "Winter" name ="4"></div>
-            <div class = "course_cards" id = "Winter" name ="4"></div>
-            <div class = "course_cards" id = "Winter" name ="4"></div>
-            <div class = "course_cards" id = "Winter" name ="4"></div>
-            <div class = "course_cards" id = "Winter" name ="4"></div>
-            </div>
-            <div class = "term1" id = "term5">
-            <div class = "tittle">
-                <h2>Spring/Summer</h2>
-            </div>
-            <div class = "course_cards" id = "Spring/Summer" name ="5"></div>
-            <div class = "course_cards" id = "Spring/Summer" name ="5"></div>
-            <div class = "course_cards" id = "Spring/Summer" name ="5"></div>
-            <div class = "course_cards" id = "Spring/Summer" name ="5"></div>
-            <div class = "course_cards" id = "Spring/Summer" name ="5"></div>
-            </div>
-            <div class = "term1" id = "term6">
-            <div class = "tittle">
-                <h2>Fall</h2>
-            </div>
-            <div class = "course_cards" id = "Fall" name ="6"></div>
-            <div class = "course_cards" id = "Fall" name ="6"></div>
-            <div class = "course_cards" id = "Fall" name ="6"></div>
-            <div class = "course_cards" id = "Fall" name ="6"></div>
-            <div class = "course_cards" id = "Fall" name ="6"></div>
-            </div>
-            <div class = "term1" id = "term7">
-            <div class = "tittle">
-                <h2>Winter</h2>
-            </div>
-            <div class = "course_cards" id = "Winter" name ="7"></div>
-            <div class = "course_cards" id = "Winter" name ="7"></div>
-            <div class = "course_cards" id = "Winter" name ="7"></div>
-            <div class = "course_cards" id = "Winter" name ="7"></div>
-            <div class = "course_cards" id = "Winter" name ="7"></div>
-            </div>
-            <div class = "term1" id = "term8">
-            <div class = "tittle">
-                <h2>Spring/Summer</h2>
-            </div>
-            <div class = "course_cards" id = "Spring/Summer" name ="8"></div>
-            <div class = "course_cards" id = "Spring/Summer" name ="8"></div>
-            <div class = "course_cards" id = "Spring/Summer" name ="8"></div>
-            <div class = "course_cards" id = "Spring/Summer" name ="8"></div>
-            <div class = "course_cards" id = "Spring/Summer" name ="8"></div>
-            </div>
-            <div class = "term1" id = "term9">
-            <div class = "tittle">
-                <h2>Fall</h2>
-            </div>
-            <div class = "course_cards" id = "Fall" name ="9"></div>
-            <div class = "course_cards" id = "Fall" name ="9"></div>
-            <div class = "course_cards" id = "Fall" name ="9"></div>
-            <div class = "course_cards" id = "Fall" name ="9"></div>
-            <div class = "course_cards" id = "Fall" name ="9"></div>
-            </div>
-            <!--<div class = "arrows">
-                <button class="right_arrow">
-                    <i class='fas fa-angle-left'></i>
-                </button>
-                &nbsp;
-                <button class="right_arrow">
-                    <i class='fas fa-angle-right'></i>
-                </button>
-            </div>  -->
+			<div class = "termGrid" id = "term4">
+				<div class = "tittle">
+					<h3>Winter</h3>
+				</div>
+				<div class = "course_cards" id = "Winter" name ="4"></div>
+				<div class = "course_cards" id = "Winter" name ="4"></div>
+				<div class = "course_cards" id = "Winter" name ="4"></div>
+				<div class = "course_cards" id = "Winter" name ="4"></div>
+				<div class = "course_cards" id = "Winter" name ="4"></div>
+			</div>
+			
+			<div class = "termGrid" id = "term5">
+				<div class = "tittle">
+					<h2>Spring/Summer</h2>
+				</div>
+				<div class = "course_cards" id = "Spring/Summer" name ="5"></div>
+				<div class = "course_cards" id = "Spring/Summer" name ="5"></div>
+				<div class = "course_cards" id = "Spring/Summer" name ="5"></div>
+				<div class = "course_cards" id = "Spring/Summer" name ="5"></div>
+				<div class = "course_cards" id = "Spring/Summer" name ="5"></div>
+			</div>
+			
+			<div class = "termGrid" id = "term6">
+				<div class = "tittle">
+					<h2>Fall</h2>
+				</div>
+				<div class = "course_cards" id = "Fall" name ="6"></div>
+				<div class = "course_cards" id = "Fall" name ="6"></div>
+				<div class = "course_cards" id = "Fall" name ="6"></div>
+				<div class = "course_cards" id = "Fall" name ="6"></div>
+				<div class = "course_cards" id = "Fall" name ="6"></div>
+			</div>
 
-           
+			<div class = "termGrid" id = "term7">
+				<div class = "tittle">
+					<h2>Winter</h2>
+				</div>
+				<div class = "course_cards" id = "Winter" name ="7"></div>
+				<div class = "course_cards" id = "Winter" name ="7"></div>
+				<div class = "course_cards" id = "Winter" name ="7"></div>
+				<div class = "course_cards" id = "Winter" name ="7"></div>
+				<div class = "course_cards" id = "Winter" name ="7"></div>
+			</div>
 
-          
+			<div class = "termGrid" id = "term8">
+				<div class = "tittle">
+					<h2>Spring/Summer</h2>
+				</div>
+				<div class = "course_cards" id = "Spring/Summer" name ="8"></div>
+				<div class = "course_cards" id = "Spring/Summer" name ="8"></div>
+				<div class = "course_cards" id = "Spring/Summer" name ="8"></div>
+				<div class = "course_cards" id = "Spring/Summer" name ="8"></div>
+				<div class = "course_cards" id = "Spring/Summer" name ="8"></div>
+			</div>
 
+			<div class = "termGrid" id = "term9">
+				<div class = "tittle">
+					<h2>Fall</h2>
+				</div>
+				<div class = "course_cards" id = "Fall" name ="9"></div>
+				<div class = "course_cards" id = "Fall" name ="9"></div>
+				<div class = "course_cards" id = "Fall" name ="9"></div>
+				<div class = "course_cards" id = "Fall" name ="9"></div>
+				<div class = "course_cards" id = "Fall" name ="9"></div>
+			</div>
+		</section>
 
-            
+		<section class = "tags_courses" id ="block" style="float:right;">  
+			<div class = "icons_annotation" id ="builder_icon">
+				<div class ="icons" style='font-size:16px;color:darkgoldenrod;font-weight: bold'>---- W</div>
+				<div class ="icons" style='font-size:16px;color:blue;font-weight: bold'>---- NP</div>
+				<div class ="icons" style='font-size:16px;color:grey;font-weight: bold'>---- Passed</div>
+				<div class ="icons" style='font-size:16px;color:green;font-weight: bold'>---- Good</div>
+				<div class ="icons" style='font-size:16px;color:orange;font-weight: bold'>---- Great</div>
+				<div class ="icons" style='font-size:16px;color:red;font-weight: bold'>---- Excellent</div>
+			</div>
 
-       
-</section>
+			<div class= "course_list">
+				<h3>Course Completed</h3>
+				<div class = "course_tag_completed">
+					<p id = "ct0"></p>
+					<p id = "ct1"></p>
+					<p id = "ct2"></p>
+					<p id = "ct3"></p>
 
-<section class = "tags_courses" id ="block" style="float:right;">  
+					<p id = "ct4"></p>
+					<p id = "ct5"></p>
+					<p id = "ct6"></p>
+					<p id = "ct7"></p>
 
-    <div class = "icons_annotation" id ="builder_icon">
-        <div class ="icons" style='font-size:16px;color:darkgoldenrod;font-weight: bold'>---- W</div>
-        <div class ="icons" style='font-size:16px;color:blue;font-weight: bold'>---- NP</div>
-        <div class ="icons" style='font-size:16px;color:grey;font-weight: bold'>---- Passed</div>
-        <div class ="icons" style='font-size:16px;color:green;font-weight: bold'>---- Good</div>
-        <div class ="icons" style='font-size:16px;color:orange;font-weight: bold'>---- Great</div>
-        <div class ="icons" style='font-size:16px;color:red;font-weight: bold'>---- Excellent</div>
-    </div>
+					<p id = "ct8"></p>
+					<p id = "ct9"></p>
+					<p id = "ct10"></p>
+					<p id = "ct11"></p>
+				</div>
+				<div>
+					<button class="right_arrow" id ="ctLeft"><i class='fas fa-angle-left'></i></button>
+					<button class="right_arrow" id ="ctRight"><i class='fas fa-angle-right'></i></button>
+				</div>
+			</div>
 
-    <div class= "course_list">
-        <div class = "course_completed"><h3>Course Completed</h3></div>
-        <div class = "course_tag_completed">
-            <p id = "ct0"></p>
-            <p id = "ct1"></p>
-            <p id = "ct2"></p>
-            <p id = "ct3"></p>
+			<div class= "course_list">
+				<h3>Course to take</h3>
+				<div class = "course_tag_not_completed" id = "courseTagArea">
+				</div>
+                <div>
+					<button class="right_arrow" id ="nctLeft"><i class='fas fa-angle-left'></i></button>
+					<button class="left_arrow" id ="nctRight"><i class='fas fa-angle-right'></i></button>
+				</div>
+			</div>
 
-            <p id = "ct4"></p>
-            <p id = "ct5"></p>
-            <p id = "ct6"></p>
-            <p id = "ct7"></p>
-
-            <p id = "ct8"></p>
-            <p id = "ct9"></p>
-            <p id = "ct10"></p>
-            <p id = "ct11"></p>
-            <div>
-                <button class="right_arrow" id ="ctLeft"><i class='fas fa-angle-left'></i></button>
-                <button class="right_arrow" id ="ctRight"><i class='fas fa-angle-right'></i></button>
-            </div>
-
-        </div>
-
-        <div class = "course_not_completed">
-            <h3>Course to take</h3>
-        </div>
-        <div class = "course_tag_not_completed" id = "courseTagArea" style = "overflow:auto">
-           <!--<div class = "courseTags" >
-               <div draggable = "true" id = "nct0">PlaceHoder</div>
-           </div>
-           <div class = "courseTags" >
-               <div draggable = "true" id = "nct1">PlaceHoder</div>
-           </div>
-           <div class = "courseTags" >
-               <div draggable = "true" id = "nct2">PlaceHoder</div>
-           </div>
-           <div class = "courseTags" >
-               <div draggable = "true" id = "nct3">PlaceHoder</div>
-           </div>
--->
-           
-
-
-            
-
-           
-            <!--<div>
-                <button class="right_arrow" id ="nctLeft"><i class='fas fa-angle-left'></i></button>
-                <button class="left_arrow" id ="nctRight"><i class='fas fa-angle-right'></i></button>
-            </div> -->
-        </div>
-        <!-- <h3 id = "corner"><a href='academicBuilder_Main.php'>Go to academic main</a></h3>
-        <h3 id = "corner"><a href='academicBuilder_Default.php'>Go to Default Schedule</a></h3> -->
-    </div>
-
-</section>
+		</section>
 
 <footer>
     <script src="js/main.js"></script>

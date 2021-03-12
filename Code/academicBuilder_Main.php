@@ -55,11 +55,16 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     <script type="text/javascript" src="js/main.js"></script>
     <script type="text/javascript" src="js/genChart.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdn.bootcdn.net/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+    <!-- <script src="https://cdn.bootcdn.net/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" integrity="sha256-t9UJPrESBeG2ojKTIcFLPGF7nHi2vEc7f5A2KpH/UBU=" crossorigin="anonymous"></script>
     <script>
         var sid = "<?php echo $_SESSION["sid"]; ?>";
         var pas = "<?php echo $_SESSION["password"]; ?>";
         var major = "<?php echo $_SESSION["major"]; ?>";
+        var isMobile = window.matchMedia('(max-width: 1080px)').matches;
+        $(document).ready(function() {
+            if (isMobile) $(".menu-icon").click();
+        });
     </script>
     <script type="text/javascript" src="js/academicMain.js"></script>
 </head>

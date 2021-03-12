@@ -72,14 +72,7 @@ if ($validFormat) {
     $status["CourseID"] = $courseid;
 
     $strArr = get_PregExp_PreString($courseid);
-<<<<<<< HEAD
-    $status[
-        "PrereqNotes"
-    ] .= "\nPrerequisites [Not Matched]:\n$strArr[0]\n";
-
-=======
     $status["PrereqNotes"] .= "\nPrerequisites [Not Matched]:\n$strArr[0]\n";
->>>>>>> fd5f2295e0a54f75706f005f19cd4f9ba93aa881
     // 4.1 Check if the course is already completed
     if (!in_array($courseid, $doneList)) {
         $status["Completion"] = false;
@@ -110,10 +103,6 @@ if ($validFormat) {
                 // Course prerequisites not matched
                 $status["Prerequisites"] = false;
                 $status["Notes"] .= "\nPrerequisites [Not Matched]:\n$strArr[0]\n";
-<<<<<<< HEAD
-               
-=======
->>>>>>> fd5f2295e0a54f75706f005f19cd4f9ba93aa881
             }
         } else {
             // Course file not found
