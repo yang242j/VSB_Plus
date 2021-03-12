@@ -55,7 +55,8 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     <script type="text/javascript" src="js/main.js"></script>
     <script type="text/javascript" src="js/genChart.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.css"></script>
+    <!-- <script src="https://cdn.bootcdn.net/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" integrity="sha256-t9UJPrESBeG2ojKTIcFLPGF7nHi2vEc7f5A2KpH/UBU=" crossorigin="anonymous"></script>
     <script>
         var sid = "<?php echo $_SESSION["sid"]; ?>";
         var pas = "<?php echo $_SESSION["password"]; ?>";
