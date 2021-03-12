@@ -38,12 +38,6 @@ class CourseDB_test:#封装
         finally:
             self.driver.quit()
 
-    # def chartExist(self):
-    #     if self.driver.find_element_by_id(self.chart) != None:
-    #         return True
-    #     else:
-    #         return False
-
     def setFacFilter(self, faultyName):
         try:
             faultys = self.driver.find_elements_by_class_name(self.faultyBtn)
@@ -70,3 +64,55 @@ class CourseDB_test:#封装
             self.logs.error_log('Fail to run the test，reason：%s'%e)
         finally:
             self.driver.quit()
+
+# For the login methods
+class Login_test:
+
+    def __init__(self, driver):
+        # Get the instances
+        self.driver=driver
+        self.logs = log.log_message()
+        self.file=open(path+"\\data\\page_data.yaml", "r",encoding= "utf-8")
+        self.data=yaml.load(self.file)
+        self.file.close()
+
+        # Setup the parameters
+        self.lo_url=self.data['login'].get('url')
+        self.sid_input=self.data['login'].get('sid_box')
+        self.pwd_input=self.data['login'].get('pwd')
+        self.loginBtn=self.data['login'].get('loginBtn')
+        self.sidMsg = self.data['login'].get('sidErrorMsg')
+        self.psdMsg = self.data['login'].get('psdErrorMsg')
+        self.sucMsg = self.data['login'].get('sucMsg')
+        self.errorMsg = self.data['login'].get('errorMsg')
+
+        # Open the login page  
+        self.driver.get(self.lo_url)
+
+    def login(self, SID, pwd, suc):
+        try:
+            driver = self.driver
+            # Input the data into boxs
+            driver.find_element_by_xpath(self.sid_input).clear()
+            driver.find_element_by_xpath(self.sid_input).send_keys(SID)
+
+            driver.find_element_by_xpath(self.pwd_input).clear()
+            driver.find_element_by_xpath(self.pwd_input).send_keys(pwd)
+
+            driver.find_element_by_xpath(self.loginBtn).click()
+
+            if suc == 1:
+                return driver.find_element_by_link_text(self.sucMsg).text
+            else:
+                msgs = driver.find_elements_by_class_name(self.errorMsg)
+                errorMsg = ''
+                for msg in msgs:
+                    errorMsg += (msg.text).strip()
+                return errorMsg
+
+        except Exception as e:
+            self.logs.error_log('Fail to run the test，reason：%s'%e)
+        finally:
+            self.driver.quit()
+
+        return True
