@@ -23,7 +23,7 @@ body .container .terms {
 
 body .container .terms .termGrid {
 	display: grid;
-	grid-template-columns: 20% 15% 15% 15% 15% 15%;
+	grid-template-columns: 10% 18% 18% 18% 18% 18%;
 	column-gap: 1%;
 }
 
