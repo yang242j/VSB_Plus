@@ -105,9 +105,9 @@ body .course {
     scrollbar-width: thin;
 }
 
-#main_area {
+/* #main_area {
     height: 80vh;
-}
+} */
 
 #error {
     color: #db4a4a;
@@ -182,7 +182,7 @@ body .course {
     position: relative;
     z-index: 2;
     /* right: 10%; */
-    float: left;
+    float: right;
 
     /*Word seting*/
     text-align: left;
@@ -193,7 +193,7 @@ body .course {
 
     padding-left: 1%;
     padding-right: 1%;
-    margin-left: 1%;
+    /* margin-left: 1%; */
     /* margin-right: 1%; */
 }
 
@@ -236,6 +236,7 @@ body .course {
     #popView{
         width: 100%;
         /* overflow:scroll; */
+        height: unset;
     }
 
     .graph_size {
