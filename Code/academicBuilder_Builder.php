@@ -114,7 +114,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 
 		<section class = "terms" id = "block">
 			<div class = "termGrid" id = "term1">
-				<div class = "tittle">
+				<div class = "tittle" style="grid-area: title;">
 					<h3>Winter</h3>
 				</div>
 				<div class = "course_cards" id = "Winter" name ="1"></div>
@@ -125,7 +125,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 			</div>
 			
 			<div class = "termGrid" id = "term2">
-				<div class = "tittle">
+				<div class = "tittle" style="grid-area: title;">
 					<h3>Spr./Sum.</h3>
 				</div>
 				<div class = "course_cards" id = "Spring/Summer" name ="2"></div>
@@ -136,7 +136,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 			</div>
 		
 			<div class = "termGrid" id = "term3">
-				<div class = "tittle">
+				<div class = "tittle" style="grid-area: title;">
 					<h3>Fall</h3>
 				</div>
 				<div class = "course_cards" id = "Fall" name ="3"></div>
@@ -147,7 +147,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 			</div>
 
 			<div class = "termGrid" id = "term4">
-				<div class = "tittle">
+				<div class = "tittle" style="grid-area: title;">
 					<h3>Winter</h3>
 				</div>
 				<div class = "course_cards" id = "Winter" name ="4"></div>
@@ -158,7 +158,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 			</div>
 			
 			<div class = "termGrid" id = "term5">
-				<div class = "tittle">
+				<div class = "tittle" style="grid-area: title;">
 					<h3>Spr./Sum.</h3>
 				</div>
 				<div class = "course_cards" id = "Spring/Summer" name ="5"></div>
@@ -169,7 +169,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 			</div>
 			
 			<div class = "termGrid" id = "term6">
-				<div class = "tittle">
+				<div class = "tittle" style="grid-area: title;">
 					<h3>Fall</h3>
 				</div>
 				<div class = "course_cards" id = "Fall" name ="6"></div>
@@ -180,7 +180,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 			</div>
 
 			<div class = "termGrid" id = "term7">
-				<div class = "tittle">
+				<div class = "tittle" style="grid-area: title;">
 					<h3>Winter</h3>
 				</div>
 				<div class = "course_cards" id = "Winter" name ="7"></div>
@@ -191,7 +191,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 			</div>
 
 			<div class = "termGrid" id = "term8">
-				<div class = "tittle">
+				<div class = "tittle" style="grid-area: title;">
 					<h3>Spr./Sum.</h3>
 				</div>
 				<div class = "course_cards" id = "Spring/Summer" name ="8"></div>
@@ -202,7 +202,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 			</div>
 
 			<div class = "termGrid" id = "term9">
-				<div class = "tittle">
+				<div class = "tittle" style="grid-area: title;">
 					<h3>Fall</h2>
 				</div>
 				<div class = "course_cards" id = "Fall" name ="9"></div>
@@ -214,7 +214,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 		</section>
 
 		<section class = "tags_courses" id ="block">
-            <div class= "course_list">
+            <div class= "course_list" style="grid-area: title;">
 				<h3>Course to take</h3>
 				<div class = "course_tag_not_completed" id = "courseTagArea">
 				</div>

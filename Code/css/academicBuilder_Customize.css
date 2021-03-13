@@ -23,8 +23,10 @@ body .container .terms {
 
 body .container .terms .termGrid {
 	display: grid;
-	grid-template-columns: 10% 18% 18% 18% 18% 18%;
+	grid-template-columns: auto auto auto auto auto;
 	/* column-gap: 1%; */
+    grid-template-rows: 50px 80px;
+    grid-template-areas: 'title title title title title';
 }
 
 body .container .terms .termGrid .course_cards {
@@ -35,7 +37,7 @@ body .container .terms .termGrid .course_cards {
 	border-radius: 5px;
 	box-shadow: 2px 4px 7px 0px #555555;
 	text-align: center;
-	margin-left: 20px;
+	margin: 0 5px 0;
 	border-style: dashed;
 }
 
