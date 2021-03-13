@@ -66,7 +66,7 @@ body .container .tags_courses .course_list .course_tag_not_completed {
 
 body .container .tags_courses .course_list .course_tag_completed p, 
 body .container .tags_courses .course_list .course_tag_not_completed p {
-	margin-left: 16px 5px 16px;
+	margin: 16px 5px 16px;
 	background-color: #D4F19F;
 	border-radius: 25px;
 	box-shadow: 2px 4px 7px 0px #555555;
