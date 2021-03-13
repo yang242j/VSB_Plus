@@ -96,7 +96,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         </div>
         <div class="menu-list">
             <div class="session-required nav-active dropdown">
-                <button class="dropbtn" onclick="toogleDisplay('dropdown-content')">Academic Schedule Builder</button>
+                <button class="dropbtn" onclick="toogleDisplay('dropdown-content')">Academic Schedule Builder &#9661;</button>
                 <div id="dropdown-content" class="dropdown-content hidden">
                     <a class="academicList" href="academicBuilder_Main.php">General Student Status</a>
                     <a class="academicList" href="academicBuilder_Default.php">Default Schedule</a>
