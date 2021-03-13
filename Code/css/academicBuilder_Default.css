@@ -175,7 +175,7 @@ body .tags_courses .icons_annotation .icons {
 }
 
 /*body .tags_courses .course_tag_completed {*/
-body .tags_courses .course_tag_electives ense_course_tag {
+body .tags_courses .course_tag_electives_ense_course_tag {
     /*border: 2px solid red;*/
     display: grid;
     grid-template-columns: 20% 20% 20% 20%;
@@ -187,7 +187,7 @@ body .tags_courses .course_tag_electives ense_course_tag {
 }
 
 /*body .tags_courses .course_tag_completed p {*/
-body .tags_courses .course_tag_electives ense_course_tag p {
+body .tags_courses .course_tag_electives_ense_course_tag p {
     /*border: 2px solid red;*/
     margin-left: 8px;
     background-color: #d4f19f;
@@ -197,7 +197,7 @@ body .tags_courses .course_tag_electives ense_course_tag p {
 }
 
 /*body .tags_courses .course_tag_not_completed {*/
-body .tags_courses .course_tag_electives cs_course_tag {
+body .tags_courses .course_tag_electives_cs_course_tag {
     /*border: 2px solid red;*/
     display: grid;
     grid-template-columns: 20% 20% 20% 20%;
@@ -209,7 +209,7 @@ body .tags_courses .course_tag_electives cs_course_tag {
 }
 
 /*body .tags_courses .course_tag_electives {*/
-body .tags_courses .course_tag_electives enel_course_tag {
+body .tags_courses .course_tag_electives_enel_course_tag {
     /*border: 2px solid red;*/
     display: grid;
     grid-template-columns: auto auto auto auto;
@@ -232,7 +232,7 @@ body .tags_courses .course_tag_not_completed #courseTagArea {
 }
 
 /*body .tags_courses .course_tag_not_completed p {*/
-body .tags_courses .course_tag_electives cs_course_tag p {
+body .tags_courses .course_tag_electives_cs_course_tag p {
     /*border: 2px solid red;*/
     margin-left: 8px;
     background-color: #d4f19f;
@@ -242,7 +242,7 @@ body .tags_courses .course_tag_electives cs_course_tag p {
 }
 
 /*body .tags_courses .course_tag_electives p {*/
-body .tags_courses .course_tag_electives enel_course_tag p {
+body .tags_courses .course_tag_electives_enel_course_tag p {
     /*border: 2px solid red;*/
     margin-left: 8px;
     background-color: #d4f19f;
