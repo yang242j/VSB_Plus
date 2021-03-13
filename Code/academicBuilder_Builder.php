@@ -258,6 +258,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 			</div>
 
 		</section>
+    </div>
 
 <footer>
     <script src="js/main.js"></script>
