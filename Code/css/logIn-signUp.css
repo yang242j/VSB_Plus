@@ -79,9 +79,9 @@ body section.container div.disclaimer div.paragraghs {
     margin-right: 10%;
 }
 
-body section.container div.disclaimer div.paragraghs p {
+/* body section.container div.disclaimer div.paragraghs p {
     margin-top: 5%;
-}
+} */
 
 /********************************/
 @media screen and (max-width: 1080px) {
