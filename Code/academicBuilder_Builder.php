@@ -213,18 +213,19 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 			</div>
 		</section>
 
-		<section class = "tags_courses" id ="block">  
-			<div class = "icons_annotation" id ="builder_icon">
-				<div class ="icons" style='font-size:16px;color:darkgoldenrod;font-weight: bold'>---- W</div>
-				<div class ="icons" style='font-size:16px;color:blue;font-weight: bold'>---- NP</div>
-				<div class ="icons" style='font-size:16px;color:grey;font-weight: bold'>---- Passed</div>
-				<div class ="icons" style='font-size:16px;color:green;font-weight: bold'>---- Good</div>
-				<div class ="icons" style='font-size:16px;color:orange;font-weight: bold'>---- Great</div>
-				<div class ="icons" style='font-size:16px;color:red;font-weight: bold'>---- Excellent</div>
+		<section class = "tags_courses" id ="block">
+            <div class= "course_list">
+				<h3>Course to take</h3>
+				<div class = "course_tag_not_completed" id = "courseTagArea">
+				</div>
+                <!-- <div>
+					<button class="right_arrow" id ="nctLeft"><i class='fas fa-angle-left'></i></button>
+					<button class="left_arrow" id ="nctRight"><i class='fas fa-angle-right'></i></button>
+				</div> -->
 			</div>
 
 			<div class= "course_list">
-				<h3>Course Completed</h3>
+				<h3>Course Taken History</h3>
 				<div class = "course_tag_completed">
 					<p id = "ct0"></p>
 					<p id = "ct1"></p>
@@ -247,14 +248,13 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 				</div>
 			</div>
 
-			<div class= "course_list">
-				<h3>Course to take</h3>
-				<div class = "course_tag_not_completed" id = "courseTagArea">
-				</div>
-                <div>
-					<button class="right_arrow" id ="nctLeft"><i class='fas fa-angle-left'></i></button>
-					<button class="left_arrow" id ="nctRight"><i class='fas fa-angle-right'></i></button>
-				</div>
+			<div class = "icons_annotation" id ="builder_icon">
+				<div class ="icons" style='font-size:16px;color:darkgoldenrod;font-weight: bold'>---- W</div>
+				<div class ="icons" style='font-size:16px;color:blue;font-weight: bold'>---- NP</div>
+				<div class ="icons" style='font-size:16px;color:grey;font-weight: bold'>---- Passed</div>
+				<div class ="icons" style='font-size:16px;color:green;font-weight: bold'>---- Good</div>
+				<div class ="icons" style='font-size:16px;color:orange;font-weight: bold'>---- Great</div>
+				<div class ="icons" style='font-size:16px;color:red;font-weight: bold'>---- Excellent</div>
 			</div>
 
 		</section>
