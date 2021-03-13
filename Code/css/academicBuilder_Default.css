@@ -55,9 +55,10 @@ body .terms h1 {
 body .terms .termGrid {
     /*border: 2px solid blue;*/
     display: grid;
-    grid-template-columns: 16% 16% 16% 16% 16% 16%;
-    grid-template-rows: 88% 15%;
-    column-gap: 1%;
+    grid-template-columns: auto auto auto auto auto;
+    grid-template-rows: 50px 70px;
+    grid-template-areas: 'title title title title title';
+    /* column-gap: 1%; */
     /* margin-left: -30px; */
 }
 
@@ -99,13 +100,14 @@ body .terms .add_to_term .arrows button {
 
 body .terms .course_cards {
     position: relative;
-    height: 85%;
+    /* height: 85%; */
     /* border: 2px black; */
     background-color: rgb(255, 251, 251);
     border-radius: 5px;
-    box-shadow: -2px 4px 7px 0px #555555;
+    box-shadow: 2px 4px 7px 0px #555555;
     text-align: center;
-    margin-left: 0;
+    margin: 0 5px 0;
+    /* margin-left: 0; */
     /* margin-top: 50px; */
 }
 
@@ -188,7 +190,7 @@ body .tags_courses .course_tag_completed p {
     margin-left: 8px;
     background-color: #d4f19f;
     border-radius: 25px;
-    box-shadow: -2px 4px 7px 0px #555555;
+    box-shadow: 2px 4px 7px 0px #555555;
     text-align: center;
 }
 
@@ -230,7 +232,7 @@ body .tags_courses .course_tag_not_completed p {
     margin-left: 8px;
     background-color: #d4f19f;
     border-radius: 25px;
-    box-shadow: -2px 4px 7px 0px #555555;
+    box-shadow: 2px 4px 7px 0px #555555;
     text-align: center;
 }
 
@@ -239,7 +241,7 @@ body .tags_courses .course_tag_electives p {
     margin-left: 8px;
     background-color: #d4f19f;
     border-radius: 25px;
-    box-shadow: -2px 4px 7px 0px #555555;
+    box-shadow: 2px 4px 7px 0px #555555;
     text-align: center;
 }
 
