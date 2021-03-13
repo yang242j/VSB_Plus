@@ -205,7 +205,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 			<div class = "electives_course ense_course">
 				<h3>ENSE:</h3>
 
-				<div class = "course_tag_electives ense_course_tag" id = "approvedCourse">
+				<div class = "course_tag_electives_ense_course_tag" id = "approvedCourse">
 					<p id = "ense0"></p>
 					<p id = "ense1"></p>
 					<p id = "ense2"></p>
@@ -229,7 +229,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 
 			<div class = "electives_course cs_course">
 				<h3>CS:</h3>
-				<div class = "course_tag_electives cs_course_tag" id = "not_completed_tag">
+				<div class = "course_tag_electives_cs_course_tag" id = "not_completed_tag">
 					<!-- <p id = "nct0" onclick="alert(courseInfo())">ENSE 271</p>-->
 					<p id = "cs0"></p>
 					<p id = "cs1"></p>
@@ -254,7 +254,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 			
 			<div class = "electives_course enel_course">
 				<h3>ENEL:</h3>
-				<div class = "course_tag_electives enel_course_tag" id = "electives_tag">
+				<div class = "course_tag_electives_enel_course_tag" id = "electives_tag">
 					<p id = "enel0"></p>
 					<p id = "enel1"></p>
 					<p id = "enel2"></p>
