@@ -82,11 +82,6 @@ body .container .tags_courses .course_list button {
 /********************************/
 @media screen and (max-width: 1080px) {
 
-    body .container section#left,
-    body .container .bottom_left {
-        display: none !important;
-    }
-
     body .container .terms,
     body .container .tags_courses {
         width: 100%;
@@ -96,21 +91,5 @@ body .container .tags_courses .course_list button {
     body .container .tags_courses .course_list .course_tag_completed,
     body .container .tags_courses .course_list .course_tag_not_completed {
         grid-template-columns: 20% 20% 20% 20% 20%;
-    }
-
-    .courseCard p {
-        overflow: hidden;
-        display: -webkit-box;
-        -webkit-box-orient: vertical;
-        -webkit-line-clamp: 3;
-    }
-
-    body .container section#middle .courseInfo,
-    body .container section#right .Date {
-        width: 90%;
-    }
-
-    body .container section#right {
-        width: 100%;
     }
 }
