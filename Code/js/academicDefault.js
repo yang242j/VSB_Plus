@@ -263,7 +263,7 @@ function showTerm(pageNumber) {
         if (term >= termNumber) {
             if (term != "Approved") {
                 /*if (i <= 4) {*/
-                if (i <= 4) {
+                if (i <= 10) {
                     /*if(pageNumber < 7) {*/
                     if (pageNumber < 12) {
                         document.getElementById("term" + i).innerHTML =
