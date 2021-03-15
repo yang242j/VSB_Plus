@@ -105,7 +105,7 @@ function showENEL_electives() {
     for (term in termData) {
         if (term = "Approved") {
             for (i = 14; i <= 15; i++) {
-                document.getElementById("enel" + i).innerHTML = termData[term][i];
+                document.getElementById("ct" + i).innerHTML = termData[term][i];
             }
         }
     }
