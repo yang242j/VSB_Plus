@@ -206,7 +206,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 				<h3>ENSE:</h3>
 
 				<div class = "course_tag_electives_ense_course_tag" id = "approvedCourse">
-					<p id = "ense0"></p>
+					<p id = "ense0">ENSE 271</p>
 					<p id = "ense1"></p>
 					<p id = "ense2"></p>
 					<p id = "ense3"></p>
