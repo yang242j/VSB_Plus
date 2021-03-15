@@ -255,10 +255,10 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 			<div class = "electives_course enel_course">
 				<h3>ENEL:</h3>
 				<div class = "course_tag_electives enel_course_tag" id = "electives_tag">
-					<p id = "enel0">ENSE 271</p>
-					<p id = "enel1">ENSE 271</p>
-					<p id = "enel2">ENSE 271</p>
-					<p id = "enel3">ENSE 271</p>
+					<p id = "ct0">ENSE 271</p>
+					<p id = "ct1">ENSE 271</p>
+					<p id = "ct2">ENSE 271</p>
+					<p id = "ct3">ENSE 271</p>
 
 					<p id = "enel4">ENSE 271</p>
 					<p id = "enel5">ENSE 271</p>
