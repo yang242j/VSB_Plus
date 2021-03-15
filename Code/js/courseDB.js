@@ -204,7 +204,7 @@ document.getElementById("display_change").addEventListener("click", function (e)
 
 function courseSearch() {
     var element = document.getElementById("course_input");
-    var input = element.value;
+    var input = element.value.toUpperCase();
     element.setAttribute("value", input);
     courseSelect(element);
     // if (courseSelect(ele) == 404 ){
