@@ -1,15 +1,20 @@
 const colors = ["red", "yellow", "blue", "purple", "plum", "black"];
 var courseData;
-var ecourseData;
+/*var ecourseData;*/
 var termData;
 var allCourse;
 window.onload = function () {
-    showNotCompletedCourse();
-    showApprovedCourse();
+    /*showNotCompletedCourse();
+    showApprovedCourse();*/
+    
+    showENSE_electives();
+    showCS_electives();
+    showENEL_electives();
     showTerm(1);
 }
 getCourseData();
-getTermData();
+/*getTermData();*/
+getTermData(major);
 getAllCourse();
 
 function getAllCourse() {
@@ -53,7 +58,7 @@ function getCourseData() {
     myRequest.send();
 }*/
 
-function getTermData() {
+/*function getTermData() {
     var myRequest = new XMLHttpRequest;
     //myRequest.open("GET", "JSON/reqCourse/ESE_req.json", false);
     myRequest.open("GET", "JSON/reqCourse/SSE_req.json", false);
@@ -61,6 +66,17 @@ function getTermData() {
         var data = JSON.parse(myRequest.responseText);
         termData = data;
         console.log(termData);
+    }
+    myRequest.send();
+}*/
+function getTermData(faculty) {
+    var myRequest = new XMLHttpRequest;
+    var facultyName = faculty;
+    var url = "JSON/reqCourse/" + facultyName + "_req.json";
+    myRequest.open("GET", url, false);
+    myRequest.onload = function () {
+        var data = JSON.parse(myRequest.responseText);
+        termData = data;
     }
     myRequest.send();
 }
