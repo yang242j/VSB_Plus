@@ -260,15 +260,15 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 					<p id = "ct2">ENSE 271</p>
 					<p id = "ct3">ENSE 271</p>
 
-					<p id = "enel4">ENSE 271</p>
-					<p id = "enel5">ENSE 271</p>
-					<p id = "enel6">ENSE 271</p>
-					<p id = "enel7">ENSE 271</p>
+					<p id = "ct4">ENSE 271</p>
+					<p id = "ct5">ENSE 271</p>
+					<p id = "ct6">ENSE 271</p>
+					<p id = "ct7">ENSE 271</p>
 					
-					<p id = "enel8">ENSE 271</p>
-					<p id = "enel9">ENSE 271</p>
-					<p id = "enel10">ENSE 271</p>
-					<p id = "enel11">ENSE 271</p>
+					<p id = "ct8">ENSE 271</p>
+					<p id = "ct9">ENSE 271</p>
+					<p id = "ct10">ENSE 271</p>
+					<p id = "ct11">ENSE 271</p>
 				</div>
 				<!--<div>
 					<button class="left_arrow" id ="notCompletedLeft" onclick = "enctLeft()"><i class='fas fa-angle-left'></i></button>
