@@ -43,7 +43,7 @@ function loadCourses() {
             ALL_JSON = jsonResponse;
         }
     };
-    xhttp.open("GET", "JSON/ALL.json", false); // Get the data from the local JSON file
+    xhttp.open("GET", "JSON/ALL.json", true); // Get the data from the local JSON file
     // xhttp.open("GET", "Model/allCourse.php", false); // Get the data from database by the server php file
     xhttp.send();
 }
