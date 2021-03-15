@@ -15,7 +15,22 @@ login:
     sid_box: "/html/body/section/div[1]/form/div[1]/input" #xpath
     pwd: "/html/body/section/div[1]/form/div[2]/input" #xpath
     loginBtn: "/html/body/section/div[1]/form/div[3]/input[1]" #xpath
-    psdErrorMsg: "The password was not valid." #text
-    sidErrorMsg: "No account found with that student_id." #text
-    sucMsg: "Welcome" #text
+    # psdErrorMsg: "The password was not valid." #text
+    # sidErrorMsg: "No account found with that student_id." #text
+    sucMsg: "welcome" #id
     errorMsg: "help-block" # class name
+    pieGraph: "pieChartChart" #id
+    lineGraph: "lineChartChart" #id
+
+semesterBuilder:
+    # url: "http://15.223.123.122/vsbp/Code/login.php"
+    # sid_box: "/html/body/section/div[1]/form/div[1]/input" #xpath
+    # pwd: "/html/body/section/div[1]/form/div[2]/input" #xpath
+    # loginBtn: "/html/body/section/div[1]/form/div[3]/input[1]" #xpath
+    showNavBar: "/html/body/nav/div[2]" #xpath
+    semsterPage: "/html/body/nav/div[3]/a[1]" #xpath
+    termSele: "termSelector" #id
+    courseSele: "search_courseid" #id
+    sumbitBtn: "//*[@id='top']/div[2]/form/input[2]" #xpath
+    searchMsg: "searchMsg" #id  
+    cardIdSuffix: "_Card" #suffix for adding coruse card

@@ -5,12 +5,14 @@ import  unittest,time,os
 from util import BSTestRunner
 from config import description,reporttitle
 from case.courseDB_test import TestCourseSearch
+from case.semesterBuilder_test import TestSemesterBuilder
+from case.login_test import TestLogin
 from selenium import webdriver
 path=os.getcwd()
 case_path=path+'\\case'
 def runOneTest():
     test_suit = unittest.TestSuite()
-    test_suit.addTest(TestCourseSearch("test_searchCourse"))
+    test_suit.addTest(TestSemesterBuilder("test_prereq"))
    
     runner = unittest.TextTestRunner()
     runner.run(test_suit)
@@ -18,6 +20,7 @@ def runOneTest():
 
 if __name__ == "__main__":
     runOneTest()
+    
     # unittest.main()
     pass
     # driver = webdriver.Chrome()

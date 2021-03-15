@@ -81,10 +81,12 @@ class Login_test:
         self.sid_input=self.data['login'].get('sid_box')
         self.pwd_input=self.data['login'].get('pwd')
         self.loginBtn=self.data['login'].get('loginBtn')
-        self.sidMsg = self.data['login'].get('sidErrorMsg')
-        self.psdMsg = self.data['login'].get('psdErrorMsg')
+        # self.sidMsg = self.data['login'].get('sidErrorMsg')
+        # self.psdMsg = self.data['login'].get('psdErrorMsg')
         self.sucMsg = self.data['login'].get('sucMsg')
         self.errorMsg = self.data['login'].get('errorMsg')
+        self.pieGraph = self.data['login'].get('pieGraph')
+        self.lineGraph = self.data['login'].get('lineGraph')
 
         # Open the login page  
         self.driver.get(self.lo_url)
@@ -92,17 +94,19 @@ class Login_test:
     def login(self, SID, pwd, suc):
         try:
             driver = self.driver
-            # Input the data into boxs
+            # Input the sid into boxes
             driver.find_element_by_xpath(self.sid_input).clear()
             driver.find_element_by_xpath(self.sid_input).send_keys(SID)
-
+            
+            #Input the password into boxes
             driver.find_element_by_xpath(self.pwd_input).clear()
             driver.find_element_by_xpath(self.pwd_input).send_keys(pwd)
 
+            #Click login button
             driver.find_element_by_xpath(self.loginBtn).click()
 
-            if suc == 1:
-                return driver.find_element_by_link_text(self.sucMsg).text
+            if suc == '1':
+                return driver.find_element_by_id(self.sucMsg).text
             else:
                 msgs = driver.find_elements_by_class_name(self.errorMsg)
                 errorMsg = ''
@@ -113,6 +117,30 @@ class Login_test:
         except Exception as e:
             self.logs.error_log('Fail to run the test，reason：%s'%e)
         finally:
-            self.driver.quit()
+            pass
 
-        return True
+    def signIn(self, SID, password):
+        driver = self.driver
+        # Input the sid into boxes
+        driver.find_element_by_xpath(self.sid_input).clear()
+        driver.find_element_by_xpath(self.sid_input).send_keys(SID)
+        
+        #Input the password into boxes
+        driver.find_element_by_xpath(self.pwd_input).clear()
+        driver.find_element_by_xpath(self.pwd_input).send_keys(password)
+        #Click login button
+        driver.find_element_by_xpath(self.loginBtn).click()
+        if self.pieShow(): return driver
+        else: print("sign in fail")
+
+    def pieShow(self):
+        driver = self.driver
+        pieGraphs = driver.find_elements_by_id(self.pieGraph)
+        if len(pieGraphs) == 1: return True
+        else: return False
+
+    def lineShow(self):
+        driver = self.driver
+        lineGraphs = driver.find_elements_by_id(self.lineGraph)
+        if len(lineGraphs) == 1: return True
+        else: return False
