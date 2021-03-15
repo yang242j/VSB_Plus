@@ -207,19 +207,19 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 
 				<div class = "course_tag_electives ense_course_tag" id = "approvedCourse">
 					<p id = "ense0">ENSE 271</p>
-					<p id = "ense1"></p>
-					<p id = "ense2"></p>
-					<p id = "ense3"></p>
+					<p id = "ense1">ENSE 271</p>
+					<p id = "ense2">ENSE 271</p>
+					<p id = "ense3">ENSE 271</p>
 
-					<p id = "ense4"></p>
-					<p id = "ense5"></p>
-					<p id = "ense6"></p>
-					<p id = "ense7"></p>
+					<p id = "ense4">ENSE 271</p>
+					<p id = "ense5">ENSE 271</p>
+					<p id = "ense6">ENSE 271</p>
+					<p id = "ense7">ENSE 271</p>
 					
-					<p id = "ense8"></p>
-					<p id = "ense9"></p>
-					<p id = "ense10"></p>
-					<p id = "ense11"></p>
+					<p id = "ense8">ENSE 271</p>
+					<p id = "ense9">ENSE 271</p>
+					<p id = "ense10">ENSE 271</p>
+					<p id = "ense11">ENSE 271</p>
 				</div>
 				<!--<div>
 					<button class="left_arrow" id ="approvedLeft"  onclick = "aLeft()"><i class='fas fa-angle-left'></i></button>
@@ -231,20 +231,20 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 				<h3>CS:</h3>
 				<div class = "course_tag_electives cs_course_tag" id = "not_completed_tag">
 					<!-- <p id = "nct0" onclick="alert(courseInfo())">ENSE 271</p>-->
-					<p id = "cs0"></p>
-					<p id = "cs1"></p>
-					<p id = "cs2"></p>
-					<p id = "cs3"></p>
+					<p id = "cs0">ENSE 271</p>
+					<p id = "cs1">ENSE 271</p>
+					<p id = "cs2">ENSE 271</p>
+					<p id = "cs3">ENSE 271</p>
 
-					<p id = "cs4"></p>
-					<p id = "cs5"></p>
-					<p id = "cs6"></p>
-					<p id = "cs7"></p>
+					<p id = "cs4">ENSE 271</p>
+					<p id = "cs5">ENSE 271</p>
+					<p id = "cs6">ENSE 271</p>
+					<p id = "cs7">ENSE 271</p>
 					
-					<p id = "cs8"></p>
-					<p id = "cs9"></p>
-					<p id = "cs10"></p>
-					<p id = "cs11"></p>
+					<p id = "cs8">ENSE 271</p>
+					<p id = "cs9">ENSE 271</p>
+					<p id = "cs10">ENSE 271</p>
+					<p id = "cs11">ENSE 271</p>
 				</div>
 				<!--<div>
 					<button class="left_arrow" id ="notCompletedLeft" onclick = "nctLeft()"><i class='fas fa-angle-left'></i></button>
@@ -255,20 +255,20 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 			<div class = "electives_course enel_course">
 				<h3>ENEL:</h3>
 				<div class = "course_tag_electives enel_course_tag" id = "electives_tag">
-					<p id = "enel0"></p>
-					<p id = "enel1"></p>
-					<p id = "enel2"></p>
-					<p id = "enel3"></p>
+					<p id = "enel0">ENSE 271</p>
+					<p id = "enel1">ENSE 271</p>
+					<p id = "enel2">ENSE 271</p>
+					<p id = "enel3">ENSE 271</p>
 
-					<p id = "enel4"></p>
-					<p id = "enel5"></p>
-					<p id = "enel6"></p>
-					<p id = "enel7"></p>
+					<p id = "enel4">ENSE 271</p>
+					<p id = "enel5">ENSE 271</p>
+					<p id = "enel6">ENSE 271</p>
+					<p id = "enel7">ENSE 271</p>
 					
-					<p id = "enel8"></p>
-					<p id = "enel9"></p>
-					<p id = "enel10"></p>
-					<p id = "enel11"></p>
+					<p id = "enel8">ENSE 271</p>
+					<p id = "enel9">ENSE 271</p>
+					<p id = "enel10">ENSE 271</p>
+					<p id = "enel11">ENSE 271</p>
 				</div>
 				<!--<div>
 					<button class="left_arrow" id ="notCompletedLeft" onclick = "enctLeft()"><i class='fas fa-angle-left'></i></button>
