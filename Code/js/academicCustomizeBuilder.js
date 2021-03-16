@@ -244,7 +244,7 @@ function btnForCourse(data) {
     }
 
     nctRight.onclick = function () {
-        var block = document.getElementsByClassName("clickable");
+        var block = document.getElementsByClassName("course_tag_not_completed");
         for (element of block){
             element.scrollLeft = 50;
         }
