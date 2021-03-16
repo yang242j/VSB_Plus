@@ -81,6 +81,11 @@ body .container .tags_courses .course_list .course_tag_not_completed p {
 	text-align: center;
 	font-size: small;
 }
+body .container .tags_courses .course_list .course_tag_not_completed p{
+
+	font-size: medium;
+
+}
 
 body .container .tags_courses .course_list button {
 	border: none;
