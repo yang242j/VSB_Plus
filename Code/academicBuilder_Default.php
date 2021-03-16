@@ -270,10 +270,10 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 					<p id = "ct10">ENSE 271</p>
 					<p id = "ct11">ENSE 271</p>
 				</div>
-				<!--<div>
+				<div>
 					<button class="left_arrow" id ="notCompletedLeft" onclick = "enctLeft()"><i class='fas fa-angle-left'></i></button>
 					<button class="right_arrow" id ="notCompletedRight" onclick = "enctRight()"><i class='fas fa-angle-right'></i></button>
-				</div>-->
+				</div>
 			</div>
 		</section>
 	</div>
