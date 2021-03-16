@@ -243,11 +243,25 @@ function btnForCourse(data) {
         }
     }
 
-    nctRight.onclick = function () {
+    /*nctRight.onclick = function () {
         var block = document.getElementsByClassName("clickable");
-          block.scroll("100px") ;
+          block.scroll ;
           
-    }
+    }*/
+    $('#nctRight').click(function () {
+        $( "#clickable" ).animate({
+            scrollLeft: '+=156px'
+        });
+    })
+
+
+    /*$("#nctRight").bind("click", function (event) {
+        event.preventDefault();
+        // Animates the scrollTop property by the specified
+        // step.
+        $("#clickable").animate({
+            scrollTop: "-=" + 50 + "px"
+        });*/
 }
 
 
