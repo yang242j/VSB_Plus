@@ -13,8 +13,8 @@ window.onload = function () {
     showTerm(1);
 }
 getCourseData();
-/*getTermData();*/
-getTermData(major);
+getTermData();
+/*getTermData(major);*/
 getAllCourse();
 
 function getAllCourse() {
