@@ -217,10 +217,10 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             <div class= "course_list" style="grid-area: title;">
 				<h3>Course to take</h3>
 				<nav>
-				<div><h4>ENSE</h4></div>
-				<div><h4>ENEL</h4></div>
-				<div><h4>CS</h4></div>
-				<div><h4>Other</h4></div>
+				<button>ENSE</button>
+				<button>ENEL</button>
+				<button>CS</button>	
+				<button>Other</button>
 				</nav>
 
 
