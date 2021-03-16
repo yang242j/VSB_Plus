@@ -265,7 +265,7 @@ function btnForCourse(data) {
     enseBtn.onclick = function () {
         var block = document.getElementsByClassName("clickable");
         for (element of block) {
-            if(element.innerHTML.includes('E'))
+            if(element.innerHTML.includes('E') && element.innerHTML.includes('N') && element.innerHTML.includes('S'))
             {
                 element.style.visibility = "visible";
             }
@@ -280,6 +280,29 @@ function btnForCourse(data) {
             element.style.visibility = "visible";
         }
     }
+    enelBtn.onclick = function(){
+        var block = document.getElementsByClassName("clickable");
+        for (element of block) {
+            if(element.innerHTML.includes('E') && element.innerHTML.includes('N') && element.innerHTML.includes('L'))
+            {
+                element.style.visibility = "visible";
+            }
+            else{
+            element.style.visibility = "hidden";
+            }
+        }
+    }
+    csBtn.onclick = function(){
+        var block = document.getElementsByClassName("clickable");
+        for (element of block) {
+            if(element.innerHTML.includes('C') && element.innerHTML.includes('S') )
+            {
+                element.style.visibility = "visible";
+            }
+            else{
+            element.style.visibility = "hidden";
+            }
+        }
 
 
     /*$("#nctRight").bind("click", function (event) {
