@@ -243,8 +243,10 @@ function btnForCourse(data) {
 }
 nctRight.onclick = function () {
     var block = document.getElementsByClassName("clickable");
-    console.log(block);
-    block.style.marginLeft += 20+"px";
+    for (element of block)
+    {
+        console.log(element.innerHTML);
+    }
 }
 
 
