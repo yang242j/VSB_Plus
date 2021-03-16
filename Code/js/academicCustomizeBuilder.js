@@ -245,7 +245,7 @@ nctRight.onclick = function () {
     var block = document.getElementsByClassName("clickable");
     for (element of block)
     {
-        console.log(element.innerHTML);
+        element.style.marginLeft += "20px";
     }
 }
 
