@@ -248,9 +248,14 @@ function btnForCourse(data) {
         for(element of block)
         {
             element.scrollLeft += 50;
-        }
-    
-          
+        }       
+    }
+    nctLeft.onclick = function () {
+        var block = document.getElementsByClassName("course_tag_not_completed");
+        for(element of block)
+        {
+            element.scrollLeft -= 50;
+        }       
     }
 
 
