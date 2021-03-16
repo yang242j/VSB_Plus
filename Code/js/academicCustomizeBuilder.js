@@ -248,6 +248,7 @@ function btnForCourse(data) {
         for (element of block)
         {
             element.scrollTop += 10;
+            console.log(element);
         }
     }
 }
