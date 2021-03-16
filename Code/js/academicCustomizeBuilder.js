@@ -245,7 +245,7 @@ nctRight.onclick = function () {
     var block = document.getElementsByClassName("clickable");
     for (element of block)
     {
-        element.scroll("100px",0);
+        element.scrollTop += 10;
     }
 }
 
