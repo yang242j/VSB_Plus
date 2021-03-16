@@ -245,7 +245,7 @@ nctRight.onclick = function () {
     var block = document.getElementsByClassName("clickable");
     for (element of block)
     {
-        element.style.marginLeft -= "100px";
+        element.animate.scrollLeft -= "100px";
     }
 }
 
