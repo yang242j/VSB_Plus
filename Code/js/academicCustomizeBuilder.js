@@ -185,6 +185,7 @@ function btnForCourse(data) {
     var ctLeft = document.getElementById("ctLeft");
     var nctRight = document.getElementById("nctRight");
     var nctLeft = document.getElementById("nctLeft");
+    var enseBtn = document.getElementById("btnENSE");
 
 
     var completedData = JSON.parse(data);
@@ -256,6 +257,15 @@ function btnForCourse(data) {
         {
             element.scrollLeft -= 70;
         }       
+    }
+    enseBtn.onclick = function(){
+        var block = document.getElementsByClassName("course_tag_not_completed");
+        for(element of block)
+        {
+            element.style.visibility = "hidden";
+        }       
+
+
     }
 
 
