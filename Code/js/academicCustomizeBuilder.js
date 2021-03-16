@@ -247,7 +247,7 @@ function btnForCourse(data) {
         var block = document.getElementsByClassName("clickable");
         for (element of block)
         {
-            element.scrollTop += 10;
+            element.scroll("100px") ;
             console.log(element);
         }
     }
