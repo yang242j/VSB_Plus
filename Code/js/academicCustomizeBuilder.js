@@ -34,8 +34,8 @@ function fetchCourseJSON(sid, password) {
         getCreditsEarned(data);
         storePassedCourse(data);
         clickGetInfo();
-        
-        
+
+
     });
 }
 getTermData(major);
@@ -45,7 +45,7 @@ getAllCourse();
 window.onload = function init() {
     fetchCourseJSON(sid, pas);
     clickGetInfo();
-   
+
 }
 
 function getCreditsEarned(data) {
@@ -148,7 +148,7 @@ function showCourses(data) {
     }
     for (i = 0; i < notCompletedData.length; i++) {
         document.getElementById("courseTagArea").innerHTML +=
-            "<div class = 'courseTags'   id ='"+ i + "'>" + 
+            "<div class = 'courseTags'   id ='" + i + "'>" +
             "<div  draggable = 'true' id ='nct" + i + "'>" +
             "<p class = 'clickable' name ='nothing' id ='nnnct" + i + "'" + ">" + notCompletedData[i] + "</p>" +
             "<p id ='nnct" + i + "'" + ">" + " " + "</p>" +
@@ -168,14 +168,14 @@ function showCourses(data) {
     }
     dragTest();
 
-   /* for (const clickbleZone in document.querySelectorAll(".courseTags")) {
-        console.log(clickbleZone.id);
-        /*document.getElementById("nct" + clickbleZone.id).addEventListener("dblclick", e => {
-            e.preventDefault();
-            alert("ad");
-        });
-    }*/
-   
+    /* for (const clickbleZone in document.querySelectorAll(".courseTags")) {
+         console.log(clickbleZone.id);
+         /*document.getElementById("nct" + clickbleZone.id).addEventListener("dblclick", e => {
+             e.preventDefault();
+             alert("ad");
+         });
+     }*/
+
 }
 
 
@@ -251,33 +251,32 @@ function btnForCourse(data) {
 
     nctRight.onclick = function () {
         var block = document.getElementsByClassName("course_tag_not_completed");
-        for(element of block)
-        {
+        for (element of block) {
             element.scrollLeft += 70;
-        }       
+        }
     }
     nctLeft.onclick = function () {
         var block = document.getElementsByClassName("course_tag_not_completed");
-        for(element of block)
-        {
+        for (element of block) {
             element.scrollLeft -= 70;
-        }       
+        }
     }
-    enseBtn.onclick = function(){
+    enseBtn.onclick = function () {
         var block = document.getElementsByClassName("course_tag_not_completed");
-        for(element of block)
-        {
+        for (element of block) {
             element.style.visibility = "hidden";
-        }       
+        }
     }
-    allBtn.onclick = function(){
+    allBtn.onclick = function () {
         var block = document.getElementsByClassName("course_tag_not_completed");
-        for(element of block)
-        {
-           
+        for (element of block) {
+            for (courses of document.getElementsByClassName("courseName")) {
+                console.log(courses);
+
+            }
             console.log(element);
             element.style.visibility = "visible";
-        }       
+        }
     }
 
 
@@ -429,7 +428,7 @@ var decidePreTrueOrFalse = false;
 var clickId;
 //recored prev drop item course name
 function dragTest() {
-        //const draggableElement = document.querySelector("#nct0");
+    //const draggableElement = document.querySelector("#nct0");
     for (const dropZone of document.querySelectorAll(".course_cards")) {
         dropZone.addEventListener("dragover", e => {
             e.preventDefault();
@@ -698,21 +697,22 @@ function ajaxpost(courseid, term, done) {
     return false;
 }
 
-function clickGetInfo(){
-    for(clickZone of document.querySelectorAll(".clickable")){  
+function clickGetInfo() {
+    for (clickZone of document.querySelectorAll(".clickable")) {
         //console.log(clickZone.id);
-       clickZone.addEventListener("dblclick", e => {
-            e.preventDefault();  
+        clickZone.addEventListener("dblclick", e => {
+            e.preventDefault();
             var courseName = clickZone.innerHTML;
-            var terminfo= getTermInfo(courseName);
-    
-            if(terminfo[0].length == 0){
+            var terminfo = getTermInfo(courseName);
+
+            if (terminfo[0].length == 0) {
                 console.log("not applied");
             }
-            else{
-            info1 = courseName + ":\n" + "Term Applied :" + terminfo[0] + "\n" + "Credits:" + terminfo[1] + "\n" + terminfo[2];
-            console.log(info1);
-       }});
+            else {
+                info1 = courseName + ":\n" + "Term Applied :" + terminfo[0] + "\n" + "Credits:" + terminfo[1] + "\n" + terminfo[2];
+                console.log(info1);
+            }
+        });
 
-        }
     }
+}
