@@ -66,6 +66,12 @@ body .container .tags_courses .course_list .course_tag_not_completed {
 	overflow: left;
 
 }
+body .container .tags_courses .course_list .course_tag_completed{
+    overflow: left;
+	width:70%;
+
+
+}
 
 body .container .tags_courses .course_list .course_tag_completed p, 
 body .container .tags_courses .course_list .course_tag_not_completed p {
