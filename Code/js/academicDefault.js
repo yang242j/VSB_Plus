@@ -104,7 +104,8 @@ function showCS_electives() {
 function showENEL_electives() {
     for (term in termData) {
         if (term = "Approved") {
-            for (i = 14; i <= 15; i++) {
+            /*for (i = 14; i <= 15; i++) {*/
+            for (i = 0; i < 12; i++) {
                 document.getElementById("ct" + i).innerHTML = termData[term][i];
             }
         }
