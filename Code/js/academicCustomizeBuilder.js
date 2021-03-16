@@ -274,6 +274,7 @@ function btnForCourse(data) {
         var block = document.getElementsByClassName("course_tag_not_completed");
         for(element of block)
         {
+            console.log(element);
             element.style.visibility = "visible";
         }       
     }
