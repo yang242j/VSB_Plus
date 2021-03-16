@@ -185,7 +185,12 @@ function btnForCourse(data) {
     var ctLeft = document.getElementById("ctLeft");
     var nctRight = document.getElementById("nctRight");
     var nctLeft = document.getElementById("nctLeft");
+    var allBtn = document.getElementById("btnALL");
     var enseBtn = document.getElementById("btnENSE");
+    var enelBtn = document.getElementById("btnENEL");
+    var csBtn = document.getElementById("btnCS");
+    var otherBtn = document.getElementById("btnOTHER");
+
 
 
     var completedData = JSON.parse(data);
@@ -264,8 +269,13 @@ function btnForCourse(data) {
         {
             element.style.visibility = "hidden";
         }       
-
-
+    }
+    allBtn.onclick = function(){
+        var block = document.getElementsByClassName("course_tag_not_completed");
+        for(element of block)
+        {
+            element.style.visibility = "visible";
+        }       
     }
 
 
