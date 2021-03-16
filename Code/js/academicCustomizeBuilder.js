@@ -242,7 +242,7 @@ function btnForCourse(data) {
     }
 }
 nctRight.onclick = function () {
-    var block = document.getElementsByClassName("courseTags");
+    var block = document.getElementsByClassName("courseTagArea");
     block.style.marginLeft += 20+"px";
 }
 
