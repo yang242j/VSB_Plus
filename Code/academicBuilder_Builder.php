@@ -226,7 +226,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 
 			<div class= "course_list">
 				<h3>Course Taken History</h3>
-				<div class = "course_tag_completed">
+				<div class = "course_tag_completed" stylr = "overflow: left">
 					<p id = "ct0"></p>
 					<p id = "ct1"></p>
 					<p id = "ct2"></p>
