@@ -270,9 +270,8 @@ function btnForCourse(data) {
     allBtn.onclick = function () {
         var block = document.getElementsByClassName("course_tag_not_completed");
         for (element of block) {
-            for (courses of document.getElementsByClassName("courseName")) {
-                console.log(courses);
-
+            for (courses of document.getElementsByClassName("clickable")) {
+                console.log(courses.innerHTML);
             }
             console.log(element);
             element.style.visibility = "visible";
