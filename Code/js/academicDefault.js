@@ -58,7 +58,7 @@ function getCourseData() {
     myRequest.send();
 }*/
 
-/*function getTermData() {
+function getTermData() {
     var myRequest = new XMLHttpRequest;
     //myRequest.open("GET", "JSON/reqCourse/ESE_req.json", false);
     myRequest.open("GET", "JSON/reqCourse/SSE_req.json", false);
@@ -68,8 +68,8 @@ function getCourseData() {
         console.log(termData);
     }
     myRequest.send();
-}*/
-function getTermData(faculty) {
+}
+/*function getTermData(faculty) {
     var myRequest = new XMLHttpRequest;
     var facultyName = faculty;
     var url = "JSON/reqCourse/" + facultyName + "_req.json";
@@ -79,7 +79,7 @@ function getTermData(faculty) {
         termData = data;
     }
     myRequest.send();
-}
+}*/
 
 function showENSE_electives() {
     for (term in termData) {
