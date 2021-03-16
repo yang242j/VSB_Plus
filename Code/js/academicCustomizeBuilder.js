@@ -248,8 +248,8 @@ function btnForCourse(data) {
           block.scroll ;
           
     }*/
-    $('#nctRight').click(function () {
-        $( "#clickable" ).animate({
+    $('.nctRight').click(function () {
+        $( ".clickable" ).animate({
             scrollLeft: '+=156px'
         });
     })
