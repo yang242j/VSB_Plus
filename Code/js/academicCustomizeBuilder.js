@@ -240,14 +240,16 @@ function btnForCourse(data) {
             }
         }
     }
-}
-nctRight.onclick = function () {
-    var block = document.getElementsByClassName("clickable");
-    for (element of block)
-    {
-        element.scrollTop += 10;
+    
+    nctRight.onclick = function () {
+        var block = document.getElementsByClassName("clickable");
+        for (element of block)
+        {
+            element.scrollTop += 10;
+        }
     }
 }
+
 
 
 /*
