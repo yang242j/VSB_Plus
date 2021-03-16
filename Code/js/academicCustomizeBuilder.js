@@ -262,7 +262,7 @@ function btnForCourse(data) {
         }
     }
     enseBtn.onclick = function () {
-        var block = document.getElementsByClassName("course_tag_not_completed");
+        var block = document.getElementsByClassName("clickable");
         for (element of block) {
             element.style.visibility = "hidden";
         }
