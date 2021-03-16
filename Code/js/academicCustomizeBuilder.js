@@ -245,11 +245,8 @@ function btnForCourse(data) {
 
     nctRight.onclick = function () {
         var block = document.getElementsByClassName("clickable");
-        for (element of block)
-        {
-            element.scroll("100px") ;
-            console.log(element);
-        }
+          block.scroll("100px") ;
+          
     }
 }
 
