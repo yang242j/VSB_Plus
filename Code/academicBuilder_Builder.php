@@ -221,7 +221,8 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 				<button id = "btnENSE"style='font-size:24px;color:white;font-weight: bold background-color: transparent'>ENSE</button>
 				<button id = "btnENEL"style='font-size:24px;color:white;font-weight: bold background-color: transparent'>ENEL</button>
 				<button id = "btnCS"style='font-size:24px;color:white;font-weight: bold background-color: transparent'>CS</button>	
-				<button id = "btnOTHER"style='font-size:24px;color:white;font-weight: bold background-color: transparent'>OTHER</button>
+				<!--<button id = "btnOTHER"style='font-size:24px;color:white;font-weight: bold background-color: transparent'>OTHER</button>
+				-->
 				</nav>
 
 
