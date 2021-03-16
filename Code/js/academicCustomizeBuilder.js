@@ -247,14 +247,14 @@ function btnForCourse(data) {
         var block = document.getElementsByClassName("course_tag_not_completed");
         for(element of block)
         {
-            element.scrollLeft += "40%";
+            element.scrollLeft += 70;
         }       
     }
     nctLeft.onclick = function () {
         var block = document.getElementsByClassName("course_tag_not_completed");
         for(element of block)
         {
-            element.scrollLeft -= 50;
+            element.scrollLeft -= 70;
         }       
     }
 
