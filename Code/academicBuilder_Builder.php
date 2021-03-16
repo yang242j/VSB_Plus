@@ -224,8 +224,8 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 				</div> -->
 			</div>
 			<div>
-					<button class="right_arrow" id ="ctLeft"><i class='fas fa-angle-left'></i></button>
-					<button class="right_arrow" id ="ctRight"><i class='fas fa-angle-right'></i></button>
+					<button class="right_arrow" id ="nctLeft"><i class='fas fa-angle-left'></i></button>
+					<button class="right_arrow" id ="nctRight"><i class='fas fa-angle-right'></i></button>
 				</div>
 
 			<div class= "course_list">
