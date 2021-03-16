@@ -261,10 +261,17 @@ function btnForCourse(data) {
             element.scrollLeft -= 70;
         }
     }
+
     enseBtn.onclick = function () {
         var block = document.getElementsByClassName("clickable");
         for (element of block) {
+            if(element.innerHTML.includes('E'))
+            {
+                element.style.visibility = "visible";
+            }
+            else{
             element.style.visibility = "hidden";
+            }
         }
     }
     allBtn.onclick = function () {
