@@ -262,47 +262,49 @@ function btnForCourse(data) {
         }
     }
 
+
     enseBtn.onclick = function () {
         var block = document.getElementsByClassName("clickable");
         for (element of block) {
-            if(element.innerHTML.includes('E') && element.innerHTML.includes('N') && element.innerHTML.includes('S'))
-            {
+            if (element.innerHTML.includes('E') && element.innerHTML.includes('N') && element.innerHTML.includes('S')) {
                 element.style.visibility = "visible";
             }
-            else{
-            element.style.visibility = "hidden";
+            else {
+                element.style.visibility = "hidden";
             }
         }
     }
+
     allBtn.onclick = function () {
         var block = document.getElementsByClassName("clickable");
         for (element of block) {
             element.style.visibility = "visible";
         }
     }
-    enelBtn.onclick = function(){
+
+    enelBtn.onclick = function () {
         var block = document.getElementsByClassName("clickable");
         for (element of block) {
-            if(element.innerHTML.includes('E') && element.innerHTML.includes('N') && element.innerHTML.includes('L'))
-            {
+            if (element.innerHTML.includes('E') && element.innerHTML.includes('N') && element.innerHTML.includes('L')) {
                 element.style.visibility = "visible";
             }
-            else{
-            element.style.visibility = "hidden";
+            else {
+                element.style.visibility = "hidden";
             }
         }
     }
-    csBtn.onclick = function(){
+
+    csBtn.onclick = function () {
         var block = document.getElementsByClassName("clickable");
         for (element of block) {
-            if(element.innerHTML.includes('C') && element.innerHTML.includes('S') )
-            {
+            if (element.innerHTML.includes('C') && element.innerHTML.includes('S')) {
                 element.style.visibility = "visible";
             }
-            else{
-            element.style.visibility = "hidden";
+            else {
+                element.style.visibility = "hidden";
             }
         }
+    }
 
 
     /*$("#nctRight").bind("click", function (event) {
@@ -312,6 +314,7 @@ function btnForCourse(data) {
         $("#clickable").animate({
             scrollTop: "-=" + 50 + "px"
         });*/
+
 }
 
 
