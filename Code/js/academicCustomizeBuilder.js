@@ -183,6 +183,8 @@ function showCourses(data) {
 function btnForCourse(data) {
     var ctRight = document.getElementById("ctRight");
     var ctLeft = document.getElementById("ctLeft");
+    var nctRight = document.getElementById("nctRight");
+    var nctLeft = document.getElementById("nctLeft");
 
 
     var completedData = JSON.parse(data);
@@ -240,7 +242,7 @@ function btnForCourse(data) {
             }
         }
     }
-    
+
     nctRight.onclick = function () {
         var block = document.getElementsByClassName("clickable");
         for (element of block)
