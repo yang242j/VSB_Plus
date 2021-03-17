@@ -2,17 +2,22 @@ var courseData;
 var termData;
 var allCourse;
 
-function getMajorInfo(sid) {
+function getStuMajor(sid, password) {
     // console.log(GetUrlRelativePath());
-    $.post('./Api.php/Student/BasicInfo', {
-        'sid': sid
+    $.post('Model/sign_in.php', {
+        sid: sid,
+        password: password
     }, function (data) {
         // console.log("data is ", data)
-        getTermData(basicInfo.major);
+        var stuMajor = JSON.parse(data);
+        var major = stuMajor.major;
+        getTermData(major);
+        
     });
 }
 
 window.onload = function () {
+    getStuMajor(sid, pas);
     showTerm(1);
 }
 /*getTermData();*/
