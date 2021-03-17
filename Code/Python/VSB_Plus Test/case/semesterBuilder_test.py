@@ -30,6 +30,9 @@ class TestSemesterBuilder(unittest.TestCase):
         semesterDriver = self.login.signIn(self.sid, self.pwd)
         self.builder = SemesterBuilder(semesterDriver)
         self.result = self.builder.addCourse(self.suc, self.addCourse)
+        # Get screenshot for every test
+        self.driver.get_screenshot_as_file(path+'/resultpang/prereq/%s_%s.png' % (casedata['module'],casedata['id']))
+        # Compare the test result with expection
         self.assertIn(self.assert_value, self.result)
         
     def tearDown(self):

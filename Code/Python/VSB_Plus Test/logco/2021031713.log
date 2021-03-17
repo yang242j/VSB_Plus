@@ -1,0 +1,19 @@
+2021-03-17 13:35:29,798 - Test - INFO - Input Data: ENSE,suc:1,assert:ENSE
+2021-03-17 13:35:35,184 - Test - INFO - Input Data: ENEL,suc:1,assert:ENEL
+2021-03-17 13:35:40,948 - Test - INFO - Input Data: ENEV,suc:1,assert:ENEV
+2021-03-17 13:35:46,530 - Test - INFO - Input Data: ENIN,suc:1,assert:ENIN
+2021-03-17 13:35:52,086 - Test - INFO - Input Data: CS,suc:1,assert:CS
+2021-03-17 13:35:58,728 - Test - INFO - Input Data: short_name:CHEM 104,suc:1,assert:General Chemistry I
+2021-03-17 13:36:05,276 - Test - INFO - Input Data: short_name:CHEM 103,suc:0,assert:CHEM 103 cannot be found
+2021-03-17 13:36:21,747 - Test - INFO - Input Data: short_name:CS 210,suc:1,assert:Data Structures and Abstractions
+2021-03-17 13:36:28,297 - Test - INFO - Input Data: short_name:CS 215,suc:1,assert:Web and Database Programming
+2021-03-17 13:36:34,648 - Test - INFO - Input Data: short_name:ENEL 487,suc:1,assert:Embedded and Real-Time Software Systems
+2021-03-17 13:36:38,058 - Test - INFO - Input Data: SID: 200362586, password: 200362586,suc: 1, assert: Welcome Yang, Jingkang
+2021-03-17 13:36:42,742 - Test - INFO - Input Data: SID: 200362586, password: 2003,suc: 0, assert: The password was not valid.
+2021-03-17 13:36:48,334 - Test - INFO - Input Data: SID: 2003, password: 200362587,suc: 0, assert: No account found with that student_id.
+2021-03-17 13:36:52,376 - Test - INFO - Input Data: SID: 200362586, password: ,suc: 0, assert: Please enter your password.
+2021-03-17 13:36:56,429 - Test - INFO - Input Data: SID: , password: ,suc: 0, assert: Please enter student_id.Please enter your password.
+2021-03-17 13:37:00,401 - Test - INFO - Input Data: SID: 200362586, password: 200362586, add course: math 110,suc: 1, assert: MATH 110 registration success.
+2021-03-17 13:37:07,363 - Test - INFO - Input Data: SID: 200362586, password: 200362586, add course: cs 340,suc: 0, assert: Prerequisites [Not Matched]
+2021-03-17 13:37:13,649 - Test - INFO - Input Data: SID: 200362586, password: 200362586, add course: math 100,suc: 0, assert: Course is Completed
+2021-03-17 13:37:21,781 - Test - INFO - Input Data: SID: 200362586, password: 200362586, add course: asf,suc: 0, assert: Input Format Invalid

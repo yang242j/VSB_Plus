@@ -11,10 +11,6 @@ class SemesterBuilder:#封装
         self.file.close()
 
         #Load the datas
-        # self.lo_url=self.data['login'].get('url')
-        # self.sid_box=self.data['login'].get('sid_box')
-        # self.pwd_box=self.data['login'].get('pwd')
-        # self.loginBtn=self.data['login'].get('loginBtn')
         self.showNavBar = self.data['semesterBuilder'].get('showNavBar')
         self.semsterPage=self.data['semesterBuilder'].get('semsterPage')
         self.termSele=self.data['semesterBuilder'].get('termSele')
@@ -53,7 +49,8 @@ class SemesterBuilder:#封装
         except Exception as e:
             self.logs.error_log('Fail to run the test，reason：%s'%e)
         finally:
-            self.driver.quit()
+            # self.driver.quit()
+            pass
 
     def dragDrop(self, course):
         pass

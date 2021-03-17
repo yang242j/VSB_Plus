@@ -26,6 +26,9 @@ class TestLogin(unittest.TestCase):
         # Print the input data with logs
         self.logs.info_log('Input Data: SID: %s, password: %s,suc: %s, assert: %s' % (self.sid, self.pwd, self.suc, self.assert_value))
         loginMsg = self.login.login(self.sid, self.pwd, self.suc)
+        # Get screenshot for every test
+        self.driver.get_screenshot_as_file(path+'/resultpang/login_test/%s_%s.png' % (casedata['module'],casedata['id']))
+        # Compare the test result with expection
         self.assertEqual(loginMsg, self.assert_value)
         if self.suc == '1': 
             self.assertTrue(self.login.pieShow())

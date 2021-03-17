@@ -1,4 +1,4 @@
-import yaml,os
+import yaml,os, time
 path=os.getcwd()
 from util import log
 class CourseDB_test:#封装
@@ -19,6 +19,7 @@ class CourseDB_test:#封装
         self.courseList = self.data['courseDB'].get('courseList')
         self.chart = self.data['courseDB'].get('chart')
         self.driver.get(self.lo_url)
+        time.sleep(1)
 
     def search(self,suc,short_name):
         try:
@@ -36,7 +37,8 @@ class CourseDB_test:#封装
         except Exception as e:
             self.logs.error_log('Fail to run the test，reason：%s'%e)
         finally:
-            self.driver.quit()
+            pass
+        #     self.driver.quit()
 
     def setFacFilter(self, faultyName):
         try:
@@ -53,7 +55,8 @@ class CourseDB_test:#封装
         except Exception as e:
             self.logs.error_log('Fail to run the test，reason：%s'%e)
         finally:
-            self.driver.quit()
+            pass
+        #     self.driver.quit()
 
     def clearFacFilter(self):
         try:
@@ -63,7 +66,8 @@ class CourseDB_test:#封装
         except Exception as e:
             self.logs.error_log('Fail to run the test，reason：%s'%e)
         finally:
-            self.driver.quit()
+            pass
+            # self.driver.quit()
 
 # For the login methods
 class Login_test:

@@ -17,6 +17,7 @@ def huoqu_test(filepath,index):
         for i in range(1, nrows):
             dict_canshu = {}
             dict_canshu['id']=me.cell(i,0).value
+            dict_canshu['module']=me.cell(i,1).value
             dict_canshu.update(eval(me.cell(i,2).value))
             dict_canshu.update(eval(me.cell(i,3).value))
             listdata.append(dict_canshu)

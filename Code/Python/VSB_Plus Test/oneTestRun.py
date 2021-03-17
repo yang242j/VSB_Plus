@@ -22,11 +22,9 @@ if __name__ == "__main__":
     runOneTest()
     
     # unittest.main()
-    pass
     # driver = webdriver.Chrome()
     # driver.implicitly_wait(10)
-    # driver.get("http://15.223.123.122/vsbp/Code/courseDB.php")
-    # faultys = driver.find_elements_by_class_name("tag")
-    # for f in faultys:
-    #     print(f.text)
+    # driver.get("http://15.223.123.122/vsbp/Code/")
+    # filename = 'aaa'
+    # driver.get_screenshot_as_file(path+'/resultpang/%s.png'%filename)
     # driver.quit
