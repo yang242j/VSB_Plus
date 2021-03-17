@@ -70,7 +70,7 @@ function getTermData(faculty) {
     myRequest.onload = function () {
         var data = JSON.parse(myRequest.responseText);
         termData = data;
-        console.log(termData);
+       
     }
     myRequest.send();
 }
