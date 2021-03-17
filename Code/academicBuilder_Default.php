@@ -219,7 +219,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 
 					<p id = "ense4">ENSE 271</p>
 					<p id = "ense5">ENSE 271</p>
-					<p id = "ense6">ENSE 271</p>
+					<p id = "ense6"></p>
 					<p id = "ense7"></p>
 					
 					<p id = "ense8"></p>
