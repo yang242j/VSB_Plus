@@ -3,7 +3,7 @@ var termData;
 var allCourse;
 
 window.onload = function () {
-    getStuInfo(sid, pas);
+    /*getStuInfo(sid, pas);*/
     showTerm(1);
     showENSE_electives();
     showCS_electives();
@@ -12,7 +12,7 @@ window.onload = function () {
    
 }
 
-function getStuInfo(sid, password) {
+/*function getStuInfo(sid, password) {
     // console.log(GetUrlRelativePath());
     $.post('Model/sign_in.php', {
         sid: sid,
@@ -26,7 +26,7 @@ function getStuInfo(sid, password) {
         
         
     });
-}
+}*/
 
 /*getTermData();*/
 getTermData(major);
@@ -62,10 +62,10 @@ console.log(getTitle("CHEM 140"));
     }
     myRequest.send();
 }*/
-function getTermData(faculty) {
+function getTermData(major) {
     var myRequest = new XMLHttpRequest;
-    var facultyName = faculty;
-    var url = "JSON/reqCourse/" + facultyName + "_req.json";
+    var majorName = major;
+    var url = "JSON/reqCourse/" + majorName + "_req.json";
     myRequest.open("GET", url, false);
     myRequest.onload = function () {
         var data = JSON.parse(myRequest.responseText);
