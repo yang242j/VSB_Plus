@@ -2,6 +2,11 @@ var courseData;
 var termData;
 var allCourse;
 
+window.onload = function () {
+    getStuMajor(sid, pas);
+    showTerm(1);
+}
+
 function getStuMajor(sid, password) {
     // console.log(GetUrlRelativePath());
     $.post('Model/sign_in.php', {
@@ -16,12 +21,8 @@ function getStuMajor(sid, password) {
     });
 }
 
-window.onload = function () {
-    getStuMajor(sid, pas);
-    showTerm(1);
-}
 /*getTermData();*/
-/*getTermData(major);*/
+getTermData(major);
 getAllCourse()
 
 function getAllCourse() {
