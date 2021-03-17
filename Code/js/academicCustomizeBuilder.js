@@ -693,6 +693,7 @@ function termTransfer(term) {
     if (term == "Spring/Summer") return 202020;
     if (term == "Fall") return 202030;
 }
+
 function ajaxpost(courseid, term, done) {
     // (A) GET FORM DATA
     var data = new FormData();
