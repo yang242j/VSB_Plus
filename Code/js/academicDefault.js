@@ -22,7 +22,7 @@ window.onload = function () {
         var stu = JSON.parse(data);
         alert(stu);
         /*var major = stu.major;*/
-        /*getTermData(major);*/
+        /*getTermData(major);
         
         
     });
