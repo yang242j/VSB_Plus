@@ -68,7 +68,7 @@ body .container .tags_courses .course_list .course_tag_not_completed{
 }
 body .container .tags_courses .course_list .course_tag_completed{
 	display: grid;
-	grid-template-columns: 30% 30% 30% 30%;
+	grid-template-columns: 33% 33% 33% 33% 33% 33%;
 	border:2px solid red;
 	overflow: auto;
 }
