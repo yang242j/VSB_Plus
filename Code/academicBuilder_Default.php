@@ -220,12 +220,12 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 					<p id = "ense4">ENSE 271</p>
 					<p id = "ense5">ENSE 271</p>
 					<p id = "ense6">ENSE 271</p>
-					<p id = "ense7">ENSE 271</p>
+					<p id = "ense7"></p>
 					
-					<p id = "ense8">ENSE 271</p>
-					<p id = "ense9">ENSE 271</p>
-					<p id = "ense10">ENSE 271</p>
-					<p id = "ense11">ENSE 271</p>
+					<p id = "ense8"></p>
+					<p id = "ense9"></p>
+					<p id = "ense10"></p>
+					<p id = "ense11"></p>
 				</div>
 				<!--<div>
 					<button class="left_arrow" id ="approvedLeft"  onclick = "aLeft()"><i class='fas fa-angle-left'></i></button>
