@@ -2,10 +2,10 @@ var courseData;
 var termData;
 var allCourse;
 
-require_once "login.php";
+
 
 window.onload = function () {
-    /*getStuInfo(sid, pas);*/
+    getStuInfo(sid, pas, major);
     showTerm(1);
     showENSE_electives();
     showCS_electives();
@@ -14,21 +14,22 @@ window.onload = function () {
    
 }
 
-/*function getStuInfo(sid, password) {
+function getStuInfo(sid, password, major) {
     // console.log(GetUrlRelativePath());
     $.post('Model/sign_in.php', {
         sid: sid,
-        password: password
+        password: password,
+        major: major
     }, function (data) {
         // console.log("data is ", data)
-        var stu = JSON.parse(data);
-        alert(stu);
-        /*var major = stu.major;*/
-        /*getTermData(major);
+        //var stu = JSON.parse(data);
+        //alert(stu);
+        //var major = stu.major;
+        //getTermData(major);
         
         
     });
-}*/
+}
 
 /*getTermData();*/
 getTermData(major);
