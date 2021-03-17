@@ -2,6 +2,8 @@ var courseData;
 var termData;
 var allCourse;
 
+require_once "login.php";
+
 window.onload = function () {
     /*getStuInfo(sid, pas);*/
     showTerm(1);
