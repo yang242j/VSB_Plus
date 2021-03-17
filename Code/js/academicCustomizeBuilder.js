@@ -139,10 +139,12 @@ function showCourses(data) {
     //console.log(dataJSON);
     var notCompletedData = findCourseToTake(dataJSON);
     for (i = 0; i < dataJSON.length; i++) {
+        if (i < dataJSON.length) {
+            //<br/>
+            document.getElementById("ct" + i).innerHTML = dataJSON[i].course_ID + "<br/> " + dataJSON[i].term;
+            document.getElementById("ct" + i).style.color = getColor(i, dataJSON);
 
-        document.getElementById("ct" + i).innerHTML = dataJSON[i].course_ID + "<br/> " + dataJSON[i].term;
-        document.getElementById("ct" + i).style.color = getColor(i, dataJSON);
-
+        }
     }
     for (i = 0; i < notCompletedData.length; i++) {
         document.getElementById("courseTagArea").innerHTML +=
