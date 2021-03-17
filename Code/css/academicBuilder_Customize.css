@@ -61,8 +61,9 @@ body .container .tags_courses .icons_annotation .icons {
 body .container .tags_courses .course_list .course_tag_completed,
 body .container .tags_courses .course_list .course_tag_not_completed {
 	display: grid;
-	grid-template-columns: 25% 25% 25% 25%;
+	grid-template-columns: 30% 30% 30% 30%;
 	border:2px solid red;
+	overflow: hidden;
 
 }
 body .container .tags_courses .course_list .course_tag_not_completed{
