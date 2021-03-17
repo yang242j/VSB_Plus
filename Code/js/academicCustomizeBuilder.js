@@ -201,12 +201,12 @@ function btnForCourse(data) {
     // delete NP and W data
 
     ctRight.onclick = function () {
-        if (counterForCompleted <= (completedData.length / 12)) {
+        if (counterForCompleted < (completedData.length / 12)) {
             counterForCompleted += 1;
         } else return;
 
 
-        if (i + 12 * counterForCompleted <= (completedData.length + 12)) {
+        if (i + 12 * counterForCompleted < (completedData.length + 12)) {
             for (i = 0; i < 12; i++) {
                 document.getElementById("ct" + i).innerHTML = " ";
             }
