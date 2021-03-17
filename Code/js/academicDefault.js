@@ -20,8 +20,8 @@ function getStuInfo(sid, password) {
     }, function (data) {
         // console.log("data is ", data)
         var stu = JSON.parse(data);
-        /*alert(stu.major);*/
-        var major = stu.major;
+        alert(stu);
+        /*var major = stu.major;*/
         /*getTermData(major);*/
         
         
