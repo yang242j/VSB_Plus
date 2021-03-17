@@ -149,7 +149,7 @@ function showENSE_electives() {
 function showCS_electives() {
     for (term in termData) {
         if (term = "Approved") {
-            for (i = 7; i <= 15; i++) {
+            for (i = 7; i <= 13; i++) {
                 /*for (i = 0; i < 12; i++) {*/
                 document.getElementById("cs" + i).innerHTML = termData[term][i];
             }
