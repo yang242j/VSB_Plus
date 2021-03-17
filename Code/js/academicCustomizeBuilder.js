@@ -220,11 +220,15 @@ function btnForCourse(data) {
        
     }
     ctLeft.onclick = function () {
+        var block = document.getElementById("courseCompletedTag");
+        for (element of block) {
+            element.scrollLeft += 150;
+        }
        
     }
 
     nctRight.onclick = function () {
-        var block = document.getElementById("courseCompletedTag");
+        var block = document.getElementsByClassName("course_tag_not_completed");
         for (element of block) {
             element.scrollLeft += 150;
         }
