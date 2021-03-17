@@ -222,7 +222,7 @@ function btnForCourse(data) {
     ctLeft.onclick = function () {
         var block = document.getElementsByClassName("course_tag_completed");
         for (element of block) {
-            element.scrollLeft += 150;
+            element.scrollLeft -= 150;
         }
        
     }
@@ -230,7 +230,7 @@ function btnForCourse(data) {
     nctRight.onclick = function () {
         var block = document.getElementsByClassName("course_tag_not_completed");
         for (element of block) {
-            element.scrollLeft += 150;
+            element.scrollLeft += 70;
         }
     }
     nctLeft.onclick = function () {
