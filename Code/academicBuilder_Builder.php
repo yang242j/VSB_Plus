@@ -242,7 +242,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 			<div class= "course_list">
 				<h3>Course Taken History</h3>
 				<div class = "course_tag_completed" id = "courseCompletedTag">
-					<p id = "ct0"></p>
+					<!--<p id = "ct0"></p>
 					<p id = "ct1"></p>
 					<p id = "ct2"></p>
 					<p id = "ct3"></p>
@@ -255,7 +255,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 					<p id = "ct8"></p>
 					<p id = "ct9"></p>
 					<p id = "ct10"></p>
-					<p id = "ct11"></p>
+					<p id = "ct11"></p>-->
 				</div>
 				<div>
 					<button class="right_arrow" id ="ctLeft"><i class='fas fa-angle-left'></i></button>
