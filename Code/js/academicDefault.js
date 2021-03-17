@@ -26,7 +26,7 @@ window.onload = function () {
 
 getTermData();
 /*getTermData(major);*/
-getAllCourse()
+getAllCourse();
 
 function getAllCourse() {
     var myRequest = new XMLHttpRequest;
