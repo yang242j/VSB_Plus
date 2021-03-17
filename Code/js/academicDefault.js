@@ -1,9 +1,31 @@
+var courseData;
 var termData;
 var allCourse;
 
 window.onload = function () {
     showTerm(1);
 }
+getTermData();
+getAllCourse()
+
+function getAllCourse() {
+    var myRequest = new XMLHttpRequest;
+    myRequest.open("GET", "JSON/ALL.json", false);
+    myRequest.onload = function () {
+        var data = JSON.parse(myRequest.responseText);
+        allCourseData = data;
+    }
+    myRequest.send();
+}
+
+function getTitle(courseName) {
+    for (i = 0; i < allCourseData.length; i++) {
+        if (allCourseData[i].short_name == courseName && allCourseData[i].title != null)
+            return ("<i>" + allCourseData[i].title + "</i>");
+    }
+    return ("Course Info not found");
+}
+console.log(getTitle("CHEM 140"));
 
 function getTermData() {
     var myRequest = new XMLHttpRequest;
@@ -71,8 +93,7 @@ function showTerm(pageNumber) {
                                "<i class='fas fa-circle' style='font-size:24px;color:yellow'></i>*/
                             "</div>";
 
-                        "<div class = 'course_cards'>" + "<h3>" + termData[term][5] + "</h3>" +
-                            "<p>" + getTitle(termData[term][5]) + "</p>" + "</div>";
+                        
 
                         i = i + 1;
                     }
