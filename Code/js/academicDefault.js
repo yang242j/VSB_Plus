@@ -5,6 +5,7 @@ var allCourse;
 window.onload = function () {
     /*getStuMajor(sid, pas);*/
     showTerm(1);
+    showENSE_electives();
    
 }
 
@@ -133,3 +134,12 @@ function showTerm(pageNumber) {
     }
 }
 
+function showENSE_electives() {
+    for (term in termData) {
+        if (term = "Approved") {
+            for (i = 0; i <= 6; i++) {
+                document.getElementById("ense" + i).innerHTML = termData[term][i];
+            }
+        }
+    }
+}
