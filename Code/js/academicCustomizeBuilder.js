@@ -213,14 +213,14 @@ function btnForCourse(data) {
     // delete NP and W data
 
     ctRight.onclick = function () {
-        var block = document.getElementById("courseCompletedTag");
+        var block = document.getElementsByClassName("course_tag_completed");
         for (element of block) {
             element.scrollLeft += 150;
         }
        
     }
     ctLeft.onclick = function () {
-        var block = document.getElementById("courseCompletedTag");
+        var block = document.getElementsByClassName("course_tag_completed");
         for (element of block) {
             element.scrollLeft += 150;
         }
