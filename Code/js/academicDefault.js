@@ -6,7 +6,7 @@ window.onload = function () {
     /*getStuMajor(sid, pas);*/
     showTerm(1);
     showENSE_electives();
-    showCS_electives();
+    /*showCS_electives();*/
     
    
 }
@@ -146,7 +146,7 @@ function showENSE_electives() {
     }
 }
 
-function showCS_electives() {
+/*function showCS_electives() {
     for (term in termData) {
         if (term = "Approved") {
             for (i = 7; i <= 15; i++) {
@@ -156,6 +156,6 @@ function showCS_electives() {
         }
         }
     }
-}
+}*/
 
 
