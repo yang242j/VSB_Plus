@@ -151,6 +151,7 @@ function showCourses(data) {
             document.getElementById("courseCompletedTag").innerHTML +=
             "<p id ='ct"+i+"'>"+ dataJSON[i].course_ID+ "<br/> "+ dataJSON[i].term +"</p>";
             document.getElementById("ct" + i).style.color = getColor(i, dataJSON);
+            document.getElementById("ct" + i).style.background="#D4F19F";
             
     }
 
