@@ -62,7 +62,7 @@ body .container .tags_courses .icons_annotation .icons {
 body .container .tags_courses .course_list .course_tag_not_completed{
 	display: grid;
 	grid-template-columns: 25% 25% 25% 25% 25% 25%;
-	grid-template-rows: 14%;
+	grid-template-rows: 12%;
 	overflow: hidden;
 	height:90%;
 }
@@ -80,7 +80,7 @@ body .container .tags_courses .course_list .course_tag_not_completed p {
 	border-radius: 25px;
 	box-shadow: 2px 4px 7px 0px #555555;
 	text-align: center;
-	font-size: small;
+	font-size: medium;
 }
 body .container .tags_courses .course_list .course_tag_not_completed p{
 
