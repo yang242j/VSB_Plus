@@ -2,11 +2,21 @@ var courseData;
 var termData;
 var allCourse;
 
+function getMajorInfo(sid) {
+    // console.log(GetUrlRelativePath());
+    $.post('./Api.php/Student/BasicInfo', {
+        'sid': sid
+    }, function (data) {
+        // console.log("data is ", data)
+        getTermData(basicInfo.major);
+    });
+}
+
 window.onload = function () {
     showTerm(1);
 }
 /*getTermData();*/
-getTermData(major);
+/*getTermData(major);*/
 getAllCourse()
 
 function getAllCourse() {
