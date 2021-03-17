@@ -164,7 +164,7 @@ function showENEL_electives() {
         if (term = "Approved") {
             for (i = 14; i <= 15; i++) {
             /*for (i = 0; i < 12; i++) {*/
-                document.getElementById("ct" + i).innerHTML = termData[term][i];
+                document.getElementById("enel" + i).innerHTML = termData[term][i];
             }
         }
     }
