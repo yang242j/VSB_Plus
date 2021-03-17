@@ -16,7 +16,7 @@ window.onload = function () {
 
 function getStuInfo(sid, password, major) {
     // console.log(GetUrlRelativePath());
-    $.post('Model/sign_in.php', {
+    $.post('login.php', {
         sid: sid,
         password: password,
         major: major
