@@ -53,7 +53,9 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     <script type="text/javascript" src="js/academicDefault.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script>
-		var major = "<?php echo $_SESSION["major"]; ?>";
+		var sid = "<?php echo $_SESSION["sid"]; ?>";
+        	var pas = "<?php echo $_SESSION["password"]; ?>";
+        	var major = "<?php echo $_SESSION["major"]; ?>";
 		
 		var isMobile = window.matchMedia('(max-width: 1080px)').matches;
         $(document).ready(function() {
