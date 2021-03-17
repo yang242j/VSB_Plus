@@ -138,14 +138,24 @@ function showCourses(data) {
     var dataJSON = JSON.parse(data);
     //console.log(dataJSON);
     var notCompletedData = findCourseToTake(dataJSON);
-    for (i = 0; i < 12; i++) {
+    /*for (i = 0; i < 12; i++) {
         if (i < dataJSON.length) {
             //<br/>
             document.getElementById("ct" + i).innerHTML = dataJSON[i].course_ID + "<br/> " + dataJSON[i].term;
             document.getElementById("ct" + i).style.color = getColor(i, dataJSON);
 
         }
+    }*/
+    for (i = 0; i < dataJSON.length; i++) {
+            //<br/>
+            document.getElementById("courseCompletedTag").innerHTML +=
+            "<p id ='ct"+i+"'>"+ dataJSON[i].course_ID+ "<br/> "+ dataJSON[i].term +"</p>";
+            document.getElementById("ct" + i).style.color = getColor(i, dataJSON);
+            
     }
+
+
+
     for (i = 0; i < notCompletedData.length; i++) {
         document.getElementById("courseTagArea").innerHTML +=
             "<div class = 'courseTags'   id ='" + i + "'>" +
@@ -201,52 +211,18 @@ function btnForCourse(data) {
     // delete NP and W data
 
     ctRight.onclick = function () {
-        if (counterForCompleted <= (completedData.length / 12)) {
-            counterForCompleted += 1;
-        } else return;
-
-
-        if (i + 12 * counterForCompleted <= (completedData.length + 12)) {
-            for (i = 0; i < 12; i++) {
-                document.getElementById("ct" + i).innerHTML = " ";
-            }
+        var block = document.getElementsByClassName("course_tag_completed");
+        for (element of block) {
+            element.scrollLeft += 150;
         }
-        if (counterForCompleted >= 0) {
-            for (i = 0; i < 12; i++) {
-                document.getElementById("ct" + i).innerHTML = " ";
-            }
-            for (i = 0; i < 12; i++) {
-                if (completedData[i + 12 * counterForCompleted] == null) {
-                    return;
-                } else {
-                    document.getElementById("ct" + i).innerHTML = completedData[i + 12 * counterForCompleted].course_ID + " <br/>" + completedData[i + 12 * counterForCompleted].term;
-                    document.getElementById("ct" + i).style.color = getColor(i + 12 * counterForCompleted, dataJSON);
-                }
-            }
-        }
+       
     }
     ctLeft.onclick = function () {
-        if (counterForCompleted > 0) {
-            counterForCompleted -= 1;
-        } else return;
-        if (i + 12 * counterForCompleted <= completedData.length) {
-            for (i = 0; i < 12; i++) {
-                document.getElementById("ct" + i).innerHTML = " ";
-            }
+        var block = document.getElementsByClassName("course_tag_completed");
+        for (element of block) {
+            element.scrollLeft -= 150;
         }
-        if (counterForCompleted >= 0) {
-            for (i = 0; i < 12; i++) {
-                document.getElementById("ct" + i).innerHTML = " ";
-            }
-            for (i = 0; i < 12; i++) {
-                if (completedData[i + 12 * counterForCompleted] == null) {
-                    return;
-                } else {
-                    document.getElementById("ct" + i).innerHTML = completedData[i + 12 * counterForCompleted].course_ID + "<br/>" + completedData[i + 12 * counterForCompleted].term;
-                    document.getElementById("ct" + i).style.color = getColor(i + 12 * counterForCompleted, dataJSON);
-                }
-            }
-        }
+       
     }
 
     nctRight.onclick = function () {
@@ -571,7 +547,7 @@ function dragTest() {
             //update cerdits
             dropZone.classList.remove("drop-zone--over");
             if (creditsEarned > 136) {
-                alert("totoal greater than 136");
+                alert("totoal credits greater than 136");
                 return;
             } else {
                 if (dragFrom != "course_cards") {
@@ -693,6 +669,7 @@ function termTransfer(term) {
     if (term == "Spring/Summer") return 202020;
     if (term == "Fall") return 202030;
 }
+
 function ajaxpost(courseid, term, done) {
     // (A) GET FORM DATA
     var data = new FormData();

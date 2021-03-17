@@ -58,27 +58,29 @@ body .container .tags_courses .icons_annotation .icons {
 	margin-left: 25px;
 }
 
-body .container .tags_courses .course_list .course_tag_completed,
-body .container .tags_courses .course_list .course_tag_not_completed {
-	display: grid;
-	grid-template-columns: 33% 33% 33%;
 
-}
 body .container .tags_courses .course_list .course_tag_not_completed{
+	display: grid;
 	grid-template-columns: 25% 25% 25% 25% 25% 25%;
-	grid-template-rows: 20%;
+	grid-template-rows: 12%;
 	overflow: hidden;
-	height:70%;
+	height:90%;
+}
+body .container .tags_courses .course_list .course_tag_completed{
+	display: grid;
+	grid-template-columns: 33% 33% 33% 33% 33% 33%;
+	grid-template-rows: 26%;
+	overflow: hidden;
 }
 
 body .container .tags_courses .course_list .course_tag_completed p, 
 body .container .tags_courses .course_list .course_tag_not_completed p {
 	margin: 16px 5px 16px;
-	background-color: #D4F19F;
+	/*background-color: #D4F19F;*/
 	border-radius: 25px;
 	box-shadow: 2px 4px 7px 0px #555555;
 	text-align: center;
-	font-size: small;
+	font-size: medium;
 }
 body .container .tags_courses .course_list .course_tag_not_completed p{
 

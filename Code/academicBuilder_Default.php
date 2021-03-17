@@ -29,6 +29,8 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     exit();
 }
 ?>
+
+
 <!doctype html>
 
 <html lang="en">
@@ -51,6 +53,10 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     <script type="text/javascript" src="js/academicDefault.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script>
+		var sid = "<?php echo $_SESSION["sid"]; ?>";
+        	var pas = "<?php echo $_SESSION["password"]; ?>";
+        	var major = "<?php echo $_SESSION["major"]; ?>";
+		
 		var isMobile = window.matchMedia('(max-width: 1080px)').matches;
         $(document).ready(function() {
             if (isMobile) $(".menu-icon").click();
@@ -213,13 +219,13 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 
 					<p id = "ense4">ENSE 271</p>
 					<p id = "ense5">ENSE 271</p>
-					<p id = "ense6">ENSE 271</p>
-					<p id = "ense7">ENSE 271</p>
+					<p id = "ense6"></p>
+					<p id = "ense7"></p>
 					
-					<p id = "ense8">ENSE 271</p>
-					<p id = "ense9">ENSE 271</p>
-					<p id = "ense10">ENSE 271</p>
-					<p id = "ense11">ENSE 271</p>
+					<p id = "ense8"></p>
+					<p id = "ense9"></p>
+					<p id = "ense10"></p>
+					<p id = "ense11"></p>
 				</div>
 				<!--<div>
 					<button class="left_arrow" id ="approvedLeft"  onclick = "aLeft()"><i class='fas fa-angle-left'></i></button>
@@ -231,20 +237,20 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 				<h3>CS:</h3>
 				<div class = "course_tag_electives cs_course_tag" id = "not_completed_tag">
 					<!-- <p id = "nct0" onclick="alert(courseInfo())">ENSE 271</p>-->
-					<p id = "cs0">ENSE 271</p>
-					<p id = "cs1">ENSE 271</p>
-					<p id = "cs2">ENSE 271</p>
-					<p id = "cs3">ENSE 271</p>
-
-					<p id = "cs4">ENSE 271</p>
-					<p id = "cs5">ENSE 271</p>
-					<p id = "cs6">ENSE 271</p>
 					<p id = "cs7">ENSE 271</p>
-					
 					<p id = "cs8">ENSE 271</p>
 					<p id = "cs9">ENSE 271</p>
 					<p id = "cs10">ENSE 271</p>
-					<p id = "cs11">ENSE 271</p>
+
+					<p id = "cs11"></p>
+					<p id = "cs12"></p>
+					<p id = "cs13"></p>
+					<p id = "cs14"></p>
+					
+					<p id = "cs15"></p>
+					<p id = "cs16"></p>
+					<p id = "cs17"></p>
+					<p id = "cs18"></p>
 				</div>
 				<!--<div>
 					<button class="left_arrow" id ="notCompletedLeft" onclick = "nctLeft()"><i class='fas fa-angle-left'></i></button>
@@ -255,20 +261,20 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 			<div class = "electives_course enel_course">
 				<h3>ENEL:</h3>
 				<div class = "course_tag_electives enel_course_tag" id = "electives_tag">
-					<p id = "ct0">ENSE 271</p>
-					<p id = "ct1">ENSE 271</p>
-					<p id = "ct2">ENSE 271</p>
-					<p id = "ct3">ENSE 271</p>
+					<p id = "enel14">ENSE 271</p>
+					<p id = "enel15">ENSE 271</p>
+					<p id = "enel16"></p>
+					<p id = "enel17"></p>
 
-					<p id = "ct4">ENSE 271</p>
-					<p id = "ct5">ENSE 271</p>
-					<p id = "ct6">ENSE 271</p>
-					<p id = "ct7">ENSE 271</p>
+					<p id = "enel18"></p>
+					<p id = "enel19"></p>
+					<p id = "enel20"></p>
+					<p id = "enel21"></p>
 					
-					<p id = "ct8">ENSE 271</p>
-					<p id = "ct9">ENSE 271</p>
-					<p id = "ct10">ENSE 271</p>
-					<p id = "ct11">ENSE 271</p>
+					<p id = "enel22"></p>
+					<p id = "enel23"></p>
+					<p id = "enel24"></p>
+					<p id = "enel25"></p>
 				</div>
 				<!--<div>
 					<button class="left_arrow" id ="notCompletedLeft" onclick = "enctLeft()"><i class='fas fa-angle-left'></i></button>
