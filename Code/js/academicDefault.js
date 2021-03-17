@@ -3,14 +3,14 @@ var termData;
 var allCourse;
 
 window.onload = function () {
-    getStuMajor(sid, pas);
+    /*getStuMajor(sid, pas);*/
     showTerm(1);
     showENSE_electives();
     showCS_electives();
     showENEL_electives();
 }
 
-function getStuMajor(sid, password) {
+/*function getStuMajor(sid, password) {
     // console.log(GetUrlRelativePath());
     $.post('Model/sign_in.php', {
         sid: sid,
@@ -22,7 +22,7 @@ function getStuMajor(sid, password) {
         getTermData(major);
         
     });
-}
+}*/
 
 getTermData();
 /*getTermData(major);*/
