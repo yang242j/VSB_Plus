@@ -571,7 +571,7 @@ function dragTest() {
             //update cerdits
             dropZone.classList.remove("drop-zone--over");
             if (creditsEarned > 136) {
-                alert("totoal greater than 136");
+                alert("totoal credits greater than 136");
                 return;
             } else {
                 if (dragFrom != "course_cards") {
