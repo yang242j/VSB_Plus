@@ -213,58 +213,20 @@ function btnForCourse(data) {
     // delete NP and W data
 
     ctRight.onclick = function () {
-        if (counterForCompleted < (completedData.length / 12)) {
-            counterForCompleted += 1;
-        } else return;
-
-
-        if (i + 12 * counterForCompleted < (completedData.length + 12)) {
-            for (i = 0; i < 12; i++) {
-                document.getElementById("ct" + i).innerHTML = " ";
-            }
+        var block = document.getElementById("courseCompletedTag");
+        for (element of block) {
+            element.scrollLeft += 150;
         }
-        if (counterForCompleted >= 0) {
-            for (i = 0; i < 12; i++) {
-                document.getElementById("ct" + i).innerHTML = " ";
-            }
-            for (i = 0; i < 12; i++) {
-                if (completedData[i + 12 * counterForCompleted] == null) {
-                    return;
-                } else {
-                    document.getElementById("ct" + i).innerHTML = completedData[i + 12 * counterForCompleted].course_ID + " <br/>" + completedData[i + 12 * counterForCompleted].term;
-                    document.getElementById("ct" + i).style.color = getColor(i + 12 * counterForCompleted, dataJSON);
-                }
-            }
-        }
+       
     }
     ctLeft.onclick = function () {
-        if (counterForCompleted > 0) {
-            counterForCompleted -= 1;
-        } else return;
-        if (i + 12 * counterForCompleted <= completedData.length) {
-            for (i = 0; i < 12; i++) {
-                document.getElementById("ct" + i).innerHTML = " ";
-            }
-        }
-        if (counterForCompleted >= 0) {
-            for (i = 0; i < 12; i++) {
-                document.getElementById("ct" + i).innerHTML = " ";
-            }
-            for (i = 0; i < 12; i++) {
-                if (completedData[i + 12 * counterForCompleted] == null) {
-                    return;
-                } else {
-                    document.getElementById("ct" + i).innerHTML = completedData[i + 12 * counterForCompleted].course_ID + "<br/>" + completedData[i + 12 * counterForCompleted].term;
-                    document.getElementById("ct" + i).style.color = getColor(i + 12 * counterForCompleted, dataJSON);
-                }
-            }
-        }
+       
     }
 
     nctRight.onclick = function () {
-        var block = document.getElementsByClassName("course_tag_not_completed");
+        var block = document.getElementById("courseCompletedTag");
         for (element of block) {
-            element.scrollLeft += 70;
+            element.scrollLeft += 150;
         }
     }
     nctLeft.onclick = function () {
