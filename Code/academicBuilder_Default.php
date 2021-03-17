@@ -29,6 +29,9 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     exit();
 }
 ?>
+
+/*require_once "login.php";*/
+
 <!doctype html>
 
 <html lang="en">
