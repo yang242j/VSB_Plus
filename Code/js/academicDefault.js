@@ -22,14 +22,14 @@ function getStuInfo(sid, password) {
         var stu = JSON.parse(data);
         /*alert(stu.major);*/
         var major = stu.major;
-        getTermData(major);
+        /*getTermData(major);*/
         
         
     });
 }
 
 /*getTermData();*/
-/*getTermData(major);*/
+getTermData(major);
 getAllCourse();
 
 function getAllCourse() {
