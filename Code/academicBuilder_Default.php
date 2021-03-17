@@ -242,9 +242,9 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 					<p id = "cs9">ENSE 271</p>
 					<p id = "cs10">ENSE 271</p>
 
-					<p id = "cs11">ENSE 271</p>
-					<p id = "cs12">ENSE 271</p>
-					<p id = "cs13">ENSE 271</p>
+					<p id = "cs11"></p>
+					<p id = "cs12"></p>
+					<p id = "cs13"></p>
 					<p id = "cs14"></p>
 					
 					<p id = "cs15"></p>
