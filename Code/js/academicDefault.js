@@ -3,7 +3,7 @@ var termData;
 var allCourse;
 
 window.onload = function () {
-    /*getStuMajor(sid, pas);*/
+    getStuInfo(sid, pas);
     showTerm(1);
     showENSE_electives();
     showCS_electives();
@@ -12,19 +12,19 @@ window.onload = function () {
    
 }
 
-/*function getStuMajor(sid, password) {
+function getStuInfo(sid, password) {
     // console.log(GetUrlRelativePath());
     $.post('Model/sign_in.php', {
         sid: sid,
         password: password
     }, function (data) {
         // console.log("data is ", data)
-        var stuMajor = JSON.parse(data);
-        var major = stuMajor.major;
-        getTermData(major);
+        var stu = JSON.parse(data);
+        alert(stu.major);
+        /*getTermData(major);*/
         
     });
-}*/
+}
 
 getTermData();
 /*getTermData(major);*/
