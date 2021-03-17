@@ -150,10 +150,8 @@ function showCourses(data) {
             //<br/>
             document.getElementById("courseCompletedTag").innerHTML +=
             "<p id ='ct"+i+"'>"+ dataJSON[i].course_ID+ "<br/> "+ dataJSON[i].term +"</p>";
+            document.getElementById("ct" + i).style.color = getColor(i, dataJSON);
             
-    }
-    for (i = 0; i < dataJSON.length; i++) {
-        document.getElementById("ct" + i).style.color = getColor(i, dataJSON);
     }
 
 
