@@ -245,12 +245,12 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 					<p id = "cs11">ENSE 271</p>
 					<p id = "cs12">ENSE 271</p>
 					<p id = "cs13">ENSE 271</p>
-					<p id = "cs14">ENSE 271</p>
+					<p id = "cs14"></p>
 					
-					<p id = "cs15">ENSE 271</p>
-					<p id = "cs16">ENSE 271</p>
-					<p id = "cs17">ENSE 271</p>
-					<p id = "cs18">ENSE 271</p>
+					<p id = "cs15"></p>
+					<p id = "cs16"></p>
+					<p id = "cs17"></p>
+					<p id = "cs18"></p>
 				</div>
 				<!--<div>
 					<button class="left_arrow" id ="notCompletedLeft" onclick = "nctLeft()"><i class='fas fa-angle-left'></i></button>
