@@ -5,7 +5,8 @@ var allCourse;
 window.onload = function () {
     showTerm(1);
 }
-getTermData();
+/*getTermData();*/
+getTermData(major);
 getAllCourse()
 
 function getAllCourse() {
@@ -27,7 +28,7 @@ function getTitle(courseName) {
 }
 console.log(getTitle("CHEM 140"));
 
-function getTermData() {
+/*function getTermData() {
     var myRequest = new XMLHttpRequest;
     //myRequest.open("GET", "JSON/reqCourse/ESE_req.json", false);
     myRequest.open("GET", "JSON/reqCourse/SSE_req.json", false);
@@ -35,6 +36,17 @@ function getTermData() {
         var data = JSON.parse(myRequest.responseText);
         termData = data;
         console.log(termData);
+    }
+    myRequest.send();
+}*/
+function getTermData(faculty) {
+    var myRequest = new XMLHttpRequest;
+    var facultyName = faculty;
+    var url = "JSON/reqCourse/" + facultyName + "_req.json";
+    myRequest.open("GET", url, false);
+    myRequest.onload = function () {
+        var data = JSON.parse(myRequest.responseText);
+        termData = data;
     }
     myRequest.send();
 }
