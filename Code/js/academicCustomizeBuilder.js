@@ -525,7 +525,7 @@ function dragTest() {
                 //document.getElementById(newForAlern).innerHTML = "this course not applied for now";
             }
             //chekc prerequisite
-            deleteFrom2DArray(doneList, courseName);
+            //deleteFrom2DArray(doneList, courseName);
             ajaxpost(courseName, "202020", container);
             // use short name to show course name
             // chekc if it is in right term
