@@ -107,7 +107,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 			<h2>Default Schedule</h2>
 			<div id = "autoscroll">
 				<div class = "termGrid" id = "term1">
-					<div class = "tittle" style="grid-area: title;"><h2>Term1:</h2></div>
+					<div class = "tittle" style = "grid-area: title;"><h2>Term1:</h2></div>
 					<div class = "course_cards"></div>
 					<div class = "course_cards"></div>
 					<div class = "course_cards"></div>
