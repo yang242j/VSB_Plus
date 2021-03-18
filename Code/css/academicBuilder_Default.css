@@ -324,4 +324,8 @@ footer {
         width: 100%;
         float: right;
     }
+
+    body .terms .termGrid .course_cards p {
+        display: none;
+    }
 }
