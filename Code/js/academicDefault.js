@@ -3,7 +3,6 @@ var termData;
 var allCourse;
 
 window.onload = function () {
-    /*getStuInfo(major);*/
     console.log(major);
     getTermData(major);
     getAllCourse();
@@ -52,17 +51,6 @@ function getTitle(courseName) {
 }
 // console.log(getTitle("CHEM 140"));
 
-/*function getTermData() {
-    var myRequest = new XMLHttpRequest;
-    //myRequest.open("GET", "JSON/reqCourse/ESE_req.json", false);
-    myRequest.open("GET", "JSON/reqCourse/SSE_req.json", false);
-    myRequest.onload = function () {
-        var data = JSON.parse(myRequest.responseText);
-        termData = data;
-        console.log(termData);
-    }
-    myRequest.send();
-}*/
 function getTermData(major) {
     var myRequest = new XMLHttpRequest;
     var majorName = major;
