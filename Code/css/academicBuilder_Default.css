@@ -62,6 +62,10 @@ body .terms .termGrid {
     /* margin-left: -30px; */
 }
 
+.tittle {
+    grid-area: title;
+}
+
 body .terms .termGrid .arrows {
     /*border: 2px solid blue;*/
     width: 1000%;
