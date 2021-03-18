@@ -37,6 +37,7 @@ window.onload = function () {
 
 /*getTermData();*/
 getTermData(major);
+console.log(major);
 getAllCourse();
 
 function getAllCourse() {
