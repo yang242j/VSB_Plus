@@ -281,6 +281,31 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 					<button class="right_arrow" id ="notCompletedRight" onclick = "enctRight()"><i class='fas fa-angle-right'></i></button>
 				</div>-->
 			</div>
+			
+			<div class = "electives_course all_course">
+				<h3>All Other Course Electives:</h3>
+				<div class = "course_tag_electives all_course_tag" id = "all_course_tag">
+					<p id = "all0">ENSE 271</p>
+					<p id = "all1">ENSE 271</p>
+					<p id = "all2">ENSE 271</p>
+					<p id = "all3">ENSE 271</p>
+
+					<p id = "all4"></p>
+					<p id = "all5"></p>
+					<p id = "all6"></p>
+					<p id = "all7"></p>
+					
+					<p id = "all8"></p>
+					<p id = "all9"></p>
+					<p id = "all10"></p>
+					<p id = "all11"></p>
+				</div>
+				<div>
+					<button class="left_arrow" id ="allCourseLeft" onclick = "allLeft()"><i class='fas fa-angle-left'></i></button>
+					<button class="right_arrow" id ="allCourseRight" onclick = "allRight()"><i class='fas fa-angle-right'></i></button>
+				</div>
+			</div>
+			
 		</section>
 	</div>
 </body>
