@@ -85,6 +85,8 @@ function setCmptedValue(sid) {
         var jsonData = JSON.parse(data).data;
         // In case, no course data, using the default value
         if (jsonData.length === 0){
+            // Refresh the summary borad
+            pageDown();
             return;
         }
         var sumGrade = 0;
