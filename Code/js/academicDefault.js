@@ -5,7 +5,7 @@ var allCourse;
 
 
 window.onload = function () {
-    getStuInfo(sid, pas);
+    getStuInfo(sid, password);
     showTerm(1);
     showENSE_electives();
     showCS_electives();
@@ -16,15 +16,15 @@ window.onload = function () {
 
 function getStuInfo(sid, password) {
     // console.log(GetUrlRelativePath());
-    $.post('login.php', {
+    $.post('Model/sign_in.php', {
         sid: sid,
         password: password
         
     }, function (data) {
         // console.log("data is ", data)
-        //var stu = JSON.parse(data);
+        var stu = JSON.parse(data);
         //alert(stu);
-        //var major = stu.major;
+        var major = stu.major;
         //getTermData(major);
         
         
