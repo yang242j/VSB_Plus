@@ -1,3 +1,6 @@
+var reqCourseNum = 46;
+var reqCredit = 136;
+
 var summary = {
     "name": "",
     "sid": sid,
@@ -6,15 +9,12 @@ var summary = {
 }
 
 var cmpValue = {
-    "ave": "",
-    "courseLeft": "",
-    "year": "",
-    "gpa": "",
-    "credit": "",
+    "ave": "0",
+    "courseLeft": reqCourseNum.toString(),
+    "year": "1st",
+    "gpa": "0",
+    "credit": "0",
 }
-
-var reqCourseNum = 46;
-var reqCredit = 136;
 
 
 function pageUp() {
@@ -83,6 +83,10 @@ function setCmptedValue(sid) {
         'sid': sid
     }, function (data) {
         var jsonData = JSON.parse(data).data;
+        // In case, no course data, using the default value
+        if (jsonData.length === 0){
+            return;
+        }
         var sumGrade = 0;
         var passCount = 0;
         var totalCredit = 0;
