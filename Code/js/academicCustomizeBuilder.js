@@ -525,6 +525,7 @@ function dragTest() {
                 //document.getElementById(newForAlern).innerHTML = "this course not applied for now";
             }
             //chekc prerequisite
+            ajaxpost(courseName, "202020", container);
             // use short name to show course name
             // chekc if it is in right term
             for (i = 0; i < terminfo[0].length; i++) {
@@ -570,14 +571,12 @@ function dragTest() {
             if (check == true && dragFrom != "course_cards" && findExist(doneList[index], courseName) == false) {
                 index = dropZone.getAttribute("name");
                 doneList[index].push(courseName);
-                ajaxpost(courseName, "202020", container);
                 console.log(doneList);
 
             }
             if (check == true && dragFrom == "course_cards") {
                 //delete first then push
                 deleteFrom2DArray(doneList, courseName);
-                ajaxpost(courseName, "202020", container);
                 index = dropZone.getAttribute("name");
                 //console.log(index);
                 doneList[index].push(courseName);
