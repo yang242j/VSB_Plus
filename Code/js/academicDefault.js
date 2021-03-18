@@ -10,8 +10,6 @@ window.onload = function () {
     showENSE_electives();
     showCS_electives();
     showENEL_electives();
-    
-   
 }
 
 /*function getStuInfo(major) {
@@ -82,7 +80,6 @@ function getTermData(major) {
     }
     myRequest.send();
 }
-
 function showTerm(pageNumber) {
     var i = 1;
     for (term in termData) {
@@ -136,17 +133,13 @@ function showTerm(pageNumber) {
                                "<i class='fas fa-circle' style='font-size:24px;color:red'></i>"+
                                "<i class='fas fa-circle' style='font-size:24px;color:yellow'></i>*/
                             "</div>";
-
-                        
-
-                        i = i + 1;
+                      i = i + 1;
                     }
                 }
             }
         }
     }
 }
-
 function showENSE_electives() {
     for (term in termData) {
         if (term = "Approved") {

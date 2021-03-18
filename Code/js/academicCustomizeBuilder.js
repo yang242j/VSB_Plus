@@ -510,7 +510,6 @@ function dragTest() {
                     }
 
                 }
-                ajaxpost(courseName, "202020", container);
                 var term = [terminfo1, terminfo2, terminfo3];
                 deleteFromArray(term, null)
 
@@ -528,6 +527,7 @@ function dragTest() {
             //chekc prerequisite
             // use short name to show course name
             // chekc if it is in right term
+            ajaxpost(courseName, "202020", container);
             for (i = 0; i < terminfo[0].length; i++) {
                 if (terminfo[0][i] == null) {
                     terminfo[0][i] = "";
@@ -539,7 +539,7 @@ function dragTest() {
             }
             if (check == false) {
                 document.getElementById(newForAlern).style.color = "red";
-                alert("Term info not match");
+                //alert("Term info not match");
             }
             //transfer term to number 
 
