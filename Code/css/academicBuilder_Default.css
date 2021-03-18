@@ -328,4 +328,12 @@ footer {
     body .terms .termGrid .course_cards p {
         display: none;
     }
+
+    body .terms .course_cards {
+        margin: 0 1px 0;
+    }
+
+    body .terms .course_cards h3 {
+        font-size: initial;
+    }
 }
