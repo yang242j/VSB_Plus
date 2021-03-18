@@ -76,13 +76,13 @@ if ($validFormat) {
     // 4.1 Check if the course is already completed
     if (!in_array($courseid, $doneList)) {
         $status["Completion"] = false;
-        $status["Notes"] .= "NOT Completed.\n";
+        // $status["Notes"] .= "NOT Completed.\n";
 
         // 4.2 Check if the course can be found in the database.
         $file_path = "../JSON/$term/$courseid.json";
         if (file_exists($file_path)) {
             $status["Found"] = true;
-            $status["Notes"] .= "Course Found.\n";
+            // $status["Notes"] .= "Course Found.\n";
 
             // 4.3 Check if the course is available in the given term
             $termStr = termNum2Str($term);
@@ -112,7 +112,7 @@ if ($validFormat) {
     } else {
         // Course completed
         $status["Completion"] = true;
-        $status["Notes"] .= "Course is Completed.\n";
+        $status["Notes"] .= "Course Already Completed.\n";
     }
 } else {
     // Input invalid
