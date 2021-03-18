@@ -571,7 +571,7 @@ function dragTest() {
                 index = dropZone.getAttribute("name");
                 doneList[index].push(courseName);
                 ajaxpost(courseName, "202020", container);
-                //console.log(doneList);
+                console.log(doneList);
 
             }
             if (check == true && dragFrom == "course_cards") {
@@ -581,7 +581,7 @@ function dragTest() {
                 index = dropZone.getAttribute("name");
                 //console.log(index);
                 doneList[index].push(courseName);
-                //console.log(doneList);
+                console.log(doneList);
             }
 
             dropZone.appendChild(droppedElement);
