@@ -161,3 +161,50 @@ function showENEL_electives() {
 
 }
 
+var counter = 0;
+
+function allLeft() {
+    counter = counter - 1;
+    k = 0;
+    
+    if (counter >= 0) {
+        for (i = 0; i < 12; i++) {
+            document.getElementById("all" + i).innerHTML = "";
+        }
+
+        for (i = 12 * counter; i < 12 * (counter + 1); i++) {
+            if (i > allCourseData.length) {
+                document.getElementById("all" + k).innerHTML = " ";
+            } else {
+                document.getElementById("all" + k).innerHTML = allCourseData[i].short_name;
+            }
+            k = k + 1;
+        }
+    } else {
+        counter = 1;
+    }
+}
+
+function allRight() {
+    j = 0;
+    if (allCourseData[i].short_name != null) {
+        counter += 1;
+    }
+    
+    if (counter >= 0) {
+        for (i = 0; i < 12; i++) {
+            document.getElementById("all" + i).innerHTML = "";
+        }
+        for (i = 12 * counter; i < 12 * (counter + 1); i++) {
+            if (allCourseData[i] == null) return;
+            if (i > allCourseData.length) {
+                document.getElementById("all" + j).innerHTML = " ";
+            } else {
+                document.getElementById("all" + j).innerHTML = allCourseData[i].short_name;
+            }
+            j = j + 1;
+        }
+    } else {
+        counter = 1;
+    }
+}
