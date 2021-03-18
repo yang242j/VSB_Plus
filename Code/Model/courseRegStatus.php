@@ -88,7 +88,7 @@ if ($validFormat) {
             $termStr = termNum2Str($term);
             if (!section_empty($file_path)) {
                 $status["Availability"] = true;
-                $status["Notes"] .= "Available at $termStr.\n";
+                // $status["Notes"] .= "Available at $termStr.\n";
             } else {
                 // Course not available
                 $status["Availability"] = false;
