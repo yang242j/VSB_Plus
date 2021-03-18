@@ -4,13 +4,14 @@ var allCourse;
 
 window.onload = function () {
     /*getStuInfo(major);*/
+    console.log(major);
+    getTermData(major);
+    getAllCourse();
+    
     showTerm(1);
     showENSE_electives();
     showCS_electives();
     showENEL_electives();
-    console.log(major);
-    getTermData(major);
-    getAllCourse();
 }
 
 // function getStuInfo(major) {
@@ -29,8 +30,6 @@ window.onload = function () {
 //         //alert(stu);
 //         var major = stu.major;
 //         getTermData(major);
-        
-        
 //     });
 // }
 
