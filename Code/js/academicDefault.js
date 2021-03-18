@@ -5,7 +5,7 @@ var allCourse;
 
 
 window.onload = function () {
-    getStuInfo(major);
+    /*getStuInfo(major);*/
     showTerm(1);
     showENSE_electives();
     showCS_electives();
@@ -14,7 +14,7 @@ window.onload = function () {
    
 }
 
-function getStuInfo(major) {
+/*function getStuInfo(major) {
     return $.post('Model/courseREC.php', {
         major: major,
     }, function (data) {});
