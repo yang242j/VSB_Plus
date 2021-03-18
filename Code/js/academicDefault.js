@@ -2,43 +2,37 @@ var courseData;
 var termData;
 var allCourse;
 
-
-
 window.onload = function () {
     /*getStuInfo(major);*/
     showTerm(1);
     showENSE_electives();
     showCS_electives();
     showENEL_electives();
-    
-   
+    console.log(major);
+    getTermData(major);
+    getAllCourse();
 }
 
-/*function getStuInfo(major) {
-    return $.post('Model/courseREC.php', {
-        major: major,
-    }, function (data) {});
-}
-    // console.log(GetUrlRelativePath());
-    /*$.post('Model/sign_in.php', {
-        sid: sid,
-        password: password
+// function getStuInfo(major) {
+//     return $.post('Model/courseREC.php', {
+//         major: major,
+//     }, function (data) {});
+// }
+//     // console.log(GetUrlRelativePath());
+//     $.post('Model/sign_in.php', {
+//         sid: sid,
+//         password: password
         
-    }, function (data) {
-        // console.log("data is ", data)
-        var stu = JSON.parse(data);
-        //alert(stu);
-        var major = stu.major;
-        getTermData(major);
+//     }, function (data) {
+//         // console.log("data is ", data)
+//         var stu = JSON.parse(data);
+//         //alert(stu);
+//         var major = stu.major;
+//         getTermData(major);
         
         
-    });
-}
-
-/*getTermData();*/
-getTermData(major);
-console.log(major);
-getAllCourse();
+//     });
+// }
 
 function getAllCourse() {
     var myRequest = new XMLHttpRequest;
@@ -57,7 +51,7 @@ function getTitle(courseName) {
     }
     return ("Course Info not found");
 }
-console.log(getTitle("CHEM 140"));
+// console.log(getTitle("CHEM 140"));
 
 /*function getTermData() {
     var myRequest = new XMLHttpRequest;
@@ -78,7 +72,6 @@ function getTermData(major) {
     myRequest.onload = function () {
         var data = JSON.parse(myRequest.responseText);
         termData = data;
-       
     }
     myRequest.send();
 }
