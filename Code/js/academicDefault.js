@@ -5,7 +5,7 @@ var allCourse;
 
 
 window.onload = function () {
-    getStuInfo(sid, password);
+    getStuInfo(major);
     showTerm(1);
     showENSE_electives();
     showCS_electives();
@@ -14,9 +14,13 @@ window.onload = function () {
    
 }
 
-function getStuInfo(sid, password) {
+function getStuInfo(major) {
+    return $.post('Model/courseREC.php', {
+        major: major,
+    }, function (data) {});
+}
     // console.log(GetUrlRelativePath());
-    $.post('Model/sign_in.php', {
+    /*$.post('Model/sign_in.php', {
         sid: sid,
         password: password
         
@@ -32,7 +36,7 @@ function getStuInfo(sid, password) {
 }
 
 /*getTermData();*/
-/*getTermData(major);*/
+getTermData(major);
 getAllCourse();
 
 function getAllCourse() {
