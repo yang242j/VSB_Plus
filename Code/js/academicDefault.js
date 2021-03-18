@@ -2,41 +2,35 @@ var courseData;
 var termData;
 var allCourse;
 
-
-
 window.onload = function () {
-    /*getStuInfo(major);*/
+    console.log(major);
+    getTermData(major);
+    getAllCourse();
+    
     showTerm(1);
     showENSE_electives();
     showCS_electives();
     showENEL_electives();
 }
 
-/*function getStuInfo(major) {
-    return $.post('Model/courseREC.php', {
-        major: major,
-    }, function (data) {});
-}
-    // console.log(GetUrlRelativePath());
-    /*$.post('Model/sign_in.php', {
-        sid: sid,
-        password: password
+// function getStuInfo(major) {
+//     return $.post('Model/courseREC.php', {
+//         major: major,
+//     }, function (data) {});
+// }
+//     // console.log(GetUrlRelativePath());
+//     $.post('Model/sign_in.php', {
+//         sid: sid,
+//         password: password
         
-    }, function (data) {
-        // console.log("data is ", data)
-        var stu = JSON.parse(data);
-        //alert(stu);
-        var major = stu.major;
-        getTermData(major);
-        
-        
-    });
-}
-
-/*getTermData();*/
-getTermData(major);
-console.log(major);
-getAllCourse();
+//     }, function (data) {
+//         // console.log("data is ", data)
+//         var stu = JSON.parse(data);
+//         //alert(stu);
+//         var major = stu.major;
+//         getTermData(major);
+//     });
+// }
 
 function getAllCourse() {
     var myRequest = new XMLHttpRequest;
@@ -55,19 +49,8 @@ function getTitle(courseName) {
     }
     return ("Course Info not found");
 }
-console.log(getTitle("CHEM 140"));
+// console.log(getTitle("CHEM 140"));
 
-/*function getTermData() {
-    var myRequest = new XMLHttpRequest;
-    //myRequest.open("GET", "JSON/reqCourse/ESE_req.json", false);
-    myRequest.open("GET", "JSON/reqCourse/SSE_req.json", false);
-    myRequest.onload = function () {
-        var data = JSON.parse(myRequest.responseText);
-        termData = data;
-        console.log(termData);
-    }
-    myRequest.send();
-}*/
 function getTermData(major) {
     var myRequest = new XMLHttpRequest;
     var majorName = major;
@@ -76,7 +59,6 @@ function getTermData(major) {
     myRequest.onload = function () {
         var data = JSON.parse(myRequest.responseText);
         termData = data;
-       
     }
     myRequest.send();
 }
@@ -174,3 +156,50 @@ function showENEL_electives() {
 
 }
 
+var counter = 0;
+
+function allLeft() {
+    counter = counter - 1;
+    k = 0;
+    
+    if (counter >= 0) {
+        for (i = 0; i < 12; i++) {
+            document.getElementById("all" + i).innerHTML = "";
+        }
+
+        for (i = 12 * counter; i < 12 * (counter + 1); i++) {
+            if (i > allCourseData.length) {
+                document.getElementById("all" + k).innerHTML = " ";
+            } else {
+                document.getElementById("all" + k).innerHTML = allCourseData[i].short_name;
+            }
+            k = k + 1;
+        }
+    } else {
+        counter = 1;
+    }
+}
+
+function allRight() {
+    j = 0;
+    if (allCourseData[i].short_name != null) {
+        counter += 1;
+    }
+    
+    if (counter >= 0) {
+        for (i = 0; i < 12; i++) {
+            document.getElementById("all" + i).innerHTML = "";
+        }
+        for (i = 12 * counter; i < 12 * (counter + 1); i++) {
+            if (allCourseData[i] == null) return;
+            if (i > allCourseData.length) {
+                document.getElementById("all" + j).innerHTML = " ";
+            } else {
+                document.getElementById("all" + j).innerHTML = allCourseData[i].short_name;
+            }
+            j = j + 1;
+        }
+    } else {
+        counter = 1;
+    }
+}
