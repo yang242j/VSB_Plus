@@ -14,7 +14,7 @@ window.onload = function () {
    
 }
 
-function getStuInfo(sid, password, major) {
+function getStuInfo(sid, password) {
     // console.log(GetUrlRelativePath());
     $.post('login.php', {
         sid: sid,
@@ -22,7 +22,7 @@ function getStuInfo(sid, password, major) {
         
     }, function (data) {
         // console.log("data is ", data)
-        var stu = JSON.parse(data);
+        //var stu = JSON.parse(data);
         //alert(stu);
         //var major = stu.major;
         //getTermData(major);
@@ -32,7 +32,7 @@ function getStuInfo(sid, password, major) {
 }
 
 /*getTermData();*/
-getTermData(stu.major);
+getTermData(major);
 getAllCourse();
 
 function getAllCourse() {
