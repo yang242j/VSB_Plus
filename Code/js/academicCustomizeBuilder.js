@@ -539,7 +539,7 @@ function dragTest() {
             }
             if (check == false) {
                 document.getElementById(newForAlern).style.color = "red";
-                alert("Term info not match");
+                // alert("Term info not match");
             }
             //transfer term to number 
 
