@@ -527,7 +527,6 @@ function dragTest() {
             //chekc prerequisite
             // use short name to show course name
             // chekc if it is in right term
-            ajaxpost(courseName, "202020", container);
             for (i = 0; i < terminfo[0].length; i++) {
                 if (terminfo[0][i] == null) {
                     terminfo[0][i] = "";
@@ -539,11 +538,7 @@ function dragTest() {
             }
             if (check == false) {
                 document.getElementById(newForAlern).style.color = "red";
-<<<<<<< HEAD
                 //alert("Term info not match");
-=======
-                // alert("Term info not match");
->>>>>>> d6627d3db168942cec3f2cf3af47e36d9d5c31e2
             }
             //transfer term to number 
 
@@ -586,6 +581,8 @@ function dragTest() {
                 doneList[index].push(courseName);
                 //console.log(doneList);
             }
+            ajaxpost(courseName, "202020", container);
+
             dropZone.appendChild(droppedElement);
 
 
