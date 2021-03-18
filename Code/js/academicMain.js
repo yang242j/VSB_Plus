@@ -19,7 +19,7 @@ var cmpValue = {
 
 function pageUp() {
     document.getElementById("card1").innerHTML = "<h3>Program:</h3>" + "<p>" + summary.program + "</p>";
-    document.getElementById("card2").innerHTML = "<h3>Year:</h3>" + "<p>" + cmpValue.year + "th</p>";
+    document.getElementById("card2").innerHTML = "<h3>Year:</h3>" + "<p>" + cmpValue.year + "</p>";
     document.getElementById("card3").innerHTML = "<h3>Credit Earned:</h3>" + "<p>" + cmpValue.credit + " / " + reqCredit + "</p>";
     document.getElementById("card4").innerHTML = "<h3>Average</h3>" + "<p>" + cmpValue.ave + "</p>";
 }
@@ -115,7 +115,20 @@ function setCmptedValue(sid) {
         yearMin = Math.min.apply(null, years);
         yearMax = Math.max.apply(null, years);
         cmpValue.year = yearMax - yearMin + 1;
-
+        
+        switch (cmpValue.year){
+            case 1: 
+                cmpValue.year += 'st';
+                break;
+            case 2: 
+                cmpValue.year += 'nd';
+                break;
+            case 3:
+                cmpValue.year += 'rd';
+                break;
+            default:
+                cmpValue.year += 'th';
+        }
         // Refresh the summary borad
         pageDown();
     });
