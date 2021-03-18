@@ -29,6 +29,10 @@ body .container .terms .termGrid {
     grid-template-areas: 'title title title title title';
 }
 
+.tittle {
+	grid-area: title;
+}
+
 body .container .terms .termGrid .course_cards {
 	position: relative;
 	height: 85%;
