@@ -5,13 +5,14 @@ var allCourse;
 window.onload = function () {
     console.log(major);
     getTermData(major);
-    getAllCourse();
+    
     
     showTerm(1);
     showENSE_electives();
     showCS_electives();
     showENEL_electives();
 }
+getAllCourse();
 
 // function getStuInfo(major) {
 //     return $.post('Model/courseREC.php', {
@@ -164,6 +165,9 @@ function allLeft() {
     
     if (counter >= 0) {
        
+        for (i = 0; i < 12; i++) {
+            document.getElementById("all" + i).innerHTML = "";
+        }
 
         for (i = 12 * counter; i < 12 * (counter + 1); i++) {
             if (i > allCourseData.length) {
