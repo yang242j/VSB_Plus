@@ -282,9 +282,9 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 				</div>-->
 			</div>
 			
-			<div class = "electives_course all_course">
+			<div class = "electives_course enel_course">
 				<h3>All Other Course Electives:</h3>
-				<div class = "course_tag_electives all_course_tag" id = "all_course_tag">
+				<div class = "course_tag_electives enel_course_tag" id = "all_course_tag">
 					<p id = "all0"></p>
 					<p id = "all1"></p>
 					<p id = "all2"></p>
