@@ -5,14 +5,16 @@ var allCourse;
 window.onload = function () {
     console.log(major);
     getTermData(major);
+    getAllCourse();
     
     
     showTerm(1);
     showENSE_electives();
     showCS_electives();
     showENEL_electives();
+    showAllCourse();
 }
-getAllCourse();
+
 
 // function getStuInfo(major) {
 //     return $.post('Model/courseREC.php', {
@@ -62,55 +64,6 @@ function getTermData(major) {
         termData = data;
     }
     myRequest.send();
-}
-
-var counter = 0;
-
-function allLeft() {
-    counter -= 1;
-    k = 0;
-    
-    if (counter >= 0) {
-       
-        for (i = 0; i < 12; i++) {
-            document.getElementById("all" + i).innerHTML = "";
-        }
-
-        for (i = 12 * counter; i < 12 * (counter + 1); i++) {
-            if (i > allCourseData.length) {
-                document.getElementById("all" + k).innerHTML = " ";
-            } else {
-                document.getElementById("all" + k).innerHTML = allCourseData[i].short_name;
-            }
-            k = k + 1;
-        }
-    } else {
-        counter = 1;
-    }
-}
-
-function allRight() {
-    j = 0;
-    if (allCourseData[i].short_name != null) {
-        counter += 1;
-    }
-    
-    if (counter >= 0) {
-        for (i = 0; i < 12; i++) {
-            document.getElementById("all" + i).innerHTML = "";
-        }
-        for (i = 12 * counter; i < 12 * (counter + 1); i++) {
-            if (allCourseData[i] == null) return;
-            if (i > allCourseData.length) {
-                document.getElementById("all" + j).innerHTML = " ";
-            } else {
-                document.getElementById("all" + j).innerHTML = allCourseData[i].short_name;
-            }
-            j = j + 1;
-        }
-    } else {
-        counter = 1;
-    }
 }
 
 function showTerm(pageNumber) {
@@ -173,6 +126,7 @@ function showTerm(pageNumber) {
         }
     }
 }
+
 function showENSE_electives() {
     for (term in termData) {
         if (term = "Approved") {
@@ -207,3 +161,55 @@ function showENEL_electives() {
 
 }
 
+function showAllCourse() {
+    for (i = 0; i < 12; i++) {
+        document.getElementById("all" + i).innerHTML = allCourseData[i].short_name;
+    }
+}
+
+var counter = 0;
+function allLeft() {
+    counter -= 1;
+    k = 0;
+    
+    if (counter >= 0) {
+        for (i = 0; i < 12; i++) {
+            document.getElementById("all" + i).innerHTML = "";
+        }
+
+        for (i = 12 * counter; i < 12 * (counter + 1); i++) {
+            if (i > allCourseData.length) {
+                document.getElementById("all" + k).innerHTML = " ";
+            } else {
+                document.getElementById("all" + k).innerHTML = allCourseData[i].short_name;
+            }
+            k = k + 1;
+        }
+    } else {
+        counter = 1;
+    }
+}
+
+function allRight() {
+    j = 0;
+    if (allCourseData[i].short_name != null) {
+        counter += 1;
+    }
+    
+    if (counter >= 0) {
+        for (i = 0; i < 12; i++) {
+            document.getElementById("all" + i).innerHTML = "";
+        }
+        for (i = 12 * counter; i < 12 * (counter + 1); i++) {
+            if (allCourseData[i] == null) return;
+            if (i > allCourseData.length) {
+                document.getElementById("all" + j).innerHTML = " ";
+            } else {
+                document.getElementById("all" + j).innerHTML = allCourseData[i].short_name;
+            }
+            j = j + 1;
+        }
+    } else {
+        counter = 1;
+    }
+}
