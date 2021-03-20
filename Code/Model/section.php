@@ -105,7 +105,7 @@ if ($short_name !== "") {
             // echo "<br> " . $section['course_code'];
             // echo $section["section_num"];
         }
-        echo json_encode($data, JSON_PRETTY_PRINT);
+        echo json_encode(utf8ize($data), JSON_PRETTY_PRINT);
         // echo json_last_error();
         // //4) Encode & Return as JSON format
         // echo json_encode($data, JSON_PRETTY_PRINT);
@@ -122,4 +122,20 @@ if ($short_name !== "") {
     mysqli_close($conn);
 } else {
     echo "Please enter the short name for course";
+}
+
+
+/* Use it for json_encode some corrupt UTF-8 chars
+ * useful for = malformed utf-8 characters possibly incorrectly encoded by json_encode
+ */
+function utf8ize($mixed)
+{
+    if (is_array($mixed)) {
+        foreach ($mixed as $key => $value) {
+            $mixed[$key] = utf8ize($value);
+        }
+    } elseif (is_string($mixed)) {
+        return mb_convert_encoding($mixed, "UTF-8", "UTF-8");
+    }
+    return $mixed;
 }
