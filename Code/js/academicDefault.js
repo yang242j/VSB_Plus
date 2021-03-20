@@ -159,7 +159,7 @@ function showENEL_electives() {
 var counter = 0;
 
 function allLeft() {
-    counter = counter - 1;
+    counter -= 1;
     k = 0;
     
     if (counter >= 0) {
