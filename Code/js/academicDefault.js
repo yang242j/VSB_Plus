@@ -163,9 +163,7 @@ function allLeft() {
     k = 0;
     
     if (counter >= 0) {
-        for (i = 0; i < 12; i++) {
-            document.getElementById("all" + i).innerHTML = "";
-        }
+       
 
         for (i = 12 * counter; i < 12 * (counter + 1); i++) {
             if (i > allCourseData.length) {
