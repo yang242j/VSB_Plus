@@ -17,7 +17,7 @@ class TestSemesterBuilder(unittest.TestCase):
         self.login=Login_test(self.driver)
     
     @ddt.data(*casedata)
-    def test_prereq(self, casedata):
+    def tes_prereq(self, casedata):
         # Set the datas
         self.sid = casedata['sid']
         self.pwd = casedata['pwd']
@@ -35,5 +35,29 @@ class TestSemesterBuilder(unittest.TestCase):
         # Compare the test result with expection
         self.assertIn(self.assert_value, self.result)
         
+    def test_drag_drop(self):
+        # Set the datas
+        self.sid = '200362878'
+        self.pwd = "200362878"
+        self.actions = ['in']
+
+        self.suc = '1'
+        self.assert_value = int('1')
+ 
+        # Print the input data with logs
+        # self.logs.info_log('Input Data: SID: %s, password: %s, add course: %s,suc: %s, assert: %s' % (self.sid, self.pwd, self.addCourse, self.suc, self.assert_value))
+        semesterDriver = self.login.signIn(self.sid, self.pwd)
+        self.builder = SemesterBuilder(semesterDriver)
+
+        for action in self.actions:
+            if action == 'in':
+                self.builder.dragIn()
+            elif action == 'out':
+                self.builder.dropOut()
+            else: raise NameError('Incorrect input action') 
+        
+        self.result = self.builder.getCourseList() 
+        self.assertEqual(len(self.result), self.assert_value)
+
     def tearDown(self):
         self.driver.quit()
