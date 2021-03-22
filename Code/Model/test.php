@@ -29,12 +29,12 @@ function exp_matched($expStr, $doneList) {
 
     // Basic: exact one course name with grade req "ENSE 400 [>= 60]"
     if (preg_match_all("/([a-z]+\s[0-9]+\s\[(.*?)\])/i", $expStr) == 1) {
-        echo $expStr;
+        echo "expStr: $expStr <br>";
         $splitedStr = preg_split("/(\s\[)/i", $input_line);
-        echo $splitedStr;
+        echo "splitedStr: $splitedStr <br>";
         if (array_key_exists($splitedStr[0], $doneList)) {
             $gradeExp = rtrim($splitedStr[1], ']');
-            echo $gradeExp;
+            echo "gradeExp: $gradeExp <br>";
             if (eval('return ' . $doneList[$splitedStr[0]] . $gradeExp . ';')) {
                 return true;
             } else {
