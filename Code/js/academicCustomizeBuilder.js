@@ -510,7 +510,6 @@ function dragTest() {
                     }
 
                 }
-                ajaxpost(courseName, "202020", container);
                 var term = [terminfo1, terminfo2, terminfo3];
                 deleteFromArray(term, null)
 
@@ -526,6 +525,8 @@ function dragTest() {
                 //document.getElementById(newForAlern).innerHTML = "this course not applied for now";
             }
             //chekc prerequisite
+            //deleteFrom2DArray(doneList, courseName);
+            ajaxpost(courseName, "202020", container);
             // use short name to show course name
             // chekc if it is in right term
             for (i = 0; i < terminfo[0].length; i++) {
@@ -539,7 +540,7 @@ function dragTest() {
             }
             if (check == false) {
                 document.getElementById(newForAlern).style.color = "red";
-                alert("Term info not match");
+                //alert("Term info not match");
             }
             //transfer term to number 
 
@@ -571,7 +572,7 @@ function dragTest() {
             if (check == true && dragFrom != "course_cards" && findExist(doneList[index], courseName) == false) {
                 index = dropZone.getAttribute("name");
                 doneList[index].push(courseName);
-                //console.log(doneList);
+                console.log(doneList);
 
             }
             if (check == true && dragFrom == "course_cards") {
@@ -580,11 +581,10 @@ function dragTest() {
                 index = dropZone.getAttribute("name");
                 //console.log(index);
                 doneList[index].push(courseName);
-                //console.log(doneList);
+                console.log(doneList);
             }
+
             dropZone.appendChild(droppedElement);
-
-
 
 
         });

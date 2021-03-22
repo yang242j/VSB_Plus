@@ -3,32 +3,37 @@ var termData;
 var allCourse;
 
 window.onload = function () {
-    /*getStuMajor(sid, pas);*/
+    console.log(major);
+    getTermData(major);
+    getAllCourse();
+    
+    
     showTerm(1);
     showENSE_electives();
     showCS_electives();
     showENEL_electives();
-    
-   
+    showAllCourse();
 }
 
-/*function getStuMajor(sid, password) {
-    // console.log(GetUrlRelativePath());
-    $.post('Model/sign_in.php', {
-        sid: sid,
-        password: password
-    }, function (data) {
-        // console.log("data is ", data)
-        var stuMajor = JSON.parse(data);
-        var major = stuMajor.major;
-        getTermData(major);
-        
-    });
-}*/
 
-getTermData();
-/*getTermData(major);*/
-getAllCourse();
+// function getStuInfo(major) {
+//     return $.post('Model/courseREC.php', {
+//         major: major,
+//     }, function (data) {});
+// }
+//     // console.log(GetUrlRelativePath());
+//     $.post('Model/sign_in.php', {
+//         sid: sid,
+//         password: password
+        
+//     }, function (data) {
+//         // console.log("data is ", data)
+//         var stu = JSON.parse(data);
+//         //alert(stu);
+//         var major = stu.major;
+//         getTermData(major);
+//     });
+// }
 
 function getAllCourse() {
     var myRequest = new XMLHttpRequest;
@@ -47,31 +52,19 @@ function getTitle(courseName) {
     }
     return ("Course Info not found");
 }
-console.log(getTitle("CHEM 140"));
+// console.log(getTitle("CHEM 140"));
 
-function getTermData() {
+function getTermData(major) {
     var myRequest = new XMLHttpRequest;
-    //myRequest.open("GET", "JSON/reqCourse/ESE_req.json", false);
-    myRequest.open("GET", "JSON/reqCourse/SSE_req.json", false);
-    myRequest.onload = function () {
-        var data = JSON.parse(myRequest.responseText);
-        termData = data;
-        console.log(termData);
-    }
-    myRequest.send();
-}
-/*function getTermData(faculty) {
-    var myRequest = new XMLHttpRequest;
-    var facultyName = faculty;
-    var url = "JSON/reqCourse/" + facultyName + "_req.json";
+    var majorName = major;
+    var url = "JSON/reqCourse/" + majorName + "_req.json";
     myRequest.open("GET", url, false);
     myRequest.onload = function () {
         var data = JSON.parse(myRequest.responseText);
         termData = data;
-        console.log(termData);
     }
     myRequest.send();
-}*/
+}
 
 function showTerm(pageNumber) {
     var i = 1;
@@ -126,10 +119,7 @@ function showTerm(pageNumber) {
                                "<i class='fas fa-circle' style='font-size:24px;color:red'></i>"+
                                "<i class='fas fa-circle' style='font-size:24px;color:yellow'></i>*/
                             "</div>";
-
-                        
-
-                        i = i + 1;
+                      i = i + 1;
                     }
                 }
             }
@@ -171,3 +161,55 @@ function showENEL_electives() {
 
 }
 
+function showAllCourse() {
+    for (i = 0; i < 12; i++) {
+        document.getElementById("all" + i).innerHTML = allCourseData[i].short_name;
+    }
+}
+
+var counter = 0;
+function allLeft() {
+    counter -= 1;
+    k = 0;
+    
+    if (counter >= 0) {
+        for (i = 0; i < 12; i++) {
+            document.getElementById("all" + i).innerHTML = "";
+        }
+
+        for (i = 12 * counter; i < 12 * (counter + 1); i++) {
+            if (i > allCourseData.length) {
+                document.getElementById("all" + k).innerHTML = " ";
+            } else {
+                document.getElementById("all" + k).innerHTML = allCourseData[i].short_name;
+            }
+            k = k + 1;
+        }
+    } else {
+        counter = 1;
+    }
+}
+
+function allRight() {
+    j = 0;
+    if (allCourseData[i].short_name != null) {
+        counter += 1;
+    }
+    
+    if (counter >= 0) {
+        for (i = 0; i < 12; i++) {
+            document.getElementById("all" + i).innerHTML = "";
+        }
+        for (i = 12 * counter; i < 12 * (counter + 1); i++) {
+            if (allCourseData[i] == null) return;
+            if (i > allCourseData.length) {
+                document.getElementById("all" + j).innerHTML = " ";
+            } else {
+                document.getElementById("all" + j).innerHTML = allCourseData[i].short_name;
+            }
+            j = j + 1;
+        }
+    } else {
+        counter = 1;
+    }
+}

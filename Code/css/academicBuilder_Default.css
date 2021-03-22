@@ -56,10 +56,14 @@ body .terms .termGrid {
     /*border: 2px solid blue;*/
     display: grid;
     grid-template-columns: auto auto auto auto auto;
-    grid-template-rows: 50px 70px;
+    grid-template-rows: auto auto;
     grid-template-areas: 'title title title title title';
     /* column-gap: 1%; */
     /* margin-left: -30px; */
+}
+
+.tittle {
+    grid-area: title;
 }
 
 body .terms .termGrid .arrows {
@@ -107,6 +111,7 @@ body .terms .course_cards {
     box-shadow: 2px 4px 7px 0px #555555;
     text-align: center;
     margin: 0 5px 0;
+    padding: 1%;
     /* margin-left: 0; */
     /* margin-top: 50px; */
 }
@@ -318,5 +323,17 @@ footer {
     body .tags_courses {
         width: 100%;
         float: right;
+    }
+
+    body .terms .termGrid .course_cards p {
+        display: none;
+    }
+
+    body .terms .course_cards {
+        margin: 0 1px 0;
+    }
+
+    body .terms .course_cards h3 {
+        font-size: initial;
     }
 }
