@@ -63,7 +63,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (empty($studentid_err) && empty($password_err)) {
         // Prepare a select statement
         $sql =
-            "SELECT * FROM students WHERE student_id = ?";
+            "SELECT student_id, name, major, totalCredit, password FROM students WHERE student_id = ?";
 
         if ($stmt = mysqli_prepare($conn, $sql)) {
             // Bind variables to the prepared statement as parameters
