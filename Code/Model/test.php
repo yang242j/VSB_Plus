@@ -32,9 +32,12 @@ function exp_matched($expStr, $doneList) {
             if (array_key_exists($splitedStr[0], $doneList)) {
                 $gradeExp = rtrim($splitedStr[1], ']');
                 echo "gradeExp: $gradeExp <br>";
+                echo "courseGrade: ".$doneList[$splitedStr[0]]."<br>";
                 if (eval('return ' . $doneList[$splitedStr[0]] . $gradeExp . ';')) {
+                    echo "Truee";
                     return true;
                 } else {
+                    echo "Falsee";
                     return false;
                 }
             }
