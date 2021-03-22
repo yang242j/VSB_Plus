@@ -29,7 +29,7 @@
 
 // 1. Collect inputs
 $doneList = isset($_REQUEST["courseCompletedList"])
-    ? urldecode($_REQUEST["courseCompletedList"])
+    ? json_decode($_REQUEST["courseCompletedList"], true)
     : '';
 $major = isset($_REQUEST["major"]) ? $_REQUEST["major"] : '';
 $maxNum = isset($_REQUEST["maxNum"]) ? $_REQUEST["maxNum"] : '';
