@@ -17,9 +17,9 @@ $expStr = "Credit [>= 15] || ECON 100 || Pre-Calculus 20";
 // $expStr = "CS 110 && ( MATH 110 || MATH 103 )";
 // $expStr = "CS 110 [>= 65] && ( MATH 110 || MATH 103 [>= 80] )";
 
-$status = exp_matched($expStr, $doneList) ? "True" : "False";
+$status = exp_matched($expStr, $totalCredit, $doneList) ? "True" : "False";
 
-function exp_matched($expStr, $doneList) {
+function exp_matched($expStr, $totalCredit, $doneList) {
     $expStr = trim($expStr);
 
     // Base case: if expStr == null, return true
