@@ -2,7 +2,7 @@
 
 $preStr = $expStr = $status = '';
 
-$totalCredit = 10;
+$totalCredit = 30;
 
 $doneList = [
     "CS 110" => 70,
