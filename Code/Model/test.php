@@ -36,9 +36,9 @@ function exp_matched($expStr, $doneList) {
             $gradeExp = rtrim($splitedStr[1], ']');
             echo $gradeExp;
             if (eval('return ' . $doneList[$splitedStr[0]] . $gradeExp . ';')) {
-                echo 'Truee';
+                return true;
             } else {
-                echo 'Falsee';
+                return false;
             }
         }
     }
