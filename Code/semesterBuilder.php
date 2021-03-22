@@ -58,7 +58,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         var term = '';
         var courseList = [];
         var isMobile = window.matchMedia('(max-width: 1080px)').matches;
-        let presetCourses = [
+        let presetCourses = {
             'Precalculus 30':100, 
             'Calculus 30':100, 
             'CHEM 30':100, 
@@ -67,7 +67,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             'AMTH 092':100, 
             'MATH 102':100, 
             'MATH 103':100,
-        ];
+        };
         var courseCompletedList = Object.assign({}, presetCourses);
         
         $(document).ready(function() {
