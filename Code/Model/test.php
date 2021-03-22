@@ -42,6 +42,7 @@ function exp_matched($expStr, $doneList) {
                 }
             }
         }
+        echo "No condition <br>";
         return array_key_exists($expStr, $doneList) ? true : false;
     }
 
