@@ -29,7 +29,7 @@
 
 // 1. Collect inputs
 $doneList = isset($_REQUEST["courseCompletedList"])
-    ? json_decode($_REQUEST["courseCompletedList"], true)
+    ? $_REQUEST["courseCompletedList"]
     : '';
 $major = isset($_REQUEST["major"]) ? $_REQUEST["major"] : '';
 $maxNum = isset($_REQUEST["maxNum"]) ? $_REQUEST["maxNum"] : '';
@@ -60,7 +60,7 @@ if ($doneList !== "" && $major !== "" && $term_NUM !== "" && $term_EN !== "") {
     $toTakeList = [];
     foreach ($reqList_json_array as $reqTerm => $reqCourses_array) {
         foreach ($reqCourses_array as $reqCourse) {
-            $skipCondition_1 = array_key_exists($reqCourse, $doneList); // Course was completed
+            $skipCondition_1 = in_array($reqCourse, $doneList); // Course was completed
             $skipCondition_2 = $reqCourse == "Approved"; // Approved elective
             $skipCondition_3 = sizeof($toTakeList) >= $maxNum; // To take list is full
             $coursePath = "../JSON/$term_NUM/$reqCourse.json";
@@ -139,7 +139,7 @@ function getStatus($expStr, $doneList)
     // Basic: exact one course name "ENSE 400"
     if (preg_match_all("/([a-z]+\s[0-9]+)/i", $expStr) == 1) {
         //echo in_array($expStr, $doneList) ? "<b>True</b> $expStr is in the Done array <br>" : "<b>False</b> $expStr is not in  done array <br>";
-        return array_key_exists($expStr, $doneList) ? true : false;
+        return in_array($expStr, $doneList) ? true : false;
     }
 
     // &&: split "ENSE 400 && ENEL 400"
