@@ -58,17 +58,9 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         var term = '';
         var courseList = [];
         var isMobile = window.matchMedia('(max-width: 1080px)').matches;
-        let presetCourses = [
-            'Precalculus 30':100, 
-            'Calculus 30':100, 
-            'CHEM 30':100, 
-            'Mathematics B30':100, 
-            'Mathematics C30':100, 
-            'AMTH 092':100, 
-            'MATH 102':100, 
-            'MATH 103':100,
-        ];
-        var courseCompletedList = Object.assign({}, presetCourses);
+        let presetCourses = ['Precalculus 30', 'Calculus 30', 'CHEM 30', 'Mathematics B30', 'Mathematics C30', 'AMTH 092', 'MATH 102', 'MATH 103'];
+        var courseCompletedList = [];
+        courseCompletedList = courseCompletedList.concat(presetCourses);
         
         $(document).ready(function() {
             $("button.plus_button.open").hide();
@@ -146,12 +138,11 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                         var data = new FormData();
                         data.append("courseid", courseid);
                         data.append("term", term);
-                        data.append("totalCredit", "<?php echo htmlspecialchars($_SESSION['totalCredit']); ?>");
                         data.append("doneList", JSON.stringify(courseCompletedList));
                         
                         // (B) AJAX
                         var xhr = new XMLHttpRequest();
-                        xhr.open("POST", "http://15.223.123.122/vsbp/Code/Model/courseRegStatus2.php");
+                        xhr.open("POST", "http://15.223.123.122/vsbp/Code/Model/courseRegStatus.php");
                         // When server responds
                         xhr.onload = function(){ 
                             let rsp = JSON.parse(this.response);
@@ -278,7 +269,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                         require_once "Model/vsbp_db_config.php";
                         $tableName = "S" . $_SESSION['sid'];
                         $takenClass_sql =
-                            "SELECT `course_ID`, `final_grade` FROM `" .
+                            "SELECT `course_ID` FROM `" .
                             $tableName .
                             "` WHERE `credit_earned`=`credit_hour`";
                         $result = mysqli_query($conn, $takenClass_sql);
@@ -287,9 +278,13 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                             exit();
                         }
                         while ($row = mysqli_fetch_array($result)) { ?>
-                            var course_tag = tagGenerator("<?php echo htmlspecialchars($row['course_ID']); ?>", false);
+                            var course_tag = tagGenerator("<?php echo htmlspecialchars(
+                                $row['course_ID']
+                            ); ?>", false);
                             document.getElementById("course_completed").innerHTML += course_tag;
-                            courseCompletedList["<?php echo htmlspecialchars($row['course_ID']); ?>"] = "<?php echo htmlspecialchars($row['final_grade']); ?>";
+                            courseCompletedList.push("<?php echo htmlspecialchars(
+                                $row['course_ID']
+                            ); ?>");
                         <?php }
                         ?>
                     });
