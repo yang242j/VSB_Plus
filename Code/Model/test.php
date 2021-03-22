@@ -34,10 +34,10 @@ function exp_matched($expStr, $doneList) {
                 echo "gradeExp: $gradeExp <br>";
                 echo "courseGrade: ".$doneList[$splitedStr[0]]."<br>";
                 if (eval('return ' . $doneList[$splitedStr[0]] . $gradeExp . ';')) {
-                    echo "Truee";
+                    echo "Truee <br>";
                     return true;
                 } else {
-                    echo "Falsee";
+                    echo "Falsee <br>";
                     return false;
                 }
             }
