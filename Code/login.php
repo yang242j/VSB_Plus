@@ -63,7 +63,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (empty($studentid_err) && empty($password_err)) {
         // Prepare a select statement
         $sql =
-            "SELECT student_id, name, major, password FROM students WHERE student_id = ?";
+            "SELECT * FROM students WHERE student_id = ?";
 
         if ($stmt = mysqli_prepare($conn, $sql)) {
             // Bind variables to the prepared statement as parameters
@@ -85,6 +85,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         $studentid,
                         $name,
                         $major,
+                        $totalCredit,
                         $hashed_password
                     );
                     if (mysqli_stmt_fetch($stmt)) {
@@ -98,6 +99,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             $_SESSION["password"] = $password;
                             $_SESSION["name"] = $name;
                             $_SESSION["major"] = $major;
+                            $_SESSION["totalCredit"] = $totalCredit;
 
                             // Redirect user to welcome page
                             header("location: academicBuilder_Main.php");
