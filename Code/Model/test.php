@@ -29,7 +29,7 @@ function exp_matched($expStr, $doneList) {
 
     // Basic: exact one course name with grade req "ENSE 400 [>= 60]"
     if (preg_match_all("/([a-z]+\s[0-9]+\s\[(.*?)\])/i", $expStr, $matchesArr) == 1) {
-        echo $matchesArr[2];
+        echo $matchesArr;
         return array_key_exists($expStr, $doneList) ? true : false;
     }
 
