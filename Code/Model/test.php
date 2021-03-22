@@ -24,23 +24,22 @@ function exp_matched($expStr, $doneList) {
 
     // Basic: exact one course name "ENSE 400"
     if (preg_match_all("/([a-z]+\s[0-9]+)/i", $expStr) == 1) {
-        return array_key_exists($expStr, $doneList) ? true : false;
-    }
-
-    // Basic: exact one course name with grade req "ENSE 400 [>= 60]"
-    if (preg_match_all("/([a-z]+\s[0-9]+\s\[(.*?)\])/i", $expStr) == 1) {
-        echo "expStr: $expStr <br>";
-        $splitedStr = preg_split("/(\s\[)/i", $input_line);
-        echo "splitedStr: $splitedStr <br>";
-        if (array_key_exists($splitedStr[0], $doneList)) {
-            $gradeExp = rtrim($splitedStr[1], ']');
-            echo "gradeExp: $gradeExp <br>";
-            if (eval('return ' . $doneList[$splitedStr[0]] . $gradeExp . ';')) {
-                return true;
-            } else {
-                return false;
+        // Check if has condition
+        if (preg_match_all("/([a-z]+\s[0-9]+\s\[(.*?)\])/i", $expStr) == 1) {
+            echo "expStr: $expStr <br>";
+            $splitedStr = preg_split("/(\s\[)/i", $expStr);
+            echo "splitedStr: $splitedStr <br>";
+            if (array_key_exists($splitedStr[0], $doneList)) {
+                $gradeExp = rtrim($splitedStr[1], ']');
+                echo "gradeExp: $gradeExp <br>";
+                if (eval('return ' . $doneList[$splitedStr[0]] . $gradeExp . ';')) {
+                    return true;
+                } else {
+                    return false;
+                }
             }
         }
+        return array_key_exists($expStr, $doneList) ? true : false;
     }
 
     // &&: split "ENSE 400 && ENEL 400"
