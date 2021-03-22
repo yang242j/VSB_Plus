@@ -24,8 +24,7 @@ function exp_matched($expStr, $doneList) {
 
     // Basic: exact one course name "ENSE 400"
     if (preg_match_all("/([a-z]+\s[0-9]+)/i", $expStr) == 1) {
-        //echo in_array($expStr, $doneList) ? "<b>True</b> $expStr is in the Done array <br>" : "<b>False</b> $expStr is not in  done array <br>";
-        return in_array($expStr, $doneList) ? true : false;
+        return array_key_exists($expStr, $doneList) ? true : false;
     }
 
     // &&: split "ENSE 400 && ENEL 400"
