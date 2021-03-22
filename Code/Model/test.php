@@ -28,7 +28,7 @@ function exp_matched($expStr, $doneList) {
     }
 
     // Base case: Pending credit requirements
-    if (preg_match_all("/(Credit\s\[(.*?)\])/i", $expStr) == 1) {
+    if (preg_match_all("/^(Credit\s\[(.*?)\])$/i", $expStr) == 1) {
         echo "expStr: " . $expStr . "<br>";
         $creditStr = preg_split("/(\s\[)/i", $expStr);
         $creditExp = rtrim($creditStr[1], ']');
