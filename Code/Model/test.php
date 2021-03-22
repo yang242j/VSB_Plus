@@ -5,7 +5,7 @@ $preStr = $expStr = $status = '';
 $doneList = [
     "CS 110" => 70,
     "MATH 103" => 70,
-    "MATH 110" => 50,
+    // "MATH 110" => 50,
 ];
 
 $preStr = "CS 110 with a minimum grade of 65% and one of MATH 110 (may be taken concurrently) or MATH 103 with a minimum grade of 80%.";
