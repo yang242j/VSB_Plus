@@ -12,7 +12,7 @@ $preStr = "CS 110 with a minimum grade of 65% and one of MATH 110 (may be taken 
 $expStr = "CS 110 && ( MATH 110 || MATH 103 )";
 //$expStr = "CS 110 [>= 65] && ( MATH 110 || MATH 103 [>= 80] )";
 
-$status = exp_matched($expStr, $doneList) ? "true" : "false";
+$status = exp_matched($expStr, $doneList) ? "True" : "False";
 
 function exp_matched($expStr, $doneList) {
     $expStr = trim($expStr);
@@ -24,6 +24,12 @@ function exp_matched($expStr, $doneList) {
 
     // Basic: exact one course name "ENSE 400"
     if (preg_match_all("/([a-z]+\s[0-9]+)/i", $expStr) == 1) {
+        return array_key_exists($expStr, $doneList) ? true : false;
+    }
+
+    // Basic: exact one course name with grade req "ENSE 400 [>= 60]"
+    if (preg_match_all("/([a-z]+\s[0-9]+\s\[(.*?)\])/i", $expStr, $matchesArr) == 1) {
+        echo $matchesArr[2];
         return array_key_exists($expStr, $doneList) ? true : false;
     }
 
