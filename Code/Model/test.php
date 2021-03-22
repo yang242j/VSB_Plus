@@ -2,10 +2,15 @@
 
 $preStr = $expStr = $status = '';
 
-$doneList = array('MATH 100', 'CHEM 104', 'CS 110', 'ENGG 100', 'MATH 110', 'ENGG 123', 'MATH 122', 'PHYS 109', 'STAT 160', 'PHYS 119', 'CS 115', 'MATH 217', 'ENEL 280', 'MATH 213');
+$doneList = [
+    "CS 110" => 60,
+    "MATH 103" => 70,
+    "MATH 110" => 80,
+];
 
 $preStr = "CS 110 with a minimum grade of 65% and one of MATH 110 (may be taken concurrently) or MATH 103 with a minimum grade of 80%.";
-$expStr = "CS 110 [>= 65] && ( MATH 110 || MATH 103 [>= 80] )";
+$expStr = "CS 110 && ( MATH 110 || MATH 103 )";
+//$expStr = "CS 110 [>= 65] && ( MATH 110 || MATH 103 [>= 80] )";
 
 $status = exp_matched($expStr, $doneList) ? "true" : "false";
 
