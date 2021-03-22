@@ -32,13 +32,7 @@ function exp_matched($expStr, $totalCredit, $doneList) {
         echo "expStr: " . $expStr . "<br>";
         $creditStr = preg_split("/(\s\[)/i", $expStr);
         $creditExp = rtrim($creditStr[1], ']');
-        if (eval('return ' . $totalCredit . $creditExp . ';')) {
-            echo "Truee1 <br>";
-            return true;
-        } else {
-            echo "Falsee1 <br>";
-            return false;
-        }
+        return eval('return ' . $totalCredit . $creditExp . ';') ? true : false;
     }
 
     // Base case: exact one course name "ENSE 400"
@@ -52,13 +46,7 @@ function exp_matched($expStr, $totalCredit, $doneList) {
                 $gradeExp = rtrim($splitedStr[1], ']');
                 echo "gradeExp: $gradeExp <br>";
                 echo "courseGrade: ".$doneList[$splitedStr[0]]."<br>";
-                if (eval('return ' . $doneList[$splitedStr[0]] . $gradeExp . ';')) {
-                    echo "Truee <br>";
-                    return true;
-                } else {
-                    echo "Falsee <br>";
-                    return false;
-                }
+                return eval('return ' . $totalCredit . $creditExp . ';') ? true : false;
             }
         }
         echo "No condition <br>";
