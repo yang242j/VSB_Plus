@@ -28,7 +28,7 @@ function exp_matched($expStr, $doneList) {
         if (preg_match_all("/([a-z]+\s[0-9]+\s\[(.*?)\])/i", $expStr) == 1) {
             echo "expStr: $expStr <br>";
             $splitedStr = preg_split("/(\s\[)/i", $expStr);
-            echo "splitedStr: $splitedStr <br>";
+            echo "splitedStr: ".$splitedStr[0]." \ ".$splitedStr[1]."<br>";
             if (array_key_exists($splitedStr[0], $doneList)) {
                 $gradeExp = rtrim($splitedStr[1], ']');
                 echo "gradeExp: $gradeExp <br>";
