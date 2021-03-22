@@ -289,7 +289,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                         while ($row = mysqli_fetch_array($result)) { ?>
                             var course_tag = tagGenerator("<?php echo htmlspecialchars($row['course_ID']); ?>", false);
                             document.getElementById("course_completed").innerHTML += course_tag;
-                            courseCompletedList["<?php echo htmlspecialchars($row['course_ID']); ?>"] = "<?php echo htmlspecialchars($row['final_grade']); ?>";
+                            courseCompletedList["<?php echo htmlspecialchars($row['course_ID']); ?>"] = <?php echo htmlspecialchars($row['final_grade']); ?>;
                         <?php }
                         ?>
                     });
