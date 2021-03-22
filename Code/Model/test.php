@@ -28,9 +28,19 @@ function exp_matched($expStr, $doneList) {
     }
 
     // Basic: exact one course name with grade req "ENSE 400 [>= 60]"
-    if (preg_match_all("/([a-z]+\s[0-9]+\s\[(.*?)\])/i", $expStr, $matchesArr) == 1) {
-        echo $matchesArr;
-        return array_key_exists($expStr, $doneList) ? true : false;
+    if (preg_match_all("/([a-z]+\s[0-9]+\s\[(.*?)\])/i", $expStr) == 1) {
+        echo $expStr;
+        $splitedStr = preg_split("/(\s\[)/i", $input_line);
+        echo $splitedStr;
+        if (array_key_exists($splitedStr[0], $doneList)) {
+            $gradeExp = rtrim($splitedStr[1], ']');
+            echo $gradeExp;
+            if (eval('return ' . $doneList[$splitedStr[0]] . $gradeExp . ';')) {
+                echo 'Truee';
+            } else {
+                echo 'Falsee';
+            }
+        }
     }
 
     // &&: split "ENSE 400 && ENEL 400"
