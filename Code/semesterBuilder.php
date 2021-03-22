@@ -138,11 +138,12 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                         var data = new FormData();
                         data.append("courseid", courseid);
                         data.append("term", term);
+                        data.append("totalCredit", "<?php echo htmlspecialchars($_SESSION['totalCredit']); ?>");
                         data.append("doneList", JSON.stringify(courseCompletedList));
                         
                         // (B) AJAX
                         var xhr = new XMLHttpRequest();
-                        xhr.open("POST", "http://15.223.123.122/vsbp/Code/Model/courseRegStatus.php");
+                        xhr.open("POST", "http://15.223.123.122/vsbp/Code/Model/courseRegStatus2.php");
                         // When server responds
                         xhr.onload = function(){ 
                             let rsp = JSON.parse(this.response);
