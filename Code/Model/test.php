@@ -71,7 +71,7 @@ function exp_matched($expStr, $totalCredit, $doneList) {
         foreach ($andComp as $component) {
             if ($component) {
                 echo "and $component <br>";
-                if (exp_matched($component, $doneList) == false) {
+                if (exp_matched($component, $totalCredit, $doneList) == false) {
                     return false;
                 }
             }
@@ -81,7 +81,7 @@ function exp_matched($expStr, $totalCredit, $doneList) {
 
     // Remove () if " (ENSE 400 || ENEL 400) "
     if (substr($expStr, 0, 1) == "(" && substr($expStr, -1) == ")") {
-        return exp_matched(substr($expStr, 1, -1), $doneList);
+        return exp_matched(substr($expStr, 1, -1), $totalCredit, $doneList);
     }
 
     // ||: split "ENSE 400 || ENEL 400"
@@ -91,7 +91,7 @@ function exp_matched($expStr, $totalCredit, $doneList) {
             //echo "or $component <br>";
             if ($component) {
                 echo "or $component <br>";
-                if (exp_matched($component, $doneList) == true) {
+                if (exp_matched($component, $totalCredit, $doneList) == true) {
                     return true;
                 }
             }
