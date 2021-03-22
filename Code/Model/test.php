@@ -7,9 +7,9 @@ $doneList = array('MATH 100', 'CHEM 104', 'CS 110', 'ENGG 100', 'MATH 110', 'ENG
 $preStr = "CS 110 with a minimum grade of 65% and one of MATH 110 (may be taken concurrently) or MATH 103 with a minimum grade of 80%.";
 $expStr = "CS 110 [>= 65] && ( MATH 110 || MATH 103 [>= 80] )";
 
-$status = getStatus($expStr, $doneList) ? "true" : "false";
+$status = exp_matched($expStr, $doneList) ? "true" : "false";
 
-function getStatus($expStr, $doneList) {
+function exp_matched($expStr, $doneList) {
     $expStr = trim($expStr);
 
     // Basic: if expStr == null, return true
