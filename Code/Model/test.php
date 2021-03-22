@@ -48,7 +48,7 @@ function exp_matched($expStr, $doneList) {
     if (sizeof($andComp) > 1) {
         foreach ($andComp as $component) {
             if ($component) {
-                //echo "and $component <br>";
+                echo "and $component <br>";
                 if (exp_matched($component, $doneList) == false) {
                     return false;
                 }
@@ -66,9 +66,9 @@ function exp_matched($expStr, $doneList) {
     $orComp = preg_split("/(\|{2})/", $expStr);
     if (sizeof($orComp) > 1) {
         foreach ($orComp as $component) {
-            // echo "or $component <br>";
+            //echo "or $component <br>";
             if ($component) {
-                //echo "or $component <br>";
+                echo "or $component <br>";
                 if (exp_matched($component, $doneList) == true) {
                     return true;
                 }
