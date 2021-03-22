@@ -3,9 +3,9 @@ from util import BSTestRunner
 from config import description,reporttitle
 path=os.getcwd()
 case_path=path+'\\case'
-def create_report():
+def create_report(patterName = 'test'):
     test_suit = unittest.TestSuite()
-    discover = unittest.defaultTestLoader.discover(case_path, pattern='*test.py', top_level_dir=None)
+    discover = unittest.defaultTestLoader.discover(case_path, pattern='*'+patterName+'.py', top_level_dir=None)
     for test in discover:
         for test_case in test:
             test_suit.addTest(test_case)

@@ -6,7 +6,7 @@ class CourseDB_test:#封装
         self.driver=driver
         self.logs = log.log_message()
         self.file=open(path+"\\data\\page_data.yaml", "r",encoding= "utf-8")
-        self.data=yaml.load(self.file)
+        self.data=yaml.load(self.file, Loader=yaml.FullLoader)
         self.file.close()
         self.lo_url=self.data['courseDB'].get('url')
         self.input_box=self.data['courseDB'].get('input_box')
@@ -77,7 +77,7 @@ class Login_test:
         self.driver=driver
         self.logs = log.log_message()
         self.file=open(path+"\\data\\page_data.yaml", "r",encoding= "utf-8")
-        self.data=yaml.load(self.file)
+        self.data=yaml.load(self.file, Loader=yaml.FullLoader)
         self.file.close()
 
         # Setup the parameters
