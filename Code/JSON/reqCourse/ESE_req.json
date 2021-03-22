@@ -1,7 +1,7 @@
 {
     "term1": ["CHEM 104", "ENGG 123", "ENGG 140", "MATH 110", "MATH 122"],
     "term2": ["CS 110", "ENGG 100", "ENGL 100", "MATH 111", "PHYS 119"],
-    "term3": ["CS 115", "ENEL 280", "ENEV 223", "MATH 217", "PHYS 119"],
+    "term3": ["CS 115", "ENEL 280", "ENEV 223", "MATH 217", "PHYS 112"],
     "term4": ["CS 210", "ENEL 281", "ENEL 282", "MATH 213", "STAT 289"],
     "term5": ["BUS 260", "ENEL 383", "ENEL 384", "ENSE 352", "PHYS 201"],
     "term6": ["BUS 210", "CS 335", "ECON 201", "ENEL 380", "ENEL 390"],
