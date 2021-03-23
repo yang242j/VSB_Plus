@@ -11,10 +11,10 @@ window.onload = function () {
     showTerm(1);
     
     showENSE_electives();
-    /*showCS_electives();*/
+    showCS_electives();
     showENEL_electives();
     showAllCourse();
-    sort_Electives();
+    /*sort_Electives();*/
 }
 
 
@@ -129,7 +129,7 @@ function showTerm(pageNumber) {
     }
 }
 
-function sort_Electives() {
+/*function sort_Electives() {
     for (term in termData) {
         if (term = "Approved") {
 	        if(Approved.includes('CS 205') || Approved.includes('CS 315') || Approved.includes('CS 330') 
@@ -141,7 +141,7 @@ function sort_Electives() {
             }
         }
     
-}
+}*/
     
 function showENSE_electives() {
     for (term in termData) {
@@ -156,8 +156,8 @@ function showENSE_electives() {
 function showCS_electives() {
     for (term in termData) {
         if (term = "Approved") {
-            /*for (i = 7; i <= 13; i++) {*/
-                for (i = 0; i < 12; i++) {
+            for (i = 7; i <= 13; i++) {
+                /*for (i = 0; i < 12; i++) {*/
                 document.getElementById("cs" + i).innerHTML = termData[term][i];
             }
         }
