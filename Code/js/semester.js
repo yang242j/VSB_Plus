@@ -314,6 +314,7 @@ async function fetchAllSectionData(short_name, term) {
 
 function fetchRecJSON(courseCompletedList, major, term, maxNum) {
     return $.post('Model/courseREC.php', {
+        // courseCompletedList: JSON.stringify(courseCompletedList),
         courseCompletedList: courseCompletedList,
         major: major,
         term: term,
