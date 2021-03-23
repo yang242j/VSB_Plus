@@ -16,7 +16,7 @@
  * php Steps:
  *  1) Collect session variables. If not logged-in, redirect to login page.
  *
- * @version     1.0
+ * @version     2.0
  * @link        http://15.223.123.122/vsbp/Code/semesterBuilder.php
  * @author      Jingkang Yang (sid: 200362586) <yang242j@uregina.ca>
  * @param {boolean} $_SESSION["loggedin"]   Status of logged-in or not: true/false
@@ -68,7 +68,8 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             'MATH 102':100, 
             'MATH 103':100,
         };
-        var courseCompletedList = Object.assign({}, presetCourses);
+        var courseCompletedList = [].concat(Object.keys(presetCourses));
+        var courseCompletedObj = Object.assign({}, presetCourses);
         
         $(document).ready(function() {
             $("button.plus_button.open").hide();
@@ -414,6 +415,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                     Term: term,
                     Course_List: courseList,
                     Course_Completed: courseCompletedList,
+                    Course_Completed_Obj: courseCompletedObj,
                 };
                 console.log(myObj);
             });
