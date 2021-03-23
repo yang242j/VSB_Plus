@@ -9,7 +9,7 @@ window.onload = function () {
     
     
     showTerm(1);
-    sort_Electives();
+    /*sort_Electives();*/
     showENSE_electives();
     /*showCS_electives();*/
     showENEL_electives();
