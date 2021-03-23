@@ -70,7 +70,7 @@ if ($doneList !== "" && $major !== "" && $term_NUM !== "" && $term_EN !== "") {
             $skipCondition_5 = $skipCondition_4
                 ? true
                 : isSectionEmpty($coursePath); // Check if course section is empty
-            $skipCondition_6 = notMatchPrerequisites($reqCourse, $doneList); // Course mush match prerequistes.
+            $skipCondition_6 = notMatchPrerequisites($reqCourse, $totalCredit, $doneList); // Course mush match prerequistes.
 
             if (
                 $skipCondition_1 ||
@@ -111,7 +111,7 @@ function isSectionEmpty($path)
  * @param   {array}       $doneList     A list contains the short name of all completed courses.
  * @return  {boolean}                   True for not match with prerequisites, False for matched.
  */
-function notMatchPrerequisites($short_name, $doneList)
+function notMatchPrerequisites($short_name, $totalCredit, $doneList)
 {
     // Get course json
     $response = get_course_json($short_name);
