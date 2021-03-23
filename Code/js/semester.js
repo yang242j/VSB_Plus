@@ -312,10 +312,19 @@ async function fetchAllSectionData(short_name, term) {
     return [lec_obj, lab_obj, exam_obj];
 }
 
+function fetchRecJSON_v2(courseCompletedList, totalCredit, major, term, maxNum) {
+    return $.post('Model/courseREC_v2.php', {  // recommend v2
+        courseCompletedList: JSON.stringify(courseCompletedList),   
+        totalCredit : totalCredit,
+        major: major,
+        term: term,
+        maxNum: maxNum
+    }, function (data) {});
+}
+
 function fetchRecJSON(courseCompletedList, major, term, maxNum) {
-    return $.post('Model/courseREC.php', {
-        // courseCompletedList: JSON.stringify(courseCompletedList),
-        courseCompletedList: courseCompletedList,
+    return $.post('Model/courseREC.php', {   // recommend v1
+        courseCompletedList: courseCompletedList,    
         major: major,
         term: term,
         maxNum: maxNum
