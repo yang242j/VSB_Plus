@@ -31,7 +31,7 @@
 $doneList = isset($_REQUEST["doneList"])
     ? json_decode($_REQUEST["doneList"], true)
     : '';
-var_dump($doneList);
+print_r($doneList);
 $major = isset($_REQUEST["major"]) ? $_REQUEST["major"] : '';
 $maxNum = isset($_REQUEST["maxNum"]) ? $_REQUEST["maxNum"] : '';
 $totalCredit = isset($_REQUEST["totalCredit"]) ? $_REQUEST["totalCredit"] : '';
