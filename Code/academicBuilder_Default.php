@@ -237,20 +237,20 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 				<h3>CS:</h3>
 				<div class = "course_tag_electives cs_course_tag" id = "not_completed_tag">
 					<!-- <p id = "nct0" onclick="alert(courseInfo())">ENSE 271</p>-->
-					<p id = "cs0">ENSE 271</p>
-					<p id = "cs1">ENSE 271</p>
-					<p id = "cs2">ENSE 271</p>
-					<p id = "cs3">ENSE 271</p>
+					<p id = "cs7">ENSE 271</p>
+					<p id = "cs8">ENSE 271</p>
+					<p id = "cs9">ENSE 271</p>
+					<p id = "cs10">ENSE 271</p>
 
-					<p id = "cs4"></p>
-					<p id = "cs5"></p>
-					<p id = "cs6"></p>
-					<p id = "cs7"></p>
-					
-					<p id = "cs8"></p>
-					<p id = "cs9"></p>
-					<p id = "cs10"></p>
 					<p id = "cs11"></p>
+					<p id = "cs12"></p>
+					<p id = "cs13"></p>
+					<p id = "cs14"></p>
+					
+					<p id = "cs15"></p>
+					<p id = "cs16"></p>
+					<p id = "cs17"></p>
+					<p id = "cs18"></p>
 				</div>
 				<!--<div>
 					<button class="left_arrow" id ="notCompletedLeft" onclick = "nctLeft()"><i class='fas fa-angle-left'></i></button>
