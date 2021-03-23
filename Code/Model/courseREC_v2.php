@@ -63,7 +63,7 @@ if ($doneList !== "" && $major !== "" && $term_NUM !== "" && $term_EN !== "") {
     foreach ($reqList_json_array as $reqTerm => $reqCourses_array) {
         foreach ($reqCourses_array as $reqCourse) {
             // $skipCondition_1 = array_key_exists($reqCourse, $doneList);
-            $skipCondition_1 = in_array($reqCourse, $doneList); // Course was completed
+            $skipCondition_1 = array_key_exists($reqCourse, $doneList); // Course was completed
             $skipCondition_2 = $reqCourse == "Approved"; // Approved elective
             $skipCondition_3 = sizeof($toTakeList) >= $maxNum; // To take list is full
             $coursePath = "../JSON/$term_NUM/$reqCourse.json";
