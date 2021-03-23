@@ -9,9 +9,9 @@ window.onload = function () {
     
     
     showTerm(1);
-    /*sort_Electives();*/
+    sort_Electives();
     showENSE_electives();
-    showCS_electives();
+    /*showCS_electives();*/
     showENEL_electives();
     showAllCourse();
 }
@@ -128,20 +128,19 @@ function showTerm(pageNumber) {
     }
 }
 
-/*function sort_Electives() {
+function sort_Electives() {
     for (term in termData) {
         if (term = "Approved") {
-            for (i = 0; i <= 20; i++) {
-	        if(termData[term][i].includes('CS 205') || termData[term][i].includes('CS 315') || termData[term][i].includes('CS 330') 
-               || termData[term][i].includes('CS 375') || termData[term][i].includes('CS 405')
-              || termData[term][i].includes('CS 425')|| termData[term][i].includes('CS 427'))
+	        if(Approved.includes('CS 205') || Approved.includes('CS 315') || Approved.includes('CS 330') 
+               || Approved.includes('CS 375') || Approved.includes('CS 405')
+              || Approved.includes('CS 425')|| Approved.includes('CS 427'))
             {
                     showCS_electives();
             }
             }
         }
-    }
-}*/
+    
+}
     
 function showENSE_electives() {
     for (term in termData) {
@@ -156,8 +155,8 @@ function showENSE_electives() {
 function showCS_electives() {
     for (term in termData) {
         if (term = "Approved") {
-            for (i = 7; i <= 13; i++) {
-                /*for (i = 0; i < 12; i++) {*/
+            /*for (i = 7; i <= 13; i++) {*/
+                for (i = 0; i < 12; i++) {
                 document.getElementById("cs" + i).innerHTML = termData[term][i];
             }
         }
