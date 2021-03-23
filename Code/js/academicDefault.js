@@ -128,7 +128,7 @@ function showTerm(pageNumber) {
     }
 }
 
-function sort_Electives() {
+/*function sort_Electives() {
     for (term in termData) {
         if (term = "Approved") {
             for (i = 0; i <= 20; i++) {
@@ -141,7 +141,7 @@ function sort_Electives() {
             }
         }
     }
-}
+}*/
     
 function showENSE_electives() {
     for (term in termData) {
