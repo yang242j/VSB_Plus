@@ -6,7 +6,7 @@ var allCourse;
 window.onload = function () {
     console.log(major);
     getTermData(major);
-    getMajor(major);
+    /*getMajor(major);*/
     getElectivesData(major);
     getAllCourse();
     
