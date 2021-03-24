@@ -33,6 +33,7 @@ while ($row = mysqli_fetch_array($result)) {
         "description" => $row["description"],
         "prerequisite" => $row["prerequisite"],
         "preExpression" => $row["preExpression"],
+        "preExpression_v2" => $row["preExpression_v2"],
     ];
     array_push($data, json_encode($course));
 }
