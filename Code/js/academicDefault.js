@@ -184,7 +184,7 @@ function showCS_electives() {
         if (electives = "CS") {
             /*for (i = 7; i <= 13; i++) {*/
                 for (i = 0; i < 12; i++) {
-                document.getElementById("cs" + i).innerHTML = electivesData[term][i];
+                document.getElementById("cs" + i).innerHTML = electivesData[electives][i];
             }
         }
         }
