@@ -136,7 +136,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             <div style="width: 50%; float: right;">
                 <form onsubmit="return ajaxpost()">
                     <label><b>Step 2:</b> Search Class</label>
-                    <input type="text" id="search_courseid" placeholder="ENGL 100" onkeypress="this.style.width = ((this.value.length + 1) * 8) + 'px';" required />
+                    <input type="text" id="search_courseid" placeholder="ENGL 100" onkeyup="this.style.width = ((this.value.length + 1) * 8) + 'px';" required />
                     <input type="submit" value="Submit"/>
                 </form>
                 <p id="searchMsg"></p>
