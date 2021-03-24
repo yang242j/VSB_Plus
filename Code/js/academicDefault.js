@@ -157,14 +157,25 @@ function showTerm(pageNumber) {
     
 }*/
     
-function showENSE_electives() {
+/*function showENSE_electives() {
     for (term in termData) {
         if (term = "Approved") {
-            for (i = 0; i <= 12; i++) {
+            for (i = 0; i <= 6; i++) {
                 document.getElementById("ense" + i).innerHTML = termData[term][i];
             }
         }
     }
+}*/
+
+function showENSE_electives() {
+    for (electives in electivesData) {
+        if (electives = "ENSE") {
+            /*for (i = 7; i <= 13; i++) {*/
+                for (i = 0; i < 7; i++) {
+                	document.getElementById("cs" + i).innerHTML = electivesData[electives][i];
+            	}
+           }            
+     }
 }
 
 /*function showCS_electives() {
