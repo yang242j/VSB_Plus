@@ -271,7 +271,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             <div class="bottom_left" id="course_completed">
                 <!-- Close Button -->
                 <button class="plus_button close" onclick="hideParent(this);"></button>
-                Courses Completed: <br>
+                Courses Completed: <b>(Not Draggable)</b><br>
                 <script>
                     $(document).ready( function() {
                         <?php
@@ -304,7 +304,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             <div class="bottom_right" id="course_recommended">
                 <!-- Close Button -->
                 <button class="plus_button close" onclick="hideParent(this);"></button>
-                Courses Recommended: <br>
+                Courses Recommended: <b>(Drag to Register)</b><br>
                 <script>
 
                     function loadRecCourseTags() {
