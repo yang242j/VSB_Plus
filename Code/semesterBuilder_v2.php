@@ -134,9 +134,11 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             </div>
 
             <div style="width: 50%; float: right;">
-                <form onsubmit="return ajaxpost()">
+                <form autocomplete="off" onsubmit="return ajaxpost()">
                     <label><b>Step 2:</b> Search Class</label>
-                    <input type="text" id="search_courseid" placeholder="ENGL 100"  style="width:70px; min-width: 70px;" onkeydown="this.style.width = ((this.value.length + 1) * 8) + 'px';" required />
+                    <div class="autocomplete">
+                        <input type="text" id="search_courseid" placeholder="ENGL 100"  style="width:70px; min-width: 70px;" onkeydown="this.style.width = ((this.value.length + 1) * 8) + 'px';" required />
+                    </div>
                     <input type="submit" value="Submit"/>
                 </form>
                 <p id="searchMsg"></p>
