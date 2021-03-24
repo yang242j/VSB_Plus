@@ -282,6 +282,30 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 				</div>-->
 			</div>
 			
+			<div class = "electives_course enin_course">
+				<h3>ENIN:</h3>
+				<div class = "course_tag_electives enin_course_tag" id = "electives_tag">
+					<p id = "enin0">ENSE 271</p>
+					<p id = "enin1">ENSE 271</p>
+					<p id = "enin2"></p>
+					<p id = "enin3"></p>
+
+					<p id = "enin4"></p>
+					<p id = "enin5"></p>
+					<p id = "enin6"></p>
+					<p id = "enin7"></p>
+					
+					<p id = "enin8"></p>
+					<p id = "enin9"></p>
+					<p id = "enin10"></p>
+					<p id = "enin11"></p>
+				</div>
+				<!--<div>
+					<button class="left_arrow" id ="notCompletedLeft" onclick = "enctLeft()"><i class='fas fa-angle-left'></i></button>
+					<button class="right_arrow" id ="notCompletedRight" onclick = "enctRight()"><i class='fas fa-angle-right'></i></button>
+				</div>-->
+			</div>
+			
 			<div class = "electives_course enel_course">
 				<h3>All Other Course Electives:</h3>
 				<div class = "course_tag_electives enel_course_tag" id = "all_course_tag">
