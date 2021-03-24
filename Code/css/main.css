@@ -55,6 +55,11 @@ nav .nav-active {
     color: white;
 }
 
+nav .nav-right .nav-active {
+    background-color: #4caf50;
+    color: white;
+}
+
 .menu-icon {
     float: left;
     display: block;
