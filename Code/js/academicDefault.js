@@ -6,6 +6,7 @@ var allCourse;
 window.onload = function () {
     console.log(major);
     getTermData(major);
+    getMajor(major);
     getElectivesData(major);
     getAllCourse();
     
@@ -20,21 +21,7 @@ window.onload = function () {
     /*sort_Electives();*/
 }
 
-window.onload = function () {
-	showENSE_electives();
-}
 
-window.onload = function () {
-	showCS_electives();
-}
-
-window.onload = function () {
-	showENEL_electives();
-}
-
-window.onload = function () {
-	showENIN_electives();
-}
 
 
 // function getStuInfo(major) {
@@ -173,7 +160,19 @@ function showTerm(pageNumber) {
         }
     
 }*/
-    
+
+function getMajor(major)
+{
+	if(major = "SSE"){
+		showENSE_electives();
+    		showCS_electives();
+    		showENEL_electives();
+	} else if(major = "ISE"){
+		showENEL_electives();
+    		showENIN_electives();
+    	}
+}
+
 /*function showENSE_electives() {
     for (term in termData) {
         if (term = "Approved") {
