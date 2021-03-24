@@ -212,13 +212,13 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 				<h3>ENSE:</h3>
 
 				<div class = "course_tag_electives ense_course_tag" id = "approvedCourse">
-					<p id = "ense0">ENSE 271</p>
-					<p id = "ense1">ENSE 271</p>
-					<p id = "ense2">ENSE 271</p>
-					<p id = "ense3">ENSE 271</p>
+					<p id = "ense0"></p>
+					<p id = "ense1"></p>
+					<p id = "ense2"></p>
+					<p id = "ense3"></p>
 
-					<p id = "ense4">ENSE 271</p>
-					<p id = "ense5">ENSE 271</p>
+					<p id = "ense4"></p>
+					<p id = "ense5"></p>
 					<p id = "ense6"></p>
 					<p id = "ense7"></p>
 					
@@ -237,10 +237,10 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 				<h3>CS:</h3>
 				<div class = "course_tag_electives cs_course_tag" id = "not_completed_tag">
 					<!-- <p id = "nct0" onclick="alert(courseInfo())">ENSE 271</p>-->
-					<p id = "cs0">ENSE 271</p>
-					<p id = "cs1">ENSE 271</p>
-					<p id = "cs2">ENSE 271</p>
-					<p id = "cs3">ENSE 271</p>
+					<p id = "cs0"></p>
+					<p id = "cs1"></p>
+					<p id = "cs2"></p>
+					<p id = "cs3"></p>
 
 					<p id = "cs4"></p>
 					<p id = "cs5"></p>
@@ -261,8 +261,8 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 			<div class = "electives_course enel_course">
 				<h3>ENEL:</h3>
 				<div class = "course_tag_electives enel_course_tag" id = "electives_tag">
-					<p id = "enel0">ENSE 271</p>
-					<p id = "enel1">ENSE 271</p>
+					<p id = "enel0"></p>
+					<p id = "enel1"></p>
 					<p id = "enel2"></p>
 					<p id = "enel3"></p>
 
@@ -285,8 +285,8 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 			<div class = "electives_course enin_course">
 				<h3>ENIN:</h3>
 				<div class = "course_tag_electives enin_course_tag" id = "electives_tag">
-					<p id = "enin0">ENSE 271</p>
-					<p id = "enin1">ENSE 271</p>
+					<p id = "enin0"></p>
+					<p id = "enin1"></p>
 					<p id = "enin2"></p>
 					<p id = "enin3"></p>
 
