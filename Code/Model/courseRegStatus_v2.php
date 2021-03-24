@@ -121,7 +121,7 @@ if ($validFormat) {
     }
 } else {
     // Input invalid
-    $status["Notes"] .= "Input Format Iinvalid";
+    $status["Notes"] .= "Input Format Invalid";
     
 }
 
