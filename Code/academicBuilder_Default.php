@@ -261,20 +261,20 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 			<div class = "electives_course enel_course">
 				<h3>ENEL:</h3>
 				<div class = "course_tag_electives enel_course_tag" id = "electives_tag">
-					<p id = "enel14">ENSE 271</p>
-					<p id = "enel15">ENSE 271</p>
-					<p id = "enel16"></p>
-					<p id = "enel17"></p>
+					<p id = "enel0">ENSE 271</p>
+					<p id = "enel1">ENSE 271</p>
+					<p id = "enel2"></p>
+					<p id = "enel3"></p>
 
-					<p id = "enel18"></p>
-					<p id = "enel19"></p>
-					<p id = "enel20"></p>
-					<p id = "enel21"></p>
+					<p id = "enel4"></p>
+					<p id = "enel5"></p>
+					<p id = "enel6"></p>
+					<p id = "enel7"></p>
 					
-					<p id = "enel22"></p>
-					<p id = "enel23"></p>
-					<p id = "enel24"></p>
-					<p id = "enel25"></p>
+					<p id = "enel8"></p>
+					<p id = "enel9"></p>
+					<p id = "enel10"></p>
+					<p id = "enel11"></p>
 				</div>
 				<!--<div>
 					<button class="left_arrow" id ="notCompletedLeft" onclick = "enctLeft()"><i class='fas fa-angle-left'></i></button>
