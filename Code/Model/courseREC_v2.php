@@ -192,6 +192,7 @@ function exp_matched($expStr, $totalCredit, $doneList)
         }
         return false;
     } else {
+        echo $expStr;
         echo "something error";
     }
 }
