@@ -69,7 +69,7 @@ session_start();
 
   <nav>
     <div class="nav-right">
-      <a id="usertext" onclick="toogleDisplay('addon-menu')"><?php echo htmlspecialchars(
+      <a class="nav-active" id="usertext" onclick="toogleDisplay('addon-menu')"><?php echo htmlspecialchars(
           $_SESSION["name"]
       ); ?></a>
       <div class="hidden" id="addon-menu">
@@ -78,7 +78,7 @@ session_start();
       </div>
     </div>
     <div class="nav-right-2">
-      <a href="login.php">LogIn</a>
+      <a class="nav-active" href="login.php">LogIn</a>
       <a href="signup.php">SignUp</a>
     </div>
     <div class="menu-icon" onclick="menuFunc1(this); menuFunc2('menu-list');">
