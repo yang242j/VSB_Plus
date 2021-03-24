@@ -13,7 +13,7 @@ window.onload = function () {
     
     showTerm(1);
     showAllCourse();
-    /*showENSE_electives();
+    showENSE_electives();
     showCS_electives();
     showENEL_electives();
     showENIN_electives();
@@ -161,7 +161,7 @@ function showTerm(pageNumber) {
     
 }*/
 
-function getMajor(major)
+/*function getMajor(major)
 {
 	if(major = "SSE"){
 		showENSE_electives();
@@ -171,7 +171,7 @@ function getMajor(major)
 		showENEL_electives();
     		showENIN_electives();
     	}
-}
+}*/
 
 /*function showENSE_electives() {
     for (term in termData) {
