@@ -145,7 +145,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body>
 
     <header>
-        <a href="https://www.uregina.ca"><img src="img/logo.png" class="logo" alt="UofR"></a>
+        <a href="http://15.223.123.122/vsbp/Code/academicBuilder_Main.php"><img src="img/logo.png" class="logo" alt="UofR"></a>
         <h1>Visual Schedule Builder Plus</h1>
     </header>
 
