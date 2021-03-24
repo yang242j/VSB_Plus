@@ -95,7 +95,7 @@ session_start();
               <a class="academicList" href="academicBuilder_Builder.php">Customized Schedule</a>
           </div>
       </div>
-      <a class="session-required" href="semesterBuilder.php">Semester Schedule Builder</a>
+      <a class="session-required" href="semesterBuilder_v2.php">Semester Schedule Builder</a>
       <a class="" href="courseDB.php">Course List Database</a>
     </div>
   </nav>
