@@ -15,6 +15,7 @@ window.onload = function () {
     showENSE_electives();
     showCS_electives();
     showENEL_electives();
+    showENIN_electives();
     showAllCourse();
     /*sort_Electives();*/
 }
@@ -219,6 +220,17 @@ function showENEL_electives() {
             /*for (i = 7; i <= 13; i++) {*/
                 for (i = 0; i < 2; i++) {
                 	document.getElementById("enel" + i).innerHTML = electivesData[electives][i];
+            	}
+           }            
+     }
+}
+
+function showENIN_electives() {
+    for (electives in electivesData) {
+        if (electives = "ENIN") {
+            /*for (i = 7; i <= 13; i++) {*/
+                for (i = 0; i < 7; i++) {
+                	document.getElementById("enin" + i).innerHTML = electivesData[electives][i];
             	}
            }            
      }
