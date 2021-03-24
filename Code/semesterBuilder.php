@@ -78,9 +78,8 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 
     <nav>
         <div class="nav-right">
-            <a id="usertext" onclick="toogleDisplay('addon-menu')">
+            <a class="nav-active" id="usertext" onclick="toogleDisplay('addon-menu')">
                 <?php echo htmlspecialchars($_SESSION["name"]); ?>
-                &#9661;
             </a>
             <div class="hidden" id="addon-menu">
                 <a><?php echo htmlspecialchars($_SESSION["sid"]); ?></a>
