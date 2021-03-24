@@ -172,7 +172,7 @@ function showENSE_electives() {
         if (electives = "ENSE") {
             /*for (i = 7; i <= 13; i++) {*/
                 for (i = 0; i < 7; i++) {
-                	document.getElementById("cs" + i).innerHTML = electivesData[electives][i];
+                	document.getElementById("ense" + i).innerHTML = electivesData[electives][i];
             	}
            }            
      }
