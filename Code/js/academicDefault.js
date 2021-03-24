@@ -160,7 +160,7 @@ function showTerm(pageNumber) {
 function showENSE_electives() {
     for (term in termData) {
         if (term = "Approved") {
-            for (i = 0; i <= 6; i++) {
+            for (i = 0; i <= 12; i++) {
                 document.getElementById("ense" + i).innerHTML = termData[term][i];
             }
         }
@@ -183,7 +183,7 @@ function showCS_electives() {
     for (electives in electivesData) {
         if (electives = "CS") {
             /*for (i = 7; i <= 13; i++) {*/
-                for (i = 0; i < 6; i++) {
+                for (i = 0; i < 7; i++) {
                 	document.getElementById("cs" + i).innerHTML = electivesData[electives][i];
             	}
            }            
