@@ -11,12 +11,12 @@ window.onload = function () {
     
     
     showTerm(1);
-    
+    showAllCourse();
     showENSE_electives();
     showCS_electives();
     showENEL_electives();
     showENIN_electives();
-    showAllCourse();
+    
     /*sort_Electives();*/
 }
 
