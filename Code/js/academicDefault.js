@@ -1,10 +1,12 @@
 var courseData;
 var termData;
+var electivesData;
 var allCourse;
 
 window.onload = function () {
     console.log(major);
     getTermData(major);
+    getElectivesData(major);
     getAllCourse();
     
     
@@ -64,6 +66,18 @@ function getTermData(major) {
     myRequest.onload = function () {
         var data = JSON.parse(myRequest.responseText);
         termData = data;
+    }
+    myRequest.send();
+}
+
+function getElectivesData(major) {
+    var myRequest = new XMLHttpRequest;
+    var majorName = major;
+    var url = "JSON/reqCourse/" + majorName + "_ele.json";
+    myRequest.open("GET", url, false);
+    myRequest.onload = function () {
+        var data = JSON.parse(myRequest.responseText);
+        electivesData = data;
     }
     myRequest.send();
 }
@@ -153,12 +167,24 @@ function showENSE_electives() {
     }
 }
 
-function showCS_electives() {
+/*function showCS_electives() {
     for (term in termData) {
         if (term = "Approved") {
             for (i = 7; i <= 13; i++) {
-                /*for (i = 0; i < 12; i++) {*/
+                /*for (i = 0; i < 12; i++) {
                 document.getElementById("cs" + i).innerHTML = termData[term][i];
+            }
+        }
+        }
+    
+}*/
+
+function showCS_electives() {
+    for (electives in electivesData) {
+        if (electives = "CS") {
+            /*for (i = 7; i <= 13; i++) {*/
+                for (i = 0; i < 12; i++) {
+                document.getElementById("cs" + i).innerHTML = electivesData[term][i];
             }
         }
         }
