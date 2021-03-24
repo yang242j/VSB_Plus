@@ -120,7 +120,7 @@ function notMatchPrerequisites($short_name, $totalCredit, $doneList)
     $resArr = json_decode($response, true);
 
     // Get the prerequisites expression string
-    $expStr = $resArr['preExpression'];
+    $expStr = $resArr['preExpression_v2'];
 
     return exp_matched($expStr, $totalCredit, $doneList) ? false : true;
 }
