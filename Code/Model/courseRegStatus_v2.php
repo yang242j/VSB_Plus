@@ -195,7 +195,7 @@ function exp_matched($expStr, $totalCredit, $doneList)
             $splitedStr = preg_split("/(\s\[)/i", $expStr);
             if (array_key_exists($splitedStr[0], $doneList)) {
                 $gradeExp = rtrim($splitedStr[1], ']');
-                return eval('return ' . $totalCredit . $creditExp . ';') ? true : false;
+                return eval('return ' . $doneList[$splitedStr[0]] . $gradeExp . ';') ? true : false;
             } else { return false; }
         }
         return array_key_exists($expStr, $doneList) ? true : false;

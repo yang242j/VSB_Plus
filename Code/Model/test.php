@@ -46,7 +46,7 @@ function exp_matched($expStr, $totalCredit, $doneList) {
                 $gradeExp = rtrim($splitedStr[1], ']');
                 echo "gradeExp: $gradeExp <br>";
                 echo "courseGrade: ".$doneList[$splitedStr[0]]."<br>";
-                return eval('return ' . $totalCredit . $creditExp . ';') ? true : false;
+                return eval('return ' . $doneList[$splitedStr[0]] . $gradeExp . ';') ? true : false;
             }
         }
         echo "No condition <br>";
