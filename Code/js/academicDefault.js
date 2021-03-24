@@ -184,16 +184,10 @@ function showCS_electives() {
         if (electives = "CS") {
             /*for (i = 7; i <= 13; i++) {*/
                 for (i = 0; i < 12; i++) {
-		if (electivesData[i] == null){
-			return;
-		}
-            	else{ 
                 	document.getElementById("cs" + i).innerHTML = electivesData[electives][i];
             	}
-        }
-        }
-    
-}
+           }            
+     }
 }
 
 function showENEL_electives() {
