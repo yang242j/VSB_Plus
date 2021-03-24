@@ -12,12 +12,28 @@ window.onload = function () {
     
     showTerm(1);
     showAllCourse();
-    showENSE_electives();
+    /*showENSE_electives();
     showCS_electives();
     showENEL_electives();
     showENIN_electives();
     
     /*sort_Electives();*/
+}
+
+window.onload = function () {
+	showENSE_electives();
+}
+
+window.onload = function () {
+	showCS_electives();
+}
+
+window.onload = function () {
+	showENEL_electives();
+}
+
+window.onload = function () {
+	showENIN_electives();
 }
 
 
