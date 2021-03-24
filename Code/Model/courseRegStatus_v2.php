@@ -163,7 +163,7 @@ function get_PregExp_PreString($courseid)
     $resArr = json_decode($response, true);
 
     $preStr = $resArr['prerequisite'];
-    $expStr = $resArr['preExpression'];
+    $expStr = $resArr['preExpression_v2'];
     return [$preStr, $expStr];
 }
 
