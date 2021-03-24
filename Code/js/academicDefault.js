@@ -217,7 +217,7 @@ function showENEL_electives() {
     for (electives in electivesData) {
         if (electives = "ENEL") {
             /*for (i = 7; i <= 13; i++) {*/
-                for (i = 0; i < 7; i++) {
+                for (i = 0; i < 2; i++) {
                 	document.getElementById("enel" + i).innerHTML = electivesData[electives][i];
             	}
            }            
