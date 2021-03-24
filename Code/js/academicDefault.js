@@ -183,7 +183,7 @@ function showCS_electives() {
     for (electives in electivesData) {
         if (electives = "CS") {
             /*for (i = 7; i <= 13; i++) {*/
-                for (i = 0; i < 12; i++) {
+                for (i = 0; i < 6; i++) {
                 	document.getElementById("cs" + i).innerHTML = electivesData[electives][i];
             	}
            }            
