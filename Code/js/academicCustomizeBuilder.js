@@ -713,22 +713,21 @@ function ajaxpost(courseid, term, done) {
             // Generate course tag
             //courseid = rsp.CourseID;
             preq = rsp.Prerequisites;
-            return true;
+            //return true;
 
         } else {
             // Do nothing and alert the returned Notes
-            //console.log(rsp.Notes);
+            //console.log(rsp.Notes);s
             alert(rsp.CourseID + " :" + rsp.PrereqNotes);
             preq = rsp.Prerequisites;
-            return false;
+            //return false;
         }
     };
-
+    console.log(preq);
 
     // (C) PREVENT HTML FORM SUBMIT
     xhr.send(data);
     //return false;
-    return preq;
 }
 
 function clickGetInfo() {
