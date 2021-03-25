@@ -481,7 +481,7 @@ function dragTest() {
 
             //console.log(dropZone.id);
             //console.log(dropZone.getAttribute("name"));
-
+            var preq;
             var newForAlern = "n" + droppedElementId; //course info stored div id
             var newForAlern2 = "nn" + droppedElementId; //course name stored div id
             //var content = document.getElementById(newForAlern).innerHTML;
@@ -506,9 +506,8 @@ function dragTest() {
                     container.push(doneList[i][j]);
                 }
             }
-            
-            var preq = ajaxpost(courseName, "202020", container);
-            console.log(ajaxpost(courseName, "202020", container));
+
+            ajaxpost(courseName, "202020", container);
 
             //console.log(terminfo[0]);
             if (terminfo[0].length > 0) {
@@ -604,7 +603,7 @@ function dragTest() {
                 document.getElementById(newForAlern2).style.color = "black";
                 console.log(preq);
             }
-            else if (preq == false){
+            else if (preq == false) {
                 document.getElementById(newForAlern2).style.color = "red";
                 console.log(preq);
             }
@@ -723,13 +722,10 @@ function ajaxpost(courseid, term, done) {
             //return false;
         }
     };
-    console.log(preq);
-
     // (C) PREVENT HTML FORM SUBMIT
     xhr.send(data);
     //return false;
 }
-
 function clickGetInfo() {
     for (clickZone of document.querySelectorAll(".clickable")) {
         //console.log(clickZone.id);
