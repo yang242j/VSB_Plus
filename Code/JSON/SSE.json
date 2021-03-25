@@ -398,5 +398,13 @@
         "credit": "3",
         "description": "Introduction and application of environmental design in engineering practice, including public health and safety, environmental ethics, resource and energy systems, impacts of technology on society, sustainable development and environmental stewardship.",
         "prerequisite": "ENGG 123"
-      }
+      },
+      {
+    "short_name": "MATH 217",
+    "title": "Differential Equations I",
+    "faculty": "MATH",
+    "credit": "3",
+    "description": "Ordinary differential equations, modelling with differential equations, Laplace transforms.",
+    "prerequisite": "MATH 111 and MATH 122"
+  }
 ]
