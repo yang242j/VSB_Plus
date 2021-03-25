@@ -599,14 +599,7 @@ function dragTest() {
                 doneList[index].push(courseName);
                 //console.log(doneList);
             }
-            if (preq == true) {
-                document.getElementById(newForAlern2).style.color = "black";
-                console.log(preq);
-            }
-            else if (preq == false) {
-                document.getElementById(newForAlern2).style.color = "red";
-                console.log(preq);
-            }
+            preqSignifier(preq,newForAlern2);
 
             dropZone.appendChild(droppedElement);
 
@@ -659,6 +652,16 @@ function dragTest() {
 
     }
 }
+function preqSignifier(preq,id){
+    if (preq == true) {
+        document.getElementById(id).style.color = "black";
+        console.log(preq);
+    }
+    else if (preq == false) {
+        document.getElementById(id).style.color = "red";
+        console.log(preq);
+    }
+}
 //find a item and delete it 
 function deleteFromArray(array, item) {
     for (i = 0; i < array.length; i++) {
@@ -705,7 +708,7 @@ function ajaxpost(courseid, term, done) {
     var xhr = new XMLHttpRequest();
     xhr.open("POST", "http://15.223.123.122/vsbp/Code/Model/courseRegStatus.php");
     // When server responds
-    //xhr.onload = function () {
+    xhr.onload = function () {
         let rsp = JSON.parse(this.response);
         if (rsp.Prerequisites == true) {
             // Generate course tag
@@ -720,7 +723,7 @@ function ajaxpost(courseid, term, done) {
             preq = rsp.Prerequisites;
             return false;
         }
-    //};
+    };
     // (C) PREVENT HTML FORM SUBMIT
     xhr.send(data);
     return false;
