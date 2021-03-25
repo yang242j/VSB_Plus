@@ -249,8 +249,8 @@ body .container .bottom_right .courseTag {
 .autocomplete input {
     border: 1px solid transparent;
     background-color: #f1f1f1;
-    padding: 10px;
-    font-size: 16px;
+    /* padding: 10px;
+    font-size: 16px; */
 }
 
 .autocomplete input[type=text] {
