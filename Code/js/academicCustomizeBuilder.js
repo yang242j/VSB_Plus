@@ -147,11 +147,11 @@ function showCourses(data) {
         }
     }*/
     for (i = 0; i < dataJSON.length; i++) {
-            //<br/>
-            document.getElementById("courseCompletedTag").innerHTML +=
-            "<p id ='ct"+i+"'>"+ dataJSON[i].course_ID+ "<br/> "+ dataJSON[i].term +"</p>";
-            document.getElementById("ct" + i).style.color = getColor(i, dataJSON);
-            
+        //<br/>
+        document.getElementById("courseCompletedTag").innerHTML +=
+            "<p id ='ct" + i + "'>" + dataJSON[i].course_ID + "<br/> " + dataJSON[i].term + "</p>";
+        document.getElementById("ct" + i).style.color = getColor(i, dataJSON);
+
     }
 
 
@@ -216,14 +216,14 @@ function btnForCourse(data) {
         for (element of block) {
             element.scrollLeft += 150;
         }
-       
+
     }
     ctLeft.onclick = function () {
         var block = document.getElementsByClassName("course_tag_completed");
         for (element of block) {
             element.scrollLeft -= 150;
         }
-       
+
     }
 
     nctRight.onclick = function () {
@@ -427,6 +427,8 @@ function getAllCourse() {
 }
 //record which field is this dragelement from
 var draagFrom;
+// record the output for ajaxpost function
+var preq;
 
 function dragStart(elementId) {
     const draggableElement = document.querySelector(elementId);
@@ -498,7 +500,7 @@ function dragTest() {
             if (dragFrom == "course_cards") {
                 //delete first then push
                 deleteFrom2DArray(doneList, courseName);
-            }         
+            }
             for (i = 0; i <= dropZone.getAttribute("name"); i++) {
                 for (j = 0; j < doneList[i].length; j++) {
                     //console.log(doneList[i][j]);
@@ -506,6 +508,13 @@ function dragTest() {
                 }
             }
             ajaxpost(courseName, "202020", container);
+
+            if (preq == true) {
+                document.getElementById(newForAlern2).style.color = "red";
+            }
+            else {
+                document.getElementById(newForAlern2).style.color = "black";
+            }
 
             //console.log(terminfo[0]);
             if (terminfo[0].length > 0) {
@@ -583,7 +592,7 @@ function dragTest() {
 
             if (check == true && dragFrom != "course_cards" && findExist(doneList[index], courseName) == false) {
                 index = dropZone.getAttribute("name");
-                doneList[index].push(courseName);     
+                doneList[index].push(courseName);
                 console.log(doneList);
 
             }
@@ -591,13 +600,13 @@ function dragTest() {
                 //delete first then push
                 deleteFrom2DArray(doneList, courseName);
                 console.log(doneList);
-                
+
                 index = dropZone.getAttribute("name");
                 //console.log(index);
                 doneList[index].push(courseName);
                 //console.log(doneList);
-            }   
-                   
+            }
+
             dropZone.appendChild(droppedElement);
 
 
@@ -683,7 +692,6 @@ function termTransfer(term) {
     if (term == "Spring/Summer") return 202020;
     if (term == "Fall") return 202030;
 }
-
 function ajaxpost(courseid, term, done) {
     // (A) GET FORM DATA
     var data = new FormData();
@@ -706,6 +714,7 @@ function ajaxpost(courseid, term, done) {
             // Do nothing and alert the returned Notes
             //console.log(rsp.Notes);
             alert(rsp.CourseID + " :" + rsp.PrereqNotes);
+            preq = rsp.Prerequisites;
             return false;
         }
     };
