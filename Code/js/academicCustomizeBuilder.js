@@ -508,7 +508,7 @@ function dragTest() {
             }
             
             var preq = ajaxpost(courseName, "202020", container);
-            console.log(preq);
+            console.log(ajaxpost(courseName, "202020", container));
 
             //console.log(terminfo[0]);
             if (terminfo[0].length > 0) {
