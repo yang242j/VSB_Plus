@@ -51,6 +51,22 @@ function fetchCourseJSON(short_name) {
     });
 }
 
+/*function showCourseInfo(data) {
+	var dataCourse = JSON.parse(data);
+
+	if(short_name ==)
+	{
+	return ("<p>" + "Faculty: " + dataCourse.faculty + "</p>" + 
+	"<p>" + "Name: " + dataCourse.short_name + "</p>" + 
+	"<p>" + "Title: " + dataCourse.title + "</p>" +
+	"<p>" + "Credit: " + dataCourse.credit + "</p>" +
+	"<p>" + "Description: " + dataCourse.description + "</p>" +
+	"<p>" + "Prerequisite: " + dataCourse.prerequisite + "</p>");
+	}
+
+	return ("Course Info not found");
+}*/
+
 function getAllCourse() {
     var myRequest = new XMLHttpRequest;
     myRequest.open("GET", "JSON/ALL.json", false);
