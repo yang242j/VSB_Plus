@@ -27,7 +27,7 @@ function autocomplete(inputText, array2Check) {
         for (i = 0; i < array2Check.length; i++) {
 
             /*check if the shortName of the course object starts with the same letters as the text field value:*/
-            if (array2Check[i].short_name.substr(0, val.length).toUpperCase() == val.toUpperCase()) {
+            if (array2Check[i].short_name.toUpperCase().includes(val.toUpperCase())) {
                 
                 /*create a DIV element for each matching element:*/
                 b = document.createElement("DIV");
