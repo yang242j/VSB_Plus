@@ -37,7 +37,7 @@ function autocomplete(inputText, array2Check) {
                 
                 /*make the matching letters bold:*/
                 b.innerHTML = array2Check[i].short_name.substr(0, valIndex);
-                b.innerHTML += "<strong>" + array2Check[i].short_name.substr(valIndex, val.length) + "</strong>";
+                b.innerHTML += "<strong><u>" + array2Check[i].short_name.substr(valIndex, val.length) + "</u></strong>";
                 b.innerHTML += array2Check[i].short_name.substr(valIndex+val.length);
                 
                 /*insert a input field that will hold the current array item's value:*/
@@ -64,7 +64,7 @@ function autocomplete(inputText, array2Check) {
                 
                 /*make the matching letters bold:*/
                 b.innerHTML = array2Check[i].title.substr(0, valIndex);
-                b.innerHTML += "<strong>" + array2Check[i].title.substr(valIndex, val.length) + "</strong>";
+                b.innerHTML += "<strong><u>" + array2Check[i].title.substr(valIndex, val.length) + "</u></strong>";
                 b.innerHTML += array2Check[i].title.substr(valIndex+val.length);
                 
                 /*insert a input field that will hold the current array item's value:*/
