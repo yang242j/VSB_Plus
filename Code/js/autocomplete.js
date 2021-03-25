@@ -55,6 +55,9 @@ function autocomplete(inputText, array2Check) {
 
             /*check if the title of the course object starts with the same letters as the text field value:*/
             if (array2Check[i].title.toUpperCase().includes(val.toUpperCase())) {
+
+                /*Define val.index */
+                valIndex = array2Check[i].title.toUpperCase().indexOf(val.toUpperCase());
                 
                 /*create a DIV element for each matching element:*/
                 b = document.createElement("DIV");
