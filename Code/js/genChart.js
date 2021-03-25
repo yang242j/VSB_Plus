@@ -157,10 +157,10 @@ function genChart1(data, divId) {
 
         // These labels appear in the legend and in the tooltips when hovering different arcs
         labels: [
-            'Good Grade',
-            'Generate',
-            'Poor',
-            'NP',
+            'Good Grade (>= 80)',
+            'Generate (>=65)',
+            'Poor (>=50)',
+            'NP (NotPass)',
             // 'Untaken',
         ]
     };
