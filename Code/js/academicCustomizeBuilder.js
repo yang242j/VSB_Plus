@@ -107,7 +107,7 @@ function findCourseToTake(data) {
             }
         }
     }
-
+console.log(courseReqData);
     // minus taken class from all course list
     var courseNotCompleted = courseToTake.filter(function (n) {
         return courseCompleted.indexOf(n) === -1;
