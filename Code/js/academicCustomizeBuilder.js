@@ -511,11 +511,11 @@ function dragTest() {
             ajaxpost(courseName, "202020", container);
 
             if (preq == true) {
-                document.getElementById(newForAlern2).style.color = "red";
+                document.getElementById(newForAlern2).style.color = "black";
                 console.log(preq);
             }
             else {
-                document.getElementById(newForAlern2).style.color = "black";
+                document.getElementById(newForAlern2).style.color = "red";
                 console.log(preq);
             }
 
@@ -639,6 +639,7 @@ function dragTest() {
             //var newForAlern2 = "nn" + droppedElementId;
             document.getElementById(newForAlern).innerHTML = " ";
             document.getElementById(newForAlern).style.visibility = "hidden";
+            document.getElementById(newForAlern2).style.color = "black";
             // update html
             var terminfo = getTermInfo(courseName);
             if (terminfo[1] != null) {
