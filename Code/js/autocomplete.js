@@ -36,11 +36,9 @@ function autocomplete(inputText, array2Check) {
         /*for each object in the array...*/
         for (i = 0; i < array2Check.length; i++) {
 
-            /*loop through the object*/
-            for (const [key, value] of Object.entries(array2Check[i])) {
-                console.log(key);
-                console.log(value);
-            }
+            console.log(array2Check[i].short_name);
+            console.log(array2Check[i].title);
+            console.log(array2Check[i].faculty);
 
         }
     });
