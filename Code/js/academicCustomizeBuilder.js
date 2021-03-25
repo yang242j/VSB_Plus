@@ -514,7 +514,7 @@ function dragTest() {
                 document.getElementById(newForAlern2).style.color = "black";
                 console.log(preq);
             }
-            else {
+            else if (preq == false){
                 document.getElementById(newForAlern2).style.color = "red";
                 console.log(preq);
             }
