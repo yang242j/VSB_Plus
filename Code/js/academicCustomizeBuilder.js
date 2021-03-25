@@ -177,7 +177,6 @@ function showCourses(data) {
         dragStart("#nct" + i);
     }
     dragTest();
-    document.querySelectorAll(".course_cards").drop = preqSignifier(preq,preqId);
     
 
     /* for (const clickbleZone in document.querySelectorAll(".courseTags")) {
@@ -728,6 +727,7 @@ function ajaxpost(courseid, term, done) {
     };
     // (C) PREVENT HTML FORM SUBMIT
     xhr.send(data);
+    console.log("aasd");
     return false;
 }
 function clickGetInfo() {
