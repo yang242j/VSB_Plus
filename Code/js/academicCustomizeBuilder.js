@@ -705,7 +705,7 @@ function ajaxpost(courseid, term, done) {
     var xhr = new XMLHttpRequest();
     xhr.open("POST", "http://15.223.123.122/vsbp/Code/Model/courseRegStatus.php");
     // When server responds
-    xhr.onload = function () {
+    //xhr.onload = function () {
         let rsp = JSON.parse(this.response);
         if (rsp.Prerequisites == true) {
             // Generate course tag
@@ -720,7 +720,7 @@ function ajaxpost(courseid, term, done) {
             preq = rsp.Prerequisites;
             return false;
         }
-    };
+    //};
     // (C) PREVENT HTML FORM SUBMIT
     xhr.send(data);
     return false;
