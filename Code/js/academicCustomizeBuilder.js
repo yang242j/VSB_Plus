@@ -442,8 +442,6 @@ var index = 0;
 var outputDonelist = [];
 var decidePreTrueOrFalse = false;
 var clickId;
-// record the output for ajaxpost function
-var preq ;
 //recored prev drop item course name
 function dragTest() {
     //const draggableElement = document.querySelector("#nct0");
@@ -508,7 +506,7 @@ function dragTest() {
                     container.push(doneList[i][j]);
                 }
             }
-            ajaxpost(courseName, "202020", container);
+            preq = ajaxpost(courseName, "202020", container);
 
             //console.log(terminfo[0]);
             if (terminfo[0].length > 0) {
@@ -698,6 +696,7 @@ function termTransfer(term) {
 function ajaxpost(courseid, term, done) {
     // (A) GET FORM DATA
     var data = new FormData();
+    var preq;
     data.append("courseid", courseid);
     data.append("term", term);
     data.append("doneList", JSON.stringify(done));
@@ -727,6 +726,7 @@ function ajaxpost(courseid, term, done) {
     // (C) PREVENT HTML FORM SUBMIT
     xhr.send(data);
     //return false;
+    return preq;
 }
 
 function clickGetInfo() {
