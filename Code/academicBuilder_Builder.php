@@ -110,10 +110,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 		<div class="welcome_tag" id = "welcome">
 			<h1 id = "show_credits">Credits:</h1>
 			<h2>Customize Schedule Builder (Not recommended use in touchscreen)</h2>
-			<pre>tips: 1.
-			           2.
-					   3.
-					   4.
+			<pre>tips: 1.       2.       3.         4.
 			</pre>
 		</div>
 
