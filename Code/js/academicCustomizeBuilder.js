@@ -583,7 +583,7 @@ function dragTest() {
                 doneList[index].push(courseName);
                 console.log(doneList);
             }
-            if(dragFrom == "course_cards")
+            if(dragFrom != "course_cards")
             {
                 ajaxpost(courseName, "202020", container);
             }
