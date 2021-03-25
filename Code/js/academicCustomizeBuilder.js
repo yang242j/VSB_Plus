@@ -570,8 +570,7 @@ function dragTest() {
 
             if (check == true && dragFrom != "course_cards" && findExist(doneList[index], courseName) == false) {
                 index = dropZone.getAttribute("name");
-                doneList[index].push(courseName);
-                
+                doneList[index].push(courseName);      
                 console.log(doneList);
 
             }
@@ -583,10 +582,9 @@ function dragTest() {
                 doneList[index].push(courseName);
                 console.log(doneList);
             }
-            if(dragFrom != "course_cards")
-            {
-                ajaxpost(courseName, "202020", container);
-            }
+          
+                //ajaxpost(courseName, "202020", container);
+            
             
 
             dropZone.appendChild(droppedElement);
