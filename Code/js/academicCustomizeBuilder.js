@@ -69,7 +69,7 @@ function storePassedCourse(data) {
 function getTermData(faculty) {
     var myRequest = new XMLHttpRequest;
     var facultyName = faculty;
-    var url = "JSON/reqCousre" + facultyName + "_req.json";
+    var url = "JSON/reqCousre/" + facultyName + "_req.json";
     myRequest.open("GET", url, false);
     myRequest.onload = function () {
         var data = JSON.parse(myRequest.responseText);
