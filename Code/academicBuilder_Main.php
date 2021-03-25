@@ -24,11 +24,19 @@
  */
 
 session_start(); // Initialize the session
+session_cache_expire( 20 );
+
+// 10 mins in seconds
+$inactive = 60; 
 
 // Check if the user is logged in, if not then redirect him to login page
 if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     header("location: login.php");
     exit();
+} else {
+    $session_life = time() - $_session['timeout'];
+    if($session_life > $inactive) header("location: Model/logout.php");
+    $_session['timeout'] = time();
 }
 ?>
 
