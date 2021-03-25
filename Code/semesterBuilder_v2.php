@@ -143,6 +143,13 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                 </form>
                 <p id="searchMsg"></p>
                 <script>
+                    /*Collect course objects from ALL.json*/
+                    $.getJSON("JSON/ALL.json", function(jsonObjArray) {
+                        console.log(jsonObjArray);
+                        /*Excuting the autocomplete function with input values*/
+                        autocomplete(document.getElementById("search_courseid"), jsonObjArray);
+                    });
+
                     function ajaxpost() {
                         // (A) GET FORM DATA
                         var courseid = document.getElementById("search_courseid").value.toUpperCase();
