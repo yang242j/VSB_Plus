@@ -18,7 +18,7 @@ function autocomplete(inputText, array2Check) {
     /*execute when someone writes in the text field:*/
     inputText.addEventListener("input", function(e) {
         
-        var a, b, i, val = this.value;
+        var a, i, val = this.value;
         
         /*close any already open lists of autocompleted values*/
         closeAllLists();
@@ -38,7 +38,25 @@ function autocomplete(inputText, array2Check) {
 
             /*check if the shortName of the course object starts with the same letters as the text field value:*/
             if (array2Check[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
-                createDiv(b, array2Check[i]);
+                
+                /*create a DIV element for each matching element:*/
+                b = document.createElement("DIV");
+                
+                /*make the matching letters bold:*/
+                b.innerHTML = "<strong>" + array2Check[i].substr(0, val.length) + "</strong>";
+                b.innerHTML += array2Check[i].substr(val.length);
+                
+                /*insert a input field that will hold the current array item's value:*/
+                b.innerHTML += "<input type='hidden' value='" + array2Check[i] + "'>";
+                
+                /*execute a function when someone clicks on the item value (DIV element):*/
+                b.addEventListener("click", function(e) {
+                    /*insert the value for the autocomplete text field:*/
+                    inputText.value = this.getElementsByTagName("input")[0].value;
+                    /*close the list of autocompleted values, (or any other open lists of autocompleted values:*/
+                    closeAllLists();
+                });
+                a.appendChild(b);
             }
             
             
@@ -101,27 +119,6 @@ function autocomplete(inputText, array2Check) {
                 x[i].parentNode.removeChild(x[i]);
             }
         }
-    }
-
-    function createDiv(b, courseObject) {
-        /*create a DIV element for each matching element:*/
-        b = document.createElement("DIV");
-        
-        /*make the matching letters bold:*/
-        b.innerHTML = "<strong>" + courseObject.substr(0, val.length) + "</strong>";
-        b.innerHTML += courseObject.substr(val.length);
-        
-        /*insert a input field that will hold the current array item's value:*/
-        b.innerHTML += "<input type='hidden' value='" + courseObject + "'>";
-        
-        /*execute a function when someone clicks on the item value (DIV element):*/
-        b.addEventListener("click", function(e) {
-            /*insert the value for the autocomplete text field:*/
-            inputText.value = this.getElementsByTagName("input")[0].value;
-            /*close the list of autocompleted values, (or any other open lists of autocompleted values:*/
-            closeAllLists();
-        });
-        a.appendChild(b);
     }
 
     /*execute when someone clicks in the document:*/
