@@ -442,6 +442,7 @@ var index = 0;
 var outputDonelist = [];
 var decidePreTrueOrFalse = false;
 var clickId;
+var preq;
 //recored prev drop item course name
 function dragTest() {
     //const draggableElement = document.querySelector("#nct0");
@@ -481,7 +482,7 @@ function dragTest() {
 
             //console.log(dropZone.id);
             //console.log(dropZone.getAttribute("name"));
-            var preq;
+           
             var newForAlern = "n" + droppedElementId; //course info stored div id
             var newForAlern2 = "nn" + droppedElementId; //course name stored div id
             //var content = document.getElementById(newForAlern).innerHTML;
