@@ -60,7 +60,7 @@ function getTitle(courseName) {
     }
     return ("Course Info not found");
 }
-// console.log(getTitle("CHEM 140"));
+ console.log(getTitle("CHEM 140"));
 
 function getTermData(major) {
     var myRequest = new XMLHttpRequest;
