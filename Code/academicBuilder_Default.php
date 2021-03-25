@@ -125,9 +125,6 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 						&nbsp;
 						<button class="right_arrow"><i class='fas fa-angle-right'></i></button>
 					</div>-->   
-					
-
-				</div>
 				</div>
 				<div class = "termGrid" id ="term2">
 					<div class = "tittle" style = "grid-area: title;"><h2>Term2:</h2></div>
