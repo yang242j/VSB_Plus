@@ -123,6 +123,20 @@ session_start();
             <p id="filter_cond"></p> -->
         </form>
         <br>
+                <div>
+                    <img class="inline" src="img/filter.jpeg" alt="filter_img" align="top" height="20" width="20">
+                    <select class="inline" name="Filter sort" id="filter">
+                        <option value="all">ALL</option>
+                        <option value="first">First year class</option>
+                        <option value="second">Second year class</option>
+                        <option value="thrid">Thrid year class</option>
+                        <option value="fourth">Fourth year class</option>
+                    </select>
+                    <div class="inline" id="display_change">
+                        <img src="img/list.jpeg" alt="list change button" align="top" height="20" width="20">
+                    </div>
+                </div>
+                <br>
         </div>
         <div id="main_area">
             <div class="" id="search_area">
@@ -154,32 +168,8 @@ session_start();
                                 students.</span>
                         </div>
                     </div>
-                    <!-- <div class="course shadow round" id="c2" style="background-color: #CCFF99;">ENEL 387</div>
-                    <div class="course shadow round" id="c3" style="background-color: #99CCFF;">ENSE 496AC</div>
-                    <div class="course shadow round" id="c4" style="background-color: #CCFFFF;">ENSE 496AD</div>
-                    <div class="course shadow round" id="c5" style="background-color: #e4e2e2bd;">ENSE 472</div> -->
-                </div>
-                <div></div>
-                <div>
-                    <img class="inline" src="img/filter.jpeg" alt="filter_img" align="top" height="20" width="20">
-                    <select class="inline" name="Filter sort" id="filter">
-                        <option value="all">ALL</option>
-                        <option value="first">First year class</option>
-                        <option value="second">Second year class</option>
-                        <option value="thrid">Thrid year class</option>
-                        <option value="fourth">Fourth year class</option>
-                    </select>
-                    <div class="inline" id="display_change">
-                        <img src="img/list.jpeg" alt="list change button" align="top" height="20" width="20">
-                    </div>
-                    <!-- <img id="display_change" src="img/list.jpeg" alt="list change button" align="top" height="20" width="20"> -->
                 </div>
             </div>
-            <!-- <div class="course" id="c1" style="background-color: aqua;" onclick="butonClick()">ENSE 400</div>
-            <div class="course" id="c2" style="background-color: bisque;">ENEL 387</div>
-            <div class="course" id="c3" style="background-color: coral;">ENSE 496AC</div>
-            <div class="course" id="c4" style="background-color: cornflowerblue;">ENSE 496AD</div>
-            <div class="course" id="c5" style="background-color: darkkhaki;">ENSE 472</div> -->
             <div class="shadow scroll" id="popView">
                 <h2 id='title'>ENSE 400</h2>
                 <ul>
