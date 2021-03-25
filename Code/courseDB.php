@@ -154,7 +154,7 @@ session_start();
                     <div class="tag round">CHEM</div>
                 </div>
                 <div class="shadow scroll course_list" id="course_list">
-                    <div class="course shadow round word_overflow" style="background-color: #99CCCC;" value="ENSE 400" onclick="courseSelect(this)">
+                    <!-- <div class="course shadow round word_overflow" style="background-color: #99CCCC;" value="ENSE 400" onclick="courseSelect(this)">
                         <span class="larger">ENSE 400</span>
                         <div class="left credit"> 3.00 Credit</div>
                         <br> <span class="bold">Systems Engineering Design Project</span>
@@ -167,7 +167,7 @@ session_start();
                                 compose a preliminary design document, and present their project to their fellow
                                 students.</span>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
             <div class="shadow scroll" id="popView">
