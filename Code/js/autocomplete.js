@@ -4,10 +4,9 @@ var countryArray = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguil
 /*Collect course objects from ALL.json*/
 $.getJSON("JSON/ALL.json", function(jsonObjArray) {
     console.log(jsonObjArray); // this will show the info it in firebug console
+    /*Excuting the autocomplete function with input values*/
+    autocomplete(document.getElementById("search_courseid"), jsonObjArray);
 });
-
-/*Excuting the autocomplete function with input values*/
-autocomplete(document.getElementById("search_courseid"), jsonObjArray);
 
 /**
  * @param   {string}      inputText       the text field element
