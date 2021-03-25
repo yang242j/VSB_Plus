@@ -43,6 +43,12 @@ window.onload = function () {
 //     });
 // }
 
+function fetchCourseJSON(short_name) {
+    return $.post('Model/course.php', {
+        short_name: short_name
+    }, function (data) {});
+}
+
 function getAllCourse() {
     var myRequest = new XMLHttpRequest;
     myRequest.open("GET", "JSON/ALL.json", false);
