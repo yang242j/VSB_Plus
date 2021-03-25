@@ -196,21 +196,6 @@ session_start();
             </div>
         </div>
 
-
-        <!-- <p>Example for visualizing course prerequisites:</p>
-        <div class="course" id="c10" style="background-color: bisque;">ENSE 387</div>
-        <br><br>
-        <div>
-            <span class="course preReq" id="c11" style="background-color: rgb(245, 116, 41);">ENSE 352</span>
-            <span class="course preReq" id="c12" style="background-color: rgb(245, 116, 41);">ENEL 384</span>
-        </div> -->
-
-        <!-- For line required js file -->
-        <!-- <script src="https://cdn.bootcss.com/jsPlumb/2.6.8/js/jsplumb.min.js"></script> -->
-        <!-- For the popView to input the js file -->
-        <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script> -->
-        <!-- For the graph to input he js file -->
-        <!-- <script src="https://cdn.bootcdn.net/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script> -->
         <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" integrity="sha256-t9UJPrESBeG2ojKTIcFLPGF7nHi2vEc7f5A2KpH/UBU=" crossorigin="anonymous"></script>
         
     </section>
