@@ -23,6 +23,7 @@ var doneList = [
     [],
     []
 ];
+var presetCourses = ['Precalculus 30', 'Calculus 30', 'CHEM 30', 'Mathematics B30', 'Mathematics C30', 'AMTH 092', 'MATH 102', 'MATH 103'];
 //fetch JSON data from takenClass database
 function fetchCourseJSON(sid, password) {
     $.post('Model/takenClass.php', {
@@ -58,6 +59,9 @@ function getCreditsEarned(data) {
 
 function storePassedCourse(data) {
     var dataJSON = JSON.parse(data);
+    for (i = 0; i < presetCourses.length; i++) {
+        doneList[0].push(presetCourses[i]);
+    }
     for (i = 0; i < dataJSON.length; i++) {
         if (dataJSON[i].credit_earned != 0) {
             doneList[0].push(dataJSON[i].course_ID);
@@ -69,7 +73,8 @@ function storePassedCourse(data) {
 function getTermData(faculty) {
     var myRequest = new XMLHttpRequest;
     var facultyName = faculty;
-    var url = "JSON/reqCourse/" + facultyName + "_req.json";
+    //var url = "JSON/reqCourse/" + facultyName + "_req.json";
+    var url = "JSON/" + facultyName + ".json";
     myRequest.open("GET", url, false);
     myRequest.onload = function () {
         var data = JSON.parse(myRequest.responseText);
@@ -99,15 +104,21 @@ function findCourseToTake(data) {
             courseCompleted[i] = data[i].course_ID;;
     }
 
-
-    for (term in courseReqData) {
+console.log(courseReqData[0].short_name);
+   /* for (term in courseReqData) {
         for (i = 0; i < courseReqData[term].length; i++) {
             if (courseReqData[term][i] != "Approved") {
                 courseToTake.push(courseReqData[term][i]);
             }
         }
+    }*/
+    for (i =0;i<courseReqData.length;i++)
+    {
+        courseToTake.push(courseReqData[i].short_name);
     }
 
+
+console.log(courseToTake);
     // minus taken class from all course list
     var courseNotCompleted = courseToTake.filter(function (n) {
         return courseCompleted.indexOf(n) === -1;
@@ -177,6 +188,7 @@ function showCourses(data) {
         dragStart("#nct" + i);
     }
     dragTest();
+    
 
     /* for (const clickbleZone in document.querySelectorAll(".courseTags")) {
          console.log(clickbleZone.id);
@@ -442,8 +454,8 @@ var index = 0;
 var outputDonelist = [];
 var decidePreTrueOrFalse = false;
 var clickId;
-// record the output for ajaxpost function
-var preq ;
+var preq;
+var preqId;
 //recored prev drop item course name
 function dragTest() {
     //const draggableElement = document.querySelector("#nct0");
@@ -483,7 +495,7 @@ function dragTest() {
 
             //console.log(dropZone.id);
             //console.log(dropZone.getAttribute("name"));
-
+           
             var newForAlern = "n" + droppedElementId; //course info stored div id
             var newForAlern2 = "nn" + droppedElementId; //course name stored div id
             //var content = document.getElementById(newForAlern).innerHTML;
@@ -508,16 +520,8 @@ function dragTest() {
                     container.push(doneList[i][j]);
                 }
             }
-            ajaxpost(courseName, "202020", container);
 
-            if (preq == true) {
-                document.getElementById(newForAlern2).style.color = "black";
-                console.log(preq);
-            }
-            else if (preq == false){
-                document.getElementById(newForAlern2).style.color = "red";
-                console.log(preq);
-            }
+            ajaxpost(courseName, "202020", container,newForAlern2);
 
             //console.log(terminfo[0]);
             if (terminfo[0].length > 0) {
@@ -602,17 +606,14 @@ function dragTest() {
             if (check == true && dragFrom == "course_cards") {
                 //delete first then push
                 deleteFrom2DArray(doneList, courseName);
-                console.log(doneList);
 
                 index = dropZone.getAttribute("name");
-                //console.log(index);
+               
                 doneList[index].push(courseName);
                 //console.log(doneList);
             }
 
             dropZone.appendChild(droppedElement);
-
-
         });
     }
 
@@ -655,10 +656,19 @@ function dragTest() {
                 //console.log(doneList);
             }
             dropZone.appendChild(droppedElement);
-
-
         });
 
+
+    }
+}
+function preqSignifier(preq,id){
+    if (preq == true) {
+        document.getElementById(id).style.color = "black";
+    
+    }
+    else if (preq == false) {
+        document.getElementById(id).style.color = "red";
+    
     }
 }
 //find a item and delete it 
@@ -696,7 +706,7 @@ function termTransfer(term) {
     if (term == "Spring/Summer") return 202020;
     if (term == "Fall") return 202030;
 }
-function ajaxpost(courseid, term, done) {
+function ajaxpost(courseid, term, done, id) {
     // (A) GET FORM DATA
     var data = new FormData();
     data.append("courseid", courseid);
@@ -713,23 +723,22 @@ function ajaxpost(courseid, term, done) {
             // Generate course tag
             //courseid = rsp.CourseID;
             preq = rsp.Prerequisites;
+            document.getElementById(id).style.color = "black";
             return true;
 
         } else {
             // Do nothing and alert the returned Notes
-            //console.log(rsp.Notes);
+            //console.log(rsp.Notes);s
             alert(rsp.CourseID + " :" + rsp.PrereqNotes);
             preq = rsp.Prerequisites;
+            document.getElementById(id).style.color = "red";
             return false;
         }
     };
-
-
     // (C) PREVENT HTML FORM SUBMIT
     xhr.send(data);
     return false;
 }
-
 function clickGetInfo() {
     for (clickZone of document.querySelectorAll(".clickable")) {
         //console.log(clickZone.id);

@@ -1,10 +1,3 @@
-/*Collect course objects from ALL.json*/
-$.getJSON("JSON/ALL.json", function(jsonObjArray) {
-    console.log(jsonObjArray);
-    /*Excuting the autocomplete function with input values*/
-    autocomplete(document.getElementById("search_courseid"), jsonObjArray);
-});
-
 /**
  * @param   {string}      inputText       the text field element
  */

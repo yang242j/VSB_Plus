@@ -390,5 +390,21 @@
         "credit": "3",
         "description": "Theory of how individual consumers and firms behave in a market economy. Emphasis is on evaluating how well markets deliver efficient and fair outcomes.",
         "prerequisite": "15 credit hours or ECON 100 or Pre-Calculus 20 (or equivalent)"
-    }
+    },
+    {
+        "short_name": "ENEV 223",
+        "title": "Engineering, Environment, and Society",
+        "faculty": "ENEV",
+        "credit": "3",
+        "description": "Introduction and application of environmental design in engineering practice, including public health and safety, environmental ethics, resource and energy systems, impacts of technology on society, sustainable development and environmental stewardship.",
+        "prerequisite": "ENGG 123"
+      },
+      {
+    "short_name": "MATH 217",
+    "title": "Differential Equations I",
+    "faculty": "MATH",
+    "credit": "3",
+    "description": "Ordinary differential equations, modelling with differential equations, Laplace transforms.",
+    "prerequisite": "MATH 111 and MATH 122"
+  }
 ]

@@ -150,9 +150,9 @@ function showOutput(id, name) {
 <div class="container">
     <div class='heading'>
 <h1>Test report</h1>
-<p><strong>Start Time:</strong> 2021-03-24 19:44:04</p>
-<p><strong>Duration:</strong> 0:02:23.006209</p>
-<p><strong>Status:</strong> <span class="text text-success">Pass <strong>20</strong></span> <span class="text text-danger">Failure <strong>2</strong></span> <span class="text text-warning">Error <strong>1</strong></span></p>
+<p><strong>Start Time:</strong> 2021-03-25 11:37:34</p>
+<p><strong>Duration:</strong> 0:02:18.909107</p>
+<p><strong>Status:</strong> <span class="text text-success">Pass <strong>20</strong></span> <span class="text text-warning">Error <strong>3</strong></span></p>
 
 <p class='description'>Test Result</p>
 </div>
@@ -177,31 +177,49 @@ function showOutput(id, name) {
     </thead>
     <tbody>
         
-<tr class='text text-success'>
+<tr class='text text-warning'>
     <td>academic_test.TestAcademicBuilder</td>
     <td>3</td>
+    <td>0</td>
+    <td>0</td>
     <td>3</td>
-    <td>0</td>
-    <td>0</td>
     <td><a class="btn btn-xs btn-primary"href="javascript:showClassDetail('c1',3)">Detail</a></td>
 </tr>
 
-<tr id='pt1.1' class='hiddenRow'>
-    <td class='text text-success'><div class='case'>test_drag_drop_1</div></td>
+<tr id='ft1.1' class='none'>
+    <td class='text text-warning'><div class='case'>test_drag_drop_1</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
-    <a class="popup_link btn btn-xs btn-default" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.1')" >
-        pass</a>
+    <a class="popup_link btn btn-xs btn-default" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.1')" >
+        error</a>
 
-    <div id='div_pt1.1' class="popup_window">
+    <div id='div_ft1.1' class="popup_window">
         <div style='text-align: right;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.1').style.display = 'none' " >
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.1').style.display = 'none' " >
            [x]</a>
         </div>
         <pre>
         
-pt1.1: 2021-03-24 19:44:05,997 - Test - INFO - Input Data: SID: 200362878, password: 200362878, add course: [['MATH 110']],suc: 1, assert: 3
+ft1.1: 2021-03-25 11:37:35,656 - Test - INFO - Input Data: SID: 200362878, password: 200362878, add course: [['MATH 110']],suc: 1, assert: 3
+Traceback (most recent call last):
+  File "C:\Users\xinyuliu\AppData\Roaming\Python\Python39\site-packages\ddt.py", line 182, in wrapper
+    return func(self, *args, **kwargs)
+  File "D:\Github\VSB_Plus\Code\Python\VSB_Plus Test\case\academic_test.py", line 41, in test_drag_drop
+    self.builder.dragIn(action, termNum)
+  File "d:\Github\VSB_Plus\Code\Python\VSB_Plus Test\common\funAcademic.py", line 42, in dragIn
+    drag_and_drop(self.driver, source, dests[loc])
+  File "d:\Github\VSB_Plus\Code\Python\VSB_Plus Test\common\drag_drog.py", line 14, in drag_and_drop
+    driver.execute_script(JS_DRAG_AND_DROP, source, target, offsetX, offsetY, delay, key)
+  File "C:\Users\xinyuliu\AppData\Roaming\Python\Python39\site-packages\selenium\webdriver\remote\webdriver.py", line 634, in execute_script
+    return self.execute(command, {
+  File "C:\Users\xinyuliu\AppData\Roaming\Python\Python39\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\xinyuliu\AppData\Roaming\Python\Python39\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: &lt;unknown&gt;: source or target element is not interactable
+  (Session info: chrome=89.0.4389.90)
+
 
 
         </pre>
@@ -211,22 +229,40 @@ pt1.1: 2021-03-24 19:44:05,997 - Test - INFO - Input Data: SID: 200362878, passw
     </td>
 </tr>
 
-<tr id='pt1.2' class='hiddenRow'>
-    <td class='text text-success'><div class='case'>test_drag_drop_2</div></td>
+<tr id='ft1.2' class='none'>
+    <td class='text text-warning'><div class='case'>test_drag_drop_2</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
-    <a class="popup_link btn btn-xs btn-default" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.2')" >
-        pass</a>
+    <a class="popup_link btn btn-xs btn-default" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.2')" >
+        error</a>
 
-    <div id='div_pt1.2' class="popup_window">
+    <div id='div_ft1.2' class="popup_window">
         <div style='text-align: right;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.2').style.display = 'none' " >
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.2').style.display = 'none' " >
            [x]</a>
         </div>
         <pre>
         
-pt1.2: 2021-03-24 19:44:14,418 - Test - INFO - Input Data: SID: 200362878, password: 200362878, add course: [['MATH 111']],suc: 0, assert: Prerequisites [Not Matched]:
+ft1.2: 2021-03-25 11:37:41,824 - Test - INFO - Input Data: SID: 200362878, password: 200362878, add course: [['MATH 111']],suc: 0, assert: Prerequisites [Not Matched]:
+Traceback (most recent call last):
+  File "C:\Users\xinyuliu\AppData\Roaming\Python\Python39\site-packages\ddt.py", line 182, in wrapper
+    return func(self, *args, **kwargs)
+  File "D:\Github\VSB_Plus\Code\Python\VSB_Plus Test\case\academic_test.py", line 41, in test_drag_drop
+    self.builder.dragIn(action, termNum)
+  File "d:\Github\VSB_Plus\Code\Python\VSB_Plus Test\common\funAcademic.py", line 42, in dragIn
+    drag_and_drop(self.driver, source, dests[loc])
+  File "d:\Github\VSB_Plus\Code\Python\VSB_Plus Test\common\drag_drog.py", line 14, in drag_and_drop
+    driver.execute_script(JS_DRAG_AND_DROP, source, target, offsetX, offsetY, delay, key)
+  File "C:\Users\xinyuliu\AppData\Roaming\Python\Python39\site-packages\selenium\webdriver\remote\webdriver.py", line 634, in execute_script
+    return self.execute(command, {
+  File "C:\Users\xinyuliu\AppData\Roaming\Python\Python39\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\xinyuliu\AppData\Roaming\Python\Python39\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: &lt;unknown&gt;: source or target element is not interactable
+  (Session info: chrome=89.0.4389.90)
+
 
 
         </pre>
@@ -236,22 +272,40 @@ pt1.2: 2021-03-24 19:44:14,418 - Test - INFO - Input Data: SID: 200362878, passw
     </td>
 </tr>
 
-<tr id='pt1.3' class='hiddenRow'>
-    <td class='text text-success'><div class='case'>test_drag_drop_3</div></td>
+<tr id='ft1.3' class='none'>
+    <td class='text text-warning'><div class='case'>test_drag_drop_3</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
-    <a class="popup_link btn btn-xs btn-default" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.3')" >
-        pass</a>
+    <a class="popup_link btn btn-xs btn-default" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.3')" >
+        error</a>
 
-    <div id='div_pt1.3' class="popup_window">
+    <div id='div_ft1.3' class="popup_window">
         <div style='text-align: right;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.3').style.display = 'none' " >
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.3').style.display = 'none' " >
            [x]</a>
         </div>
         <pre>
         
-pt1.3: 2021-03-24 19:44:21,863 - Test - INFO - Input Data: SID: 200362878, password: 200362878, add course: [['ENGG 100', 'ENGL 100', 'MATH 110', 'ENGG 123', 'CHEM 104']],suc: 1, assert: 15
+ft1.3: 2021-03-25 11:37:47,818 - Test - INFO - Input Data: SID: 200362878, password: 200362878, add course: [['ENGG 100', 'ENGL 100', 'MATH 110', 'ENGG 123', 'CHEM 104']],suc: 1, assert: 15
+Traceback (most recent call last):
+  File "C:\Users\xinyuliu\AppData\Roaming\Python\Python39\site-packages\ddt.py", line 182, in wrapper
+    return func(self, *args, **kwargs)
+  File "D:\Github\VSB_Plus\Code\Python\VSB_Plus Test\case\academic_test.py", line 41, in test_drag_drop
+    self.builder.dragIn(action, termNum)
+  File "d:\Github\VSB_Plus\Code\Python\VSB_Plus Test\common\funAcademic.py", line 42, in dragIn
+    drag_and_drop(self.driver, source, dests[loc])
+  File "d:\Github\VSB_Plus\Code\Python\VSB_Plus Test\common\drag_drog.py", line 14, in drag_and_drop
+    driver.execute_script(JS_DRAG_AND_DROP, source, target, offsetX, offsetY, delay, key)
+  File "C:\Users\xinyuliu\AppData\Roaming\Python\Python39\site-packages\selenium\webdriver\remote\webdriver.py", line 634, in execute_script
+    return self.execute(command, {
+  File "C:\Users\xinyuliu\AppData\Roaming\Python\Python39\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\xinyuliu\AppData\Roaming\Python\Python39\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: &lt;unknown&gt;: source or target element is not interactable
+  (Session info: chrome=89.0.4389.90)
+
 
 
         </pre>
@@ -285,7 +339,7 @@ pt1.3: 2021-03-24 19:44:21,863 - Test - INFO - Input Data: SID: 200362878, passw
         </div>
         <pre>
         
-pt2.1: 2021-03-24 19:44:35,584 - Test - INFO - Input Data: ENSE,suc:1,assert:ENSE
+pt2.1: 2021-03-25 11:37:56,026 - Test - INFO - Input Data: ENSE,suc:1,assert:ENSE
 
 
         </pre>
@@ -310,7 +364,7 @@ pt2.1: 2021-03-24 19:44:35,584 - Test - INFO - Input Data: ENSE,suc:1,assert:ENS
         </div>
         <pre>
         
-pt2.2: 2021-03-24 19:44:41,166 - Test - INFO - Input Data: ENEL,suc:1,assert:ENEL
+pt2.2: 2021-03-25 11:38:01,772 - Test - INFO - Input Data: ENEL,suc:1,assert:ENEL
 
 
         </pre>
@@ -335,7 +389,7 @@ pt2.2: 2021-03-24 19:44:41,166 - Test - INFO - Input Data: ENEL,suc:1,assert:ENE
         </div>
         <pre>
         
-pt2.3: 2021-03-24 19:44:46,512 - Test - INFO - Input Data: ENEV,suc:1,assert:ENEV
+pt2.3: 2021-03-25 11:38:07,385 - Test - INFO - Input Data: ENEV,suc:1,assert:ENEV
 
 
         </pre>
@@ -360,7 +414,7 @@ pt2.3: 2021-03-24 19:44:46,512 - Test - INFO - Input Data: ENEV,suc:1,assert:ENE
         </div>
         <pre>
         
-pt2.4: 2021-03-24 19:44:51,881 - Test - INFO - Input Data: ENIN,suc:1,assert:ENIN
+pt2.4: 2021-03-25 11:38:12,966 - Test - INFO - Input Data: ENIN,suc:1,assert:ENIN
 
 
         </pre>
@@ -385,7 +439,7 @@ pt2.4: 2021-03-24 19:44:51,881 - Test - INFO - Input Data: ENIN,suc:1,assert:ENI
         </div>
         <pre>
         
-pt2.5: 2021-03-24 19:44:57,493 - Test - INFO - Input Data: CS,suc:1,assert:CS
+pt2.5: 2021-03-25 11:38:18,881 - Test - INFO - Input Data: CS,suc:1,assert:CS
 
 
         </pre>
@@ -410,7 +464,7 @@ pt2.5: 2021-03-24 19:44:57,493 - Test - INFO - Input Data: CS,suc:1,assert:CS
         </div>
         <pre>
         
-pt2.6: 2021-03-24 19:45:04,118 - Test - INFO - Input Data: short_name:CHEM 104,suc:1,assert:General Chemistry I
+pt2.6: 2021-03-25 11:38:25,915 - Test - INFO - Input Data: short_name:CHEM 104,suc:1,assert:General Chemistry I
 
 
         </pre>
@@ -435,7 +489,7 @@ pt2.6: 2021-03-24 19:45:04,118 - Test - INFO - Input Data: short_name:CHEM 104,s
         </div>
         <pre>
         
-pt2.7: 2021-03-24 19:45:11,491 - Test - INFO - Input Data: short_name:CHEM 103,suc:0,assert:CHEM 103 cannot be found
+pt2.7: 2021-03-25 11:38:32,698 - Test - INFO - Input Data: short_name:CHEM 103,suc:0,assert:CHEM 103 cannot be found
 
 
         </pre>
@@ -460,7 +514,7 @@ pt2.7: 2021-03-24 19:45:11,491 - Test - INFO - Input Data: short_name:CHEM 103,s
         </div>
         <pre>
         
-pt2.8: 2021-03-24 19:45:18,071 - Test - INFO - Input Data: short_name:CS 210,suc:1,assert:Data Structures and Abstractions
+pt2.8: 2021-03-25 11:38:39,318 - Test - INFO - Input Data: short_name:CS 210,suc:1,assert:Data Structures and Abstractions
 
 
         </pre>
@@ -485,7 +539,7 @@ pt2.8: 2021-03-24 19:45:18,071 - Test - INFO - Input Data: short_name:CS 210,suc
         </div>
         <pre>
         
-pt2.9: 2021-03-24 19:45:24,394 - Test - INFO - Input Data: short_name:CS 215,suc:1,assert:Web and Database Programming
+pt2.9: 2021-03-25 11:38:46,293 - Test - INFO - Input Data: short_name:CS 215,suc:1,assert:Web and Database Programming
 
 
         </pre>
@@ -510,7 +564,7 @@ pt2.9: 2021-03-24 19:45:24,394 - Test - INFO - Input Data: short_name:CS 215,suc
         </div>
         <pre>
         
-pt2.10: 2021-03-24 19:45:30,934 - Test - INFO - Input Data: short_name:ENEL 487,suc:1,assert:Embedded and Real-Time Software Systems
+pt2.10: 2021-03-25 11:38:53,147 - Test - INFO - Input Data: short_name:ENEL 487,suc:1,assert:Embedded and Real-Time Software Systems
 
 
         </pre>
@@ -544,7 +598,7 @@ pt2.10: 2021-03-24 19:45:30,934 - Test - INFO - Input Data: short_name:ENEL 487,
         </div>
         <pre>
         
-pt3.1: 2021-03-24 19:45:34,318 - Test - INFO - Input Data: SID: 200362586, password: 200362586,suc: 1, assert: Welcome Yang, Jingkang
+pt3.1: 2021-03-25 11:38:56,675 - Test - INFO - Input Data: SID: 200362586, password: 200362586,suc: 1, assert: Welcome Yang, Jingkang
 
 
         </pre>
@@ -569,7 +623,7 @@ pt3.1: 2021-03-24 19:45:34,318 - Test - INFO - Input Data: SID: 200362586, passw
         </div>
         <pre>
         
-pt3.2: 2021-03-24 19:45:39,833 - Test - INFO - Input Data: SID: 200362586, password: 2003,suc: 0, assert: The password was not valid.
+pt3.2: 2021-03-25 11:39:01,455 - Test - INFO - Input Data: SID: 200362586, password: 2003,suc: 0, assert: The password was not valid.
 
 
         </pre>
@@ -594,7 +648,7 @@ pt3.2: 2021-03-24 19:45:39,833 - Test - INFO - Input Data: SID: 200362586, passw
         </div>
         <pre>
         
-pt3.3: 2021-03-24 19:45:43,899 - Test - INFO - Input Data: SID: 2003, password: 200362587,suc: 0, assert: No account found with that student_id.
+pt3.3: 2021-03-25 11:39:05,792 - Test - INFO - Input Data: SID: 2003, password: 200362587,suc: 0, assert: No account found with that student_id.
 
 
         </pre>
@@ -619,7 +673,7 @@ pt3.3: 2021-03-24 19:45:43,899 - Test - INFO - Input Data: SID: 2003, password: 
         </div>
         <pre>
         
-pt3.4: 2021-03-24 19:45:47,904 - Test - INFO - Input Data: SID: 200362586, password: ,suc: 0, assert: Please enter your password.
+pt3.4: 2021-03-25 11:39:09,924 - Test - INFO - Input Data: SID: 200362586, password: ,suc: 0, assert: Please enter your password.
 
 
         </pre>
@@ -644,7 +698,7 @@ pt3.4: 2021-03-24 19:45:47,904 - Test - INFO - Input Data: SID: 200362586, passw
         </div>
         <pre>
         
-pt3.5: 2021-03-24 19:45:51,926 - Test - INFO - Input Data: SID: , password: ,suc: 0, assert: Please enter student_id.Please enter your password.
+pt3.5: 2021-03-25 11:39:15,671 - Test - INFO - Input Data: SID: , password: ,suc: 0, assert: Please enter student_id.Please enter your password.
 
 
         </pre>
@@ -654,37 +708,31 @@ pt3.5: 2021-03-24 19:45:51,926 - Test - INFO - Input Data: SID: , password: ,suc
     </td>
 </tr>
 
-<tr class='text text-warning'>
+<tr class='text text-success'>
     <td>semesterBuilder_test.TestSemesterBuilder</td>
     <td>5</td>
-    <td>2</td>
-    <td>2</td>
-    <td>1</td>
+    <td>5</td>
+    <td>0</td>
+    <td>0</td>
     <td><a class="btn btn-xs btn-primary"href="javascript:showClassDetail('c4',5)">Detail</a></td>
 </tr>
 
-<tr id='ft4.1' class='none'>
-    <td class='text text-danger'><div class='case'>test_prereq_1</div></td>
+<tr id='pt4.1' class='hiddenRow'>
+    <td class='text text-success'><div class='case'>test_prereq_1</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
-    <a class="popup_link btn btn-xs btn-default" onfocus='this.blur();' href="javascript:showTestDetail('div_ft4.1')" >
-        fail</a>
+    <a class="popup_link btn btn-xs btn-default" onfocus='this.blur();' href="javascript:showTestDetail('div_pt4.1')" >
+        pass</a>
 
-    <div id='div_ft4.1' class="popup_window">
+    <div id='div_pt4.1' class="popup_window">
         <div style='text-align: right;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_ft4.1').style.display = 'none' " >
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt4.1').style.display = 'none' " >
            [x]</a>
         </div>
         <pre>
         
-ft4.1: 2021-03-24 19:45:55,843 - Test - INFO - Input Data: SID: 200362586, password: 200362586, add course: ENGL 100,suc: 1, assert: MATH 110 registration success.
-Traceback (most recent call last):
-  File "C:\Users\xinyuliu\AppData\Roaming\Python\Python39\site-packages\ddt.py", line 182, in wrapper
-    return func(self, *args, **kwargs)
-  File "D:\Github\VSB_Plus\Code\Python\VSB_Plus Test\case\semesterBuilder_test.py", line 36, in test_prereq
-    self.assertIn(self.assert_value, self.result)
-AssertionError: 'MATH 110 registration success.' not found in 'ENGL 100 registration success.'
+pt4.1: 2021-03-25 11:39:19,902 - Test - INFO - Input Data: SID: 200362586, password: 200362586, add course: ENGL 100,suc: 1, assert: ENGL 100 registration success.
 
 
         </pre>
@@ -709,7 +757,7 @@ AssertionError: 'MATH 110 registration success.' not found in 'ENGL 100 registra
         </div>
         <pre>
         
-pt4.2: 2021-03-24 19:46:02,521 - Test - INFO - Input Data: SID: 200362586, password: 200362586, add course: cs 340,suc: 0, assert: Prerequisites [Not Matched]
+pt4.2: 2021-03-25 11:39:27,178 - Test - INFO - Input Data: SID: 200362586, password: 200362586, add course: cs 340,suc: 0, assert: Prerequisites [Not Matched]
 
 
         </pre>
@@ -719,28 +767,22 @@ pt4.2: 2021-03-24 19:46:02,521 - Test - INFO - Input Data: SID: 200362586, passw
     </td>
 </tr>
 
-<tr id='ft4.3' class='none'>
-    <td class='text text-danger'><div class='case'>test_prereq_3</div></td>
+<tr id='pt4.3' class='hiddenRow'>
+    <td class='text text-success'><div class='case'>test_prereq_3</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
-    <a class="popup_link btn btn-xs btn-default" onfocus='this.blur();' href="javascript:showTestDetail('div_ft4.3')" >
-        fail</a>
+    <a class="popup_link btn btn-xs btn-default" onfocus='this.blur();' href="javascript:showTestDetail('div_pt4.3')" >
+        pass</a>
 
-    <div id='div_ft4.3' class="popup_window">
+    <div id='div_pt4.3' class="popup_window">
         <div style='text-align: right;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_ft4.3').style.display = 'none' " >
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt4.3').style.display = 'none' " >
            [x]</a>
         </div>
         <pre>
         
-ft4.3: 2021-03-24 19:46:09,228 - Test - INFO - Input Data: SID: 200362586, password: 200362586, add course: math 100,suc: 0, assert: Course Already Completed
-Traceback (most recent call last):
-  File "C:\Users\xinyuliu\AppData\Roaming\Python\Python39\site-packages\ddt.py", line 182, in wrapper
-    return func(self, *args, **kwargs)
-  File "D:\Github\VSB_Plus\Code\Python\VSB_Plus Test\case\semesterBuilder_test.py", line 36, in test_prereq
-    self.assertIn(self.assert_value, self.result)
-AssertionError: 'Course Already Completed' not found in 'MATH 100:\nCourse NOT Found'
+pt4.3: 2021-03-25 11:39:34,084 - Test - INFO - Input Data: SID: 200362586, password: 200362586, add course: math 100,suc: 0, assert: Course Already Completed
 
 
         </pre>
@@ -750,33 +792,22 @@ AssertionError: 'Course Already Completed' not found in 'MATH 100:\nCourse NOT F
     </td>
 </tr>
 
-<tr id='ft4.4' class='none'>
-    <td class='text text-warning'><div class='case'>test_prereq_4</div></td>
+<tr id='pt4.4' class='hiddenRow'>
+    <td class='text text-success'><div class='case'>test_prereq_4</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
-    <a class="popup_link btn btn-xs btn-default" onfocus='this.blur();' href="javascript:showTestDetail('div_ft4.4')" >
-        error</a>
+    <a class="popup_link btn btn-xs btn-default" onfocus='this.blur();' href="javascript:showTestDetail('div_pt4.4')" >
+        pass</a>
 
-    <div id='div_ft4.4' class="popup_window">
+    <div id='div_pt4.4' class="popup_window">
         <div style='text-align: right;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_ft4.4').style.display = 'none' " >
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt4.4').style.display = 'none' " >
            [x]</a>
         </div>
         <pre>
         
-ft4.4: 2021-03-24 19:46:15,901 - Test - INFO - Input Data: SID: 200362586, password: 200362586, add course: chem 104,suc: 0, assert: Course Already Completed
-2021-03-24 19:46:18,828 - Test - ERROR - Fail to run the test，reason：Message: no such alert
-  (Session info: chrome=89.0.4389.90)
-
-Traceback (most recent call last):
-  File "C:\Users\xinyuliu\AppData\Roaming\Python\Python39\site-packages\ddt.py", line 182, in wrapper
-    return func(self, *args, **kwargs)
-  File "D:\Github\VSB_Plus\Code\Python\VSB_Plus Test\case\semesterBuilder_test.py", line 36, in test_prereq
-    self.assertIn(self.assert_value, self.result)
-  File "C:\Program Files\Python39\lib\unittest\case.py", line 1095, in assertIn
-    if member not in container:
-TypeError: argument of type 'NoneType' is not iterable
+pt4.4: 2021-03-25 11:39:41,005 - Test - INFO - Input Data: SID: 200362586, password: 200362586, add course: chem 104,suc: 0, assert: Course Already Completed
 
 
         </pre>
@@ -801,7 +832,7 @@ TypeError: argument of type 'NoneType' is not iterable
         </div>
         <pre>
         
-pt4.5: 2021-03-24 19:46:22,495 - Test - INFO - Input Data: SID: 200362586, password: 200362586, add course: asf,suc: 0, assert: Input Format Invalid
+pt4.5: 2021-03-25 11:39:47,770 - Test - INFO - Input Data: SID: 200362586, password: 200362586, add course: asf,suc: 0, assert: Input Format Invalid
 
 
         </pre>
@@ -817,8 +848,8 @@ pt4.5: 2021-03-24 19:46:22,495 - Test - INFO - Input Data: SID: 200362586, passw
             <td>Total</td>
             <td>23</td>
             <td class="text text-success">20</td>
-            <td class="text text-danger">2</td>
-            <td class="text text-warning">1</td>
+            <td class="text text-danger">0</td>
+            <td class="text text-warning">3</td>
             <td>&nbsp;</td>
         </tr>
     </tfoot>

@@ -123,6 +123,20 @@ session_start();
             <p id="filter_cond"></p> -->
         </form>
         <br>
+                <div>
+                    <img class="inline" src="img/filter.jpeg" alt="filter_img" align="top" height="20" width="20">
+                    <select class="inline" name="Filter sort" id="filter">
+                        <option value="all">ALL</option>
+                        <option value="first">First year class</option>
+                        <option value="second">Second year class</option>
+                        <option value="thrid">Thrid year class</option>
+                        <option value="fourth">Fourth year class</option>
+                    </select>
+                    <div class="inline" id="display_change">
+                        <img src="img/list.jpeg" alt="list change button" align="top" height="20" width="20">
+                    </div>
+                </div>
+                <br>
         </div>
         <div id="main_area">
             <div class="" id="search_area">
@@ -154,32 +168,8 @@ session_start();
                                 students.</span>
                         </div>
                     </div>
-                    <!-- <div class="course shadow round" id="c2" style="background-color: #CCFF99;">ENEL 387</div>
-                    <div class="course shadow round" id="c3" style="background-color: #99CCFF;">ENSE 496AC</div>
-                    <div class="course shadow round" id="c4" style="background-color: #CCFFFF;">ENSE 496AD</div>
-                    <div class="course shadow round" id="c5" style="background-color: #e4e2e2bd;">ENSE 472</div> -->
-                </div>
-                <div></div>
-                <div>
-                    <img class="inline" src="img/filter.jpeg" alt="filter_img" align="top" height="20" width="20">
-                    <select class="inline" name="Filter sort" id="filter">
-                        <option value="all">ALL</option>
-                        <option value="first">First year class</option>
-                        <option value="second">Second year class</option>
-                        <option value="thrid">Thrid year class</option>
-                        <option value="fourth">Fourth year class</option>
-                    </select>
-                    <div class="inline" id="display_change">
-                        <img src="img/list.jpeg" alt="list change button" align="top" height="20" width="20">
-                    </div>
-                    <!-- <img id="display_change" src="img/list.jpeg" alt="list change button" align="top" height="20" width="20"> -->
                 </div>
             </div>
-            <!-- <div class="course" id="c1" style="background-color: aqua;" onclick="butonClick()">ENSE 400</div>
-            <div class="course" id="c2" style="background-color: bisque;">ENEL 387</div>
-            <div class="course" id="c3" style="background-color: coral;">ENSE 496AC</div>
-            <div class="course" id="c4" style="background-color: cornflowerblue;">ENSE 496AD</div>
-            <div class="course" id="c5" style="background-color: darkkhaki;">ENSE 472</div> -->
             <div class="shadow scroll" id="popView">
                 <h2 id='title'>ENSE 400</h2>
                 <ul>
@@ -196,21 +186,6 @@ session_start();
             </div>
         </div>
 
-
-        <!-- <p>Example for visualizing course prerequisites:</p>
-        <div class="course" id="c10" style="background-color: bisque;">ENSE 387</div>
-        <br><br>
-        <div>
-            <span class="course preReq" id="c11" style="background-color: rgb(245, 116, 41);">ENSE 352</span>
-            <span class="course preReq" id="c12" style="background-color: rgb(245, 116, 41);">ENEL 384</span>
-        </div> -->
-
-        <!-- For line required js file -->
-        <!-- <script src="https://cdn.bootcss.com/jsPlumb/2.6.8/js/jsplumb.min.js"></script> -->
-        <!-- For the popView to input the js file -->
-        <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script> -->
-        <!-- For the graph to input he js file -->
-        <!-- <script src="https://cdn.bootcdn.net/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script> -->
         <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" integrity="sha256-t9UJPrESBeG2ojKTIcFLPGF7nHi2vEc7f5A2KpH/UBU=" crossorigin="anonymous"></script>
         
     </section>

@@ -139,12 +139,30 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             <h3 class="center textCenter"><label for="lineChart"> Term Average </label></h1>
             <div id="lineChart"></div>
         </div>
-        
+    
         <div id="pieGraph">
-        <h2 class="center textCenter"><label for="pieChart">Score Distribution</label></h1>
+            <h2 class="center textCenter"><label for="pieChart">Score Distribution</label></h1>
+            <div class="center textCenter">
+                <h5 id="gradeSys"><u><i>More details in Grade System</i></u></h5>
+                <img class="" id="GradeSysPic" src="img/gradingSys.png" width="49%" alt="Undergraduate Garding System">
+            </div>
+            <!-- <h5 id="gradeSys">More details in <span>Grade System</span></h5>
+            <img id="GradeSysPic" src="img/logo.png" alt="Undergraduate Garding System"> -->
             <div id="pieChart"></div>
         </div>
     </div>
+
+    <style>
+        #GradeSysPic{
+            display:none; 
+            position: absolute; 
+            opacity: 0.9;
+        }
+
+        #gradeSys:hover +#GradeSysPic{
+            display: block;
+        }
+    </style>
 
     <footer>
         <script src="js/main.js"></script>

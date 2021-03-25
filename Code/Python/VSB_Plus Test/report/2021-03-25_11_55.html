@@ -150,9 +150,9 @@ function showOutput(id, name) {
 <div class="container">
     <div class='heading'>
 <h1>Test report</h1>
-<p><strong>Start Time:</strong> 2021-03-24 19:50:32</p>
-<p><strong>Duration:</strong> 0:03:06.067399</p>
-<p><strong>Status:</strong> <span class="text text-success">Pass <strong>18</strong></span> <span class="text text-warning">Error <strong>5</strong></span></p>
+<p><strong>Start Time:</strong> 2021-03-25 11:55:36</p>
+<p><strong>Duration:</strong> 0:02:26.275140</p>
+<p><strong>Status:</strong> <span class="text text-success">Pass <strong>22</strong></span> <span class="text text-warning">Error <strong>1</strong></span></p>
 
 <p class='description'>Test Result</p>
 </div>
@@ -177,12 +177,12 @@ function showOutput(id, name) {
     </thead>
     <tbody>
         
-<tr class='text text-success'>
+<tr class='text text-warning'>
     <td>academic_test.TestAcademicBuilder</td>
     <td>3</td>
-    <td>3</td>
+    <td>2</td>
     <td>0</td>
-    <td>0</td>
+    <td>1</td>
     <td><a class="btn btn-xs btn-primary"href="javascript:showClassDetail('c1',3)">Detail</a></td>
 </tr>
 
@@ -201,7 +201,7 @@ function showOutput(id, name) {
         </div>
         <pre>
         
-pt1.1: 2021-03-24 19:50:34,044 - Test - INFO - Input Data: SID: 200362878, password: 200362878, add course: [['MATH 110']],suc: 1, assert: 3
+pt1.1: 2021-03-25 11:55:38,060 - Test - INFO - Input Data: SID: 200362878, password: 200362878, add course: [['MATH 110']],suc: 1, assert: 3
 
 
         </pre>
@@ -211,22 +211,30 @@ pt1.1: 2021-03-24 19:50:34,044 - Test - INFO - Input Data: SID: 200362878, passw
     </td>
 </tr>
 
-<tr id='pt1.2' class='hiddenRow'>
-    <td class='text text-success'><div class='case'>test_drag_drop_2</div></td>
+<tr id='ft1.2' class='none'>
+    <td class='text text-warning'><div class='case'>test_drag_drop_2</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
-    <a class="popup_link btn btn-xs btn-default" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.2')" >
-        pass</a>
+    <a class="popup_link btn btn-xs btn-default" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.2')" >
+        error</a>
 
-    <div id='div_pt1.2' class="popup_window">
+    <div id='div_ft1.2' class="popup_window">
         <div style='text-align: right;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.2').style.display = 'none' " >
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.2').style.display = 'none' " >
            [x]</a>
         </div>
         <pre>
         
-pt1.2: 2021-03-24 19:50:41,533 - Test - INFO - Input Data: SID: 200362878, password: 200362878, add course: [['MATH 111']],suc: 0, assert: Prerequisites [Not Matched]:
+ft1.2: 2021-03-25 11:55:45,663 - Test - INFO - Input Data: SID: 200362878, password: 200362878, add course: [['MATH 111']],suc: 0, assert: Prerequisites [Not Matched]:
+Traceback (most recent call last):
+  File "C:\Users\xinyuliu\AppData\Roaming\Python\Python39\site-packages\ddt.py", line 182, in wrapper
+    return func(self, *args, **kwargs)
+  File "D:\Github\VSB_Plus\Code\Python\VSB_Plus Test\case\academic_test.py", line 49, in test_drag_drop
+    self.assertIn(self.assert_value, self.result)
+  File "C:\Program Files\Python39\lib\unittest\case.py", line 1095, in assertIn
+    if member not in container:
+TypeError: argument of type 'NoneType' is not iterable
 
 
         </pre>
@@ -251,7 +259,7 @@ pt1.2: 2021-03-24 19:50:41,533 - Test - INFO - Input Data: SID: 200362878, passw
         </div>
         <pre>
         
-pt1.3: 2021-03-24 19:50:48,864 - Test - INFO - Input Data: SID: 200362878, password: 200362878, add course: [['ENGG 100', 'ENGL 100', 'MATH 110', 'ENGG 123', 'CHEM 104']],suc: 1, assert: 15
+pt1.3: 2021-03-25 11:55:53,284 - Test - INFO - Input Data: SID: 200362878, password: 200362878, add course: [['ENGG 100', 'ENGL 100', 'MATH 110', 'ENGG 123', 'CHEM 104']],suc: 1, assert: 15
 
 
         </pre>
@@ -285,7 +293,7 @@ pt1.3: 2021-03-24 19:50:48,864 - Test - INFO - Input Data: SID: 200362878, passw
         </div>
         <pre>
         
-pt2.1: 2021-03-24 19:51:02,531 - Test - INFO - Input Data: ENSE,suc:1,assert:ENSE
+pt2.1: 2021-03-25 11:56:07,134 - Test - INFO - Input Data: ENSE,suc:1,assert:ENSE
 
 
         </pre>
@@ -310,7 +318,7 @@ pt2.1: 2021-03-24 19:51:02,531 - Test - INFO - Input Data: ENSE,suc:1,assert:ENS
         </div>
         <pre>
         
-pt2.2: 2021-03-24 19:51:08,549 - Test - INFO - Input Data: ENEL,suc:1,assert:ENEL
+pt2.2: 2021-03-25 11:56:12,656 - Test - INFO - Input Data: ENEL,suc:1,assert:ENEL
 
 
         </pre>
@@ -335,7 +343,7 @@ pt2.2: 2021-03-24 19:51:08,549 - Test - INFO - Input Data: ENEL,suc:1,assert:ENE
         </div>
         <pre>
         
-pt2.3: 2021-03-24 19:51:14,341 - Test - INFO - Input Data: ENEV,suc:1,assert:ENEV
+pt2.3: 2021-03-25 11:56:18,149 - Test - INFO - Input Data: ENEV,suc:1,assert:ENEV
 
 
         </pre>
@@ -360,7 +368,7 @@ pt2.3: 2021-03-24 19:51:14,341 - Test - INFO - Input Data: ENEV,suc:1,assert:ENE
         </div>
         <pre>
         
-pt2.4: 2021-03-24 19:51:20,326 - Test - INFO - Input Data: ENIN,suc:1,assert:ENIN
+pt2.4: 2021-03-25 11:56:23,815 - Test - INFO - Input Data: ENIN,suc:1,assert:ENIN
 
 
         </pre>
@@ -385,7 +393,7 @@ pt2.4: 2021-03-24 19:51:20,326 - Test - INFO - Input Data: ENIN,suc:1,assert:ENI
         </div>
         <pre>
         
-pt2.5: 2021-03-24 19:51:26,213 - Test - INFO - Input Data: CS,suc:1,assert:CS
+pt2.5: 2021-03-25 11:56:29,407 - Test - INFO - Input Data: CS,suc:1,assert:CS
 
 
         </pre>
@@ -410,7 +418,7 @@ pt2.5: 2021-03-24 19:51:26,213 - Test - INFO - Input Data: CS,suc:1,assert:CS
         </div>
         <pre>
         
-pt2.6: 2021-03-24 19:51:33,156 - Test - INFO - Input Data: short_name:CHEM 104,suc:1,assert:General Chemistry I
+pt2.6: 2021-03-25 11:56:36,979 - Test - INFO - Input Data: short_name:CHEM 104,suc:1,assert:General Chemistry I
 
 
         </pre>
@@ -435,7 +443,7 @@ pt2.6: 2021-03-24 19:51:33,156 - Test - INFO - Input Data: short_name:CHEM 104,s
         </div>
         <pre>
         
-pt2.7: 2021-03-24 19:51:39,659 - Test - INFO - Input Data: short_name:CHEM 103,suc:0,assert:CHEM 103 cannot be found
+pt2.7: 2021-03-25 11:56:43,459 - Test - INFO - Input Data: short_name:CHEM 103,suc:0,assert:CHEM 103 cannot be found
 
 
         </pre>
@@ -460,7 +468,7 @@ pt2.7: 2021-03-24 19:51:39,659 - Test - INFO - Input Data: short_name:CHEM 103,s
         </div>
         <pre>
         
-pt2.8: 2021-03-24 19:51:46,306 - Test - INFO - Input Data: short_name:CS 210,suc:1,assert:Data Structures and Abstractions
+pt2.8: 2021-03-25 11:56:50,186 - Test - INFO - Input Data: short_name:CS 210,suc:1,assert:Data Structures and Abstractions
 
 
         </pre>
@@ -485,7 +493,7 @@ pt2.8: 2021-03-24 19:51:46,306 - Test - INFO - Input Data: short_name:CS 210,suc
         </div>
         <pre>
         
-pt2.9: 2021-03-24 19:51:53,425 - Test - INFO - Input Data: short_name:CS 215,suc:1,assert:Web and Database Programming
+pt2.9: 2021-03-25 11:56:56,985 - Test - INFO - Input Data: short_name:CS 215,suc:1,assert:Web and Database Programming
 
 
         </pre>
@@ -510,7 +518,7 @@ pt2.9: 2021-03-24 19:51:53,425 - Test - INFO - Input Data: short_name:CS 215,suc
         </div>
         <pre>
         
-pt2.10: 2021-03-24 19:52:00,349 - Test - INFO - Input Data: short_name:ENEL 487,suc:1,assert:Embedded and Real-Time Software Systems
+pt2.10: 2021-03-25 11:57:03,581 - Test - INFO - Input Data: short_name:ENEL 487,suc:1,assert:Embedded and Real-Time Software Systems
 
 
         </pre>
@@ -544,7 +552,7 @@ pt2.10: 2021-03-24 19:52:00,349 - Test - INFO - Input Data: short_name:ENEL 487,
         </div>
         <pre>
         
-pt3.1: 2021-03-24 19:52:03,985 - Test - INFO - Input Data: SID: 200362586, password: 200362586,suc: 1, assert: Welcome Yang, Jingkang
+pt3.1: 2021-03-25 11:57:08,089 - Test - INFO - Input Data: SID: 200362586, password: 200362586,suc: 1, assert: Welcome Yang, Jingkang
 
 
         </pre>
@@ -569,7 +577,7 @@ pt3.1: 2021-03-24 19:52:03,985 - Test - INFO - Input Data: SID: 200362586, passw
         </div>
         <pre>
         
-pt3.2: 2021-03-24 19:52:09,166 - Test - INFO - Input Data: SID: 200362586, password: 2003,suc: 0, assert: The password was not valid.
+pt3.2: 2021-03-25 11:57:12,869 - Test - INFO - Input Data: SID: 200362586, password: 2003,suc: 0, assert: The password was not valid.
 
 
         </pre>
@@ -594,7 +602,7 @@ pt3.2: 2021-03-24 19:52:09,166 - Test - INFO - Input Data: SID: 200362586, passw
         </div>
         <pre>
         
-pt3.3: 2021-03-24 19:52:13,463 - Test - INFO - Input Data: SID: 2003, password: 200362587,suc: 0, assert: No account found with that student_id.
+pt3.3: 2021-03-25 11:57:17,159 - Test - INFO - Input Data: SID: 2003, password: 200362587,suc: 0, assert: No account found with that student_id.
 
 
         </pre>
@@ -619,7 +627,7 @@ pt3.3: 2021-03-24 19:52:13,463 - Test - INFO - Input Data: SID: 2003, password: 
         </div>
         <pre>
         
-pt3.4: 2021-03-24 19:52:17,729 - Test - INFO - Input Data: SID: 200362586, password: ,suc: 0, assert: Please enter your password.
+pt3.4: 2021-03-25 11:57:21,403 - Test - INFO - Input Data: SID: 200362586, password: ,suc: 0, assert: Please enter your password.
 
 
         </pre>
@@ -644,7 +652,7 @@ pt3.4: 2021-03-24 19:52:17,729 - Test - INFO - Input Data: SID: 200362586, passw
         </div>
         <pre>
         
-pt3.5: 2021-03-24 19:52:21,955 - Test - INFO - Input Data: SID: , password: ,suc: 0, assert: Please enter student_id.Please enter your password.
+pt3.5: 2021-03-25 11:57:25,609 - Test - INFO - Input Data: SID: , password: ,suc: 0, assert: Please enter student_id.Please enter your password.
 
 
         </pre>
@@ -654,49 +662,31 @@ pt3.5: 2021-03-24 19:52:21,955 - Test - INFO - Input Data: SID: , password: ,suc
     </td>
 </tr>
 
-<tr class='text text-warning'>
+<tr class='text text-success'>
     <td>semesterBuilder_test.TestSemesterBuilder</td>
     <td>5</td>
-    <td>0</td>
-    <td>0</td>
     <td>5</td>
+    <td>0</td>
+    <td>0</td>
     <td><a class="btn btn-xs btn-primary"href="javascript:showClassDetail('c4',5)">Detail</a></td>
 </tr>
 
-<tr id='ft4.1' class='none'>
-    <td class='text text-warning'><div class='case'>test_prereq_1</div></td>
+<tr id='pt4.1' class='hiddenRow'>
+    <td class='text text-success'><div class='case'>test_prereq_1</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
-    <a class="popup_link btn btn-xs btn-default" onfocus='this.blur();' href="javascript:showTestDetail('div_ft4.1')" >
-        error</a>
+    <a class="popup_link btn btn-xs btn-default" onfocus='this.blur();' href="javascript:showTestDetail('div_pt4.1')" >
+        pass</a>
 
-    <div id='div_ft4.1' class="popup_window">
+    <div id='div_pt4.1' class="popup_window">
         <div style='text-align: right;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_ft4.1').style.display = 'none' " >
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt4.1').style.display = 'none' " >
            [x]</a>
         </div>
         <pre>
         
-ft4.1: 2021-03-24 19:52:26,178 - Test - INFO - Input Data: SID: 200362586, password: 200362586, add course: ENGL 100,suc: 1, assert: MATH 110 registration success.
-Traceback (most recent call last):
-  File "C:\Users\xinyuliu\AppData\Roaming\Python\Python39\site-packages\ddt.py", line 182, in wrapper
-    return func(self, *args, **kwargs)
-  File "D:\Github\VSB_Plus\Code\Python\VSB_Plus Test\case\semesterBuilder_test.py", line 32, in test_prereq
-    self.builder = SemesterBuilder(semesterDriver)
-  File "d:\Github\VSB_Plus\Code\Python\VSB_Plus Test\common\funSemster.py", line 26, in __init__
-    self.driver.find_element_by_xpath(self.semsterPage).click()
-  File "C:\Users\xinyuliu\AppData\Roaming\Python\Python39\site-packages\selenium\webdriver\remote\webelement.py", line 80, in click
-    self._execute(Command.CLICK_ELEMENT)
-  File "C:\Users\xinyuliu\AppData\Roaming\Python\Python39\site-packages\selenium\webdriver\remote\webelement.py", line 633, in _execute
-    return self._parent.execute(command, params)
-  File "C:\Users\xinyuliu\AppData\Roaming\Python\Python39\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
-    self.error_handler.check_response(response)
-  File "C:\Users\xinyuliu\AppData\Roaming\Python\Python39\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
-    raise exception_class(message, screen, stacktrace)
-selenium.common.exceptions.ElementNotInteractableException: Message: element not interactable
-  (Session info: chrome=89.0.4389.90)
-
+pt4.1: 2021-03-25 11:57:29,785 - Test - INFO - Input Data: SID: 200362586, password: 200362586, add course: ENGL 100,suc: 1, assert: ENGL 100 registration success.
 
 
         </pre>
@@ -706,40 +696,22 @@ selenium.common.exceptions.ElementNotInteractableException: Message: element not
     </td>
 </tr>
 
-<tr id='ft4.2' class='none'>
-    <td class='text text-warning'><div class='case'>test_prereq_2</div></td>
+<tr id='pt4.2' class='hiddenRow'>
+    <td class='text text-success'><div class='case'>test_prereq_2</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
-    <a class="popup_link btn btn-xs btn-default" onfocus='this.blur();' href="javascript:showTestDetail('div_ft4.2')" >
-        error</a>
+    <a class="popup_link btn btn-xs btn-default" onfocus='this.blur();' href="javascript:showTestDetail('div_pt4.2')" >
+        pass</a>
 
-    <div id='div_ft4.2' class="popup_window">
+    <div id='div_pt4.2' class="popup_window">
         <div style='text-align: right;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_ft4.2').style.display = 'none' " >
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt4.2').style.display = 'none' " >
            [x]</a>
         </div>
         <pre>
         
-ft4.2: 2021-03-24 19:52:40,841 - Test - INFO - Input Data: SID: 200362586, password: 200362586, add course: cs 340,suc: 0, assert: Prerequisites [Not Matched]
-Traceback (most recent call last):
-  File "C:\Users\xinyuliu\AppData\Roaming\Python\Python39\site-packages\ddt.py", line 182, in wrapper
-    return func(self, *args, **kwargs)
-  File "D:\Github\VSB_Plus\Code\Python\VSB_Plus Test\case\semesterBuilder_test.py", line 32, in test_prereq
-    self.builder = SemesterBuilder(semesterDriver)
-  File "d:\Github\VSB_Plus\Code\Python\VSB_Plus Test\common\funSemster.py", line 26, in __init__
-    self.driver.find_element_by_xpath(self.semsterPage).click()
-  File "C:\Users\xinyuliu\AppData\Roaming\Python\Python39\site-packages\selenium\webdriver\remote\webelement.py", line 80, in click
-    self._execute(Command.CLICK_ELEMENT)
-  File "C:\Users\xinyuliu\AppData\Roaming\Python\Python39\site-packages\selenium\webdriver\remote\webelement.py", line 633, in _execute
-    return self._parent.execute(command, params)
-  File "C:\Users\xinyuliu\AppData\Roaming\Python\Python39\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
-    self.error_handler.check_response(response)
-  File "C:\Users\xinyuliu\AppData\Roaming\Python\Python39\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
-    raise exception_class(message, screen, stacktrace)
-selenium.common.exceptions.ElementNotInteractableException: Message: element not interactable
-  (Session info: chrome=89.0.4389.90)
-
+pt4.2: 2021-03-25 11:57:37,107 - Test - INFO - Input Data: SID: 200362586, password: 200362586, add course: cs 340,suc: 0, assert: Prerequisites [Not Matched]
 
 
         </pre>
@@ -749,40 +721,22 @@ selenium.common.exceptions.ElementNotInteractableException: Message: element not
     </td>
 </tr>
 
-<tr id='ft4.3' class='none'>
-    <td class='text text-warning'><div class='case'>test_prereq_3</div></td>
+<tr id='pt4.3' class='hiddenRow'>
+    <td class='text text-success'><div class='case'>test_prereq_3</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
-    <a class="popup_link btn btn-xs btn-default" onfocus='this.blur();' href="javascript:showTestDetail('div_ft4.3')" >
-        error</a>
+    <a class="popup_link btn btn-xs btn-default" onfocus='this.blur();' href="javascript:showTestDetail('div_pt4.3')" >
+        pass</a>
 
-    <div id='div_ft4.3' class="popup_window">
+    <div id='div_pt4.3' class="popup_window">
         <div style='text-align: right;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_ft4.3').style.display = 'none' " >
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt4.3').style.display = 'none' " >
            [x]</a>
         </div>
         <pre>
         
-ft4.3: 2021-03-24 19:52:55,486 - Test - INFO - Input Data: SID: 200362586, password: 200362586, add course: math 100,suc: 0, assert: Course Already Completed
-Traceback (most recent call last):
-  File "C:\Users\xinyuliu\AppData\Roaming\Python\Python39\site-packages\ddt.py", line 182, in wrapper
-    return func(self, *args, **kwargs)
-  File "D:\Github\VSB_Plus\Code\Python\VSB_Plus Test\case\semesterBuilder_test.py", line 32, in test_prereq
-    self.builder = SemesterBuilder(semesterDriver)
-  File "d:\Github\VSB_Plus\Code\Python\VSB_Plus Test\common\funSemster.py", line 26, in __init__
-    self.driver.find_element_by_xpath(self.semsterPage).click()
-  File "C:\Users\xinyuliu\AppData\Roaming\Python\Python39\site-packages\selenium\webdriver\remote\webelement.py", line 80, in click
-    self._execute(Command.CLICK_ELEMENT)
-  File "C:\Users\xinyuliu\AppData\Roaming\Python\Python39\site-packages\selenium\webdriver\remote\webelement.py", line 633, in _execute
-    return self._parent.execute(command, params)
-  File "C:\Users\xinyuliu\AppData\Roaming\Python\Python39\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
-    self.error_handler.check_response(response)
-  File "C:\Users\xinyuliu\AppData\Roaming\Python\Python39\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
-    raise exception_class(message, screen, stacktrace)
-selenium.common.exceptions.ElementNotInteractableException: Message: element not interactable
-  (Session info: chrome=89.0.4389.90)
-
+pt4.3: 2021-03-25 11:57:43,995 - Test - INFO - Input Data: SID: 200362586, password: 200362586, add course: math 100,suc: 0, assert: Course Already Completed
 
 
         </pre>
@@ -792,40 +746,22 @@ selenium.common.exceptions.ElementNotInteractableException: Message: element not
     </td>
 </tr>
 
-<tr id='ft4.4' class='none'>
-    <td class='text text-warning'><div class='case'>test_prereq_4</div></td>
+<tr id='pt4.4' class='hiddenRow'>
+    <td class='text text-success'><div class='case'>test_prereq_4</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
-    <a class="popup_link btn btn-xs btn-default" onfocus='this.blur();' href="javascript:showTestDetail('div_ft4.4')" >
-        error</a>
+    <a class="popup_link btn btn-xs btn-default" onfocus='this.blur();' href="javascript:showTestDetail('div_pt4.4')" >
+        pass</a>
 
-    <div id='div_ft4.4' class="popup_window">
+    <div id='div_pt4.4' class="popup_window">
         <div style='text-align: right;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_ft4.4').style.display = 'none' " >
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt4.4').style.display = 'none' " >
            [x]</a>
         </div>
         <pre>
         
-ft4.4: 2021-03-24 19:53:10,123 - Test - INFO - Input Data: SID: 200362586, password: 200362586, add course: chem 104,suc: 0, assert: Course Already Completed
-Traceback (most recent call last):
-  File "C:\Users\xinyuliu\AppData\Roaming\Python\Python39\site-packages\ddt.py", line 182, in wrapper
-    return func(self, *args, **kwargs)
-  File "D:\Github\VSB_Plus\Code\Python\VSB_Plus Test\case\semesterBuilder_test.py", line 32, in test_prereq
-    self.builder = SemesterBuilder(semesterDriver)
-  File "d:\Github\VSB_Plus\Code\Python\VSB_Plus Test\common\funSemster.py", line 26, in __init__
-    self.driver.find_element_by_xpath(self.semsterPage).click()
-  File "C:\Users\xinyuliu\AppData\Roaming\Python\Python39\site-packages\selenium\webdriver\remote\webelement.py", line 80, in click
-    self._execute(Command.CLICK_ELEMENT)
-  File "C:\Users\xinyuliu\AppData\Roaming\Python\Python39\site-packages\selenium\webdriver\remote\webelement.py", line 633, in _execute
-    return self._parent.execute(command, params)
-  File "C:\Users\xinyuliu\AppData\Roaming\Python\Python39\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
-    self.error_handler.check_response(response)
-  File "C:\Users\xinyuliu\AppData\Roaming\Python\Python39\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
-    raise exception_class(message, screen, stacktrace)
-selenium.common.exceptions.ElementNotInteractableException: Message: element not interactable
-  (Session info: chrome=89.0.4389.90)
-
+pt4.4: 2021-03-25 11:57:50,745 - Test - INFO - Input Data: SID: 200362586, password: 200362586, add course: chem 104,suc: 0, assert: Course Already Completed
 
 
         </pre>
@@ -835,40 +771,22 @@ selenium.common.exceptions.ElementNotInteractableException: Message: element not
     </td>
 </tr>
 
-<tr id='ft4.5' class='none'>
-    <td class='text text-warning'><div class='case'>test_prereq_5</div></td>
+<tr id='pt4.5' class='hiddenRow'>
+    <td class='text text-success'><div class='case'>test_prereq_5</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
-    <a class="popup_link btn btn-xs btn-default" onfocus='this.blur();' href="javascript:showTestDetail('div_ft4.5')" >
-        error</a>
+    <a class="popup_link btn btn-xs btn-default" onfocus='this.blur();' href="javascript:showTestDetail('div_pt4.5')" >
+        pass</a>
 
-    <div id='div_ft4.5' class="popup_window">
+    <div id='div_pt4.5' class="popup_window">
         <div style='text-align: right;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_ft4.5').style.display = 'none' " >
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt4.5').style.display = 'none' " >
            [x]</a>
         </div>
         <pre>
         
-ft4.5: 2021-03-24 19:53:25,492 - Test - INFO - Input Data: SID: 200362586, password: 200362586, add course: asf,suc: 0, assert: Input Format Invalid
-Traceback (most recent call last):
-  File "C:\Users\xinyuliu\AppData\Roaming\Python\Python39\site-packages\ddt.py", line 182, in wrapper
-    return func(self, *args, **kwargs)
-  File "D:\Github\VSB_Plus\Code\Python\VSB_Plus Test\case\semesterBuilder_test.py", line 32, in test_prereq
-    self.builder = SemesterBuilder(semesterDriver)
-  File "d:\Github\VSB_Plus\Code\Python\VSB_Plus Test\common\funSemster.py", line 26, in __init__
-    self.driver.find_element_by_xpath(self.semsterPage).click()
-  File "C:\Users\xinyuliu\AppData\Roaming\Python\Python39\site-packages\selenium\webdriver\remote\webelement.py", line 80, in click
-    self._execute(Command.CLICK_ELEMENT)
-  File "C:\Users\xinyuliu\AppData\Roaming\Python\Python39\site-packages\selenium\webdriver\remote\webelement.py", line 633, in _execute
-    return self._parent.execute(command, params)
-  File "C:\Users\xinyuliu\AppData\Roaming\Python\Python39\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
-    self.error_handler.check_response(response)
-  File "C:\Users\xinyuliu\AppData\Roaming\Python\Python39\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
-    raise exception_class(message, screen, stacktrace)
-selenium.common.exceptions.ElementNotInteractableException: Message: element not interactable
-  (Session info: chrome=89.0.4389.90)
-
+pt4.5: 2021-03-25 11:57:57,608 - Test - INFO - Input Data: SID: 200362586, password: 200362586, add course: asf,suc: 0, assert: Input Format Invalid
 
 
         </pre>
@@ -883,9 +801,9 @@ selenium.common.exceptions.ElementNotInteractableException: Message: element not
         <tr id='total_row'>
             <td>Total</td>
             <td>23</td>
-            <td class="text text-success">18</td>
+            <td class="text text-success">22</td>
             <td class="text text-danger">0</td>
-            <td class="text text-warning">5</td>
+            <td class="text text-warning">1</td>
             <td>&nbsp;</td>
         </tr>
     </tfoot>

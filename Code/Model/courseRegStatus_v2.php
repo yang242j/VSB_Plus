@@ -79,7 +79,7 @@ if ($validFormat) {
     $strArr = get_PregExp_PreString($courseid);
     $status["PrereqNotes"] .= "\nPrerequisites:\n$strArr[0]\n";
     // 4.1 Check if the course is already completed
-    if (!in_array($courseid, $doneList)) {
+    if (!array_key_exists($courseid, $doneList)) {
         $status["Completion"] = false;
         // $status["Notes"] .= "NOT Completed.\n";
 

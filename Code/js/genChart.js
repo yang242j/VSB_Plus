@@ -112,6 +112,7 @@ function showGraph(name) {
 function genChart1(data, divId) {
     //Compute the data for graph
     var goodGrade = 0;
+    var aboveGrade = 0;
     var generalGrade = 0;
     var poorGrade = 0;
     var notPass = 0;
@@ -124,10 +125,37 @@ function genChart1(data, divId) {
         labels_list.add(takenCourse.term);
 
         var grade = takenCourse.final_grade
-        if (grade == 'NP') notPass += 1;
-        if (parseInt(grade) >= 80) goodGrade += 1;
-        if (parseInt(grade) >= 65) generalGrade += 1;
-        if (parseInt(grade) >= 50) poorGrade += 1;
+
+        switch (true){
+            case grade == 'NP': 
+                notPass += 1;
+                break;
+            case (parseInt(grade) >= 80):
+                goodGrade += 1;
+                break;
+            case (parseInt(grade) >= 70):
+                aboveGrade += 1;
+                break;
+            case (parseInt(grade) >= 60):
+                generalGrade += 1;
+                break;
+            case (parseInt(grade) >= 50):
+                poorGrade += 1;
+                break;
+            default:
+                console.log("Unkonw error happend in computing grade distribution")
+        }
+
+        // if (grade == 'NP') notPass += 1;
+        // else{
+        //     switch (parseInt(grade)){
+        //         case ((parseInt(grade))>80):
+
+        //     }
+        // }
+        // if (parseInt(grade) >= 80) goodGrade += 1;
+        // if (parseInt(grade) >= 65) generalGrade += 1;
+        // if (parseInt(grade) >= 50) poorGrade += 1;
 
     }
     var left_class = total_class - goodGrade - generalGrade - poorGrade;
@@ -145,7 +173,7 @@ function genChart1(data, divId) {
     data = {
         datasets: [{
             // data: [goodGrade, generalGrade, poorGrade, notPass, left_class],
-            data: [goodGrade, generalGrade, poorGrade, notPass],
+            data: [goodGrade,aboveGrade, generalGrade, poorGrade, notPass],
             backgroundColor: ['#99CC33', '#99CCFF',
                 '#FF6666', '#333333', '#CCCCCC',
                 // 'rgba(54, 162, 235, 0.2)',
@@ -157,11 +185,11 @@ function genChart1(data, divId) {
 
         // These labels appear in the legend and in the tooltips when hovering different arcs
         labels: [
-            'Good Grade',
-            'Generate',
-            'Poor',
-            'NP',
-            // 'Untaken',
+            'A (80 - 100)',
+            'B (70 - 79)',
+            'C (60 - 69)',
+            'D (50 - 59)',
+            'F (NotPass)',
         ]
     };
 
