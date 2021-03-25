@@ -28,12 +28,15 @@ function autocomplete(inputText, array2Check) {
 
             /*check if the shortName of the course object starts with the same letters as the text field value:*/
             if (array2Check[i].short_name.toUpperCase().includes(val.toUpperCase())) {
+
+                /*Define val.index */
+                valIndex = array2Check[i].short_name.toUpperCase().indexOf(val.toUpperCase());
                 
                 /*create a DIV element for each matching element:*/
                 b = document.createElement("DIV");
                 
                 /*make the matching letters bold:*/
-                b.innerHTML = array2Check[i].short_name.substr(0, indexOf(val.toUpperCase()));
+                b.innerHTML = array2Check[i].short_name.substr(0, valIndex);
                 b.innerHTML += "<strong>" + array2Check[i].short_name.substr(indexOf(val.toUpperCase()), val.length) + "</strong>";
                 b.innerHTML += array2Check[i].short_name.substr(val.length);
                 
