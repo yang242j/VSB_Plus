@@ -697,7 +697,6 @@ function termTransfer(term) {
 function ajaxpost(courseid, term, done) {
     // (A) GET FORM DATA
     var data = new FormData();
-    var preq;
     data.append("courseid", courseid);
     data.append("term", term);
     data.append("doneList", JSON.stringify(done));
