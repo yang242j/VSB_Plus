@@ -18,7 +18,7 @@ function autocomplete(inputText, array2Check) {
     /*execute when someone writes in the text field:*/
     inputText.addEventListener("input", function(e) {
         
-        var a, b, i, val = this.value;
+        var a, i, val = this.value;
         
         /*close any already open lists of autocompleted values*/
         closeAllLists();
@@ -38,7 +38,7 @@ function autocomplete(inputText, array2Check) {
 
             /*check if the shortName of the course object starts with the same letters as the text field value:*/
             if (array2Check[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
-                createDiv(b, array2Check[i]);
+                createDiv(a, array2Check[i]);
             }
             
             
@@ -103,9 +103,9 @@ function autocomplete(inputText, array2Check) {
         }
     }
 
-    function createDiv(b, courseObject) {
+    function createDiv(a, courseObject) {
         /*create a DIV element for each matching element:*/
-        b = document.createElement("DIV");
+        var b = document.createElement("DIV");
         
         /*make the matching letters bold:*/
         b.innerHTML = "<strong>" + courseObject.substr(0, val.length) + "</strong>";
