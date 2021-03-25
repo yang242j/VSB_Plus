@@ -506,7 +506,8 @@ function dragTest() {
                     container.push(doneList[i][j]);
                 }
             }
-            preq = ajaxpost(courseName, "202020", container);
+            
+            var preq = ajaxpost(courseName, "202020", container);
 
             //console.log(terminfo[0]);
             if (terminfo[0].length > 0) {
