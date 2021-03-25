@@ -273,7 +273,7 @@ body .container .bottom_right .courseTag {
     /*position the autocomplete items to be the same width as the container:*/
     top: 100%;
     left: 0;
-    right: 0;
+    /* right: 0; */
 }
 
 .autocomplete .autocomplete-items div {
