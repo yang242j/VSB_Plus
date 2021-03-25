@@ -86,7 +86,7 @@ function getElectivesData(major) {
     myRequest.send();
 }
 
-function course_Info() {
+/*function course_Info() {
 	for (i = 0; i < allCourseData.length; i++) {
 	if (allCourseData[i].short_name == courseName && allCourseData[i].title != null
             return ("<p>" + "Title: " + allCourseData[i].title + "</p>" + 
@@ -95,7 +95,7 @@ function course_Info() {
 	}
 		return ("Course Info not found");
 	
-}
+}*/
 	
 function showTerm(pageNumber) {
     var i = 1;
