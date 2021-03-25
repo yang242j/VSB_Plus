@@ -23,6 +23,7 @@ var doneList = [
     [],
     []
 ];
+var presetCourses = ['Precalculus 30', 'Calculus 30', 'CHEM 30', 'Mathematics B30', 'Mathematics C30', 'AMTH 092', 'MATH 102', 'MATH 103'];
 //fetch JSON data from takenClass database
 function fetchCourseJSON(sid, password) {
     $.post('Model/takenClass.php', {
@@ -58,6 +59,9 @@ function getCreditsEarned(data) {
 
 function storePassedCourse(data) {
     var dataJSON = JSON.parse(data);
+    for (i = 0; i < presetCourses.length; i++) {
+        doneList[0].push(presetCourses[i]);
+    }
     for (i = 0; i < dataJSON.length; i++) {
         if (dataJSON[i].credit_earned != 0) {
             doneList[0].push(dataJSON[i].course_ID);
