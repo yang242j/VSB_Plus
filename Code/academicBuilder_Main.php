@@ -34,7 +34,7 @@ if (isset($_SESSION["lastActTime"])) {
         exit();
     }
     $_SESSION["lastActTime"] = time();
-    echo $_SESSION["lastActTime"];
+    // echo $_SESSION["lastActTime"];
 }
 
 // Check if the user is logged in, if not then redirect him to login page

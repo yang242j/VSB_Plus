@@ -36,7 +36,7 @@ if (isset($_SESSION["lastActTime"])) {
         exit();
     }
     $_SESSION["lastActTime"] = time();
-    echo $_SESSION["lastActTime"];
+    // echo $_SESSION["lastActTime"];
 }
 ?>
 
