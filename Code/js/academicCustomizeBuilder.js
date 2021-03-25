@@ -484,8 +484,6 @@ function dragTest() {
             //var termCode = termTransfer(terminfo[0][1]);
             var container = [];
             //y.push(doneList[0][12]);        
-            //console.log(ajaxpost(courseName, "202020", y));
-            //console.log(ajaxpost("ENEL 280", "202020", x));
 
             for (i = 0; i <= dropZone.getAttribute("name"); i++) {
                 for (j = 0; j < doneList[i].length; j++) {
@@ -511,7 +509,7 @@ function dragTest() {
 
                 }
                 var term = [terminfo1, terminfo2, terminfo3];
-                deleteFromArray(term, null)
+                deleteFromArray(term, null);
 
 
                 document.getElementById(newForAlern).innerHTML = "Applied Term: </br>" +
@@ -581,9 +579,8 @@ function dragTest() {
                 //console.log(index);
                 doneList[index].push(courseName);
                 console.log(doneList);
-            }
-          
-                //ajaxpost(courseName, "202020", container);
+            }   
+            //ajaxpost(courseName, "202020", container);
             
             
 
