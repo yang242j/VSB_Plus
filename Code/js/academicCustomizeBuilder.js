@@ -576,10 +576,10 @@ function dragTest() {
                 //delete first then push
                 deleteFrom2DArray(container, courseName);
                 console.log(container);
-                //ajaxpost(courseName, "202020", container);
+                ajaxpost(courseName, "202020", container);
                 index = dropZone.getAttribute("name");
                 //console.log(index);
-                doneList[index].push(courseName);
+                container.push(courseName);
                 //console.log(doneList);
             }   
                    
