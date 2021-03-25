@@ -601,7 +601,7 @@ function dragTest() {
                 doneList[index].push(courseName);
                 //console.log(doneList);
             }
-            preqId = newForAlern2;
+            preqSignifier(preq,newForAlern2);
 
             dropZone.appendChild(droppedElement);
 
@@ -727,7 +727,6 @@ function ajaxpost(courseid, term, done) {
     };
     // (C) PREVENT HTML FORM SUBMIT
     xhr.send(data);
-    console.log("aasd");
     return false;
 }
 function clickGetInfo() {
