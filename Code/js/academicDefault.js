@@ -46,7 +46,9 @@ window.onload = function () {
 function fetchCourseJSON(short_name) {
     return $.post('Model/course.php', {
         short_name: short_name
-    }, function (data) {});
+    }, function (data) {
+    	showCourseInfo(data);
+    });
 }
 
 function getAllCourse() {
