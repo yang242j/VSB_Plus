@@ -177,6 +177,7 @@ function showCourses(data) {
         dragStart("#nct" + i);
     }
     dragTest();
+    preqSignifier(preq,preqId);
 
     /* for (const clickbleZone in document.querySelectorAll(".courseTags")) {
          console.log(clickbleZone.id);
@@ -443,6 +444,7 @@ var outputDonelist = [];
 var decidePreTrueOrFalse = false;
 var clickId;
 var preq;
+var preqId;
 //recored prev drop item course name
 function dragTest() {
     //const draggableElement = document.querySelector("#nct0");
@@ -599,7 +601,7 @@ function dragTest() {
                 doneList[index].push(courseName);
                 //console.log(doneList);
             }
-            preqSignifier(preq,newForAlern2);
+            preqId = newForAlern2;
 
             dropZone.appendChild(droppedElement);
 
