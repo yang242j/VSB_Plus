@@ -510,7 +510,7 @@ function dragTest() {
                 }
             }
 
-            ajaxpost(courseName, "202020", container);
+            ajaxpost(courseName, "202020", container,newForAlern2);
 
             //console.log(terminfo[0]);
             if (terminfo[0].length > 0) {
@@ -601,7 +601,6 @@ function dragTest() {
                 doneList[index].push(courseName);
                 //console.log(doneList);
             }
-            preqSignifier(preq,newForAlern2);
 
             dropZone.appendChild(droppedElement);
         });
@@ -696,7 +695,7 @@ function termTransfer(term) {
     if (term == "Spring/Summer") return 202020;
     if (term == "Fall") return 202030;
 }
-function ajaxpost(courseid, term, done) {
+function ajaxpost(courseid, term, done, id) {
     // (A) GET FORM DATA
     var data = new FormData();
     data.append("courseid", courseid);
@@ -713,7 +712,7 @@ function ajaxpost(courseid, term, done) {
             // Generate course tag
             //courseid = rsp.CourseID;
             preq = rsp.Prerequisites;
-            console.log(preq);
+            document.getElementById(id).style.color = "black";
             return true;
 
         } else {
@@ -721,7 +720,7 @@ function ajaxpost(courseid, term, done) {
             //console.log(rsp.Notes);s
             alert(rsp.CourseID + " :" + rsp.PrereqNotes);
             preq = rsp.Prerequisites;
-            console.log(preq);
+            document.getElementById(id).style.color = "red";
             return false;
         }
     };
