@@ -23,6 +23,7 @@ var doneList = [
     [],
     []
 ];
+var presetCourses = ['Precalculus 30', 'Calculus 30', 'CHEM 30', 'Mathematics B30', 'Mathematics C30', 'AMTH 092', 'MATH 102', 'MATH 103'];
 //fetch JSON data from takenClass database
 function fetchCourseJSON(sid, password) {
     $.post('Model/takenClass.php', {
@@ -58,6 +59,9 @@ function getCreditsEarned(data) {
 
 function storePassedCourse(data) {
     var dataJSON = JSON.parse(data);
+    for (i = 0; i < presetCourses.length; i++) {
+        doneList[0].push(presetCourses[i]);
+    }
     for (i = 0; i < dataJSON.length; i++) {
         if (dataJSON[i].credit_earned != 0) {
             doneList[0].push(dataJSON[i].course_ID);
@@ -100,7 +104,7 @@ function findCourseToTake(data) {
             courseCompleted[i] = data[i].course_ID;;
     }
 
-console.log(courseReqData);
+console.log(courseReqData[0].short_name);
    /* for (term in courseReqData) {
         for (i = 0; i < courseReqData[term].length; i++) {
             if (courseReqData[term][i] != "Approved") {
@@ -108,7 +112,7 @@ console.log(courseReqData);
             }
         }
     }*/
-    for (i =0;i<courseReqData.lenght;i++)
+    for (i =0;i<courseReqData.length;i++)
     {
         courseToTake.push(courseReqData[i].short_name);
     }

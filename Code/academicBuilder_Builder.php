@@ -109,6 +109,11 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     <div class="container">
 		<div class="welcome_tag" id = "welcome">
 			<h1 id = "show_credits">Credits:</h1>
+			<p style='font-size:18px'>Tips: 1.drag the course form course to take box and drop it on Customize Schedule Builder box.
+			The system will match the prerequiste and term for user, if confict happens some tips will show up. </p>
+			<p style='font-size:18px'>2.The course name is red when prerequiste confict happens  </p>
+			<p style='font-size:18px'>3.Term Info is red when term confict happens</p>
+			<p style='font-size:18px'>4.Some course is not applied because course changed does not updated </p>
 			<h2>Customize Schedule Builder (Not recommended use in touchscreen)</h2>
 		</div>
 

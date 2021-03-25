@@ -60,7 +60,7 @@ function getTitle(courseName) {
     }
     return ("Course Info not found");
 }
-// console.log(getTitle("CHEM 140"));
+ //console.log(getTitle("CHEM 140"));
 
 function getTermData(major) {
     var myRequest = new XMLHttpRequest;
@@ -86,6 +86,17 @@ function getElectivesData(major) {
     myRequest.send();
 }
 
+/*function course_Info() {
+	for (i = 0; i < allCourseData.length; i++) {
+	if (allCourseData[i].short_name == courseName && allCourseData[i].title != null
+            return ("<p>" + "Title: " + allCourseData[i].title + "</p>" + 
+			"<p>" + "Description: " + allCourseData[i].description + "</p>" +
+			"<p>" + "Prerequisite: " + allCourseData[i].prerequisite + "</p>");
+	}
+		return ("Course Info not found");
+	
+}*/
+	
 function showTerm(pageNumber) {
     var i = 1;
     for (term in termData) {
@@ -303,3 +314,6 @@ function allRight() {
         counter = 1;
     }
 }
+
+
+
