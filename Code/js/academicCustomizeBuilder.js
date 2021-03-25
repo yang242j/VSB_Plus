@@ -483,14 +483,19 @@ function dragTest() {
 
             //var termCode = termTransfer(terminfo[0][1]);
             var container = [];
-            //y.push(doneList[0][12]);        
-
+            //y.push(doneList[0][12]);  
+            if (dragFrom == "course_cards") {
+                //delete first then push
+                deleteFrom2DArray(doneList, courseName);
+            }         
             for (i = 0; i <= dropZone.getAttribute("name"); i++) {
                 for (j = 0; j < doneList[i].length; j++) {
                     //console.log(doneList[i][j]);
                     container.push(doneList[i][j]);
                 }
             }
+            ajaxpost(courseName, "202020", container);
+
             //console.log(terminfo[0]);
             if (terminfo[0].length > 0) {
                 var terminfo1, terminfo2, terminfo3 = "";
@@ -568,16 +573,17 @@ function dragTest() {
             if (check == true && dragFrom != "course_cards" && findExist(doneList[index], courseName) == false) {
                 index = dropZone.getAttribute("name");
                 doneList[index].push(courseName);     
-                ajaxpost(courseName, "202020", container); 
+                console.log(doneList);
 
             }
             if (check == true && dragFrom == "course_cards") {
                 //delete first then push
-                deleteFrom2DArray(container, courseName);
-                ajaxpost(courseName, "202020", container);
+                deleteFrom2DArray(doneList, courseName);
+                console.log(doneList);
+                
                 index = dropZone.getAttribute("name");
                 //console.log(index);
-                //container.push(courseName);
+                doneList[index].push(courseName);
                 //console.log(doneList);
             }   
                    
