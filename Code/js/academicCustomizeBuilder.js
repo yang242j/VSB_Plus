@@ -577,6 +577,7 @@ function dragTest() {
                 ajaxpost(courseName, "202020", container);
                 index = dropZone.getAttribute("name");
                 //console.log(index);
+                container.push(courseName);
                 //console.log(doneList);
             }   
                    
