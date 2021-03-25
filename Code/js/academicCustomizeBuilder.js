@@ -713,14 +713,14 @@ function ajaxpost(courseid, term, done) {
             // Generate course tag
             //courseid = rsp.CourseID;
             preq = rsp.Prerequisites;
-            //return true;
+            return true;
 
         } else {
             // Do nothing and alert the returned Notes
             //console.log(rsp.Notes);s
             alert(rsp.CourseID + " :" + rsp.PrereqNotes);
             preq = rsp.Prerequisites;
-            //return false;
+            return false;
         }
     };
     // (C) PREVENT HTML FORM SUBMIT
