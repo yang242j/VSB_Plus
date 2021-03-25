@@ -100,7 +100,7 @@ function findCourseToTake(data) {
             courseCompleted[i] = data[i].course_ID;;
     }
 
-console.log(courseReqData);
+console.log(courseReqData[0].short_name);
    /* for (term in courseReqData) {
         for (i = 0; i < courseReqData[term].length; i++) {
             if (courseReqData[term][i] != "Approved") {
