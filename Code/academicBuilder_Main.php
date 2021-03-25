@@ -24,7 +24,6 @@
  */
 
 session_start(); // Initialize the session
-session_cache_expire( 20 );
 
 // Check if user is inactive for a time period
 if (isset($_SESSION["lastActTime"])) {
