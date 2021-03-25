@@ -3,7 +3,7 @@ var countryArray = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguil
 
 /*Collect course objects from ALL.json*/
 $.getJSON("JSON/ALL.json", function(jsonObjArray) {
-    console.log(jsonObjArray); // this will show the info it in firebug console
+    console.log(jsonObjArray);
     /*Excuting the autocomplete function with input values*/
     autocomplete(document.getElementById("search_courseid"), jsonObjArray);
 });
@@ -33,30 +33,15 @@ function autocomplete(inputText, array2Check) {
         /*append the DIV element as a child of the autocomplete container:*/
         this.parentNode.appendChild(a);
         
-        /*for each item in the array...*/
+        /*for each object in the array...*/
         for (i = 0; i < array2Check.length; i++) {
-            /*check if the item starts with the same letters as the text field value:*/
-            if (array2Check[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
-                
-                /*create a DIV element for each matching element:*/
-                b = document.createElement("DIV");
-                
-                /*make the matching letters bold:*/
-                b.innerHTML = "<strong>" + array2Check[i].substr(0, val.length) + "</strong>";
-                b.innerHTML += array2Check[i].substr(val.length);
-                
-                /*insert a input field that will hold the current array item's value:*/
-                b.innerHTML += "<input type='hidden' value='" + array2Check[i] + "'>";
-                
-                /*execute a function when someone clicks on the item value (DIV element):*/
-                b.addEventListener("click", function(e) {
-                    /*insert the value for the autocomplete text field:*/
-                    inputText.value = this.getElementsByTagName("input")[0].value;
-                    /*close the list of autocompleted values, (or any other open lists of autocompleted values:*/
-                    closeAllLists();
-                });
-                a.appendChild(b);
+
+            /*loop through the object*/
+            for (const [key, value] of Object.entries(array2Check[i])) {
+                console.log(key);
+                console.log(value);
             }
+
         }
     });
     
