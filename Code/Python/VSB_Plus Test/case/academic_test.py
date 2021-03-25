@@ -13,6 +13,7 @@ class TestAcademicBuilder(unittest.TestCase):
     def setUp(self):
         self.logs=log.log_message()
         self.driver=webdriver.Chrome()
+        self.driver.maximize_window()
         self.driver.implicitly_wait(10)
         self.login=Login_test(self.driver)
     
@@ -39,6 +40,9 @@ class TestAcademicBuilder(unittest.TestCase):
         for action in self.actions:
             self.builder.dragIn(action, termNum)
             termNum += 1
+
+        # Get screenshot for every test
+        self.driver.get_screenshot_as_file(path+'/resultpang/acadmic/%s_%s.png' % (casedata['module'],casedata['id']))
 
         # Compare the result and expect value
         self.result = self.builder.getResult(self.suc) 

@@ -27,7 +27,7 @@ semesterBuilder:
     semsterPage: "/html/body/nav/div[3]/a[1]" #xpath
     termSele: "termSelector" #id
     courseSele: "search_courseid" #id
-    sumbitBtn: "//*[@id='top']/div[2]/form/input[2]" #xpath
+    sumbitBtn: "//*[@id='top']/div[2]/form/input" #xpath
     searchMsg: "searchMsg" #id  
     cardIdSuffix: "_Card" #suffix for adding coruse card
     courseCard: "courseCard_Containor " #class name
@@ -40,3 +40,5 @@ academicBuilder:
     showNavBar: "/html/body/nav/div[2]" #xpath
     semsterPage: "/html/body/nav/div[3]/a[1]" #xpath
     academicLink: "http://15.223.123.122/vsbp/Code/academicBuilder_Builder.php" #URL
+    leftMoveBtn: "nctLeft" #id
+    rightMoveBtn: "nctRight" #id

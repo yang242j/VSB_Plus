@@ -12,6 +12,7 @@ class TestCourseSearch(unittest.TestCase):
     def setUp(self):
         self.logs=log.log_message()
         self.driver=webdriver.Chrome()
+        self.driver.maximize_window()
         self.driver.implicitly_wait(10)
         self.courseDB=CourseDB_test(self.driver)
 
