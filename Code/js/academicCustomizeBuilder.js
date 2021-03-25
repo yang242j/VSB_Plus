@@ -108,7 +108,7 @@ console.log(courseReqData[0].short_name);
             }
         }
     }*/
-    for (i =0;i<courseReqData.lenght;i++)
+    for (i =0;i<courseReqData.length;i++)
     {
         courseToTake.push(courseReqData[i].short_name);
     }
