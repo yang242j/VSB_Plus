@@ -511,9 +511,11 @@ function dragTest() {
 
             if (preq == true) {
                 document.getElementById(newForAlern2).style.color = "red";
+                console.log(preq);
             }
             else {
                 document.getElementById(newForAlern2).style.color = "black";
+                console.log(preq);
             }
 
             //console.log(terminfo[0]);
