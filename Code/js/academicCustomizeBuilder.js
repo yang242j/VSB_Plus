@@ -491,7 +491,6 @@ function dragTest() {
                     container.push(doneList[i][j]);
                 }
             }
-
             //console.log(terminfo[0]);
             if (terminfo[0].length > 0) {
                 var terminfo1, terminfo2, terminfo3 = "";
@@ -576,7 +575,7 @@ function dragTest() {
             if (check == true && dragFrom == "course_cards") {
                 //delete first then push
                 deleteFrom2DArray(doneList, courseName);
-                console.log(doneList,courseName);
+                console.log(container);
                 //ajaxpost(courseName, "202020", container);
                 index = dropZone.getAttribute("name");
                 //console.log(index);
