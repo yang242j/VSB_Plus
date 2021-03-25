@@ -100,7 +100,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             $_SESSION["name"] = $name;
                             $_SESSION["major"] = $major;
                             $_SESSION["totalCredit"] = $totalCredit;
-                            $_SESSION["loginTime"] = time();
+                            $_SESSION["lastActTime"] = time();
 
                             // Redirect user to welcome page
                             header("location: academicBuilder_Main.php");
