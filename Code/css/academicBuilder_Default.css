@@ -322,7 +322,7 @@ footer {
     body .terms,
     body .tags_courses {
         width: 100%;
-        float: right;
+        float: left;
     }
 
     body .terms .termGrid .course_cards p {
