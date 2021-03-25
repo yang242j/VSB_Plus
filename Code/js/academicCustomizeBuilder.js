@@ -443,7 +443,7 @@ var outputDonelist = [];
 var decidePreTrueOrFalse = false;
 var clickId;
 // record the output for ajaxpost function
-var preq = true;
+var preq ;
 //recored prev drop item course name
 function dragTest() {
     //const draggableElement = document.querySelector("#nct0");
