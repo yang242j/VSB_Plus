@@ -38,7 +38,7 @@ function autocomplete(inputText, array2Check) {
 
             /*check if the shortName of the course object starts with the same letters as the text field value:*/
             if (array2Check[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
-                createDiv(array2Check[i]);
+                createDiv(b, array2Check[i]);
             }
             
             
@@ -103,7 +103,7 @@ function autocomplete(inputText, array2Check) {
         }
     }
 
-    function createDiv(courseObject) {
+    function createDiv(b, courseObject) {
         /*create a DIV element for each matching element:*/
         b = document.createElement("DIV");
         
