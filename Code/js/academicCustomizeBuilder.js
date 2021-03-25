@@ -574,7 +574,7 @@ function dragTest() {
             }
             if (check == true && dragFrom == "course_cards") {
                 //delete first then push
-                deleteFrom2DArray(doneList, courseName);
+                deleteFrom2DArray(container, courseName);
                 console.log(container);
                 //ajaxpost(courseName, "202020", container);
                 index = dropZone.getAttribute("name");
