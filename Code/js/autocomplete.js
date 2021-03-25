@@ -33,7 +33,8 @@ function autocomplete(inputText, array2Check) {
                 b = document.createElement("DIV");
                 
                 /*make the matching letters bold:*/
-                b.innerHTML = "<strong>" + array2Check[i].short_name.substr(0, val.length) + "</strong>";
+                b.innerHTML = array2Check[i].short_name.substr(0, indexOf(val.toUpperCase()));
+                b.innerHTML += "<strong>" + array2Check[i].short_name.substr(indexOf(val.toUpperCase()), val.length) + "</strong>";
                 b.innerHTML += array2Check[i].short_name.substr(val.length);
                 
                 /*insert a input field that will hold the current array item's value:*/
