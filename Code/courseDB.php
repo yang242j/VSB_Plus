@@ -25,8 +25,19 @@
  * @param       {string}        $_SESSION["name"]           Student name
  */
 
-session_start();
-// Initialize the session
+session_start();// Initialize the session
+
+// Check if user is inactive for a time period
+if (isset($_SESSION["lastActTime"])) {
+    $inactive = 600; // 1 min in seconds
+    $session_life = time() - $_SESSION["lastActTime"];
+    if($session_life > $inactive) {
+        header("location: Model/logout.php");
+        exit();
+    }
+    $_SESSION["lastActTime"] = time();
+    // echo $_SESSION["lastActTime"];
+}
 ?>
 
 <!doctype html>
@@ -123,6 +134,20 @@ session_start();
             <p id="filter_cond"></p> -->
         </form>
         <br>
+                <div>
+                    <img class="inline" src="img/filter.jpeg" alt="filter_img" align="top" height="20" width="20">
+                    <select class="inline" name="Filter sort" id="filter">
+                        <option value="all">ALL</option>
+                        <option value="first">First year class</option>
+                        <option value="second">Second year class</option>
+                        <option value="thrid">Thrid year class</option>
+                        <option value="fourth">Fourth year class</option>
+                    </select>
+                    <div class="inline" id="display_change">
+                        <img src="img/list.jpeg" alt="list change button" align="top" height="20" width="20">
+                    </div>
+                </div>
+                <br>
         </div>
         <div id="main_area">
             <div class="" id="search_area">
@@ -140,7 +165,7 @@ session_start();
                     <div class="tag round">CHEM</div>
                 </div>
                 <div class="shadow scroll course_list" id="course_list">
-                    <div class="course shadow round word_overflow" style="background-color: #99CCCC;" value="ENSE 400" onclick="courseSelect(this)">
+                    <!-- <div class="course shadow round word_overflow" style="background-color: #99CCCC;" value="ENSE 400" onclick="courseSelect(this)">
                         <span class="larger">ENSE 400</span>
                         <div class="left credit"> 3.00 Credit</div>
                         <br> <span class="bold">Systems Engineering Design Project</span>
@@ -153,33 +178,9 @@ session_start();
                                 compose a preliminary design document, and present their project to their fellow
                                 students.</span>
                         </div>
-                    </div>
-                    <!-- <div class="course shadow round" id="c2" style="background-color: #CCFF99;">ENEL 387</div>
-                    <div class="course shadow round" id="c3" style="background-color: #99CCFF;">ENSE 496AC</div>
-                    <div class="course shadow round" id="c4" style="background-color: #CCFFFF;">ENSE 496AD</div>
-                    <div class="course shadow round" id="c5" style="background-color: #e4e2e2bd;">ENSE 472</div> -->
-                </div>
-                <div></div>
-                <div>
-                    <img class="inline" src="img/filter.jpeg" alt="filter_img" align="top" height="20" width="20">
-                    <select class="inline" name="Filter sort" id="filter">
-                        <option value="all">ALL</option>
-                        <option value="first">First year class</option>
-                        <option value="second">Second year class</option>
-                        <option value="thrid">Thrid year class</option>
-                        <option value="fourth">Fourth year class</option>
-                    </select>
-                    <div class="inline" id="display_change">
-                        <img src="img/list.jpeg" alt="list change button" align="top" height="20" width="20">
-                    </div>
-                    <!-- <img id="display_change" src="img/list.jpeg" alt="list change button" align="top" height="20" width="20"> -->
+                    </div> -->
                 </div>
             </div>
-            <!-- <div class="course" id="c1" style="background-color: aqua;" onclick="butonClick()">ENSE 400</div>
-            <div class="course" id="c2" style="background-color: bisque;">ENEL 387</div>
-            <div class="course" id="c3" style="background-color: coral;">ENSE 496AC</div>
-            <div class="course" id="c4" style="background-color: cornflowerblue;">ENSE 496AD</div>
-            <div class="course" id="c5" style="background-color: darkkhaki;">ENSE 472</div> -->
             <div class="shadow scroll" id="popView">
                 <h2 id='title'>ENSE 400</h2>
                 <ul>

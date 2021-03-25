@@ -25,6 +25,18 @@
 
 session_start(); // Initialize the session
 
+// Check if user is inactive for a time period
+if (isset($_SESSION["lastActTime"])) {
+    $inactive = 600; // 1 min in seconds
+    $session_life = time() - $_SESSION["lastActTime"];
+    if($session_life > $inactive) {
+        header("location: Model/logout.php");
+        exit();
+    }
+    $_SESSION["lastActTime"] = time();
+    // echo $_SESSION["lastActTime"];
+}
+
 // Check if the user is logged in, if not then redirect him to login page
 if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     header("location: login.php");

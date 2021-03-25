@@ -27,14 +27,18 @@ function autocomplete(inputText, array2Check) {
         for (i = 0; i < array2Check.length; i++) {
 
             /*check if the shortName of the course object starts with the same letters as the text field value:*/
-            if (array2Check[i].short_name.substr(0, val.length).toUpperCase() == val.toUpperCase()) {
+            if (array2Check[i].short_name.toUpperCase().includes(val.toUpperCase())) {
+
+                /*Define val.index */
+                valIndex = array2Check[i].short_name.toUpperCase().indexOf(val.toUpperCase());
                 
                 /*create a DIV element for each matching element:*/
                 b = document.createElement("DIV");
                 
                 /*make the matching letters bold:*/
-                b.innerHTML = "<strong>" + array2Check[i].short_name.substr(0, val.length) + "</strong>";
-                b.innerHTML += array2Check[i].short_name.substr(val.length);
+                b.innerHTML = array2Check[i].short_name.substr(0, valIndex);
+                b.innerHTML += "<strong><u>" + array2Check[i].short_name.substr(valIndex, val.length) + "</u></strong>";
+                b.innerHTML += array2Check[i].short_name.substr(valIndex+val.length);
                 
                 /*insert a input field that will hold the current array item's value:*/
                 b.innerHTML += "<input type='hidden' value='" + array2Check[i].short_name + "'>";
@@ -50,14 +54,18 @@ function autocomplete(inputText, array2Check) {
             }
 
             /*check if the title of the course object starts with the same letters as the text field value:*/
-            if (array2Check[i].title.substr(0, val.length).toUpperCase() == val.toUpperCase()) {
+            if (array2Check[i].title.toUpperCase().includes(val.toUpperCase())) {
+
+                /*Define val.index */
+                valIndex = array2Check[i].title.toUpperCase().indexOf(val.toUpperCase());
                 
                 /*create a DIV element for each matching element:*/
                 b = document.createElement("DIV");
                 
                 /*make the matching letters bold:*/
-                b.innerHTML = "<strong>" + array2Check[i].title.substr(0, val.length) + "</strong>";
-                b.innerHTML += array2Check[i].title.substr(val.length);
+                b.innerHTML = array2Check[i].title.substr(0, valIndex);
+                b.innerHTML += "<strong><u>" + array2Check[i].title.substr(valIndex, val.length) + "</u></strong>";
+                b.innerHTML += array2Check[i].title.substr(valIndex+val.length);
                 
                 /*insert a input field that will hold the current array item's value:*/
                 b.innerHTML += "<input type='hidden' value='" + array2Check[i].short_name + "'>";

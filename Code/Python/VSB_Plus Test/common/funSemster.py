@@ -22,7 +22,7 @@ class SemesterBuilder:#封装
         self.courseCard = self.data['semesterBuilder'].get('courseCard')
 
         # Get to the semester builder page
-        self.driver.find_element_by_xpath(self.showNavBar).click()
+        # self.driver.find_element_by_xpath(self.showNavBar).click()
         self.driver.find_element_by_xpath(self.semsterPage).click()
 
     # Selecte the term that want to add course to

@@ -141,15 +141,15 @@ body .tags_courses {
     position: relative; 
     width: 35%;
     float: right;
-    /* height: 700px; */
+    /* height: 1700px;  */
     /*border: 2px solid black;*/
     /* display: inline-grid; */
     /* grid-template-columns: 100%; */
     /* grid-template-rows: 18% 82%; */
     /* column-gap: 15px; */
     /* row-gap: 10px; */
-    /* margin-left: 65%; */
-    /* margin-top: -480px; */
+    /* margin-left: 65%; 
+    margin-top: -1700px;  */
 }
 
 body .tags_courses #default_icon {

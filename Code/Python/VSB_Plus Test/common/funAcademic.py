@@ -26,8 +26,10 @@ class AcademicBuilder:#封装
         # Get to the semester builder page
         self.driver.get(self.academicLink)
 
+
     def dragIn(self, courses, termNum):
         self.driver.maximize_window()
+        self.driver.execute_script("window.scrollTo(0, 500)")
         time.sleep(1)
         for index, course in enumerate(courses):
             # self.rightMove()

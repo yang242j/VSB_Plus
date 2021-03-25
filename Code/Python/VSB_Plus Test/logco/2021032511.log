@@ -1,0 +1,54 @@
+2021-03-25 11:35:13,230 - Test - INFO - Input Data: SID: 200362586, password: 200362586, add course: ENGL 100,suc: 1, assert: MATH 110 registration success.
+2021-03-25 11:35:20,091 - Test - INFO - Input Data: SID: 200362586, password: 200362586, add course: cs 340,suc: 0, assert: Prerequisites [Not Matched]
+2021-03-25 11:35:27,160 - Test - INFO - Input Data: SID: 200362586, password: 200362586, add course: math 100,suc: 0, assert: Course Already Completed
+2021-03-25 11:35:34,070 - Test - INFO - Input Data: SID: 200362586, password: 200362586, add course: chem 104,suc: 0, assert: Course Already Completed
+2021-03-25 11:35:40,835 - Test - INFO - Input Data: SID: 200362586, password: 200362586, add course: asf,suc: 0, assert: Input Format Invalid
+2021-03-25 11:37:35,656 - Test - INFO - Input Data: SID: 200362878, password: 200362878, add course: [['MATH 110']],suc: 1, assert: 3
+2021-03-25 11:37:41,824 - Test - INFO - Input Data: SID: 200362878, password: 200362878, add course: [['MATH 111']],suc: 0, assert: Prerequisites [Not Matched]:
+2021-03-25 11:37:47,818 - Test - INFO - Input Data: SID: 200362878, password: 200362878, add course: [['ENGG 100', 'ENGL 100', 'MATH 110', 'ENGG 123', 'CHEM 104']],suc: 1, assert: 15
+2021-03-25 11:37:56,026 - Test - INFO - Input Data: ENSE,suc:1,assert:ENSE
+2021-03-25 11:38:01,772 - Test - INFO - Input Data: ENEL,suc:1,assert:ENEL
+2021-03-25 11:38:07,385 - Test - INFO - Input Data: ENEV,suc:1,assert:ENEV
+2021-03-25 11:38:12,966 - Test - INFO - Input Data: ENIN,suc:1,assert:ENIN
+2021-03-25 11:38:18,881 - Test - INFO - Input Data: CS,suc:1,assert:CS
+2021-03-25 11:38:25,915 - Test - INFO - Input Data: short_name:CHEM 104,suc:1,assert:General Chemistry I
+2021-03-25 11:38:32,698 - Test - INFO - Input Data: short_name:CHEM 103,suc:0,assert:CHEM 103 cannot be found
+2021-03-25 11:38:39,318 - Test - INFO - Input Data: short_name:CS 210,suc:1,assert:Data Structures and Abstractions
+2021-03-25 11:38:46,293 - Test - INFO - Input Data: short_name:CS 215,suc:1,assert:Web and Database Programming
+2021-03-25 11:38:53,147 - Test - INFO - Input Data: short_name:ENEL 487,suc:1,assert:Embedded and Real-Time Software Systems
+2021-03-25 11:38:56,675 - Test - INFO - Input Data: SID: 200362586, password: 200362586,suc: 1, assert: Welcome Yang, Jingkang
+2021-03-25 11:39:01,455 - Test - INFO - Input Data: SID: 200362586, password: 2003,suc: 0, assert: The password was not valid.
+2021-03-25 11:39:05,792 - Test - INFO - Input Data: SID: 2003, password: 200362587,suc: 0, assert: No account found with that student_id.
+2021-03-25 11:39:09,924 - Test - INFO - Input Data: SID: 200362586, password: ,suc: 0, assert: Please enter your password.
+2021-03-25 11:39:15,671 - Test - INFO - Input Data: SID: , password: ,suc: 0, assert: Please enter student_id.Please enter your password.
+2021-03-25 11:39:19,902 - Test - INFO - Input Data: SID: 200362586, password: 200362586, add course: ENGL 100,suc: 1, assert: ENGL 100 registration success.
+2021-03-25 11:39:27,178 - Test - INFO - Input Data: SID: 200362586, password: 200362586, add course: cs 340,suc: 0, assert: Prerequisites [Not Matched]
+2021-03-25 11:39:34,084 - Test - INFO - Input Data: SID: 200362586, password: 200362586, add course: math 100,suc: 0, assert: Course Already Completed
+2021-03-25 11:39:41,005 - Test - INFO - Input Data: SID: 200362586, password: 200362586, add course: chem 104,suc: 0, assert: Course Already Completed
+2021-03-25 11:39:47,770 - Test - INFO - Input Data: SID: 200362586, password: 200362586, add course: asf,suc: 0, assert: Input Format Invalid
+2021-03-25 11:54:29,661 - Test - INFO - Input Data: SID: 200362878, password: 200362878, add course: [['MATH 110']],suc: 1, assert: 3
+2021-03-25 11:54:37,257 - Test - INFO - Input Data: SID: 200362878, password: 200362878, add course: [['MATH 111']],suc: 0, assert: Prerequisites [Not Matched]:
+2021-03-25 11:54:44,769 - Test - INFO - Input Data: SID: 200362878, password: 200362878, add course: [['ENGG 100', 'ENGL 100', 'MATH 110', 'ENGG 123', 'CHEM 104']],suc: 1, assert: 15
+2021-03-25 11:55:38,060 - Test - INFO - Input Data: SID: 200362878, password: 200362878, add course: [['MATH 110']],suc: 1, assert: 3
+2021-03-25 11:55:45,663 - Test - INFO - Input Data: SID: 200362878, password: 200362878, add course: [['MATH 111']],suc: 0, assert: Prerequisites [Not Matched]:
+2021-03-25 11:55:53,284 - Test - INFO - Input Data: SID: 200362878, password: 200362878, add course: [['ENGG 100', 'ENGL 100', 'MATH 110', 'ENGG 123', 'CHEM 104']],suc: 1, assert: 15
+2021-03-25 11:56:07,134 - Test - INFO - Input Data: ENSE,suc:1,assert:ENSE
+2021-03-25 11:56:12,656 - Test - INFO - Input Data: ENEL,suc:1,assert:ENEL
+2021-03-25 11:56:18,149 - Test - INFO - Input Data: ENEV,suc:1,assert:ENEV
+2021-03-25 11:56:23,815 - Test - INFO - Input Data: ENIN,suc:1,assert:ENIN
+2021-03-25 11:56:29,407 - Test - INFO - Input Data: CS,suc:1,assert:CS
+2021-03-25 11:56:36,979 - Test - INFO - Input Data: short_name:CHEM 104,suc:1,assert:General Chemistry I
+2021-03-25 11:56:43,459 - Test - INFO - Input Data: short_name:CHEM 103,suc:0,assert:CHEM 103 cannot be found
+2021-03-25 11:56:50,186 - Test - INFO - Input Data: short_name:CS 210,suc:1,assert:Data Structures and Abstractions
+2021-03-25 11:56:56,985 - Test - INFO - Input Data: short_name:CS 215,suc:1,assert:Web and Database Programming
+2021-03-25 11:57:03,581 - Test - INFO - Input Data: short_name:ENEL 487,suc:1,assert:Embedded and Real-Time Software Systems
+2021-03-25 11:57:08,089 - Test - INFO - Input Data: SID: 200362586, password: 200362586,suc: 1, assert: Welcome Yang, Jingkang
+2021-03-25 11:57:12,869 - Test - INFO - Input Data: SID: 200362586, password: 2003,suc: 0, assert: The password was not valid.
+2021-03-25 11:57:17,159 - Test - INFO - Input Data: SID: 2003, password: 200362587,suc: 0, assert: No account found with that student_id.
+2021-03-25 11:57:21,403 - Test - INFO - Input Data: SID: 200362586, password: ,suc: 0, assert: Please enter your password.
+2021-03-25 11:57:25,609 - Test - INFO - Input Data: SID: , password: ,suc: 0, assert: Please enter student_id.Please enter your password.
+2021-03-25 11:57:29,785 - Test - INFO - Input Data: SID: 200362586, password: 200362586, add course: ENGL 100,suc: 1, assert: ENGL 100 registration success.
+2021-03-25 11:57:37,107 - Test - INFO - Input Data: SID: 200362586, password: 200362586, add course: cs 340,suc: 0, assert: Prerequisites [Not Matched]
+2021-03-25 11:57:43,995 - Test - INFO - Input Data: SID: 200362586, password: 200362586, add course: math 100,suc: 0, assert: Course Already Completed
+2021-03-25 11:57:50,745 - Test - INFO - Input Data: SID: 200362586, password: 200362586, add course: chem 104,suc: 0, assert: Course Already Completed
+2021-03-25 11:57:57,608 - Test - INFO - Input Data: SID: 200362586, password: 200362586, add course: asf,suc: 0, assert: Input Format Invalid

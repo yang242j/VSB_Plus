@@ -51,7 +51,7 @@ function loadCourses() {
 function loadCourseData(json) {
     //The case there json is empty
     if (json.length == 0) {
-        $("#course_list").html("<p>No course are found!</p>");
+        $("#course_list").html("<p> - There is no course in the selected faculty for the " + filter_key + " year. </p> <p> - Try to select other faculty or year.</p>");
     }
     length = Math.min(json.length, num_perid);
     for (index = 0; index < length; index++) {
