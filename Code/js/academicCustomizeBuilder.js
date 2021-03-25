@@ -710,6 +710,7 @@ function ajaxpost(courseid, term, done) {
         if (rsp.Prerequisites == true) {
             // Generate course tag
             //courseid = rsp.CourseID;
+            preq = rsp.Prerequisites;
             return true;
 
         } else {
