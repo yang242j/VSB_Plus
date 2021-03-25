@@ -177,7 +177,8 @@ function showCourses(data) {
         dragStart("#nct" + i);
     }
     dragTest();
-    preqSignifier(preq,preqId);
+    document.querySelectorAll(".course_cards").drop = preqSignifier(preq,preqId);
+    
 
     /* for (const clickbleZone in document.querySelectorAll(".courseTags")) {
          console.log(clickbleZone.id);
@@ -648,9 +649,8 @@ function dragTest() {
                 //console.log(doneList);
             }
             dropZone.appendChild(droppedElement);
-
-
         });
+
 
     }
 }
