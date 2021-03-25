@@ -604,8 +604,6 @@ function dragTest() {
             preqSignifier(preq,newForAlern2);
 
             dropZone.appendChild(droppedElement);
-
-
         });
     }
 
@@ -656,11 +654,11 @@ function dragTest() {
 function preqSignifier(preq,id){
     if (preq == true) {
         document.getElementById(id).style.color = "black";
-        console.log(preq);
+    
     }
     else if (preq == false) {
         document.getElementById(id).style.color = "red";
-        console.log(preq);
+    
     }
 }
 //find a item and delete it 
@@ -715,6 +713,7 @@ function ajaxpost(courseid, term, done) {
             // Generate course tag
             //courseid = rsp.CourseID;
             preq = rsp.Prerequisites;
+            console.log(preq);
             return true;
 
         } else {
@@ -722,6 +721,7 @@ function ajaxpost(courseid, term, done) {
             //console.log(rsp.Notes);s
             alert(rsp.CourseID + " :" + rsp.PrereqNotes);
             preq = rsp.Prerequisites;
+            console.log(preq);
             return false;
         }
     };
