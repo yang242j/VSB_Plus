@@ -199,6 +199,7 @@ function btnForCourse(data) {
     var enseBtn = document.getElementById("btnENSE");
     var enelBtn = document.getElementById("btnENEL");
     var csBtn = document.getElementById("btnCS");
+    var mathBtn = document.getElementById("btnMATH");
     var otherBtn = document.getElementById("btnOTHER");
 
 
@@ -281,7 +282,17 @@ function btnForCourse(data) {
             }
         }
     }
-
+    mathBtn.onclick = function () {
+        var block = document.getElementsByClassName("clickable");
+        for (element of block) {
+            if (element.innerHTML.includes('M') && element.innerHTML.includes('A') && element.innerHTML.includes('T')) {
+                element.style.visibility = "visible";
+            }
+            else {
+                element.style.visibility = "hidden";
+            }
+        }
+    }
 
     /*$("#nctRight").bind("click", function (event) {
         event.preventDefault();

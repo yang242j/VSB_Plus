@@ -218,9 +218,10 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 				<h3>Course to take</h3>
 				<nav>
 				<button id = "btnALL" style='font-size:24px;color:white;font-weight: bold background-color: transparent'>ALL</button>
-				<button id = "btnENSE"style='font-size:24px;color:white;font-weight: bold background-color: transparent'>ENSE</button>
-				<button id = "btnENEL"style='font-size:24px;color:white;font-weight: bold background-color: transparent'>ENEL</button>
-				<button id = "btnCS"style='font-size:24px;color:white;font-weight: bold background-color: transparent'>CS</button>	
+				<button id = "btnENSE" style='font-size:24px;color:white;font-weight: bold background-color: transparent'>ENSE</button>
+				<button id = "btnENEL" style='font-size:24px;color:white;font-weight: bold background-color: transparent'>ENEL</button>
+				<button id = "btnCS" style='font-size:24px;color:white;font-weight: bold background-color: transparent'>CS </button>
+				<button id = "btnMATH" style='font-size:24px;color:white;font-weight: bold background-color: transparent'>MATH</button>		
 				<!--<button id = "btnOTHER"style='font-size:24px;color:white;font-weight: bold background-color: transparent'>OTHER</button>
 				-->
 				</nav>
