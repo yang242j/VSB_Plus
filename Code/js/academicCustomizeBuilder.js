@@ -69,7 +69,8 @@ function storePassedCourse(data) {
 function getTermData(faculty) {
     var myRequest = new XMLHttpRequest;
     var facultyName = faculty;
-    var url = "JSON/reqCourse/" + facultyName + "_req.json";
+    //var url = "JSON/reqCourse/" + facultyName + "_req.json";
+    var url = "JSON/" + facultyName + ".json";
     myRequest.open("GET", url, false);
     myRequest.onload = function () {
         var data = JSON.parse(myRequest.responseText);
@@ -99,7 +100,7 @@ function findCourseToTake(data) {
             courseCompleted[i] = data[i].course_ID;;
     }
 
-
+console.log(courseReqData);
     for (term in courseReqData) {
         for (i = 0; i < courseReqData[term].length; i++) {
             if (courseReqData[term][i] != "Approved") {
@@ -107,7 +108,9 @@ function findCourseToTake(data) {
             }
         }
     }
-console.log(courseReqData);
+
+
+console.log(courseToTake);
     // minus taken class from all course list
     var courseNotCompleted = courseToTake.filter(function (n) {
         return courseCompleted.indexOf(n) === -1;
