@@ -427,8 +427,7 @@ function getAllCourse() {
 }
 //record which field is this dragelement from
 var draagFrom;
-// record the output for ajaxpost function
-var preq;
+
 
 function dragStart(elementId) {
     const draggableElement = document.querySelector(elementId);
@@ -443,6 +442,8 @@ var index = 0;
 var outputDonelist = [];
 var decidePreTrueOrFalse = false;
 var clickId;
+// record the output for ajaxpost function
+var preq = true;
 //recored prev drop item course name
 function dragTest() {
     //const draggableElement = document.querySelector("#nct0");
