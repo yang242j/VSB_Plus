@@ -303,3 +303,6 @@ function allRight() {
         counter = 1;
     }
 }
+
+
+
