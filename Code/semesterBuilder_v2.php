@@ -51,7 +51,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/semester.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.5.1/main.css">
-    <script src="js/autocomplete.js"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.5.1/main.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
     <script>
@@ -396,7 +396,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     <footer>
         <script src="js/main.js"></script>
         <script src="js/semester.js"></script>
-        
+        <script src="js/autocomplete.js"></script>
         <p class="copyright">Copyright &copy; Sep. 2020 to
             <script>
                 document.write(new Date().getFullYear())
