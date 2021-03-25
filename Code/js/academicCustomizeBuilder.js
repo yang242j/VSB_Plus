@@ -593,10 +593,9 @@ function dragTest() {
             if (check == true && dragFrom == "course_cards") {
                 //delete first then push
                 deleteFrom2DArray(doneList, courseName);
-                console.log(doneList);
 
                 index = dropZone.getAttribute("name");
-                //console.log(index);
+               
                 doneList[index].push(courseName);
                 //console.log(doneList);
             }
@@ -725,7 +724,7 @@ function ajaxpost(courseid, term, done) {
     };
     // (C) PREVENT HTML FORM SUBMIT
     xhr.send(data);
-    //return false;
+    return false;
 }
 function clickGetInfo() {
     for (clickZone of document.querySelectorAll(".clickable")) {
