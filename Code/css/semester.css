@@ -240,7 +240,6 @@ body .container .bottom_right .courseTag {
 }
 
 /*********************************/
-/*the container must be positioned relative:*/
 .autocomplete {
     position: relative;
     display: inline-block;
@@ -270,7 +269,6 @@ body .container .bottom_right .courseTag {
     border-bottom: none;
     border-top: none;
     z-index: 99;
-    /*position the autocomplete items to be the same width as the container:*/
     top: 100%;
     left: 0;
     /* right: 0; */
