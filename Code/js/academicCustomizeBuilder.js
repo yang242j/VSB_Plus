@@ -526,7 +526,6 @@ function dragTest() {
             }
             //chekc prerequisite
             //deleteFrom2DArray(doneList, courseName);
-            ajaxpost(courseName, "202020", container);
             // use short name to show course name
             // chekc if it is in right term
             for (i = 0; i < terminfo[0].length; i++) {
@@ -572,6 +571,7 @@ function dragTest() {
             if (check == true && dragFrom != "course_cards" && findExist(doneList[index], courseName) == false) {
                 index = dropZone.getAttribute("name");
                 doneList[index].push(courseName);
+                
                 console.log(doneList);
 
             }
@@ -583,6 +583,11 @@ function dragTest() {
                 doneList[index].push(courseName);
                 console.log(doneList);
             }
+            if(dragFrom == "course_cards")
+            {
+                ajaxpost(courseName, "202020", container);
+            }
+            
 
             dropZone.appendChild(droppedElement);
 
