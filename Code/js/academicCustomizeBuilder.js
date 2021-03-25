@@ -101,12 +101,16 @@ function findCourseToTake(data) {
     }
 
 console.log(courseReqData);
-    for (term in courseReqData) {
+   /* for (term in courseReqData) {
         for (i = 0; i < courseReqData[term].length; i++) {
             if (courseReqData[term][i] != "Approved") {
                 courseToTake.push(courseReqData[term][i]);
             }
         }
+    }*/
+    for (i =0;i<courseReqData.lenght;i++)
+    {
+        courseToTake.push(courseReqData[i].short_name);
     }
 
 
