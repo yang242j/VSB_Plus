@@ -322,17 +322,6 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 				<h3>All Other Course Electives:</h3>
 				<div class = "course_tag_electives enel_course_tag" id = "all_course_tag">
 					<p id = "all0" onclick="courseSelect(event)"></p>
-					
-                <h2 id='title'><!--ENSE 400--></h2>
-                <ul>
-                    <li><span class="bold"><!--Course Name--></span> <span id='fullName'><!--ENSE Project Start-up--></span> </li>
-                    <li><span class="bold"><!--Prerequisites--></span> <span id='preReqClass'><!--ENSE 470 and successful completion of 99 credit hours--></span> </li>
-                    <li><span class="bold"><!--Course Description--></span> <!--: Students are given the opportunity to propose, 
-                    develop and present engineering design projects which they are expected to further pursue in ENSE 477. 
-                    Issues of safety, feasibility, and engineering responsibility are discussed. Student form design teams in 
-                    this class and are expected to write a project plan document, compose a preliminary design document, and 
-                    present their project to their fellow students.--></li>
-                </ul>
 					<p id = "all1" onclick="courseSelect(event)"></p>
 					<p id = "all2" onclick="courseSelect(event)"></p>
 					<p id = "all3" onclick="courseSelect(event)"></p>
@@ -353,6 +342,16 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 				</div>
 			</div>
 			
+			<h2 id='title'><!--ENSE 400--></h2>
+                <ul>
+                    <p><span class="bold"><!--Course Name--></span><!--:--> <span id='fullName'><!--ENSE Project Start-up--></span> </p>
+                    <p><span class="bold"><!--Prerequisites--></span><!--:--> <span id='preReqClass'><!--ENSE 470 and successful completion of 99 credit hours--></span> </p>
+                    <p><span class="bold"><!--Course Description--></span> <!--: Students are given the opportunity to propose, 
+                    develop and present engineering design projects which they are expected to further pursue in ENSE 477. 
+                    Issues of safety, feasibility, and engineering responsibility are discussed. Student form design teams in 
+                    this class and are expected to write a project plan document, compose a preliminary design document, and 
+                    present their project to their fellow students.--></p>
+                </ul>
 		</section>
 	</div>
 </body>
