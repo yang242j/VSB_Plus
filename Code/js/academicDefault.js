@@ -43,13 +43,13 @@ window.onload = function () {
 //     });
 // }
 
-function fetchCourseJSON(short_name) {
-    return $.post('Model/course.php', {
-        short_name: short_name
-    }, function (data) {
-    	showCourseInfo(data);
-    });
-}
+//function fetchCourseJSON(short_name) {
+//   return $.post('Model/course.php', {
+//        short_name: short_name
+//    }, function (data) {
+//    	showCourseInfo(data);
+//    });
+//}
 
 /*function showCourseInfo(data) {
 	var dataCourse = JSON.parse(data);
@@ -337,6 +337,25 @@ function allRight() {
     } else {
         counter = 1;
     }
+}
+
+
+function courseInfo() {
+
+	for (i = 0; i < 12; i++) {
+		
+    //var element = document.getElementById("course_input");
+		var course = document.getElementById("all" + i);
+		
+    //var input = element.value.toUpperCase();
+		var input_course = course.value.toUpperCase();
+		
+    //element.setAttribute("value", input);
+		course.setAttribute("value", input_course);
+		
+    //courseSelect(element);
+		courseSelect(course);
+	}
 }
 
 
