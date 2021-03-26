@@ -358,5 +358,9 @@ function courseInfo() {
 	}
 }
 
+function courseSelect(event) {
+    var short_name = event.getAttribute("value");
+    selected(short_name);
+}
 
 
