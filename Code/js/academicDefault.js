@@ -362,9 +362,9 @@ function selected(short_name) {
 }
 
 function setCourse(jsonRsp) {
-    var courseInfo = "" + jsonRsp.short_name + "" +
-        "Course Name: " + jsonRsp.title + "" +
-        "Prerequisites: " + jsonRsp.prerequisite + "" +
-        "Course Description: " + jsonRsp.description + "";
+    var courseInfo = "<p>" + jsonRsp.short_name + "</p>" +
+        "<p>" + "Course Name: " + jsonRsp.title + "</p>" +
+        "<p>" + "Prerequisites: " + jsonRsp.prerequisite + "</p>" +
+        "<p>" + "Course Description: " + jsonRsp.description + "</p>";
     alert(courseInfo);
 } 
