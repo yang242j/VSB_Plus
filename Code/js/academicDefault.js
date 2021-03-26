@@ -363,9 +363,8 @@ function selected(short_name) {
 
 function setCourse(jsonRsp) {
     var courseInfo = "" + jsonRsp.short_name + "\n" +
-        "<ul>" +
-        "<p><span class='bold'>Course Name</span>: <span id='fullName'>" + jsonRsp.title + "</span> </p>" +
-        "<p><span class='bold'>Prerequisites</span>: <span id='preReqClass'>" + jsonRsp.prerequisite + "</span></p>" +
-        "<p><span class='bold'>Course Description</span>: " + jsonRsp.description + "</p>" + "</ul>";
+        "Course Name: " + jsonRsp.title + "\n" +
+        "Prerequisites: " + jsonRsp.prerequisite + "\n" +
+        "Course Description: " + jsonRsp.description + "\n";
     alert(courseInfo);
 } 
