@@ -321,20 +321,20 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 			<div class = "electives_course enel_course">
 				<h3>All Other Course Electives:</h3>
 				<div class = "course_tag_electives enel_course_tag" id = "all_course_tag">
-					<p id = "all0"></p>
-					<p id = "all1"></p>
-					<p id = "all2"></p>
-					<p id = "all3"></p>
+					<p id = "all0" onclick="courseInfo()"></p>
+					<p id = "all1" onclick="courseInfo()"></p>
+					<p id = "all2" onclick="courseInfo()"></p>
+					<p id = "all3" onclick="courseInfo()"></p>
 
-					<p id = "all4"></p>
-					<p id = "all5"></p>
-					<p id = "all6"></p>
-					<p id = "all7"></p>
+					<p id = "all4" onclick="courseInfo()"></p>
+					<p id = "all5" onclick="courseInfo()"></p>
+					<p id = "all6" onclick="courseInfo()"></p>
+					<p id = "all7" onclick="courseInfo()"></p>
 					
-					<p id = "all8"></p>
-					<p id = "all9"></p>
-					<p id = "all10"></p>
-					<p id = "all11"></p>
+					<p id = "all8" onclick="courseInfo()"></p>
+					<p id = "all9" onclick="courseInfo()"></p>
+					<p id = "all10" onclick="courseInfo()"></p>
+					<p id = "all11" onclick="courseInfo()"></p>
 				</div>
 				<div>
 					<button class="left_arrow" id ="allCourseLeft" onclick = "allLeft()"><i class='fas fa-angle-left'></i></button>
