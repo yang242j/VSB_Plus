@@ -348,10 +348,10 @@ function courseInfo() {
 		var course = document.getElementById("all" + i);
 		
     //var input = element.value.toUpperCase();
-		var input_course = course.value.toUpperCase();
+		//var input_course = course.value.toUpperCase();
 		
     //element.setAttribute("value", input);
-		course.setAttribute("value", input_course);
+		//course.setAttribute("value", input_course);
 		
     //courseSelect(element);
 		courseSelect(course);
