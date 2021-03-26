@@ -339,7 +339,7 @@ function allRight() {
     }
 }
 
-
+// 这个function可以不用的
 function courseInfo() {
 
 	for (i = 0; i < 12; i++) {
@@ -359,7 +359,9 @@ function courseInfo() {
 }
 
 function courseSelect(event) {
-    var short_name = event.getAttribute("value");
+    let target = event.srcElement;
+    var short_name = target.innerHTML;
+    console.log(short_name);
     selected(short_name);
 }
 
