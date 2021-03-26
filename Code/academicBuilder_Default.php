@@ -120,11 +120,11 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 			<div id = "autoscroll">
 				<div class = "termGrid" id = "term1">
 					<div class = "tittle" style = "grid-area: title;"><h2>Term1:</h2></div>
-					<div class = "course_cards" onclick = "alert(course_Info())"></div>
-					<div class = "course_cards"></div>
-					<div class = "course_cards"></div>
-					<div class = "course_cards"></div>
-					<div class = "course_cards">
+					<div class = "course_cards" onclick="courseSelect(event)"></div>
+					<div class = "course_cards" onclick="courseSelect(event)"></div>
+					<div class = "course_cards" onclick="courseSelect(event)"></div>
+					<div class = "course_cards" onclick="courseSelect(event)"></div>
+					<div class = "course_cards" onclick="courseSelect(event)">
 						<!--<h3>?php echo $_POST["course_ID"]; ?></h3>-->
 						
 					   <!-- <i class='fas fa-circle' style='font-size:24px;color:red'></i>  
@@ -342,16 +342,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 				</div>
 			</div>
 			
-			<h2 id='title'><!--ENSE 400--></h2>
-                <ul>
-                    <p><span class="bold"><!--Course Name--></span><!--:--> <span id='fullName'><!--ENSE Project Start-up--></span> </p>
-                    <p><span class="bold"><!--Prerequisites--></span><!--:--> <span id='preReqClass'><!--ENSE 470 and successful completion of 99 credit hours--></span> </p>
-                    <p><span class="bold"><!--Course Description--></span> <!--: Students are given the opportunity to propose, 
-                    develop and present engineering design projects which they are expected to further pursue in ENSE 477. 
-                    Issues of safety, feasibility, and engineering responsibility are discussed. Student form design teams in 
-                    this class and are expected to write a project plan document, compose a preliminary design document, and 
-                    present their project to their fellow students.--></p>
-                </ul>
+			
 		</section>
 	</div>
 </body>
