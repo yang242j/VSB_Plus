@@ -134,7 +134,7 @@ function showTerm(pageNumber) {
                     if (pageNumber < 12) {
                         document.getElementById("term" + i).innerHTML =
                             "<div class = 'tittle'>" + "<h2>" + term + ":" + "</h2></div>" +
-                            "<div class = 'course_cards' onclick="courseSelect(event)">" + "<h3>" + termData[term][0] + "</h3>" +
+                            "<div class = 'course_cards'>" + "<h3>" + termData[term][0] + "</h3>" +
                             "<p>" + getTitle(termData[term][0]) + "</p>" +
                             /*"<i class='fas fa-circle' id = 'circle1' style='font-size:24px;'></i>"+
                             "<i class='fas fa-circle' style='font-size:24px;color:red'></i>"+
