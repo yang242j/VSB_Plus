@@ -339,24 +339,6 @@ function allRight() {
     }
 }
 
-// 这个function可以不用的
-function courseInfo() {
-
-	for (i = 0; i < 12; i++) {
-		
-    //var element = document.getElementById("course_input");
-		var course = document.getElementById("all" + i);
-		
-    //var input = element.value.toUpperCase();
-		//var input_course = course.value.toUpperCase();
-		
-    //element.setAttribute("value", input);
-		//course.setAttribute("value", input_course);
-		
-    //courseSelect(element);
-		courseSelect(course);
-	}
-}
 
 function courseSelect(event) {
     let target = event.srcElement;
@@ -380,10 +362,9 @@ function selected(short_name) {
 }
 
 function setCourse(jsonRsp) {
-    var courseInfo = "<h2 id='title'>" + jsonRsp.short_name + "</h2>" +
-        "<ul>" +
-        "<li><span class='bold'>Course Name</span>: <span id='fullName'>" + jsonRsp.title + "</span> </li>" +
-        "<li>***<span class='bold'>Prerequisites</span>: <span id='preReqClass'>" + jsonRsp.prerequisite + "</span> ***</li>" +
-        "<li><span class='bold'>Course Description</span>: " + jsonRsp.description + "</li>" + "</ul>";
+    var courseInfo = "" + jsonRsp.short_name + "" +
+        "Course Name: " + jsonRsp.title + "" +
+        "Prerequisites: " + jsonRsp.prerequisite + "" +
+        "Course Description: " + jsonRsp.description + "";
     alert(courseInfo);
 } 
