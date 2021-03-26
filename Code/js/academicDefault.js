@@ -363,4 +363,25 @@ function courseSelect(event) {
     selected(short_name);
 }
 
+function selected(short_name) {
+    console.log("get set course funciton");
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function () {       
+            var jsonRsp = JSON.parse(this.responseText);
+            setCourse(jsonRsp);
+    };
 
+    // xmlhttp.open("GET", "getCourse.php?short_name=" + short_name, false); // Get the data from database by the server php file
+    var json_url = "JSON/202020/" + short_name + ".json"; //Get the course information from the locat 
+    xmlhttp.open("GET", json_url, false);
+    xmlhttp.send();
+}
+
+function setCourse(jsonRsp) {
+    var courseInfo = "<h2 id='title'>" + jsonRsp.short_name + "</h2>" +
+        "<ul>" +
+        "<li><span class='bold'>Course Name</span>: <span id='fullName'>" + jsonRsp.title + "</span> </li>" +
+        "<li>***<span class='bold'>Prerequisites</span>: <span id='preReqClass'>" + jsonRsp.prerequisite + "</span> ***</li>" +
+        "<li><span class='bold'>Course Description</span>: " + jsonRsp.description + "</li>" + "</ul>";
+    alert(courseInfo);
+} 
