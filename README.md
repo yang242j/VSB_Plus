@@ -47,7 +47,5 @@ The purpose of this UofR Software Engineering Capstone Project is to enhance the
 # Poster
 ![Poster](Document/SSE%20Group%206%20Poster.pdf)
 
-# Presentation
-
 # Final Demo
 [![vlog](https://img.youtube.com/vi/zOJYWrD3nk8/0.jpg)](https://www.youtube.com/watch?v=zOJYWrD3nk8)
