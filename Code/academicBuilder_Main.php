@@ -184,7 +184,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                 document.write(new Date().getFullYear())
             </script> UofR VSB_Plus Capstone Group All Rights Reserved<br>
             <cite>
-                Credit:
+                Credit: Graph generator source code from chartjs.org version 2.9.4<br>
             </cite>
         </p>
         <p class="info-link"><a href="homePage.php">About Us</a></p>
