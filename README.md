@@ -44,6 +44,10 @@ The purpose of this UofR Software Engineering Capstone Project is to enhance the
 
 - [HiFi - Calendar view](Document/Prototype/Calendar%20View%20HiFi.png)
 
+# Poster
+![Poster](Document/SSE%20Group%206%20Poster.pdf)
+
 # Presentation
 
 # Final Demo
+[![vlog](https://img.youtube.com/vi/zOJYWrD3nk8/0.jpg)](https://www.youtube.com/watch?v=zOJYWrD3nk8)
