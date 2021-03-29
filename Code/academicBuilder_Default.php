@@ -220,7 +220,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 
 		<section id ="block" class = "tags_courses">  
 			<h2>Approved Electives</h2>
-			<div class = "electives_course ense_course">
+			<!-- <div class = "electives_course ense_course">
 				<h3>ENSE:</h3>
 
 				<div class = "course_tag_electives ense_course_tag" id = "approvedCourse">
@@ -242,13 +242,13 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 				<!--<div>
 					<button class="left_arrow" id ="approvedLeft"  onclick = "aLeft()"><i class='fas fa-angle-left'></i></button>
 					<button class="right_arrow" id ="approvedRight" onclick = "aRight()"><i class='fas fa-angle-right'></i></button>
-				</div>-->
+				</div>
 			</div>
 
 			<div class = "electives_course cs_course">
 				<h3>CS:</h3>
 				<div class = "course_tag_electives cs_course_tag" id = "not_completed_tag">
-					<!-- <p id = "nct0" onclick="alert(courseInfo())">ENSE 271</p>-->
+					<!-- <p id = "nct0" onclick="alert(courseInfo())">ENSE 271</p>
 					<p id = "cs0"></p>
 					<p id = "cs1"></p>
 					<p id = "cs2"></p>
@@ -267,7 +267,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 				<!--<div>
 					<button class="left_arrow" id ="notCompletedLeft" onclick = "nctLeft()"><i class='fas fa-angle-left'></i></button>
 					<button class="right_arrow" id ="notCompletedRight" onclick = "nctRight()"><i class='fas fa-angle-right'></i></button>
-				</div>-->
+				</div>
 			</div>
 			
 			<div class = "electives_course enel_course">
@@ -291,7 +291,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 				<!--<div>
 					<button class="left_arrow" id ="notCompletedLeft" onclick = "enctLeft()"><i class='fas fa-angle-left'></i></button>
 					<button class="right_arrow" id ="notCompletedRight" onclick = "enctRight()"><i class='fas fa-angle-right'></i></button>
-				</div>-->
+				</div>
 			</div>
 			
 			<div class = "electives_course enin_course">
@@ -315,8 +315,8 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 				<!--<div>
 					<button class="left_arrow" id ="notCompletedLeft" onclick = "enctLeft()"><i class='fas fa-angle-left'></i></button>
 					<button class="right_arrow" id ="notCompletedRight" onclick = "enctRight()"><i class='fas fa-angle-right'></i></button>
-				</div>-->
-			</div>
+				</div>
+			</div>-->
 			
 			<div class = "electives_course enel_course">
 				<h3>All Other Course Electives:</h3>
