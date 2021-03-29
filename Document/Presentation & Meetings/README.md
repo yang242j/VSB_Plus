@@ -4,18 +4,18 @@
 
 - [Scrum Doc & PPT](Scrums)
 
-    - [Scrum #1](Scrums/Scrum#1)
+    - [Scrum #1](Scrums/Scrum%231)
 
-    - [Scrum #2](Scrums/Scrum#2)
+    - [Scrum #2](Scrums/Scrum%232)
 
-    - [Scrum #3](Scrums/Scrum#3)
+    - [Scrum #3](Scrums/Scrum%233)
 
-    - [Scrum #4](Scrums/Scrum#4)
+    - [Scrum #4](Scrums/Scrum%234)
 
-    - [Scrum #5](Scrums/Scrum#5)
+    - [Scrum #5](Scrums/Scrum%235)
 
-    - [Scrum #6](Scrums/Scrum#6)
+    - [Scrum #6](Scrums/Scrum%236)
 
-    - [Scrum #7](Scrums/Scrum#7)
+    - [Scrum #7](Scrums/Scrum%237)
 
 - [Vlogs](Vlogs/vlog.md)
