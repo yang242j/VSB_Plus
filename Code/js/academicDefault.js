@@ -107,6 +107,7 @@ function getElectivesData(major) {
     myRequest.onload = function () {
         var data = JSON.parse(myRequest.responseText);
         electivesData = data;
+        showElectives();    // 用XMLHttpRequest的话，数据最好是在这个function内，直接使用，而不是store data后使用
     }
     myRequest.send();
 }
@@ -223,7 +224,8 @@ function showENSE_electives() {
         if (electives = "ENSE") {
             /*for (i = 7; i <= 13; i++) {*/
                 for (i = 0; i < 7; i++) {
-                	document.getElementById("ense" + i).innerHTML = electivesData[electives][i];
+                	// document.getElementById("ense" + i).innerHTML = electivesData[electives][i];
+                	document.getElementById("e" + i).innerHTML = electivesData[electives][i];
             	}
            }            
      }
@@ -264,7 +266,8 @@ function showCS_electives() {
         if (electives = "CS") {
             /*for (i = 7; i <= 13; i++) {*/
                 for (i = 0; i < 7; i++) {
-                	document.getElementById("cs" + i).innerHTML = electivesData[electives][i];
+                	// document.getElementById("cs" + i).innerHTML = electivesData[electives][i];
+                    document.getElementById("e" + i).innerHTML = electivesData[electives][i];
             	}
            }            
      }
@@ -287,7 +290,8 @@ function showENEL_electives() {
         if (electives = "ENEL") {
             /*for (i = 7; i <= 13; i++) {*/
                 for (i = 0; i < 2; i++) {
-                	document.getElementById("enel" + i).innerHTML = electivesData[electives][i];
+                	// document.getElementById("enel" + i).innerHTML = electivesData[electives][i];
+                    document.getElementById("e" + i).innerHTML = electivesData[electives][i];
             	}
            }            
      }
@@ -298,7 +302,8 @@ function showENIN_electives() {
         if (electives = "ENIN") {
             /*for (i = 7; i <= 13; i++) {*/
                 for (i = 0; i < 7; i++) {
-                	document.getElementById("enin" + i).innerHTML = electivesData[electives][i];
+                	// document.getElementById("enin" + i).innerHTML = electivesData[electives][i];
+                    document.getElementById("e" + i).innerHTML = electivesData[electives][i];
             	}
            }            
      }
@@ -306,6 +311,7 @@ function showENIN_electives() {
 
 function showAllCourse() {
     for (i = 0; i < 12; i++) {
+        // document.getElementById("all" + i).innerHTML = allCourseData[i].short_name;
         document.getElementById("all" + i).innerHTML = allCourseData[i].short_name;
     }
 }
@@ -388,7 +394,7 @@ function setCourse(jsonRsp) {
     alert(courseInfo);
 } 
 
-/*function showElectives() {
+function showElectives() {
 
 	for(electives in electivesData){
 		if (electives == "ENSE") {
@@ -404,7 +410,7 @@ function setCourse(jsonRsp) {
 			showENIN_electives();
 		}
 	}
-}*/
+}
 
 /*function showElectives() {
 	var i = 0;

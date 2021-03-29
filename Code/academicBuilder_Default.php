@@ -247,7 +247,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 			</div>
 			
 			<script>
-				showElectives();
+				// showElectives();
 			</script>
 			
 			<!-- <div class = "electives_course ense_course">
