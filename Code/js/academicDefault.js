@@ -229,12 +229,12 @@ function showTerm(pageNumber) {
      }
 }*/
 
-function showENSE_electives() {
+/*function showENSE_electives() {
 	var i = 0;
 	
     for (electives in electivesData) {
         if (electives = "ENSE") {
-            /*for (i = 7; i <= 13; i++) {*/
+            /*for (i = 7; i <= 13; i++) {
                 if (i < 7) {
 			document.getElementById("e" + i).innerHTML =
 				"<div class = "electives_course">" + "<h3>" + electives + ":" + "</h3>" +
@@ -245,7 +245,7 @@ function showENSE_electives() {
 		}
            }            
      }
-}
+}*/
 
 /*function showCS_electives() {
     for (term in termData) {
@@ -388,7 +388,7 @@ function setCourse(jsonRsp) {
     alert(courseInfo);
 } 
 
-function showElectives() {
+/*function showElectives() {
 
 	for(electives in electivesData){
 		if (electives == "ENSE") {
@@ -401,4 +401,50 @@ function showElectives() {
 			showENIN_electives();
 		}
 	}
+}*/
+
+function showElectives() {
+	var i = 0;
+	
+	for(electives in electivesData){
+		if (electives == "ENSE") {
+			if (i < 7) {
+				document.getElementById("e" + i).innerHTML =
+					"<div class = "electives_course">" + "<h3>" + electives + ":" + "</h3>" +
+					"<div class = "course_tag_electives ense_course_tag" id = "approvedCourse">" + 
+					"<p>" + electivesData[electives][i] + "</p>" + "</div>" + "</div>";
+
+					i++;
+			}
+		}else if (electives == "CS") {
+			if (i < 7) {
+				document.getElementById("e" + i).innerHTML =
+					"<div class = "electives_course">" + "<h3>" + electives + ":" + "</h3>" +
+					"<div class = "course_tag_electives ense_course_tag" id = "approvedCourse">" + 
+					"<p>" + electivesData[electives][i] + "</p>" + "</div>" + "</div>";
+
+					i++;
+			}
+		}else if (electives == "ENEL"){
+			if (i < 7) {
+				document.getElementById("e" + i).innerHTML =
+					"<div class = "electives_course">" + "<h3>" + electives + ":" + "</h3>" +
+					"<div class = "course_tag_electives ense_course_tag" id = "approvedCourse">" + 
+					"<p>" + electivesData[electives][i] + "</p>" + "</div>" + "</div>";
+
+					i++;
+			}
+		}else if (electives == "ENIN") {
+			if (i < 7) {
+				document.getElementById("e" + i).innerHTML =
+					"<div class = "electives_course">" + "<h3>" + electives + ":" + "</h3>" +
+					"<div class = "course_tag_electives ense_course_tag" id = "approvedCourse">" + 
+					"<p>" + electivesData[electives][i] + "</p>" + "</div>" + "</div>";
+
+					i++;
+			}
+		}
+	}
 }
+
+
