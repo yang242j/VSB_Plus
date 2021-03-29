@@ -10,7 +10,7 @@
 
 - [Role/Attribute-based Access Control (R/ABAC) vision](/)
 
-- [Project Roadmaps (Kanban, USM)](/)
+- [Project Roadmaps (Kanban, USM)](https://github.com/yang242j/VSB_Plus/projects)
 
 - [Prototypes/Wireframes (Lo/Hi-Fidelity)](Prototypes)
 
