@@ -393,11 +393,14 @@ function setCourse(jsonRsp) {
 	for(electives in electivesData){
 		if (electives == "ENSE") {
 			showENSE_electives();
-		}else if (electives == "CS") {
+		}
+		if (electives == "CS") {
 			showCS_electives();
-		}else if (electives == "ENEL"){
+		}
+		if (electives == "ENEL"){
 			showENEL_electives();
-		}else if (electives == "ENIN") {
+		}
+		if (electives == "ENIN") {
 			showENIN_electives();
 		}
 	}
@@ -416,7 +419,8 @@ function setCourse(jsonRsp) {
 
 					i++;
 			}
-		}else if (electives == "CS") {
+		}
+		if (electives == "CS") {
 			if (i < 7) {
 				document.getElementById("e" + i).innerHTML =
 					"<div class = "electives_course">" + "<h3>" + electives + ":" + "</h3>" +
@@ -425,7 +429,8 @@ function setCourse(jsonRsp) {
 
 					i++;
 			}
-		}else if (electives == "ENEL"){
+		}
+		if (electives == "ENEL"){
 			if (i < 7) {
 				document.getElementById("e" + i).innerHTML =
 					"<div class = "electives_course">" + "<h3>" + electives + ":" + "</h3>" +
@@ -434,7 +439,8 @@ function setCourse(jsonRsp) {
 
 					i++;
 			}
-		}else if (electives == "ENIN") {
+		}
+		if (electives == "ENIN") {
 			if (i < 7) {
 				document.getElementById("e" + i).innerHTML =
 					"<div class = "electives_course">" + "<h3>" + electives + ":" + "</h3>" +
