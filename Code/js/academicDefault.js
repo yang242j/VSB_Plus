@@ -221,7 +221,7 @@ function showTerm(pageNumber) {
 function showENSE_electives() {
     for (electives in electivesData) {
         if (electives = "ENSE") {
-            /*for (i = 7; i <= 13; i++) {
+            /*for (i = 7; i <= 13; i++) {*/
                 for (i = 0; i < 7; i++) {
                 	document.getElementById("ense" + i).innerHTML = electivesData[electives][i];
             	}
