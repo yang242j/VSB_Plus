@@ -220,6 +220,36 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 
 		<section id ="block" class = "tags_courses">  
 			<h2>Approved Electives</h2>
+			
+			<div class = "electives_course">
+				<h3></h3>
+
+				<div class = "course_tag_electives ense_course_tag" id = "approvedCourse">
+					<p id = "e0"></p>
+					<p id = "e1"></p>
+					<p id = "e2"></p>
+					<p id = "e3"></p>
+
+					<p id = "e4"></p>
+					<p id = "e5"></p>
+					<p id = "e6"></p>
+					<p id = "e7"></p>
+					
+					<p id = "e8"></p>
+					<p id = "e9"></p>
+					<p id = "e10"></p>
+					<p id = "e11"></p>
+				</div>
+				<!--<div>
+					<button class="left_arrow" id ="approvedLeft"  onclick = "aLeft()"><i class='fas fa-angle-left'></i></button>
+					<button class="right_arrow" id ="approvedRight" onclick = "aRight()"><i class='fas fa-angle-right'></i></button>
+				</div>-->
+			</div>
+			
+			<script>
+				showElectives();
+			</script>
+			
 			<!-- <div class = "electives_course ense_course">
 				<h3>ENSE:</h3>
 
