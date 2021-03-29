@@ -218,7 +218,7 @@ function showTerm(pageNumber) {
         }
     }
 }*/
-/*function showENSE_electives() {
+function showENSE_electives() {
     for (electives in electivesData) {
         if (electives = "ENSE") {
             /*for (i = 7; i <= 13; i++) {
@@ -227,7 +227,7 @@ function showTerm(pageNumber) {
             	}
            }            
      }
-}*/
+}
 
 /*function showENSE_electives() {
 	var i = 0;
@@ -403,7 +403,7 @@ function setCourse(jsonRsp) {
 	}
 }*/
 
-function showElectives() {
+/*function showElectives() {
 	var i = 0;
 	
 	for(electives in electivesData){
@@ -445,6 +445,6 @@ function showElectives() {
 			}
 		}
 	}
-}
+}*/
 
 
