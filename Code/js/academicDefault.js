@@ -13,7 +13,7 @@ window.onload = function () {
     
     showTerm(1);
     showAllCourse();
-    showElectives();
+    /*showElectives();*/
     /*showENSE_electives();
     showCS_electives();
     showENEL_electives();
