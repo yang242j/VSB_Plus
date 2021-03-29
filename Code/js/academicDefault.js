@@ -218,14 +218,31 @@ function showTerm(pageNumber) {
         }
     }
 }*/
-
-function showENSE_electives() {
+/*function showENSE_electives() {
     for (electives in electivesData) {
         if (electives = "ENSE") {
-            /*for (i = 7; i <= 13; i++) {*/
+            /*for (i = 7; i <= 13; i++) {
                 for (i = 0; i < 7; i++) {
                 	document.getElementById("ense" + i).innerHTML = electivesData[electives][i];
             	}
+           }            
+     }
+}*/
+
+function showENSE_electives() {
+	var i = 0;
+	
+    for (electives in electivesData) {
+        if (electives = "ENSE") {
+            /*for (i = 7; i <= 13; i++) {*/
+                if (i < 7) {
+			document.getElementById("e" + i).innerHTML =
+				"<div class = "electives_course">" + "<h3>" + electives + ":" + "</h3>" +
+				"<div class = "course_tag_electives ense_course_tag" id = "approvedCourse">" + 
+				"<p>" + electivesData[electives][i] + "</p>" + "</div>" + "</div>";
+
+			i++;
+		}
            }            
      }
 }
