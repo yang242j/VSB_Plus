@@ -13,7 +13,8 @@ window.onload = function () {
     
     showTerm(1);
     showAllCourse();
-    showENSE_electives();
+    showElectives();
+    /*showENSE_electives();
     showCS_electives();
     showENEL_electives();
     showENIN_electives();
@@ -369,3 +370,18 @@ function setCourse(jsonRsp) {
 	jsonRsp.description + "\n";
     alert(courseInfo);
 } 
+
+function showElectives() {
+
+	for(electives in electivesData){
+		if (electives == "ENSE") {
+			showENSE_electives();
+		}else if (electives == "CS") {
+			showCS_electives();
+		}else if (electives == "ENEL"){
+			showENEL_electives();
+		}else if (electives == "ENIN") {
+			showENIN_electives();
+		}
+	}
+}
