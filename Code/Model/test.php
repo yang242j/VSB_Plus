@@ -116,7 +116,6 @@ Expression: <pre><mark><b><?php print_r($expStr); ?></b></mark></pre><br>
 Status: <pre><mark><b><?php print_r($status); ?></b></mark></pre><br>
 
 <h1><?php print_r($username); ?></h1>
-<a href="Model/logout.php">Logout</a>
 
 </body>
 </html>
