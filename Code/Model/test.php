@@ -5,11 +5,8 @@ session_start();
 // Check if the user is already logged in, if yes then redirect him to Academic home page
 if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
     $username = $_SESSION["name"];
-}
-
-// Check if the user is logged in as admin, if yes then redirect him to Admin home page
-if (isset($_SESSION["admin"]) && $_SESSION["admin"] === true) {
-    $username = $_SESSION["name"];
+} else {
+    $username = "Not logged in";
 }
 
 $preStr = $expStr = $status = '';
