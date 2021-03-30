@@ -82,7 +82,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                 <?php echo htmlspecialchars($_SESSION["name"]); ?>
             </a>
             <div class="hidden" id="addon-menu">
-                <a><?php echo htmlspecialchars($_SESSION["sid"]); ?></a>
+                <a><?php echo htmlspecialchars($_SESSION["id"]); ?></a>
                 <a href="Model/logout.php">Logout</a>
             </div>
         </div>
@@ -267,7 +267,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                         <?php
                         // Include the vsbp_db_config.php file
                         require_once "Model/vsbp_db_config.php";
-                        $tableName = "S" . $_SESSION['sid'];
+                        $tableName = "S" . $_SESSION['id'];
                         $takenClass_sql =
                             "SELECT `course_ID` FROM `" .
                             $tableName .

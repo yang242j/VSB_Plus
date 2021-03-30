@@ -25,7 +25,11 @@ session_start(); // Initialize the session
 
 // Check if the user is already logged in, if yes then redirect him to Academic home page
 if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
-    header("location: academicBuilder_Main.php");
+    if ($_SESSION["admin"] === true) {
+        header('Location: Model/test.php');
+    } else {
+        header("location: academicBuilder_Main.php");
+    }
     exit();
 }
 

@@ -65,7 +65,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     <script type="text/javascript" src="js/academicDefault.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script>
-		var sid = "<?php echo $_SESSION["sid"]; ?>";
+		var sid = "<?php echo $_SESSION["id"]; ?>";
         	var pas = "<?php echo $_SESSION["password"]; ?>";
         	var major = "<?php echo $_SESSION["major"]; ?>";
 		
@@ -91,7 +91,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                 $_SESSION["name"]
             ); ?></a>
             <div class="hidden" id="addon-menu">
-                <a><?php echo htmlspecialchars($_SESSION["sid"]); ?></a>
+                <a><?php echo htmlspecialchars($_SESSION["id"]); ?></a>
                 <a href="Model/logout.php">Logout</a>
             </div>
         </div>

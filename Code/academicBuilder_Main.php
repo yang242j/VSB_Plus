@@ -17,7 +17,7 @@
  * @link        http://15.223.123.122/vsbp/Code/academicBuilder_Main.php
  * @author      Xinyu Liu (sid: 200362878) <liu725@uregina.ca>
  * @param       {boolean}       $_SESSION["loggedin"]       Status of logged-in or not: true/false
- * @param       {integer}       $_SESSION["sid"]            Student id
+ * @param       {integer}       $_SESSION["id"]            Student id
  * @param       {string}        $_SESSION["name"]           Student name
  * @param       {string}        $_SESSION["major"]          Student major
  * @param       {string}        $_SESSION["password"]       Student password
@@ -70,7 +70,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     <!-- <script src="https://cdn.bootcdn.net/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" integrity="sha256-t9UJPrESBeG2ojKTIcFLPGF7nHi2vEc7f5A2KpH/UBU=" crossorigin="anonymous"></script>
     <script>
-        var sid = "<?php echo $_SESSION["sid"]; ?>";
+        var sid = "<?php echo $_SESSION["id"]; ?>";
         var pas = "<?php echo $_SESSION["password"]; ?>";
         var major = "<?php echo $_SESSION["major"]; ?>";
         var isMobile = window.matchMedia('(max-width: 1080px)').matches;
@@ -97,7 +97,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                 $_SESSION["name"]
             ); ?></a>
             <div class="hidden" id="addon-menu">
-                <a><?php echo htmlspecialchars($_SESSION["sid"]); ?></a>
+                <a><?php echo htmlspecialchars($_SESSION["id"]); ?></a>
                 <a href="Model/logout.php">Logout</a>
             </div>
         </div>

@@ -19,7 +19,7 @@
  * @link        http://15.223.123.122/vsbp/Code/login.php
  * @author      Jingkang Yang (sid: 200362586) <yang242j@uregina.ca>
  * @param       {boolean}       $_SESSION["loggedin"]       Status of logged-in or not: true/false
- * @param       {integer}       $_SESSION["sid"]            Student id
+ * @param       {integer}       $_SESSION["id"]            Student id
  * @param       {string}        $_SESSION["password"]       Student password
  * @param       {string}        $_SESSION["name"]           Student name
  * @param       {string}        $_SESSION["major"]          Student major
@@ -30,7 +30,11 @@ session_start();
 
 // Check if the user is already logged in, if yes then redirect him to Academic home page
 if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
-    header("location: academicBuilder_Main.php");
+    if ($_SESSION["admin"] === true) {
+        header('Location: Model/test.php');
+    } else {
+        header("location: academicBuilder_Main.php");
+    }
     exit();
 }
 
@@ -95,7 +99,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                             // Store data in session variables
                             $_SESSION["loggedin"] = true;
-                            $_SESSION["sid"] = $studentid;
+                            $_SESSION["admin"] = false;
+                            $_SESSION["id"] = $studentid;
                             $_SESSION["password"] = $password;
                             $_SESSION["name"] = $name;
                             $_SESSION["major"] = $major;

@@ -17,7 +17,7 @@
  * @link        http://15.223.123.122/vsbp/Code/homePage.php
  * @author      Priscilla Chua (sid: 200363504) <****@uregina.ca>
  * @param       {boolean}       $_SESSION["loggedin"]       Status of logged-in or not: true/false
- * @param       {integer}       $_SESSION["sid"]            Student id
+ * @param       {integer}       $_SESSION["id"]            Student id
  * @param       {string}        $_SESSION["name"]           Student name
  */
 
@@ -84,7 +84,7 @@ if (isset($_SESSION["lastActTime"])) {
           $_SESSION["name"]
       ); ?></a>
       <div class="hidden" id="addon-menu">
-        <a><?php echo htmlspecialchars($_SESSION["sid"]); ?></a>
+        <a><?php echo htmlspecialchars($_SESSION["id"]); ?></a>
         <a href="Model/logout.php">Logout</a>
       </div>
     </div>
