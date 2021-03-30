@@ -89,8 +89,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         $admin_id
                     );
                     if (mysqli_stmt_fetch($stmt)) {
-                        echo $password;
-                        echo $admin_password;
                         if (password_verify($password, $admin_password)) {
                             // Password is correct, so start a new session
                             session_start();
