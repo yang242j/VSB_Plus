@@ -1,6 +1,6 @@
 <?php
 /**
- * A form to let user to login.
+ * A form to let admin to login.
  *
  * Requirments:
  *  1) Required enter the student ID to login.
@@ -30,7 +30,11 @@ session_start();
 
 // Check if the user is already logged in, if yes then redirect him to Academic home page
 if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
-    header("location: academicBuilder_Main.php");
+    if ($_SESSION["admin"] === true) {
+        header('Location: Model/test.php');
+    } else {
+        header("location: academicBuilder_Main.php");
+    }
     exit();
 }
 
@@ -38,18 +42,16 @@ if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
 require_once "Model/vsbp_db_config.php";
 
 // Define variables andd initialize with empty values
-$studentid = $password = "";
-$studentid_err = $password_err = "";
+$username = $password = "";
+$username_err = $password_err = "";
 
 // Processing form data when form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Check if student_id is empty
-    if (empty(trim($_POST["studentid"]))) {
-        $studentid_err = "Please enter student_id.";
-    } elseif (!is_numeric(trim($_POST["studentid"]))) {
-        $studentid_err = "Student ID must be all numbers.";
+    if (empty(trim($_POST["username"]))) {
+        $username_err = "Please enter username.";
     } else {
-        $studentid = trim($_POST["studentid"]);
+        $username = trim($_POST["username"]);
     }
 
     // Check if password is empty
@@ -60,17 +62,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Validate credentials (format is correct)
-    if (empty($studentid_err) && empty($password_err)) {
+    if (empty($username_err) && empty($password_err)) {
         // Prepare a select statement
         $sql =
-            "SELECT student_id, name, major, totalCredit, password FROM students WHERE student_id = ?";
+            "SELECT username, password, admin_id FROM admin WHERE username = ?";
 
         if ($stmt = mysqli_prepare($conn, $sql)) {
             // Bind variables to the prepared statement as parameters
-            mysqli_stmt_bind_param($stmt, "i", $param_studentid);
+            mysqli_stmt_bind_param($stmt, "s", $param_username);
 
             // Set parameters
-            $param_studentid = $studentid;
+            $param_username = $username;
 
             // Attempt to execute the prepared statement
             if (mysqli_stmt_execute($stmt)) {
@@ -82,28 +84,25 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     // Bind result variables
                     mysqli_stmt_bind_result(
                         $stmt,
-                        $studentid,
-                        $name,
-                        $major,
-                        $totalCredit,
-                        $hashed_password
+                        $username,
+                        $admin_password,
+                        $admin_id
                     );
                     if (mysqli_stmt_fetch($stmt)) {
-                        if (password_verify($password, $hashed_password)) {
+                        if (password_verify($password, $admin_password)) {
                             // Password is correct, so start a new session
                             session_start();
 
                             // Store data in session variables
                             $_SESSION["loggedin"] = true;
-                            $_SESSION["sid"] = $studentid;
+                            $_SESSION["admin"] = true;
+                            $_SESSION["username"] = $username;
                             $_SESSION["password"] = $password;
-                            $_SESSION["name"] = $name;
-                            $_SESSION["major"] = $major;
-                            $_SESSION["totalCredit"] = $totalCredit;
+                            $_SESSION["adminid"] = $admin_id;
                             $_SESSION["lastActTime"] = time();
 
                             // Redirect user to welcome page
-                            header("location: academicBuilder_Main.php");
+                            header("location: Model/test.php");
                         } else {
                             // Display an error message if password is not valid
                             $password_err = "The password was not valid.";
@@ -111,7 +110,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     }
                 } else {
                     // Display an error message if studentid doesn't exist
-                    $studentid_err = "No account found with that student_id.";
+                    $studentid_err = "No account found with this username.";
                 }
             } else {
                 echo "Oops! Something went wrong. Please try again later.";
@@ -132,7 +131,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <head>
     <meta charset="utf-8">
-    <title>VSB_Plus : LogIn</title>
+    <title>VSB_Plus : Admin LogIn</title>
 
     <meta name="description" content="The HTML5 Herald">
     <meta name="author" content="team_vsbp">
@@ -152,8 +151,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     <nav>
         <div class="nav-right">
-            <a class="nav-active" href="login.php">LogIn</a>
-            <a href="signup.php">SignUp</a>
+            <a class="nav-active" href="login.php">Stu. LogIn</a>
+            <a href="signup.php">Stu. SignUp</a>
         </div>
         <div class="menu-icon change">
             <div class="bar1"></div>
@@ -164,18 +163,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     <section class="container">
         <div class="form-div">
-            <h2>User LogIn</h2>
+            <h2>Admin LogIn</h2>
             <form action="<?php echo htmlspecialchars(
                 $_SERVER["PHP_SELF"]
             ); ?>" method="POST">
-                <!-- Student ID -->
-                <div class="form-group <?php echo !empty($studentid_err)
+                <!-- username -->
+                <div class="form-group <?php echo !empty($username_err)
                     ? 'has-error'
                     : ''; ?>">
-                    <label>Student ID:</label>
-                    <input class="form-input" type="text" name="studentid" value="<?php echo $studentid; ?>">
+                    <label>username:</label>
+                    <input class="form-input" type="text" name="username" value="<?php echo $username; ?>">
                     <span class="help-block">
-                        <?php echo $studentid_err; ?>
+                        <?php echo $username_err; ?>
                     </span>
                 </div>
 
@@ -193,12 +192,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <!-- Login & Reset -->
                 <div class="form-group">
                     <input type="submit" class="btn btn-primary" value="Login">
-                    <input type="button" class="btn" value="Forget Password" onclick="window.location='reset-password.php'">
                 </div>
 
                 <!-- Guest link -->
-                <p style="margin-left: 5%;">*Login as <a id="quickLink" href="courseDB.php">GUEST</a> will not have full access to this website*</p>
-                <p style="margin-left: 5%;">*Login as <a id="quickLink" href="login_admin.php">ADMIN</a> to modify course Database*</p>
+                <p style="margin-left: 5%;">*To login as <a id="quickLink" href="login.php">STUDENT</a> *</p>
             </form>
         </div>
         <div class="disclaimer">
