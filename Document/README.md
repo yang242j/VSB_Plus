@@ -16,7 +16,7 @@
 
 - [Video Blogs (vlogs) and Demo(s)](Presentation%20&%20Meetings/Vlogs)
 
-- [Code Testing Plan/Results](Testing%20Plan%20&%20Result/Code%20test%20plan.pdf)
+- [Code Testing Plan/Results](Testing%20Plan%20&%20Result)
 
 - [User Testing plan/Results](/)
 
