@@ -429,8 +429,8 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         </p>
         <p class="info-link">
             <a href="homePage.php">About Us</a>
-            <a href="View/api_test.html">API Test</a>
-            <a class="" id="test">Test CLICK</a>
+            <!-- <a href="View/api_test.html">API Test</a>
+            <a class="" id="test">Test CLICK</a> -->
         </p>
         <script>
             $("#test").click(function() {
