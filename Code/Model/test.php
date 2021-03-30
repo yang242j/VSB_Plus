@@ -1,18 +1,5 @@
 <?php
 
-session_start();
-
-// Check if the user is already logged in, if yes then redirect him to Academic home page
-if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
-    if ($_SESSION["admin"] === true) {
-        $username = $_SESSION["username"];
-    } else {
-        $username = $_SESSION["name"];
-    }
-} else {
-    $username = "Not logged in";
-}
-
 $preStr = $expStr = $status = '';
 
 $totalCredit = 30;
@@ -115,8 +102,6 @@ Done List: <pre><mark><b><?php print_r($doneList); ?></b></mark></pre><br>
 Prerequisites: <pre><mark><b><?php print_r($preStr); ?></b></mark></pre><br>
 Expression: <pre><mark><b><?php print_r($expStr); ?></b></mark></pre><br>
 Status: <pre><mark><b><?php print_r($status); ?></b></mark></pre><br>
-
-<h1><?php print_r($username); ?></h1>
 
 </body>
 </html>
