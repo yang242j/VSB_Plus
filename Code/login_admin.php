@@ -19,7 +19,7 @@
  * @link        http://15.223.123.122/vsbp/Code/login.php
  * @author      Jingkang Yang (sid: 200362586) <yang242j@uregina.ca>
  * @param       {boolean}       $_SESSION["loggedin"]       Status of logged-in or not: true/false
- * @param       {integer}       $_SESSION["id"]            Student id
+ * @param       {integer}       $_SESSION["sid"]            Student id
  * @param       {string}        $_SESSION["password"]       Student password
  * @param       {string}        $_SESSION["name"]           Student name
  * @param       {string}        $_SESSION["major"]          Student major
@@ -97,9 +97,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             // Store data in session variables
                             $_SESSION["loggedin"] = true;
                             $_SESSION["admin"] = true;
-                            $_SESSION["name"] = $username;
+                            $_SESSION["username"] = $username;
                             $_SESSION["password"] = $password;
-                            $_SESSION["id"] = $admin_id;
+                            $_SESSION["adminid"] = $admin_id;
                             $_SESSION["lastActTime"] = time();
 
                             // Redirect user to welcome page

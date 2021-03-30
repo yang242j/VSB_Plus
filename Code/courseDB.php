@@ -21,7 +21,7 @@
  * @link        http://15.223.123.122/vsbp/Code/courseDB.php
  * @author      Xinyu Liu (sid: 200362878) <liu725@uregina.ca>
  * @param       {boolean}       $_SESSION["loggedin"]       Status of logged-in or not: true/false
- * @param       {integer}       $_SESSION["id"]            Student id
+ * @param       {integer}       $_SESSION["sid"]            Student id
  * @param       {string}        $_SESSION["name"]           Student name
  */
 
@@ -91,7 +91,7 @@ if (isset($_SESSION["lastActTime"])) {
                 $_SESSION["name"]
             ); ?></a>
             <div class="hidden" id="addon-menu">
-                <a><?php echo htmlspecialchars($_SESSION["id"]); ?></a>
+                <a><?php echo htmlspecialchars($_SESSION["sid"]); ?></a>
                 <a href="Model/logout.php">Logout</a>
             </div>
         </div>
