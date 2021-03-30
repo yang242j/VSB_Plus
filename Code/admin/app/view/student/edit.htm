@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>VSB_Plus Admin</title>
+
+    <meta name="description" content="Dashboard">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!--Basic Styles-->
+    <link href="__ADMIN__/style/bootstrap.css" rel="stylesheet">
+    <link href="__ADMIN__/style/font-awesome.css" rel="stylesheet">
+    <link href="__ADMIN__/style/weather-icons.css" rel="stylesheet">
+
+    <!--Beyond styles-->
+    <link id="beyond-link" href="__ADMIN__/style/beyond.css" rel="stylesheet" type="text/css">
+    <link href="__ADMIN__/style/demo.css" rel="stylesheet">
+    <link href="__ADMIN__/style/typicons.css" rel="stylesheet">
+    <link href="__ADMIN__/style/animate.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- 头部 -->
+    {include file="common/head"}
+
+    <!-- /头部 -->
+
+    <div class="main-container container-fluid">
+        <div class="page-container">
+            <!-- Page Sidebar -->
+            {include file="common/side"}
+            <!-- /Page Sidebar -->
+            <!-- Page Content -->
+            <div class="page-content">
+                <!-- Page Breadcrumb -->
+                <div class="page-breadcrumbs">
+                    <ul class="breadcrumb">
+                        <li>
+                            <a href="{:url('Student/index')}">Home Page</a>
+                        </li>
+                        <li>
+                            <a href="{:url('lst')}">Course List</a>
+                        </li>
+                        <li class="active">Edit Course</li>
+                    </ul>
+                </div>
+                <!-- /Page Breadcrumb -->
+
+                <!-- Page Body -->
+                <div class="page-body">
+
+                    <div class="row">
+                        <div class="col-lg-12 col-sm-12 col-xs-12">
+                            <div class="widget">
+                                <div class="widget-header bordered-bottom bordered-blue">
+                                    <span class="widget-caption">Edit Course</span>
+                                </div>
+                                <div class="widget-body">
+                                    <div id="horizontal-form">
+                                        <form class="form-horizontal" role="form" action="{:url('Student/edit')}" method="post">
+                                            <input type="text" hidden value="{$course.courseIndex}" name="courseIndex">
+                                            <input type="text" hidden name="course_title" id="section_num" value="">
+                                            <input type="text" hidden name="course_ID" id="section_num" value="{$course.course_ID}">
+
+                                            <div class="form-group">
+                                                <label for="term"
+                                                    class="col-sm-2 control-label no-padding-right">Term</label>
+                                                <div class="col-sm-6">
+                                                    <input value="{$course.term}" class="form-control" id="term" placeholder=""
+                                                        name="term" required="" type="text">
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label for="course_ID"
+                                                    class="col-sm-2 control-label no-padding-right">Course Short Name</label>
+                                                <div class="col-sm-6">
+                                                    <input value="{$course.course_ID}" class="form-control" id="course_ID" placeholder=""
+                                                        name="course_ID" required="" type="text">
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label for="final_grade"
+                                                    class="col-sm-2 control-label no-padding-right">Final Grade</label>
+                                                <div class="col-sm-6">
+                                                    <input value="{$course.final_grade}" class="form-control" id="credit" placeholder=""
+                                                        name="final_grade" required="" type="text">
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <div class="col-sm-offset-2 col-sm-10">
+                                                    <button type="submit" class="btn btn-default">Save Course Info</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- /Page Body -->
+            </div>
+            <!-- /Page Content -->
+        </div>
+    </div>
+
+    <!--Basic Scripts-->
+    <script src="__ADMIN__/style/jquery_002.js"></script>
+    <script src="__ADMIN__/style/bootstrap.js"></script>
+    <script src="__ADMIN__/style/jquery.js"></script>
+    <!--Beyond Scripts-->
+    <script src="__ADMIN__/style/beyond.js"></script>
+
+
+
+</body>
+
+</html>

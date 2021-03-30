@@ -1,0 +1,74 @@
+<div class="page-sidebar" id="sidebar">
+    <!-- Page Sidebar Header-->
+    <div class="sidebar-header-wrapper">
+        <input class="searchinput" type="text">
+        <i class="searchicon fa fa-search"></i>
+        <div class="searchhelper">Search course with name, faculty, number</div>
+    </div>
+    <!-- /Page Sidebar Header -->
+    <!-- Sidebar Menu -->
+    <ul class="nav sidebar-menu">
+        <!--Dashboard-->
+        {if condition = "session('auth') eq 'admin'"}
+        <li>
+            <a href="#" class="menu-dropdown">
+                <i class="menu-icon fa fa-cog"></i>
+                <span class="menu-text">Course Management</span>
+                <i class="menu-expand"></i>
+            </a>
+            <ul class="submenu">
+                <li>
+                    <a href="{:url('Conf/lst')}">
+                        <span class="menu-text">
+                            Course List </span>
+                        <i class="menu-expand"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="{:url('Conf/add')}">
+                        <span class="menu-text">
+                            Course Add </span>
+                        <i class="menu-expand"></i>
+                    </a>
+                </li>
+            </ul>
+        </li>
+        {/if}
+
+        {if condition = "session('auth') eq 'student'"}
+        <li>
+            <a href="#" class="menu-dropdown">
+                <i class="menu-icon fa fa-cog"></i>
+                <span class="menu-text">History Management</span>
+                <i class="menu-expand"></i>
+            </a>
+            <ul class="submenu">
+                <li>
+                    <a href="{:url('student/lst')}">
+                        <span class="menu-text">
+                            History List </span>
+                        <i class="menu-expand"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="{:url('student/add')}">
+                        <span class="menu-text">
+                            History Add </span>
+                        <i class="menu-expand"></i>
+                    </a>
+                </li>
+            </ul>
+        </li>
+        {/if}
+
+        <li>
+            <a href="http://15.223.123.122" class="menu-dropdown">
+                <i class="menu-icon fa fa-bar-chart-o"></i>
+                <span class="menu-text">VSB_Plus</span>
+                <i class="menu-expand"></i>
+            </a>
+        </li>
+
+    </ul>
+    <!-- /Sidebar Menu -->
+</div>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><!--Head--><head>
+    <meta charset="utf-8">
+    <title>VSB_Plus Admin</title>
+    <meta name="description" content="login page">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!--Basic Styles-->
+    <link href="__ADMIN__/style/bootstrap.css" rel="stylesheet">
+    <link href="__ADMIN__/style/font-awesome.css" rel="stylesheet">
+    <!--Beyond styles-->
+    <link id="beyond-link" href="__ADMIN__/style/beyond.css" rel="stylesheet">
+    <link href="__ADMIN__/style/demo.css" rel="stylesheet">
+    <link href="__ADMIN__/style/animate.css" rel="stylesheet">
+</head>
+<!--Head Ends-->
+<!--Body-->
+
+<body>
+    <div class="login-container animated fadeInDown">
+        <form action="{:url('Login/signIn')}" method="post">
+            <div class="loginbox bg-white">
+                <div class="loginbox-title">SIGN IN</div>
+                <div class="loginbox-textbox">
+                    <input value="admin" class="form-control" placeholder="username" name="username" type="text">
+                </div>
+                <div class="loginbox-textbox">
+                    <input value="admin" class="form-control" placeholder="password" name="password" type="password">
+                </div>
+                <div class="loginbox-submit">
+                    <input class="btn btn-primary btn-block" value="Login" type="submit">
+                </div>
+                <div style="width: 50%; text-align: center; margin-left: 25%;">
+                    <h6>Login as</h6>
+                    <select id="e1" name='auth' style="width:100%;">
+                        </option><option value="admin">Admin
+                        </option><option value="student">Student
+                    </select>
+                    
+                </div>
+            </div>
+                <div class="logobox">
+                    <p class="text-center">VSB_Plus Admin Management System</p>
+                </div>
+        </form>
+    </div>
+    <!--Basic Scripts-->
+    <script src="__ADMIN__/style/jquery.js"></script>
+    <script src="__ADMIN__/style/bootstrap.js"></script>
+    <script src="__ADMIN__/style/jquery_002.js"></script>
+    <!--Beyond Scripts-->
+    <script src="__ADMIN__/style/beyond.js"></script>
+
+
+
+
+</body><!--Body Ends--></html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>VSB_Plus Admin</title>
+
+    <meta name="description" content="Dashboard">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!--Basic Styles-->
+    <link href="__ADMIN__/style/bootstrap.css" rel="stylesheet">
+    <link href="__ADMIN__/style/font-awesome.css" rel="stylesheet">
+    <link href="__ADMIN__/style/weather-icons.css" rel="stylesheet">
+
+    <!--Beyond styles-->
+    <link id="beyond-link" href="__ADMIN__/style/beyond.css" rel="stylesheet" type="text/css">
+    <link href="__ADMIN__/style/demo.css" rel="stylesheet">
+    <link href="__ADMIN__/style/typicons.css" rel="stylesheet">
+    <link href="__ADMIN__/style/animate.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- 头部 -->
+    {include file="common/head"}
+
+    <!-- /头部 -->
+
+    <div class="main-container container-fluid">
+        <div class="page-container">
+            <!-- Page Sidebar -->
+            {include file="common/side"}
+            <!-- /Page Sidebar -->
+            <!-- Page Content -->
+            <div class="page-content">
+                <!-- Page Breadcrumb -->
+                <div class="page-breadcrumbs">
+                    <ul class="breadcrumb">
+                        <li>
+                            <a href="{:url('Conf/index')}">Home Page</a>
+                        </li>
+                        <li class="active">Course Add</li>
+                    </ul>
+                </div>
+                <!-- /Page Breadcrumb -->
+
+                <!-- Page Body -->
+                <div class="page-body">
+
+                    <div class="row">
+                        <div class="col-lg-12 col-sm-12 col-xs-12">
+                            <div class="widget">
+                                <div class="widget-header bordered-bottom bordered-blue">
+                                    <span class="widget-caption">Course Add</span>
+                                </div>
+                                <div class="widget-body">
+                                    <div id="horizontal-form">
+                                        <form class="form-horizontal" role="form" action="{:url('Conf/add')}" method="post">
+
+                                            <div class="form-group">
+                                                <label for="faculty"
+                                                    class="col-sm-2 control-label no-padding-right">Course Faculty</label>
+                                                <div class="col-sm-6">
+                                                    <select name="faculty" style="width: 100%;">
+                                                        <option value="ENSE">Software (ENSE)</option>
+                                                        <option value="ENEL">Electrical (ENEL)</option>
+                                                        <option value="ENEV">Environment (ENEV)</option>
+                                                        <option value="ENPE">Petroleum (ENPE)</option>
+                                                        <option value="ENIN">Industrial (ENIN)</option>
+                                                        <option value="ENGG">Engineering (ENGG)</option>
+                                                        <option value="CS">Computer Science (CS)</option>
+                                                        <option value="BUS">Business (BUS)</option>
+                                                        <option value="CHEM">Chemistry (CHEM)</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <!-- <div class="form-group">
+                                                <label for="username"
+                                                    class="col-sm-2 control-label no-padding-right">Course Faculty</label>
+                                                <div class="col-sm-6">
+                                                    <input value="" class="form-control" id="faculty" placeholder=""
+                                                        name="faculty" required="" type="text">
+                                                </div>
+                                                <p class="help-block col-sm-4 red">* Must fill</p>
+                                            </div> -->
+
+                                            <div class="form-group">
+                                                <label for="username"
+                                                    class="col-sm-2 control-label no-padding-right">Course Number</label>
+                                                <div class="col-sm-6">
+                                                    <input value="" class="form-control" id="course_num" placeholder=""
+                                                        name="course_num" required="" type="text">
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label for="username"
+                                                    class="col-sm-2 control-label no-padding-right">Title</label>
+                                                <div class="col-sm-6">
+                                                    <input value="" class="form-control" id="title" placeholder=""
+                                                        name="title" required="" type="text">
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label for="username"
+                                                    class="col-sm-2 control-label no-padding-right">Credit</label>
+                                                <div class="col-sm-6">
+                                                    <input value="" class="form-control" id="credit" placeholder=""
+                                                        name="credit" required="" type="text">
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label for="username"
+                                                    class="col-sm-2 control-label no-padding-right">Prerequisite</label>
+                                                <div class="col-sm-6">
+                                                    <textarea class="form-control" name="prerequisite" rows="4"></textarea>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label for="username"
+                                                    class="col-sm-2 control-label no-padding-right">Description</label>
+                                                <div class="col-sm-6">
+                                                    <textarea class="form-control" name="description" rows="5"></textarea>
+                                                </div>
+                                            </div>
+
+                                            
+
+                                            <div class="form-group">
+                                                <div class="col-sm-offset-2 col-sm-10">
+                                                    <button type="submit" class="btn btn-default">Add Course</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- /Page Body -->
+            </div>
+            <!-- /Page Content -->
+        </div>
+    </div>
+
+    <!--Basic Scripts-->
+    <script src="__ADMIN__/style/jquery_002.js"></script>
+    <script src="__ADMIN__/style/bootstrap.js"></script>
+    <script src="__ADMIN__/style/jquery.js"></script>
+    <!--Beyond Scripts-->
+    <script src="__ADMIN__/style/beyond.js"></script>
+
+
+
+</body>
+
+</html>

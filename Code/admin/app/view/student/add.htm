@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>VSB_Plus Admin</title>
+
+    <meta name="description" content="Dashboard">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!--Basic Styles-->
+    <link href="__ADMIN__/style/bootstrap.css" rel="stylesheet">
+    <link href="__ADMIN__/style/font-awesome.css" rel="stylesheet">
+    <link href="__ADMIN__/style/weather-icons.css" rel="stylesheet">
+
+    <!--Beyond styles-->
+    <link id="beyond-link" href="__ADMIN__/style/beyond.css" rel="stylesheet" type="text/css">
+    <link href="__ADMIN__/style/demo.css" rel="stylesheet">
+    <link href="__ADMIN__/style/typicons.css" rel="stylesheet">
+    <link href="__ADMIN__/style/animate.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- 头部 -->
+    {include file="common/head"}
+
+    <!-- /头部 -->
+
+    <div class="main-container container-fluid">
+        <div class="page-container">
+            <!-- Page Sidebar -->
+            {include file="common/side"}
+            <!-- /Page Sidebar -->
+            <!-- Page Content -->
+            <div class="page-content">
+                <!-- Page Breadcrumb -->
+                <div class="page-breadcrumbs">
+                    <ul class="breadcrumb">
+                        <li>
+                            <a href="{:url('Conf/index')}">Home Page</a>
+                        </li>
+                        <li class="active">Course Add</li>
+                    </ul>
+                </div>
+                <!-- /Page Breadcrumb -->
+
+                <!-- Page Body -->
+                <div class="page-body">
+
+                    <div class="row">
+                        <div class="col-lg-12 col-sm-12 col-xs-12">
+                            <div class="widget">
+                                <div class="widget-header bordered-bottom bordered-blue">
+                                    <span class="widget-caption">History Add</span>
+                                </div>
+                                <div class="widget-body">
+                                    <div id="horizontal-form">
+                                        <form class="form-horizontal" role="form" action="{:url('Student/add')}" method="post">
+                                            <input type="text" hidden name="section_num" id="section_num" value="001">
+                                            <input type="text" hidden name="course_title" id="section_num" value="">
+                                            <input type="text" hidden name="class_size" id="class_size" value="100">
+                                            <input type="text" hidden name="class_average" id="class_average" value="70">
+                                            <input type="text" hidden name="credit_hour" id="credit_hour" value="3">
+                                            <input type="text" hidden name="credit_earned" id="credit_earned" value="3">
+                                            <div class="form-group">
+                                                <label for="yera"
+                                                    class="col-sm-2 control-label no-padding-right">Year</label>
+                                                <div class="col-sm-6">
+                                                    <select name="year" style="width: 100%;">
+                                                        <option value="2021">2021</option>
+                                                        <option value="2020">2020</option>
+                                                        <option value="2019">2019</option>
+                                                        <option value="2018">2018</option>
+                                                        <option value="2017">2017</option>
+                                                        <option value="2016">2016</option>
+                                                        <option value="2015">2015</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label for="term"
+                                                    class="col-sm-2 control-label no-padding-right">Term</label>
+                                                <div class="col-sm-6">
+                                                    <select name="term" style="width: 100%;">
+                                                        <option value=" Fall">Fall</option>
+                                                        <option value=" Winter">Winter</option>
+                                                        <option value=" Spring Summer">Spring/Summer</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label for="course_ID"
+                                                    class="col-sm-2 control-label no-padding-right">Course Short Name</label>
+                                                <div class="col-sm-6">
+                                                    <input value="" class="form-control" id="course_num" placeholder="eg. ENSE 400"
+                                                        name="course_ID" required="" type="text">
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label for="final_grade"
+                                                    class="col-sm-2 control-label no-padding-right">Final Grade</label>
+                                                <div class="col-sm-6">
+                                                    <input value="" class="form-control" id="final_grade" placeholder="eg. 82 / NP"
+                                                        name="final_grade" required="" type="text">
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <div class="col-sm-offset-2 col-sm-10">
+                                                    <button type="submit" class="btn btn-default">Add Course</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- /Page Body -->
+            </div>
+            <!-- /Page Content -->
+        </div>
+    </div>
+
+    <!--Basic Scripts-->
+    <script src="__ADMIN__/style/jquery_002.js"></script>
+    <script src="__ADMIN__/style/bootstrap.js"></script>
+    <script src="__ADMIN__/style/jquery.js"></script>
+    <!--Beyond Scripts-->
+    <script src="__ADMIN__/style/beyond.js"></script>
+
+
+
+</body>
+
+</html>
