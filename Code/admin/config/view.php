@@ -24,7 +24,7 @@ return [
     'taglib_end'    => '}',
     // 在不同的路径会需要更改
     'tpl_replace_string'  =>  [
-        '__ADMIN__'=>'/tp/public/static/admin',
+        '__ADMIN__'=>'/admin/public/static/admin',
         // '__ADMIN__'=>'',
     ],
 ];
