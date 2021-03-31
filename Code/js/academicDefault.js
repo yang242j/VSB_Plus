@@ -229,8 +229,7 @@ function showENSE_electives() {
                 	//document.getElementById("e" + i).innerHTML = electivesData[electives][i];
 			
 				document.getElementById("e" + i).innerHTML =
-					"<div class = 'course_tag_electives ense_course_tag'>" + 
-					"<p>" + electivesData[electives][i] + "</p>" + "</div>";
+					"<p>" + electivesData[electives][i] + "</p>";
 			
 
             	}
@@ -279,8 +278,7 @@ function showCS_electives() {
                     //document.getElementById("e" + i).innerHTML = electivesData[electives][i];
 			
 				document.getElementById("e" + i).innerHTML =
-					"<div class = 'course_tag_electives ense_course_tag'>" + 
-					"<p>" + electivesData[electives][i] + "</p>" + "</div>";
+					"<p>" + electivesData[electives][i] + "</p>";
 
             	}
            }            
@@ -310,8 +308,7 @@ function showENEL_electives() {
                     //document.getElementById("e" + i).innerHTML = electivesData[electives][i];
 			
 				document.getElementById("e" + i).innerHTML =
-					"<div class = 'course_tag_electives ense_course_tag'>" + 
-					"<p>" + electivesData[electives][i] + "</p>" + "</div>";
+					"<p>" + electivesData[electives][i] + "</p>";
 
             	}
            }            
