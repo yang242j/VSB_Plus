@@ -8,7 +8,7 @@
 
 - [System/Architectural Design Pictures](Images%20&%20Design)
 
-- [Role/Attribute-based Access Control (R/ABAC) vision](/)
+- [Role/Attribute-based Access Control (R/ABAC) vision](/)***
 
 - [Project Roadmaps (Kanban, USM)](https://github.com/yang242j/VSB_Plus/projects)
 
@@ -18,9 +18,9 @@
 
 - [Code Testing Plan/Results](Testing%20Plan%20&%20Result)
 
-- [User Testing plan/Results](/)
+- [User Testing plan/Results](/)***
 
-- [Code Quality Review Report](/)
+- [Code Quality Review Report](/)***
 
 - [Project Digital Poster](SSE%20Group%206%20Poster.pdf)
 
@@ -28,4 +28,4 @@
 
 - [Customer Help/User training/Knowledgebase](how_to.md)
 
-- [Project Experience Report](/)
+- [Project Experience Report](/)***
