@@ -271,12 +271,12 @@ function showENSE_electives() {
 function showCS_electives() {
     for (electives in electivesData) {
         if (electives = "CS") {
+		document.getElementById("electives").innerHTML = "<div class = 'electives_course'>" + 
+					"<h3>" + electives + ":" + "</h3>" + "</div>";
             /*for (i = 7; i <= 13; i++) {*/
                 for (i = 0; i < 7; i++) {
                 	// document.getElementById("cs" + i).innerHTML = electivesData[electives][i];
                     //document.getElementById("e" + i).innerHTML = electivesData[electives][i];
-			document.getElementById("electives").innerHTML = "<div class = 'electives_course'>" + 
-					"<h3>" + electives + ":" + "</h3>" + "</div>";
 			
 				document.getElementById("e" + i).innerHTML =
 					"<div class = 'course_tag_electives ense_course_tag'>" + 
@@ -302,12 +302,12 @@ function showCS_electives() {
 function showENEL_electives() {
     for (electives in electivesData) {
         if (electives = "ENEL") {
+		document.getElementById("electives").innerHTML = "<div class = 'electives_course'>" + 
+					"<h3>" + electives + ":" + "</h3>" + "</div>";
             /*for (i = 7; i <= 13; i++) {*/
                 for (i = 0; i < 2; i++) {
                 	// document.getElementById("enel" + i).innerHTML = electivesData[electives][i];
                     //document.getElementById("e" + i).innerHTML = electivesData[electives][i];
-			document.getElementById("electives").innerHTML = "<div class = 'electives_course'>" + 
-					"<h3>" + electives + ":" + "</h3>" + "</div>";
 			
 				document.getElementById("e" + i).innerHTML =
 					"<div class = 'course_tag_electives ense_course_tag'>" + 
