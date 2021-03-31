@@ -72,7 +72,7 @@
 ## Semester Schedule Builder
     Students can intuitively create semester timetables for this semester and the next semester.
     Step 1: Select the semester to be simulated.
-    Step 2: Drag the desired course label from the recommendation section at the bottom,   or enter and search for the course name in the search field at the top. If the course is applicable, a course card will be attached. If the course is not applicable, a notification will pop up.
+    Step 2: Drag the desired course label from the recommendation section at the bottom, or enter and search for the course name in the search field at the top. If the course is applicable, a course card will be attached. If the course is not applicable, a notification will pop up.
     Step 3: Manage the sections of each selected course.
 ![Semester](Images%20%26%20Design/How2Img/Semester.png)
 
