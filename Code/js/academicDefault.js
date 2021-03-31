@@ -221,12 +221,12 @@ function showTerm(pageNumber) {
 function showENSE_electives() {
     for (electives in electivesData) {
         if (electives = "ENSE") {
-		document.getElementById("electives").innerHTML = "<div class = 'electives_course'>" + 
+		document.getElementById("electives1").innerHTML = "<div class = 'electives_course'>" + 
 					"<h3>" + electives + ":" + "</h3>" + "</div>";
             /*for (i = 7; i <= 13; i++) {*/
                 for (i = 0; i <= 6; i++) {
                 	// document.getElementById("ense" + i).innerHTML = electivesData[electives][i];
-                	document.getElementById("e" + i).innerHTML = electivesData[electives][i];
+                	document.getElementById("a" + i).innerHTML = electivesData[electives][i];
 			
 
             	}
@@ -267,12 +267,12 @@ function showENSE_electives() {
 function showCS_electives() {
     for (electives in electivesData) {
         if (electives = "CS") {
-		document.getElementById("electives").innerHTML = "<div class = 'electives_course'>" + 
+		document.getElementById("electives2").innerHTML = "<div class = 'electives_course'>" + 
 					"<h3>" + electives + ":" + "</h3>" + "</div>";
             /*for (i = 7; i <= 13; i++) {*/
                 for (i = 0; i < 7; i++) {
                 	// document.getElementById("cs" + i).innerHTML = electivesData[electives][i];
-                    document.getElementById("e" + i).innerHTML = electivesData[electives][i];
+                    document.getElementById("b" + i).innerHTML = electivesData[electives][i];
 			
 				
 
@@ -296,12 +296,12 @@ function showCS_electives() {
 function showENEL_electives() {
     for (electives in electivesData) {
         if (electives = "ENEL") {
-		document.getElementById("electives").innerHTML = "<div class = 'electives_course'>" + 
+		document.getElementById("electives3").innerHTML = "<div class = 'electives_course'>" + 
 					"<h3>" + electives + ":" + "</h3>" + "</div>";
             /*for (i = 7; i <= 13; i++) {*/
                 for (i = 0; i < 2; i++) {
                 	// document.getElementById("enel" + i).innerHTML = electivesData[electives][i];
-                    document.getElementById("e" + i).innerHTML = electivesData[electives][i];
+                    document.getElementById("c" + i).innerHTML = electivesData[electives][i];
 			
 
             	}
@@ -412,13 +412,13 @@ function showElectives() {
 		if (electives == "ENSE") {
 			showENSE_electives();
 		}
-		else if (electives == "CS") {
+		if (electives == "CS") {
 			showCS_electives();
 		}
-		else if (electives == "ENEL"){
+		if (electives == "ENEL"){
 			showENEL_electives();
 		}
-		else if (electives == "ENIN") {
+		if (electives == "ENIN") {
 			showENIN_electives();
 		}
 	}
