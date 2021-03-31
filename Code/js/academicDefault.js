@@ -400,8 +400,6 @@ function selected(short_name) {
 }
 
 function setCourse(jsonRsp) {
-	
-	if (jsonRsp.title != null) {
 		
     var courseInfo = "" + jsonRsp.short_name + "\n" +
         "Course Name: " + jsonRsp.title + "\n" + 
@@ -410,9 +408,6 @@ function setCourse(jsonRsp) {
 	jsonRsp.description + "\n";
 		
     alert(courseInfo);
-	}
-	
-	alert("Course Info not found!!");
 } 
 
 function showElectives() {
