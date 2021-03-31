@@ -226,20 +226,20 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 					<h3></h3></div>
 
 				<div class = "course_tag_electives ense_course_tag" id = "approvedCourse">
-					<p id = "a0"></p>
-					<p id = "a1"></p>
-					<p id = "a2"></p>
-					<p id = "a3"></p>
+					<p id = "a0" onclick="courseSelect(event)"></p>
+					<p id = "a1" onclick="courseSelect(event)"></p>
+					<p id = "a2" onclick="courseSelect(event)"></p>
+					<p id = "a3" onclick="courseSelect(event)"></p>
 
-					<p id = "a4"></p>
-					<p id = "a5"></p>
-					<p id = "a6"></p>
-					<p id = "a7"></p>
+					<p id = "a4" onclick="courseSelect(event)"></p>
+					<p id = "a5" onclick="courseSelect(event)"></p>
+					<p id = "a6" onclick="courseSelect(event)"></p>
+					<p id = "a7" onclick="courseSelect(event)"></p>
 					
-					<p id = "a8"></p>
-					<p id = "a9"></p>
-					<p id = "a10"></p>
-					<p id = "a11"></p>
+					<p id = "a8" onclick="courseSelect(event)"></p>
+					<p id = "a9" onclick="courseSelect(event)"></p>
+					<p id = "a10" onclick="courseSelect(event)"></p>
+					<p id = "a11" onclick="courseSelect(event)"></p>
 				</div>
 				<!--<div>
 					<button class="left_arrow" id ="approvedLeft"  onclick = "aLeft()"><i class='fas fa-angle-left'></i></button>
@@ -252,20 +252,20 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 					<h3></h3></div>
 
 				<div class = "course_tag_electives ense_course_tag" id = "approvedCourse">
-					<p id = "b0"></p>
-					<p id = "b1"></p>
-					<p id = "b2"></p>
-					<p id = "b3"></p>
+					<p id = "b0" onclick="courseSelect(event)"></p>
+					<p id = "b1" onclick="courseSelect(event)"></p>
+					<p id = "b2" onclick="courseSelect(event)"></p>
+					<p id = "b3" onclick="courseSelect(event)"></p>
 
-					<p id = "b4"></p>
-					<p id = "b5"></p>
-					<p id = "b6"></p>
-					<p id = "b7"></p>
+					<p id = "b4" onclick="courseSelect(event)"></p>
+					<p id = "b5" onclick="courseSelect(event)"></p>
+					<p id = "b6" onclick="courseSelect(event)"></p>
+					<p id = "b7" onclick="courseSelect(event)"></p>
 					
-					<p id = "b8"></p>
-					<p id = "b9"></p>
-					<p id = "b10"></p>
-					<p id = "b11"></p>
+					<p id = "b8" onclick="courseSelect(event)"></p>
+					<p id = "b9" onclick="courseSelect(event)"></p>
+					<p id = "b10" onclick="courseSelect(event)"></p>
+					<p id = "b11" onclick="courseSelect(event)"></p>
 				</div>
 				<!--<div>
 					<button class="left_arrow" id ="approvedLeft"  onclick = "aLeft()"><i class='fas fa-angle-left'></i></button>
@@ -278,20 +278,20 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 					<h3></h3></div>
 
 				<div class = "course_tag_electives ense_course_tag" id = "approvedCourse">
-					<p id = "c0"></p>
-					<p id = "c1"></p>
-					<p id = "c2"></p>
-					<p id = "c3"></p>
+					<p id = "c0" onclick="courseSelect(event)"></p>
+					<p id = "c1" onclick="courseSelect(event)"></p>
+					<p id = "c2" onclick="courseSelect(event)"></p>
+					<p id = "c3" onclick="courseSelect(event)"></p>
 
-					<p id = "c4"></p>
-					<p id = "c5"></p>
-					<p id = "c6"></p>
-					<p id = "c7"></p>
+					<p id = "c4" onclick="courseSelect(event)"></p>
+					<p id = "c5" onclick="courseSelect(event)"></p>
+					<p id = "c6" onclick="courseSelect(event)"></p>
+					<p id = "c7" onclick="courseSelect(event)"></p>
 					
-					<p id = "c8"></p>
-					<p id = "c9"></p>
-					<p id = "c10"></p>
-					<p id = "c11"></p>
+					<p id = "c8" onclick="courseSelect(event)"></p>
+					<p id = "c9" onclick="courseSelect(event)"></p>
+					<p id = "c10" onclick="courseSelect(event)"></p>
+					<p id = "c11" onclick="courseSelect(event)"></p>
 				</div>
 				<!--<div>
 					<button class="left_arrow" id ="approvedLeft"  onclick = "aLeft()"><i class='fas fa-angle-left'></i></button>
@@ -303,103 +303,6 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 				// showElectives();
 			</script>
 			
-			<!-- <div class = "electives_course ense_course">
-				<h3>ENSE:</h3>
-
-				<div class = "course_tag_electives ense_course_tag" id = "approvedCourse">
-					<p id = "ense0"></p>
-					<p id = "ense1"></p>
-					<p id = "ense2"></p>
-					<p id = "ense3"></p>
-
-					<p id = "ense4"></p>
-					<p id = "ense5"></p>
-					<p id = "ense6"></p>
-					<p id = "ense7"></p>
-					
-					<p id = "ense8"></p>
-					<p id = "ense9"></p>
-					<p id = "ense10"></p>
-					<p id = "ense11"></p>
-				</div>
-				<!--<div>
-					<button class="left_arrow" id ="approvedLeft"  onclick = "aLeft()"><i class='fas fa-angle-left'></i></button>
-					<button class="right_arrow" id ="approvedRight" onclick = "aRight()"><i class='fas fa-angle-right'></i></button>
-				</div>
-			</div>
-
-			<div class = "electives_course cs_course">
-				<h3>CS:</h3>
-				<div class = "course_tag_electives cs_course_tag" id = "not_completed_tag">
-					<!-- <p id = "nct0" onclick="alert(courseInfo())">ENSE 271</p>
-					<p id = "cs0"></p>
-					<p id = "cs1"></p>
-					<p id = "cs2"></p>
-					<p id = "cs3"></p>
-
-					<p id = "cs4"></p>
-					<p id = "cs5"></p>
-					<p id = "cs6"></p>
-					<p id = "cs7"></p>
-					
-					<p id = "cs8"></p>
-					<p id = "cs9"></p>
-					<p id = "cs10"></p>
-					<p id = "cs11"></p>
-				</div>
-				<!--<div>
-					<button class="left_arrow" id ="notCompletedLeft" onclick = "nctLeft()"><i class='fas fa-angle-left'></i></button>
-					<button class="right_arrow" id ="notCompletedRight" onclick = "nctRight()"><i class='fas fa-angle-right'></i></button>
-				</div>
-			</div>
-			
-			<div class = "electives_course enel_course">
-				<h3>ENEL:</h3>
-				<div class = "course_tag_electives enel_course_tag" id = "electives_tag">
-					<p id = "enel0"></p>
-					<p id = "enel1"></p>
-					<p id = "enel2"></p>
-					<p id = "enel3"></p>
-
-					<p id = "enel4"></p>
-					<p id = "enel5"></p>
-					<p id = "enel6"></p>
-					<p id = "enel7"></p>
-					
-					<p id = "enel8"></p>
-					<p id = "enel9"></p>
-					<p id = "enel10"></p>
-					<p id = "enel11"></p>
-				</div>
-				<!--<div>
-					<button class="left_arrow" id ="notCompletedLeft" onclick = "enctLeft()"><i class='fas fa-angle-left'></i></button>
-					<button class="right_arrow" id ="notCompletedRight" onclick = "enctRight()"><i class='fas fa-angle-right'></i></button>
-				</div>
-			</div>
-			
-			<div class = "electives_course enin_course">
-				<h3>ENIN:</h3>
-				<div class = "course_tag_electives enin_course_tag" id = "electives_tag">
-					<p id = "enin0"></p>
-					<p id = "enin1"></p>
-					<p id = "enin2"></p>
-					<p id = "enin3"></p>
-
-					<p id = "enin4"></p>
-					<p id = "enin5"></p>
-					<p id = "enin6"></p>
-					<p id = "enin7"></p>
-					
-					<p id = "enin8"></p>
-					<p id = "enin9"></p>
-					<p id = "enin10"></p>
-					<p id = "enin11"></p>
-				</div>
-				<!--<div>
-					<button class="left_arrow" id ="notCompletedLeft" onclick = "enctLeft()"><i class='fas fa-angle-left'></i></button>
-					<button class="right_arrow" id ="notCompletedRight" onclick = "enctRight()"><i class='fas fa-angle-right'></i></button>
-				</div>
-			</div>-->
 			
 			<div class = "electives_course enel_course">
 				<h3>All Other Course Electives:</h3>
