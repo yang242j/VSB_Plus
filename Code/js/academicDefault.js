@@ -411,19 +411,15 @@ function showElectives() {
 	for(electives in electivesData){
 		if (electives == "ENSE") {
 			showENSE_electives();
-			continue;
 		}
-		if (electives == "CS") {
+		else if (electives == "CS") {
 			showCS_electives();
-			continue;
 		}
-		if (electives == "ENEL"){
+		else if (electives == "ENEL"){
 			showENEL_electives();
-			continue;
 		}
-		if (electives == "ENIN") {
+		else if (electives == "ENIN") {
 			showENIN_electives();
-			break;
 		}
 	}
 }
