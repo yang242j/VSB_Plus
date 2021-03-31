@@ -312,10 +312,12 @@ function showENEL_electives() {
 function showENIN_electives() {
     for (electives in electivesData) {
         if (electives = "ENIN") {
+		document.getElementById("electives1").innerHTML = "<div class = 'electives_course'>" + 
+					"<h3>" + electives + ":" + "</h3>" + "</div>";
             /*for (i = 7; i <= 13; i++) {*/
                 for (i = 0; i < 7; i++) {
                 	// document.getElementById("enin" + i).innerHTML = electivesData[electives][i];
-                    document.getElementById("e" + i).innerHTML = electivesData[electives][i];
+                    document.getElementById("a" + i).innerHTML = electivesData[electives][i];
             	}
            }            
      }
