@@ -26,6 +26,6 @@
 
 - [Project Commercial](Presentation%20&%20Meetings/Commercial)
 
-- [Customer Help/User training/Knowledgebase](/)
+- [Customer Help/User training/Knowledgebase](how_to.md)
 
 - [Project Experience Report](/)
