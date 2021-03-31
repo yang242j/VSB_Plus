@@ -416,6 +416,8 @@ function showElectives() {
 			showCS_electives();
 		}
 		else if (electives == "ENEL"){
+			showENSE_electives();
+			showCS_electives();
 			showENEL_electives();
 		}
 		else if (electives == "ENIN") {
