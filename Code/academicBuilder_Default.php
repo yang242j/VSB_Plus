@@ -222,24 +222,76 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 			<h2>Approved Electives</h2>
 			
 			<div class = "electives_course">
-				<div id = "electives">
+				<div id = "elective1">
 					<h3></h3></div>
 
 				<div class = "course_tag_electives ense_course_tag" id = "approvedCourse">
-					<p id = "e0"></p>
-					<p id = "e1"></p>
-					<p id = "e2"></p>
-					<p id = "e3"></p>
+					<p id = "a0"></p>
+					<p id = "a1"></p>
+					<p id = "a2"></p>
+					<p id = "a3"></p>
 
-					<p id = "e4"></p>
-					<p id = "e5"></p>
-					<p id = "e6"></p>
-					<p id = "e7"></p>
+					<p id = "a4"></p>
+					<p id = "a5"></p>
+					<p id = "a6"></p>
+					<p id = "a7"></p>
 					
-					<p id = "e8"></p>
-					<p id = "e9"></p>
-					<p id = "e10"></p>
-					<p id = "e11"></p>
+					<p id = "a8"></p>
+					<p id = "a9"></p>
+					<p id = "a10"></p>
+					<p id = "a11"></p>
+				</div>
+				<!--<div>
+					<button class="left_arrow" id ="approvedLeft"  onclick = "aLeft()"><i class='fas fa-angle-left'></i></button>
+					<button class="right_arrow" id ="approvedRight" onclick = "aRight()"><i class='fas fa-angle-right'></i></button>
+				</div>-->
+			</div>
+			
+			<div class = "electives_course">
+				<div id = "electives2">
+					<h3></h3></div>
+
+				<div class = "course_tag_electives ense_course_tag" id = "approvedCourse">
+					<p id = "b0"></p>
+					<p id = "b1"></p>
+					<p id = "b2"></p>
+					<p id = "b3"></p>
+
+					<p id = "b4"></p>
+					<p id = "b5"></p>
+					<p id = "b6"></p>
+					<p id = "b7"></p>
+					
+					<p id = "b8"></p>
+					<p id = "b9"></p>
+					<p id = "b10"></p>
+					<p id = "b11"></p>
+				</div>
+				<!--<div>
+					<button class="left_arrow" id ="approvedLeft"  onclick = "aLeft()"><i class='fas fa-angle-left'></i></button>
+					<button class="right_arrow" id ="approvedRight" onclick = "aRight()"><i class='fas fa-angle-right'></i></button>
+				</div>-->
+			</div>
+			
+			<div class = "electives_course">
+				<div id = "electives3">
+					<h3></h3></div>
+
+				<div class = "course_tag_electives ense_course_tag" id = "approvedCourse">
+					<p id = "c0"></p>
+					<p id = "c1"></p>
+					<p id = "c2"></p>
+					<p id = "c3"></p>
+
+					<p id = "c4"></p>
+					<p id = "c5"></p>
+					<p id = "c6"></p>
+					<p id = "c7"></p>
+					
+					<p id = "c8"></p>
+					<p id = "c9"></p>
+					<p id = "c10"></p>
+					<p id = "c11"></p>
 				</div>
 				<!--<div>
 					<button class="left_arrow" id ="approvedLeft"  onclick = "aLeft()"><i class='fas fa-angle-left'></i></button>
