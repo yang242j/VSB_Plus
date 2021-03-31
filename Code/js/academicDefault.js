@@ -299,7 +299,7 @@ function showENEL_electives() {
 		document.getElementById("electives").innerHTML = "<div class = 'electives_course'>" + 
 					"<h3>" + electives + ":" + "</h3>" + "</div>";
             /*for (i = 7; i <= 13; i++) {*/
-                for (i = 0; i < 6; i++) {
+                for (i = 0; i < 2; i++) {
                 	// document.getElementById("enel" + i).innerHTML = electivesData[electives][i];
                     document.getElementById("e" + i).innerHTML = electivesData[electives][i];
 			
