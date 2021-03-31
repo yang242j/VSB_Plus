@@ -221,16 +221,16 @@ function showTerm(pageNumber) {
 function showENSE_electives() {
     for (electives in electivesData) {
         if (electives = "ENSE") {
+		document.getElementById("electives").innerHTML = "<div class = 'electives_course'>" + 
+					"<h3>" + electives + ":" + "</h3>" + "</div>";
             /*for (i = 7; i <= 13; i++) {*/
                 for (i = 0; i < 7; i++) {
                 	// document.getElementById("ense" + i).innerHTML = electivesData[electives][i];
                 	//document.getElementById("e" + i).innerHTML = electivesData[electives][i];
 			
-				document.getElementById("e" + i).innerHTML = 
-					"<div class = 'electives_course'>" + "<h3>" + "ENSE :" + "</h3>" +
+				document.getElementById("e" + i).innerHTML =
 					"<div class = 'course_tag_electives ense_course_tag'>" + 
-					"<p>" + electivesData[electives][i] + "</p>" + "</div>" + </div>;
-
+					"<p>" + electivesData[electives][i] + "</p>" + "</div>";
 			
 
             	}
