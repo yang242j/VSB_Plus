@@ -226,10 +226,7 @@ function showENSE_electives() {
             /*for (i = 7; i <= 13; i++) {*/
                 for (i = 0; i < 7; i++) {
                 	// document.getElementById("ense" + i).innerHTML = electivesData[electives][i];
-                	//document.getElementById("e" + i).innerHTML = electivesData[electives][i];
-			
-				document.getElementById("e" + i).innerHTML =
-					"<p>" + electivesData[electives][i] + "</p>";
+                	document.getElementById("e" + i).innerHTML = electivesData[electives][i];
 			
 
             	}
@@ -275,10 +272,9 @@ function showCS_electives() {
             /*for (i = 7; i <= 13; i++) {*/
                 for (i = 0; i < 7; i++) {
                 	// document.getElementById("cs" + i).innerHTML = electivesData[electives][i];
-                    //document.getElementById("e" + i).innerHTML = electivesData[electives][i];
+                    document.getElementById("e" + i).innerHTML = electivesData[electives][i];
 			
-				document.getElementById("e" + i).innerHTML =
-					"<p>" + electivesData[electives][i] + "</p>";
+				
 
             	}
            }            
@@ -305,10 +301,8 @@ function showENEL_electives() {
             /*for (i = 7; i <= 13; i++) {*/
                 for (i = 0; i < 2; i++) {
                 	// document.getElementById("enel" + i).innerHTML = electivesData[electives][i];
-                    //document.getElementById("e" + i).innerHTML = electivesData[electives][i];
+                    document.getElementById("e" + i).innerHTML = electivesData[electives][i];
 			
-				document.getElementById("e" + i).innerHTML =
-					"<p>" + electivesData[electives][i] + "</p>";
 
             	}
            }            
