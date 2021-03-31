@@ -225,11 +225,11 @@ function showENSE_electives() {
                 for (i = 0; i < 7; i++) {
                 	// document.getElementById("ense" + i).innerHTML = electivesData[electives][i];
                 	//document.getElementById("e" + i).innerHTML = electivesData[electives][i];
-			
+			document.getElementById("electives").innerHTML = "<h3>" + electives + ":" + "</h3>"; 
+
 			document.getElementById("e" + i).innerHTML =
-				"<div class = 'electives_course'>" + "<h3>" + electives + ":" + "</h3>" +
 				"<div class = 'course_tag_electives ense_course_tag'>" + 
-				"<p>" + electivesData[electives][i] + "</p>" + "</div>" + "</div>";
+				"<p>" + electivesData[electives][i] + "</p>" + "</div>";
 
             	}
            }            
@@ -273,11 +273,11 @@ function showCS_electives() {
                 for (i = 0; i < 7; i++) {
                 	// document.getElementById("cs" + i).innerHTML = electivesData[electives][i];
                     //document.getElementById("e" + i).innerHTML = electivesData[electives][i];
-			
+			document.getElementById("electives").innerHTML = "<h3>" + electives + ":" + "</h3>"; 
+
 			document.getElementById("e" + i).innerHTML =
-				"<div class = 'electives_course'>" + "<h3>" + electives + ":" + "</h3>" +
 				"<div class = 'course_tag_electives ense_course_tag'>" + 
-				"<p>" + electivesData[electives][i] + "</p>" + "</div>" + "</div>";
+				"<p>" + electivesData[electives][i] + "</p>" + "</div>";
 
             	}
            }            
@@ -303,11 +303,11 @@ function showENEL_electives() {
                 for (i = 0; i < 2; i++) {
                 	// document.getElementById("enel" + i).innerHTML = electivesData[electives][i];
                     //document.getElementById("e" + i).innerHTML = electivesData[electives][i];
-			
+			document.getElementById("electives").innerHTML = "<h3>" + electives + ":" + "</h3>"; 
+
 			document.getElementById("e" + i).innerHTML =
-				"<div class = 'electives_course'>" + "<h3>" + electives + ":" + "</h3>" +
 				"<div class = 'course_tag_electives ense_course_tag'>" + 
-				"<p>" + electivesData[electives][i] + "</p>" + "</div>" + "</div>";
+				"<p>" + electivesData[electives][i] + "</p>" + "</div>";
 
             	}
            }            
