@@ -222,7 +222,8 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 			<h2>Approved Electives</h2>
 			
 			<div class = "electives_course">
-					<h3></h3>
+				<div id = "electives">
+					<h3></h3></div>
 
 				<div class = "course_tag_electives ense_course_tag" id = "approvedCourse">
 					<p id = "e0"></p>
