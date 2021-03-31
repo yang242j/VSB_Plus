@@ -6,66 +6,13 @@ var allCourse;
 window.onload = function () {
     console.log(major);
     getTermData(major);
-    /*getMajor(major);*/
     getElectivesData(major);
     getAllCourse();
     
     
     showTerm(1);
     showAllCourse();
-    /*showENSE_electives();
-    showCS_electives();
-    showENEL_electives();
-    showENIN_electives();
-    
-    /*sort_Electives();*/
 }
-
-
-
-
-// function getStuInfo(major) {
-//     return $.post('Model/courseREC.php', {
-//         major: major,
-//     }, function (data) {});
-// }
-//     // console.log(GetUrlRelativePath());
-//     $.post('Model/sign_in.php', {
-//         sid: sid,
-//         password: password
-        
-//     }, function (data) {
-//         // console.log("data is ", data)
-//         var stu = JSON.parse(data);
-//         //alert(stu);
-//         var major = stu.major;
-//         getTermData(major);
-//     });
-// }
-
-//function fetchCourseJSON(short_name) {
-//   return $.post('Model/course.php', {
-//        short_name: short_name
-//    }, function (data) {
-//    	showCourseInfo(data);
-//    });
-//}
-
-/*function showCourseInfo(data) {
-	var dataCourse = JSON.parse(data);
-
-	if(short_name ==)
-	{
-	return ("<p>" + "Faculty: " + dataCourse.faculty + "</p>" + 
-	"<p>" + "Name: " + dataCourse.short_name + "</p>" + 
-	"<p>" + "Title: " + dataCourse.title + "</p>" +
-	"<p>" + "Credit: " + dataCourse.credit + "</p>" +
-	"<p>" + "Description: " + dataCourse.description + "</p>" +
-	"<p>" + "Prerequisite: " + dataCourse.prerequisite + "</p>");
-	}
-
-	return ("Course Info not found");
-}*/
 
 function getAllCourse() {
     var myRequest = new XMLHttpRequest;
@@ -110,17 +57,6 @@ function getElectivesData(major) {
     }
     myRequest.send();
 }
-
-/*function course_Info() {
-	for (i = 0; i < allCourseData.length; i++) {
-	if (allCourseData[i].short_name == courseName && allCourseData[i].title != null
-            return ("<p>" + "Title: " + allCourseData[i].title + "</p>" + 
-			"<p>" + "Description: " + allCourseData[i].description + "</p>" +
-			"<p>" + "Prerequisite: " + allCourseData[i].prerequisite + "</p>");
-	}
-		return ("Course Info not found");
-	
-}*/
 	
 function showTerm(pageNumber) {
     var i = 1;
@@ -129,51 +65,29 @@ function showTerm(pageNumber) {
         termNumber = "term" + pageNumber;
         if (term >= termNumber) {
             if (term != "Approved") {
-                /*if (i <= 4) {*/
                 if (i <= 10) {
-                    /*if(pageNumber < 7) {*/
                     if (pageNumber < 12) {
                         document.getElementById("term" + i).innerHTML =
                             "<div class = 'tittle'>" + "<h2>" + term + ":" + "</h2></div>" +
                             "<div class = 'course_cards' onclick=\'courseSelect(event)\'>" + "<h3>" + termData[term][0] + "</h3>" +
                             "<p>" + getTitle(termData[term][0]) + "</p>" +
-                            /*"<i class='fas fa-circle' id = 'circle1' style='font-size:24px;'></i>"+
-                            "<i class='fas fa-circle' style='font-size:24px;color:red'></i>"+
-                            "<i class='fas fa-circle' style='font-size:24px;color:red'></i>"+
-                            "<i class='fas fa-circle' style='font-size:24px;color:red'></i>*/
                             "</div>" +
 
 
                             "<div class = 'course_cards' onclick=\'courseSelect(event)\'>" + "<h3>" + termData[term][1] + "</h3>" +
                             "<p>" + getTitle(termData[term][1]) + "</p>" +
-                            /* "<i class='fas fa-circle' style='font-size:24px;color:red'></i>"+
-                             "<i class='fas fa-circle' style='font-size:24px;color:red'></i>"+
-                             "<i class='fas fa-circle' style='font-size:24px;color:red'></i>"+
-                             "<i class='fas fa-circle' style='font-size:24px;color:red'></i>*/
                             "</div>" +
 
                             "<div class = 'course_cards' onclick=\'courseSelect(event)\'>" + "<h3>" + termData[term][2] + "</h3>" +
                             "<p>" + getTitle(termData[term][2]) + "</p>" +
-                            /* "<i class='fas fa-circle' style='font-size:24px;color:red'></i>"+
-                             "<i class='fas fa-circle' style='font-size:24px;color:red'></i>"+
-                             "<i class='fas fa-circle' style='font-size:24px;color:red'></i>"+
-                             "<i class='fas fa-circle' style='font-size:24px;color:red'></i>*/
-                            "</div>" +
+ 			    "</div>" +
 
                             "<div class = 'course_cards' onclick=\'courseSelect(event)\'>" + "<h3>" + termData[term][3] + "</h3>" +
                             "<p>" + getTitle(termData[term][3]) + "</p>" +
-                            /* "<i class='fas fa-circle' style='font-size:24px;color:red'></i>"+
-                             "<i class='fas fa-circle' style='font-size:24px;color:red'></i>"+
-                             "<i class='fas fa-circle' style='font-size:24px;color:red'></i>"+
-                             "<i class='fas fa-circle' style='font-size:24px;color:red'></i>*/
                             "</div>" +
 
                             "<div class = 'course_cards' onclick=\'courseSelect(event)\'>" + "<h3>" + termData[term][4] + "</h3>" +
                             "<p>" + getTitle(termData[term][4]) + "</p>" +
-                            /*  "<i class='fas fa-circle' style='font-size:24px;color:red'></i>"+
-                               "<i class='fas fa-circle' style='font-size:24px;color:red'></i>"+
-                               "<i class='fas fa-circle' style='font-size:24px;color:red'></i>"+
-                               "<i class='fas fa-circle' style='font-size:24px;color:yellow'></i>*/
                             "</div>";
                       i = i + 1;
                     }
@@ -183,41 +97,7 @@ function showTerm(pageNumber) {
     }
 }
 
-/*function sort_Electives() {
-    for (term in termData) {
-        if (term = "Approved") {
-	        if(Approved.includes('CS 205') || Approved.includes('CS 315') || Approved.includes('CS 330') 
-               || Approved.includes('CS 375') || Approved.includes('CS 405')
-              || Approved.includes('CS 425')|| Approved.includes('CS 427'))
-            {
-                    showCS_electives();
-            }
-            }
-        }
-    
-}*/
 
-/*function getMajor(major)
-{
-	if(major = "SSE"){
-		showENSE_electives();
-    		showCS_electives();
-    		showENEL_electives();
-	} else if(major = "ISE"){
-		showENEL_electives();
-    		showENIN_electives();
-    	}
-}*/
-
-/*function showENSE_electives() {
-    for (term in termData) {
-        if (term = "Approved") {
-            for (i = 0; i <= 6; i++) {
-                document.getElementById("ense" + i).innerHTML = termData[term][i];
-            }
-        }
-    }
-}*/
 function showENSE_electives() {
     for (electives in electivesData) {
         if (electives = "ENSE") {
@@ -233,36 +113,6 @@ function showENSE_electives() {
            }            
      }
 }
-
-/*function showENSE_electives() {
-	var i = 0;
-	
-    for (electives in electivesData) {
-        if (electives = "ENSE") {
-            /*for (i = 7; i <= 13; i++) {
-                if (i < 7) {
-			document.getElementById("e" + i).innerHTML =
-				"<div class = "electives_course">" + "<h3>" + electives + ":" + "</h3>" +
-				"<div class = "course_tag_electives ense_course_tag" id = "approvedCourse">" + 
-				"<p>" + electivesData[electives][i] + "</p>" + "</div>" + "</div>";
-
-			i++;
-		}
-           }            
-     }
-}*/
-
-/*function showCS_electives() {
-    for (term in termData) {
-        if (term = "Approved") {
-            for (i = 7; i <= 13; i++) {
-                /*for (i = 0; i < 12; i++) {
-                document.getElementById("cs" + i).innerHTML = termData[term][i];
-            }
-        }
-        }
-    
-}*/
 
 function showCS_electives() {
     for (electives in electivesData) {
@@ -280,18 +130,6 @@ function showCS_electives() {
            }            
      }
 }
-
-/*function showENEL_electives() {
-    for (term in termData) {
-        if (term = "Approved") {
-            for (i = 14; i <= 15; i++) {
-            /*for (i = 0; i < 12; i++) {
-                document.getElementById("enel" + i).innerHTML = termData[term][i];
-            }
-        }
-    }
-
-}*/
 
 function showENEL_electives() {
     for (electives in electivesData) {
@@ -318,6 +156,20 @@ function showENIN_electives() {
                 for (i = 0; i < 7; i++) {
                 	// document.getElementById("enin" + i).innerHTML = electivesData[electives][i];
                     document.getElementById("a" + i).innerHTML = electivesData[electives][i];
+            	}
+           }            
+     }
+}
+
+function showENGG_electives() {
+    for (electives in electivesData) {
+        if (electives = "ENGG") {
+		document.getElementById("electives2").innerHTML = "<div class = 'electives_course'>" + 
+					"<h3>" + electives + ":" + "</h3>" + "</div>";
+            /*for (i = 7; i <= 13; i++) {*/
+                for (i = 0; i < 1; i++) {
+                	// document.getElementById("enin" + i).innerHTML = electivesData[electives][i];
+                    document.getElementById("b" + i).innerHTML = electivesData[electives][i];
             	}
            }            
      }
@@ -424,6 +276,9 @@ function showElectives() {
 		}
 		if (electives == "ENIN") {
 			showENIN_electives();
+		}
+		if (electives == "ENGG") {
+			showENGG_electives();
 		}
 	}
 }
