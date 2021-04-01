@@ -1,36 +1,42 @@
 # User Testing Plan ToC
 
-- [1. The Basics]()
-- [2. The Goal, Underlying Objectives, & Tactics]()
-- [3. Measuring Success in User Testing]()
-- [4. Possible Scripting & Questions/Tasks to Ask]()
+- [The Basics](#The-Basics)
+- [The Goal, Underlying Objectives, & Tactics](#The-Goal,-Underlying-Objectives,-&-Tactics)
+- [Measuring Success in User Testing](#Measuring-Success-in-User-Testing)
 
 ## The Basics
 
 ### WHO
     Who should I test with? 
-    - Students who are currently enrolled in the University of Regina.
-    - Students who are not familiar with the enrollment system of the University of Regina.
-    - Lecturers who might be given authorization to manage the system as administrator.
+    - Students currently studying at the University of Regina.
+    - Students who are not familiar with the course selection system of the University of Regina.
+    - Lecturers who may be authorized to manage the system as an administrator.
 
 ### WHAT
     What kind of user testing should we do?
-    - Black box testing, which means the user is not knowing the code or whats happening inside the system. 
-    - In order to simulate the real user practice environment, the user will not recieve any help from the developers.
+    - Black box testing, which means that the user does not know what is happening inside the code or the system.
+    - In order to simulate the real user environment, the user will not get any help from the developer.
 
 ### WHERE
     Where does this test happen?
-    - Due to the COVID-19, this test will only happen online through email or message.
+    - Due to COVID-19, the test can only be done online via email or message.
 
 ### WHEN
     When does this test happen and how long will it take?
-    - The user testing is happened right after the completion of the first MVP.
-    - Normally the user testing will take no longer than 30 mins.
-    - For user who need extra explainations or technical helps, this testing may take no longer than 1 hour.
+    - User testing is performed immediately after the completion of the first MVP.
+    - Normally, the user test will not exceed 30 minutes.
+    - For users who need more instructions or technical assistance, this test will not exceed 1 hour.
 
 ### HOW
     How to implement the testing?
-    - The user will recieve the id address of this website and followed by a username-password pair to login.
+    - The user will receive the IP address of the website, as well as the username and password used to log in.
 
 ## The Goal, Underlying Objectives, & Tactics
-    The goal of this project is to optimize the 
+    The goal of the project is to optimize the student's course registration experience. The project is a web-based application. 
+    The test plan is to ensure that it meets the needs of users and that all functions work as expected. In addition, the result/reply of the user test will be used as the upgrade target for the next MVP.
+
+## Measuring Success in User Testing
+All pages will be tested according to the following standards:
+1. Absolutely no crush, request timeout or other major issues.
+2. The main function of the page should be perfectly implemented.
+3. The secondary functions of the page may have limitations, but it does not affect the performance of the page.
