@@ -1,7 +1,7 @@
 # User Testing Plan ToC
 
 - [The Basics](#The-Basics)
-- [The Goal, Underlying Objectives, & Tactics](#The-Goal,-Underlying-Objectives,-&-Tactics)
+- [The Goal, Underlying Objectives, & Tactics](#the-goal-underlying-objectives--tactics)
 - [Measuring Success in User Testing](#Measuring-Success-in-User-Testing)
 
 ## The Basics
