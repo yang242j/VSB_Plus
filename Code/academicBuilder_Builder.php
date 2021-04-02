@@ -96,7 +96,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                 $_SESSION["name"]
             ); ?></a>
             <div class="hidden" id="addon-menu">
-                <a><?php echo htmlspecialchars($_SESSION["sid"]); ?></a>
+                <a href="http://15.223.123.122/tp/public/index.php/login"><?php echo htmlspecialchars($_SESSION["sid"]); ?></a>
                 <a href="Model/logout.php">Logout</a>
             </div>
         </div>
