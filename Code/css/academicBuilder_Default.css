@@ -316,6 +316,10 @@ footer {
     border-radius: 10px;
 }
 
+.passCourse{
+    background-color:#FFCC99 !important;
+}
+
 /********************************/
 @media screen and (max-width: 1080px) {
 

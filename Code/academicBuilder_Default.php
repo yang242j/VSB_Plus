@@ -43,6 +43,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 ?>
 
 
+
 <!doctype html>
 
 <html lang="en">
@@ -61,6 +62,12 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 	<link rel="shortcut icon" href="#">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/academicBuilder_Default.css">
+
+	<script>
+        var sid = "<?php echo $_SESSION["sid"]; ?>";
+        var pwd = "<?php echo $_SESSION["password"]; ?>";
+        // var major = "<?php echo $_SESSION["major"]; ?>"
+    </script>
 
     <script type="text/javascript" src="js/academicDefault.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

@@ -12,6 +12,37 @@ window.onload = function () {
     
     showTerm(1);
     showAllCourse();
+
+    markBorder();
+}
+
+function markBorder(){
+    //fetch JSON data from takenClass database
+    $.post('Model/takenClass.php', {
+        sid: sid,
+        password: pwd
+    }, function (data) {
+        var dataJSON = JSON.parse(data);
+        var takenCouList = [];
+        for (i = 0; i < dataJSON.length; i++){
+            takenCouList.push(dataJSON[i].course_ID)
+            // console.log(dataJSON[i]);
+            // console.log(eles[i].children[0].innerHTML);
+        }
+        // console.log(takenCouList);
+        let eles = document.getElementsByClassName('course_cards');
+        for (i = 0; i < eles.length; i++){
+            short_name = eles[i].firstChild.innerHTML;
+            console.log(short_name);
+            let ele = eles[i];
+            if (takenCouList.includes(short_name)){
+                ele.setAttribute('class', ele.getAttribute('class') + ' passCourse');
+            }
+            else{
+                ele.setAttribute('class', ele.getAttribute('class') + ' notPassCourse');
+            }
+        }
+    });
 }
 
 function getAllCourse() {
