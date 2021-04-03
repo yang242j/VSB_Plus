@@ -18,4 +18,4 @@
 
     - [Scrum #7](Scrums/Scrum%237)
 
-- [Vlogs](Vlogs/vlog.md)
+- [Vlogs](Vlogs)
