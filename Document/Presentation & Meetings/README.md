@@ -20,14 +20,14 @@
 
 - [Vlogs](Vlogs)
 
-    - [Vlog Intro](Vlogs/Scrum%231)
+    - [Vlog Intro](https://www.youtube.com/watch?v=y45IOaX7iNw)
 
-    - [Vlog #1](Vlogs/Scrum%232)
+    - [Vlog #1](https://www.youtube.com/watch?v=-261BW4R_n4)
 
-    - [Vlog #2](Vlogs/Scrum%233)
+    - [Vlog #2](https://www.youtube.com/watch?v=n7I8rsKug_4)
 
-    - [Vlog #3](Vlogs/Scrum%234)
+    - [Vlog #3](https://www.youtube.com/watch?v=7E3dxXwa2zc)
 
-    - [Vlog #4](Vlogs/Scrum%235)
+    - [Vlog #4](https://www.youtube.com/watch?v=0w5wRAfXe9c)
 
-    - [Vlog #5](Vlogs/Scrum%236)
+    - [Vlog #5](https://www.youtube.com/watch?v=_pi-A9BQ5vk)
