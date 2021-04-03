@@ -32,8 +32,8 @@
     - The user will receive the IP address of the website, as well as the username and password used to log in.
 
 ## The Goal, Underlying Objectives, & Tactics
-    The goal of the project is to optimize the student's course registration experience. The project is a web-based application. 
-    The test plan is to ensure that it meets the needs of users and that all functions work as expected. In addition, the result/reply of the user test will be used as the upgrade target for the next MVP.
+The goal of the project is to optimize the student's course registration experience. The project is a web-based application. 
+The test plan is to ensure that it meets the needs of users and that all functions work as expected. In addition, the result/reply of the user test will be used as the upgrade target for the next MVP.
 
 ## Measuring Success in User Testing
 All pages will be tested according to the following standards:
