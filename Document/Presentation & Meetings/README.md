@@ -19,3 +19,15 @@
     - [Scrum #7](Scrums/Scrum%237)
 
 - [Vlogs](Vlogs)
+
+    - [Vlog Intro](Vlogs/Scrum%231)
+
+    - [Vlog #1](Vlogs/Scrum%232)
+
+    - [Vlog #2](Vlogs/Scrum%233)
+
+    - [Vlog #3](Vlogs/Scrum%234)
+
+    - [Vlog #4](Vlogs/Scrum%235)
+
+    - [Vlog #5](Vlogs/Scrum%236)
