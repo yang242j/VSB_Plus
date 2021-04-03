@@ -3,6 +3,19 @@ var termData;
 var electivesData;
 var allCourse;
 
+var nameAbbr = {
+    'ESE': 'Electronic Engineering',
+    'EVSE': 'Environmental Engineering' ,
+    'ISE': 'Industrial Engineering',
+    'PSE': 'Petroleum Engineering',
+    'SSE': 'Software engineering',
+};
+var takenClass = {
+    "finish":   0,
+    "unfinish": 0,
+    'sum':0,
+};
+
 window.onload = function () {
     console.log(major);
     getTermData(major);
@@ -20,29 +33,48 @@ function markBorder(){
     //fetch JSON data from takenClass database
     $.post('Model/takenClass.php', {
         sid: sid,
-        password: pwd
+        password: pas
     }, function (data) {
         var dataJSON = JSON.parse(data);
         var takenCouList = [];
         for (i = 0; i < dataJSON.length; i++){
             takenCouList.push(dataJSON[i].course_ID)
-            // console.log(dataJSON[i]);
-            // console.log(eles[i].children[0].innerHTML);
         }
         // console.log(takenCouList);
         let eles = document.getElementsByClassName('course_cards');
         for (i = 0; i < eles.length; i++){
             short_name = eles[i].firstChild.innerHTML;
-            console.log(short_name);
+            // console.log(short_name);
             let ele = eles[i];
             if (takenCouList.includes(short_name)){
                 ele.setAttribute('class', ele.getAttribute('class') + ' passCourse');
+                takenClass.finish += 1;
             }
             else{
                 ele.setAttribute('class', ele.getAttribute('class') + ' notPassCourse');
+                takenClass.unfinish += 1;
             }
         }
+        takenClass.sum = takenClass.finish + takenClass.unfinish;
+        loadMajor();
     });
+}
+
+function loadMajor(){
+    let ele = document.getElementById('major');
+    ele.innerHTML = major;
+    ele.setAttribute('title', nameAbbr[major]);
+
+    let grandParent = ele.parentNode.parentNode;
+    let progress = "<div class='progress progress-striped' style='width: 100%;'>" + 
+        "<div class='progress-bar progress-bar-warning' role='progressbar' " + 
+             "aria-valuenow='60' aria-valuemin='0' aria-valuemax='100' " +
+             "style='width: "+takenClass.finish * 100 / takenClass.sum+"%;''>" +
+            "<span class='sr-only'>Course Progress</span> "+
+            "<p>Course Progress</p>" + 
+        "</div>" +
+        "</div>";
+    grandParent.innerHTML += progress;
 }
 
 function getAllCourse() {

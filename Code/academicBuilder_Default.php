@@ -62,12 +62,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 	<link rel="shortcut icon" href="#">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/academicBuilder_Default.css">
-
-	<script>
-        var sid = "<?php echo $_SESSION["sid"]; ?>";
-        var pwd = "<?php echo $_SESSION["password"]; ?>";
-        // var major = "<?php echo $_SESSION["major"]; ?>"
-    </script>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 
     <script type="text/javascript" src="js/academicDefault.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -123,7 +118,9 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     
 	<div class="container">
 		<section id = "block" class = "terms">
-			<h2>Default Schedule</h2>
+			<div id="title">
+				<h2>Default Schedule (<abbr id="major" title=""></abbr>)</h2>
+			</div>
 			<div id = "autoscroll">
 				<div class = "termGrid" id = "term1">
 					<div class = "tittle" style = "grid-area: title;"><h2>Term1:</h2></div>
