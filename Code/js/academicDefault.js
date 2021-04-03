@@ -65,13 +65,14 @@ function loadMajor(){
     ele.innerHTML = major;
     ele.setAttribute('title', nameAbbr[major]);
 
+    let percen = parseInt(takenClass.finish * 100 / takenClass.sum);
     let grandParent = ele.parentNode.parentNode;
     let progress = "<div class='progress progress-striped' style='width: 100%;'>" + 
         "<div class='progress-bar progress-bar-warning' role='progressbar' " + 
              "aria-valuenow='60' aria-valuemin='0' aria-valuemax='100' " +
-             "style='width: "+takenClass.finish * 100 / takenClass.sum+"%;''>" +
+             "style='width: "+ percen +"%;''>" +
             "<span class='sr-only'>Course Progress</span> "+
-            "<p>Course Progress</p>" + 
+            "<p style='color:black;';>Progress:"+percen+"%</p>" + 
         "</div>" +
         "</div>";
     grandParent.innerHTML += progress;
