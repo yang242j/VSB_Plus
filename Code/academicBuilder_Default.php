@@ -62,7 +62,6 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 	<link rel="shortcut icon" href="#">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/academicBuilder_Default.css">
-	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 
     <script type="text/javascript" src="js/academicDefault.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -119,6 +118,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 	<div class="container">
 		<section id = "block" class = "terms">
 			<div id="title">
+				
 				<h2>Default Schedule (<abbr id="major" title=""></abbr>)</h2>
 			</div>
 			<div id = "autoscroll">

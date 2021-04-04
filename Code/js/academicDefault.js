@@ -67,11 +67,9 @@ function loadMajor(){
 
     let percen = parseInt(takenClass.finish * 100 / takenClass.sum);
     let grandParent = ele.parentNode.parentNode;
-    let progress = "<div class='progress progress-striped' style='width: 100%;'>" + 
-        "<div class='progress-bar progress-bar-warning' role='progressbar' " + 
-             "aria-valuenow='60' aria-valuemin='0' aria-valuemax='100' " +
+    let progress = "<div class='progressOut' style='width: 100%;'>" + 
+        "<div class='progressIn' " + 
              "style='width: "+ percen +"%;''>" +
-            "<span class='sr-only'>Course Progress</span> "+
             "<p style='color:black;';>Progress:"+percen+"%</p>" + 
         "</div>" +
         "</div>";
