@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Mar 18, 2021 at 04:28 AM
+-- Generation Time: Apr 05, 2021 at 03:34 AM
 -- Server version: 10.2.10-MariaDB
 -- PHP Version: 7.2.34
 
@@ -20,6 +20,44 @@ SET time_zone = "+00:00";
 --
 -- Database: `vsb_plus`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `admin`
+--
+
+CREATE TABLE `admin` (
+  `username` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `admin_id` mediumint(8) UNSIGNED NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `admin`
+--
+
+INSERT INTO `admin` (`username`, `password`, `admin_id`) VALUES
+('admin', 'admin', 8);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `S123123123`
+--
+
+CREATE TABLE `S123123123` (
+  `courseIndex` int(11) NOT NULL,
+  `term` varchar(255) NOT NULL,
+  `course_ID` varchar(255) NOT NULL,
+  `section_num` varchar(255) NOT NULL,
+  `course_title` varchar(255) NOT NULL,
+  `final_grade` varchar(255) NOT NULL,
+  `credit_hour` int(11) NOT NULL DEFAULT 3,
+  `credit_earned` int(11) NOT NULL,
+  `class_size` int(11) NOT NULL,
+  `class_average` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -95,7 +133,7 @@ CREATE TABLE `S200362586` (
 
 INSERT INTO `S200362586` (`courseIndex`, `term`, `course_ID`, `section_num`, `course_title`, `final_grade`, `credit_hour`, `credit_earned`, `class_size`, `class_average`) VALUES
 (1, '2015 Fall', 'ENGG 100', '001', 'Engineering Graphics', 'NP', 3, 0, 138, 64),
-(2, '2015 Fall', 'MATH 100', '005', 'Calculus I', '82', 3, 3, 55, 63),
+(2, '2015 Fall', 'MATH 110', '005', 'Calculus I', '82', 3, 3, 55, 63),
 (3, '2015 Fall', 'MATH 122', '001', 'Linear Algebra I', 'NP', 3, 0, 90, 63),
 (4, '2015 Fall', 'STAT 160', '001', 'Introductory Statistics', 'NP', 3, 0, 80, 57),
 (5, '2016 Winter', 'CHEM 104', '001', 'General Chemistry I', '67', 3, 3, 194, 67),
@@ -118,6 +156,25 @@ INSERT INTO `S200362586` (`courseIndex`, `term`, `course_ID`, `section_num`, `co
 (26, '2017 Fall', 'ENEL 280', '001', 'Electrical Circuits', '60', 3, 3, 164, 61),
 (27, '2017 Fall', 'ENGG 240', '002', 'Engg Science I - Mechanics', 'NP', 3, 0, 107, 61),
 (28, '2017 Fall', 'MATH 213', '001', 'Vector Calculus', '56', 3, 3, 47, 52);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `S200362878`
+--
+
+CREATE TABLE `S200362878` (
+  `courseIndex` int(11) NOT NULL,
+  `term` varchar(255) NOT NULL,
+  `course_ID` varchar(255) NOT NULL,
+  `section_num` varchar(255) NOT NULL,
+  `course_title` varchar(255) NOT NULL,
+  `final_grade` varchar(255) NOT NULL,
+  `credit_hour` int(11) NOT NULL DEFAULT 3,
+  `credit_earned` int(11) NOT NULL,
+  `class_size` int(11) NOT NULL,
+  `class_average` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -182,15 +239,30 @@ CREATE TABLE `students` (
 --
 
 INSERT INTO `students` (`student_id`, `name`, `campus`, `faculty`, `program`, `major`, `minor`, `concentration`, `totalCredit`, `GPA`, `password`) VALUES
+(123123123, '123123123', 'University of Regina', 'Engineering and Applied Science', 'BASc', 'ISE', '', '', 136, 70, '$2y$10$Jt1mi5/cNSGMYnuPIb41tuIwMQZpv8cIkIFrYFaYxWN/VXvFoid/i'),
 (200311111, 'DemoSSE', 'University of Regina', 'Engineering and Applied Science', 'BASc', 'SSE', '', '', 11, 60, '$2y$10$dXqeAaQ/rxdkas6Ss8NvfuDMX/k95YcHmkx8rqytQhcWWgxli4l/W'),
 (200343506, 'Tsai, Ming', 'University of Regina', 'Engineering and Applied Science', 'BASc', 'ISE', '', '', 136, 60, '$2y$10$yON2Yvsqp71130pwYGn2I.xHUkOf0NkxGOzP.Ihqw1ByvRk04pmva'),
 (200362586, 'Yang, Jingkang', 'U of R', 'Engineering and Applied Science', 'Bachelor of Applied Science', 'SSE', NULL, NULL, 133, 76, '$2y$10$nOiF/i0ngj/4YYg5Nac8eO3vyhkoVMJcwBTEOiMkXV8pU4W1ezXpW'),
+(200362878, 'Nick', 'University of Regina', 'Engineering and Applied Science', 'BASc', 'ESE', '', '', 3, 60, '$2y$10$lUUEI36.xAoQNOqqP6O7aeFMnzM0mcvN8nB4Gi5utxm9r18e05rG2'),
 (200363504, 'Priscilla Chua', 'University of Regina', 'Engineering and Applied Science', 'BASc', 'SSE', '', '', 136, 60, '$2y$10$shGoK/Z6BKjxqHif2x3DhuBkNEZILmF9GZSRH5KpDr.UPemKImmS.'),
 (200368746, 'Xia Hua', 'University of Regina', 'Engineering and Applied Science', 'BASc', 'SSE', '', '', 136, 70, '$2y$10$2q/Vue3dw1GlWvAKWBGCpu01oWVbECO.08dE7Iwwtd4Terz/RMGpG');
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `admin`
+--
+ALTER TABLE `admin`
+  ADD PRIMARY KEY (`admin_id`),
+  ADD UNIQUE KEY `username` (`username`);
+
+--
+-- Indexes for table `S123123123`
+--
+ALTER TABLE `S123123123`
+  ADD PRIMARY KEY (`courseIndex`);
 
 --
 -- Indexes for table `S200311111`
@@ -208,6 +280,12 @@ ALTER TABLE `S200343506`
 -- Indexes for table `S200362586`
 --
 ALTER TABLE `S200362586`
+  ADD PRIMARY KEY (`courseIndex`);
+
+--
+-- Indexes for table `S200362878`
+--
+ALTER TABLE `S200362878`
   ADD PRIMARY KEY (`courseIndex`);
 
 --
@@ -233,6 +311,18 @@ ALTER TABLE `students`
 --
 
 --
+-- AUTO_INCREMENT for table `admin`
+--
+ALTER TABLE `admin`
+  MODIFY `admin_id` mediumint(8) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
+--
+-- AUTO_INCREMENT for table `S123123123`
+--
+ALTER TABLE `S123123123`
+  MODIFY `courseIndex` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `S200311111`
 --
 ALTER TABLE `S200311111`
@@ -249,6 +339,12 @@ ALTER TABLE `S200343506`
 --
 ALTER TABLE `S200362586`
   MODIFY `courseIndex` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+
+--
+-- AUTO_INCREMENT for table `S200362878`
+--
+ALTER TABLE `S200362878`
+  MODIFY `courseIndex` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `S200363504`
