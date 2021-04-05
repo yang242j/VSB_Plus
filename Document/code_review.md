@@ -75,7 +75,7 @@ $totalCredit = isset($_REQUEST["totalCredit"]) ? $_REQUEST["totalCredit"] : '';
 ├── semesterBuilder_v2.php
 ├── semesterBuilder.php
 └── signup.php
-<pre>
+</pre>
 
 
 All the code is spilt into different directory accounding to their format and purpose.For example,all style files are under <mark>/css</mark>, all back-end database-required file are under <mark>/model</mark>.
