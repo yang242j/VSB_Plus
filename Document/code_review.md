@@ -129,9 +129,9 @@ For example:
 └── vsbp_db_config.php
 </pre>
 Some important components explain:
-* <mark>/controller</mark>
+* <mark>/controller</mark><br/>
   Controller is used to map data form database, so we are able to change database from one client to another easily.
-*  <mark>/model</mark>
+*  <mark>/model</mark><br/>
   Obtain data from database.
   for example:
   ```php
@@ -159,9 +159,9 @@ if ($conn === false) {
     //echo $conn_message;
 }
   ```
-*  <mark>/JSON</mark>
+*  <mark>/JSON</mark><br/>
   Store the data form database.
- *  <mark>/js</mark>
+ *  <mark>/js</mark><br/>
   It contians all the front-end javascript file.All needed data are gathered in <mark>/JSON</mark> and <mark>/model</mark>, so it can be directly used in js file.
   for example:
   ```javaScript
@@ -187,7 +187,7 @@ function getAllCourse() {
     myRequest.send();
 }
   ```
-*  <mark>/Python</mark>
+*  <mark>/Python</mark><br/>
    It contains all python we used, inculding crawling data from University of Regina wabsite and our a test phase.
 
 
@@ -276,9 +276,9 @@ function get24HrsFrm12Hrs(timeString) {
 ```
 ## Non Functional requirements
 ### Maintainability
-* Readability
+* Readability<br/>
   Most of the code is easy to read. Because we do not have any classes in javaScript, we separate files based on the web page, so we write functionality declaration on the front of our pages, and then the team members can expediently get to know what is the purpose of this method. Some codes on semester and academic pages may be hard to read due to the complexity of conflicts. Moreover, lack of inline comments in some parts may raise the difficulty of reading. 
-* Testability
+* Testability<br/>
   Our test base on the functionality of the website, it only shows the result of functions works or not. We did not do any unit tests. Considering the importance of the unit test, we think our code should be refactored, and separateed into more functions.
    For example, This function use to grab the user's class history from the database, we gathered from takenClass.php, and it's in a callback function, so we can only use this data in the function but not assign this data to a global variable.
   ```javaScript
@@ -294,7 +294,7 @@ function get24HrsFrm12Hrs(timeString) {
         clickGetInfo();
     });
   ```
-* Debuggability
+* Debuggability<br/>
 We did not use any log to track parameter data and exceptions. Only the error message will help the debug which is not the best practice.
 ### Reusability
 We are doing our best to get rid of repeat functions, so serval repeatable functions are packing in one method then we reuse them in another place.
@@ -311,7 +311,7 @@ Because our website is now running on a small AWS ec2 server, we are not able to
 ### Usability
 This web application is designed for students to plan their further courses, so students who are familiar with it will be using it easily. Considering some new students may be interested, so we add lots tips on our website.
 ## Object-Oriented Analysis and Design (OOAD) Principles
-* Single Responsibility Principle (SRS)
+* Single Responsibility Principle (SRS)<br/>
   Responsibilities did not set in a single, they are placed into separate functions.
   For example, the delete and find function are separated into two small functions
   ```javaScript
@@ -342,8 +342,8 @@ This web application is designed for students to plan their further courses, so 
   ```javaScript
   if(findExist(doneList[index], courseName) == false){}
   ```
-* Open Closed Principle
+* Open Closed Principle<br/>
 While adding new functionality, existing code should will not be modified. New functionality will be written in new functions.
-* Interface segregation
+* Interface segregation<br/>
 There are no lengthy interface on our website, we split our functions into small blocks.
 # Conclusion
