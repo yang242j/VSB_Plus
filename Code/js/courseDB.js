@@ -21,7 +21,7 @@ window.onload = function init() {
     if (defaultShow) {
         showGraph(defaultCourse);
     }
-    $('#selectToggle').click(function(){
+    $('#selectToggle').click(function () {
         let text = $(this).text();
         // $(this).text(
         //     text == "Hidden courses list" ? "Show course list" : "Hidden courses list"

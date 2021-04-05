@@ -84,7 +84,7 @@ function setCmptedValue(sid) {
     }, function (data) {
         var jsonData = JSON.parse(data).data;
         // In case, no course data, using the default value
-        if (jsonData.length === 0){
+        if (jsonData.length === 0) {
             // Refresh the summary borad
             pageDown();
             return;
@@ -117,12 +117,12 @@ function setCmptedValue(sid) {
         yearMin = Math.min.apply(null, years);
         yearMax = Math.max.apply(null, years);
         cmpValue.year = yearMax - yearMin + 1;
-        
-        switch (cmpValue.year){
-            case 1: 
+
+        switch (cmpValue.year) {
+            case 1:
                 cmpValue.year += 'st';
                 break;
-            case 2: 
+            case 2:
                 cmpValue.year += 'nd';
                 break;
             case 3:
@@ -137,18 +137,18 @@ function setCmptedValue(sid) {
 }
 
 
-　
-function GetUrlRelativePath()　　 {　　　　
-    var url = document.location.toString();　　　　
+
+function GetUrlRelativePath() {
+    var url = document.location.toString();
     var arrUrl = url.split("//");
 
-    　　　　
-    var start = arrUrl[1].indexOf("/");　　　　
+
+    var start = arrUrl[1].indexOf("/");
     var relUrl = arrUrl[1].substring(start); //stop省略，截取从start开始到结尾的所有字符
 
-    　　　　
-    if (relUrl.indexOf("?") != -1) {　　　　　　
-        relUrl = relUrl.split("?")[0];　　　　
-    }　　　　
-    return relUrl;　　
+
+    if (relUrl.indexOf("?") != -1) {
+        relUrl = relUrl.split("?")[0];
+    }
+    return relUrl;
 }

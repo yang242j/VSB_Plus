@@ -458,7 +458,7 @@ var preq;
 var preqId;
 //recored prev drop item course name
 function dragTest() {
-    //const draggableElement = document.querySelector("#nct0");
+    
     for (const dropZone of document.querySelectorAll(".course_cards")) {
         dropZone.addEventListener("dragover", e => {
             e.preventDefault();
@@ -467,13 +467,6 @@ function dragTest() {
         dropZone.addEventListener("dragleave", e => {
             e.preventDefault();
             dropZone.classList.remove("drop-zone--over");
-            //console.log("dasdasdasd");
-            // dragLeaveStopper+=1;
-            /*if(dragLeaveStopper==1)
-            {
-            creditsEarned = getCredits;
-            document.getElementById("show_credits").innerHTML = "Credits: " + creditsEarned;
-            }*/
 
         });
         dropZone.addEventListener("dragstart", e => {
@@ -544,14 +537,14 @@ function dragTest() {
 
 
                 document.getElementById(newForAlern).innerHTML = "Applied Term: </br>" +
-                    term; //terminfo[0] is term
-                //console.log(terminfo[0][0],terminfo[0][1],terminfo[0][2]);
+                    term;
+               
                 getCredits = parseInt(terminfo[1]);
             } else {
                 alert("this course is not applied");
                 return;
-                //getCredits = 0;
-                //document.getElementById(newForAlern).innerHTML = "this course not applied for now";
+                
+                
             }
             //chekc prerequisite
             //deleteFrom2DArray(doneList, courseName);
