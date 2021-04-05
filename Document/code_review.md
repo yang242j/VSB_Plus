@@ -12,8 +12,6 @@ Table of Contents
   - [Object-Oriented Analysis and Design (OOAD) Principles](#object-oriented-analysis-and-design-ooad-principles)
 - [Conclusion](#conclusion)
 
-  
-
 # Introdcution
 &nbsp;&nbsp; This code quality report is created after the first MVP is done. The purpose of this document is to imporve the qulity of our code and it is very essential for the success of coding projects and has enableed us to become a more skilled developer.
 There are some reasons for why we find that code review to be essential for a coding project.
@@ -52,6 +50,8 @@ $totalCredit = isset($_REQUEST["totalCredit"]) ? $_REQUEST["totalCredit"] : '';
 * Code Views
   After browsering all files in a 13 inch laptop, we believe our code should fit in the standard 14 inch screen. There are no need to scroll horizontally to view our code. 
 ## Architecture
+
+
 <pre>
 .Code
 ├── Controller
@@ -76,8 +76,16 @@ $totalCredit = isset($_REQUEST["totalCredit"]) ? $_REQUEST["totalCredit"] : '';
 ├── semesterBuilder.php
 └── signup.php
 </pre>
+
+
+
 All the code is spilt into different directory accounding to their format and purpose.For example,all style files are under <mark>/css</mark>, all back-end database-required file are under <mark>/model</mark>.
 For example:
+
+
+All the code is spilt into different directory accounding to their format and purpose.For example,all style files are under <mark>/css</mark>, all back-end database-required file are under <mark>/model</mark>.
+For example:
+
 <pre>
 .css
 ├── academicBuilder_Customize.css
@@ -94,7 +102,6 @@ For example:
 ├── main.css
 └── semester.css
 </pre>
-
 <pre>
 .model
 ├── allcourse.php
