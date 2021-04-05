@@ -20,7 +20,7 @@ This document is about the overall project experience.
         - [Team Communication](#team-communication)
         - [Backup Plan](#backup-plan)
     - [The Bad Part](#the-bad-part)
-        - [Poor Admin Management System](poor-admin-management-system)
+        - [Poor Admin Management System](#poor-admin-management-system)
         - [UI Design](#ui-design)
         - [Work Distribution](#work-distribution)
 
