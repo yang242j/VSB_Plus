@@ -20,7 +20,7 @@ Table of Contents
     - [Scalability](#scalability)
     - [Usability](#usability)
   - [Object-Oriented Analysis and Design (OOAD) Principles](#object-oriented-analysis-and-design-ooad-principles)
-- [Conclusion](#conclusion)
+
 
 # Introdcution
 &nbsp;&nbsp; This code quality report is created after the first MVP is done. The purpose of this document is to imporve the qulity of our code and it is very essential for the success of coding projects and has enableed us to become a more skilled developer.
@@ -346,4 +346,3 @@ This web application is designed for students to plan their further courses, so 
 While adding new functionality, existing code should will not be modified. New functionality will be written in new functions.
 * Interface segregation<br/>
 There are no lengthy interface on our website, we split our functions into small blocks.
-# Conclusion
