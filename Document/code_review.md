@@ -12,7 +12,19 @@ Table of Contents
     - [Comments](#comments)
     - [Avoid multiple if/else blocks](#avoid-multiple-ifelse-blocks)
   - [Non Functional requirements](#non-functional-requirements)
+    - [Maintainability](#maintainability)
+    - [Reusability](#reusability)
+    - [Reliability](#reliability)
+    - [Extensibility](#extensibility)
+    - [Security](#security)
+    - [Performance](#performance)
+    - [Scalability](#scalability)
+    - [Usability](#usability)
   - [Object-Oriented Analysis and Design (OOAD) Principles](#object-oriented-analysis-and-design-ooad-principles)
+    - [Single Responsibility Principle (SRS)](#single-responsibility-principle-srs)
+    - [Open Closed Principle](#open-closed-principle)
+    - [Liskov substitutability principle](#liskov-substitutability-principle)
+    - [Interface segregation](#interface-segregation)
 - [Conclusion](#conclusion)
 
 # Introdcution
@@ -247,7 +259,57 @@ Write instroction for each file and also inline comments.
  */  
 ```
 ### Avoid multiple if/else blocks
+Accounding to the functionality of our website, it applies lots conditions such as time confilct, prerequsite. However we are able to avoid using multiple if/else blocks in one condition for majority of code, only few of them have two or three if/else blocks.
+```javaScript
+function get24HrsFrm12Hrs(timeString) {
+    // seperate H, M, am, pm
+    var hours = Number(timeString.trim().match(/^(\d+)/)[1]);
+    var minutes = Number(timeString.trim().match(/:(\d+)/)[1]);
+    var AMPM = timeString.trim().match(/\s(.*)$/)[1];
 
+    // Special cases
+    if (AMPM.toLowerCase() == "pm" && hours < 12) hours += 12;
+    if (AMPM.toLowerCase() == "am" && hours == 12) hours = 0;
+
+    // Convertor
+    var sHours = hours.toString();
+    var sMinutes = minutes.toString();
+    if (hours < 10) sHours = "0" + sHours;
+    if (minutes < 10) sMinutes = "0" + sMinutes;
+    return sHours + ":" + sMinutes;;
+}
+```
 ## Non Functional requirements
+### Maintainability
+* Readability
+  Most of the code is easy to read. Because we do not have any class, we separate files based on the web page, so we write functionality declaration on the front of our pages, so others can easily get to know what is this file doing. Some codes on semester and academic pages may hard to read due to the complexity of conflicts. However l,ack of inline comments in some parts may raise the difficulty of reading.
+* Testability
+  Our test is based on the functionality of the website, it only show the result of functions work or not. We have not do any unit test. Considering the importance of unit test, we think our code should be refactor into separate function, because some of our code are running in a callback function.
+  For example: This function is uesd to grab the user's class history from database, we gathered from takenClass.php, and its in a callback function, so we can only use this data in the function but not 
+  ```javaScript
+  function fetchCourseJSON(sid, password) {
+    $.post('Model/takenClass.php', {
+        sid: sid,
+        password: password
+    }, function (data) {
+        btnForCourse(data);
+        showCourses(data);
+        getCreditsEarned(data);
+        storePassedCourse(data);
+        clickGetInfo();
+    });
+  ```
+### Reusability
+
+### Reliability
+### Extensibility
+### Security
+### Performance
+### Scalability 
+### Usability
 ## Object-Oriented Analysis and Design (OOAD) Principles
+### Single Responsibility Principle (SRS)
+### Open Closed Principle
+### Liskov substitutability principle
+### Interface segregation
 # Conclusion
