@@ -31,9 +31,9 @@ There are some reasons for why we find that code review to be essential for a co
 - Meetting the requirement
 # Code Quality Review
 ## Code Formatting
-* Alignment: 
+* Alignment<br/> 
   When we are coding ,we installed some formatters in Vscode, so we can make sure that our alignment is keeping consistent through all files including HTML/CSS/JS/PHP.
-* Naming Conventions: 
+* Naming Conventions<br/>
   ALL the names through our files are use Pascal and CamelCase.
 
 Pascal Example:
@@ -57,7 +57,7 @@ $major = isset($_REQUEST["major"]) ? $_REQUEST["major"] : '';
 $maxNum = isset($_REQUEST["maxNum"]) ? $_REQUEST["maxNum"] : '';
 $totalCredit = isset($_REQUEST["totalCredit"]) ? $_REQUEST["totalCredit"] : '';
 ```
-* Code Views
+* Code Views<br/>
   After browsering all files in a 13 inch laptop, we believe our code should fit in the standard 14 inch screen. There are no need to scroll horizontally to view our code. 
 ## Architecture
 
