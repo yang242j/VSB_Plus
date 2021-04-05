@@ -1,5 +1,5 @@
 # Code Review Report
-***
+
 Table of Contents
   
 - [Code Review Report](#code-review-report)
@@ -8,6 +8,9 @@ Table of Contents
   - [Code Formatting](#code-formatting)
   - [Architecture](#architecture)
   - [Coding best practices](#coding-best-practices)
+    - [No hardcoding](#no-hardcoding)
+    - [Comments](#comments)
+    - [Avoid multiple if/else blocks](#avoid-multiple-ifelse-blocks)
   - [Non Functional requirements](#non-functional-requirements)
   - [Object-Oriented Analysis and Design (OOAD) Principles](#object-oriented-analysis-and-design-ooad-principles)
 - [Conclusion](#conclusion)
@@ -188,7 +191,63 @@ Overall, the architecture can meet our design map and requirement.This file tree
 * View directory is not clear
 * All php file used in front-end (such as homePage.php)should be in one package
 ## Coding best practices
-###
+### No hardcoding
+Using the user information such as id, password, faculty to grab data, not just hard code their faculty or information.
+```php
+$_SESSION["loggedin"] = true;
+$_SESSION["sid"] = $studentid;
+$_SESSION["password"] = $password;
+$_SESSION["name"] = $name;
+$_SESSION["major"] = $major;
+$_SESSION["totalCredit"] = $totalCredit;
+$_SESSION["lastActTime"] = time();
+```
+
+```javaScript
+getTermData(major);
+function getTermData(faculty) {
+    var myRequest = new XMLHttpRequest;
+    var facultyName = faculty;
+    var url = "JSON/" + facultyName + ".json";
+    myRequest.open("GET", url, false);
+    myRequest.onload = function () {
+        var data = JSON.parse(myRequest.responseText);
+        courseReqData = data;
+    }
+    myRequest.send();
+}
+```
+### Comments
+Write instroction for each file and also inline comments.
+```php
+/**
+ * The database visualization page embeded with search and filter function.
+ *
+ * Requirments:
+ *  1) User should be able to search the course info by entering course short name (course id).
+ *  2) User should be able to filter the desired courses by faculty and year of course.
+ *  3) User should be able to swap the display between large course card and small course card.
+ *  4) For the most area of the screen right hand side, display the selected course detail information.
+ *  5) Course details info should contains the name, prerequisites, description, course general opening status of each section.
+ *  6) May also contain the lab info.
+ *
+ * php Steps:
+ *  1) Start session.
+ *  2) If logged in, display logged in user info at navigation right.
+ *  3) If not logged in, display login and signup button at navigation right.
+ *  4) Guest can have full functionality of this page.
+ *  5) Other pages are either hidden or disabled for guest.
+ *
+ * @version     1.0
+ * @link        http://15.223.123.122/vsbp/Code/courseDB.php
+ * @author      Xinyu Liu (sid: 200362878) <liu725@uregina.ca>
+ * @param       {boolean}       $_SESSION["loggedin"]       Status of logged-in or not: true/false
+ * @param       {integer}       $_SESSION["sid"]            Student id
+ * @param       {string}        $_SESSION["name"]           Student name
+ */  
+```
+### Avoid multiple if/else blocks
+
 ## Non Functional requirements
 ## Object-Oriented Analysis and Design (OOAD) Principles
 # Conclusion
