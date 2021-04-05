@@ -23,3 +23,6 @@ The purpose of this UofR Software Engineering Capstone Project is to enhance the
 
 # Final Demo
 [![vlog](https://img.youtube.com/vi/zOJYWrD3nk8/0.jpg)](https://www.youtube.com/watch?v=zOJYWrD3nk8)
+
+# Project Commercial
+[![vlog](https://img.youtube.com/vi/VtX2HNYYPvA/0.jpg)](https://youtu.be/VtX2HNYYPvA)
