@@ -1,7 +1,8 @@
-#Code Review Report
+# Code Review Report
 ***
 Table of Contents
   
+- [Code Review Report](#code-review-report)
 - [Introdcution](#introdcution)
 - [Code Quality Review](#code-quality-review)
   - [Code Formatting](#code-formatting)
@@ -22,9 +23,9 @@ There are some reasons for why we find that code review to be essential for a co
 - Meetting the requirement
 # Code Quality Review
 ## Code Formatting
-* Alignment
+* Alignment: 
   When we are coding ,we installed some formatters in Vscode, so we can make sure that our alignment is keeping consistent through all files including HTML/CSS/JS/PHP.
-* Naming Conventions
+* Naming Conventions: 
   ALL the names through our files are use Pascal and CamelCase.
 
 Pascal Example:
@@ -51,7 +52,8 @@ $totalCredit = isset($_REQUEST["totalCredit"]) ? $_REQUEST["totalCredit"] : '';
 * Code Views
   After browsering all files in a 13 inch laptop, we believe our code should fit in the standard 14 inch screen. There are no need to scroll horizontally to view our code. 
 ## Architecture
->.Code
+<pre>
+.Code
 ├── Controller
 ├── css
 ├── html
@@ -73,10 +75,11 @@ $totalCredit = isset($_REQUEST["totalCredit"]) ? $_REQUEST["totalCredit"] : '';
 ├── semesterBuilder_v2.php
 ├── semesterBuilder.php
 └── signup.php
-
+</pre>
 All the code is spilt into different directory accounding to their format and purpose.For example,all style files are under <mark>/css</mark>, all back-end database-required file are under <mark>/model</mark>.
 For example:
->.css
+<pre>
+.css
 ├── academicBuilder_Customize.css
 ├── academicBuilder_Default.css
 ├── academicBuilder_main.css
@@ -90,7 +93,10 @@ For example:
 ├── logIn-signUp.css
 ├── main.css
 └── semester.css
->.model
+</pre>
+
+<pre>
+.model
 ├── allcourse.php
 ├── course_db_config.php
 ├── course.php
@@ -104,7 +110,7 @@ For example:
 ├── takenClass.php
 ├── test.php
 └── vsbp_db_config.php
-
+</pre>
 Some important components explain:
 * <mark>/controller</mark>
   Controller is used to map data form database, so we are able to change database from one client to another easily.
