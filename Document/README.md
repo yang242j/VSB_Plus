@@ -20,7 +20,7 @@
 
 - [User Testing plan/Results](Testing%20Plan%20&%20Result)
 
-- [Code Quality Review Report](/)***
+- [Code Quality Review Report](code_review.md)
 
 - [Project Digital Poster](SSE%20Group%206%20Poster.pdf)
 
@@ -28,4 +28,4 @@
 
 - [Customer Help/User training/Knowledgebase](how_to.md)
 
-- [Project Experience Report](/)***
+- [Project Experience Report](Project_Experience_Report.md)
