@@ -20,6 +20,9 @@ This document is about the overall project experience.
         - [Team Communication](#team-communication)
         - [Backup Plan](#backup-plan)
     - [The Bad Part](#the-bad-part)
+        - [Poor Admin Management System](poor-admin-management-system)
+        - [UI Design](#ui-design)
+        - [Work Distribution](#work-distribution)
 
 - [What Went Well and Why](#what-went-well-and-why)
     - [Backup Database Plan](#backup-database-plan)
@@ -138,7 +141,17 @@ When designing a project (including user interface and structural design), in or
 
 ### The Bad Part
 
-xxx
+#### Poor Admin Management System
+
+We get the basic admin management system for the web because we only get a few times to quickly build up the system. Originally, the admin system is not in our project plan. At the very end of the capstone project, we get feedback and suggestions from the professor, then we realize that we need an admin system for course management. Then, we rushed did an admin system to make sure it worked well before the due day. So, it does not have many features and lacks testing for now. But, in the future version, we will focus on the admin system and adding more features as we need.
+
+#### UI Design
+
+UI design is a very important factor in our project because we are doing the visual project and trying to help users to build their course schedule. In the process, the users will have lots of interaction with the web page. If users have no idea what they should operate on the web, this will greatly reduce the useability of websites. In the future version, improving the UI design makes it more usable could be an important task. 
+
+#### Work Distribution
+
+At the beginning of the project, we separated the work based on the web page, so that makes the work distribution fair for each one, but it means each group member needs to do care front and back end. It might waste time to do repeat work that other group members have already done. It is an inefficient way to work as a group.
 
 ## What Went Well and Why
 
@@ -169,7 +182,13 @@ Although Jenkins is not in the scope of the project, we still think this is a go
 
 ## What Can be Improved and Why
 
-xxx
+- Adding more features and details for the admin management system, because the system is not perfect to use. 
+
+- Improving the UI design makes the web page better to use and look good. (Consider the UI Component like BootStrap)
+
+- We can consider the role responsibility based on the task content like one person code the front end, one person code the back end, one does testing parts and one writes documents.  Trying to work more efficiently as a group.
+
+- Refactoring the code, we can consider using one web framework which makes the code easy to maintain.
 
 ## What Did I learn
 
