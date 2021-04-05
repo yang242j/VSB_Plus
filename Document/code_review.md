@@ -51,7 +51,7 @@ $totalCredit = isset($_REQUEST["totalCredit"]) ? $_REQUEST["totalCredit"] : '';
 * Code Views
   After browsering all files in a 13 inch laptop, we believe our code should fit in the standard 14 inch screen. There are no need to scroll horizontally to view our code. 
 ## Architecture
->.Code
+.Code
 ├── Controller
 ├── css
 ├── html
@@ -76,7 +76,7 @@ $totalCredit = isset($_REQUEST["totalCredit"]) ? $_REQUEST["totalCredit"] : '';
 
 All the code is spilt into different directory accounding to their format and purpose.For example,all style files are under <mark>/css</mark>, all back-end database-required file are under <mark>/model</mark>.
 For example:
->.css
+.css
 ├── academicBuilder_Customize.css
 ├── academicBuilder_Default.css
 ├── academicBuilder_main.css
@@ -90,7 +90,7 @@ For example:
 ├── logIn-signUp.css
 ├── main.css
 └── semester.css
->.model
+.model
 ├── allcourse.php
 ├── course_db_config.php
 ├── course.php
