@@ -90,6 +90,7 @@ For example:
 ├── logIn-signUp.css
 ├── main.css
 └── semester.css
+
 .model
 ├── allcourse.php
 ├── course_db_config.php
