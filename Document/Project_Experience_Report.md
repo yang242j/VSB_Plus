@@ -123,17 +123,17 @@ Ordinary teamwork is to assign the work to everyone at the beginning of each spr
 
 But for a student who has four students who hardly know what to do and how to do their own things, this method does not work well. In the first meeting, we discussed how to work in a team. The conclusion is that we have increased the frequency of meetings to twice a week. This helps us achieve better teamwork. This greatly increases the frequency of our communication and also ensures that we all know each other's progress. If someone is behind or ahead of schedule or encounters a problem, we can find out and solve it in advance. This avoids delays in the construction schedule because the problem is only discovered at the end of the sprint.
 
-![Team Communication Plan](Images%20%26%20Design/team_communication_plan.png)
+![Team Communication Plan](Images%20%26%20Design/team_communication_plan.PNG)
 *Team Communication Plan*
 
 #### Backup Plan
 
 When designing a project (including user interface and structural design), in order to prevent accidents from happening, we will always develop a backup plan. For example, we initially expected to be supported by the course database supported by university IT, but after communication, we learned that they could not provide us with this support. Therefore, we activated Plan B and created a course database by ourselves by using python to parse the course information disclosed on the university's official website, which took us nearly a week. A backup plan can ensure that we can keep up with the schedule when any unexpected situation occurs, so that we will not spend a lot of time on a single problem that may not be completed as planned in the end.
 
-![Database v1](Images%20%26%20Design/Database/database%20v1.0/database_v1.png)
+![Database v1](Images%20%26%20Design/Database/database%20v1.0/database_v1.PNG)
 *Database v1*
 
-![Database v2](Images%20%26%20Design/Database/database%20v2.0/database_v2.png)
+![Database v2](Images%20%26%20Design/Database/database%20v2.0/database_v2.PNG)
 *Database v2*
 
 ### The Bad Part
