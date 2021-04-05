@@ -17,14 +17,9 @@ Table of Contents
     - [Reliability](#reliability)
     - [Extensibility](#extensibility)
     - [Security](#security)
-    - [Performance](#performance)
     - [Scalability](#scalability)
     - [Usability](#usability)
   - [Object-Oriented Analysis and Design (OOAD) Principles](#object-oriented-analysis-and-design-ooad-principles)
-    - [Single Responsibility Principle (SRS)](#single-responsibility-principle-srs)
-    - [Open Closed Principle](#open-closed-principle)
-    - [Liskov substitutability principle](#liskov-substitutability-principle)
-    - [Interface segregation](#interface-segregation)
 - [Conclusion](#conclusion)
 
 # Introdcution
@@ -259,7 +254,7 @@ Write instroction for each file and also inline comments.
  */  
 ```
 ### Avoid multiple if/else blocks
-Accounding to the functionality of our website, it applies lots conditions such as time confilct, prerequsite. However we are able to avoid using multiple if/else blocks in one condition for majority of code, only few of them have two or three if/else blocks.
+According to the functionality of our website, it applies lots of conditions such as time conflicts, prerequisites. However, we are able to avoid using multiple if/else blocks in one condition for the majority of code, only a few of them have two or three if/else blocks.
 ```javaScript
 function get24HrsFrm12Hrs(timeString) {
     // seperate H, M, am, pm
@@ -282,10 +277,10 @@ function get24HrsFrm12Hrs(timeString) {
 ## Non Functional requirements
 ### Maintainability
 * Readability
-  Most of the code is easy to read. Because we do not have any class, we separate files based on the web page, so we write functionality declaration on the front of our pages, so others can easily get to know what is this file doing. Some codes on semester and academic pages may hard to read due to the complexity of conflicts. However l,ack of inline comments in some parts may raise the difficulty of reading.
+  Most of the code is easy to read. Because we do not have any classes in javaScript, we separate files based on the web page, so we write functionality declaration on the front of our pages, and then the team members can expediently get to know what is the purpose of this method. Some codes on semester and academic pages may be hard to read due to the complexity of conflicts. Moreover, lack of inline comments in some parts may raise the difficulty of reading. 
 * Testability
-  Our test is based on the functionality of the website, it only show the result of functions work or not. We have not do any unit test. Considering the importance of unit test, we think our code should be refactor into separate function, because some of our code are running in a callback function.
-  For example: This function is uesd to grab the user's class history from database, we gathered from takenClass.php, and its in a callback function, so we can only use this data in the function but not 
+  Our test base on the functionality of the website, it only shows the result of functions works or not. We did not do any unit tests. Considering the importance of the unit test, we think our code should be refactored, and separateed into more functions.
+   For example, This function use to grab the user's class history from the database, we gathered from takenClass.php, and it's in a callback function, so we can only use this data in the function but not assign this data to a global variable.
   ```javaScript
   function fetchCourseJSON(sid, password) {
     $.post('Model/takenClass.php', {
@@ -299,17 +294,56 @@ function get24HrsFrm12Hrs(timeString) {
         clickGetInfo();
     });
   ```
+* Debuggability
+We did not use any log to track parameter data and exceptions. Only the error message will help the debug which is not the best practice.
 ### Reusability
-
+We are doing our best to get rid of repeat functions, so serval repeatable functions are packing in one method then we reuse them in another place.
+Codes in /model build for reuse in any files which need data from the database. Most functions in /JS highly depend on data chains, so only some parts can reuse.
 ### Reliability
+The error and exception are handling in code, but not catch those errors as many as possible. Instead, we show error messages to help us debug and as a guide to the user. 
 ### Extensibility
+When we are coding, we disperse our functions into different blocks, functions between will not affect each other. Furthermore, change a component can be made smoothly.
 ### Security
-### Performance
+We hashed the password in databse.
+![image info](VSB_PLUS/Code/../../../Code/img/hased_code.png)
 ### Scalability 
+Because our website is now running on a small AWS ec2 server, we are not able to handle a large user base/data. Our design base on faculty data, there are more than five majors in this faculty and it contains over a hundred courses. We believe we can scale it to all faculties in a University. 
 ### Usability
+This web application is designed for students to plan their further courses, so students who are familiar with it will be using it easily. Considering some new students may be interested, so we add lots tips on our website.
 ## Object-Oriented Analysis and Design (OOAD) Principles
-### Single Responsibility Principle (SRS)
-### Open Closed Principle
-### Liskov substitutability principle
-### Interface segregation
+* Single Responsibility Principle (SRS)
+  Responsibilities did not set in a single, they are placed into separate functions.
+  For example, the delete and find function are separated into two small functions
+  ```javaScript
+  function deleteFrom2DArray(array, item) {
+    for (i = 0; i < array.length; i++) {
+        for (j = 0; j < array[i].length; j++) {
+            if (array[i][j] == item) {
+                array[i][j] = array[i][array[i].length - 1];
+                array[i].pop();
+            }
+        }
+    }
+    }
+  //does the item already exists in this line
+  function findExist(array, item) {
+    for (i = 0; i < array.length; i++) {
+        if (array[i] == item) {
+            return true;
+        }
+    }
+    return false;
+    } 
+  ```
+  And those functions are called:
+  ```javaScript
+  deleteFrom2DArray(doneList, courseName);
+  ```
+  ```javaScript
+  if(findExist(doneList[index], courseName) == false){}
+  ```
+* Open Closed Principle
+While adding new functionality, existing code should will not be modified. New functionality will be written in new functions.
+* Interface segregation
+There are no lengthy interface on our website, we split our functions into small blocks.
 # Conclusion

@@ -693,7 +693,8 @@ function findExist(array, item) {
         }
     }
     return false;
-} //transfer term name to number
+} 
+//transfer term name to number
 function termTransfer(term) {
     if (term == "Winter") return 202110;
     if (term == "Spring/Summer") return 202020;
