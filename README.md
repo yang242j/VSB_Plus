@@ -29,24 +29,4 @@ The purpose of this UofR Software Engineering Capstone Project is to enhance the
 
 
 
-# Capstone Project deliverables, evaluation, & grading Required File List
-## Project Initialization and planning
-* Business case and project charter (or similar)
-* Problem & requirements prerequisites
-* System/architectural design pictures 
-* Role/Attribute-based access control (R/ABAC) vision
-* Project roadmaps (Kanban, USM, Gantt, etc.)
-* Prototypes/wireframes (lo/hi-fidelity) 
-* Video blogs (vlogs) and demo(s)
-## Project execution and closing
-* GitHub (highly readable)
-* Project source code
-* Code testing plan/results
-* User testing plan/results
-* Code quality review report
-* Project poster (digital) 
-* Video blogs (vlogs) and demo(s)
-* Project commercial 
-* Customer help/user training/knowledgebase 
-* Final presentation and demo***
-* Project experience report
+
