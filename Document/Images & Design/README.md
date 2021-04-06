@@ -18,4 +18,4 @@
 
 - [Project Poster](SSE%20Group%206%20Poster.png)
 - [SiteMap](sitemap.png)
-- [Component Relationship Map](Component Relationship.png)
+- [Component Relationship Map](Component_Relationship.png)
