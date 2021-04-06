@@ -6,12 +6,12 @@
 - [Problem & Requirements Prerequisites](Presentation%20%26%20Meetings/Scrums/Scrum%231/Project%20Requirements.pdf)
 * [Project Charter](Presentation%20%26%20Meetings/Scrums/Scrum%231/Project_charter.pdf)
 
-- [System/Architectural Design Pictures]
+- System/Architectural Design Pictures
    * [Architectural Design](Images%20%26%20Design/architectural_design.png)
-   * databaseMap
+   * [databaseMap]()
    * [sitemap](Images%20%26%20Design/sitemap.png)
    * [component Map](Images%20%26%20Design/Component_Relationship.png)
-   * [sequence Map]
+   * [sequence Map]()
 
 - [Role/Attribute-based Access Control (R/ABAC) vision](/)***
 
