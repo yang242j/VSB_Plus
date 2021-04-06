@@ -1,12 +1,17 @@
 # Document ToC
+## Project Initialization and Planning 
 
 - [Business Case](Presentation%20%26%20Meetings/Scrums/Scrum%231/Business_case.pdf)
 
-- [Project Charter](Presentation%20%26%20Meetings/Scrums/Scrum%231/Project_charter.pdf)
-
 - [Problem & Requirements Prerequisites](Presentation%20%26%20Meetings/Scrums/Scrum%231/Project%20Requirements.pdf)
+* [Project Charter](Presentation%20%26%20Meetings/Scrums/Scrum%231/Project_charter.pdf)
 
-- [System/Architectural Design Pictures](Images%20%26%20Design/architectural_design.png)
+- [System/Architectural Design Pictures]
+* [Architectural Design](Images%20%26%20Design/architectural_design.png)
+* databaseMap
+* [sitemap](Images%20%26%20Design/sitemap.png)
+* [component Map](Images%20%26%20Design/Component_Relationship.png)
+* [sequence Map]
 
 - [Role/Attribute-based Access Control (R/ABAC) vision](/)***
 
@@ -15,6 +20,8 @@
 - [Prototypes/Wireframes (Lo/Hi-Fidelity)](Prototypes)
 
 - [Video Blogs (vlogs) and Demo(s)](Presentation%20&%20Meetings/Vlogs)
+## Project Execution and Closing
+- [Project Source Code](Testing%20Plan%20&%20Result)
 
 - [Code Testing Plan/Results](Testing%20Plan%20&%20Result)
 
@@ -23,6 +30,8 @@
 - [Code Quality Review Report](code_review.md)
 
 - [Project Digital Poster](SSE%20Group%206%20Poster.pdf)
+
+- [Video blogs]()
 
 - [Project Commercial](https://youtu.be/VtX2HNYYPvA)
 
