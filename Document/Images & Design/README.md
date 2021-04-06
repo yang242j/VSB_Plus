@@ -17,3 +17,5 @@
 - [Switch Database Diagram](Switch%20DB%20diagram.jpg)
 
 - [Project Poster](SSE%20Group%206%20Poster.png)
+- [SiteMap](sitemap.png)
+- [Component Relationship Map](Component Relationship.png)
