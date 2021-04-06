@@ -13,7 +13,7 @@
    * [component Map](Images%20%26%20Design/Component_Relationship.png)
    * [sequence Map](https://github.com/yang242j/VSB_Plus/blob/master/Document/Images%20%26%20Design/Sequence-diagram%20(user).png)
    * [Dataflow Map](https://github.com/yang242j/VSB_Plus/blob/master/Document/Images%20%26%20Design/dataflow.png)
-   * [Switch DB diagram](Images%20%26%20Design/Switch DB diagram.jpg)
+   * [Switch DB diagram](https://github.com/yang242j/VSB_Plus/blob/master/Document/Images%20%26%20Design/Switch%20DB%20diagram.jpg)
 
 - [Role/Attribute-based Access Control (R/ABAC) vision](/)***
 
