@@ -21,7 +21,7 @@
 
 - [Video Blogs (vlogs) and Demo(s)](Presentation%20&%20Meetings/Vlogs)
 ## Project Execution and Closing
-- [Project Source Code](Testing%20Plan%20&%20Result)
+- [Project Source Code](https://github.com/yang242j/VSB_Plus/tree/master/Code)
 
 - [Code Testing Plan/Results](Testing%20Plan%20&%20Result)
 
