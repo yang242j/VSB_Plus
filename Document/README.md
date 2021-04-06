@@ -6,7 +6,7 @@
 
 - [Problem & Requirements Prerequisites](Presentation%20%26%20Meetings/Scrums/Scrum%231/Project%20Requirements.pdf)
 
-- [System/Architectural Design Pictures](Images%20&%20Design)
+- [System/Architectural Design Pictures](Images%20%26%20Design/architectural_design.png)
 
 - [Role/Attribute-based Access Control (R/ABAC) vision](/)***
 
