@@ -32,7 +32,7 @@
 
 - [Project Digital Poster](SSE%20Group%206%20Poster.pdf)
 
-- [Video blogs]()
+- [Video blogs](Presentation%20&%20Meetings/Vlogs)
 
 - [Project Commercial](https://youtu.be/VtX2HNYYPvA)
 
