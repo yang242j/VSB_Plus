@@ -9,11 +9,12 @@
 - System/Architectural Design Pictures
    * [Architectural Design](Images%20%26%20Design/architectural_design.png)
    * [Database Map](https://github.com/yang242j/VSB_Plus/tree/master/Document/Images%20%26%20Design/Database)
-   * [sitemap](Images%20%26%20Design/sitemap.png)
-   * [component Map](Images%20%26%20Design/Component_Relationship.png)
-   * [sequence Map](https://github.com/yang242j/VSB_Plus/blob/master/Document/Images%20%26%20Design/Sequence-diagram%20(user).png)
+   * [Sitemap](Images%20%26%20Design/sitemap.png)
+   * [Component Map](Images%20%26%20Design/Component_Relationship.png)
+   * [Sequence Map](https://github.com/yang242j/VSB_Plus/blob/master/Document/Images%20%26%20Design/Sequence-diagram%20(user).png)
    * [Dataflow Map](https://github.com/yang242j/VSB_Plus/blob/master/Document/Images%20%26%20Design/dataflow.png)
    * [Switch DB diagram](https://github.com/yang242j/VSB_Plus/blob/master/Document/Images%20%26%20Design/Switch%20DB%20diagram.jpg)
+   * [User Case](https://github.com/yang242j/VSB_Plus/blob/master/Document/Images%20%26%20Design/User-case-diagram.png)
 
 - [Role/Attribute-based Access Control (R/ABAC) vision](/)***
 
