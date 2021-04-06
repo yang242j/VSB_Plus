@@ -2,7 +2,6 @@
 
 Table of Contents
   
-- [Code Review Report](#code-review-report)
 - [Introdcution](#introdcution)
 - [Code Quality Review](#code-quality-review)
   - [Code Formatting](#code-formatting)
