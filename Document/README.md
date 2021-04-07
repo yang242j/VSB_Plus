@@ -16,7 +16,7 @@
    * [Switch DB diagram](https://github.com/yang242j/VSB_Plus/blob/master/Document/Images%20%26%20Design/Switch%20DB%20diagram.jpg)
    * [User Case](https://github.com/yang242j/VSB_Plus/blob/master/Document/Images%20%26%20Design/User-case-diagram.png)
 
-- [Role/Attribute-based Access Control (R/ABAC) vision](/)***
+- [Role/Attribute-based Access Control (R/ABAC) vision](Project_RoleBasedAccessControl.pdf)
 
 - [Project Roadmaps (Kanban, USM)](https://github.com/yang242j/VSB_Plus/projects)
 
