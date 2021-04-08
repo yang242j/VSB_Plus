@@ -32,8 +32,8 @@
 
     - [Vlog #5](https://www.youtube.com/watch?v=_pi-A9BQ5vk)
 
-    - [Vlog #6]()***
+    - [Vlog #6](https://youtu.be/tco7jt-YZP0)
 
 - [Project Commercial](https://youtu.be/VtX2HNYYPvA)
 
-- [Project Demo]()***
+- [Project Demo](https://youtu.be/QqQgsT5yhkw)
