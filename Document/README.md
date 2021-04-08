@@ -24,7 +24,7 @@
 
 - [Prototypes/Wireframes (Lo/Hi-Fidelity)](Prototypes)
 
-- [Video Blogs (vlogs) and Demo(s)](Presentation%20&%20Meetings/Vlogs)
+- [Video Blogs (vlogs) and Demo(s)](Presentation%20&%20Meetings)
 ## Project Execution and Closing
 - [Project Source Code](https://github.com/yang242j/VSB_Plus/tree/master/Code)
 
