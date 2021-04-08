@@ -22,7 +22,7 @@ The purpose of this UofR Software Engineering Capstone Project is to enhance the
 ![Poster](Document/Images%20&%20Design/SSE%20Group%206%20Poster.png)
 
 # Final Demo
-[![vlog](https://img.youtube.com/vi/zOJYWrD3nk8/0.jpg)](https://www.youtube.com/watch?v=zOJYWrD3nk8)
+[![vlog](https://img.youtube.com/vi/QqQgsT5yhkw/0.jpg)](https://youtu.be/QqQgsT5yhkw)
 
 # Project Commercial
 [![vlog](https://img.youtube.com/vi/VtX2HNYYPvA/0.jpg)](https://youtu.be/VtX2HNYYPvA)
